@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'home_view_model.dart';
+import '../../../core/models/media_link.dart';
+import '../../parser/domain/link_parser_state.dart';
+import '../../parser/presentation/link_parser_view_model.dart';
 
 class HomePage extends ConsumerStatefulWidget {
   const HomePage({super.key});
@@ -16,20 +18,18 @@ class _HomePageState extends ConsumerState<HomePage> {
   @override
   void initState() {
     super.initState();
-    _linkController = TextEditingController()..addListener(_onLinkChanged);
+    _linkController = TextEditingController();
   }
 
   @override
   void dispose() {
-    _linkController
-      ..removeListener(_onLinkChanged)
-      ..dispose();
+    _linkController.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    final state = ref.watch(homeViewModelProvider);
+    final state = ref.watch(linkParserViewModelProvider);
     final colorScheme = Theme.of(context).colorScheme;
 
     return ListView(
@@ -88,23 +88,35 @@ class _HomePageState extends ConsumerState<HomePage> {
                   minLines: 1,
                   maxLines: 3,
                   keyboardType: TextInputType.url,
-                  decoration: const InputDecoration(
+                  onChanged: ref
+                      .read(linkParserViewModelProvider.notifier)
+                      .updateInput,
+                  decoration: InputDecoration(
                     hintText: 'Paste a video or media link',
-                    prefixIcon: Icon(Icons.link_rounded),
+                    prefixIcon: const Icon(Icons.link_rounded),
+                    errorText: state.status == LinkParsingStatus.invalid
+                        ? state.errorMessage
+                        : null,
                   ),
                 ),
+                if (state.isReadyForParsing) ...[
+                  const SizedBox(height: 16),
+                  _LinkDetectionSummary(state: state),
+                ],
                 const SizedBox(height: 16),
                 Wrap(
                   spacing: 12,
                   runSpacing: 12,
                   children: [
                     FilledButton.icon(
-                      onPressed: state.canProcess ? _showFutureFeature : null,
+                      onPressed: state.isReadyForParsing
+                          ? _showFutureFeature
+                          : null,
                       icon: const Icon(Icons.search_rounded),
                       label: const Text('Inspect link'),
                     ),
                     OutlinedButton.icon(
-                      onPressed: state.canProcess ? _clearLink : null,
+                      onPressed: state.hasInput ? _clearLink : null,
                       icon: const Icon(Icons.clear_rounded),
                       label: const Text('Clear'),
                     ),
@@ -118,19 +130,41 @@ class _HomePageState extends ConsumerState<HomePage> {
     );
   }
 
-  void _onLinkChanged() {
-    ref.read(homeViewModelProvider.notifier).updateLink(_linkController.text);
-  }
-
   void _clearLink() {
     _linkController.clear();
-    ref.read(homeViewModelProvider.notifier).clear();
+    ref.read(linkParserViewModelProvider.notifier).clear();
   }
 
   void _showFutureFeature() {
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Link inspection will be available in the next phase.'),
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(const SnackBar(content: Text('媒体解析将在后续阶段开放。')));
+  }
+}
+
+class _LinkDetectionSummary extends StatelessWidget {
+  const _LinkDetectionSummary({required this.state});
+
+  final LinkParserState state;
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: colorScheme.secondaryContainer,
+        borderRadius: BorderRadius.circular(14),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text('平台：${state.platform.displayName}'),
+          const SizedBox(height: 4),
+          const Text('状态：等待解析'),
+        ],
       ),
     );
   }

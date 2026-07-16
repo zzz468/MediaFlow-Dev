@@ -1,6 +1,16 @@
-enum MediaPlatform { unknown }
+enum MediaPlatform { unknown, douyin, bilibili }
 
 enum MediaLinkType { unknown, video, playlist }
+
+extension MediaPlatformDisplayName on MediaPlatform {
+  String get displayName {
+    return switch (this) {
+      MediaPlatform.douyin => '抖音',
+      MediaPlatform.bilibili => 'Bilibili',
+      MediaPlatform.unknown => '未知',
+    };
+  }
+}
 
 class MediaLink {
   const MediaLink({
