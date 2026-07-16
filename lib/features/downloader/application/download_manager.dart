@@ -16,6 +16,7 @@ import '../domain/download_exception.dart';
 import '../domain/download_service.dart';
 import '../domain/download_task.dart';
 import '../domain/download_task_repository.dart';
+import 'download_notice_controller.dart';
 
 final simulatedDownloadPlanProvider = Provider<SimulatedDownloadPlan>(
   (ref) => const SimulatedDownloadPlan(),
@@ -391,10 +392,22 @@ class DownloadManager extends Notifier<List<DownloadTask>> {
           ),
         );
         if (ref.read(appSettingsProvider).downloadNotificationsEnabled) {
+          final completedTask = _taskById(taskId);
           AppLogger.info(
-            'Download completed: ${_taskById(taskId)?.title ?? taskId}',
-            category: LogCategory.download,
+            'Download completed: ${completedTask?.title ?? taskId}',
+            category: LogCategory.downloader,
           );
+          if (completedTask != null) {
+            ref
+                .read(downloadCompletionNoticeProvider.notifier)
+                .show(
+                  DownloadCompletionNotice(
+                    taskId: completedTask.id,
+                    title: completedTask.title,
+                    savePath: savePath,
+                  ),
+                );
+          }
         }
         _finishActiveTask(taskId);
     }
@@ -454,13 +467,22 @@ class DownloadManager extends Notifier<List<DownloadTask>> {
     final currentTasks = <String, DownloadTask>{
       for (final task in state) task.id: task,
     };
+    final restoreInterruptedTasks = ref
+        .read(appSettingsProvider)
+        .restoreTasksOnStartup;
     final restoredTasks = <DownloadTask>[
       for (final task in restored)
         if (task.status == DownloadStatus.downloading ||
             task.status == DownloadStatus.queued)
           task.copyWith(
-            status: DownloadStatus.paused,
-            errorMessage: '上次运行已中断，可继续下载。',
+            progress: restoreInterruptedTasks ? task.progress : 0,
+            status: restoreInterruptedTasks
+                ? DownloadStatus.paused
+                : DownloadStatus.failed,
+            bytesReceived: restoreInterruptedTasks ? task.bytesReceived : 0,
+            errorMessage: restoreInterruptedTasks
+                ? '上次运行已中断，可继续下载。'
+                : '启动恢复已关闭，任务未自动恢复。',
           )
         else
           task,

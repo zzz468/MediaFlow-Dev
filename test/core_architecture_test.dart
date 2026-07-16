@@ -7,6 +7,7 @@ void main() {
       appName: 'MediaFlow Test',
       version: '0.1.0',
       buildNumber: '1',
+      repositoryUrl: 'https://example.test/mediaflow',
       environment: AppEnvironment.production,
       enableVerboseLogging: true,
     );

@@ -38,7 +38,7 @@ class JsonDownloadTaskRepository implements DownloadTaskRepository {
         } catch (error, stackTrace) {
           AppLogger.warning(
             'Skipped an invalid persisted download task.',
-            category: LogCategory.fileSystem,
+            category: LogCategory.error,
             error: error,
             stackTrace: stackTrace,
           );

@@ -11,6 +11,7 @@ class AppConfig {
     required this.appName,
     required this.version,
     required this.buildNumber,
+    required this.repositoryUrl,
     required this.environment,
     required this.enableVerboseLogging,
   });
@@ -25,6 +26,10 @@ class AppConfig {
       appName: String.fromEnvironment('APP_NAME', defaultValue: 'MediaFlow'),
       version: String.fromEnvironment('APP_VERSION', defaultValue: '0.1.0'),
       buildNumber: String.fromEnvironment('APP_BUILD', defaultValue: '1'),
+      repositoryUrl: String.fromEnvironment(
+        'REPOSITORY_URL',
+        defaultValue: 'https://github.com/zzz468/MediaFlow-Dev',
+      ),
       environment: environmentName == 'production'
           ? AppEnvironment.production
           : AppEnvironment.development,
@@ -38,6 +43,7 @@ class AppConfig {
   final String appName;
   final String version;
   final String buildNumber;
+  final String repositoryUrl;
   final AppEnvironment environment;
   final bool enableVerboseLogging;
 

@@ -22,6 +22,7 @@ void main() {
       downloadNotificationsEnabled: false,
       autoCleanupFailedFiles: false,
       darkModeEnabled: true,
+      restoreTasksOnStartup: false,
     );
 
     await repository.save(settings);
@@ -34,5 +35,6 @@ void main() {
     expect(restored.downloadNotificationsEnabled, isFalse);
     expect(restored.autoCleanupFailedFiles, isFalse);
     expect(restored.darkModeEnabled, isTrue);
+    expect(restored.restoreTasksOnStartup, isFalse);
   });
 }

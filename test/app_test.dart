@@ -47,9 +47,9 @@ void main() {
     await pumpApp(tester);
 
     expect(find.text('MediaFlow'), findsOneWidget);
-    expect(find.text('Video link'), findsOneWidget);
-    expect(find.text('Parse link'), findsOneWidget);
-    expect(find.text('解析状态：等待输入'), findsOneWidget);
+    expect(find.text('媒体链接'), findsOneWidget);
+    expect(find.text('请输入有效链接'), findsOneWidget);
+    expect(find.text('等待媒体信息'), findsOneWidget);
   });
 
   testWidgets('creates and completes a real download task after parsing', (
@@ -71,12 +71,15 @@ void main() {
       'https://www.bilibili.com/video/BV1xx',
     );
     await tester.pump();
-    await tester.tap(find.text('Parse link'));
+    await tester.tap(find.text('解析链接'));
     await tester.pumpAndSettle();
 
-    await tester.tap(find.text('Start download'));
+    await tester.ensureVisible(find.text('加入下载队列'));
     await tester.pumpAndSettle();
-    await tester.tap(find.text('Download History').first);
+    await tester.tap(find.text('加入下载队列'));
+    await tester.pumpAndSettle();
+    expect(find.text('“测试视频”下载完成。'), findsOneWidget);
+    await tester.tap(find.text('下载').first);
     await tester.pumpAndSettle();
 
     expect(find.text('测试视频'), findsOneWidget);
@@ -87,13 +90,26 @@ void main() {
   testWidgets('switches to settings and persists dark mode', (tester) async {
     await pumpApp(tester);
 
-    await tester.tap(find.text('Settings').first);
+    await tester.tap(find.text('设置').first);
     await tester.pumpAndSettle();
     await tester.tap(find.text('深色模式'));
     await tester.pumpAndSettle();
 
-    expect(find.text('About MediaFlow'), findsOneWidget);
-    expect(find.text('Stage 4.1'), findsOneWidget);
+    expect(find.text('关于 MediaFlow'), findsOneWidget);
+    expect(find.text('启动时恢复任务状态'), findsOneWidget);
+  });
+  testWidgets('opens the local about page', (tester) async {
+    await pumpApp(tester);
+
+    await tester.tap(find.text('关于').first);
+    await tester.pumpAndSettle();
+
+    expect(find.text('开源协议'), findsOneWidget);
+    expect(find.text('零成本原则'), findsOneWidget);
+    expect(
+      find.textContaining('github.com/zzz468/MediaFlow-Dev'),
+      findsOneWidget,
+    );
   });
 }
 

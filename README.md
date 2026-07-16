@@ -1,32 +1,33 @@
 # MediaFlow
 
-MediaFlow 是一个面向 Windows、Android 和 iOS 的跨平台媒体链接处理工具。项目当前优先支持 Windows，并以可长期维护的开源项目标准构建。
+MediaFlow 是一个面向 Windows、Android 和 iOS 的免费开源媒体链接处理工具。项目优先支持 Windows，所有设置、下载历史和日志仅保存在本机。
 
-## 当前阶段
+## 当前能力
 
-阶段 4.1 已完成下载体验、持久化和稳定性增强：
+- Bilibili、抖音公开媒体信息解析
+- 标题、作者、封面、时长和平台信息展示
+- 顺序多任务下载队列
+- 暂停、继续、删除和失败重试
+- HTTP Range 断点续传和 `.part` 文件保护
+- 下载历史与设置持久化
+- 自定义下载目录、深色模式和启动恢复
+- 本地下载完成提示和缓存清理
+- parser、downloader、network、error 分类日志
 
-- Material 3 主题、深色模式、声明式路由与自适应导航
-- Riverpod 状态管理、统一错误处理和日志入口
-- 平台检测、`ParserService` 与统一 `ParserInterface`
-- Bilibili 普通链接和短链接的公开视频信息解析
-- 抖音分享链接重定向与多来源公开元数据解析
-- 标题、作者、封面、时长和视频信息的统一展示
-- 顺序多任务下载队列、暂停、继续、删除和失败重试
-- HTTP Range 断点续传与 .part 临时文件管理
-- 下载历史、完成时间、设置和深色模式持久化
-- 默认下载目录、完成通知和失败文件清理设置
-- 解析、下载、网络和文件错误分类日志
+## 零成本原则
 
-仅当解析器提供可用的直接媒体地址时启用下载。任务按队列顺序执行，软件重启后可恢复历史并继续未完成任务。
+- 不依赖自建服务器
+- 不使用付费云服务
+- 不使用商业媒体解析 API
+- 优先使用公开信息和本地离线能力
+- 不上传用户链接、设置、历史或日志
 
 ## 技术栈
 
 - Flutter / Dart
 - Riverpod
 - go_router
-- http
-- html
+- http / html
 - logging
 - path_provider
 - Material 3
@@ -40,14 +41,36 @@ flutter test
 flutter run -d windows
 ```
 
-开发环境与缓存路径说明见 [`docs/开发计划.md`](docs/开发计划.md)，解析模块说明见 [`docs/解析模块.md`](docs/解析模块.md)，下载模块说明见 [`docs/下载模块.md`](docs/下载模块.md)，设置与持久化说明见 [`docs/设置与持久化.md`](docs/设置与持久化.md)。
+Windows Release 构建：
 
-## 分支策略
+```powershell
+flutter build windows --release
+```
 
-- `main`：稳定发布基线
-- `dev`：日常开发与集成分支
+## 文档
+
+- [使用说明](docs/使用说明.md)
+- [开发指南](docs/开发指南.md)
+- [开发计划](docs/开发计划.md)
+- [解析模块](docs/解析模块.md)
+- [下载模块](docs/下载模块.md)
+- [设置与持久化](docs/设置与持久化.md)
+- [发布检查清单](docs/发布检查清单.md)
+
+## 分支
+
+- `main`：稳定发布版本
+- `dev`：日常开发与集成版本
 - `feature/*`、`fix/*`、`docs/*`：短期工作分支
 
-## 许可证
+## 项目地址
 
-许可证将在首次公开发布前以 Apache-2.0 形式加入仓库。
+`https://github.com/zzz468/MediaFlow-Dev`
+
+## 开源协议
+
+MediaFlow 使用 [Apache License 2.0](LICENSE) 发布。
+
+## 免责声明
+
+MediaFlow 不提供任何平台内容授权，也不绕过登录、付费、地区或权限限制。用户应遵守平台服务条款、版权规则和所在地法律。

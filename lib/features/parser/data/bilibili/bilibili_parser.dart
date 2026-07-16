@@ -238,7 +238,10 @@ class BilibiliParser implements ParserInterface {
         quality: _asInt(data['quality']),
       );
     } catch (error) {
-      AppLogger.info('Bilibili download option is temporarily unavailable.');
+      AppLogger.info(
+        'Bilibili download option is temporarily unavailable.',
+        category: LogCategory.parser,
+      );
       return null;
     }
   }

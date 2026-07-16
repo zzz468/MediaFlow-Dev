@@ -4,18 +4,21 @@ class AppSettings {
     this.downloadNotificationsEnabled = true,
     this.autoCleanupFailedFiles = true,
     this.darkModeEnabled = false,
+    this.restoreTasksOnStartup = true,
   });
 
   final String? defaultDownloadDirectory;
   final bool downloadNotificationsEnabled;
   final bool autoCleanupFailedFiles;
   final bool darkModeEnabled;
+  final bool restoreTasksOnStartup;
 
   AppSettings copyWith({
     Object? defaultDownloadDirectory = _unset,
     bool? downloadNotificationsEnabled,
     bool? autoCleanupFailedFiles,
     bool? darkModeEnabled,
+    bool? restoreTasksOnStartup,
   }) {
     return AppSettings(
       defaultDownloadDirectory: identical(defaultDownloadDirectory, _unset)
@@ -26,6 +29,8 @@ class AppSettings {
       autoCleanupFailedFiles:
           autoCleanupFailedFiles ?? this.autoCleanupFailedFiles,
       darkModeEnabled: darkModeEnabled ?? this.darkModeEnabled,
+      restoreTasksOnStartup:
+          restoreTasksOnStartup ?? this.restoreTasksOnStartup,
     );
   }
 
@@ -35,6 +40,7 @@ class AppSettings {
       'downloadNotificationsEnabled': downloadNotificationsEnabled,
       'autoCleanupFailedFiles': autoCleanupFailedFiles,
       'darkModeEnabled': darkModeEnabled,
+      'restoreTasksOnStartup': restoreTasksOnStartup,
     };
   }
 
@@ -45,6 +51,7 @@ class AppSettings {
           json['downloadNotificationsEnabled'] as bool? ?? true,
       autoCleanupFailedFiles: json['autoCleanupFailedFiles'] as bool? ?? true,
       darkModeEnabled: json['darkModeEnabled'] as bool? ?? false,
+      restoreTasksOnStartup: json['restoreTasksOnStartup'] as bool? ?? true,
     );
   }
 

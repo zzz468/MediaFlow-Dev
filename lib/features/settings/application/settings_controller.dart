@@ -54,6 +54,10 @@ class AppSettingsController extends Notifier<AppSettings> {
     _update(state.copyWith(darkModeEnabled: enabled));
   }
 
+  void setRestoreTasksOnStartup(bool enabled) {
+    _update(state.copyWith(restoreTasksOnStartup: enabled));
+  }
+
   Future<void> flush() => _pendingSave;
 
   Future<void> _restore() async {

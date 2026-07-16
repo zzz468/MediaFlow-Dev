@@ -1,5 +1,6 @@
 import 'package:go_router/go_router.dart';
 
+import '../../features/about/presentation/about_page.dart';
 import '../../features/history/presentation/download_history_page.dart';
 import '../../features/home/presentation/home_page.dart';
 import '../../features/settings/presentation/settings_page.dart';
@@ -9,6 +10,7 @@ abstract final class AppRoutes {
   static const home = '/home';
   static const history = '/history';
   static const settings = '/settings';
+  static const about = '/about';
 }
 
 final GoRouter appRouter = GoRouter(
@@ -29,6 +31,10 @@ final GoRouter appRouter = GoRouter(
         GoRoute(
           path: AppRoutes.settings,
           builder: (context, state) => const SettingsPage(),
+        ),
+        GoRoute(
+          path: AppRoutes.about,
+          builder: (context, state) => const AboutPage(),
         ),
       ],
     ),

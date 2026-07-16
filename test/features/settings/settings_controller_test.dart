@@ -19,6 +19,7 @@ void main() {
       firstController.setDownloadNotificationsEnabled(false);
       firstController.setAutoCleanupFailedFiles(false);
       firstController.setDarkModeEnabled(true);
+      firstController.setRestoreTasksOnStartup(false);
       await firstController.flush();
       firstContainer.dispose();
 
@@ -36,6 +37,7 @@ void main() {
       expect(restored.downloadNotificationsEnabled, isFalse);
       expect(restored.autoCleanupFailedFiles, isFalse);
       expect(restored.darkModeEnabled, isTrue);
+      expect(restored.restoreTasksOnStartup, isFalse);
       expect(repository.saveCount, greaterThan(0));
     },
   );

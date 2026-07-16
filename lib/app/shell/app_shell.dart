@@ -1,32 +1,54 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../features/downloader/application/download_notice_controller.dart';
 import '../router/app_router.dart';
 
-class AppShell extends StatelessWidget {
+class AppShell extends ConsumerWidget {
   const AppShell({required this.currentPath, required this.child, super.key});
 
   final String currentPath;
   final Widget child;
 
-  static const _destinations = [
-    _AppDestination('Home', AppRoutes.home, Icons.home_outlined, Icons.home),
+  static const _destinations = <_AppDestination>[
+    _AppDestination('首页', AppRoutes.home, Icons.home_outlined, Icons.home),
     _AppDestination(
-      'Download History',
+      '下载',
       AppRoutes.history,
-      Icons.history_outlined,
-      Icons.history,
+      Icons.download_outlined,
+      Icons.download,
     ),
     _AppDestination(
-      'Settings',
+      '设置',
       AppRoutes.settings,
       Icons.settings_outlined,
       Icons.settings,
     ),
+    _AppDestination(
+      '关于',
+      AppRoutes.about,
+      Icons.info_outline_rounded,
+      Icons.info_rounded,
+    ),
   ];
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    ref.listen<DownloadCompletionNotice?>(downloadCompletionNoticeProvider, (
+      previous,
+      next,
+    ) {
+      if (next == null) {
+        return;
+      }
+      final messenger = ScaffoldMessenger.of(context);
+      messenger
+        ..hideCurrentSnackBar()
+        ..showSnackBar(SnackBar(content: Text('“${next.title}”下载完成。')));
+      ref.read(downloadCompletionNoticeProvider.notifier).clear();
+    });
+
     final selectedIndex = _selectedIndex;
     return LayoutBuilder(
       builder: (context, constraints) {

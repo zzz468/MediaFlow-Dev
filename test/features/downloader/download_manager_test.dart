@@ -212,6 +212,24 @@ void main() {
     expect(repository.tasks.first.status, DownloadStatus.paused);
   });
 
+  test(
+    'marks interrupted tasks failed when startup restore is disabled',
+    () async {
+      final repository = MemoryDownloadTaskRepository(<DownloadTask>[
+        createTask(status: DownloadStatus.downloading, bytesReceived: 2),
+      ]);
+      final scope = await createManager(
+        repository: repository,
+        settings: const AppSettings(restoreTasksOnStartup: false),
+      );
+
+      final restored = scope.container.read(downloadManagerProvider).single;
+      expect(restored.status, DownloadStatus.failed);
+      expect(restored.progress, 0);
+      expect(restored.bytesReceived, 0);
+      expect(restored.errorMessage, contains('启动恢复已关闭'));
+    },
+  );
   test('simulated tasks still pause, resume, and complete', () async {
     final scope = await createManager(
       simulatedPlan: const SimulatedDownloadPlan(
