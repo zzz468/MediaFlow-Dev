@@ -1,22 +1,33 @@
 import '../../../core/models/media_link.dart';
 
-enum LinkParsingStatus { idle, invalid, waitingForParsing }
+enum LinkParsingStatus { idle, invalid, valid }
+
+enum ParserExecutionStatus {
+  idle,
+  waitingForParsing,
+  parsing,
+  succeeded,
+  failed,
+}
 
 class LinkParserState {
   const LinkParserState({
     this.input = '',
     this.uri,
-    this.platform = MediaPlatform.unknown,
-    this.status = LinkParsingStatus.idle,
+    this.selectedPlatform = MediaPlatform.unknown,
+    this.inputStatus = LinkParsingStatus.idle,
+    this.parserStatus = ParserExecutionStatus.idle,
     this.errorMessage,
   });
 
   final String input;
   final Uri? uri;
-  final MediaPlatform platform;
-  final LinkParsingStatus status;
+  final MediaPlatform selectedPlatform;
+  final LinkParsingStatus inputStatus;
+  final ParserExecutionStatus parserStatus;
   final String? errorMessage;
 
   bool get hasInput => input.trim().isNotEmpty;
-  bool get isReadyForParsing => status == LinkParsingStatus.waitingForParsing;
+  bool get isReadyForParsing =>
+      parserStatus == ParserExecutionStatus.waitingForParsing;
 }

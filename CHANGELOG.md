@@ -8,6 +8,7 @@
 
 - 基础配置、核心数据模型与媒体模块抽象接口
 - 链接 URL 校验、抖音/Bilibili 平台检测与等待解析状态
+- 统一 VideoInfo、ParserResult、ParserInterface 与平台解析器空实现
 
 ### Planned
 

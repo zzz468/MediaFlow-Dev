@@ -33,7 +33,8 @@ class LinkParserViewModel extends Notifier<LinkParserState> {
     if (uri == null || !_isSupportedWebUrl(uri)) {
       state = LinkParserState(
         input: value,
-        status: LinkParsingStatus.invalid,
+        inputStatus: LinkParsingStatus.invalid,
+        parserStatus: ParserExecutionStatus.idle,
         errorMessage: '请输入有效的 http 或 https 链接。',
       );
       return;
@@ -42,8 +43,9 @@ class LinkParserViewModel extends Notifier<LinkParserState> {
     state = LinkParserState(
       input: value,
       uri: uri,
-      platform: _platformDetector.detect(uri),
-      status: LinkParsingStatus.waitingForParsing,
+      selectedPlatform: _platformDetector.detect(uri),
+      inputStatus: LinkParsingStatus.valid,
+      parserStatus: ParserExecutionStatus.waitingForParsing,
     );
   }
 

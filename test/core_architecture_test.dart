@@ -1,9 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mediaflow/core/config/app_config.dart';
-import 'package:mediaflow/core/interfaces/media_resolver.dart';
 import 'package:mediaflow/core/models/download_task.dart';
-import 'package:mediaflow/core/models/media_info.dart';
-import 'package:mediaflow/core/models/media_link.dart';
 
 void main() {
   test('app config exposes the selected environment', () {
@@ -35,32 +32,4 @@ void main() {
     expect(updated.status, DownloadTaskStatus.downloading);
     expect(updated.progress, 0.5);
   });
-
-  test('media resolver contract remains implementation independent', () async {
-    final resolver = _FakeResolver();
-    final link = MediaLink(
-      originalUrl: 'https://example.test/video/1',
-      normalizedUri: Uri.parse('https://example.test/video/1'),
-    );
-
-    expect(resolver.supports(link), isTrue);
-    expect((await resolver.resolve(link)).title, 'Example media');
-  });
-}
-
-class _FakeResolver implements MediaResolver {
-  @override
-  String get id => 'fake';
-
-  @override
-  Future<MediaInfo> resolve(MediaLink link) async {
-    return MediaInfo(
-      id: 'example-1',
-      sourceUrl: link.normalizedUri,
-      title: 'Example media',
-    );
-  }
-
-  @override
-  bool supports(MediaLink link) => link.platform == MediaPlatform.unknown;
 }

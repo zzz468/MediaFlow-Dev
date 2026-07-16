@@ -94,7 +94,7 @@ class _HomePageState extends ConsumerState<HomePage> {
                   decoration: InputDecoration(
                     hintText: 'Paste a video or media link',
                     prefixIcon: const Icon(Icons.link_rounded),
-                    errorText: state.status == LinkParsingStatus.invalid
+                    errorText: state.inputStatus == LinkParsingStatus.invalid
                         ? state.errorMessage
                         : null,
                   ),
@@ -161,7 +161,7 @@ class _LinkDetectionSummary extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('平台：${state.platform.displayName}'),
+          Text('平台：${state.selectedPlatform.displayName}'),
           const SizedBox(height: 4),
           const Text('状态：等待解析'),
         ],
