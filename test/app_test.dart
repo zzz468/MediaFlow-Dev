@@ -2,6 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mediaflow/app/mediaflow_app.dart';
+import 'package:mediaflow/core/models/media_link.dart';
+import 'package:mediaflow/features/parser/application/parser_service.dart';
+import 'package:mediaflow/features/parser/data/url_platform_detector.dart';
+import 'package:mediaflow/features/parser/domain/parser_interface.dart';
+import 'package:mediaflow/features/parser/domain/parser_result.dart';
+import 'package:mediaflow/features/parser/domain/video_info.dart';
+import 'package:mediaflow/features/parser/presentation/link_parser_view_model.dart';
 
 void main() {
   testWidgets('shows the MediaFlow home workspace', (tester) async {
@@ -17,7 +24,16 @@ void main() {
   testWidgets('creates a simulated download task after parsing', (
     tester,
   ) async {
-    await tester.pumpWidget(const ProviderScope(child: MediaFlowApp()));
+    final parserService = ParserService(
+      platformDetector: const UrlPlatformDetector(),
+      parsers: [_ImmediateBilibiliParser()],
+    );
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [parserServiceProvider.overrideWithValue(parserService)],
+        child: const MediaFlowApp(),
+      ),
+    );
     await tester.pumpAndSettle();
 
     await tester.enterText(
@@ -48,4 +64,25 @@ void main() {
 
     expect(find.text('About MediaFlow'), findsOneWidget);
   });
+}
+
+class _ImmediateBilibiliParser implements ParserInterface {
+  @override
+  MediaPlatform get platform => MediaPlatform.bilibili;
+
+  @override
+  Future<ParserResult> parse(MediaLink link) async {
+    return ParserSuccess(
+      VideoInfo(
+        id: 'widget-test',
+        title: '测试视频',
+        author: 'MediaFlow Demo',
+        videoUrl: link.normalizedUri,
+        platform: platform,
+      ),
+    );
+  }
+
+  @override
+  bool supports(MediaLink link) => link.platform == platform;
 }

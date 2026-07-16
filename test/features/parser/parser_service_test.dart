@@ -1,9 +1,11 @@
 import 'dart:async';
+import 'dart:convert';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mediaflow/core/models/media_link.dart';
 import 'package:mediaflow/features/parser/application/parser_service.dart';
+import 'package:mediaflow/features/parser/data/bilibili/bilibili_parser.dart';
 import 'package:mediaflow/features/parser/data/url_platform_detector.dart';
 import 'package:mediaflow/features/parser/domain/link_parser_state.dart';
 import 'package:mediaflow/features/parser/domain/parser_interface.dart';
@@ -11,32 +13,62 @@ import 'package:mediaflow/features/parser/domain/parser_result.dart';
 import 'package:mediaflow/features/parser/domain/video_info.dart';
 import 'package:mediaflow/features/parser/presentation/link_parser_view_model.dart';
 
+import '../../helpers/fake_network_client.dart';
+
 void main() {
-  group('ParserService', () {
-    test('returns simulated Bilibili video information', () async {
-      final service = createDefaultParserService();
+  group('ParserService integration', () {
+    test(
+      'detects Bilibili and delegates to its real parser implementation',
+      () async {
+        final networkClient = FakeNetworkClient((uri, headers) async {
+          return textResponse(
+            jsonEncode(<String, Object?>{
+              'code': 0,
+              'data': <String, Object?>{
+                'aid': 170001,
+                'bvid': 'BV1GJ411x7h7',
+                'cid': 279786,
+                'title': '集成测试视频',
+                'pic': 'https://example.test/cover.jpg',
+                'duration': 200,
+                'owner': <String, Object?>{'mid': 2, 'name': 'MediaFlow'},
+              },
+            }),
+            finalUri: uri,
+          );
+        });
+        final service = ParserService(
+          platformDetector: const UrlPlatformDetector(),
+          parsers: [BilibiliParser(networkClient: networkClient)],
+        );
 
-      final result = await service.parseUri(
-        Uri.parse('https://www.bilibili.com/video/BV1xx'),
-      );
+        final result = await service.parseUri(
+          Uri.parse('https://www.bilibili.com/video/BV1GJ411x7h7'),
+        );
 
-      expect(result, isA<ParserSuccess>());
-      final videoInfo = (result as ParserSuccess).videoInfo;
-      expect(videoInfo.title, '测试视频');
-      expect(videoInfo.author, 'MediaFlow Demo');
-      expect(videoInfo.platform, MediaPlatform.bilibili);
-      expect(videoInfo.duration, const Duration(minutes: 3, seconds: 20));
-    });
+        expect(result, isA<ParserSuccess>());
+        final videoInfo = (result as ParserSuccess).videoInfo;
+        expect(videoInfo.title, '集成测试视频');
+        expect(videoInfo.platform, MediaPlatform.bilibili);
+        expect(networkClient.requests, hasLength(1));
+      },
+    );
 
     test('returns a failure for an unsupported platform', () async {
-      final service = createDefaultParserService();
+      const service = ParserService(
+        platformDetector: UrlPlatformDetector(),
+        parsers: <ParserInterface>[],
+      );
 
       final result = await service.parseUri(
         Uri.parse('https://example.com/video'),
       );
 
       expect(result, isA<ParserFailure>());
-      expect((result as ParserFailure).code, 'unsupported_platform');
+      expect(
+        (result as ParserFailure).code,
+        ParserFailureCode.unsupportedPlatform,
+      );
     });
   });
 

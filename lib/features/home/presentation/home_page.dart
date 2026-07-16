@@ -166,6 +166,22 @@ class _HomePageState extends ConsumerState<HomePage> {
   }
 }
 
+class _CoverPlaceholder extends StatelessWidget {
+  const _CoverPlaceholder({required this.colorScheme});
+
+  final ColorScheme colorScheme;
+
+  @override
+  Widget build(BuildContext context) {
+    return ColoredBox(
+      color: colorScheme.surfaceContainerHighest,
+      child: Center(
+        child: Icon(Icons.image_outlined, color: colorScheme.onSurfaceVariant),
+      ),
+    );
+  }
+}
+
 class _ParserResultSection extends StatelessWidget {
   const _ParserResultSection({required this.state});
 
@@ -187,17 +203,22 @@ class _ParserResultSection extends StatelessWidget {
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  width: 120,
-                  height: 72,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    color: colorScheme.surfaceContainerHighest,
-                    borderRadius: BorderRadius.circular(14),
-                  ),
-                  child: Icon(
-                    Icons.image_outlined,
-                    color: colorScheme.onSurfaceVariant,
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(14),
+                  child: SizedBox(
+                    width: 120,
+                    height: 72,
+                    child: videoInfo?.coverUrl == null
+                        ? _CoverPlaceholder(colorScheme: colorScheme)
+                        : Image.network(
+                            videoInfo!.coverUrl.toString(),
+                            fit: BoxFit.cover,
+                            errorBuilder: (context, error, stackTrace) {
+                              return _CoverPlaceholder(
+                                colorScheme: colorScheme,
+                              );
+                            },
+                          ),
                   ),
                 ),
                 const SizedBox(width: 16),

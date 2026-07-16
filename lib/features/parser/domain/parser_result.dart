@@ -1,5 +1,12 @@
 import 'video_info.dart';
 
+abstract final class ParserFailureCode {
+  static const networkError = 'network_error';
+  static const linkExpired = 'link_expired';
+  static const unsupportedPlatform = 'unsupported_platform';
+  static const parseFailed = 'parse_failed';
+}
+
 sealed class ParserResult {
   const ParserResult();
 

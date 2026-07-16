@@ -36,6 +36,8 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter_riverpod: ^3.3.2
   go_router: ^17.3.0
+  html: ^0.15.6
+  http: ^1.6.0
   logging: ^1.3.0
 
 dev_dependencies:

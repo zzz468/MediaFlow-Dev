@@ -4,9 +4,11 @@ import '../application/parser_service.dart';
 import '../domain/link_parser_state.dart';
 import '../domain/parser_result.dart';
 
-final parserServiceProvider = Provider<ParserService>(
-  (ref) => createDefaultParserService(),
-);
+final parserServiceProvider = Provider<ParserService>((ref) {
+  final service = createDefaultParserService();
+  ref.onDispose(service.close);
+  return service;
+});
 
 final linkParserViewModelProvider =
     NotifierProvider<LinkParserViewModel, LinkParserState>(

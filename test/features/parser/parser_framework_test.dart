@@ -6,8 +6,9 @@ import 'package:mediaflow/features/parser/data/douyin/douyin_parser.dart';
 import 'package:mediaflow/features/parser/data/url_platform_detector.dart';
 import 'package:mediaflow/features/parser/domain/link_parser_state.dart';
 import 'package:mediaflow/features/parser/domain/parser_interface.dart';
-import 'package:mediaflow/features/parser/domain/parser_result.dart';
 import 'package:mediaflow/features/parser/presentation/link_parser_view_model.dart';
+
+import '../../helpers/fake_network_client.dart';
 
 void main() {
   const detector = UrlPlatformDetector();
@@ -73,18 +74,17 @@ void main() {
     });
   });
 
-  test('platform parsers implement the shared interface', () async {
+  test('platform parsers implement the shared interface', () {
+    final networkClient = FakeNetworkClient((uri, headers) async {
+      throw StateError('Network must not be called by this contract test.');
+    });
     final parsers = <ParserInterface>[
-      const BilibiliParser(),
-      const DouyinParser(),
+      BilibiliParser(networkClient: networkClient),
+      DouyinParser(networkClient: networkClient),
     ];
-    final link = MediaLink(
-      originalUrl: 'https://www.bilibili.com/video/BV1xx',
-      normalizedUri: Uri.parse('https://www.bilibili.com/video/BV1xx'),
-      platform: MediaPlatform.bilibili,
-    );
 
-    expect(parsers.first.supports(link), isTrue);
-    expect(await parsers.first.parse(link), isA<ParserSuccess>());
+    expect(parsers, everyElement(isA<ParserInterface>()));
+    expect(parsers.first.platform, MediaPlatform.bilibili);
+    expect(parsers.last.platform, MediaPlatform.douyin);
   });
 }
