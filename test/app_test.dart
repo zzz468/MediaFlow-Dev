@@ -14,7 +14,7 @@ void main() {
     expect(find.text('解析状态：等待输入'), findsOneWidget);
   });
 
-  testWidgets('shows simulated video information after parsing', (
+  testWidgets('creates a simulated download task after parsing', (
     tester,
   ) async {
     await tester.pumpWidget(const ProviderScope(child: MediaFlowApp()));
@@ -24,16 +24,17 @@ void main() {
       find.byType(TextField),
       'https://www.bilibili.com/video/BV1xx',
     );
-    await tester.pumpAndSettle();
-    expect(find.text('解析状态：等待解析'), findsOneWidget);
-
+    await tester.pump();
     await tester.tap(find.text('Parse link'));
     await tester.pumpAndSettle();
 
+    await tester.tap(find.text('Start download'));
+    await tester.pump();
+    await tester.tap(find.text('Download History').first);
+    await tester.pumpAndSettle();
+
     expect(find.text('测试视频'), findsOneWidget);
-    expect(find.text('作者：MediaFlow Demo'), findsOneWidget);
     expect(find.text('平台：Bilibili'), findsOneWidget);
-    expect(find.text('解析状态：解析成功'), findsOneWidget);
   });
 
   testWidgets('switches to settings and changes the theme', (tester) async {

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../core/models/media_link.dart';
+import '../../downloader/application/download_manager.dart';
+import '../../downloader/domain/download_task.dart';
 import '../../parser/domain/link_parser_state.dart';
 import '../../parser/presentation/link_parser_view_model.dart';
 
@@ -109,6 +111,12 @@ class _HomePageState extends ConsumerState<HomePage> {
                       icon: const Icon(Icons.search_rounded),
                       label: const Text('Parse link'),
                     ),
+                    if (state.videoInfo != null)
+                      FilledButton.tonalIcon(
+                        onPressed: _startDownload,
+                        icon: const Icon(Icons.download_rounded),
+                        label: const Text('Start download'),
+                      ),
                     OutlinedButton.icon(
                       onPressed: state.hasInput ? _clearLink : null,
                       icon: const Icon(Icons.clear_rounded),
@@ -133,6 +141,28 @@ class _HomePageState extends ConsumerState<HomePage> {
 
   void _parseLink() {
     ref.read(linkParserViewModelProvider.notifier).parse();
+  }
+
+  void _startDownload() {
+    final videoInfo = ref.read(linkParserViewModelProvider).videoInfo;
+    if (videoInfo == null) {
+      return;
+    }
+
+    final task = DownloadTask(
+      id: 'demo-${videoInfo.id}-${DateTime.now().microsecondsSinceEpoch}',
+      title: videoInfo.title,
+      url: videoInfo.videoUrl,
+      platform: videoInfo.platform,
+      createdAt: DateTime.now(),
+    );
+    final manager = ref.read(downloadManagerProvider.notifier);
+    manager
+      ..addTask(task)
+      ..startSimulatedDownload(task.id);
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(const SnackBar(content: Text('已创建模拟下载任务。')));
   }
 }
 

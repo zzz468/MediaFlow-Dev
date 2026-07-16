@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'download_history_view_model.dart';
+import '../../downloader/application/download_manager.dart';
+import '../../downloader/presentation/download_task_tile.dart';
 
 class DownloadHistoryPage extends ConsumerWidget {
   const DownloadHistoryPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final state = ref.watch(downloadHistoryViewModelProvider);
+    final tasks = ref.watch(downloadManagerProvider);
 
     return Padding(
       padding: const EdgeInsets.all(32),
@@ -21,18 +22,19 @@ class DownloadHistoryPage extends ConsumerWidget {
           ),
           const SizedBox(height: 8),
           Text(
-            'Completed and failed tasks will appear here.',
+            'Simulated tasks are managed in memory until persistence is added.',
             style: Theme.of(context).textTheme.bodyLarge,
           ),
-          const SizedBox(height: 32),
+          const SizedBox(height: 24),
           Expanded(
-            child: state.isEmpty
+            child: tasks.isEmpty
                 ? const _EmptyHistoryState()
-                : ListView.builder(
-                    itemCount: state.entries.length,
+                : ListView.separated(
+                    itemCount: tasks.length,
+                    separatorBuilder: (context, index) =>
+                        const SizedBox(height: 12),
                     itemBuilder: (context, index) {
-                      final entry = state.entries[index];
-                      return ListTile(title: Text(entry.title));
+                      return DownloadTaskTile(task: tasks[index]);
                     },
                   ),
           ),
@@ -48,6 +50,7 @@ class _EmptyHistoryState extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
+
     return Center(
       child: ConstrainedBox(
         constraints: const BoxConstraints(maxWidth: 420),
@@ -69,7 +72,7 @@ class _EmptyHistoryState extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
                 const Text(
-                  'Future download tasks and their results will be stored here.',
+                  'Parse a supported demo link, then start a simulated download.',
                   textAlign: TextAlign.center,
                 ),
               ],
