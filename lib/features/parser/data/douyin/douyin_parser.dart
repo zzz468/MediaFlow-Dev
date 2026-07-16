@@ -93,7 +93,7 @@ class DouyinParser implements ParserInterface {
         ),
       );
     } on TimeoutException catch (error, stackTrace) {
-      AppLogger.error(
+      AppLogger.networkError(
         'Douyin request timed out',
         error: error,
         stackTrace: stackTrace,
@@ -104,7 +104,7 @@ class DouyinParser implements ParserInterface {
         cause: error,
       );
     } on NetworkRequestException catch (error, stackTrace) {
-      AppLogger.error(
+      AppLogger.networkError(
         'Douyin network request failed',
         error: error,
         stackTrace: stackTrace,
@@ -115,7 +115,7 @@ class DouyinParser implements ParserInterface {
         cause: error,
       );
     } on FormatException catch (error, stackTrace) {
-      AppLogger.error(
+      AppLogger.parserError(
         'Douyin response decoding failed',
         error: error,
         stackTrace: stackTrace,
@@ -126,7 +126,7 @@ class DouyinParser implements ParserInterface {
         cause: error,
       );
     } catch (error, stackTrace) {
-      AppLogger.error(
+      AppLogger.parserError(
         'Douyin parsing failed',
         error: error,
         stackTrace: stackTrace,

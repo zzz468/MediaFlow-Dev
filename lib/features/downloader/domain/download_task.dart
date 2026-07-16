@@ -30,6 +30,7 @@ class DownloadTask {
     this.bytesReceived = 0,
     this.totalBytes,
     this.savePath,
+    this.completedAt,
     this.errorMessage,
   }) : assert(progress >= 0 && progress <= 1),
        assert(bytesReceived >= 0),
@@ -49,6 +50,7 @@ class DownloadTask {
   final int? totalBytes;
   final String? savePath;
   final DateTime createdAt;
+  final DateTime? completedAt;
   final String? errorMessage;
 
   DownloadTask copyWith({
@@ -57,6 +59,7 @@ class DownloadTask {
     int? bytesReceived,
     Object? totalBytes = _unset,
     Object? savePath = _unset,
+    Object? completedAt = _unset,
     Object? errorMessage = _unset,
   }) {
     return DownloadTask(
@@ -76,9 +79,84 @@ class DownloadTask {
           ? this.savePath
           : savePath as String?,
       createdAt: createdAt,
+      completedAt: identical(completedAt, _unset)
+          ? this.completedAt
+          : completedAt as DateTime?,
       errorMessage: identical(errorMessage, _unset)
           ? this.errorMessage
           : errorMessage as String?,
     );
+  }
+
+  Map<String, Object?> toJson() {
+    return <String, Object?>{
+      'id': id,
+      'title': title,
+      'url': url.toString(),
+      'platform': platform.name,
+      'mode': mode.name,
+      'requestHeaders': requestHeaders,
+      'progress': progress,
+      'status': status.name,
+      'bytesReceived': bytesReceived,
+      'totalBytes': totalBytes,
+      'savePath': savePath,
+      'createdAt': createdAt.toIso8601String(),
+      'completedAt': completedAt?.toIso8601String(),
+      'errorMessage': errorMessage,
+    };
+  }
+
+  factory DownloadTask.fromJson(Map<String, Object?> json) {
+    final headers = json['requestHeaders'];
+    return DownloadTask(
+      id: json['id']! as String,
+      title: json['title']! as String,
+      url: Uri.parse(json['url']! as String),
+      platform: _enumByName(
+        MediaPlatform.values,
+        json['platform'] as String?,
+        MediaPlatform.unknown,
+      ),
+      mode: _enumByName(
+        DownloadMode.values,
+        json['mode'] as String?,
+        DownloadMode.real,
+      ),
+      requestHeaders: headers is Map
+          ? <String, String>{
+              for (final entry in headers.entries)
+                if (entry.key is String && entry.value is String)
+                  entry.key as String: entry.value as String,
+            }
+          : const {},
+      progress: (json['progress'] as num?)?.toDouble() ?? 0,
+      status: _enumByName(
+        DownloadStatus.values,
+        json['status'] as String?,
+        DownloadStatus.paused,
+      ),
+      bytesReceived: (json['bytesReceived'] as num?)?.toInt() ?? 0,
+      totalBytes: (json['totalBytes'] as num?)?.toInt(),
+      savePath: json['savePath'] as String?,
+      createdAt: DateTime.parse(json['createdAt']! as String),
+      completedAt: json['completedAt'] == null
+          ? null
+          : DateTime.parse(json['completedAt']! as String),
+      errorMessage: json['errorMessage'] as String?,
+    );
+  }
+
+  static T _enumByName<T extends Enum>(
+    List<T> values,
+    String? name,
+    T fallback,
+  ) {
+    for (final value in values) {
+      if (value.name == name) {
+        return value;
+      }
+    }
+    return fallback;
   }
 }

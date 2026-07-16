@@ -140,7 +140,7 @@ class BilibiliParser implements ParserInterface {
     } on _BilibiliResponseException catch (error) {
       return error.failure;
     } on TimeoutException catch (error, stackTrace) {
-      AppLogger.error(
+      AppLogger.networkError(
         'Bilibili request timed out',
         error: error,
         stackTrace: stackTrace,
@@ -151,7 +151,7 @@ class BilibiliParser implements ParserInterface {
         cause: error,
       );
     } on NetworkRequestException catch (error, stackTrace) {
-      AppLogger.error(
+      AppLogger.networkError(
         'Bilibili network request failed',
         error: error,
         stackTrace: stackTrace,
@@ -162,7 +162,7 @@ class BilibiliParser implements ParserInterface {
         cause: error,
       );
     } on FormatException catch (error, stackTrace) {
-      AppLogger.error(
+      AppLogger.parserError(
         'Bilibili response decoding failed',
         error: error,
         stackTrace: stackTrace,
@@ -173,7 +173,7 @@ class BilibiliParser implements ParserInterface {
         cause: error,
       );
     } catch (error, stackTrace) {
-      AppLogger.error(
+      AppLogger.parserError(
         'Bilibili parsing failed',
         error: error,
         stackTrace: stackTrace,

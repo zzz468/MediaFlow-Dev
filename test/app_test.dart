@@ -13,11 +13,38 @@ import 'package:mediaflow/features/parser/domain/parser_interface.dart';
 import 'package:mediaflow/features/parser/domain/parser_result.dart';
 import 'package:mediaflow/features/parser/domain/video_info.dart';
 import 'package:mediaflow/features/parser/presentation/link_parser_view_model.dart';
+import 'package:mediaflow/features/settings/application/settings_controller.dart';
+
+import 'helpers/memory_repositories.dart';
 
 void main() {
-  testWidgets('shows the MediaFlow home workspace', (tester) async {
-    await tester.pumpWidget(const ProviderScope(child: MediaFlowApp()));
+  Future<void> pumpApp(
+    WidgetTester tester, {
+    ParserService? parserService,
+    DownloadService? downloadService,
+  }) async {
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          settingsRepositoryProvider.overrideWithValue(
+            MemorySettingsRepository(),
+          ),
+          downloadTaskRepositoryProvider.overrideWithValue(
+            MemoryDownloadTaskRepository(),
+          ),
+          if (parserService != null)
+            parserServiceProvider.overrideWithValue(parserService),
+          if (downloadService != null)
+            downloadServiceProvider.overrideWithValue(downloadService),
+        ],
+        child: const MediaFlowApp(),
+      ),
+    );
     await tester.pumpAndSettle();
+  }
+
+  testWidgets('shows the MediaFlow home workspace', (tester) async {
+    await pumpApp(tester);
 
     expect(find.text('MediaFlow'), findsOneWidget);
     expect(find.text('Video link'), findsOneWidget);
@@ -30,19 +57,14 @@ void main() {
   ) async {
     final parserService = ParserService(
       platformDetector: const UrlPlatformDetector(),
-      parsers: [_ImmediateBilibiliParser()],
+      parsers: <ParserInterface>[_ImmediateBilibiliParser()],
     );
     final downloadService = _ImmediateDownloadService();
-    await tester.pumpWidget(
-      ProviderScope(
-        overrides: [
-          parserServiceProvider.overrideWithValue(parserService),
-          downloadServiceProvider.overrideWithValue(downloadService),
-        ],
-        child: const MediaFlowApp(),
-      ),
+    await pumpApp(
+      tester,
+      parserService: parserService,
+      downloadService: downloadService,
     );
-    await tester.pumpAndSettle();
 
     await tester.enterText(
       find.byType(TextField),
@@ -59,19 +81,19 @@ void main() {
 
     expect(find.text('测试视频'), findsOneWidget);
     expect(find.text('平台：Bilibili'), findsOneWidget);
-    expect(find.text('状态：已完成'), findsOneWidget);
+    expect(find.text('已完成'), findsOneWidget);
   });
 
-  testWidgets('switches to settings and changes the theme', (tester) async {
-    await tester.pumpWidget(const ProviderScope(child: MediaFlowApp()));
-    await tester.pumpAndSettle();
+  testWidgets('switches to settings and persists dark mode', (tester) async {
+    await pumpApp(tester);
 
     await tester.tap(find.text('Settings').first);
     await tester.pumpAndSettle();
-    await tester.tap(find.text('Dark mode'));
+    await tester.tap(find.text('深色模式'));
     await tester.pumpAndSettle();
 
     expect(find.text('About MediaFlow'), findsOneWidget);
+    expect(find.text('Stage 4.1'), findsOneWidget);
   });
 }
 
@@ -88,7 +110,7 @@ class _ImmediateBilibiliParser implements ParserInterface {
         author: 'MediaFlow Demo',
         videoUrl: Uri.parse('https://example.test/video.mp4'),
         platform: platform,
-        metadata: const {'mediaUrlAvailable': true},
+        metadata: const <String, Object?>{'mediaUrlAvailable': true},
       ),
     );
   }
@@ -100,13 +122,19 @@ class _ImmediateBilibiliParser implements ParserInterface {
 class _ImmediateDownloadService implements DownloadService {
   @override
   Stream<DownloadEvent> download(DownloadTask task) async* {
-    yield const DownloadStarted(totalBytes: 4);
+    yield const DownloadStarted(
+      totalBytes: 4,
+      savePath: r'D:\Downloads\MediaFlow\测试视频.mp4',
+    );
     yield const DownloadProgressed(bytesReceived: 4, totalBytes: 4);
     yield const DownloadCompleted(
       savePath: r'D:\Downloads\MediaFlow\测试视频.mp4',
       bytesReceived: 4,
     );
   }
+
+  @override
+  Future<void> removePartialFile(DownloadTask task) async {}
 
   @override
   void close() {}

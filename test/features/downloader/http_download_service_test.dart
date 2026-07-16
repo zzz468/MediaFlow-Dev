@@ -13,13 +13,13 @@ void main() {
       final client = _FakeDownloadClient(
         response: DownloadStreamResponse(
           statusCode: 200,
-          stream: Stream<List<int>>.fromIterable(const [
-            [1, 2],
-            [3, 4],
+          stream: Stream<List<int>>.fromIterable(const <List<int>>[
+            <int>[1, 2],
+            <int>[3, 4],
           ]),
           finalUri: Uri.parse('https://cdn.example.test/video.mp4'),
           contentLength: 4,
-          headers: const {'content-type': 'video/mp4'},
+          headers: const <String, String>{'content-type': 'video/mp4'},
         ),
       );
       final fileStore = _MemoryDownloadFileStore();
@@ -30,13 +30,52 @@ void main() {
 
       final events = await service.download(_realTask()).toList();
 
-      expect(events.first, isA<DownloadStarted>());
+      final started = events.first as DownloadStarted;
+      expect(started.savePath, r'D:\Downloads\MediaFlow\video.mp4');
+      expect(started.bytesReceived, 0);
       expect(events.whereType<DownloadProgressed>(), hasLength(2));
       expect(events.last, isA<DownloadCompleted>());
       expect(fileStore.sink.bytes, <int>[1, 2, 3, 4]);
       expect(fileStore.sink.completed, isTrue);
-      expect(fileStore.sink.aborted, isFalse);
+      expect(fileStore.sink.closed, isTrue);
       expect(client.requestHeaders['Referer'], 'https://example.test/');
+    });
+
+    test('continues a partial file with an HTTP Range request', () async {
+      final client = _FakeDownloadClient(
+        response: DownloadStreamResponse(
+          statusCode: 206,
+          stream: Stream<List<int>>.value(const <int>[3, 4]),
+          finalUri: Uri.parse('https://cdn.example.test/video.mp4'),
+          contentLength: 2,
+          headers: const <String, String>{
+            'content-type': 'video/mp4',
+            'content-range': 'bytes 2-3/4',
+          },
+        ),
+      );
+      final fileStore = _MemoryDownloadFileStore(resumeBytes: 2);
+      final service = HttpDownloadService(
+        downloadClient: client,
+        fileStore: fileStore,
+      );
+
+      final events = await service
+          .download(
+            _realTask(
+              bytesReceived: 2,
+              savePath: r'D:\Downloads\MediaFlow\video.mp4',
+            ),
+          )
+          .toList();
+
+      expect(client.requestHeaders['Range'], 'bytes=2-');
+      expect(fileStore.append, isTrue);
+      final started = events.first as DownloadStarted;
+      expect(started.bytesReceived, 2);
+      expect(started.totalBytes, 4);
+      final completed = events.last as DownloadCompleted;
+      expect(completed.bytesReceived, 4);
     });
 
     test('rejects a non-media response before creating a file', () async {
@@ -45,7 +84,7 @@ void main() {
           statusCode: 200,
           stream: const Stream<List<int>>.empty(),
           finalUri: Uri.parse('https://example.test/page'),
-          headers: const {'content-type': 'text/html'},
+          headers: const <String, String>{'content-type': 'text/html'},
         ),
       );
       final fileStore = _MemoryDownloadFileStore();
@@ -67,14 +106,14 @@ void main() {
       expect(fileStore.createCount, 0);
     });
 
-    test('aborts a partial file when writing fails', () async {
+    test('preserves a partial file when writing fails', () async {
       final client = _FakeDownloadClient(
         response: DownloadStreamResponse(
           statusCode: 200,
-          stream: Stream<List<int>>.value(const [1, 2, 3]),
+          stream: Stream<List<int>>.value(const <int>[1, 2, 3]),
           finalUri: Uri.parse('https://cdn.example.test/video.mp4'),
           contentLength: 3,
-          headers: const {'content-type': 'video/mp4'},
+          headers: const <String, String>{'content-type': 'video/mp4'},
         ),
       );
       final fileStore = _MemoryDownloadFileStore(failOnAdd: true);
@@ -96,20 +135,24 @@ void main() {
           ),
         ]),
       );
-      expect(fileStore.sink.aborted, isTrue);
+      expect(fileStore.sink.closed, isTrue);
+      expect(fileStore.sink.aborted, isFalse);
       expect(fileStore.sink.completed, isFalse);
     });
   });
 }
 
-DownloadTask _realTask() {
+DownloadTask _realTask({int bytesReceived = 0, String? savePath}) {
   return DownloadTask(
     id: 'real-task',
     title: '真实下载测试',
     url: Uri.parse('https://cdn.example.test/video.mp4'),
     platform: MediaPlatform.douyin,
     mode: DownloadMode.real,
-    requestHeaders: const {'Referer': 'https://example.test/'},
+    requestHeaders: const <String, String>{'Referer': 'https://example.test/'},
+    bytesReceived: bytesReceived,
+    totalBytes: 4,
+    savePath: savePath,
     createdAt: DateTime.utc(2026, 7, 16),
   );
 }
@@ -118,39 +161,50 @@ class _FakeDownloadClient implements DownloadClient {
   _FakeDownloadClient({required this.response});
 
   final DownloadStreamResponse response;
-  Map<String, String> requestHeaders = const {};
-  bool closed = false;
+  Map<String, String> requestHeaders = const <String, String>{};
 
   @override
   Future<DownloadStreamResponse> open(
     Uri uri, {
-    Map<String, String> headers = const {},
+    Map<String, String> headers = const <String, String>{},
   }) async {
     requestHeaders = headers;
     return response;
   }
 
   @override
-  void close() {
-    closed = true;
-  }
+  void close() {}
 }
 
 class _MemoryDownloadFileStore implements DownloadFileStore {
-  _MemoryDownloadFileStore({bool failOnAdd = false})
+  _MemoryDownloadFileStore({bool failOnAdd = false, this.resumeBytes = 0})
     : sink = _MemoryDownloadFileSink(failOnAdd: failOnAdd);
 
   final _MemoryDownloadFileSink sink;
+  final int resumeBytes;
   int createCount = 0;
+  bool append = false;
+  final List<DownloadTask> deletedPartialTasks = <DownloadTask>[];
+
+  @override
+  Future<int> resumableBytes(DownloadTask task) async => resumeBytes;
 
   @override
   Future<DownloadFileSink> create({
     required DownloadTask task,
     required Uri sourceUri,
+    required bool append,
     String? contentType,
   }) async {
     createCount += 1;
+    this.append = append;
+    sink.path = task.savePath ?? r'D:\Downloads\MediaFlow\video.mp4';
     return sink;
+  }
+
+  @override
+  Future<void> deletePartialFile(DownloadTask task) async {
+    deletedPartialTasks.add(task);
   }
 }
 
@@ -159,8 +213,13 @@ class _MemoryDownloadFileSink implements DownloadFileSink {
 
   final bool failOnAdd;
   final List<int> bytes = <int>[];
+  String path = r'D:\Downloads\MediaFlow\video.mp4';
   bool completed = false;
+  bool closed = false;
   bool aborted = false;
+
+  @override
+  String get savePath => path;
 
   @override
   Future<void> add(List<int> value) async {
@@ -173,11 +232,18 @@ class _MemoryDownloadFileSink implements DownloadFileSink {
   @override
   Future<void> abort() async {
     aborted = true;
+    closed = true;
+  }
+
+  @override
+  Future<void> close() async {
+    closed = true;
   }
 
   @override
   Future<String> complete() async {
     completed = true;
-    return r'D:\Downloads\MediaFlow\真实下载测试.mp4';
+    closed = true;
+    return path;
   }
 }

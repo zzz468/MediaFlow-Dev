@@ -23,42 +23,75 @@ class HttpDownloadService implements DownloadService {
 
   @override
   Stream<DownloadEvent> download(DownloadTask task) async* {
-    final response = await _openResponse(task);
+    final requestedOffset = await _resumeOffset(task);
+    final response = await _openResponse(task, requestedOffset);
     _validateResponse(response);
+
+    final effectiveOffset = requestedOffset > 0 && response.statusCode == 206
+        ? requestedOffset
+        : 0;
+    _validateContentRange(response, effectiveOffset);
+    final totalBytes = _resolveTotalBytes(response, effectiveOffset);
 
     DownloadFileSink? fileSink;
     var completed = false;
-    var bytesReceived = 0;
+    var sessionBytes = 0;
+    var bytesReceived = effectiveOffset;
     try {
-      fileSink = await _fileStore.create(
-        task: task,
-        sourceUri: response.finalUri,
-        contentType: response.headers['content-type'],
+      try {
+        fileSink = await _fileStore.create(
+          task: task,
+          sourceUri: response.finalUri,
+          append: effectiveOffset > 0,
+          contentType: response.headers['content-type'],
+        );
+      } catch (error, stackTrace) {
+        AppLogger.fileError(
+          'Failed to prepare the download file.',
+          error: error,
+          stackTrace: stackTrace,
+        );
+        throw DownloadException(
+          code: DownloadFailureCode.fileSystemError,
+          message: '无法创建下载文件，请检查目录权限。',
+          cause: error,
+        );
+      }
+
+      yield DownloadStarted(
+        totalBytes: totalBytes,
+        savePath: fileSink.savePath,
+        bytesReceived: bytesReceived,
       );
-      yield DownloadStarted(totalBytes: response.contentLength);
 
       try {
         await for (final chunk in response.stream) {
           try {
             await fileSink.add(chunk);
-          } catch (error) {
+          } catch (error, stackTrace) {
+            AppLogger.fileError(
+              'Failed to write download bytes.',
+              error: error,
+              stackTrace: stackTrace,
+            );
             throw DownloadException(
               code: DownloadFailureCode.fileSystemError,
               message: '文件写入失败，请检查磁盘空间和目录权限。',
               cause: error,
             );
           }
+          sessionBytes += chunk.length;
           bytesReceived += chunk.length;
           yield DownloadProgressed(
             bytesReceived: bytesReceived,
-            totalBytes: response.contentLength,
+            totalBytes: totalBytes,
           );
         }
       } on DownloadException {
         rethrow;
       } catch (error, stackTrace) {
-        AppLogger.error(
-          'Download stream failed',
+        AppLogger.networkError(
+          'Download stream failed.',
           error: error,
           stackTrace: stackTrace,
         );
@@ -70,7 +103,7 @@ class HttpDownloadService implements DownloadService {
       }
 
       if (response.contentLength case final expectedBytes?
-          when expectedBytes >= 0 && bytesReceived != expectedBytes) {
+          when expectedBytes >= 0 && sessionBytes != expectedBytes) {
         throw DownloadException(
           code: DownloadFailureCode.invalidResponse,
           message: '下载内容不完整，请重新尝试。',
@@ -83,8 +116,8 @@ class HttpDownloadService implements DownloadService {
     } on DownloadException {
       rethrow;
     } catch (error, stackTrace) {
-      AppLogger.error(
-        'Saving download failed',
+      AppLogger.fileError(
+        'Saving download failed.',
         error: error,
         stackTrace: stackTrace,
       );
@@ -95,21 +128,53 @@ class HttpDownloadService implements DownloadService {
       );
     } finally {
       if (!completed) {
-        await fileSink?.abort();
+        await fileSink?.close();
       }
     }
   }
 
-  Future<DownloadStreamResponse> _openResponse(DownloadTask task) async {
+  Future<int> _resumeOffset(DownloadTask task) async {
     try {
-      return await _downloadClient.open(task.url, headers: task.requestHeaders);
-    } on TimeoutException catch (error) {
+      return await _fileStore.resumableBytes(task);
+    } catch (error, stackTrace) {
+      AppLogger.fileError(
+        'Failed to inspect the partial download file.',
+        error: error,
+        stackTrace: stackTrace,
+      );
+      return 0;
+    }
+  }
+
+  Future<DownloadStreamResponse> _openResponse(
+    DownloadTask task,
+    int resumeOffset,
+  ) async {
+    try {
+      return await _downloadClient.open(
+        task.url,
+        headers: <String, String>{
+          ...task.requestHeaders,
+          if (resumeOffset > 0) 'Range': 'bytes=$resumeOffset-',
+        },
+      );
+    } on TimeoutException catch (error, stackTrace) {
+      AppLogger.networkError(
+        'Download connection timed out.',
+        error: error,
+        stackTrace: stackTrace,
+      );
       throw DownloadException(
         code: DownloadFailureCode.networkError,
         message: '连接下载地址超时，请稍后重试。',
         cause: error,
       );
-    } catch (error) {
+    } catch (error, stackTrace) {
+      AppLogger.networkError(
+        'Failed to open the download URL.',
+        error: error,
+        stackTrace: stackTrace,
+      );
       throw DownloadException(
         code: DownloadFailureCode.networkError,
         message: '无法连接下载地址，请检查网络后重试。',
@@ -119,7 +184,7 @@ class HttpDownloadService implements DownloadService {
   }
 
   void _validateResponse(DownloadStreamResponse response) {
-    if (response.statusCode < 200 || response.statusCode >= 300) {
+    if (response.statusCode != 200 && response.statusCode != 206) {
       throw DownloadException(
         code: DownloadFailureCode.invalidResponse,
         message: '下载地址返回异常状态（HTTP ${response.statusCode}）。',
@@ -142,6 +207,59 @@ class HttpDownloadService implements DownloadService {
     }
   }
 
+  void _validateContentRange(
+    DownloadStreamResponse response,
+    int effectiveOffset,
+  ) {
+    if (response.statusCode != 206 || effectiveOffset == 0) {
+      return;
+    }
+    final range = _parseContentRange(response.headers['content-range']);
+    if (range != null && range.start != effectiveOffset) {
+      throw const DownloadException(
+        code: DownloadFailureCode.invalidResponse,
+        message: '服务器返回的续传区间无效，请重新下载。',
+      );
+    }
+  }
+
+  int? _resolveTotalBytes(
+    DownloadStreamResponse response,
+    int effectiveOffset,
+  ) {
+    final range = _parseContentRange(response.headers['content-range']);
+    return range?.total ??
+        (response.contentLength == null
+            ? null
+            : effectiveOffset + response.contentLength!);
+  }
+
+  _ContentRange? _parseContentRange(String? value) {
+    if (value == null) {
+      return null;
+    }
+    final match = RegExp(r'^bytes (\d+)-(\d+)/(\d+|\*)$').firstMatch(value);
+    if (match == null) {
+      return null;
+    }
+    return _ContentRange(
+      start: int.parse(match.group(1)!),
+      total: match.group(3) == '*' ? null : int.parse(match.group(3)!),
+    );
+  }
+
+  @override
+  Future<void> removePartialFile(DownloadTask task) {
+    return _fileStore.deletePartialFile(task);
+  }
+
   @override
   void close() => _downloadClient.close();
+}
+
+class _ContentRange {
+  const _ContentRange({required this.start, required this.total});
+
+  final int start;
+  final int? total;
 }

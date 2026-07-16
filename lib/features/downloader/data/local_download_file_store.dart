@@ -9,16 +9,16 @@ typedef DownloadDirectoryResolver = Future<Directory> Function();
 
 class LocalDownloadFileStore implements DownloadFileStore {
   factory LocalDownloadFileStore({
-    DownloadDirectoryResolver? rootDirectoryResolver,
+    DownloadDirectoryResolver? downloadDirectoryResolver,
   }) {
     return LocalDownloadFileStore._(
-      rootDirectoryResolver ?? _resolveDefaultRootDirectory,
+      downloadDirectoryResolver ?? resolveDefaultDownloadDirectory,
     );
   }
 
-  LocalDownloadFileStore._(this._rootDirectoryResolver);
+  LocalDownloadFileStore._(this._downloadDirectoryResolver);
 
-  final DownloadDirectoryResolver _rootDirectoryResolver;
+  final DownloadDirectoryResolver _downloadDirectoryResolver;
 
   static const _knownExtensions = <String>{
     '.mp4',
@@ -31,26 +31,58 @@ class LocalDownloadFileStore implements DownloadFileStore {
     '.ts',
   };
 
+  static Future<Directory> resolveDefaultDownloadDirectory() async {
+    Directory rootDirectory;
+    if (Platform.isAndroid || Platform.isIOS) {
+      rootDirectory = await getApplicationDocumentsDirectory();
+    } else {
+      try {
+        rootDirectory =
+            await getDownloadsDirectory() ??
+            await getApplicationDocumentsDirectory();
+      } on UnsupportedError {
+        rootDirectory = await getApplicationDocumentsDirectory();
+      }
+    }
+    return Directory('${rootDirectory.path}${Platform.pathSeparator}MediaFlow');
+  }
+
+  @override
+  Future<int> resumableBytes(DownloadTask task) async {
+    final savePath = task.savePath;
+    if (savePath == null) {
+      return 0;
+    }
+    final partialFile = File('$savePath.part');
+    return await partialFile.exists() ? partialFile.length() : 0;
+  }
+
   @override
   Future<DownloadFileSink> create({
     required DownloadTask task,
     required Uri sourceUri,
+    required bool append,
     String? contentType,
   }) async {
-    final rootDirectory = await _rootDirectoryResolver();
-    final downloadDirectory = Directory(
-      '${rootDirectory.path}${Platform.pathSeparator}MediaFlow',
-    );
+    final downloadDirectory = await _downloadDirectoryResolver();
     await downloadDirectory.create(recursive: true);
 
-    final extension = _resolveExtension(sourceUri, contentType);
-    final baseName = _sanitizeFileName(task.title, fallback: task.id);
-    final targetFile = await _uniqueTargetFile(
-      downloadDirectory,
-      '$baseName$extension',
-    );
+    var targetFile = task.savePath == null ? null : File(task.savePath!);
+    if (targetFile == null || await targetFile.exists()) {
+      final extension = _resolveExtension(sourceUri, contentType);
+      final baseName = _sanitizeFileName(task.title, fallback: task.id);
+      targetFile = await _uniqueTargetFile(
+        downloadDirectory,
+        '$baseName$extension',
+      );
+    }
+
     final partialFile = File('${targetFile.path}.part');
-    final writer = await partialFile.open(mode: FileMode.write);
+    final writer = await partialFile.open(
+      mode: append && await partialFile.exists()
+          ? FileMode.append
+          : FileMode.write,
+    );
     return _LocalDownloadFileSink(
       writer: writer,
       partialFile: partialFile,
@@ -58,20 +90,16 @@ class LocalDownloadFileStore implements DownloadFileStore {
     );
   }
 
-  static Future<Directory> _resolveDefaultRootDirectory() async {
-    if (Platform.isAndroid || Platform.isIOS) {
-      return getApplicationDocumentsDirectory();
+  @override
+  Future<void> deletePartialFile(DownloadTask task) async {
+    final savePath = task.savePath;
+    if (savePath == null) {
+      return;
     }
-
-    try {
-      final downloadsDirectory = await getDownloadsDirectory();
-      if (downloadsDirectory != null) {
-        return downloadsDirectory;
-      }
-    } on UnsupportedError {
-      // Fall back to the application documents directory.
+    final partialFile = File('$savePath.part');
+    if (await partialFile.exists()) {
+      await partialFile.delete();
     }
-    return getApplicationDocumentsDirectory();
   }
 
   String _resolveExtension(Uri sourceUri, String? contentType) {
@@ -144,6 +172,9 @@ class _LocalDownloadFileSink implements DownloadFileSink {
   bool _completed = false;
 
   @override
+  String get savePath => _targetFile.path;
+
+  @override
   Future<void> add(List<int> bytes) async {
     final writer = _writer;
     if (writer == null) {
@@ -154,25 +185,26 @@ class _LocalDownloadFileSink implements DownloadFileSink {
 
   @override
   Future<String> complete() async {
-    final writer = _writer;
-    if (writer == null) {
-      throw StateError('Download file is already closed.');
-    }
-    await writer.flush();
-    await writer.close();
-    _writer = null;
+    await close();
     await _partialFile.rename(_targetFile.path);
     _completed = true;
     return _targetFile.path;
   }
 
   @override
-  Future<void> abort() async {
+  Future<void> close() async {
     final writer = _writer;
-    if (writer != null) {
-      await writer.close();
-      _writer = null;
+    if (writer == null) {
+      return;
     }
+    await writer.flush();
+    await writer.close();
+    _writer = null;
+  }
+
+  @override
+  Future<void> abort() async {
+    await close();
     if (!_completed && await _partialFile.exists()) {
       await _partialFile.delete();
     }

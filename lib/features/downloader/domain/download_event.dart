@@ -3,9 +3,15 @@ sealed class DownloadEvent {
 }
 
 final class DownloadStarted extends DownloadEvent {
-  const DownloadStarted({required this.totalBytes});
+  const DownloadStarted({
+    required this.totalBytes,
+    required this.savePath,
+    this.bytesReceived = 0,
+  });
 
   final int? totalBytes;
+  final String savePath;
+  final int bytesReceived;
 }
 
 final class DownloadProgressed extends DownloadEvent {

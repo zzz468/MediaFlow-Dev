@@ -5,6 +5,8 @@ void main() {
   test('app config exposes the selected environment', () {
     const config = AppConfig(
       appName: 'MediaFlow Test',
+      version: '0.1.0',
+      buildNumber: '1',
       environment: AppEnvironment.production,
       enableVerboseLogging: true,
     );

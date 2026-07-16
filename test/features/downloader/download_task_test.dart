@@ -51,6 +51,35 @@ void main() {
     expect(updated.errorMessage, isNull);
   });
 
+  test('serializes all persistent task fields', () {
+    final completedAt = DateTime.utc(2026, 7, 16, 14);
+    final task = DownloadTask(
+      id: 'json-task',
+      title: 'JSON 测试',
+      url: Uri.parse('https://example.test/video.mp4'),
+      platform: MediaPlatform.douyin,
+      mode: DownloadMode.real,
+      requestHeaders: const <String, String>{
+        'Referer': 'https://example.test/',
+      },
+      progress: 1,
+      status: DownloadStatus.completed,
+      bytesReceived: 100,
+      totalBytes: 100,
+      savePath: r'D:\Downloads\video.mp4',
+      createdAt: DateTime.utc(2026, 7, 16, 13),
+      completedAt: completedAt,
+    );
+
+    final restored = DownloadTask.fromJson(task.toJson());
+
+    expect(restored.id, task.id);
+    expect(restored.platform, task.platform);
+    expect(restored.status, task.status);
+    expect(restored.completedAt, completedAt);
+    expect(restored.savePath, task.savePath);
+    expect(restored.requestHeaders, task.requestHeaders);
+  });
   test('download status exposes display labels', () {
     expect(DownloadStatus.queued.displayName, '等待中');
     expect(DownloadStatus.completed.displayName, '已完成');
