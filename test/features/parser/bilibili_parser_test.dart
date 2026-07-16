@@ -3,6 +3,7 @@ import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mediaflow/core/models/media_link.dart';
+import 'package:mediaflow/core/network/network_client.dart';
 import 'package:mediaflow/features/parser/data/bilibili/bilibili_parser.dart';
 import 'package:mediaflow/features/parser/domain/parser_result.dart';
 
@@ -12,6 +13,9 @@ void main() {
   group('BilibiliParser', () {
     test('maps the public video information response to VideoInfo', () async {
       final networkClient = FakeNetworkClient((uri, headers) async {
+        if (uri.path == '/x/player/playurl') {
+          return _playUrlResponse(uri);
+        }
         expect(uri.host, 'api.bilibili.com');
         expect(uri.path, '/x/web-interface/view');
         expect(uri.queryParameters['bvid'], 'BV1GJ411x7h7');
@@ -48,6 +52,11 @@ void main() {
       expect(videoInfo.coverUrl, Uri.parse('https://i0.hdslb.com/test.jpg'));
       expect(videoInfo.duration, const Duration(minutes: 2, seconds: 5));
       expect(videoInfo.platform, MediaPlatform.bilibili);
+      expect(
+        videoInfo.videoUrl,
+        Uri.parse('https://cdn.example.test/bilibili-video.mp4'),
+      );
+      expect(videoInfo.metadata['mediaUrlAvailable'], isTrue);
     });
 
     test('resolves a Bilibili short share link before parsing', () async {
@@ -86,8 +95,8 @@ void main() {
       );
 
       expect(result, isA<ParserSuccess>());
-      expect(networkClient.requests, hasLength(2));
-      expect(networkClient.requests.last.host, 'api.bilibili.com');
+      expect(networkClient.requests, hasLength(3));
+      expect(networkClient.requests.last.path, '/x/player/playurl');
     });
     test('maps a missing video to link_expired', () async {
       final networkClient = FakeNetworkClient((uri, headers) async {
@@ -116,6 +125,24 @@ void main() {
       expect((result as ParserFailure).code, ParserFailureCode.networkError);
     });
   });
+}
+
+NetworkResponse _playUrlResponse(Uri uri) {
+  return textResponse(
+    jsonEncode(<String, Object?>{
+      'code': 0,
+      'data': <String, Object?>{
+        'quality': 64,
+        'durl': <Object?>[
+          <String, Object?>{
+            'url': 'https://cdn.example.test/bilibili-video.mp4',
+            'size': 1024,
+          },
+        ],
+      },
+    }),
+    finalUri: uri,
+  );
 }
 
 MediaLink _bilibiliLink() {

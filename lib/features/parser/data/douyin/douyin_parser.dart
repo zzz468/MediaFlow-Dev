@@ -85,6 +85,10 @@ class DouyinParser implements ParserInterface {
             'sourceUrl': link.originalUrl,
             'resolvedUrl': resolvedUri.toString(),
             'mediaUrlAvailable': metadata.videoUrl != null,
+            'downloadHeaders': <String, String>{
+              'Referer': resolvedUri.origin,
+              'User-Agent': _headers['User-Agent']!,
+            },
           },
         ),
       );

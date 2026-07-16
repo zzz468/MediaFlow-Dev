@@ -3,6 +3,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mediaflow/app/mediaflow_app.dart';
 import 'package:mediaflow/core/models/media_link.dart';
+import 'package:mediaflow/features/downloader/application/download_manager.dart';
+import 'package:mediaflow/features/downloader/domain/download_event.dart';
+import 'package:mediaflow/features/downloader/domain/download_service.dart';
+import 'package:mediaflow/features/downloader/domain/download_task.dart';
 import 'package:mediaflow/features/parser/application/parser_service.dart';
 import 'package:mediaflow/features/parser/data/url_platform_detector.dart';
 import 'package:mediaflow/features/parser/domain/parser_interface.dart';
@@ -21,16 +25,20 @@ void main() {
     expect(find.text('解析状态：等待输入'), findsOneWidget);
   });
 
-  testWidgets('creates a simulated download task after parsing', (
+  testWidgets('creates and completes a real download task after parsing', (
     tester,
   ) async {
     final parserService = ParserService(
       platformDetector: const UrlPlatformDetector(),
       parsers: [_ImmediateBilibiliParser()],
     );
+    final downloadService = _ImmediateDownloadService();
     await tester.pumpWidget(
       ProviderScope(
-        overrides: [parserServiceProvider.overrideWithValue(parserService)],
+        overrides: [
+          parserServiceProvider.overrideWithValue(parserService),
+          downloadServiceProvider.overrideWithValue(downloadService),
+        ],
         child: const MediaFlowApp(),
       ),
     );
@@ -45,12 +53,13 @@ void main() {
     await tester.pumpAndSettle();
 
     await tester.tap(find.text('Start download'));
-    await tester.pump();
+    await tester.pumpAndSettle();
     await tester.tap(find.text('Download History').first);
     await tester.pumpAndSettle();
 
     expect(find.text('测试视频'), findsOneWidget);
     expect(find.text('平台：Bilibili'), findsOneWidget);
+    expect(find.text('状态：已完成'), findsOneWidget);
   });
 
   testWidgets('switches to settings and changes the theme', (tester) async {
@@ -77,12 +86,28 @@ class _ImmediateBilibiliParser implements ParserInterface {
         id: 'widget-test',
         title: '测试视频',
         author: 'MediaFlow Demo',
-        videoUrl: link.normalizedUri,
+        videoUrl: Uri.parse('https://example.test/video.mp4'),
         platform: platform,
+        metadata: const {'mediaUrlAvailable': true},
       ),
     );
   }
 
   @override
   bool supports(MediaLink link) => link.platform == platform;
+}
+
+class _ImmediateDownloadService implements DownloadService {
+  @override
+  Stream<DownloadEvent> download(DownloadTask task) async* {
+    yield const DownloadStarted(totalBytes: 4);
+    yield const DownloadProgressed(bytesReceived: 4, totalBytes: 4);
+    yield const DownloadCompleted(
+      savePath: r'D:\Downloads\MediaFlow\测试视频.mp4',
+      bytesReceived: 4,
+    );
+  }
+
+  @override
+  void close() {}
 }

@@ -98,6 +98,10 @@ class BilibiliParser implements ParserInterface {
           : const <String, dynamic>{};
       final canonicalId = bvid ?? 'av$aid';
       final coverUrl = _parseWebUri(_asString(data['pic']));
+      final downloadInfo = await _loadDownloadInfo(
+        videoId: canonicalId,
+        cid: _asInt(data['cid']),
+      );
 
       return ParserSuccess(
         VideoInfo(
@@ -106,12 +110,25 @@ class BilibiliParser implements ParserInterface {
           author: _asString(owner['name']),
           authorId: owner['mid']?.toString(),
           coverUrl: coverUrl,
-          videoUrl: Uri.https('www.bilibili.com', '/video/$canonicalId'),
+          videoUrl:
+              downloadInfo?.url ??
+              Uri.https('www.bilibili.com', '/video/$canonicalId'),
           platform: platform,
           duration: _durationFromSeconds(data['duration']),
           description: _asString(data['desc']),
           metadata: <String, Object?>{
             'sourceUrl': link.originalUrl,
+            'mediaUrlAvailable': downloadInfo != null,
+            'downloadHeaders': downloadInfo == null
+                ? const <String, String>{}
+                : const <String, String>{
+                    'Referer': 'https://www.bilibili.com/',
+                    'User-Agent':
+                        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
+                        'AppleWebKit/537.36 Chrome/124.0 Safari/537.36',
+                  },
+            'downloadSize': downloadInfo?.size,
+            'downloadQuality': downloadInfo?.quality,
             'aid': aid,
             'bvid': bvid,
             'cid': _asInt(data['cid']),
@@ -171,6 +188,60 @@ class BilibiliParser implements ParserInterface {
 
   @override
   bool supports(MediaLink link) => link.platform == platform;
+
+  Future<_BilibiliDownloadInfo?> _loadDownloadInfo({
+    required String videoId,
+    required int? cid,
+  }) async {
+    if (cid == null) {
+      return null;
+    }
+
+    try {
+      final idQuery = videoId.startsWith('BV')
+          ? <String, String>{'bvid': videoId}
+          : <String, String>{'avid': videoId.substring(2)};
+      final response = await _networkClient.get(
+        Uri.https('api.bilibili.com', '/x/player/playurl', <String, String>{
+          ...idQuery,
+          'cid': cid.toString(),
+          'qn': '64',
+          'fnval': '0',
+          'fourk': '0',
+        }),
+        headers: _headers,
+      );
+      if (response.statusCode < 200 || response.statusCode >= 300) {
+        return null;
+      }
+
+      final payload = jsonDecode(response.body);
+      if (payload is! Map<String, dynamic> || _asInt(payload['code']) != 0) {
+        return null;
+      }
+      final data = payload['data'];
+      if (data is! Map<String, dynamic>) {
+        return null;
+      }
+      final durl = data['durl'];
+      if (durl is! List || durl.isEmpty || durl.first is! Map) {
+        return null;
+      }
+      final item = Map<String, dynamic>.from(durl.first as Map);
+      final url = _parseWebUri(_asString(item['url']));
+      if (url == null) {
+        return null;
+      }
+      return _BilibiliDownloadInfo(
+        url: url,
+        size: _asInt(item['size']),
+        quality: _asInt(data['quality']),
+      );
+    } catch (error) {
+      AppLogger.info('Bilibili download option is temporarily unavailable.');
+      return null;
+    }
+  }
 
   Future<Uri> _resolveShortLink(Uri uri) async {
     if (uri.host != 'b23.tv' && uri.host != 'bili2233.cn') {
@@ -244,6 +315,18 @@ class BilibiliParser implements ParserInterface {
     final uri = Uri.tryParse(normalized);
     return uri != null && uri.hasScheme ? uri : null;
   }
+}
+
+class _BilibiliDownloadInfo {
+  const _BilibiliDownloadInfo({
+    required this.url,
+    required this.size,
+    required this.quality,
+  });
+
+  final Uri url;
+  final int? size;
+  final int? quality;
 }
 
 class _BilibiliResponseException implements Exception {

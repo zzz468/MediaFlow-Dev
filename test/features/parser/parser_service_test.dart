@@ -21,6 +21,23 @@ void main() {
       'detects Bilibili and delegates to its real parser implementation',
       () async {
         final networkClient = FakeNetworkClient((uri, headers) async {
+          if (uri.path == '/x/player/playurl') {
+            return textResponse(
+              jsonEncode(<String, Object?>{
+                'code': 0,
+                'data': <String, Object?>{
+                  'quality': 64,
+                  'durl': <Object?>[
+                    <String, Object?>{
+                      'url': 'https://cdn.example.test/integration.mp4',
+                      'size': 2048,
+                    },
+                  ],
+                },
+              }),
+              finalUri: uri,
+            );
+          }
           return textResponse(
             jsonEncode(<String, Object?>{
               'code': 0,
@@ -50,7 +67,8 @@ void main() {
         final videoInfo = (result as ParserSuccess).videoInfo;
         expect(videoInfo.title, '集成测试视频');
         expect(videoInfo.platform, MediaPlatform.bilibili);
-        expect(networkClient.requests, hasLength(1));
+        expect(networkClient.requests, hasLength(2));
+        expect(videoInfo.metadata['mediaUrlAvailable'], isTrue);
       },
     );
 

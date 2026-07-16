@@ -5,6 +5,7 @@ import '../../../core/models/media_link.dart';
 import '../../downloader/application/download_manager.dart';
 import '../../downloader/domain/download_task.dart';
 import '../../parser/domain/link_parser_state.dart';
+import '../../parser/domain/video_info.dart';
 import '../../parser/presentation/link_parser_view_model.dart';
 
 class HomePage extends ConsumerStatefulWidget {
@@ -33,6 +34,7 @@ class _HomePageState extends ConsumerState<HomePage> {
   Widget build(BuildContext context) {
     final state = ref.watch(linkParserViewModelProvider);
     final colorScheme = Theme.of(context).colorScheme;
+    final canDownload = _isDirectDownloadAvailable(state.videoInfo);
 
     return ListView(
       padding: const EdgeInsets.all(32),
@@ -113,7 +115,7 @@ class _HomePageState extends ConsumerState<HomePage> {
                     ),
                     if (state.videoInfo != null)
                       FilledButton.tonalIcon(
-                        onPressed: _startDownload,
+                        onPressed: canDownload ? _startDownload : null,
                         icon: const Icon(Icons.download_rounded),
                         label: const Text('Start download'),
                       ),
@@ -145,25 +147,63 @@ class _HomePageState extends ConsumerState<HomePage> {
 
   void _startDownload() {
     final videoInfo = ref.read(linkParserViewModelProvider).videoInfo;
-    if (videoInfo == null) {
+    if (videoInfo == null || !_isDirectDownloadAvailable(videoInfo)) {
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(const SnackBar(content: Text('当前解析结果暂无可用下载地址。')));
       return;
     }
 
     final task = DownloadTask(
-      id: 'demo-${videoInfo.id}-${DateTime.now().microsecondsSinceEpoch}',
+      id: 'download-${videoInfo.id}-${DateTime.now().microsecondsSinceEpoch}',
       title: videoInfo.title,
       url: videoInfo.videoUrl,
       platform: videoInfo.platform,
+      mode: DownloadMode.real,
+      requestHeaders: _downloadHeaders(videoInfo),
       createdAt: DateTime.now(),
     );
     final manager = ref.read(downloadManagerProvider.notifier);
     manager
       ..addTask(task)
-      ..startSimulatedDownload(task.id);
+      ..startDownload(task.id);
     ScaffoldMessenger.of(
       context,
-    ).showSnackBar(const SnackBar(content: Text('已创建模拟下载任务。')));
+    ).showSnackBar(const SnackBar(content: Text('真实下载任务已创建。')));
   }
+}
+
+bool _isDirectDownloadAvailable(VideoInfo? videoInfo) {
+  if (videoInfo == null) {
+    return false;
+  }
+  final explicitAvailability = videoInfo.metadata['mediaUrlAvailable'];
+  if (explicitAvailability is bool) {
+    return explicitAvailability;
+  }
+
+  final path = videoInfo.videoUrl.path.toLowerCase();
+  return const <String>[
+    '.mp4',
+    '.webm',
+    '.mov',
+    '.mkv',
+    '.flv',
+    '.m4a',
+    '.mp3',
+  ].any(path.endsWith);
+}
+
+Map<String, String> _downloadHeaders(VideoInfo videoInfo) {
+  final value = videoInfo.metadata['downloadHeaders'];
+  if (value is! Map) {
+    return const {};
+  }
+  return <String, String>{
+    for (final entry in value.entries)
+      if (entry.key is String && entry.value is String)
+        entry.key as String: entry.value as String,
+  };
 }
 
 class _CoverPlaceholder extends StatelessWidget {
@@ -190,6 +230,7 @@ class _ParserResultSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
+    final canDownload = _isDirectDownloadAvailable(state.videoInfo);
     final videoInfo = state.videoInfo;
 
     return Card(
@@ -235,6 +276,7 @@ class _ParserResultSection extends StatelessWidget {
                       Text('平台：${state.selectedPlatform.displayName}'),
                       if (videoInfo?.duration != null)
                         Text('时长：${_formatDuration(videoInfo!.duration!)}'),
+                      Text('下载：${canDownload ? '可用' : '暂不可用'}'),
                     ],
                   ),
                 ),
