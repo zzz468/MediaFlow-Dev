@@ -1,0 +1,4 @@
+storePassword=change-me
+keyPassword=change-me
+keyAlias=mediaflow
+storeFile=D:\\Android\\keys\\mediaflow-release.jks

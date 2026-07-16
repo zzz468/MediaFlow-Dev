@@ -89,14 +89,14 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.mediaflow" "\0"
-            VALUE "FileDescription", "mediaflow" "\0"
+            VALUE "CompanyName", "MediaFlow contributors" "\0"
+            VALUE "FileDescription", "MediaFlow v0.1.0-beta" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "mediaflow" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2026 com.mediaflow. All rights reserved." "\0"
-            VALUE "OriginalFilename", "mediaflow.exe" "\0"
-            VALUE "ProductName", "mediaflow" "\0"
-            VALUE "ProductVersion", VERSION_AS_STRING "\0"
+            VALUE "InternalName", "MediaFlow" "\0"
+            VALUE "LegalCopyright", "Licensed under Apache-2.0" "\0"
+            VALUE "OriginalFilename", "MediaFlow.exe" "\0"
+            VALUE "ProductName", "MediaFlow" "\0"
+            VALUE "ProductVersion", "0.1.0-beta" "\0"
         END
     END
     BLOCK "VarFileInfo"

@@ -1,5 +1,7 @@
 # MediaFlow
 
+当前测试版本：`v0.1.0-beta`
+
 MediaFlow 是一个面向 Windows、Android 和 iOS 的免费开源媒体链接处理工具。项目优先支持 Windows，所有设置、下载历史和日志仅保存在本机。
 
 ## 当前能力
@@ -56,6 +58,9 @@ flutter build windows --release
 - [下载模块](docs/下载模块.md)
 - [设置与持久化](docs/设置与持久化.md)
 - [发布检查清单](docs/发布检查清单.md)
+- [v0.1.0-beta 发布说明](docs/v0.1.0-beta发布说明.md)
+- [Android 真机测试](docs/Android真机测试.md)
+- [v0.1.0-beta 测试报告](docs/v0.1.0-beta测试报告.md)
 
 ## 分支
 
