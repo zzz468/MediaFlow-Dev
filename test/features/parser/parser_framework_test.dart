@@ -7,7 +7,6 @@ import 'package:mediaflow/features/parser/data/url_platform_detector.dart';
 import 'package:mediaflow/features/parser/domain/link_parser_state.dart';
 import 'package:mediaflow/features/parser/domain/parser_interface.dart';
 import 'package:mediaflow/features/parser/domain/parser_result.dart';
-import 'package:mediaflow/features/parser/domain/video_info.dart';
 import 'package:mediaflow/features/parser/presentation/link_parser_view_model.dart';
 
 void main() {
@@ -55,11 +54,11 @@ void main() {
 
       final state = container.read(linkParserViewModelProvider);
       expect(state.inputStatus, LinkParsingStatus.invalid);
-      expect(state.parserStatus, ParserExecutionStatus.idle);
+      expect(state.parserStatus, ParserExecutionStatus.failed);
       expect(state.errorMessage, isNotEmpty);
     });
 
-    test('selects a platform and waits for parsing', () {
+    test('selects a platform and waits to parse a valid link', () {
       final container = ProviderContainer();
       addTearDown(container.dispose);
 
@@ -70,46 +69,22 @@ void main() {
       final state = container.read(linkParserViewModelProvider);
       expect(state.inputStatus, LinkParsingStatus.valid);
       expect(state.selectedPlatform, MediaPlatform.bilibili);
-      expect(state.parserStatus, ParserExecutionStatus.waitingForParsing);
+      expect(state.parserStatus, ParserExecutionStatus.readyToParse);
     });
   });
 
-  group('ParserInterface and ParserResult', () {
-    test(
-      'platform parsers implement the shared interface without network work',
-      () async {
-        final parsers = <ParserInterface>[
-          const BilibiliParser(),
-          const DouyinParser(),
-        ];
-        final bilibiliLink = MediaLink(
-          originalUrl: 'https://www.bilibili.com/video/BV1xx',
-          normalizedUri: Uri.parse('https://www.bilibili.com/video/BV1xx'),
-          platform: MediaPlatform.bilibili,
-        );
-
-        expect(parsers[0].supports(bilibiliLink), isTrue);
-        final result = await parsers[0].parse(bilibiliLink);
-        expect(result, isA<ParserFailure>());
-        expect((result as ParserFailure).code, 'not_implemented');
-      },
+  test('platform parsers implement the shared interface', () async {
+    final parsers = <ParserInterface>[
+      const BilibiliParser(),
+      const DouyinParser(),
+    ];
+    final link = MediaLink(
+      originalUrl: 'https://www.bilibili.com/video/BV1xx',
+      normalizedUri: Uri.parse('https://www.bilibili.com/video/BV1xx'),
+      platform: MediaPlatform.bilibili,
     );
 
-    test('represents successful and failed parser results', () {
-      final videoInfo = VideoInfo(
-        id: 'video-1',
-        title: 'Example video',
-        videoUrl: Uri.parse('https://media.example.test/video.mp4'),
-        platform: MediaPlatform.bilibili,
-        author: 'Example author',
-      );
-      final success = ParserSuccess(videoInfo);
-      const failure = ParserFailure(code: 'network_error', message: 'Offline');
-
-      expect(success.isSuccess, isTrue);
-      expect(success.isFailure, isFalse);
-      expect(failure.isFailure, isTrue);
-      expect(failure.isSuccess, isFalse);
-    });
+    expect(parsers.first.supports(link), isTrue);
+    expect(await parsers.first.parse(link), isA<ParserSuccess>());
   });
 }

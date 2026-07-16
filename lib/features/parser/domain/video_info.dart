@@ -10,6 +10,8 @@ class VideoInfo {
     this.duration,
     this.author,
     this.authorId,
+    this.description,
+    this.metadata = const {},
   });
 
   final String id;
@@ -20,4 +22,6 @@ class VideoInfo {
   final Duration? duration;
   final String? author;
   final String? authorId;
+  final String? description;
+  final Map<String, Object?> metadata;
 }

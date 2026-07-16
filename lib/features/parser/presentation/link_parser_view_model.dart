@@ -1,11 +1,11 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../data/url_platform_detector.dart';
+import '../application/parser_service.dart';
 import '../domain/link_parser_state.dart';
-import '../domain/platform_detector.dart';
+import '../domain/parser_result.dart';
 
-final platformDetectorProvider = Provider<PlatformDetector>(
-  (ref) => const UrlPlatformDetector(),
+final parserServiceProvider = Provider<ParserService>(
+  (ref) => createDefaultParserService(),
 );
 
 final linkParserViewModelProvider =
@@ -14,11 +14,11 @@ final linkParserViewModelProvider =
     );
 
 class LinkParserViewModel extends Notifier<LinkParserState> {
-  late PlatformDetector _platformDetector;
+  late ParserService _parserService;
 
   @override
   LinkParserState build() {
-    _platformDetector = ref.watch(platformDetectorProvider);
+    _parserService = ref.watch(parserServiceProvider);
     return const LinkParserState();
   }
 
@@ -34,7 +34,7 @@ class LinkParserViewModel extends Notifier<LinkParserState> {
       state = LinkParserState(
         input: value,
         inputStatus: LinkParsingStatus.invalid,
-        parserStatus: ParserExecutionStatus.idle,
+        parserStatus: ParserExecutionStatus.failed,
         errorMessage: '请输入有效的 http 或 https 链接。',
       );
       return;
@@ -43,10 +43,47 @@ class LinkParserViewModel extends Notifier<LinkParserState> {
     state = LinkParserState(
       input: value,
       uri: uri,
-      selectedPlatform: _platformDetector.detect(uri),
+      selectedPlatform: _parserService.detectPlatform(uri),
       inputStatus: LinkParsingStatus.valid,
-      parserStatus: ParserExecutionStatus.waitingForParsing,
+      parserStatus: ParserExecutionStatus.readyToParse,
     );
+  }
+
+  Future<void> parse() async {
+    final uri = state.uri;
+    if (uri == null || state.inputStatus != LinkParsingStatus.valid) {
+      return;
+    }
+
+    state = LinkParserState(
+      input: state.input,
+      uri: uri,
+      selectedPlatform: state.selectedPlatform,
+      inputStatus: LinkParsingStatus.valid,
+      parserStatus: ParserExecutionStatus.parsing,
+    );
+
+    final result = await _parserService.parseUri(uri);
+    switch (result) {
+      case ParserSuccess(:final videoInfo):
+        state = LinkParserState(
+          input: state.input,
+          uri: uri,
+          selectedPlatform: videoInfo.platform,
+          inputStatus: LinkParsingStatus.valid,
+          parserStatus: ParserExecutionStatus.succeeded,
+          videoInfo: videoInfo,
+        );
+      case ParserFailure(:final message):
+        state = LinkParserState(
+          input: state.input,
+          uri: uri,
+          selectedPlatform: state.selectedPlatform,
+          inputStatus: LinkParsingStatus.valid,
+          parserStatus: ParserExecutionStatus.failed,
+          errorMessage: message,
+        );
+    }
   }
 
   void clear() {

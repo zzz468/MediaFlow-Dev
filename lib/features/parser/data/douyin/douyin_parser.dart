@@ -1,6 +1,7 @@
 import '../../../../core/models/media_link.dart';
 import '../../domain/parser_interface.dart';
 import '../../domain/parser_result.dart';
+import '../../domain/video_info.dart';
 
 class DouyinParser implements ParserInterface {
   const DouyinParser();
@@ -10,9 +11,18 @@ class DouyinParser implements ParserInterface {
 
   @override
   Future<ParserResult> parse(MediaLink link) async {
-    return const ParserFailure(
-      code: 'not_implemented',
-      message: 'Douyin parsing is not implemented yet.',
+    return ParserSuccess(
+      VideoInfo(
+        id: 'douyin-demo',
+        title: '测试视频',
+        author: 'MediaFlow Demo',
+        authorId: 'mediaflow-demo',
+        platform: platform,
+        coverUrl: Uri.parse('https://example.test/mediaflow/douyin-cover.jpg'),
+        videoUrl: Uri.parse('https://example.test/mediaflow/douyin-demo.mp4'),
+        duration: const Duration(minutes: 1, seconds: 45),
+        description: '用于验证 MediaFlow 解析架构的抖音模拟数据。',
+      ),
     );
   }
 
