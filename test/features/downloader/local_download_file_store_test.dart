@@ -91,4 +91,62 @@ void main() {
 
     expect(File('${sink.savePath}.part').existsSync(), isFalse);
   });
+
+  test(
+    'publishes completed files and removes the private staging copy',
+    () async {
+      final root = await Directory.systemTemp.createTemp('mediaflow-publish-');
+      addTearDown(() async {
+        if (await root.exists()) {
+          await root.delete(recursive: true);
+        }
+      });
+      File? publishedSource;
+      String? publishedName;
+      String? publishedType;
+      final store = LocalDownloadFileStore(
+        downloadDirectoryResolver: () async => root,
+        completedFilePublisher:
+            ({
+              required sourceFile,
+              required displayName,
+              required contentType,
+            }) async {
+              publishedSource = sourceFile;
+              publishedName = displayName;
+              publishedType = contentType;
+              expect(await sourceFile.readAsBytes(), <int>[1, 2, 3]);
+              return '/storage/emulated/0/Download/MediaFlow/$displayName';
+            },
+      );
+      final task = DownloadTask(
+        id: 'publish-test',
+        title: 'public-video',
+        url: Uri.parse('https://example.test/video.mp4'),
+        platform: MediaPlatform.douyin,
+        mode: DownloadMode.real,
+        createdAt: DateTime.utc(2026, 7, 16),
+      );
+
+      final sink = await store.create(
+        task: task,
+        sourceUri: task.url,
+        append: false,
+        contentType: 'video/mp4',
+      );
+      await sink.add(const <int>[1, 2, 3]);
+      final stagingPath = sink.savePath;
+      final savePath = await sink.complete();
+
+      expect(
+        savePath,
+        '/storage/emulated/0/Download/MediaFlow/public-video.mp4',
+      );
+      expect(publishedName, 'public-video.mp4');
+      expect(publishedType, 'video/mp4');
+      expect(publishedSource?.path, stagingPath);
+      expect(File(stagingPath).existsSync(), isFalse);
+      expect(File('$stagingPath.part').existsSync(), isFalse);
+    },
+  );
 }

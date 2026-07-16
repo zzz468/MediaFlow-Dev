@@ -36,6 +36,62 @@ void main() {
       expect(videoInfo.platform, MediaPlatform.douyin);
     });
 
+    test(
+      'falls back to iesdouyin router data and extracts media url',
+      () async {
+        final resolvedUri = Uri.parse(
+          'https://www.douyin.com/video/9876543210',
+        );
+        final networkClient = FakeNetworkClient((uri, headers) async {
+          if (uri.host == 'www.iesdouyin.com') {
+            expect(uri.path, '/share/video/9876543210/');
+            return textResponse(_routerDataPage, finalUri: uri);
+          }
+          return textResponse(
+            '<html><body></body><script>anti-bot shell</script></html>',
+            finalUri: resolvedUri,
+          );
+        });
+        final parser = DouyinParser(networkClient: networkClient);
+
+        final result = await parser.parse(_douyinLink());
+
+        expect(result, isA<ParserSuccess>());
+        final videoInfo = (result as ParserSuccess).videoInfo;
+        expect(videoInfo.id, '9876543210');
+        expect(videoInfo.title, 'Router Data test video');
+        expect(videoInfo.author, 'Share page author');
+        expect(
+          videoInfo.videoUrl,
+          Uri.parse('https://video.example.test/douyin-real.mp4'),
+        );
+        expect(videoInfo.metadata['mediaUrlAvailable'], isTrue);
+        expect(networkClient.requests, hasLength(2));
+      },
+    );
+
+    test(
+      'does not report success when no real media url is available',
+      () async {
+        final resolvedUri = Uri.parse(
+          'https://www.douyin.com/video/9876543210',
+        );
+        final networkClient = FakeNetworkClient((uri, headers) async {
+          return textResponse(_metadataOnlyPage, finalUri: resolvedUri);
+        });
+        final parser = DouyinParser(networkClient: networkClient);
+
+        final result = await parser.parse(_douyinLink());
+
+        expect(result, isA<ParserFailure>());
+        expect((result as ParserFailure).code, ParserFailureCode.parseFailed);
+        expect(
+          result.message,
+          contains('\u771f\u5b9e\u5a92\u4f53\u5730\u5740'),
+        );
+      },
+    );
+
     test('maps an expired page to link_expired', () async {
       final networkClient = FakeNetworkClient((uri, headers) async {
         return textResponse('<html><body>作品已删除</body></html>', finalUri: uri);
@@ -70,6 +126,59 @@ MediaLink _douyinLink() {
     platform: MediaPlatform.douyin,
   );
 }
+
+const _routerDataPage = r'''
+<!doctype html>
+<html>
+  <body></body>
+  <script>
+    window._ROUTER_DATA = {
+      "loaderData": {
+        "video_(id)/page": {
+          "videoInfoRes": {
+            "status_code": 0,
+            "item_list": [
+              {
+                "aweme_id": "9876543210",
+                "desc": "Router Data test video",
+                "author": {
+                  "nickname": "Share page author",
+                  "unique_id": "router-author"
+                },
+                "video": {
+                  "duration": 123000,
+                  "cover": {
+                    "url_list": ["https://image.example.test/cover.jpg"]
+                  },
+                  "bit_rate": [
+                    {
+                      "play_addr": {
+                        "url_list": [
+                          "https://video.example.test/douyin-real.mp4"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      }
+    };
+  </script>
+</html>
+''';
+
+const _metadataOnlyPage = '''
+<!doctype html>
+<html>
+  <head>
+    <meta property="og:title" content="Metadata only video" />
+    <meta property="og:image" content="https://example.test/cover.jpg" />
+  </head>
+</html>
+''';
 
 const _jsonLdPage = '''
 <!doctype html>

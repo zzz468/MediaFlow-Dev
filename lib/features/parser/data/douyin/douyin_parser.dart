@@ -23,8 +23,8 @@ class DouyinParser implements ParserInterface {
         'text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8',
     'Accept-Language': 'zh-CN,zh;q=0.9',
     'User-Agent':
-        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
-        'AppleWebKit/537.36 Chrome/124.0 Safari/537.36',
+        'Mozilla/5.0 (Linux; Android 13; Mobile) '
+        'AppleWebKit/537.36 Chrome/124.0 Mobile Safari/537.36',
   };
 
   final NetworkClient _networkClient;
@@ -35,39 +35,68 @@ class DouyinParser implements ParserInterface {
   @override
   Future<ParserResult> parse(MediaLink link) async {
     try {
-      final response = await _networkClient.get(
+      var response = await _networkClient.get(
         link.normalizedUri,
         headers: _headers,
       );
-      final statusFailure = _failureForStatus(response.statusCode);
+      var statusFailure = _failureForStatus(response.statusCode);
       if (statusFailure != null) {
         return statusFailure;
       }
 
-      final document = html_parser.parse(response.body);
-      if (_looksExpired(document)) {
-        return const ParserFailure(
-          code: ParserFailureCode.linkExpired,
-          message: '该抖音作品不存在、已删除或暂时无法访问。',
-        );
+      var page = _parsePage(response);
+      if (page.isExpired) {
+        return _expiredFailure();
       }
 
-      final structured = _extractStructuredVideo(document);
-      final embedded = _extractEmbeddedVideo(document);
-      final openGraph = _extractOpenGraph(document);
-      final metadata = _mergeVideoData(embedded, structured, openGraph);
+      var resolvedUri = response.finalUri;
+      var videoId =
+          page.data?.id ??
+          _extractVideoId(resolvedUri) ??
+          _extractVideoId(link.normalizedUri);
+
+      if ((page.data?.title == null || page.data?.videoUrl == null) &&
+          videoId != null &&
+          resolvedUri.host != 'www.iesdouyin.com') {
+        final shareUri = Uri.https(
+          'www.iesdouyin.com',
+          '/share/video/$videoId/',
+        );
+        response = await _networkClient.get(shareUri, headers: _headers);
+        statusFailure = _failureForStatus(response.statusCode);
+        if (statusFailure != null) {
+          return statusFailure;
+        }
+
+        final sharePage = _parsePage(response);
+        if (sharePage.isExpired) {
+          return _expiredFailure();
+        }
+        page = _DouyinPageData(
+          data: page.data?.merge(sharePage.data) ?? sharePage.data,
+          isExpired: false,
+        );
+        resolvedUri = response.finalUri;
+      }
+
+      final metadata = page.data;
       if (metadata == null || metadata.title == null) {
         return const ParserFailure(
           code: ParserFailureCode.parseFailed,
           message: '未能从抖音页面中提取视频信息，页面结构可能已更新。',
         );
       }
+      if (metadata.videoUrl == null) {
+        return const ParserFailure(
+          code: ParserFailureCode.parseFailed,
+          message: '已获取抖音视频信息，但未找到可下载的真实媒体地址。',
+        );
+      }
 
-      final resolvedUri = response.finalUri;
       final id =
           metadata.id ??
+          videoId ??
           _extractVideoId(resolvedUri) ??
-          _extractVideoId(link.normalizedUri) ??
           resolvedUri.toString().hashCode.abs().toString();
 
       return ParserSuccess(
@@ -77,14 +106,14 @@ class DouyinParser implements ParserInterface {
           author: metadata.author,
           authorId: metadata.authorId,
           coverUrl: metadata.coverUrl,
-          videoUrl: metadata.videoUrl ?? resolvedUri,
+          videoUrl: metadata.videoUrl!,
           platform: platform,
           duration: metadata.duration,
           description: metadata.description,
           metadata: <String, Object?>{
             'sourceUrl': link.originalUrl,
             'resolvedUrl': resolvedUri.toString(),
-            'mediaUrlAvailable': metadata.videoUrl != null,
+            'mediaUrlAvailable': true,
             'downloadHeaders': <String, String>{
               'Referer': resolvedUri.origin,
               'User-Agent': _headers['User-Agent']!,
@@ -142,6 +171,31 @@ class DouyinParser implements ParserInterface {
   @override
   bool supports(MediaLink link) => link.platform == platform;
 
+  _DouyinPageData _parsePage(NetworkResponse response) {
+    final document = html_parser.parse(response.body);
+    if (_looksExpired(document)) {
+      return const _DouyinPageData(data: null, isExpired: true);
+    }
+
+    final routerData = _extractRouterDataVideo(document);
+    final embedded = _extractEmbeddedVideo(document);
+    final structured = _extractStructuredVideo(document);
+    final openGraph = _extractOpenGraph(document);
+    final data =
+        routerData?.merge(embedded).merge(structured).merge(openGraph) ??
+        embedded?.merge(structured).merge(openGraph) ??
+        structured?.merge(openGraph) ??
+        openGraph;
+    return _DouyinPageData(data: data, isExpired: false);
+  }
+
+  ParserFailure _expiredFailure() {
+    return const ParserFailure(
+      code: ParserFailureCode.linkExpired,
+      message: '该抖音作品不存在、已删除、不可见或暂时无法访问。',
+    );
+  }
+
   ParserFailure? _failureForStatus(int statusCode) {
     if (statusCode == 404 || statusCode == 410) {
       return const ParserFailure(
@@ -159,21 +213,13 @@ class DouyinParser implements ParserInterface {
   }
 
   bool _looksExpired(Document document) {
-    final text = document.body?.text ?? '';
+    final text = '${document.body?.text ?? ''}\n${document.outerHtml}';
     return text.contains('视频不存在') ||
         text.contains('作品不存在') ||
         text.contains('作品已删除') ||
+        text.contains('作品不见了') ||
+        text.contains('无法观看') ||
         text.contains('内容暂时无法查看');
-  }
-
-  _DouyinVideoData? _mergeVideoData(
-    _DouyinVideoData? primary,
-    _DouyinVideoData? secondary,
-    _DouyinVideoData? fallback,
-  ) {
-    return primary?.merge(secondary).merge(fallback) ??
-        secondary?.merge(fallback) ??
-        fallback;
   }
 
   _DouyinVideoData? _extractStructuredVideo(Document document) {
@@ -206,6 +252,23 @@ class DouyinParser implements ParserInterface {
         duration: _parseIsoDuration(_stringValue(videoObject['duration'])),
         description: _stringValue(videoObject['description']),
       );
+    }
+    return null;
+  }
+
+  _DouyinVideoData? _extractRouterDataVideo(Document document) {
+    for (final script in document.querySelectorAll('script')) {
+      if (!script.text.contains('_ROUTER_DATA')) {
+        continue;
+      }
+      final jsonText = _extractAssignedJson(script.text, '_ROUTER_DATA');
+      if (jsonText == null) {
+        continue;
+      }
+      final candidate = _findAwemeMap(_tryDecodeJson(jsonText));
+      if (candidate != null) {
+        return _dataFromAwemeMap(candidate);
+      }
     }
     return null;
   }
@@ -266,6 +329,45 @@ class DouyinParser implements ParserInterface {
     } on ArgumentError {
       return null;
     }
+  }
+
+  String? _extractAssignedJson(String script, String marker) {
+    final markerIndex = script.indexOf(marker);
+    if (markerIndex < 0) {
+      return null;
+    }
+    final start = script.indexOf('{', markerIndex + marker.length);
+    if (start < 0) {
+      return null;
+    }
+
+    var depth = 0;
+    var inString = false;
+    var escaped = false;
+    for (var index = start; index < script.length; index += 1) {
+      final character = script[index];
+      if (inString) {
+        if (escaped) {
+          escaped = false;
+        } else if (character == '\\') {
+          escaped = true;
+        } else if (character == '"') {
+          inString = false;
+        }
+        continue;
+      }
+      if (character == '"') {
+        inString = true;
+      } else if (character == '{') {
+        depth += 1;
+      } else if (character == '}') {
+        depth -= 1;
+        if (depth == 0) {
+          return script.substring(start, index + 1);
+        }
+      }
+    }
+    return null;
   }
 
   Map<String, dynamic>? _findJsonLdVideo(Object? value) {
@@ -342,7 +444,12 @@ class DouyinParser implements ParserInterface {
           _uriFromUrlContainer(video['dynamic_cover']),
       videoUrl:
           _uriFromUrlContainer(video['play_addr']) ??
-          _uriFromUrlContainer(video['playAddr']),
+          _uriFromUrlContainer(video['playAddr']) ??
+          _uriFromUrlContainer(video['play_addr_h264']) ??
+          _uriFromUrlContainer(video['play_addr_265']) ??
+          _uriFromBitRate(video['bit_rate']) ??
+          _uriFromBitRate(video['bitRate']) ??
+          _uriFromUrlContainer(video['download_addr']),
       duration: _durationFromMilliseconds(video['duration']),
       description: _stringValue(map['desc']),
     );
@@ -393,6 +500,25 @@ class DouyinParser implements ParserInterface {
     return null;
   }
 
+  Uri? _uriFromBitRate(Object? value) {
+    if (value is! List) {
+      return null;
+    }
+    for (final item in value) {
+      if (item is! Map) {
+        continue;
+      }
+      final map = Map<String, dynamic>.from(item);
+      final uri =
+          _uriFromUrlContainer(map['play_addr']) ??
+          _uriFromUrlContainer(map['playAddr']);
+      if (uri != null) {
+        return uri;
+      }
+    }
+    return null;
+  }
+
   Duration? _durationFromSeconds(Object? value) {
     final seconds = value is num
         ? value.toInt()
@@ -429,6 +555,13 @@ class DouyinParser implements ParserInterface {
       milliseconds: (seconds * 1000).round(),
     );
   }
+}
+
+class _DouyinPageData {
+  const _DouyinPageData({required this.data, required this.isExpired});
+
+  final _DouyinVideoData? data;
+  final bool isExpired;
 }
 
 class _DouyinVideoData {

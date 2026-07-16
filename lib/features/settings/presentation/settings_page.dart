@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -30,6 +32,7 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
     final settings = ref.watch(appSettingsProvider);
     final isDarkMode = ref.watch(themeModeProvider) == ThemeMode.dark;
     final appConfig = ref.watch(appConfigProvider);
+    final isAndroid = Platform.isAndroid;
 
     return ListView(
       padding: const EdgeInsets.all(32),
@@ -79,35 +82,39 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
                   children: [
                     ListTile(
                       leading: const Icon(Icons.folder_outlined),
-                      title: const Text('默认下载目录'),
+                      title: const Text('恢复默认目录'),
                       subtitle: Text(
-                        settings.defaultDownloadDirectory ??
-                            '系统默认 MediaFlow 下载目录',
+                        isAndroid
+                            ? '手机 Download/MediaFlow（公共目录）'
+                            : settings.defaultDownloadDirectory ??
+                                  '系统默认 MediaFlow 下载目录',
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                       ),
-                      trailing: Wrap(
-                        spacing: 4,
-                        children: [
-                          if (settings.defaultDownloadDirectory != null)
-                            IconButton(
-                              tooltip: '恢复默认目录',
-                              onPressed: () {
-                                ref
-                                    .read(appSettingsProvider.notifier)
-                                    .setDefaultDownloadDirectory(null);
-                              },
-                              icon: const Icon(Icons.restart_alt_rounded),
+                      trailing: isAndroid
+                          ? const Icon(Icons.folder_shared_outlined)
+                          : Wrap(
+                              spacing: 4,
+                              children: [
+                                if (settings.defaultDownloadDirectory != null)
+                                  IconButton(
+                                    tooltip: '恢复默认目录',
+                                    onPressed: () {
+                                      ref
+                                          .read(appSettingsProvider.notifier)
+                                          .setDefaultDownloadDirectory(null);
+                                    },
+                                    icon: const Icon(Icons.restart_alt_rounded),
+                                  ),
+                                IconButton(
+                                  tooltip: '修改目录',
+                                  onPressed: () => _editDownloadDirectory(
+                                    settings.defaultDownloadDirectory,
+                                  ),
+                                  icon: const Icon(Icons.edit_outlined),
+                                ),
+                              ],
                             ),
-                          IconButton(
-                            tooltip: '修改目录',
-                            onPressed: () => _editDownloadDirectory(
-                              settings.defaultDownloadDirectory,
-                            ),
-                            icon: const Icon(Icons.edit_outlined),
-                          ),
-                        ],
-                      ),
                     ),
                     const Divider(height: 1),
                     SwitchListTile(

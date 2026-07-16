@@ -6,19 +6,31 @@ import '../domain/download_task.dart';
 import 'download_file_store.dart';
 
 typedef DownloadDirectoryResolver = Future<Directory> Function();
+typedef CompletedFilePublisher =
+    Future<String> Function({
+      required File sourceFile,
+      required String displayName,
+      required String contentType,
+    });
 
 class LocalDownloadFileStore implements DownloadFileStore {
   factory LocalDownloadFileStore({
     DownloadDirectoryResolver? downloadDirectoryResolver,
+    CompletedFilePublisher? completedFilePublisher,
   }) {
     return LocalDownloadFileStore._(
       downloadDirectoryResolver ?? resolveDefaultDownloadDirectory,
+      completedFilePublisher,
     );
   }
 
-  LocalDownloadFileStore._(this._downloadDirectoryResolver);
+  LocalDownloadFileStore._(
+    this._downloadDirectoryResolver,
+    this._completedFilePublisher,
+  );
 
   final DownloadDirectoryResolver _downloadDirectoryResolver;
+  final CompletedFilePublisher? _completedFilePublisher;
 
   static const _knownExtensions = <String>{
     '.mp4',
@@ -29,6 +41,11 @@ class LocalDownloadFileStore implements DownloadFileStore {
     '.mov',
     '.flv',
     '.ts',
+    '.jpg',
+    '.jpeg',
+    '.png',
+    '.webp',
+    '.gif',
   };
 
   static Future<Directory> resolveDefaultDownloadDirectory() async {
@@ -87,6 +104,8 @@ class LocalDownloadFileStore implements DownloadFileStore {
       writer: writer,
       partialFile: partialFile,
       targetFile: targetFile,
+      contentType: _resolveContentType(contentType, targetFile.path),
+      completedFilePublisher: _completedFilePublisher,
     );
   }
 
@@ -122,7 +141,34 @@ class LocalDownloadFileStore implements DownloadFileStore {
       'audio/mpeg' => '.mp3',
       'audio/mp4' => '.m4a',
       'audio/webm' => '.webm',
+      'image/jpeg' => '.jpg',
+      'image/png' => '.png',
+      'image/webp' => '.webp',
+      'image/gif' => '.gif',
       _ => '.mp4',
+    };
+  }
+
+  String _resolveContentType(String? contentType, String targetPath) {
+    final normalized = contentType?.split(';').first.trim();
+    if (normalized != null && normalized.isNotEmpty) {
+      return normalized;
+    }
+    final dotIndex = targetPath.lastIndexOf('.');
+    final extension = dotIndex < 0
+        ? ''
+        : targetPath.substring(dotIndex).toLowerCase();
+    return switch (extension) {
+      '.webm' => 'video/webm',
+      '.mov' => 'video/quicktime',
+      '.flv' => 'video/x-flv',
+      '.mp3' => 'audio/mpeg',
+      '.m4a' => 'audio/mp4',
+      '.jpg' || '.jpeg' => 'image/jpeg',
+      '.png' => 'image/png',
+      '.webp' => 'image/webp',
+      '.gif' => 'image/gif',
+      _ => 'video/mp4',
     };
   }
 
@@ -164,11 +210,15 @@ class _LocalDownloadFileSink implements DownloadFileSink {
     required this._writer,
     required this._partialFile,
     required this._targetFile,
+    required this._contentType,
+    required this._completedFilePublisher,
   });
 
   RandomAccessFile? _writer;
   final File _partialFile;
   final File _targetFile;
+  final String _contentType;
+  final CompletedFilePublisher? _completedFilePublisher;
   bool _completed = false;
 
   @override
@@ -187,8 +237,29 @@ class _LocalDownloadFileSink implements DownloadFileSink {
   Future<String> complete() async {
     await close();
     await _partialFile.rename(_targetFile.path);
-    _completed = true;
-    return _targetFile.path;
+    final publisher = _completedFilePublisher;
+    if (publisher == null) {
+      _completed = true;
+      return _targetFile.path;
+    }
+
+    try {
+      final publicPath = await publisher(
+        sourceFile: _targetFile,
+        displayName: _targetFile.path.split(Platform.pathSeparator).last,
+        contentType: _contentType,
+      );
+      if (await _targetFile.exists()) {
+        await _targetFile.delete();
+      }
+      _completed = true;
+      return publicPath;
+    } catch (_) {
+      if (await _targetFile.exists() && !await _partialFile.exists()) {
+        await _targetFile.rename(_partialFile.path);
+      }
+      rethrow;
+    }
   }
 
   @override

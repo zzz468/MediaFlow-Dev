@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../core/logging/app_logger.dart';
 import '../../settings/application/settings_controller.dart';
+import '../data/android_media_store_publisher.dart';
 import '../data/http_download_client.dart';
 import '../data/http_download_service.dart';
 import '../data/json_download_task_repository.dart';
@@ -34,11 +35,16 @@ final downloadServiceProvider = Provider<DownloadService>((ref) {
         final configuredDirectory = ref
             .read(appSettingsProvider)
             .defaultDownloadDirectory;
-        if (configuredDirectory != null && configuredDirectory.isNotEmpty) {
+        if (!Platform.isAndroid &&
+            configuredDirectory != null &&
+            configuredDirectory.isNotEmpty) {
           return Directory(configuredDirectory);
         }
         return LocalDownloadFileStore.resolveDefaultDownloadDirectory();
       },
+      completedFilePublisher: Platform.isAndroid
+          ? const AndroidMediaStorePublisher().publish
+          : null,
     ),
   );
   ref.onDispose(service.close);
