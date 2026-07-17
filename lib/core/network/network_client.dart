@@ -53,15 +53,21 @@ class HttpNetworkClient implements NetworkClient {
     Map<String, String> headers = const {},
   }) async {
     try {
-      final response = await _client
-          .get(uri, headers: headers)
-          .timeout(timeout);
-      return NetworkResponse(
-        statusCode: response.statusCode,
-        bodyBytes: response.bodyBytes,
-        finalUri: response.request?.url ?? uri,
-        headers: response.headers,
-      );
+      return await (() async {
+        final request = http.Request('GET', uri)..headers.addAll(headers);
+        final response = await _client.send(request);
+        final bodyBytes = await response.stream.toBytes();
+        final finalUri = switch (response) {
+          http.BaseResponseWithUrl(:final url) => url,
+          _ => response.request?.url ?? uri,
+        };
+        return NetworkResponse(
+          statusCode: response.statusCode,
+          bodyBytes: bodyBytes,
+          finalUri: finalUri,
+          headers: response.headers,
+        );
+      })().timeout(timeout);
     } on TimeoutException {
       rethrow;
     } catch (error) {
