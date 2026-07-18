@@ -1,14 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'download_history_view_model.dart';
+import '../../downloader/application/download_manager.dart';
+import '../../downloader/domain/download_task.dart';
+import '../../downloader/presentation/download_task_tile.dart';
 
 class DownloadHistoryPage extends ConsumerWidget {
   const DownloadHistoryPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final state = ref.watch(downloadHistoryViewModelProvider);
+    final tasks = [...ref.watch(downloadManagerProvider)]
+      ..sort((left, right) => right.createdAt.compareTo(left.createdAt));
+    final activeCount = tasks
+        .where(
+          (task) =>
+              task.status == DownloadStatus.downloading ||
+              task.status == DownloadStatus.queued,
+        )
+        .length;
+    final completedCount = tasks
+        .where((task) => task.status == DownloadStatus.completed)
+        .length;
 
     return Padding(
       padding: const EdgeInsets.all(32),
@@ -21,18 +34,37 @@ class DownloadHistoryPage extends ConsumerWidget {
           ),
           const SizedBox(height: 8),
           Text(
-            'Completed and failed tasks will appear here.',
+            '任务会自动保存，重新打开 MediaFlow 后仍可查看和继续。',
             style: Theme.of(context).textTheme.bodyLarge,
           ),
-          const SizedBox(height: 32),
+          if (tasks.isNotEmpty) ...[
+            const SizedBox(height: 16),
+            Wrap(
+              spacing: 8,
+              runSpacing: 8,
+              children: [
+                Chip(
+                  avatar: const Icon(Icons.queue_rounded, size: 18),
+                  label: Text('进行中 $activeCount'),
+                ),
+                Chip(
+                  avatar: const Icon(Icons.done_rounded, size: 18),
+                  label: Text('已完成 $completedCount'),
+                ),
+                Chip(label: Text('全部 ${tasks.length}')),
+              ],
+            ),
+          ],
+          const SizedBox(height: 24),
           Expanded(
-            child: state.isEmpty
+            child: tasks.isEmpty
                 ? const _EmptyHistoryState()
-                : ListView.builder(
-                    itemCount: state.entries.length,
+                : ListView.separated(
+                    itemCount: tasks.length,
+                    separatorBuilder: (context, index) =>
+                        const SizedBox(height: 12),
                     itemBuilder: (context, index) {
-                      final entry = state.entries[index];
-                      return ListTile(title: Text(entry.title));
+                      return DownloadTaskTile(task: tasks[index]);
                     },
                   ),
           ),
@@ -48,6 +80,7 @@ class _EmptyHistoryState extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
+
     return Center(
       child: ConstrainedBox(
         constraints: const BoxConstraints(maxWidth: 420),
@@ -58,18 +91,15 @@ class _EmptyHistoryState extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Icon(
-                  Icons.download_done_outlined,
+                  Icons.download_for_offline_outlined,
                   size: 56,
                   color: colorScheme.primary,
                 ),
                 const SizedBox(height: 16),
-                Text(
-                  'No downloads yet',
-                  style: Theme.of(context).textTheme.titleLarge,
-                ),
+                Text('暂无下载任务', style: Theme.of(context).textTheme.titleLarge),
                 const SizedBox(height: 8),
                 const Text(
-                  'Future download tasks and their results will be stored here.',
+                  '解析支持的媒体链接并开始下载后，任务会显示在这里。',
                   textAlign: TextAlign.center,
                 ),
               ],
