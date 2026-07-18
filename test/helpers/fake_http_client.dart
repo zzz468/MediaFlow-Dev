@@ -24,36 +24,18 @@ class ScriptedHttpClient extends http.BaseClient {
   }
 }
 
-http.StreamedResponse responseWithUrl(
+http.StreamedResponse streamedResponse(
   String body, {
   required http.BaseRequest request,
-  required Uri finalUri,
   int statusCode = 200,
   Map<String, String> headers = const <String, String>{},
 }) {
   final bytes = utf8.encode(body);
-  return _TestStreamedResponseWithUrl(
+  return http.StreamedResponse(
     Stream<List<int>>.value(bytes),
     statusCode,
     request: request,
-    finalUri: finalUri,
     headers: headers,
     contentLength: bytes.length,
   );
-}
-
-class _TestStreamedResponseWithUrl extends http.StreamedResponse
-    implements http.BaseResponseWithUrl {
-  _TestStreamedResponseWithUrl(
-    super.stream,
-    super.statusCode, {
-    required http.BaseRequest request,
-    required Uri finalUri,
-    super.headers,
-    super.contentLength,
-  }) : url = finalUri,
-       super(request: request);
-
-  @override
-  final Uri url;
 }

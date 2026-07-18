@@ -64,6 +64,7 @@ void main() {
         if (uri.host == 'b23.tv') {
           return textResponse(
             '<html></html>',
+            statusCode: 412,
             finalUri: Uri.parse('https://www.bilibili.com/video/BV1GJ411x7h7'),
           );
         }

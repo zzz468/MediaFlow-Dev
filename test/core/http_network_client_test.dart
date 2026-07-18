@@ -10,12 +10,20 @@ void main() {
       'https://www.example.test/video/1234567890',
     );
     final httpClient = ScriptedHttpClient((request) async {
-      expect(request.url, originalUri);
+      expect(request.followRedirects, isFalse);
       expect(request.headers['x-mediaflow-test'], 'redirect');
-      return responseWithUrl(
+      if (request.url == originalUri) {
+        return streamedResponse(
+          '',
+          request: request,
+          statusCode: 302,
+          headers: <String, String>{'location': redirectedUri.toString()},
+        );
+      }
+      expect(request.url, redirectedUri);
+      return streamedResponse(
         '<html>redirected response</html>',
         request: request,
-        finalUri: redirectedUri,
         headers: const <String, String>{'content-type': 'text/html'},
       );
     });
@@ -31,5 +39,6 @@ void main() {
     expect(response.body, '<html>redirected response</html>');
     expect(response.finalUri, redirectedUri);
     expect(response.headers['content-type'], 'text/html');
+    expect(httpClient.requests, <Uri>[originalUri, redirectedUri]);
   });
 }

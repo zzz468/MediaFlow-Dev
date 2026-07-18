@@ -36,39 +36,60 @@ void main() {
       expect(videoInfo.platform, MediaPlatform.douyin);
     });
 
-    test(
-      'falls back to iesdouyin router data and extracts media url',
-      () async {
-        final resolvedUri = Uri.parse(
-          'https://www.douyin.com/video/9876543210',
+    test('falls back to iesdouyin router data and extracts media url', () async {
+      final resolvedUri = Uri.parse('https://www.douyin.com/video/9876543210');
+      final networkClient = FakeNetworkClient((uri, headers) async {
+        if (uri.host == 'www.iesdouyin.com') {
+          expect(uri.path, '/share/video/9876543210/');
+          return textResponse(_routerDataPage, finalUri: uri);
+        }
+        return textResponse(
+          '<html><body></body><script>anti-bot shell</script></html>',
+          finalUri: resolvedUri,
         );
-        final networkClient = FakeNetworkClient((uri, headers) async {
-          if (uri.host == 'www.iesdouyin.com') {
-            expect(uri.path, '/share/video/9876543210/');
-            return textResponse(_routerDataPage, finalUri: uri);
-          }
-          return textResponse(
-            '<html><body></body><script>anti-bot shell</script></html>',
-            finalUri: resolvedUri,
-          );
-        });
-        final parser = DouyinParser(networkClient: networkClient);
+      });
+      final parser = DouyinParser(networkClient: networkClient);
 
-        final result = await parser.parse(_douyinLink());
+      final result = await parser.parse(_douyinLink());
 
-        expect(result, isA<ParserSuccess>());
-        final videoInfo = (result as ParserSuccess).videoInfo;
-        expect(videoInfo.id, '9876543210');
-        expect(videoInfo.title, 'Router Data test video');
-        expect(videoInfo.author, 'Share page author');
-        expect(
-          videoInfo.videoUrl,
-          Uri.parse('https://video.example.test/douyin-real.mp4'),
+      expect(result, isA<ParserSuccess>());
+      final videoInfo = (result as ParserSuccess).videoInfo;
+      expect(videoInfo.id, '9876543210');
+      expect(videoInfo.title, 'Router Data test video');
+      expect(videoInfo.author, 'Share page author');
+      expect(
+        videoInfo.videoUrl,
+        Uri.parse(
+          'https://aweme.snssdk.com/aweme/v1/playwm/?video_id=test&ratio=720p&line=1',
+        ),
+      );
+      expect(videoInfo.metadata['mediaUrlAvailable'], isTrue);
+      expect(networkClient.requests, hasLength(2));
+    });
+
+    test('uses an author-based title when the description is empty', () async {
+      final networkClient = FakeNetworkClient((uri, headers) async {
+        return textResponse(
+          _routerDataPage.replaceFirst('Router Data test video', ''),
+          finalUri: Uri.parse(
+            'https://www.iesdouyin.com/share/video/9876543210/',
+          ),
         );
-        expect(videoInfo.metadata['mediaUrlAvailable'], isTrue);
-        expect(networkClient.requests, hasLength(2));
-      },
-    );
+      });
+      final parser = DouyinParser(networkClient: networkClient);
+
+      final result = await parser.parse(_douyinLink());
+
+      expect(result, isA<ParserSuccess>());
+      final videoInfo = (result as ParserSuccess).videoInfo;
+      expect(videoInfo.title, 'Share page author ?????');
+      expect(
+        videoInfo.videoUrl,
+        Uri.parse(
+          'https://aweme.snssdk.com/aweme/v1/playwm/?video_id=test&ratio=720p&line=1',
+        ),
+      );
+    });
 
     test(
       'does not report success when no real media url is available',
@@ -154,7 +175,7 @@ const _routerDataPage = r'''
                     {
                       "play_addr": {
                         "url_list": [
-                          "https://video.example.test/douyin-real.mp4"
+                          "https://aweme.snssdk.com/aweme/v1/playwm/?video_id=test&ratio=720p&line=0"
                         ]
                       }
                     }

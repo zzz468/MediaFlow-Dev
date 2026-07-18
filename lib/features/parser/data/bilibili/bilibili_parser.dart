@@ -252,11 +252,20 @@ class BilibiliParser implements ParserInterface {
     }
 
     final response = await _networkClient.get(uri, headers: _headers);
+    if (response.finalUri != uri && _isBilibiliVideoUri(response.finalUri)) {
+      return response.finalUri;
+    }
     final failure = _failureForStatus(response.statusCode);
     if (failure != null) {
       throw _BilibiliResponseException(failure);
     }
     return response.finalUri;
+  }
+
+  bool _isBilibiliVideoUri(Uri uri) {
+    final host = uri.host.toLowerCase();
+    return (host == 'bilibili.com' || host.endsWith('.bilibili.com')) &&
+        _extractVideoId(uri) != null;
   }
 
   String? _extractVideoId(Uri uri) {

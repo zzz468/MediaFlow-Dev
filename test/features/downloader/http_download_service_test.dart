@@ -78,6 +78,26 @@ void main() {
       expect(completed.bytesReceived, 4);
     });
 
+    test('retries once when opening the download connection fails', () async {
+      final response = DownloadStreamResponse(
+        statusCode: 200,
+        stream: Stream<List<int>>.value(const <int>[1, 2, 3]),
+        finalUri: Uri.parse('https://cdn.example.test/video.mp4'),
+        contentLength: 3,
+        headers: const <String, String>{'content-type': 'video/mp4'},
+      );
+      final client = _FlakyDownloadClient(response);
+      final service = HttpDownloadService(
+        downloadClient: client,
+        fileStore: _MemoryDownloadFileStore(),
+      );
+
+      final events = await service.download(_realTask()).toList();
+
+      expect(client.openCount, 2);
+      expect(events.last, isA<DownloadCompleted>());
+    });
+
     test('rejects a non-media response before creating a file', () async {
       final client = _FakeDownloadClient(
         response: DownloadStreamResponse(
@@ -169,6 +189,28 @@ class _FakeDownloadClient implements DownloadClient {
     Map<String, String> headers = const <String, String>{},
   }) async {
     requestHeaders = headers;
+    return response;
+  }
+
+  @override
+  void close() {}
+}
+
+class _FlakyDownloadClient implements DownloadClient {
+  _FlakyDownloadClient(this.response);
+
+  final DownloadStreamResponse response;
+  int openCount = 0;
+
+  @override
+  Future<DownloadStreamResponse> open(
+    Uri uri, {
+    Map<String, String> headers = const <String, String>{},
+  }) async {
+    openCount += 1;
+    if (openCount == 1) {
+      throw StateError('Transient connection failure');
+    }
     return response;
   }
 

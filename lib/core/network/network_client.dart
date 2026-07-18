@@ -42,10 +42,12 @@ class HttpNetworkClient implements NetworkClient {
   HttpNetworkClient({
     http.Client? client,
     this.timeout = const Duration(seconds: 15),
+    this.maxRedirects = 10,
   }) : _client = client ?? http.Client();
 
   final http.Client _client;
   final Duration timeout;
+  final int maxRedirects;
 
   @override
   Future<NetworkResponse> get(
@@ -54,19 +56,36 @@ class HttpNetworkClient implements NetworkClient {
   }) async {
     try {
       return await (() async {
-        final request = http.Request('GET', uri)..headers.addAll(headers);
-        final response = await _client.send(request);
-        final bodyBytes = await response.stream.toBytes();
-        final finalUri = switch (response) {
-          http.BaseResponseWithUrl(:final url) => url,
-          _ => response.request?.url ?? uri,
-        };
-        return NetworkResponse(
-          statusCode: response.statusCode,
-          bodyBytes: bodyBytes,
-          finalUri: finalUri,
-          headers: response.headers,
-        );
+        var currentUri = uri;
+        var redirectCount = 0;
+
+        while (true) {
+          final request = http.Request('GET', currentUri)
+            ..headers.addAll(headers)
+            ..followRedirects = false;
+          final response = await _client.send(request);
+          final location = response.headers['location'];
+
+          if (_isRedirect(response.statusCode) && location != null) {
+            await response.stream.drain<void>();
+            if (redirectCount >= maxRedirects) {
+              throw http.ClientException(
+                'Redirect limit exceeded.',
+                currentUri,
+              );
+            }
+            currentUri = currentUri.resolve(location);
+            redirectCount += 1;
+            continue;
+          }
+
+          return NetworkResponse(
+            statusCode: response.statusCode,
+            bodyBytes: await response.stream.toBytes(),
+            finalUri: currentUri,
+            headers: response.headers,
+          );
+        }
       })().timeout(timeout);
     } on TimeoutException {
       rethrow;
@@ -77,4 +96,12 @@ class HttpNetworkClient implements NetworkClient {
 
   @override
   void close() => _client.close();
+
+  bool _isRedirect(int statusCode) {
+    return statusCode == 301 ||
+        statusCode == 302 ||
+        statusCode == 303 ||
+        statusCode == 307 ||
+        statusCode == 308;
+  }
 }

@@ -427,13 +427,27 @@ class DouyinParser implements ParserInterface {
   _DouyinVideoData _dataFromAwemeMap(Map<String, dynamic> map) {
     final author = Map<String, dynamic>.from(map['author'] as Map);
     final video = Map<String, dynamic>.from(map['video'] as Map);
+    final id =
+        _stringValue(map['aweme_id']) ??
+        _stringValue(map['id']) ??
+        _stringValue(map['itemId']);
+    final authorName =
+        _stringValue(author['nickname']) ?? _stringValue(author['name']);
+    final videoUrl =
+        _uriFromUrlContainer(video['play_addr']) ??
+        _uriFromUrlContainer(video['playAddr']) ??
+        _uriFromUrlContainer(video['play_addr_h264']) ??
+        _uriFromUrlContainer(video['play_addr_265']) ??
+        _uriFromBitRate(video['bit_rate']) ??
+        _uriFromBitRate(video['bitRate']) ??
+        _uriFromUrlContainer(video['download_addr']);
     return _DouyinVideoData(
-      id:
-          _stringValue(map['aweme_id']) ??
-          _stringValue(map['id']) ??
-          _stringValue(map['itemId']),
-      title: _stringValue(map['desc']) ?? _stringValue(map['title']),
-      author: _stringValue(author['nickname']) ?? _stringValue(author['name']),
+      id: id,
+      title:
+          _stringValue(map['desc']) ??
+          _stringValue(map['title']) ??
+          (authorName == null ? '???? $id' : '$authorName ?????'),
+      author: authorName,
       authorId:
           _stringValue(author['unique_id']) ??
           _stringValue(author['sec_uid']) ??
@@ -442,14 +456,7 @@ class DouyinParser implements ParserInterface {
           _uriFromUrlContainer(video['cover']) ??
           _uriFromUrlContainer(video['origin_cover']) ??
           _uriFromUrlContainer(video['dynamic_cover']),
-      videoUrl:
-          _uriFromUrlContainer(video['play_addr']) ??
-          _uriFromUrlContainer(video['playAddr']) ??
-          _uriFromUrlContainer(video['play_addr_h264']) ??
-          _uriFromUrlContainer(video['play_addr_265']) ??
-          _uriFromBitRate(video['bit_rate']) ??
-          _uriFromBitRate(video['bitRate']) ??
-          _uriFromUrlContainer(video['download_addr']),
+      videoUrl: _preferCompatiblePlaybackLine(videoUrl),
       duration: _durationFromMilliseconds(video['duration']),
       description: _stringValue(map['desc']),
     );
@@ -498,6 +505,17 @@ class DouyinParser implements ParserInterface {
           _uriFromValue(value['url']);
     }
     return null;
+  }
+
+  Uri? _preferCompatiblePlaybackLine(Uri? uri) {
+    if (uri == null ||
+        uri.host != 'aweme.snssdk.com' ||
+        uri.path != '/aweme/v1/playwm/') {
+      return uri;
+    }
+    return uri.replace(
+      queryParameters: <String, String>{...uri.queryParameters, 'line': '1'},
+    );
   }
 
   Uri? _uriFromBitRate(Object? value) {

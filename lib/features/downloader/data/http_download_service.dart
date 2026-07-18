@@ -150,37 +150,47 @@ class HttpDownloadService implements DownloadService {
     DownloadTask task,
     int resumeOffset,
   ) async {
-    try {
-      return await _downloadClient.open(
-        task.url,
-        headers: <String, String>{
-          ...task.requestHeaders,
-          if (resumeOffset > 0) 'Range': 'bytes=$resumeOffset-',
-        },
-      );
-    } on TimeoutException catch (error, stackTrace) {
-      AppLogger.networkError(
-        'Download connection timed out.',
-        error: error,
-        stackTrace: stackTrace,
-      );
-      throw DownloadException(
-        code: DownloadFailureCode.networkError,
-        message: '连接下载地址超时，请稍后重试。',
-        cause: error,
-      );
-    } catch (error, stackTrace) {
-      AppLogger.networkError(
-        'Failed to open the download URL.',
-        error: error,
-        stackTrace: stackTrace,
-      );
-      throw DownloadException(
-        code: DownloadFailureCode.networkError,
-        message: '无法连接下载地址，请检查网络后重试。',
-        cause: error,
-      );
+    const maxAttempts = 2;
+    for (var attempt = 1; attempt <= maxAttempts; attempt += 1) {
+      try {
+        return await _downloadClient.open(
+          task.url,
+          headers: <String, String>{
+            ...task.requestHeaders,
+            if (resumeOffset > 0) 'Range': 'bytes=$resumeOffset-',
+          },
+        );
+      } on TimeoutException catch (error, stackTrace) {
+        if (attempt < maxAttempts) {
+          continue;
+        }
+        AppLogger.networkError(
+          'Download connection timed out.',
+          error: error,
+          stackTrace: stackTrace,
+        );
+        throw DownloadException(
+          code: DownloadFailureCode.networkError,
+          message: '???????????????',
+          cause: error,
+        );
+      } catch (error, stackTrace) {
+        if (attempt < maxAttempts) {
+          continue;
+        }
+        AppLogger.networkError(
+          'Failed to open the download URL.',
+          error: error,
+          stackTrace: stackTrace,
+        );
+        throw DownloadException(
+          code: DownloadFailureCode.networkError,
+          message: '??????????????????',
+          cause: error,
+        );
+      }
     }
+    throw StateError('Download connection attempts were exhausted.');
   }
 
   void _validateResponse(DownloadStreamResponse response) {
