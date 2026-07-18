@@ -87,7 +87,10 @@ class LocalDownloadFileStore implements DownloadFileStore {
     var targetFile = task.savePath == null ? null : File(task.savePath!);
     if (targetFile == null || await targetFile.exists()) {
       final extension = _resolveExtension(sourceUri, contentType);
-      final baseName = _sanitizeFileName(task.title, fallback: task.id);
+      final baseName = _sanitizeFileName(
+        task.title,
+        fallback: 'Untitled Video',
+      );
       targetFile = await _uniqueTargetFile(
         downloadDirectory,
         '$baseName$extension',
@@ -178,11 +181,21 @@ class LocalDownloadFileStore implements DownloadFileStore {
         .replaceAll(RegExp(r'\s+'), ' ')
         .trim();
     sanitized = sanitized.replaceAll(RegExp(r'[. ]+$'), '');
-    if (sanitized.isEmpty) {
+    final hasMeaningfulCharacters = sanitized
+        .replaceAll(RegExp(r'[_\-. ]'), '')
+        .isNotEmpty;
+    final isReservedWindowsName = RegExp(
+      r'^(con|prn|aux|nul|com[1-9]|lpt[1-9])$',
+      caseSensitive: false,
+    ).hasMatch(sanitized);
+    if (!hasMeaningfulCharacters || isReservedWindowsName) {
       sanitized = fallback;
     }
     if (sanitized.length > 80) {
-      sanitized = sanitized.substring(0, 80).trimRight();
+      sanitized = sanitized
+          .substring(0, 80)
+          .trimRight()
+          .replaceAll(RegExp(r'[. ]+$'), '');
     }
     return sanitized;
   }

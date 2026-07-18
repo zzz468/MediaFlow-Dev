@@ -67,7 +67,7 @@ void main() {
       expect(networkClient.requests, hasLength(2));
     });
 
-    test('uses an author-based title when the description is empty', () async {
+    test('uses a stable title when the description is empty', () async {
       final networkClient = FakeNetworkClient((uri, headers) async {
         return textResponse(
           _routerDataPage.replaceFirst('Router Data test video', ''),
@@ -82,7 +82,7 @@ void main() {
 
       expect(result, isA<ParserSuccess>());
       final videoInfo = (result as ParserSuccess).videoInfo;
-      expect(videoInfo.title, 'Share page author ?????');
+      expect(videoInfo.title, 'Douyin Video');
       expect(
         videoInfo.videoUrl,
         Uri.parse(

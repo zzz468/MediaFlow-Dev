@@ -446,7 +446,7 @@ class DouyinParser implements ParserInterface {
       title:
           _stringValue(map['desc']) ??
           _stringValue(map['title']) ??
-          (authorName == null ? '???? $id' : '$authorName ?????'),
+          'Douyin Video',
       author: authorName,
       authorId:
           _stringValue(author['unique_id']) ??

@@ -59,6 +59,39 @@ void main() {
     },
   );
 
+  test('uses a safe fallback for invalid or reserved file names', () async {
+    for (final title in <String>['<>:"/\\|?*', 'CON']) {
+      final root = await Directory.systemTemp.createTemp('mediaflow-name-');
+      try {
+        final store = LocalDownloadFileStore(
+          downloadDirectoryResolver: () async => root,
+        );
+        final task = DownloadTask(
+          id: 'name-test',
+          title: title,
+          url: Uri.parse('https://example.test/video.mp4'),
+          platform: MediaPlatform.douyin,
+          mode: DownloadMode.real,
+          createdAt: DateTime.utc(2026, 7, 18),
+        );
+
+        final sink = await store.create(
+          task: task,
+          sourceUri: task.url,
+          append: false,
+          contentType: 'video/mp4',
+        );
+
+        expect(sink.savePath, endsWith('Untitled Video.mp4'));
+        await sink.close();
+      } finally {
+        if (await root.exists()) {
+          await root.delete(recursive: true);
+        }
+      }
+    }
+  });
+
   test('deletes an unfinished partial file', () async {
     final root = await Directory.systemTemp.createTemp('mediaflow-download-');
     addTearDown(() async {
