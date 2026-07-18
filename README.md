@@ -7,6 +7,7 @@ MediaFlow 是一个面向 Windows、Android 和 iOS 的免费开源媒体链接�
 ## 当前能力
 
 - Bilibili、抖音公开媒体信息解析
+- Bilibili `b23.tv`、抖音 `v.douyin.com` 短分享链接重定向处理
 - 标题、作者、封面、时长和平台信息展示
 - 顺序多任务下载队列
 - 暂停、继续、删除和失败重试
@@ -15,6 +16,15 @@ MediaFlow 是一个面向 Windows、Android 和 iOS 的免费开源媒体链接�
 - 自定义下载目录、深色模式和启动恢复
 - 本地下载完成提示和缓存清理
 - parser、downloader、network、error 分类日志
+- Android 完成文件发布到 `Download/MediaFlow/` 并加入系统 MediaStore
+
+## v0.1.0-beta 验收状态
+
+- `flutter analyze`：通过
+- `flutter test`：52 项全部通过
+- Windows RC：真实 Bilibili 短链接、标准链接和抖音短链接解析、下载及播放验证通过
+- Android USB 真机：APK 安装、应用启动、真实链接下载、暂停/继续和历史恢复通过
+- Android 下载文件可在 `Download/MediaFlow/` 和系统文件管理器中查看
 
 ## 零成本原则
 
@@ -46,12 +56,19 @@ flutter run -d windows
 Windows Release 构建：
 
 ```powershell
-flutter build windows --release
+flutter build windows --release --build-name 0.1.0-beta --build-number 1
+```
+
+Android Release APK 构建：
+
+```powershell
+flutter build apk --release --build-name 0.1.0-beta --build-number 1
 ```
 
 ## 文档
 
 - [使用说明](docs/使用说明.md)
+- [User Guide](docs/USER_GUIDE.md)
 - [开发指南](docs/开发指南.md)
 - [开发计划](docs/开发计划.md)
 - [解析模块](docs/解析模块.md)
