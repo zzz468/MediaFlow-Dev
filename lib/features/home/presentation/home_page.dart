@@ -241,7 +241,7 @@ class _HomePageState extends ConsumerState<HomePage> {
     ref.read(linkParserViewModelProvider.notifier).parse();
   }
 
-  void _startDownload() {
+  void _startDownload(MediaQualityOption? quality) {
     final videoInfo = ref.read(linkParserViewModelProvider).videoInfo;
     if (videoInfo == null || !_isDirectDownloadAvailable(videoInfo)) {
       ScaffoldMessenger.of(
@@ -253,10 +253,11 @@ class _HomePageState extends ConsumerState<HomePage> {
     final task = DownloadTask(
       id: 'download-${videoInfo.id}-${DateTime.now().microsecondsSinceEpoch}',
       title: videoInfo.title,
-      url: videoInfo.videoUrl,
+      url: quality?.url ?? videoInfo.videoUrl,
       platform: videoInfo.platform,
       mode: DownloadMode.real,
-      requestHeaders: _downloadHeaders(videoInfo),
+      requestHeaders: _downloadHeaders(videoInfo, quality),
+      totalBytes: quality?.sizeBytes,
       createdAt: DateTime.now(),
     );
     final manager = ref.read(downloadManagerProvider.notifier);
@@ -269,26 +270,71 @@ class _HomePageState extends ConsumerState<HomePage> {
   }
 }
 
-class _ParserResultCard extends StatelessWidget {
+class _ParserResultCard extends StatefulWidget {
   const _ParserResultCard({required this.state, required this.onDownload});
 
   final LinkParserState state;
-  final VoidCallback onDownload;
+  final ValueChanged<MediaQualityOption?> onDownload;
+
+  @override
+  State<_ParserResultCard> createState() => _ParserResultCardState();
+}
+
+class _ParserResultCardState extends State<_ParserResultCard> {
+  String? _selectedQualityId;
+
+  @override
+  void initState() {
+    super.initState();
+    _selectRecommendedQuality();
+  }
+
+  @override
+  void didUpdateWidget(covariant _ParserResultCard oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    final oldVideo = oldWidget.state.videoInfo;
+    final video = widget.state.videoInfo;
+    if (oldVideo?.id != video?.id ||
+        !_containsQuality(video, _selectedQualityId)) {
+      _selectRecommendedQuality();
+    }
+  }
+
+  void _selectRecommendedQuality() {
+    _selectedQualityId = widget.state.videoInfo?.recommendedQuality?.id;
+  }
+
+  bool _containsQuality(VideoInfo? videoInfo, String? qualityId) {
+    if (videoInfo == null || qualityId == null) {
+      return false;
+    }
+    return videoInfo.qualityOptions.any((option) => option.id == qualityId);
+  }
+
+  MediaQualityOption? _selectedQuality(VideoInfo videoInfo) {
+    for (final option in videoInfo.qualityOptions) {
+      if (option.id == _selectedQualityId) {
+        return option;
+      }
+    }
+    return videoInfo.recommendedQuality;
+  }
 
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
-    final videoInfo = state.videoInfo;
+    final videoInfo = widget.state.videoInfo;
     final canDownload = _isDirectDownloadAvailable(videoInfo);
 
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(24),
         child: videoInfo == null
-            ? _EmptyParserResult(status: state.parserStatus)
+            ? _EmptyParserResult(status: widget.state.parserStatus)
             : LayoutBuilder(
                 builder: (context, constraints) {
                   final compact = constraints.maxWidth < 620;
+                  final selectedQuality = _selectedQuality(videoInfo);
                   final cover = ClipRRect(
                     borderRadius: BorderRadius.circular(16),
                     child: SizedBox(
@@ -330,9 +376,42 @@ class _ParserResultCard extends StatelessWidget {
                           icon: Icons.schedule_rounded,
                           label: _formatDuration(videoInfo.duration!),
                         ),
+                      if (videoInfo.qualityOptions.length > 1) ...[
+                        const SizedBox(height: 8),
+                        DropdownButtonFormField<String>(
+                          key: ValueKey<String>(
+                            '${videoInfo.id}-${videoInfo.qualityOptions.map((option) => option.id).join('-')}',
+                          ),
+                          initialValue: selectedQuality?.id,
+                          decoration: const InputDecoration(
+                            labelText: '下载清晰度',
+                            prefixIcon: Icon(Icons.high_quality_rounded),
+                            isDense: true,
+                          ),
+                          items: [
+                            for (final option in videoInfo.qualityOptions)
+                              DropdownMenuItem<String>(
+                                value: option.id,
+                                child: Text(
+                                  option.isRecommended
+                                      ? '${option.label}（推荐）'
+                                      : option.label,
+                                ),
+                              ),
+                          ],
+                          onChanged: (value) {
+                            if (value == null) {
+                              return;
+                            }
+                            setState(() => _selectedQualityId = value);
+                          },
+                        ),
+                      ],
                       const SizedBox(height: 12),
                       FilledButton.icon(
-                        onPressed: canDownload ? onDownload : null,
+                        onPressed: canDownload
+                            ? () => widget.onDownload(selectedQuality)
+                            : null,
                         icon: const Icon(Icons.download_rounded),
                         label: Text(canDownload ? '加入下载队列' : '暂无下载地址'),
                       ),
@@ -492,14 +571,16 @@ bool _isDirectDownloadAvailable(VideoInfo? videoInfo) {
   ].any(path.endsWith);
 }
 
-Map<String, String> _downloadHeaders(VideoInfo videoInfo) {
+Map<String, String> _downloadHeaders(
+  VideoInfo videoInfo,
+  MediaQualityOption? quality,
+) {
   final value = videoInfo.metadata['downloadHeaders'];
-  if (value is! Map) {
-    return const <String, String>{};
-  }
   return <String, String>{
-    for (final entry in value.entries)
-      if (entry.key is String && entry.value is String)
-        entry.key as String: entry.value as String,
+    if (value is Map)
+      for (final entry in value.entries)
+        if (entry.key is String && entry.value is String)
+          entry.key as String: entry.value as String,
+    ...?quality?.requestHeaders,
   };
 }

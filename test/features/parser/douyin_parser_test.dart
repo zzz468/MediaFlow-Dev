@@ -34,6 +34,8 @@ void main() {
       expect(videoInfo.videoUrl, Uri.parse('https://example.test/video.mp4'));
       expect(videoInfo.duration, const Duration(minutes: 1, seconds: 2));
       expect(videoInfo.platform, MediaPlatform.douyin);
+      expect(videoInfo.qualityOptions, hasLength(1));
+      expect(videoInfo.recommendedQuality?.isRecommended, isTrue);
     });
 
     test('falls back to iesdouyin router data and extracts media url', () async {
@@ -64,6 +66,12 @@ void main() {
         ),
       );
       expect(videoInfo.metadata['mediaUrlAvailable'], isTrue);
+      expect(videoInfo.qualityOptions, hasLength(2));
+      expect(videoInfo.qualityOptions.map((option) => option.label), <String>[
+        '720P',
+        '480P',
+      ]);
+      expect(videoInfo.recommendedQuality?.label, '720P');
       expect(networkClient.requests, hasLength(2));
     });
 
@@ -173,9 +181,26 @@ const _routerDataPage = r'''
                   },
                   "bit_rate": [
                     {
+                      "gear_name": "normal_720",
+                      "quality_type": 720,
+                      "bit_rate": 1800000,
                       "play_addr": {
+                        "height": 720,
+                        "width": 1280,
                         "url_list": [
                           "https://aweme.snssdk.com/aweme/v1/playwm/?video_id=test&ratio=720p&line=0"
+                        ]
+                      }
+                    },
+                    {
+                      "gear_name": "normal_480",
+                      "quality_type": 480,
+                      "bit_rate": 900000,
+                      "play_addr": {
+                        "height": 480,
+                        "width": 854,
+                        "url_list": [
+                          "https://aweme.snssdk.com/aweme/v1/playwm/?video_id=test&ratio=480p&line=0"
                         ]
                       }
                     }

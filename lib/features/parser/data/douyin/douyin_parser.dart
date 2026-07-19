@@ -99,6 +99,18 @@ class DouyinParser implements ParserInterface {
           _extractVideoId(resolvedUri) ??
           resolvedUri.toString().hashCode.abs().toString();
 
+      final qualityOptions = metadata.qualityOptions.isEmpty
+          ? <MediaQualityOption>[
+              MediaQualityOption(
+                id: 'douyin-default',
+                label: '默认清晰度',
+                url: metadata.videoUrl!,
+                isRecommended: true,
+              ),
+            ]
+          : metadata.qualityOptions;
+      final recommendedOption = _recommendedOption(qualityOptions);
+
       return ParserSuccess(
         VideoInfo(
           id: id,
@@ -106,10 +118,11 @@ class DouyinParser implements ParserInterface {
           author: metadata.author,
           authorId: metadata.authorId,
           coverUrl: metadata.coverUrl,
-          videoUrl: metadata.videoUrl!,
+          videoUrl: recommendedOption?.url ?? metadata.videoUrl!,
           platform: platform,
           duration: metadata.duration,
           description: metadata.description,
+          qualityOptions: qualityOptions,
           metadata: <String, Object?>{
             'sourceUrl': link.originalUrl,
             'resolvedUrl': resolvedUri.toString(),
@@ -433,13 +446,16 @@ class DouyinParser implements ParserInterface {
         _stringValue(map['itemId']);
     final authorName =
         _stringValue(author['nickname']) ?? _stringValue(author['name']);
+    final qualityOptions = _qualityOptionsFromBitRate(
+      video['bit_rate'] ?? video['bitRate'],
+    );
+    final recommendedOption = _recommendedOption(qualityOptions);
     final videoUrl =
+        recommendedOption?.url ??
         _uriFromUrlContainer(video['play_addr']) ??
         _uriFromUrlContainer(video['playAddr']) ??
         _uriFromUrlContainer(video['play_addr_h264']) ??
         _uriFromUrlContainer(video['play_addr_265']) ??
-        _uriFromBitRate(video['bit_rate']) ??
-        _uriFromBitRate(video['bitRate']) ??
         _uriFromUrlContainer(video['download_addr']);
     return _DouyinVideoData(
       id: id,
@@ -457,6 +473,7 @@ class DouyinParser implements ParserInterface {
           _uriFromUrlContainer(video['origin_cover']) ??
           _uriFromUrlContainer(video['dynamic_cover']),
       videoUrl: _preferCompatiblePlaybackLine(videoUrl),
+      qualityOptions: qualityOptions,
       duration: _durationFromMilliseconds(video['duration']),
       description: _stringValue(map['desc']),
     );
@@ -518,23 +535,111 @@ class DouyinParser implements ParserInterface {
     );
   }
 
-  Uri? _uriFromBitRate(Object? value) {
+  List<MediaQualityOption> _qualityOptionsFromBitRate(Object? value) {
     if (value is! List) {
-      return null;
+      return const <MediaQualityOption>[];
     }
+
+    final options = <MediaQualityOption>[];
+    final seenUrls = <String>{};
     for (final item in value) {
       if (item is! Map) {
         continue;
       }
       final map = Map<String, dynamic>.from(item);
-      final uri =
+      final rawUri =
           _uriFromUrlContainer(map['play_addr']) ??
           _uriFromUrlContainer(map['playAddr']);
-      if (uri != null) {
-        return uri;
+      final uri = _preferCompatiblePlaybackLine(rawUri);
+      if (uri == null || !seenUrls.add(uri.toString())) {
+        continue;
+      }
+
+      final height =
+          _intValue(map['height']) ??
+          _intValue(_mapValue(map['play_addr'], 'height')) ??
+          _intValue(_mapValue(map['playAddr'], 'height'));
+      final width =
+          _intValue(map['width']) ??
+          _intValue(_mapValue(map['play_addr'], 'width')) ??
+          _intValue(_mapValue(map['playAddr'], 'width'));
+      final bitrate = _intValue(map['bit_rate']) ?? _intValue(map['bitRate']);
+      final qualityType =
+          _intValue(map['quality_type']) ?? _intValue(map['qualityType']);
+      final gearName =
+          _stringValue(map['gear_name']) ?? _stringValue(map['gearName']);
+      final label = _douyinQualityLabel(
+        uri: uri,
+        gearName: gearName,
+        height: height,
+        bitrate: bitrate,
+        index: options.length,
+      );
+      options.add(
+        MediaQualityOption(
+          id: 'douyin-${qualityType ?? gearName ?? height ?? bitrate ?? 'quality'}-${options.length}',
+          label: label,
+          url: uri,
+          isRecommended: options.isEmpty,
+          width: width,
+          height: height,
+          bitrate: bitrate,
+          metadata: <String, Object?>{
+            'qualityType': qualityType,
+            'gearName': gearName,
+          },
+        ),
+      );
+    }
+    return options;
+  }
+
+  MediaQualityOption? _recommendedOption(List<MediaQualityOption> options) {
+    for (final option in options) {
+      if (option.isRecommended) {
+        return option;
       }
     }
-    return null;
+    return options.isEmpty ? null : options.first;
+  }
+
+  String _douyinQualityLabel({
+    required Uri uri,
+    required String? gearName,
+    required int? height,
+    required int? bitrate,
+    required int index,
+  }) {
+    final ratio = uri.queryParameters['ratio'];
+    final ratioMatch = RegExp(
+      r'(\d{3,4})p',
+      caseSensitive: false,
+    ).firstMatch(ratio ?? gearName ?? '');
+    if (ratioMatch != null) {
+      return '${ratioMatch.group(1)}P';
+    }
+    if (height != null && height > 0) {
+      return '${height}P';
+    }
+    if (gearName != null) {
+      return gearName;
+    }
+    if (bitrate != null && bitrate > 0) {
+      final megabits = bitrate / 1000000;
+      return '${megabits.toStringAsFixed(megabits >= 10 ? 0 : 1)} Mbps';
+    }
+    return '清晰度 ${index + 1}';
+  }
+
+  Object? _mapValue(Object? value, String key) {
+    return value is Map ? value[key] : null;
+  }
+
+  int? _intValue(Object? value) {
+    if (value is num) {
+      return value.toInt();
+    }
+    return int.tryParse(value?.toString() ?? '');
   }
 
   Duration? _durationFromSeconds(Object? value) {
@@ -590,6 +695,7 @@ class _DouyinVideoData {
     this.authorId,
     this.coverUrl,
     this.videoUrl,
+    this.qualityOptions = const [],
     this.duration,
     this.description,
   });
@@ -605,6 +711,9 @@ class _DouyinVideoData {
       authorId: authorId ?? fallback.authorId,
       coverUrl: coverUrl ?? fallback.coverUrl,
       videoUrl: videoUrl ?? fallback.videoUrl,
+      qualityOptions: qualityOptions.isNotEmpty
+          ? qualityOptions
+          : fallback.qualityOptions,
       duration: duration ?? fallback.duration,
       description: description ?? fallback.description,
     );
@@ -616,6 +725,7 @@ class _DouyinVideoData {
   final String? authorId;
   final Uri? coverUrl;
   final Uri? videoUrl;
+  final List<MediaQualityOption> qualityOptions;
   final Duration? duration;
   final String? description;
 }
