@@ -36,6 +36,8 @@ void main() {
       expect(videoInfo.platform, MediaPlatform.douyin);
       expect(videoInfo.qualityOptions, hasLength(1));
       expect(videoInfo.recommendedQuality?.isRecommended, isTrue);
+      expect(videoInfo.recommendedQuality?.isWatermarkFree, isFalse);
+      expect(videoInfo.metadata['watermarkFree'], isFalse);
     });
 
     test('falls back to iesdouyin router data and extracts media url', () async {
@@ -72,8 +74,63 @@ void main() {
         '480P',
       ]);
       expect(videoInfo.recommendedQuality?.label, '720P');
+      expect(videoInfo.recommendedQuality?.isWatermarkFree, isFalse);
+      expect(videoInfo.metadata['watermarkFree'], isFalse);
+      expect(videoInfo.metadata['mediaSource'], 'play_addr');
       expect(networkClient.requests, hasLength(2));
     });
+
+    test(
+      'prefers a platform-returned watermark-free URL for the same quality',
+      () async {
+        final watermarkFreePage = _routerDataPage.replaceFirst(
+          '"video": {',
+          '''"video": {
+                  "height": 1280,
+                  "width": 720,
+                  "play_addr": {
+                    "url_list": [
+                      "https://aweme.snssdk.com/aweme/v1/playwm/?video_id=test&ratio=720p&line=0"
+                    ]
+                  },
+                  "play_addr_h264": {
+                    "url_list": [
+                      "https://aweme.snssdk.com/aweme/v1/play/?video_id=test&ratio=720p"
+                    ]
+                  },''',
+        );
+        final networkClient = FakeNetworkClient((uri, headers) async {
+          return textResponse(
+            watermarkFreePage,
+            finalUri: Uri.parse(
+              'https://www.iesdouyin.com/share/video/9876543210/',
+            ),
+          );
+        });
+        final parser = DouyinParser(networkClient: networkClient);
+
+        final result = await parser.parse(_douyinLink());
+
+        expect(result, isA<ParserSuccess>());
+        final videoInfo = (result as ParserSuccess).videoInfo;
+        expect(videoInfo.qualityOptions, hasLength(2));
+        expect(
+          videoInfo.videoUrl,
+          Uri.parse(
+            'https://aweme.snssdk.com/aweme/v1/play/?video_id=test&ratio=720p',
+          ),
+        );
+        expect(videoInfo.recommendedQuality?.label, '720P');
+        expect(videoInfo.recommendedQuality?.isWatermarkFree, isTrue);
+        expect(
+          videoInfo.recommendedQuality?.metadata['mediaSource'],
+          'play_addr_h264',
+        );
+        expect(videoInfo.qualityOptions.last.isWatermarkFree, isFalse);
+        expect(videoInfo.metadata['watermarkFree'], isTrue);
+        expect(videoInfo.metadata['mediaSource'], 'play_addr_h264');
+      },
+    );
 
     test('uses a stable title when the description is empty', () async {
       final networkClient = FakeNetworkClient((uri, headers) async {

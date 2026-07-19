@@ -59,6 +59,9 @@ void main() {
       expect(videoInfo.metadata['mediaUrlAvailable'], isTrue);
       expect(videoInfo.qualityOptions, hasLength(1));
       expect(videoInfo.recommendedQuality?.isRecommended, isTrue);
+      expect(videoInfo.recommendedQuality?.isWatermarkFree, isTrue);
+      expect(videoInfo.metadata['watermarkFree'], isTrue);
+      expect(videoInfo.metadata['mediaSource'], 'durl');
     });
 
     test('resolves a Bilibili short share link before parsing', () async {
@@ -153,6 +156,11 @@ void main() {
           '480P',
         ]);
         expect(videoInfo.recommendedQuality?.label, '1080P');
+        expect(
+          videoInfo.qualityOptions.every((option) => option.isWatermarkFree),
+          isTrue,
+        );
+        expect(videoInfo.metadata['watermarkFree'], isTrue);
         expect(
           videoInfo.videoUrl,
           Uri.parse('https://cdn.example.test/video-80.mp4'),

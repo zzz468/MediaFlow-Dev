@@ -6,6 +6,7 @@ class MediaQualityOption {
     required this.label,
     required this.url,
     this.isRecommended = false,
+    this.isWatermarkFree = false,
     this.sizeBytes,
     this.width,
     this.height,
@@ -18,6 +19,7 @@ class MediaQualityOption {
   final String label;
   final Uri url;
   final bool isRecommended;
+  final bool isWatermarkFree;
   final int? sizeBytes;
   final int? width;
   final int? height;

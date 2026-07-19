@@ -133,6 +133,8 @@ class BilibiliParser implements ParserInterface {
                 : _downloadHeaders,
             'downloadSize': recommendedOption?.sizeBytes,
             'downloadQuality': recommendedOption?.metadata['qualityCode'],
+            'watermarkFree': recommendedOption?.isWatermarkFree ?? false,
+            'mediaSource': recommendedOption?.metadata['mediaSource'],
             'aid': aid,
             'bvid': bvid,
             'cid': _asInt(data['cid']),
@@ -250,9 +252,13 @@ class BilibiliParser implements ParserInterface {
             label: descriptions[info.quality] ?? _qualityLabel(info.quality),
             url: info.url,
             isRecommended: info.quality == initial.quality,
+            isWatermarkFree: true,
             sizeBytes: info.size,
             requestHeaders: _downloadHeaders,
-            metadata: <String, Object?>{'qualityCode': info.quality},
+            metadata: <String, Object?>{
+              'qualityCode': info.quality,
+              'mediaSource': 'durl',
+            },
           ),
       ];
     } catch (error) {
