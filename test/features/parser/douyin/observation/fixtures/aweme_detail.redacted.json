@@ -1,0 +1,314 @@
+{
+  "aweme_detail": {
+    "aweme_id": "1000000000000000001",
+    "desc": "Synthetic public work description",
+    "author": {
+      "nickname": "Fixture author",
+      "unique_id": "fixture_author",
+      "sec_uid": "fixture_sec_uid",
+      "uid": "1001"
+    },
+    "video": {
+      "duration": 20000,
+      "width": 1920,
+      "height": 1080,
+      "cover": {
+        "width": 720,
+        "height": 720,
+        "url_list": [
+          "https://cover.example.invalid/cover/1?lk3s=&from=&s=&se=&sc=&biz_tag=&l="
+        ]
+      },
+      "origin_cover": {
+        "width": 640,
+        "height": 360,
+        "url_list": [
+          "https://cover.example.invalid/cover/2?lk3s=&from=&s=&se=&sc=&biz_tag=&l=",
+          "https://cover.example.invalid/cover/3?lk3s=&from=&s=&se=&sc=&biz_tag=&l="
+        ]
+      },
+      "dynamic_cover": {
+        "width": 720,
+        "height": 720,
+        "url_list": [
+          "https://cover.example.invalid/cover/4?lk3s=&from=&s=&se=&sc=&biz_tag=&l=",
+          "https://cover.example.invalid/cover/5?lk3s=&from=&s=&se=&sc=&biz_tag=&l="
+        ]
+      },
+      "play_addr": {
+        "width": 1920,
+        "height": 1080,
+        "data_size": 1100000,
+        "url_list": [
+          "https://media.example.invalid/media/6?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cquery=&dy_q=&feature_id=&l=",
+          "https://media.example.invalid/media/7?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cc=&cquery=&dy_q=&feature_id=&l=&req_cdn_type=",
+          "https://media.example.invalid/media/8?video_id=&line=&file_id=&sign=&is_play_url=&source=&biz_sign=&aid="
+        ]
+      },
+      "play_addr_h264": {
+        "width": 1920,
+        "height": 1080,
+        "data_size": 1200000,
+        "url_list": [
+          "https://media.example.invalid/media/9?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cquery=&dy_q=&feature_id=&l=",
+          "https://media.example.invalid/media/10?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cc=&cquery=&dy_q=&feature_id=&l=&req_cdn_type=",
+          "https://media.example.invalid/media/11?video_id=&line=&file_id=&sign=&is_play_url=&source=&biz_sign=&aid="
+        ]
+      },
+      "play_addr_265": {
+        "width": 1920,
+        "height": 1080,
+        "data_size": 1300000,
+        "url_list": [
+          "https://media.example.invalid/media/12?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cquery=&dy_q=&feature_id=&l=",
+          "https://media.example.invalid/media/13?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cc=&cquery=&dy_q=&feature_id=&l=&req_cdn_type=",
+          "https://media.example.invalid/media/14?video_id=&line=&file_id=&sign=&is_play_url=&source=&biz_sign=&aid="
+        ]
+      },
+      "download_addr": {
+        "width": 720,
+        "height": 720,
+        "data_size": 1400000,
+        "url_list": [
+          "https://media.example.invalid/media/15?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cquery=&dy_q=&feature_id=&l=",
+          "https://media.example.invalid/media/16?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cc=&cquery=&dy_q=&feature_id=&l=&req_cdn_type=",
+          "https://media.example.invalid/media/17?video_id=&line=&ratio=&watermark=&media_type=&vr_type=&improve_bitrate=&biz_sign=&logo_name=&source="
+        ]
+      },
+      "bit_rate": [
+        {
+          "quality_type": 1,
+          "bit_rate": 500000,
+          "gear_name": "fixture-quality-1",
+          "play_addr": {
+            "width": 1920,
+            "height": 1080,
+            "data_size": 1500000,
+            "url_list": [
+              "https://media.example.invalid/media/18?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cquery=&dy_q=&feature_id=&l=",
+              "https://media.example.invalid/media/19?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cc=&cquery=&dy_q=&feature_id=&l=&req_cdn_type=",
+              "https://media.example.invalid/media/20?video_id=&line=&file_id=&sign=&is_play_url=&source=&biz_sign=&aid="
+            ]
+          }
+        },
+        {
+          "quality_type": 20,
+          "bit_rate": 600000,
+          "gear_name": "fixture-quality-20",
+          "play_addr": {
+            "width": 1024,
+            "height": 576,
+            "data_size": 1600000,
+            "url_list": [
+              "https://media.example.invalid/media/21?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cquery=&dy_q=&feature_id=&l=",
+              "https://media.example.invalid/media/22?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cc=&cquery=&dy_q=&feature_id=&l=&req_cdn_type=",
+              "https://media.example.invalid/media/23?video_id=&line=&file_id=&sign=&is_play_url=&source=&biz_sign=&aid="
+            ]
+          }
+        },
+        {
+          "quality_type": 10,
+          "bit_rate": 700000,
+          "gear_name": "fixture-quality-10",
+          "play_addr": {
+            "width": 1280,
+            "height": 720,
+            "data_size": 1700000,
+            "url_list": [
+              "https://media.example.invalid/media/24?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cquery=&dy_q=&feature_id=&l=",
+              "https://media.example.invalid/media/25?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cc=&cquery=&dy_q=&feature_id=&l=&req_cdn_type=",
+              "https://media.example.invalid/media/26?video_id=&line=&file_id=&sign=&is_play_url=&source=&biz_sign=&aid="
+            ]
+          }
+        },
+        {
+          "quality_type": 211,
+          "bit_rate": 800000,
+          "gear_name": "fixture-quality-211",
+          "play_addr": {
+            "width": 1280,
+            "height": 720,
+            "data_size": 1800000,
+            "url_list": [
+              "https://media.example.invalid/media/27?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cquery=&dy_q=&feature_id=&l=",
+              "https://media.example.invalid/media/28?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cc=&cquery=&dy_q=&feature_id=&l=&req_cdn_type=",
+              "https://media.example.invalid/media/29?video_id=&line=&file_id=&sign=&is_play_url=&source=&biz_sign=&aid="
+            ]
+          }
+        },
+        {
+          "quality_type": 292,
+          "bit_rate": 900000,
+          "gear_name": "fixture-quality-292",
+          "play_addr": {
+            "width": 1024,
+            "height": 576,
+            "data_size": 1900000,
+            "url_list": [
+              "https://media.example.invalid/media/30?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cquery=&dy_q=&feature_id=&l=",
+              "https://media.example.invalid/media/31?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cc=&cquery=&dy_q=&feature_id=&l=&req_cdn_type=",
+              "https://media.example.invalid/media/32?video_id=&line=&file_id=&sign=&is_play_url=&source=&biz_sign=&aid="
+            ]
+          }
+        },
+        {
+          "quality_type": 3,
+          "bit_rate": 1000000,
+          "gear_name": "fixture-quality-3",
+          "play_addr": {
+            "width": 1920,
+            "height": 1080,
+            "data_size": 2000000,
+            "url_list": [
+              "https://media.example.invalid/media/33?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cquery=&dy_q=&feature_id=&l=",
+              "https://media.example.invalid/media/34?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cc=&cquery=&dy_q=&feature_id=&l=&req_cdn_type=",
+              "https://media.example.invalid/media/35?video_id=&line=&file_id=&sign=&is_play_url=&source=&biz_sign=&aid="
+            ]
+          }
+        },
+        {
+          "quality_type": 224,
+          "bit_rate": 1100000,
+          "gear_name": "fixture-quality-224",
+          "play_addr": {
+            "width": 1024,
+            "height": 576,
+            "data_size": 2100000,
+            "url_list": [
+              "https://media.example.invalid/media/36?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cquery=&dy_q=&feature_id=&l=",
+              "https://media.example.invalid/media/37?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cc=&cquery=&dy_q=&feature_id=&l=&req_cdn_type=",
+              "https://media.example.invalid/media/38?video_id=&line=&file_id=&sign=&is_play_url=&source=&biz_sign=&aid="
+            ]
+          }
+        },
+        {
+          "quality_type": 291,
+          "bit_rate": 1200000,
+          "gear_name": "fixture-quality-291",
+          "play_addr": {
+            "width": 1024,
+            "height": 576,
+            "data_size": 2200000,
+            "url_list": [
+              "https://media.example.invalid/media/39?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cquery=&dy_q=&feature_id=&l=",
+              "https://media.example.invalid/media/40?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cc=&cquery=&dy_q=&feature_id=&l=&req_cdn_type=",
+              "https://media.example.invalid/media/41?video_id=&line=&file_id=&sign=&is_play_url=&source=&biz_sign=&aid="
+            ]
+          }
+        },
+        {
+          "quality_type": 11,
+          "bit_rate": 1300000,
+          "gear_name": "fixture-quality-11",
+          "play_addr": {
+            "width": 1280,
+            "height": 720,
+            "data_size": 2300000,
+            "url_list": [
+              "https://media.example.invalid/media/42?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cquery=&dy_q=&feature_id=&l=",
+              "https://media.example.invalid/media/43?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cc=&cquery=&dy_q=&feature_id=&l=&req_cdn_type=",
+              "https://media.example.invalid/media/44?video_id=&line=&file_id=&sign=&is_play_url=&source=&biz_sign=&aid="
+            ]
+          }
+        },
+        {
+          "quality_type": 12,
+          "bit_rate": 1400000,
+          "gear_name": "fixture-quality-12",
+          "play_addr": {
+            "width": 1280,
+            "height": 720,
+            "data_size": 2400000,
+            "url_list": [
+              "https://media.example.invalid/media/45?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cquery=&dy_q=&feature_id=&l=",
+              "https://media.example.invalid/media/46?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cc=&cquery=&dy_q=&feature_id=&l=&req_cdn_type=",
+              "https://media.example.invalid/media/47?video_id=&line=&file_id=&sign=&is_play_url=&source=&biz_sign=&aid="
+            ]
+          }
+        },
+        {
+          "quality_type": 22,
+          "bit_rate": 1500000,
+          "gear_name": "fixture-quality-22",
+          "play_addr": {
+            "width": 1024,
+            "height": 576,
+            "data_size": 2500000,
+            "url_list": [
+              "https://media.example.invalid/media/48?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cquery=&dy_q=&feature_id=&l=",
+              "https://media.example.invalid/media/49?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cc=&cquery=&dy_q=&feature_id=&l=&req_cdn_type=",
+              "https://media.example.invalid/media/50?video_id=&line=&file_id=&sign=&is_play_url=&source=&biz_sign=&aid="
+            ]
+          }
+        },
+        {
+          "quality_type": 23,
+          "bit_rate": 1600000,
+          "gear_name": "fixture-quality-23",
+          "play_addr": {
+            "width": 1024,
+            "height": 576,
+            "data_size": 2600000,
+            "url_list": [
+              "https://media.example.invalid/media/51?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cquery=&dy_q=&feature_id=&l=",
+              "https://media.example.invalid/media/52?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cc=&cquery=&dy_q=&feature_id=&l=&req_cdn_type=",
+              "https://media.example.invalid/media/53?video_id=&line=&file_id=&sign=&is_play_url=&source=&biz_sign=&aid="
+            ]
+          }
+        },
+        {
+          "quality_type": 24,
+          "bit_rate": 1700000,
+          "gear_name": "fixture-quality-24",
+          "play_addr": {
+            "width": 960,
+            "height": 540,
+            "data_size": 2700000,
+            "url_list": [
+              "https://media.example.invalid/media/54?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cquery=&dy_q=&feature_id=&l=",
+              "https://media.example.invalid/media/55?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cc=&cquery=&dy_q=&feature_id=&l=&req_cdn_type=",
+              "https://media.example.invalid/media/56?video_id=&line=&file_id=&sign=&is_play_url=&source=&biz_sign=&aid="
+            ]
+          }
+        },
+        {
+          "quality_type": 25,
+          "bit_rate": 1800000,
+          "gear_name": "fixture-quality-25",
+          "play_addr": {
+            "width": 960,
+            "height": 540,
+            "data_size": 2800000,
+            "url_list": [
+              "https://media.example.invalid/media/57?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cquery=&dy_q=&feature_id=&l=",
+              "https://media.example.invalid/media/58?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cc=&cquery=&dy_q=&feature_id=&l=&req_cdn_type=",
+              "https://media.example.invalid/media/59?video_id=&line=&file_id=&sign=&is_play_url=&source=&biz_sign=&aid="
+            ]
+          }
+        },
+        {
+          "quality_type": 26,
+          "bit_rate": 1900000,
+          "gear_name": "fixture-quality-26",
+          "play_addr": {
+            "width": 960,
+            "height": 540,
+            "data_size": 2900000,
+            "url_list": [
+              "https://media.example.invalid/media/60?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cquery=&dy_q=&feature_id=&l=",
+              "https://media.example.invalid/media/61?a=&ch=&cr=&dr=&lr=&cd=&cv=&br=&bt=&cs=&ds=&ft=&mime_type=&qs=&rc=&btag=&cc=&cquery=&dy_q=&feature_id=&l=&req_cdn_type=",
+              "https://media.example.invalid/media/62?video_id=&line=&file_id=&sign=&is_play_url=&source=&biz_sign=&aid="
+            ]
+          }
+        }
+      ]
+    },
+    "create_time": 1700000000,
+    "statistics": {
+      "digg_count": 1234,
+      "comment_count": 56,
+      "collect_count": 78,
+      "share_count": 9
+    }
+  }
+}

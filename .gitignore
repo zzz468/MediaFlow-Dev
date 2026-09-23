@@ -43,9 +43,13 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+/android/build/
 
 # Local release artifacts and Android signing secrets
 /dist/
 /android/key.properties
 *.jks
 *.keystore
+*.p12
+*.pfx
+key.properties

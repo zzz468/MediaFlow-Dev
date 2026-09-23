@@ -4,6 +4,7 @@ import 'dart:convert';
 import 'package:html/dom.dart';
 import 'package:html/parser.dart' as html_parser;
 
+import '../../../../core/browser/observation/browser_network_observation.dart';
 import '../../../../core/logging/app_logger.dart';
 import '../../../../core/models/media_link.dart';
 import '../../../../core/network/network_client.dart';
@@ -11,12 +12,38 @@ import '../../domain/parser_interface.dart';
 import '../../domain/parser_result.dart';
 import '../../domain/video_info.dart';
 
+import 'douyin_detail_session.dart';
+import 'douyin_mobile_feed_session.dart';
+import 'observation/douyin_browser_observation.dart';
+import 'observation/douyin_browser_observation_result.dart';
+import 'observation/douyin_observed_work.dart';
+
 class DouyinParser implements ParserInterface {
-  factory DouyinParser({required NetworkClient networkClient}) {
-    return DouyinParser._(networkClient);
+  factory DouyinParser({
+    required NetworkClient networkClient,
+    NetworkClient? detailNetworkClient,
+    NetworkClient? mobileFeedNetworkClient,
+    DateTime Function()? now,
+    DouyinBrowserObservationCapability? browserObservation,
+  }) {
+    return DouyinParser._(
+      networkClient,
+      DouyinDetailSession(client: detailNetworkClient, now: now),
+      DouyinMobileFeedSession(client: mobileFeedNetworkClient),
+      browserObservation,
+    );
   }
 
-  DouyinParser._(this._networkClient);
+  DouyinParser._(
+    this._networkClient,
+    this._detailSession,
+    this._mobileFeedSession,
+    this._browserObservation,
+  );
+
+  final DouyinDetailSession _detailSession;
+  final DouyinMobileFeedSession _mobileFeedSession;
+  final DouyinBrowserObservationCapability? _browserObservation;
 
   static const _headers = <String, String>{
     'Accept':
@@ -40,7 +67,11 @@ class DouyinParser implements ParserInterface {
         headers: _headers,
       );
       var statusFailure = _failureForStatus(response.statusCode);
-      if (statusFailure != null) {
+      if (statusFailure != null &&
+          (response.statusCode == 404 ||
+              response.statusCode == 410 ||
+              (_extractVideoId(response.finalUri) == null &&
+                  _extractVideoId(link.normalizedUri) == null))) {
         return statusFailure;
       }
 
@@ -55,7 +86,7 @@ class DouyinParser implements ParserInterface {
           _extractVideoId(resolvedUri) ??
           _extractVideoId(link.normalizedUri);
 
-      if ((page.data?.title == null || page.data?.videoUrl == null) &&
+      if (!_isComplete(page.data) &&
           videoId != null &&
           resolvedUri.host != 'www.iesdouyin.com') {
         final shareUri = Uri.https(
@@ -64,11 +95,13 @@ class DouyinParser implements ParserInterface {
         );
         response = await _networkClient.get(shareUri, headers: _headers);
         statusFailure = _failureForStatus(response.statusCode);
-        if (statusFailure != null) {
-          return statusFailure;
+        if (response.statusCode == 404 || response.statusCode == 410) {
+          return statusFailure!;
         }
 
-        final sharePage = _parsePage(response);
+        final sharePage = statusFailure == null
+            ? _parsePage(response)
+            : const _DouyinPageData(data: null, isExpired: false);
         if (sharePage.isExpired) {
           return _expiredFailure();
         }
@@ -79,7 +112,82 @@ class DouyinParser implements ParserInterface {
         resolvedUri = response.finalUri;
       }
 
-      final metadata = page.data;
+      var metadata = page.data;
+      var usedDetail = false;
+      var usedMobileFeed = false;
+      var detailMedia = false;
+      var mobileFeedMedia = false;
+      var browserMedia = false;
+      var browserObservationUsed = false;
+      DouyinBrowserObservationAttempt? browserAttempt;
+      if (!_isComplete(metadata) && videoId != null) {
+        final feed = await _mobileFeedSession.fetch(videoId);
+        final work = feed.work;
+        if (work != null) {
+          final data = _dataFromAwemeMap(work);
+          if (_isComplete(data) &&
+              data.id == videoId &&
+              data.videoUrl!.hasAuthority &&
+              const ['http', 'https'].contains(data.videoUrl!.scheme) &&
+              data.qualityOptions.every(
+                (option) =>
+                    option.url.hasAuthority &&
+                    const ['http', 'https'].contains(option.url.scheme),
+              )) {
+            mobileFeedMedia = metadata?.videoUrl == null;
+            metadata = metadata?.merge(data, preserveMedia: true) ?? data;
+            usedMobileFeed = true;
+          }
+        }
+      }
+      if (!_isComplete(metadata) && videoId != null) {
+        final detail = await _detailSession.fetch(videoId);
+        if (detail != null) {
+          final candidate = _findAwemeMap(detail);
+          if (candidate != null) {
+            final data = _dataFromAwemeMap(candidate);
+            if (_isComplete(data) &&
+                data.videoUrl!.hasAuthority &&
+                const ['http', 'https'].contains(data.videoUrl!.scheme) &&
+                data.qualityOptions.every(
+                  (option) =>
+                      option.url.hasAuthority &&
+                      const ['http', 'https'].contains(option.url.scheme),
+                )) {
+              detailMedia = metadata?.videoUrl == null;
+              metadata = metadata?.merge(data, preserveMedia: true) ?? data;
+              usedDetail = true;
+            }
+          }
+        }
+      }
+      if (!_isComplete(metadata) &&
+          videoId != null &&
+          _browserObservation != null) {
+        browserAttempt = await _browserObservation.observe(
+          navigationUri: Uri.https('www.douyin.com', '/video/$videoId'),
+          targetWorkId: videoId,
+        );
+        final observation = browserAttempt.result;
+        if (observation?.outcome == DouyinBrowserObservationOutcome.found &&
+            observation?.work?.workId == videoId) {
+          final observed = _dataFromObservedWork(observation!.work!);
+          if (_isComplete(observed)) {
+            browserObservationUsed = true;
+            browserMedia = metadata?.videoUrl == null;
+            metadata =
+                metadata?.merge(observed, preserveMedia: true) ?? observed;
+          }
+        }
+      }
+      if (!_isComplete(metadata) &&
+          (_detailSession.wasRestricted || browserAttempt != null) &&
+          (metadata?.title == null || metadata?.videoUrl == null)) {
+        return ParserFailure(
+          code: ParserFailureCode.parseFailed,
+          message: _browserFailureMessage(browserAttempt),
+        );
+      }
       if (metadata == null || metadata.title == null) {
         return const ParserFailure(
           code: ParserFailureCode.parseFailed,
@@ -113,7 +221,31 @@ class DouyinParser implements ParserInterface {
               ),
             ]
           : metadata.qualityOptions;
-      final recommendedOption = _recommendedOption(qualityOptions);
+      final mediaHeaders = <String, String>{
+        'Referer': detailMedia || mobileFeedMedia || browserMedia
+            ? 'https://www.douyin.com/video/$videoId'
+            : resolvedUri.origin,
+        'User-Agent': detailMedia || mobileFeedMedia || browserMedia
+            ? DouyinDetailSession.userAgent
+            : _headers['User-Agent']!,
+      };
+      final optionsWithHeaders = <MediaQualityOption>[
+        for (final option in qualityOptions)
+          MediaQualityOption(
+            id: option.id,
+            label: option.label,
+            url: option.url,
+            isRecommended: option.isRecommended,
+            isWatermarkFree: option.isWatermarkFree,
+            sizeBytes: option.sizeBytes,
+            width: option.width,
+            height: option.height,
+            bitrate: option.bitrate,
+            requestHeaders: mediaHeaders,
+            metadata: option.metadata,
+          ),
+      ];
+      final recommendedOption = _recommendedOption(optionsWithHeaders);
 
       return ParserSuccess(
         VideoInfo(
@@ -126,20 +258,49 @@ class DouyinParser implements ParserInterface {
           platform: platform,
           duration: metadata.duration,
           description: metadata.description,
-          qualityOptions: qualityOptions,
+          qualityOptions: optionsWithHeaders,
           metadata: <String, Object?>{
             'sourceUrl': link.originalUrl,
             'resolvedUrl': resolvedUri.toString(),
-            'mediaUrlAvailable': true,
+            // Observed locations are session-ephemeral. Keeping the existing
+            // download entry disabled prevents persistence in DownloadTask.
+            'mediaUrlAvailable': !browserMedia,
+            'ephemeralObservation': browserMedia,
             'watermarkFree':
                 recommendedOption?.isWatermarkFree ?? metadata.isWatermarkFree,
             'mediaSource':
                 recommendedOption?.metadata['mediaSource'] ??
                 metadata.mediaSource,
-            'downloadHeaders': <String, String>{
-              'Referer': resolvedUri.origin,
-              'User-Agent': _headers['User-Agent']!,
-            },
+            'downloadHeaders': mediaHeaders,
+            'detailFallbackUsed': usedDetail,
+            'mobileFeedUsed': usedMobileFeed,
+            'browserObservationUsed': browserObservationUsed,
+            if (browserAttempt != null)
+              'browserObservationDiagnostics': <String, Object?>{
+                'outcome': browserAttempt.summary.outcome.name,
+                'navigationSucceeded':
+                    browserAttempt.summary.navigationSucceeded,
+                'filterAccepted':
+                    browserAttempt.summary.filterCounts[NetworkFilterReason
+                        .filterAccepted] ??
+                    0,
+                'bodyBytes':
+                    browserAttempt.summary.filterCounts[NetworkFilterReason
+                        .bodyBytes] ??
+                    0,
+                'ipcSent':
+                    browserAttempt.summary.filterCounts[NetworkFilterReason
+                        .ipcSent] ??
+                    0,
+                'consumerCalls': browserAttempt.consumerCalls,
+                'consumerReceivedBytes': browserAttempt.consumerReceivedBytes,
+                'decoderExecutions': browserAttempt.decoderExecutions,
+                'decoderOutcome': browserAttempt.result?.outcome.name,
+                'observationsCreated': browserAttempt.observationsCreated,
+                'finalFrameReceived': browserAttempt.summary.finalFrameReceived,
+                'profileCleaned': browserAttempt.summary.profileCleaned,
+                'processExitCode': browserAttempt.summary.processExitCode,
+              },
           },
         ),
       );
@@ -192,6 +353,80 @@ class DouyinParser implements ParserInterface {
 
   @override
   bool supports(MediaLink link) => link.platform == platform;
+
+  bool _isComplete(_DouyinVideoData? data) =>
+      data?.title != null &&
+      data?.title != 'Douyin Video' &&
+      data?.author != null &&
+      data?.videoUrl != null;
+
+  _DouyinVideoData _dataFromObservedWork(DouyinObservedWork work) {
+    final options = <MediaQualityOption>[];
+    final seen = <String>{};
+    for (final variant in work.mediaVariants) {
+      for (final location in variant.locations) {
+        if (!seen.add(location.uri.toString())) continue;
+        options.add(
+          MediaQualityOption(
+            id: 'douyin-observed-${options.length}',
+            label: _douyinQualityLabel(
+              uri: location.uri,
+              gearName: variant.gearName,
+              height: variant.height,
+              bitrate: variant.bitrate,
+              index: options.length,
+            ),
+            url: location.uri,
+            isWatermarkFree: _isWatermarkFreeResource(
+              location.uri,
+              source: variant.sourceField.split('.').last,
+            ),
+            width: variant.width,
+            height: variant.height,
+            bitrate: variant.bitrate,
+            metadata: <String, Object?>{
+              'mediaSource': variant.sourceField,
+              'ephemeralObservation': true,
+            },
+          ),
+        );
+      }
+    }
+    final finalized = _finalizeQualityOptions(
+      options,
+      fallbackResource: null,
+      width: work.width,
+      height: work.height,
+    );
+    final media = _recommendedOption(finalized);
+    return _DouyinVideoData(
+      id: work.workId,
+      title: work.description,
+      description: work.description,
+      author: work.author?.nickname,
+      authorId: work.author?.uniqueId ?? work.author?.uid,
+      coverUrl: work.covers.isEmpty ? null : work.covers.first.uri,
+      videoUrl: media?.url,
+      isWatermarkFree: media?.isWatermarkFree ?? false,
+      mediaSource: media?.metadata['mediaSource'] as String?,
+      qualityOptions: finalized,
+      duration: work.duration,
+    );
+  }
+
+  String _browserFailureMessage(DouyinBrowserObservationAttempt? attempt) {
+    final outcome =
+        attempt?.result?.outcome.name ?? attempt?.summary.outcome.name;
+    return switch (outcome) {
+      'loginRequired' => '抖音公开页面要求登录；MediaFlow 不会导入账号状态。',
+      'browserVerification' => '抖音公开页面要求安全验证；MediaFlow 不会绕过验证。',
+      'regionRestricted' => '该抖音公开内容存在地区限制。',
+      'accessRestricted' => '该抖音公开内容存在访问权限限制。',
+      'timeout' => '抖音匿名浏览器解析超时，请稍后重试。',
+      'runtimeUnavailable' || 'unsupportedCapability' => '当前设备的匿名浏览器解析能力不可用。',
+      _ => '抖音未返回可下载的真实媒体地址；匿名公开页面解析失败，请稍后重试。',
+    };
+  }
 
   _DouyinPageData _parsePage(NetworkResponse response) {
     final document = html_parser.parse(response.body);
@@ -904,13 +1139,18 @@ class _DouyinVideoData {
     this.description,
   });
 
-  _DouyinVideoData merge(_DouyinVideoData? fallback) {
+  _DouyinVideoData merge(
+    _DouyinVideoData? fallback, {
+    bool preserveMedia = false,
+  }) {
     if (fallback == null) {
       return this;
     }
     return _DouyinVideoData(
       id: id ?? fallback.id,
-      title: title ?? fallback.title,
+      title: preserveMedia && title == 'Douyin Video'
+          ? fallback.title ?? title
+          : title ?? fallback.title,
       author: author ?? fallback.author,
       authorId: authorId ?? fallback.authorId,
       coverUrl: coverUrl ?? fallback.coverUrl,
@@ -919,7 +1159,9 @@ class _DouyinVideoData {
           ? isWatermarkFree
           : fallback.isWatermarkFree,
       mediaSource: videoUrl != null ? mediaSource : fallback.mediaSource,
-      qualityOptions: qualityOptions.isNotEmpty
+      qualityOptions: preserveMedia && videoUrl != null
+          ? qualityOptions
+          : qualityOptions.isNotEmpty
           ? qualityOptions
           : fallback.qualityOptions,
       duration: duration ?? fallback.duration,

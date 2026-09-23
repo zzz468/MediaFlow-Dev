@@ -1,8 +1,12 @@
+import java.io.File
 import java.io.FileInputStream
 import java.util.Properties
 
 val keystoreProperties = Properties()
-val keystorePropertiesFile = rootProject.file("key.properties")
+val keystorePropertiesFile = System.getenv("MEDIAFLOW_ANDROID_KEY_PROPERTIES")
+    ?.takeIf { it.isNotBlank() }
+    ?.let(::File)
+    ?: rootProject.file("key.properties")
 val hasReleaseSigning = keystorePropertiesFile.exists()
 if (hasReleaseSigning) {
     FileInputStream(keystorePropertiesFile).use(keystoreProperties::load)
@@ -44,11 +48,7 @@ android {
 
     buildTypes {
         release {
-            signingConfig = if (hasReleaseSigning) {
-                signingConfigs.getByName("release")
-            } else {
-                signingConfigs.getByName("debug")
-            }
+            signingConfig = if (hasReleaseSigning) signingConfigs.getByName("release") else null
         }
     }
 }
@@ -61,4 +61,10 @@ kotlin {
 
 flutter {
     source = "../.."
+}
+
+dependencies {
+    // Android-only transport for origin-scoped document-start observation and
+    // a disposable WebView profile. Core parser code does not depend on it.
+    implementation("androidx.webkit:webkit:1.15.0")
 }

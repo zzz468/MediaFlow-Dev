@@ -1,9 +1,19 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:mediaflow/core/browser/observation/browser_network_observation.dart';
 import 'package:mediaflow/core/models/media_link.dart';
 import 'package:mediaflow/features/parser/data/douyin/douyin_parser.dart';
+import 'package:mediaflow/features/parser/data/douyin/observation/douyin_browser_observation.dart';
+import 'package:mediaflow/features/parser/data/douyin/observation/douyin_browser_observation_result.dart';
+import 'package:mediaflow/features/parser/data/douyin/observation/douyin_observed_media_variant.dart';
+import 'package:mediaflow/features/parser/data/douyin/observation/douyin_observed_work.dart';
+import 'package:mediaflow/features/parser/data/douyin/observation/ephemeral_media_location.dart';
 import 'package:mediaflow/features/parser/domain/parser_result.dart';
 
 import '../../helpers/fake_network_client.dart';
+
+FakeNetworkClient _offlineFeed() => FakeNetworkClient(
+  (uri, headers) async => textResponse('', statusCode: 503, finalUri: uri),
+);
 
 void main() {
   group('DouyinParser', () {
@@ -14,7 +24,11 @@ void main() {
         expect(headers['Accept-Language'], contains('zh-CN'));
         return textResponse(_jsonLdPage, finalUri: resolvedUri);
       });
-      final parser = DouyinParser(networkClient: networkClient);
+      final parser = DouyinParser(
+        mobileFeedNetworkClient: _offlineFeed(),
+        networkClient: networkClient,
+        detailNetworkClient: networkClient,
+      );
 
       final result = await parser.parse(_douyinLink());
 
@@ -52,7 +66,11 @@ void main() {
           finalUri: resolvedUri,
         );
       });
-      final parser = DouyinParser(networkClient: networkClient);
+      final parser = DouyinParser(
+        mobileFeedNetworkClient: _offlineFeed(),
+        networkClient: networkClient,
+        detailNetworkClient: networkClient,
+      );
 
       final result = await parser.parse(_douyinLink());
 
@@ -107,7 +125,11 @@ void main() {
             ),
           );
         });
-        final parser = DouyinParser(networkClient: networkClient);
+        final parser = DouyinParser(
+          mobileFeedNetworkClient: _offlineFeed(),
+          networkClient: networkClient,
+          detailNetworkClient: networkClient,
+        );
 
         final result = await parser.parse(_douyinLink());
 
@@ -141,7 +163,11 @@ void main() {
           ),
         );
       });
-      final parser = DouyinParser(networkClient: networkClient);
+      final parser = DouyinParser(
+        mobileFeedNetworkClient: _offlineFeed(),
+        networkClient: networkClient,
+        detailNetworkClient: networkClient,
+      );
 
       final result = await parser.parse(_douyinLink());
 
@@ -165,7 +191,11 @@ void main() {
         final networkClient = FakeNetworkClient((uri, headers) async {
           return textResponse(_metadataOnlyPage, finalUri: resolvedUri);
         });
-        final parser = DouyinParser(networkClient: networkClient);
+        final parser = DouyinParser(
+          mobileFeedNetworkClient: _offlineFeed(),
+          networkClient: networkClient,
+          detailNetworkClient: networkClient,
+        );
 
         final result = await parser.parse(_douyinLink());
 
@@ -182,7 +212,11 @@ void main() {
       final networkClient = FakeNetworkClient((uri, headers) async {
         return textResponse('<html><body>作品已删除</body></html>', finalUri: uri);
       });
-      final parser = DouyinParser(networkClient: networkClient);
+      final parser = DouyinParser(
+        mobileFeedNetworkClient: _offlineFeed(),
+        networkClient: networkClient,
+        detailNetworkClient: networkClient,
+      );
 
       final result = await parser.parse(_douyinLink());
 
@@ -194,14 +228,205 @@ void main() {
       final networkClient = FakeNetworkClient((uri, headers) async {
         return textResponse('<html><body>普通页面</body></html>', finalUri: uri);
       });
-      final parser = DouyinParser(networkClient: networkClient);
+      final parser = DouyinParser(
+        mobileFeedNetworkClient: _offlineFeed(),
+        networkClient: networkClient,
+        detailNetworkClient: networkClient,
+      );
 
       final result = await parser.parse(_douyinLink());
 
       expect(result, isA<ParserFailure>());
       expect((result as ParserFailure).code, ParserFailureCode.parseFailed);
     });
+
+    test('does not start browser observation when SSR is complete', () async {
+      final browser = _FakeBrowserObservation(_foundAttempt('1234567890'));
+      final networkClient = FakeNetworkClient((uri, headers) async {
+        return textResponse(
+          _jsonLdPage,
+          finalUri: Uri.parse('https://www.douyin.com/video/1234567890'),
+        );
+      });
+      final parser = DouyinParser(
+        mobileFeedNetworkClient: _offlineFeed(),
+        networkClient: networkClient,
+        detailNetworkClient: networkClient,
+        browserObservation: browser,
+      );
+
+      expect(await parser.parse(_douyinLink()), isA<ParserSuccess>());
+      expect(browser.calls, 0);
+    });
+
+    test(
+      'uses a matching browser observation only after ordinary fallbacks',
+      () async {
+        const id = '9876543210';
+        final pageClient = FakeNetworkClient((uri, headers) async {
+          return textResponse(
+            _metadataOnlyPage,
+            finalUri: Uri.parse('https://www.douyin.com/video/$id'),
+          );
+        });
+        final detailClient = FakeNetworkClient((uri, headers) async {
+          return textResponse(
+            '',
+            statusCode: 403,
+            finalUri: Uri.parse('https://www.douyin.com/'),
+          );
+        });
+        final browser = _FakeBrowserObservation(_foundAttempt(id));
+        final parser = DouyinParser(
+          mobileFeedNetworkClient: _offlineFeed(),
+          networkClient: pageClient,
+          detailNetworkClient: detailClient,
+          browserObservation: browser,
+        );
+
+        final result = await parser.parse(_douyinLink());
+
+        expect(result, isA<ParserSuccess>());
+        final info = (result as ParserSuccess).videoInfo;
+        expect(browser.calls, 1);
+        expect(detailClient.requests, hasLength(1));
+        expect(info.id, id);
+        expect(info.title, 'Metadata only video');
+        expect(info.author, 'Observed author');
+        expect(info.metadata['browserObservationUsed'], isTrue);
+        expect(info.metadata['ephemeralObservation'], isTrue);
+        expect(info.metadata['mediaUrlAvailable'], isFalse);
+        final diagnostics =
+            info.metadata['browserObservationDiagnostics']
+                as Map<String, Object?>;
+        expect(diagnostics['outcome'], 'found');
+        expect(diagnostics['decoderOutcome'], 'found');
+        expect(diagnostics['observationsCreated'], 1);
+        expect(diagnostics['finalFrameReceived'], isTrue);
+        expect(diagnostics['profileCleaned'], isTrue);
+        expect(diagnostics['processExitCode'], 0);
+      },
+    );
+
+    test(
+      'returns an explicit failure when browser observation times out',
+      () async {
+        const id = '9876543210';
+        final pageClient = FakeNetworkClient((uri, headers) async {
+          return textResponse(
+            _metadataOnlyPage,
+            finalUri: Uri.parse('https://www.douyin.com/video/$id'),
+          );
+        });
+        final detailClient = FakeNetworkClient((uri, headers) async {
+          return textResponse(
+            '',
+            statusCode: 403,
+            finalUri: Uri.parse('https://www.douyin.com/'),
+          );
+        });
+        final browser = _FakeBrowserObservation(
+          const DouyinBrowserObservationAttempt(
+            summary: NetworkObservationSummary(
+              outcome: NetworkObservationOutcome.timeout,
+              profileCleaned: true,
+              finalFrameReceived: true,
+              processExitCode: 0,
+            ),
+            consumerCalls: 0,
+            consumerReceivedBytes: 0,
+            decoderExecutions: 0,
+            observationsCreated: 0,
+          ),
+        );
+        final parser = DouyinParser(
+          mobileFeedNetworkClient: _offlineFeed(),
+          networkClient: pageClient,
+          detailNetworkClient: detailClient,
+          browserObservation: browser,
+        );
+
+        final result = await parser.parse(_douyinLink());
+
+        expect(result, isA<ParserFailure>());
+        expect(browser.calls, 1);
+        expect((result as ParserFailure).message, contains('超时'));
+      },
+    );
   });
+}
+
+final class _FakeBrowserObservation
+    implements DouyinBrowserObservationCapability {
+  _FakeBrowserObservation(this.attempt);
+  final DouyinBrowserObservationAttempt attempt;
+  int calls = 0;
+
+  @override
+  Future<DouyinBrowserObservationAttempt> observe({
+    required Uri navigationUri,
+    required String targetWorkId,
+  }) async {
+    calls++;
+    expect(
+      navigationUri,
+      Uri.parse('https://www.douyin.com/video/$targetWorkId'),
+    );
+    return attempt;
+  }
+}
+
+DouyinBrowserObservationAttempt _foundAttempt(String id) {
+  final work = DouyinObservedWork(
+    workId: id,
+    description: 'Observed public work',
+    author: const DouyinObservedAuthor(
+      nickname: 'Observed author',
+      uniqueId: 'observed-author',
+    ),
+    covers: const [],
+    mediaVariants: [
+      DouyinObservedMediaVariant(
+        sourceField: 'video.play_addr',
+        height: 1080,
+        locations: [
+          EphemeralMediaLocation(
+            uri: Uri.parse('https://media.example.test/ephemeral.mp4'),
+            observedAt: DateTime.utc(2026),
+            category: ObservedLocationCategory.media,
+          ),
+        ],
+      ),
+    ],
+  );
+  return DouyinBrowserObservationAttempt(
+    summary: const NetworkObservationSummary(
+      outcome: NetworkObservationOutcome.found,
+      navigationSucceeded: true,
+      profileCleaned: true,
+      finalFrameReceived: true,
+      processExitCode: 0,
+    ),
+    result: DouyinBrowserObservationResult(
+      outcome: DouyinBrowserObservationOutcome.found,
+      work: work,
+      provenance: const DouyinObservationProvenance(
+        response: DouyinResponseMetadata(
+          responseHost: 'www.douyin.com',
+          redactedPathCategory: DouyinResponsePathCategory.contentApi,
+          resourceType: DouyinResponseResourceType.xhr,
+          httpStatus: 200,
+          mimeType: 'application/json',
+          anonymous: true,
+        ),
+        responseBytes: 129,
+      ),
+    ),
+    consumerCalls: 1,
+    consumerReceivedBytes: 129,
+    decoderExecutions: 1,
+    observationsCreated: 1,
+  );
 }
 
 MediaLink _douyinLink() {
