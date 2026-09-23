@@ -1,6 +1,6 @@
 param(
     [string]$FlutterCommand = "D:\dev\flutter\bin\flutter.bat",
-    [string]$Version = "v0.1.0-beta",
+    [string]$Version = "v0.2.0",
     [switch]$SkipBuild
 )
 
@@ -21,7 +21,7 @@ try {
             throw "flutter clean failed."
         }
 
-        & $FlutterCommand build windows --release --build-name 0.1.0-beta --build-number 1
+        & $FlutterCommand build windows --release --build-name 0.2.0 --build-number 2
         if ($LASTEXITCODE -ne 0) {
             throw "Windows Release build failed."
         }

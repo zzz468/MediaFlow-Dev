@@ -52,6 +52,40 @@ add_subdirectory(${FLUTTER_MANAGED_DIR})
 # Application build; see runner/CMakeLists.txt.
 add_subdirectory("runner")
 
+# Windows-only local Browser Network Observation helper. The public Flutter
+# BrowserAdapter contract remains unchanged; this executable is started only by
+# the named Douyin fallback.
+set(MEDIAFLOW_OBSERVATION_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../tools/browser_network_observation")
+set(MEDIAFLOW_WEBVIEW2_DIR "${CMAKE_CURRENT_SOURCE_DIR}/third_party/webview2")
+set(MEDIAFLOW_OBSERVATION_OUT "${CMAKE_CURRENT_BINARY_DIR}/MediaFlowNetworkObservationHelper.exe")
+file(TO_NATIVE_PATH "${MEDIAFLOW_OBSERVATION_OUT}" MEDIAFLOW_OBSERVATION_OUT_NATIVE)
+file(TO_NATIVE_PATH "${MEDIAFLOW_OBSERVATION_SOURCE_DIR}/NetworkObservationPolicy.cs" MEDIAFLOW_POLICY_SOURCE_NATIVE)
+file(TO_NATIVE_PATH "${MEDIAFLOW_OBSERVATION_SOURCE_DIR}/NetworkObservationHelper.cs" MEDIAFLOW_HELPER_SOURCE_NATIVE)
+file(TO_NATIVE_PATH "${MEDIAFLOW_OBSERVATION_SOURCE_DIR}/WindowsPipeInput.cs" MEDIAFLOW_PIPE_SOURCE_NATIVE)
+file(TO_NATIVE_PATH "${MEDIAFLOW_WEBVIEW2_DIR}/Microsoft.Web.WebView2.Core.dll" MEDIAFLOW_WEBVIEW2_CORE_NATIVE)
+file(TO_NATIVE_PATH "${MEDIAFLOW_WEBVIEW2_DIR}/Microsoft.Web.WebView2.WinForms.dll" MEDIAFLOW_WEBVIEW2_WINFORMS_NATIVE)
+add_custom_command(
+  OUTPUT "${MEDIAFLOW_OBSERVATION_OUT}"
+  COMMAND "C:/Windows/Microsoft.NET/Framework64/v4.0.30319/csc.exe"
+    /nologo /target:exe /platform:x64
+    /out:${MEDIAFLOW_OBSERVATION_OUT_NATIVE}
+    /r:System.Windows.Forms.dll /r:System.Drawing.dll /r:System.Web.Extensions.dll
+    /r:${MEDIAFLOW_WEBVIEW2_CORE_NATIVE}
+    /r:${MEDIAFLOW_WEBVIEW2_WINFORMS_NATIVE}
+    "${MEDIAFLOW_POLICY_SOURCE_NATIVE}"
+    "${MEDIAFLOW_HELPER_SOURCE_NATIVE}"
+    "${MEDIAFLOW_PIPE_SOURCE_NATIVE}"
+  DEPENDS
+    "${MEDIAFLOW_OBSERVATION_SOURCE_DIR}/NetworkObservationPolicy.cs"
+    "${MEDIAFLOW_OBSERVATION_SOURCE_DIR}/NetworkObservationHelper.cs"
+    "${MEDIAFLOW_OBSERVATION_SOURCE_DIR}/WindowsPipeInput.cs"
+    "${MEDIAFLOW_WEBVIEW2_DIR}/Microsoft.Web.WebView2.Core.dll"
+    "${MEDIAFLOW_WEBVIEW2_DIR}/Microsoft.Web.WebView2.WinForms.dll"
+  VERBATIM)
+add_custom_target(mediaflow_network_observation_helper ALL
+  DEPENDS "${MEDIAFLOW_OBSERVATION_OUT}")
+add_dependencies(${BINARY_NAME} mediaflow_network_observation_helper)
+
 
 # Generated plugin build rules, which manage building the plugins and adding
 # them to the application.
@@ -73,6 +107,15 @@ set(INSTALL_BUNDLE_DATA_DIR "${CMAKE_INSTALL_PREFIX}/data")
 set(INSTALL_BUNDLE_LIB_DIR "${CMAKE_INSTALL_PREFIX}")
 
 install(TARGETS ${BINARY_NAME} RUNTIME DESTINATION "${CMAKE_INSTALL_PREFIX}"
+  COMPONENT Runtime)
+
+install(FILES
+  "${MEDIAFLOW_OBSERVATION_OUT}"
+  "${MEDIAFLOW_WEBVIEW2_DIR}/Microsoft.Web.WebView2.Core.dll"
+  "${MEDIAFLOW_WEBVIEW2_DIR}/Microsoft.Web.WebView2.WinForms.dll"
+  "${MEDIAFLOW_WEBVIEW2_DIR}/WebView2Loader.dll"
+  "${MEDIAFLOW_WEBVIEW2_DIR}/LICENSE.txt"
+  DESTINATION "${CMAKE_INSTALL_PREFIX}"
   COMPONENT Runtime)
 
 install(FILES "${FLUTTER_ICU_DATA_FILE}" DESTINATION "${INSTALL_BUNDLE_DATA_DIR}"

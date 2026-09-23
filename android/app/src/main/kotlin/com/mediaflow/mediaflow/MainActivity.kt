@@ -24,9 +24,14 @@ class MainActivity : FlutterActivity() {
     )
 
     private var pendingPublish: PendingPublish? = null
+    private var browserObservationHost: AndroidBrowserObservationHost? = null
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
+        browserObservationHost = AndroidBrowserObservationHost(
+            activity = this,
+            messenger = flutterEngine.dartExecutor.binaryMessenger,
+        )
         MethodChannel(
             flutterEngine.dartExecutor.binaryMessenger,
             STORAGE_CHANNEL,
@@ -60,6 +65,12 @@ class MainActivity : FlutterActivity() {
                 STORAGE_PERMISSION_REQUEST,
             )
         }
+    }
+
+    override fun cleanUpFlutterEngine(flutterEngine: FlutterEngine) {
+        browserObservationHost?.dispose()
+        browserObservationHost = null
+        super.cleanUpFlutterEngine(flutterEngine)
     }
 
     override fun onRequestPermissionsResult(

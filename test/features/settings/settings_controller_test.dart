@@ -1,10 +1,33 @@
+import 'dart:async';
+
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mediaflow/features/settings/application/settings_controller.dart';
+import 'package:mediaflow/features/settings/domain/app_settings.dart';
+import 'package:mediaflow/features/settings/domain/settings_repository.dart';
 
 import '../../helpers/memory_repositories.dart';
 
 void main() {
+  test(
+    'late settings restore does not write into a disposed provider',
+    () async {
+      final load = Completer<AppSettings>();
+      final container = ProviderContainer(
+        overrides: [
+          settingsRepositoryProvider.overrideWithValue(
+            _DeferredSettingsRepository(load.future),
+          ),
+        ],
+      );
+      final controller = container.read(appSettingsProvider.notifier);
+      await Future<void>.delayed(Duration.zero);
+      container.dispose();
+      load.complete(const AppSettings());
+      await controller.initialized;
+    },
+  );
+
   test(
     'saves settings and restores them in a new provider container',
     () async {
@@ -41,4 +64,16 @@ void main() {
       expect(repository.saveCount, greaterThan(0));
     },
   );
+}
+
+final class _DeferredSettingsRepository implements SettingsRepository {
+  const _DeferredSettingsRepository(this._load);
+
+  final Future<AppSettings> _load;
+
+  @override
+  Future<AppSettings> load() => _load;
+
+  @override
+  Future<void> save(AppSettings settings) async {}
 }
