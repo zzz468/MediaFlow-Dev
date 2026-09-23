@@ -23,6 +23,13 @@ class BilibiliParser implements ParserInterface {
         'AppleWebKit/537.36 Chrome/124.0 Safari/537.36',
   };
 
+  static const _downloadHeaders = <String, String>{
+    'Referer': 'https://www.bilibili.com/',
+    'User-Agent':
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
+        'AppleWebKit/537.36 Chrome/124.0 Safari/537.36',
+  };
+
   final NetworkClient _networkClient;
 
   @override
@@ -98,10 +105,11 @@ class BilibiliParser implements ParserInterface {
           : const <String, dynamic>{};
       final canonicalId = bvid ?? 'av$aid';
       final coverUrl = _parseWebUri(_asString(data['pic']));
-      final downloadInfo = await _loadDownloadInfo(
+      final downloadOptions = await _loadDownloadOptions(
         videoId: canonicalId,
         cid: _asInt(data['cid']),
       );
+      final recommendedOption = _recommendedOption(downloadOptions);
 
       return ParserSuccess(
         VideoInfo(
@@ -111,24 +119,22 @@ class BilibiliParser implements ParserInterface {
           authorId: owner['mid']?.toString(),
           coverUrl: coverUrl,
           videoUrl:
-              downloadInfo?.url ??
+              recommendedOption?.url ??
               Uri.https('www.bilibili.com', '/video/$canonicalId'),
           platform: platform,
           duration: _durationFromSeconds(data['duration']),
           description: _asString(data['desc']),
+          qualityOptions: downloadOptions,
           metadata: <String, Object?>{
             'sourceUrl': link.originalUrl,
-            'mediaUrlAvailable': downloadInfo != null,
-            'downloadHeaders': downloadInfo == null
+            'mediaUrlAvailable': downloadOptions.isNotEmpty,
+            'downloadHeaders': downloadOptions.isEmpty
                 ? const <String, String>{}
-                : const <String, String>{
-                    'Referer': 'https://www.bilibili.com/',
-                    'User-Agent':
-                        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
-                        'AppleWebKit/537.36 Chrome/124.0 Safari/537.36',
-                  },
-            'downloadSize': downloadInfo?.size,
-            'downloadQuality': downloadInfo?.quality,
+                : _downloadHeaders,
+            'downloadSize': recommendedOption?.sizeBytes,
+            'downloadQuality': recommendedOption?.metadata['qualityCode'],
+            'watermarkFree': recommendedOption?.isWatermarkFree ?? false,
+            'mediaSource': recommendedOption?.metadata['mediaSource'],
             'aid': aid,
             'bvid': bvid,
             'cid': _asInt(data['cid']),
@@ -189,61 +195,182 @@ class BilibiliParser implements ParserInterface {
   @override
   bool supports(MediaLink link) => link.platform == platform;
 
-  Future<_BilibiliDownloadInfo?> _loadDownloadInfo({
+  Future<List<MediaQualityOption>> _loadDownloadOptions({
     required String videoId,
     required int? cid,
   }) async {
     if (cid == null) {
-      return null;
+      return const <MediaQualityOption>[];
     }
 
     try {
-      final idQuery = videoId.startsWith('BV')
-          ? <String, String>{'bvid': videoId}
-          : <String, String>{'avid': videoId.substring(2)};
-      final response = await _networkClient.get(
-        Uri.https('api.bilibili.com', '/x/player/playurl', <String, String>{
-          ...idQuery,
-          'cid': cid.toString(),
-          'qn': '64',
-          'fnval': '0',
-          'fourk': '0',
-        }),
-        headers: _headers,
+      final initial = await _requestDownloadInfo(
+        videoId: videoId,
+        cid: cid,
+        requestedQuality: 127,
       );
-      if (response.statusCode < 200 || response.statusCode >= 300) {
-        return null;
+      if (initial == null) {
+        return const <MediaQualityOption>[];
       }
 
-      final payload = jsonDecode(response.body);
-      if (payload is! Map<String, dynamic> || _asInt(payload['code']) != 0) {
-        return null;
+      final descriptions = initial.qualityDescriptions;
+      final requestedQualities = initial.acceptedQualities.isEmpty
+          ? <int>[initial.quality]
+          : initial.acceptedQualities;
+      final downloadInfos = <_BilibiliDownloadInfo>[initial];
+      for (final quality in requestedQualities) {
+        if (quality == initial.quality) {
+          continue;
+        }
+        try {
+          final option = await _requestDownloadInfo(
+            videoId: videoId,
+            cid: cid,
+            requestedQuality: quality,
+          );
+          if (option != null) {
+            downloadInfos.add(option);
+          }
+        } catch (error) {
+          AppLogger.info(
+            'Bilibili quality $quality is temporarily unavailable.',
+            category: LogCategory.parser,
+          );
+        }
       }
-      final data = payload['data'];
-      if (data is! Map<String, dynamic>) {
-        return null;
+
+      final uniqueByQuality = <int, _BilibiliDownloadInfo>{};
+      for (final info in downloadInfos) {
+        uniqueByQuality.putIfAbsent(info.quality, () => info);
       }
-      final durl = data['durl'];
-      if (durl is! List || durl.isEmpty || durl.first is! Map) {
-        return null;
-      }
-      final item = Map<String, dynamic>.from(durl.first as Map);
-      final url = _parseWebUri(_asString(item['url']));
-      if (url == null) {
-        return null;
-      }
-      return _BilibiliDownloadInfo(
-        url: url,
-        size: _asInt(item['size']),
-        quality: _asInt(data['quality']),
-      );
+      final sorted = uniqueByQuality.values.toList()
+        ..sort((left, right) => right.quality.compareTo(left.quality));
+      return <MediaQualityOption>[
+        for (final info in sorted)
+          MediaQualityOption(
+            id: 'bilibili-${info.quality}',
+            label: descriptions[info.quality] ?? _qualityLabel(info.quality),
+            url: info.url,
+            isRecommended: info.quality == initial.quality,
+            isWatermarkFree: true,
+            sizeBytes: info.size,
+            requestHeaders: _downloadHeaders,
+            metadata: <String, Object?>{
+              'qualityCode': info.quality,
+              'mediaSource': 'durl',
+            },
+          ),
+      ];
     } catch (error) {
       AppLogger.info(
-        'Bilibili download option is temporarily unavailable.',
+        'Bilibili download options are temporarily unavailable.',
         category: LogCategory.parser,
       );
+      return const <MediaQualityOption>[];
+    }
+  }
+
+  Future<_BilibiliDownloadInfo?> _requestDownloadInfo({
+    required String videoId,
+    required int cid,
+    required int requestedQuality,
+  }) async {
+    final idQuery = videoId.startsWith('BV')
+        ? <String, String>{'bvid': videoId}
+        : <String, String>{'avid': videoId.substring(2)};
+    final response = await _networkClient.get(
+      Uri.https('api.bilibili.com', '/x/player/playurl', <String, String>{
+        ...idQuery,
+        'cid': cid.toString(),
+        'qn': requestedQuality.toString(),
+        'fnval': '0',
+        'fourk': '1',
+      }),
+      headers: _headers,
+    );
+    if (response.statusCode < 200 || response.statusCode >= 300) {
       return null;
     }
+
+    final payload = jsonDecode(response.body);
+    if (payload is! Map<String, dynamic> || _asInt(payload['code']) != 0) {
+      return null;
+    }
+    final data = payload['data'];
+    if (data is! Map<String, dynamic>) {
+      return null;
+    }
+    final durl = data['durl'];
+    if (durl is! List || durl.isEmpty || durl.first is! Map) {
+      return null;
+    }
+    final item = Map<String, dynamic>.from(durl.first as Map);
+    final url = _parseWebUri(_asString(item['url']));
+    final quality = _asInt(data['quality']);
+    if (url == null || quality == null) {
+      return null;
+    }
+
+    final acceptedQualities = <int>[];
+    if (data['accept_quality'] case final List values) {
+      for (final value in values) {
+        final acceptedQuality = _asInt(value);
+        if (acceptedQuality != null) {
+          acceptedQualities.add(acceptedQuality);
+        }
+      }
+    }
+    final descriptions = <String>[];
+    if (data['accept_description'] case final List values) {
+      for (final value in values) {
+        final description = _asString(value);
+        if (description != null) {
+          descriptions.add(description);
+        }
+      }
+    }
+    final qualityDescriptions = <int, String>{};
+    for (
+      var index = 0;
+      index < acceptedQualities.length && index < descriptions.length;
+      index += 1
+    ) {
+      qualityDescriptions[acceptedQualities[index]] = descriptions[index];
+    }
+
+    return _BilibiliDownloadInfo(
+      url: url,
+      size: _asInt(item['size']),
+      quality: quality,
+      acceptedQualities: acceptedQualities,
+      qualityDescriptions: qualityDescriptions,
+    );
+  }
+
+  MediaQualityOption? _recommendedOption(List<MediaQualityOption> options) {
+    for (final option in options) {
+      if (option.isRecommended) {
+        return option;
+      }
+    }
+    return options.isEmpty ? null : options.first;
+  }
+
+  String _qualityLabel(int quality) {
+    return switch (quality) {
+      127 => '8K',
+      126 => '杜比视界',
+      125 => 'HDR',
+      120 => '4K',
+      116 => '1080P 60帧',
+      112 => '1080P 高码率',
+      80 => '1080P',
+      74 => '720P 60帧',
+      64 => '720P',
+      32 => '480P',
+      16 => '360P',
+      _ => '清晰度 $quality',
+    };
   }
 
   Future<Uri> _resolveShortLink(Uri uri) async {
@@ -334,11 +461,15 @@ class _BilibiliDownloadInfo {
     required this.url,
     required this.size,
     required this.quality,
+    required this.acceptedQualities,
+    required this.qualityDescriptions,
   });
 
   final Uri url;
   final int? size;
-  final int? quality;
+  final int quality;
+  final List<int> acceptedQualities;
+  final Map<int, String> qualityDescriptions;
 }
 
 class _BilibiliResponseException implements Exception {

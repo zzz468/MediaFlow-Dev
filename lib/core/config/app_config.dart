@@ -26,9 +26,9 @@ class AppConfig {
       appName: String.fromEnvironment('APP_NAME', defaultValue: 'MediaFlow'),
       version: String.fromEnvironment(
         'APP_VERSION',
-        defaultValue: '0.1.0-beta',
+        defaultValue: '0.2.0',
       ),
-      buildNumber: String.fromEnvironment('APP_BUILD', defaultValue: '1'),
+      buildNumber: String.fromEnvironment('APP_BUILD', defaultValue: '2'),
       repositoryUrl: String.fromEnvironment(
         'REPOSITORY_URL',
         defaultValue: 'https://github.com/zzz468/MediaFlow-Dev',

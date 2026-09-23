@@ -62,7 +62,7 @@ class AppSettingsController extends Notifier<AppSettings> {
 
   Future<void> _restore() async {
     final restored = await _repository.load();
-    if (!_hasLocalChanges) {
+    if (ref.mounted && !_hasLocalChanges) {
       state = restored;
     }
     if (!_initialized.isCompleted) {
