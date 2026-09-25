@@ -24,11 +24,8 @@ class AppConfig {
 
     return const AppConfig(
       appName: String.fromEnvironment('APP_NAME', defaultValue: 'MediaFlow'),
-      version: String.fromEnvironment(
-        'APP_VERSION',
-        defaultValue: '0.2.0',
-      ),
-      buildNumber: String.fromEnvironment('APP_BUILD', defaultValue: '2'),
+      version: String.fromEnvironment('APP_VERSION', defaultValue: '0.3.0'),
+      buildNumber: String.fromEnvironment('APP_BUILD', defaultValue: '3'),
       repositoryUrl: String.fromEnvironment(
         'REPOSITORY_URL',
         defaultValue: 'https://github.com/zzz468/MediaFlow-Dev',

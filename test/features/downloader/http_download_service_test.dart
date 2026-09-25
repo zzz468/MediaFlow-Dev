@@ -126,6 +126,87 @@ void main() {
       expect(fileStore.createCount, 0);
     });
 
+    test('accepts an image only for an image resource task', () async {
+      final client = _FakeDownloadClient(
+        response: DownloadStreamResponse(
+          statusCode: 200,
+          stream: Stream<List<int>>.value(const <int>[1, 2, 3]),
+          finalUri: Uri.parse('https://cdn.example.test/1.jpg'),
+          contentLength: 3,
+          headers: const <String, String>{'content-type': 'image/jpeg'},
+        ),
+      );
+      final store = _MemoryDownloadFileStore();
+      final service = HttpDownloadService(
+        downloadClient: client,
+        fileStore: store,
+      );
+      final imageTask = DownloadTask(
+        id: 'image-1',
+        title: 'Gallery 001',
+        url: Uri.parse('https://cdn.example.test/1.jpg'),
+        platform: MediaPlatform.bilibili,
+        mode: DownloadMode.real,
+        resourceType: 'image',
+        mimeType: 'image/jpeg',
+        createdAt: DateTime.utc(2026, 9, 23),
+      );
+
+      expect(
+        (await service.download(imageTask).toList()).last,
+        isA<DownloadCompleted>(),
+      );
+      expect(store.contentType, 'image/jpeg');
+      await expectLater(
+        service.download(_realTask()),
+        emitsError(
+          isA<DownloadException>().having(
+            (error) => error.code,
+            'code',
+            DownloadFailureCode.invalidResponse,
+          ),
+        ),
+      );
+    });
+
+    test(
+      'uses declared image MIME when server responds with octet-stream',
+      () async {
+        final client = _FakeDownloadClient(
+          response: DownloadStreamResponse(
+            statusCode: 200,
+            stream: Stream<List<int>>.value(const <int>[1, 2]),
+            finalUri: Uri.parse('https://cdn.example.test/image'),
+            contentLength: 2,
+            headers: const <String, String>{
+              'content-type': 'application/octet-stream',
+            },
+          ),
+        );
+        final store = _MemoryDownloadFileStore();
+        final service = HttpDownloadService(
+          downloadClient: client,
+          fileStore: store,
+        );
+        final imageTask = DownloadTask(
+          id: 'image-1',
+          title: 'Gallery 001',
+          url: Uri.parse('https://cdn.example.test/image'),
+          platform: MediaPlatform.bilibili,
+          mode: DownloadMode.real,
+          resourceType: 'image',
+          mimeType: 'image/jpeg',
+          createdAt: DateTime.utc(2026, 9, 23),
+        );
+
+        expect(
+          (await service.download(imageTask).toList()).last,
+          isA<DownloadCompleted>(),
+        );
+        expect(store.contentType, 'image/jpeg');
+      },
+    );
+
     test('preserves a partial file when writing fails', () async {
       final client = _FakeDownloadClient(
         response: DownloadStreamResponse(
@@ -226,6 +307,7 @@ class _MemoryDownloadFileStore implements DownloadFileStore {
   final int resumeBytes;
   int createCount = 0;
   bool append = false;
+  String? contentType;
   final List<DownloadTask> deletedPartialTasks = <DownloadTask>[];
 
   @override
@@ -240,6 +322,7 @@ class _MemoryDownloadFileStore implements DownloadFileStore {
   }) async {
     createCount += 1;
     this.append = append;
+    this.contentType = contentType;
     sink.path = task.savePath ?? r'D:\Downloads\MediaFlow\video.mp4';
     return sink;
   }

@@ -1,6 +1,7 @@
 import '../../../core/models/media_link.dart';
 import '../../../core/network/network_client.dart';
 import '../data/bilibili/bilibili_parser.dart';
+import '../data/bilibili/bilibili_opus_parser.dart';
 import '../data/douyin/douyin_parser.dart';
 import '../data/douyin/observation/douyin_browser_observation.dart';
 import '../data/url_platform_detector.dart';
@@ -57,6 +58,7 @@ ParserService createDefaultParserService() {
   return ParserService(
     platformDetector: const UrlPlatformDetector(),
     parsers: [
+      BilibiliOpusParser(networkClient: networkClient),
       BilibiliParser(networkClient: networkClient),
       DouyinParser(
         networkClient: networkClient,

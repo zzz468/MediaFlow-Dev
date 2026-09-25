@@ -47,6 +47,15 @@ android {
     }
 
     buildTypes {
+        debug {
+            val probeSuffix = System.getenv("MEDIAFLOW_V030_PROBE_APP_ID_SUFFIX")
+            if (!probeSuffix.isNullOrBlank()) {
+                require(Regex("\\.[a-z][a-z0-9_]*").matches(probeSuffix)) {
+                    "MEDIAFLOW_V030_PROBE_APP_ID_SUFFIX must be a safe package suffix."
+                }
+                applicationIdSuffix = probeSuffix
+            }
+        }
         release {
             signingConfig = if (hasReleaseSigning) signingConfigs.getByName("release") else null
         }
