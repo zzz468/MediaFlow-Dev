@@ -4,8 +4,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../core/models/media_link.dart';
 import '../../downloader/application/download_manager.dart';
+import '../../downloader/application/media_content_download_action.dart';
 import '../../downloader/domain/download_task.dart';
 import '../../parser/domain/link_parser_state.dart';
+import '../../parser/domain/media_content.dart';
 import '../../parser/domain/video_info.dart';
 import '../../parser/presentation/link_parser_view_model.dart';
 
@@ -18,6 +20,7 @@ class HomePage extends ConsumerStatefulWidget {
 
 class _HomePageState extends ConsumerState<HomePage> {
   late final TextEditingController _linkController;
+  List<String> _activeGalleryTaskIds = const [];
 
   @override
   void initState() {
@@ -34,6 +37,15 @@ class _HomePageState extends ConsumerState<HomePage> {
   @override
   Widget build(BuildContext context) {
     final state = ref.watch(linkParserViewModelProvider);
+    final downloads = ref.watch(downloadManagerProvider);
+    final galleryTasks = downloads
+        .where((task) => _activeGalleryTaskIds.contains(task.id))
+        .toList();
+    final galleryBusy = galleryTasks.any(
+      (task) =>
+          task.status != DownloadStatus.completed &&
+          task.status != DownloadStatus.failed,
+    );
     final colorScheme = Theme.of(context).colorScheme;
 
     return ListView(
@@ -199,7 +211,15 @@ class _HomePageState extends ConsumerState<HomePage> {
                   _ErrorCard(message: state.errorMessage!),
                 ],
                 const SizedBox(height: 20),
-                _ParserResultCard(state: state, onDownload: _startDownload),
+                _ParserResultCard(
+                  state: state,
+                  onDownload: _startDownload,
+                  onContentDownload: _startGalleryDownload,
+                  galleryBusy: galleryBusy,
+                  galleryProgress: galleryTasks.isEmpty
+                      ? null
+                      : '${galleryTasks.where((task) => task.status == DownloadStatus.completed).length} / ${galleryTasks.length} 已完成',
+                ),
               ],
             ),
           ),
@@ -268,13 +288,50 @@ class _HomePageState extends ConsumerState<HomePage> {
       context,
     ).showSnackBar(const SnackBar(content: Text('下载任务已加入队列。')));
   }
+
+  void _startGalleryDownload(Set<String> selectedResourceIds) {
+    final content = ref.read(linkParserViewModelProvider).mediaContent;
+    if (content == null) return;
+    final downloads = ref.read(downloadManagerProvider);
+    if (downloads.any(
+      (task) =>
+          _activeGalleryTaskIds.contains(task.id) &&
+          task.status != DownloadStatus.completed &&
+          task.status != DownloadStatus.failed,
+    )) {
+      return;
+    }
+    final tasks = createMediaContentDownloadTasks(
+      content,
+      selectedResourceIds: selectedResourceIds,
+      createdAt: DateTime.now(),
+    );
+    setState(() => _activeGalleryTaskIds = [for (final task in tasks) task.id]);
+    final manager = ref.read(downloadManagerProvider.notifier);
+    for (final task in tasks) {
+      manager.addTask(task);
+      manager.startDownload(task.id);
+    }
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(SnackBar(content: Text('已将 ${tasks.length} 张图片加入下载队列。')));
+  }
 }
 
 class _ParserResultCard extends StatefulWidget {
-  const _ParserResultCard({required this.state, required this.onDownload});
+  const _ParserResultCard({
+    required this.state,
+    required this.onDownload,
+    required this.onContentDownload,
+    required this.galleryBusy,
+    required this.galleryProgress,
+  });
 
   final LinkParserState state;
   final ValueChanged<MediaQualityOption?> onDownload;
+  final ValueChanged<Set<String>> onContentDownload;
+  final bool galleryBusy;
+  final String? galleryProgress;
 
   @override
   State<_ParserResultCard> createState() => _ParserResultCardState();
@@ -330,7 +387,14 @@ class _ParserResultCardState extends State<_ParserResultCard> {
       child: Padding(
         padding: const EdgeInsets.all(24),
         child: videoInfo == null
-            ? _EmptyParserResult(status: widget.state.parserStatus)
+            ? widget.state.mediaContent != null
+                  ? _MediaContentResultCard(
+                      content: widget.state.mediaContent!,
+                      busy: widget.galleryBusy,
+                      progress: widget.galleryProgress,
+                      onDownload: widget.onContentDownload,
+                    )
+                  : _EmptyParserResult(status: widget.state.parserStatus)
             : LayoutBuilder(
                 builder: (context, constraints) {
                   final compact = constraints.maxWidth < 620;
@@ -444,6 +508,129 @@ class _ParserResultCardState extends State<_ParserResultCard> {
     final seconds = duration.inSeconds.remainder(60).toString().padLeft(2, '0');
     return hours > 0 ? '$hours:$minutes:$seconds' : '$minutes:$seconds';
   }
+}
+
+class _MediaContentResultCard extends StatefulWidget {
+  const _MediaContentResultCard({
+    required this.content,
+    required this.busy,
+    required this.progress,
+    required this.onDownload,
+  });
+
+  final MediaContent content;
+  final bool busy;
+  final String? progress;
+  final ValueChanged<Set<String>> onDownload;
+
+  @override
+  State<_MediaContentResultCard> createState() =>
+      _MediaContentResultCardState();
+}
+
+class _MediaContentResultCardState extends State<_MediaContentResultCard> {
+  late Set<String> _selectedIds;
+
+  @override
+  void initState() {
+    super.initState();
+    _selectAll();
+  }
+
+  @override
+  void didUpdateWidget(covariant _MediaContentResultCard oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (!identical(oldWidget.content, widget.content)) _selectAll();
+  }
+
+  void _selectAll() {
+    _selectedIds = {
+      for (final resource in widget.content.resources) resource.id,
+    };
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final content = widget.content;
+    final resources = content.resources;
+    final allSelected = _selectedIds.length == resources.length;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(content.title, style: Theme.of(context).textTheme.titleLarge),
+        const SizedBox(height: 10),
+        Text('平台：${content.platform.displayName}'),
+        if (content.author != null) Text('作者：${content.author}'),
+        if (content.description != null) ...[
+          const SizedBox(height: 8),
+          Text(content.description!),
+        ],
+        const SizedBox(height: 8),
+        Text(
+          '内容类型：${_contentTypeLabel(content.type)} · ${resources.length} 张图片',
+        ),
+        const SizedBox(height: 8),
+        Row(
+          children: [
+            TextButton(
+              onPressed: allSelected ? null : () => setState(_selectAll),
+              child: const Text('全选'),
+            ),
+            TextButton(
+              onPressed: _selectedIds.isEmpty
+                  ? null
+                  : () => setState(() => _selectedIds.clear()),
+              child: const Text('取消全选'),
+            ),
+          ],
+        ),
+        for (var index = 0; index < resources.length; index++)
+          CheckboxListTile(
+            dense: true,
+            contentPadding: EdgeInsets.zero,
+            title: Text('${(index + 1).toString().padLeft(3, '0')} · 图片'),
+            subtitle: Text(resources[index].mimeType ?? '图片类型待下载时确认'),
+            value: _selectedIds.contains(resources[index].id),
+            onChanged: widget.busy
+                ? null
+                : (selected) => setState(() {
+                    if (selected == true) {
+                      _selectedIds.add(resources[index].id);
+                    } else {
+                      _selectedIds.remove(resources[index].id);
+                    }
+                  }),
+          ),
+        const SizedBox(height: 12),
+        FilledButton.icon(
+          onPressed: widget.busy || _selectedIds.isEmpty
+              ? null
+              : () => widget.onDownload(Set<String>.of(_selectedIds)),
+          icon: const Icon(Icons.download_rounded),
+          label: Text(
+            widget.busy
+                ? '正在下载图片'
+                : allSelected
+                ? '下载全部图片'
+                : '下载所选图片',
+          ),
+        ),
+        if (widget.progress != null) ...[
+          const SizedBox(height: 8),
+          Text(widget.progress!),
+        ],
+      ],
+    );
+  }
+
+  String _contentTypeLabel(MediaContentType type) => switch (type) {
+    MediaContentType.image => '单张图片',
+    MediaContentType.imageGallery => '多图作品',
+    MediaContentType.article => '图文作品',
+    MediaContentType.video => '视频',
+    MediaContentType.audio => '音频',
+    MediaContentType.mixed => '混合媒体',
+  };
 }
 
 class _EmptyParserResult extends StatelessWidget {

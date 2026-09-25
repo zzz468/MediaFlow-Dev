@@ -67,6 +67,15 @@ class LinkParserViewModel extends Notifier<LinkParserState> {
 
     final result = await _parserService.parseUri(uri);
     switch (result) {
+      case ParserContentSuccess(:final mediaContent):
+        state = LinkParserState(
+          input: state.input,
+          uri: uri,
+          selectedPlatform: mediaContent.platform,
+          inputStatus: LinkParsingStatus.valid,
+          parserStatus: ParserExecutionStatus.succeeded,
+          mediaContent: mediaContent,
+        );
       case ParserSuccess(:final videoInfo):
         state = LinkParserState(
           input: state.input,

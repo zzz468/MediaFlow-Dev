@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../core/models/media_link.dart';
 import '../../downloader/application/download_manager.dart';
 import '../../downloader/domain/download_task.dart';
 import '../../downloader/presentation/download_task_tile.dart';
+import '../application/download_history_projection.dart';
 
 class DownloadHistoryPage extends ConsumerWidget {
   const DownloadHistoryPage({super.key});
@@ -22,6 +24,7 @@ class DownloadHistoryPage extends ConsumerWidget {
     final completedCount = tasks
         .where((task) => task.status == DownloadStatus.completed)
         .length;
+    final entries = projectDownloadHistory(tasks);
 
     return Padding(
       padding: const EdgeInsets.all(32),
@@ -57,20 +60,61 @@ class DownloadHistoryPage extends ConsumerWidget {
           ],
           const SizedBox(height: 24),
           Expanded(
-            child: tasks.isEmpty
+            child: entries.isEmpty
                 ? const _EmptyHistoryState()
                 : ListView.separated(
-                    itemCount: tasks.length,
+                    itemCount: entries.length,
                     separatorBuilder: (context, index) =>
                         const SizedBox(height: 12),
                     itemBuilder: (context, index) {
-                      return DownloadTaskTile(task: tasks[index]);
+                      final entry = entries[index];
+                      return entry.isWork
+                          ? _WorkHistoryCard(entry: entry)
+                          : DownloadTaskTile(task: entry.first);
                     },
                   ),
           ),
         ],
       ),
     );
+  }
+}
+
+class _WorkHistoryCard extends StatelessWidget {
+  const _WorkHistoryCard({required this.entry});
+
+  final HistoryEntry entry;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: ExpansionTile(
+        title: Text(entry.title),
+        subtitle: Text(
+          '平台：${entry.first.platform.displayName} · '
+          '${entry.tasks.length} 项资源 · '
+          '${entry.completedCount} 已完成 · '
+          '${entry.failedCount} 失败 · ${entry.status.label}\n'
+          '创建时间：${_formatDateTime(entry.createdAt)}',
+        ),
+        children: [
+          for (final task in entry.tasks)
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 12),
+              child: DownloadTaskTile(task: task),
+            ),
+        ],
+      ),
+    );
+  }
+
+  String _formatDateTime(DateTime value) {
+    final local = value.toLocal();
+    final month = local.month.toString().padLeft(2, '0');
+    final day = local.day.toString().padLeft(2, '0');
+    final hour = local.hour.toString().padLeft(2, '0');
+    final minute = local.minute.toString().padLeft(2, '0');
+    return '${local.year}-$month-$day $hour:$minute';
   }
 }
 

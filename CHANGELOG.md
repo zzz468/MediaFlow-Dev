@@ -9,6 +9,25 @@
 - 多质量、多格式下载选项
 - 系统级下载完成通知
 
+## [0.3.0] - 2026-09-25
+
+### Added
+
+- `MediaContent` / `MediaResource` 通用内容模型与旧 `VideoInfo` 兼容适配。
+- Bilibili 公开图文解析、多图片选择和下载任务的作品/资源标识。
+- History 多资源作品聚合显示及重启恢复。
+
+### Validation
+
+- Windows x64、Android 正式 Release 的 Bilibili 双图、Bilibili 视频、Douyin 视频真实下载与系统打开通过。
+- 两端混合 History 重启恢复通过；Android 双图的一次连接中断经单次重试成功。
+- 发布构建、签名、资产哈希及最终回归见 [v0.3.0 发布说明](v0.3.0/release.md)。
+
+### Known Limitations
+
+- Douyin 图文未接入本版 production。
+- iOS、macOS、Linux 未完成本版构建和真实验收。
+
 ## [0.1.0-beta] - 2026-07-18
 
 ### Added

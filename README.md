@@ -1,12 +1,13 @@
 # MediaFlow
 
-当前测试版本：`v0.2.0`（发布前验收中）
+当前版本：`v0.3.0`（`0.3.0+3`）。[发布说明与资产校验](v0.3.0/release.md)。
 
-MediaFlow 是一个面向 Windows、Android 和 iOS 的免费开源媒体链接处理工具。Windows 与 Android 同为当前核心发布平台，所有设置、下载历史和日志仅保存在本机。
+MediaFlow 是一个面向 Windows、Android 的免费开源媒体链接处理工具，长期保留 iOS、macOS、Linux 扩展路径。Windows 与 Android 同为当前核心发布平台，所有设置、下载历史和日志仅保存在本机。
 
 ## 当前能力
 
 - Bilibili、抖音公开媒体信息解析
+- Bilibili 公开图文多图片解析、选择、下载与聚合 History；Douyin 图文尚未接入 production
 - Bilibili `b23.tv`、抖音 `v.douyin.com` 短分享链接重定向处理
 - 标题、作者、封面、时长和平台信息展示
 - 顺序多任务下载队列
@@ -18,7 +19,7 @@ MediaFlow 是一个面向 Windows、Android 和 iOS 的免费开源媒体链接�
 - parser、downloader、network、error 分类日志
 - Android 完成文件发布到 `Download/MediaFlow/` 并加入系统 MediaStore
 
-## v0.1.0-beta 验收状态
+## 历史 v0.1.0-beta 验收状态
 
 - `flutter analyze`：通过
 - `flutter test`：52 项全部通过
@@ -56,14 +57,10 @@ flutter run -d windows
 Windows Release 构建：
 
 ```powershell
-flutter build windows --release --build-name 0.2.0 --build-number 2
+flutter build windows --release --no-pub
 ```
 
-Android Release APK 构建：
-
-```powershell
-flutter build apk --release --build-name 0.2.0 --build-number 2
-```
+Android 正式签名 Release APK 使用 [v0.3.0 构建脚本](tool/build_v030_android_release.ps1)与项目既有私有签名材料；构建脚本不会把密码或私钥加入仓库。
 
 ## 文档
 
@@ -78,6 +75,7 @@ flutter build apk --release --build-name 0.2.0 --build-number 2
 - [v0.1.0-beta 发布说明](docs/v0.1.0-beta发布说明.md)
 - [Android 真机测试](docs/Android真机测试.md)
 - [v0.1.0-beta 测试报告](docs/v0.1.0-beta测试报告.md)
+- [v0.3.0 发布说明](v0.3.0/release.md)
 
 ## 分支
 

@@ -25,7 +25,7 @@ class HttpDownloadService implements DownloadService {
   Stream<DownloadEvent> download(DownloadTask task) async* {
     final requestedOffset = await _resumeOffset(task);
     final response = await _openResponse(task, requestedOffset);
-    _validateResponse(response);
+    _validateResponse(response, task);
 
     final effectiveOffset = requestedOffset > 0 && response.statusCode == 206
         ? requestedOffset
@@ -43,7 +43,7 @@ class HttpDownloadService implements DownloadService {
           task: task,
           sourceUri: response.finalUri,
           append: effectiveOffset > 0,
-          contentType: response.headers['content-type'],
+          contentType: _effectiveContentType(response, task),
         );
       } catch (error, stackTrace) {
         AppLogger.fileError(
@@ -193,7 +193,7 @@ class HttpDownloadService implements DownloadService {
     throw StateError('Download connection attempts were exhausted.');
   }
 
-  void _validateResponse(DownloadStreamResponse response) {
+  void _validateResponse(DownloadStreamResponse response, DownloadTask task) {
     if (response.statusCode != 200 && response.statusCode != 206) {
       throw DownloadException(
         code: DownloadFailureCode.invalidResponse,
@@ -206,7 +206,19 @@ class HttpDownloadService implements DownloadService {
         .first
         .trim()
         .toLowerCase();
-    if (contentType != null &&
+    final isImageTask =
+        task.resourceType == 'image' || task.resourceType == 'cover';
+    if (isImageTask &&
+        contentType != null &&
+        !contentType.startsWith('image/') &&
+        contentType != 'application/octet-stream') {
+      throw const DownloadException(
+        code: DownloadFailureCode.invalidResponse,
+        message: '当前地址没有返回可下载的图片文件。',
+      );
+    }
+    if (!isImageTask &&
+        contentType != null &&
         !contentType.startsWith('video/') &&
         !contentType.startsWith('audio/') &&
         contentType != 'application/octet-stream') {
@@ -215,6 +227,19 @@ class HttpDownloadService implements DownloadService {
         message: '当前地址没有返回可下载的媒体文件。',
       );
     }
+  }
+
+  String? _effectiveContentType(
+    DownloadStreamResponse response,
+    DownloadTask task,
+  ) {
+    final reported = response.headers['content-type'];
+    if (reported == null ||
+        reported.split(';').first.trim().toLowerCase() ==
+            'application/octet-stream') {
+      return task.mimeType ?? reported;
+    }
+    return reported;
   }
 
   void _validateContentRange(
