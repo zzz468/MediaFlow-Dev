@@ -32,6 +32,11 @@ class DownloadTask {
     this.savePath,
     this.completedAt,
     this.errorMessage,
+    this.contentId,
+    this.resourceId,
+    this.resourceType,
+    this.suggestedFileName,
+    this.mimeType,
   }) : assert(progress >= 0 && progress <= 1),
        assert(bytesReceived >= 0),
        assert(totalBytes == null || totalBytes >= 0);
@@ -53,7 +58,15 @@ class DownloadTask {
   final DateTime? completedAt;
   final String? errorMessage;
 
+  /// Optional v0.3.0 relationship; absent for v0.2.0 history.
+  final String? contentId;
+  final String? resourceId;
+  final String? resourceType;
+  final String? suggestedFileName;
+  final String? mimeType;
+
   DownloadTask copyWith({
+    String? title,
     double? progress,
     DownloadStatus? status,
     int? bytesReceived,
@@ -64,7 +77,7 @@ class DownloadTask {
   }) {
     return DownloadTask(
       id: id,
-      title: title,
+      title: title ?? this.title,
       url: url,
       platform: platform,
       mode: mode,
@@ -85,6 +98,11 @@ class DownloadTask {
       errorMessage: identical(errorMessage, _unset)
           ? this.errorMessage
           : errorMessage as String?,
+      contentId: contentId,
+      resourceId: resourceId,
+      resourceType: resourceType,
+      suggestedFileName: suggestedFileName,
+      mimeType: mimeType,
     );
   }
 
@@ -95,7 +113,7 @@ class DownloadTask {
       'url': url.toString(),
       'platform': platform.name,
       'mode': mode.name,
-      'requestHeaders': requestHeaders,
+      'requestHeaders': _safeRequestHeaders(requestHeaders),
       'progress': progress,
       'status': status.name,
       'bytesReceived': bytesReceived,
@@ -104,6 +122,11 @@ class DownloadTask {
       'createdAt': createdAt.toIso8601String(),
       'completedAt': completedAt?.toIso8601String(),
       'errorMessage': errorMessage,
+      if (contentId != null) 'contentId': contentId,
+      if (resourceId != null) 'resourceId': resourceId,
+      if (resourceType != null) 'resourceType': resourceType,
+      if (suggestedFileName != null) 'suggestedFileName': suggestedFileName,
+      if (mimeType != null) 'mimeType': mimeType,
     };
   }
 
@@ -124,11 +147,11 @@ class DownloadTask {
         DownloadMode.real,
       ),
       requestHeaders: headers is Map
-          ? <String, String>{
+          ? _safeRequestHeaders(<String, String>{
               for (final entry in headers.entries)
                 if (entry.key is String && entry.value is String)
                   entry.key as String: entry.value as String,
-            }
+            })
           : const {},
       progress: (json['progress'] as num?)?.toDouble() ?? 0,
       status: _enumByName(
@@ -144,7 +167,24 @@ class DownloadTask {
           ? null
           : DateTime.parse(json['completedAt']! as String),
       errorMessage: json['errorMessage'] as String?,
+      contentId: json['contentId'] as String?,
+      resourceId: json['resourceId'] as String?,
+      resourceType: json['resourceType'] as String?,
+      suggestedFileName: json['suggestedFileName'] as String?,
+      mimeType: json['mimeType'] as String?,
     );
+  }
+
+  static Map<String, String> _safeRequestHeaders(Map<String, String> headers) {
+    return <String, String>{
+      for (final entry in headers.entries)
+        if (!const {
+          'cookie',
+          'authorization',
+          'proxy-authorization',
+        }.contains(entry.key.trim().toLowerCase()))
+          entry.key: entry.value,
+    };
   }
 
   static T _enumByName<T extends Enum>(

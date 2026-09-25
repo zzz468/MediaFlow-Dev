@@ -1,4 +1,5 @@
 import '../../../core/models/media_link.dart';
+import 'media_content.dart';
 import 'video_info.dart';
 
 enum LinkParsingStatus { idle, invalid, valid }
@@ -31,6 +32,7 @@ class LinkParserState {
     this.inputStatus = LinkParsingStatus.idle,
     this.parserStatus = ParserExecutionStatus.waitingForInput,
     this.videoInfo,
+    this.mediaContent,
     this.errorMessage,
   });
 
@@ -40,6 +42,7 @@ class LinkParserState {
   final LinkParsingStatus inputStatus;
   final ParserExecutionStatus parserStatus;
   final VideoInfo? videoInfo;
+  final MediaContent? mediaContent;
   final String? errorMessage;
 
   bool get hasInput => input.trim().isNotEmpty;
