@@ -1,0 +1,35 @@
+{
+  "utc": "2026-09-28T12:21:00.109839+00:00",
+  "endpoint": "https://www.iesdouyin.com/share/video/7690029886242009957/",
+  "target": "7690029886242009957",
+  "ua": "MediaFlow/0.4.0",
+  "cookie": false,
+  "token": false,
+  "signer": false,
+  "proxy": false,
+  "redirect_followed": false,
+  "request_budget": 1,
+  "state": "completed",
+  "status": 302,
+  "content_type": "text/html; charset=utf-8",
+  "body_length": 183,
+  "body_limit_exceeded": false,
+  "target_text_present": true,
+  "embedded_markers": {
+    "_ROUTER_DATA": 0,
+    "__UNIVERSAL_DATA_FOR_REHYDRATION__": 0,
+    "RENDER_DATA": 0,
+    "_SSR_DATA": 0,
+    "__INIT_PROPS__": 0
+  },
+  "safety_marker_counts": {
+    "waf": 0,
+    "captcha": 0,
+    "challenge": 0,
+    "ArgusSecurityPlugin": 0
+  },
+  "script_count": 0,
+  "json_roots": 0,
+  "target_aweme_objects": [],
+  "media_field_paths": []
+}

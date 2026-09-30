@@ -1,0 +1,274 @@
+{
+  "scope": "Public GitHub source only, no third-party code executed or copied into product",
+  "branch": "feature/v0.4.0",
+  "repository": "D:\\projects\\mediaflow-v040",
+  "auditDate": "2026-09-28",
+  "head": "e2ea89d4e156c843af09b4c491984a2206f1135b",
+  "repositories": [
+    {
+      "sources": [
+        {
+          "bytes": 31221,
+          "sha256": "e415dea060c00e95b86d420ee78a6838dc094f9d8ef9958ca2a25d630bbd995d",
+          "url": "https://github.com/DLWangSan/douyin_parse/blob/0896c74d1e9368af8ad0b85449a8039b1b3010bd/douyin_video_parser.py",
+          "path": "douyin_video_parser.py"
+        },
+        {
+          "bytes": 10323,
+          "sha256": "2f411fef402e6435b0e1a9ad6041ace7f8226eba747b4a100239462c1ff81577",
+          "url": "https://github.com/DLWangSan/douyin_parse/blob/0896c74d1e9368af8ad0b85449a8039b1b3010bd/README.md",
+          "path": "README.md"
+        }
+      ],
+      "metadata": {
+        "repo": "DLWangSan/douyin_parse",
+        "sha": "0896c74d1e9368af8ad0b85449a8039b1b3010bd",
+        "commitDate": "2026-08-14T08:52:46Z",
+        "message": "Merge pull request #14 from SimonFoobar648/fix/star-history-chart\n\ndocs: Fix broken star history chart",
+        "archived": false,
+        "fork": false,
+        "parent": null,
+        "license": null,
+        "defaultBranch": "master",
+        "truncated": false
+      },
+      "selectedParserFileHistory": {
+        "date": "2026-07-17T03:01:22Z",
+        "sha": "589b18d99f900b20725db793f7f21908d2a459c7",
+        "message": "fix: 修复抖音解析算法并发布 v2.0.3\n\n同步最新 a_bogus / X-Bogus 实现，修复签名二次编码与 API 参数失效问题，恢复视频解析与下载能力。",
+        "path": "douyin_video_parser.py",
+        "repo": "DLWangSan/douyin_parse"
+      }
+    },
+    {
+      "sources": [
+        {
+          "bytes": 11266,
+          "sha256": "b9991b92412ea4f2763fe48f8a418be5c56a116b80cf78611e06bf11b31f7ad8",
+          "url": "https://github.com/jackwoo725-ux/douyin-downloader/blob/fa02b75823ed6137879dbf8dd4392dcc34c852b1/app/lib/douyin.dart",
+          "path": "app/lib/douyin.dart"
+        },
+        {
+          "bytes": 15301,
+          "sha256": "e6280f3bd6c3844884da0614277f980a79cddadabef9ad9a50fdb13fdaa43413",
+          "url": "https://github.com/jackwoo725-ux/douyin-downloader/blob/fa02b75823ed6137879dbf8dd4392dcc34c852b1/backend/douyin.py",
+          "path": "backend/douyin.py"
+        },
+        {
+          "bytes": 4582,
+          "sha256": "4f1db08eeabb854365769dda05d807ff7f5303e65e8ea93e478545785304c8ef",
+          "url": "https://github.com/jackwoo725-ux/douyin-downloader/blob/fa02b75823ed6137879dbf8dd4392dcc34c852b1/backend/test_douyin.py",
+          "path": "backend/test_douyin.py"
+        },
+        {
+          "bytes": 1067,
+          "sha256": "00263fe25a464b5ddbb8b0da6b8c4cb796bbfa5e66223773fe81f8a693f17038",
+          "url": "https://github.com/jackwoo725-ux/douyin-downloader/blob/fa02b75823ed6137879dbf8dd4392dcc34c852b1/LICENSE",
+          "path": "LICENSE"
+        },
+        {
+          "bytes": 6028,
+          "sha256": "15d0d23040bdf29bf85a937c3d979c706f69123eebc6fdc186e93f4c676d6ec2",
+          "url": "https://github.com/jackwoo725-ux/douyin-downloader/blob/fa02b75823ed6137879dbf8dd4392dcc34c852b1/README.md",
+          "path": "README.md"
+        }
+      ],
+      "metadata": {
+        "repo": "jackwoo725-ux/douyin-downloader",
+        "sha": "fa02b75823ed6137879dbf8dd4392dcc34c852b1",
+        "commitDate": "2026-07-09T06:56:43Z",
+        "message": "抖音下载助手：无水印视频/封面/文案/音频/图集\n\n- Flutter 原生 App（安卓 + Mac），解析逻辑纯 Dart，独立运行不依赖后端\n- 网页版（零依赖 Python 后端 + PWA 前端），Mac/安卓浏览器通用\n- 主策略：抓分享页 _ROUTER_DATA，无需签名；已用真实视频验证可下载无水印原片\n- GitHub Actions 自动构建 APK + macOS DMG 并发布到 Releases\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>",
+        "archived": false,
+        "fork": false,
+        "parent": null,
+        "license": "MIT",
+        "defaultBranch": "main",
+        "truncated": false
+      },
+      "selectedParserFileHistory": {
+        "date": "2026-07-09T06:56:43Z",
+        "sha": "fa02b75823ed6137879dbf8dd4392dcc34c852b1",
+        "message": "抖音下载助手：无水印视频/封面/文案/音频/图集\n\n- Flutter 原生 App（安卓 + Mac），解析逻辑纯 Dart，独立运行不依赖后端\n- 网页版（零依赖 Python 后端 + PWA 前端），Mac/安卓浏览器通用\n- 主策略：抓分享页 _ROUTER_DATA，无需签名；已用真实视频验证可下载无水印原片\n- GitHub Actions 自动构建 APK + macOS DMG 并发布到 Releases\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>",
+        "path": "app/lib/douyin.dart",
+        "repo": "jackwoo725-ux/douyin-downloader"
+      }
+    },
+    {
+      "sources": [
+        {
+          "bytes": 5440,
+          "sha256": "ce24c7df13cdca57d00d2ecec6e12721a3e32bed3f8184098600fb70c97d92a0",
+          "url": "https://github.com/jiji262/douyin-downloader/blob/9874f413b2c1f8ad6e731b26e3e05f402fc964f8/config/default_config.py",
+          "path": "config/default_config.py"
+        },
+        {
+          "bytes": 90275,
+          "sha256": "256c4d9408b86ca4a05e88a88dafe3b99a70295dc4649288939172ba75016204",
+          "url": "https://github.com/jiji262/douyin-downloader/blob/9874f413b2c1f8ad6e731b26e3e05f402fc964f8/core/api_client.py",
+          "path": "core/api_client.py"
+        },
+        {
+          "bytes": 75372,
+          "sha256": "76ff98d0b14112de5365a41b8b0171265aabe96bdefcbd46d2dc752d2940107a",
+          "url": "https://github.com/jiji262/douyin-downloader/blob/9874f413b2c1f8ad6e731b26e3e05f402fc964f8/core/downloader_base.py",
+          "path": "core/downloader_base.py"
+        },
+        {
+          "bytes": 5356,
+          "sha256": "ca90d2de4a862c3ad20c5a0775bbc9f0484532399f0b25c5ded3fb190b7ed09a",
+          "url": "https://github.com/jiji262/douyin-downloader/blob/9874f413b2c1f8ad6e731b26e3e05f402fc964f8/core/url_parser.py",
+          "path": "core/url_parser.py"
+        },
+        {
+          "bytes": 1064,
+          "sha256": "d4c3afe9b57fa1854827210b501890d45018b90cfe6780cb843f1ea5de41ae41",
+          "url": "https://github.com/jiji262/douyin-downloader/blob/9874f413b2c1f8ad6e731b26e3e05f402fc964f8/LICENSE",
+          "path": "LICENSE"
+        },
+        {
+          "bytes": 6653,
+          "sha256": "92469a02c84f56276f3444ce60ea29d2b7dcc74369742de882b285930fb8b3c2",
+          "url": "https://github.com/jiji262/douyin-downloader/blob/9874f413b2c1f8ad6e731b26e3e05f402fc964f8/README.md",
+          "path": "README.md"
+        }
+      ],
+      "metadata": {
+        "repo": "jiji262/douyin-downloader",
+        "sha": "9874f413b2c1f8ad6e731b26e3e05f402fc964f8",
+        "commitDate": "2026-09-22T10:32:39Z",
+        "message": "docs(readme): 精简双语介绍并更新截图和交流群",
+        "archived": false,
+        "fork": false,
+        "parent": null,
+        "license": "MIT",
+        "defaultBranch": "main",
+        "truncated": false
+      },
+      "selectedParserFileHistory": {
+        "date": "2026-09-16T03:28:03Z",
+        "sha": "125ddf4d7196b7a18fe3a0258cc746503c9d1c57",
+        "message": "fix(douyin): 同步桌面版合集双来源与 series 失败判据\n\n桌面版 948848b / 59bbe73 的共享改动：get_user_mix 合并 mix/list 与\nseries/list?read_new_mix=true 两个互不相交的来源并按 id 去重，series 条目整形\n成 mix 形态；series/list 的失败大多是空 payload 而不是异常，逐页按 raw /\nstatus_code 判，两边都没内容时把失败页交出去；翻页游标显式取原始 cursor。\n\nCLI 没有 page bridge，mix/list 仍被 Argus 拒，但 series 那半边的合集现在能下。",
+        "path": "core/api_client.py",
+        "repo": "jiji262/douyin-downloader"
+      }
+    },
+    {
+      "sources": [
+        {
+          "bytes": 5129,
+          "sha256": "92091c00c48e31fe9e897917b4c4898e5c9c35a468ed5980ebbe3f82058dfa29",
+          "url": "https://github.com/Johnserf-Seed/f2/blob/a30feaf92a40f421273b01b6ef36aa83a93f63c0/f2/apps/douyin/api.py",
+          "path": "f2/apps/douyin/api.py"
+        },
+        {
+          "bytes": 55467,
+          "sha256": "ede7af662b929b911378e21c6f0e249c796bc5a6b3aef78a547dace720a9d9d6",
+          "url": "https://github.com/Johnserf-Seed/f2/blob/a30feaf92a40f421273b01b6ef36aa83a93f63c0/f2/apps/douyin/crawler.py",
+          "path": "f2/apps/douyin/crawler.py"
+        },
+        {
+          "bytes": 21074,
+          "sha256": "e0ce04ae30fbeadd5f4d1aa9bfdc33051a7342d89474e3220c2da45ead2a1505",
+          "url": "https://github.com/Johnserf-Seed/f2/blob/a30feaf92a40f421273b01b6ef36aa83a93f63c0/f2/apps/douyin/dl.py",
+          "path": "f2/apps/douyin/dl.py"
+        },
+        {
+          "bytes": 85947,
+          "sha256": "38c2b3444390033e8b3ddc21e93f551ec1dbff0cac895d0bc42c7f283aff564c",
+          "url": "https://github.com/Johnserf-Seed/f2/blob/a30feaf92a40f421273b01b6ef36aa83a93f63c0/f2/apps/douyin/filter.py",
+          "path": "f2/apps/douyin/filter.py"
+        },
+        {
+          "bytes": 106670,
+          "sha256": "0be295f89c420963d3bfed797e5ac511abe50eee8261d96bb9bccfe466257816",
+          "url": "https://github.com/Johnserf-Seed/f2/blob/a30feaf92a40f421273b01b6ef36aa83a93f63c0/f2/apps/douyin/handler.py",
+          "path": "f2/apps/douyin/handler.py"
+        },
+        {
+          "bytes": 10648,
+          "sha256": "7400be54e106858fe44d25b896244292b2202f11a5d509f8824551bd7f9e17dd",
+          "url": "https://github.com/Johnserf-Seed/f2/blob/a30feaf92a40f421273b01b6ef36aa83a93f63c0/f2/apps/douyin/model.py",
+          "path": "f2/apps/douyin/model.py"
+        },
+        {
+          "bytes": 65950,
+          "sha256": "bf9a081c74173419a8cbeac12abcf6bb96cb3a33598cd12c9867693110057bf8",
+          "url": "https://github.com/Johnserf-Seed/f2/blob/a30feaf92a40f421273b01b6ef36aa83a93f63c0/f2/apps/douyin/utils.py",
+          "path": "f2/apps/douyin/utils.py"
+        },
+        {
+          "bytes": 18623,
+          "sha256": "a771f829dbfc63aefaa89b9711cfbc35af97d33128cfcb638793e25fcddc6685",
+          "url": "https://github.com/Johnserf-Seed/f2/blob/a30feaf92a40f421273b01b6ef36aa83a93f63c0/f2/conf/conf.yaml",
+          "path": "f2/conf/conf.yaml"
+        },
+        {
+          "bytes": 36051,
+          "sha256": "b6bcc778f8f3308411c9ce6e51af366d5468158c22bfdb6b0ee910f7057726d9",
+          "url": "https://github.com/Johnserf-Seed/f2/blob/a30feaf92a40f421273b01b6ef36aa83a93f63c0/f2/utils/crypto/bytedance/abogus.py",
+          "path": "f2/utils/crypto/bytedance/abogus.py"
+        },
+        {
+          "bytes": 11357,
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "url": "https://github.com/Johnserf-Seed/f2/blob/a30feaf92a40f421273b01b6ef36aa83a93f63c0/LICENSE",
+          "path": "LICENSE"
+        }
+      ],
+      "metadata": {
+        "repo": "Johnserf-Seed/f2",
+        "sha": "a30feaf92a40f421273b01b6ef36aa83a93f63c0",
+        "commitDate": "2026-09-27T21:53:00Z",
+        "message": "chore: 更新 CHANGELOG",
+        "archived": false,
+        "fork": false,
+        "parent": null,
+        "license": "Apache-2.0",
+        "defaultBranch": "v0.0.1.8-pw3",
+        "truncated": false
+      },
+      "selectedParserFileHistory": {
+        "date": "2026-09-26T14:45:53Z",
+        "sha": "e8f4c322aec4b9cba741352f05c3a19b1b6bac82",
+        "message": "fix: 抖音按分辨率与码率选择最高清晰度，不再固定取第一项 (#214)",
+        "path": "f2/apps/douyin/utils.py",
+        "repo": "Johnserf-Seed/f2"
+      }
+    },
+    {
+      "sources": [
+        {
+          "bytes": 1067,
+          "sha256": "cac57175b3e0c43638f4981a87932cb1c0243cf3b52daf4e3aecd89b7487ab30",
+          "url": "https://github.com/ucmao/media-parser/blob/ee05d757c7feb657dcdb1582ec1ac4d0e24d38c6/LICENSE",
+          "path": "LICENSE"
+        },
+        {
+          "bytes": 81489,
+          "sha256": "d5607ccdd628f35344da4f3d2f9d5341faa3233b85ad6930be8c5111cc7abbc5",
+          "url": "https://github.com/ucmao/media-parser/blob/ee05d757c7feb657dcdb1582ec1ac4d0e24d38c6/src/parsers/douyin_parser.py",
+          "path": "src/parsers/douyin_parser.py"
+        }
+      ],
+      "metadata": {
+        "repo": "ucmao/media-parser",
+        "sha": "ee05d757c7feb657dcdb1582ec1ac4d0e24d38c6",
+        "commitDate": "2026-09-28T05:00:44Z",
+        "message": "加入代理访问机制 (#22)\n\n* 加入代理访问机制\n\n* delete some log files\n\n---------\n\nCo-authored-by: xbsgmaster@kalmanmacmini <>",
+        "archived": false,
+        "fork": false,
+        "parent": null,
+        "license": "MIT",
+        "defaultBranch": "main",
+        "truncated": false
+      },
+      "selectedParserFileHistory": {
+        "date": "2026-09-25T23:23:43Z",
+        "sha": "030eddc3ebe12ee90ad9678ac86f13b0cc9cd2b2",
+        "message": "自动清洗抖音playwm水印端点并升级为1080P无水印原画",
+        "path": "src/parsers/douyin_parser.py",
+        "repo": "ucmao/media-parser"
+      }
+    }
+  ]
+}

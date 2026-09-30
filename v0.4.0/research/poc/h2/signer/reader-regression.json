@@ -1,0 +1,7 @@
+{
+  "scope": "localhost reader fixture; no platform requests",
+  "firstChunkRead": true,
+  "nextSetTimeoutRaisesOSError": true,
+  "errno": 10038,
+  "fixedReaderCanStopAtClosedResponse": true
+}

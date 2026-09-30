@@ -95,6 +95,61 @@ void main() {
     expect(() => tasks.add(tasks.first), throwsUnsupportedError);
   });
 
+  test(
+    'long gallery titles retain ordered names without concurrent overwrite',
+    () async {
+      final root = await Directory.systemTemp.createTemp(
+        'mediaflow-long-gallery-',
+      );
+      addTearDown(() => root.delete(recursive: true));
+      final content = MediaContent(
+        id: 'long-gallery',
+        platform: MediaPlatform.douyin,
+        title: '${'长' * 75}😀${'标题' * 30}',
+        sourceUrl: Uri.parse('https://www.douyin.com/note/123'),
+        type: MediaContentType.imageGallery,
+        resources: [
+          for (var i = 1; i <= 3; i++)
+            MediaResource(
+              id: 'image-$i',
+              type: MediaResourceType.image,
+              url: Uri.parse('https://cdn.example.test/$i.jpg'),
+              mimeType: 'image/jpeg',
+            ),
+        ],
+      );
+      final tasks = downloadTasksFromMediaContent(
+        content,
+        operationId: 'long001',
+        createdAt: createdAt,
+      );
+      final store = LocalDownloadFileStore(
+        downloadDirectoryResolver: () async => root,
+      );
+      final sinks = await Future.wait(
+        tasks.map(
+          (task) => store.create(
+            task: task,
+            sourceUri: task.url,
+            append: false,
+            contentType: task.mimeType,
+          ),
+        ),
+      );
+      expect(sinks.map((sink) => sink.savePath).toSet(), hasLength(3));
+      for (var i = 0; i < sinks.length; i++) {
+        expect(sinks[i].savePath, endsWith('00${i + 1}.jpg'));
+        expect(
+          tasks[i].title.codeUnits.where((c) => c >= 0xd800 && c <= 0xdfff),
+          isEmpty,
+        );
+        await sinks[i].add([i + 1]);
+        final path = await sinks[i].complete();
+        expect(await File(path).readAsBytes(), [i + 1]);
+      }
+    },
+  );
+
   test('empty content and unsafe operation IDs fail before queueing', () {
     final content = MediaContent(
       id: 'empty',

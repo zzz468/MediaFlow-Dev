@@ -1,0 +1,88 @@
+{
+  "status_code": 0,
+  "aweme_detail": {
+    "aweme_id": "7690029886242009957",
+    "aweme_type": 68,
+    "desc": "Authorized gallery fixture",
+    "images": [
+      {
+        "url_list": [
+          "https://fixture.example.test/image-1.jpg",
+          "https://fixture.example.test/image-2.jpg"
+        ]
+      },
+      {
+        "url_list": [
+          "https://fixture.example.test/image-3.jpg",
+          "https://fixture.example.test/image-4.jpg"
+        ]
+      },
+      {
+        "url_list": [
+          "https://fixture.example.test/image-5.jpg",
+          "https://fixture.example.test/image-6.jpg"
+        ]
+      },
+      {
+        "url_list": [
+          "https://fixture.example.test/image-7.jpg",
+          "https://fixture.example.test/image-8.jpg"
+        ]
+      },
+      {
+        "url_list": [
+          "https://fixture.example.test/image-9.jpg",
+          "https://fixture.example.test/image-10.jpg"
+        ]
+      },
+      {
+        "url_list": [
+          "https://fixture.example.test/image-11.jpg",
+          "https://fixture.example.test/image-12.jpg"
+        ]
+      },
+      {
+        "url_list": [
+          "https://fixture.example.test/image-13.jpg",
+          "https://fixture.example.test/image-14.jpg"
+        ]
+      },
+      {
+        "url_list": [
+          "https://fixture.example.test/image-15.jpg",
+          "https://fixture.example.test/image-16.jpg"
+        ]
+      },
+      {
+        "url_list": [
+          "https://fixture.example.test/image-17.jpg",
+          "https://fixture.example.test/image-18.jpg"
+        ]
+      },
+      {
+        "url_list": [
+          "https://fixture.example.test/image-19.jpg",
+          "https://fixture.example.test/image-20.jpg"
+        ]
+      },
+      {
+        "url_list": [
+          "https://fixture.example.test/image-21.jpg",
+          "https://fixture.example.test/image-22.jpg"
+        ]
+      },
+      {
+        "url_list": [
+          "https://fixture.example.test/image-23.jpg",
+          "https://fixture.example.test/image-24.jpg"
+        ]
+      },
+      {
+        "url_list": [
+          "https://fixture.example.test/image-25.jpg",
+          "https://fixture.example.test/image-26.jpg"
+        ]
+      }
+    ]
+  }
+}
