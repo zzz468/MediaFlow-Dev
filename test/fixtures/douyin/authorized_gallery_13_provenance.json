@@ -1,0 +1,14 @@
+{
+  "origin": "actual F2 response captured 2026-09-28T15:19Z",
+  "sourceCommit": "a30feaf92a40f421273b01b6ef36aa83a93f63c0",
+  "allowlisted": true,
+  "urlValues": "replaced with fixture.example.test placeholders",
+  "description": "replaced",
+  "imageOrder": "preserved",
+  "imageCount": 13,
+  "imageShapeKeys": [
+    "url_list"
+  ],
+  "sha256": "b2e5351a7c6251f975f8b12286f1098750ddc5b4114cc859276bee92d88a57ef",
+  "productionSpike": false
+}

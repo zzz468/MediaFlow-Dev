@@ -48,8 +48,7 @@ DownloadTask _taskFor(
       resource.type == MediaResourceType.video;
   final title = isSingleVideo
       ? content.title
-      : '${_fileStem(resource.suggestedFileName ?? content.title)} '
-            '${(index + 1).toString().padLeft(3, '0')}';
+      : _orderedTitle(resource.suggestedFileName ?? content.title, index);
 
   return DownloadTask(
     id: 'download-$operationId-${index + 1}',
@@ -75,4 +74,19 @@ String _fileStem(String value) {
     ),
     '',
   );
+}
+
+String _orderedTitle(String value, int index) {
+  final suffix = ' ${(index + 1).toString().padLeft(3, '0')}';
+  var stem = _fileStem(value);
+  // The file store caps the stem at 80 UTF-16 code units. Reserve the ordinal
+  // before that cap so long titles retain distinct, ordered file names.
+  final budget = 80 - suffix.length;
+  if (stem.length > budget) {
+    var end = budget;
+    final last = stem.codeUnitAt(end - 1);
+    if (last >= 0xd800 && last <= 0xdbff) end--;
+    stem = stem.substring(0, end);
+  }
+  return '${stem.trimRight()}$suffix';
 }

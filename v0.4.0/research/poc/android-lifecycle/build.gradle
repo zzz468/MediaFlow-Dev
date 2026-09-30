@@ -1,0 +1,37 @@
+plugins {
+    id 'com.android.application' version '9.0.1'
+    id 'org.jetbrains.kotlin.android' version '2.3.20' apply false
+}
+layout.buildDirectory.set(file('../../../../build/android_lifecycle_research'))
+def publicProbe = providers.gradleProperty('enablePublicProbe').orElse('false').get() == 'true'
+def probeRun = providers.gradleProperty('publicProbeRun').orElse('').get()
+if (publicProbe && !(probeRun ==~ /[a-z0-9-]{1,64}/)) throw new GradleException('Explicit publicProbeRun required')
+android {
+    namespace 'com.mediaflow.research.v040.lifecycle'
+    compileSdk 36
+    defaultConfig {
+        applicationId 'com.mediaflow.research.v040.lifecycle'
+        minSdk 29
+        targetSdk 36
+        versionCode 1
+        versionName '0.4.0-research'
+        buildConfigField 'boolean', 'PUBLIC_PROBE_ENABLED', publicProbe.toString()
+        buildConfigField 'String', 'PUBLIC_PROBE_RUN', '"' + probeRun + '"'
+    }
+    buildFeatures { buildConfig = true }
+    if (publicProbe) sourceSets.debug.manifest.srcFile('src/publicProbe/AndroidManifest.xml')
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+}
+dependencies {
+    implementation 'androidx.webkit:webkit:1.15.0'
+    // Existing cached versions selected by the MediaFlow Android dependency graph.
+    constraints {
+        implementation 'androidx.core:core:1.13.1'
+        implementation 'androidx.lifecycle:lifecycle-runtime:2.7.0'
+        implementation 'androidx.lifecycle:lifecycle-common:2.7.0'
+        implementation 'androidx.arch.core:core-common:2.2.0'
+        implementation 'androidx.tracing:tracing:1.2.0'
+        implementation 'androidx.profileinstaller:profileinstaller:1.3.1'
+        implementation 'androidx.collection:collection:1.1.0'
+    }
+}

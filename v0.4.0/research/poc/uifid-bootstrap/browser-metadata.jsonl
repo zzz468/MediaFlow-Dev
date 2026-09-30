@@ -1,0 +1,9 @@
+{"utc":"2026-09-28T06:00:00.7907503Z","phase":"A","kind":"profile","data":{"path":"D:\\projects\\mediaflow-v040\\build\\uifid_context_research\\profiles\\uifid-6c3893d7cbb24e1aae3ce1d9de8988a6","existedBefore":false,"importedState":false}}
+{"utc":"2026-09-28T06:00:02.0160353Z","phase":"A","kind":"navigation_completed","data":{"success":true,"status":200,"offline":true}}
+{"utc":"2026-09-28T06:00:02.0445184Z","phase":"A","kind":"cookie_metadata","data":[]}
+{"utc":"2026-09-28T06:00:02.1462270Z","phase":"A","kind":"storage_metadata","data":{"origin":"https://www.douyin.com","readyState":"complete","documentCookieNames":[],"local":[],"session":[],"databases":[],"indexedDBError":false,"securityVisible":false}}
+{"utc":"2026-09-28T06:00:02.1519085Z","phase":"A","kind":"fresh_origin_verified","data":{"cookieCount":0,"origin":"https://www.douyin.com","fixtureNetworkRequests":0}}
+{"utc":"2026-09-28T06:00:02.1533369Z","phase":"B","kind":"navigation","data":{"url":"https://www.douyin.com/","publicNavigationNumber":1}}
+{"utc":"2026-09-28T06:00:02.6637336Z","phase":"B","kind":"cookie_metadata","data":[]}
+{"utc":"2026-09-28T06:00:04.0482679Z","phase":"B","kind":"security_resource_blocked","data":{"host":"lf-waf-js.byted-static.com","path":"/obj/waf-jschallenge/out-sha256.js"}}
+{"utc":"2026-09-28T06:00:04.8988715Z","phase":"B","kind":"finished","data":{"reason":"explicit_security_resource","publicNavigations":1,"observedRequests":4,"observedResponses":1,"blockedDetailRequests":0,"blockedImageMediaRequests":0,"scriptUrls":["https://lf3-short.ibytedapm.com/slardar/fe/sdk-web/browser.cn.js"],"browserProcessExited":true,"profilePath":"D:\\projects\\mediaflow-v040\\build\\uifid_context_research\\profiles\\uifid-6c3893d7cbb24e1aae3ce1d9de8988a6","profileCleaned":false,"explicitDetailExperiments":0}}

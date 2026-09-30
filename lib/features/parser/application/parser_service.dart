@@ -3,6 +3,8 @@ import '../../../core/network/network_client.dart';
 import '../data/bilibili/bilibili_parser.dart';
 import '../data/bilibili/bilibili_opus_parser.dart';
 import '../data/douyin/douyin_parser.dart';
+import '../data/douyin/gallery/douyin_content_parser.dart';
+import '../data/douyin/gallery/douyin_gallery_factory.dart';
 import '../data/douyin/observation/douyin_browser_observation.dart';
 import '../data/url_platform_detector.dart';
 import '../domain/parser_interface.dart';
@@ -14,11 +16,15 @@ class ParserService {
     required this.platformDetector,
     required this.parsers,
     this.onClose,
+    this.establishSession,
+    this.clearSession,
   });
 
   final PlatformDetector platformDetector;
   final List<ParserInterface> parsers;
   final void Function()? onClose;
+  final Future<bool> Function()? establishSession;
+  final Future<bool> Function()? clearSession;
 
   MediaPlatform detectPlatform(Uri uri) => platformDetector.detect(uri);
 
@@ -55,16 +61,26 @@ class ParserService {
 
 ParserService createDefaultParserService() {
   final networkClient = HttpNetworkClient();
+  final gallery = installedDouyinGalleryBackend();
   return ParserService(
     platformDetector: const UrlPlatformDetector(),
     parsers: [
       BilibiliOpusParser(networkClient: networkClient),
       BilibiliParser(networkClient: networkClient),
-      DouyinParser(
-        networkClient: networkClient,
-        browserObservation: installedDouyinBrowserObservation(),
+      DouyinContentParser(
+        gallery: gallery,
+        network: networkClient,
+        video: DouyinParser(
+          networkClient: networkClient,
+          browserObservation: installedDouyinBrowserObservation(),
+        ),
       ),
     ],
     onClose: networkClient.close,
+    establishSession: gallery == null
+        ? null
+        : () async =>
+              await gallery.sessions.establishWithUserInteraction() != null,
+    clearSession: gallery?.sessions.clear,
   );
 }

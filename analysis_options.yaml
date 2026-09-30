@@ -9,6 +9,12 @@
 # packages, and plugins designed to encourage good coding practices.
 include: package:flutter_lints/flutter.yaml
 
+analyzer:
+  # Standalone historical research probes are not application/test sources.
+  # Keep normal lib/, test/ and integration_test/ analysis fully enabled.
+  exclude:
+    - v0.4.0/research/poc/**
+
 linter:
   # The lint rules applied to this project can be customized in the
   # section below to disable rules from the `package:flutter_lints/flutter.yaml`

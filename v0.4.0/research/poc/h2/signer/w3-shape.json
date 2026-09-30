@@ -1,0 +1,99 @@
+{
+  "source": {
+    "repo": "DLWangSan/douyin_parse",
+    "file": "douyin_video_parser.py",
+    "githubRequests": 2,
+    "sha256": "e415dea060c00e95b86d420ee78a6838dc094f9d8ef9958ca2a25d630bbd995d",
+    "commit": "0896c74d1e9368af8ad0b85449a8039b1b3010bd",
+    "commitDate": "2026-08-14T08:52:46Z"
+  },
+  "endpoint": "https://www.douyin.com/aweme/v1/web/aweme/detail/",
+  "target": "7690029886242009957",
+  "orderedQuery": [
+    [
+      "device_platform",
+      "webapp"
+    ],
+    [
+      "aid",
+      "6383"
+    ],
+    [
+      "channel",
+      "channel_pc_web"
+    ],
+    [
+      "pc_client_type",
+      "1"
+    ],
+    [
+      "version_code",
+      "190500"
+    ],
+    [
+      "version_name",
+      "19.5.0"
+    ],
+    [
+      "cookie_enabled",
+      "true"
+    ],
+    [
+      "browser_language",
+      "zh-CN"
+    ],
+    [
+      "browser_platform",
+      "Win32"
+    ],
+    [
+      "browser_name",
+      "Edge"
+    ],
+    [
+      "browser_online",
+      "true"
+    ],
+    [
+      "engine_name",
+      "Blink"
+    ],
+    [
+      "os_name",
+      "Windows"
+    ],
+    [
+      "os_version",
+      "10"
+    ],
+    [
+      "platform",
+      "PC"
+    ],
+    [
+      "screen_width",
+      "1536"
+    ],
+    [
+      "screen_height",
+      "864"
+    ],
+    [
+      "aweme_id",
+      "7690029886242009957"
+    ]
+  ],
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+    "Origin": "https://www.douyin.com",
+    "Sec-Fetch-Site": "same-site",
+    "Sec-Fetch-Mode": "cors",
+    "Sec-Fetch-Dest": "empty",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36 Edg/153.0.0.0",
+    "Referer": "https://www.douyin.com/note/7690029886242009957"
+  },
+  "aBogusPlacement": "last query; percent encoded once",
+  "measuredScreenSubstitution": true,
+  "platformRequests": 0
+}

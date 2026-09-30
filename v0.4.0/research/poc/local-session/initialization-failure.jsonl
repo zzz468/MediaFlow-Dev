@@ -1,0 +1,3 @@
+{"utc":"2026-09-28T06:15:12.3175782Z","kind":"error","data":{"type":"UnauthorizedAccessException"}}
+{"utc":"2026-09-28T06:15:12.3945511Z","kind":"cleanup_error","data":{"type":"FileNotFoundException"}}
+{"utc":"2026-09-28T06:15:12.3957487Z","kind":"finished","data":{"reason":"initialization_failure","normalSessionWindowOpened":false,"uifidObserved":false,"uifidRetainedAfterRestart":false,"navigations":0,"observedRequests":0,"observedResponses":0,"webviewDetailRequestsBlocked":0,"explicitDetailRequests":0,"nativeProfileClear":false,"uifidAbsentAfterClear":false,"browserProcessExited":true,"profileRemoved":false,"profilePath":"D:\\dev\\tmp\\mediaflow-v040-local-session\\session-b14d2bec94d945e4acc47338cb36944a","status":"Clearing","accountLoginCompleted":"not_observed"}}

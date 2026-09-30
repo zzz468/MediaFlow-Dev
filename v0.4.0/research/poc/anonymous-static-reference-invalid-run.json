@@ -1,0 +1,114 @@
+{
+  "referenceCommit": "ee05d757c7feb657dcdb1582ec1ac4d0e24d38c6",
+  "sourceSHA256": "d5607ccdd628f35344da4f3d2f9d5341faa3233b85ad6930be8c5111cc7abbc5",
+  "credentialsSent": false,
+  "originalSSRMethodsUnchanged": true,
+  "fullDefaultParserExecuted": false,
+  "samples": [
+    {
+      "id": "7690029886242009957",
+      "sampleEvidence": "human-confirmed; prior session 13 images",
+      "priorSessionImageCount": 13,
+      "status": "blocked",
+      "category": "noTargetStructuredDetail",
+      "targetMatch": false,
+      "imageCount": 0,
+      "distinctImages": 0,
+      "order": "notVerified",
+      "latencyMs": 643,
+      "requests": [
+        {
+          "status": 200,
+          "host": "www.iesdouyin.com",
+          "path": "/share/video/7690029886242009957",
+          "cookieSent": false,
+          "bytes": 32549
+        }
+      ]
+    },
+    {
+      "id": "7669579412325683877",
+      "sampleEvidence": "reference images-only fixture; current human count unknown",
+      "priorSessionImageCount": null,
+      "status": "blocked",
+      "category": "noTargetStructuredDetail",
+      "targetMatch": false,
+      "imageCount": 0,
+      "distinctImages": 0,
+      "order": "notVerified",
+      "latencyMs": 626,
+      "requests": [
+        {
+          "status": 200,
+          "host": "www.iesdouyin.com",
+          "path": "/share/video/7669579412325683877",
+          "cookieSent": false,
+          "bytes": 32479
+        }
+      ]
+    },
+    {
+      "id": "7675010865947858341",
+      "sampleEvidence": "reference images-only fixture; current human count unknown",
+      "priorSessionImageCount": null,
+      "status": "blocked",
+      "category": "noTargetStructuredDetail",
+      "targetMatch": false,
+      "imageCount": 0,
+      "distinctImages": 0,
+      "order": "notVerified",
+      "latencyMs": 561,
+      "requests": [
+        {
+          "status": 200,
+          "host": "www.iesdouyin.com",
+          "path": "/share/video/7675010865947858341",
+          "cookieSent": false,
+          "bytes": 32479
+        }
+      ]
+    },
+    {
+      "id": "7626598460468333858",
+      "sampleEvidence": "historical public 10-image reference; current status unknown",
+      "priorSessionImageCount": null,
+      "status": "blocked",
+      "category": "noTargetStructuredDetail",
+      "targetMatch": false,
+      "imageCount": 0,
+      "distinctImages": 0,
+      "order": "notVerified",
+      "latencyMs": 671,
+      "requests": [
+        {
+          "status": 200,
+          "host": "www.iesdouyin.com",
+          "path": "/share/video/7626598460468333858",
+          "cookieSent": false,
+          "bytes": 32549
+        }
+      ]
+    },
+    {
+      "id": "7159749791113645325",
+      "sampleEvidence": "historical public image-post reference; current status unknown",
+      "priorSessionImageCount": null,
+      "status": "blocked",
+      "category": "noTargetStructuredDetail",
+      "targetMatch": false,
+      "imageCount": 0,
+      "distinctImages": 0,
+      "order": "notVerified",
+      "latencyMs": 647,
+      "requests": [
+        {
+          "status": 200,
+          "host": "www.iesdouyin.com",
+          "path": "/share/video/7159749791113645325",
+          "cookieSent": false,
+          "bytes": 32549
+        }
+      ]
+    }
+  ]
+}

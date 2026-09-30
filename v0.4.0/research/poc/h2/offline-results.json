@@ -1,0 +1,16 @@
+{
+  "scope": "OFFLINE_SYNTHETIC_CONTRACT_ONLY",
+  "checks": 44,
+  "passed": true,
+  "platformRequests": 0,
+  "realSessionCreated": false,
+  "realSignerVerified": false,
+  "realGalleryVerified": false,
+  "target": "7690029886242009957",
+  "result": "OFFLINE_CAPABILITY_CONTRACT_PASS",
+  "resultBasis": "Synthetic contracts including optional UIFID; live signer evidence is separate in capability-signer-audit.md",
+  "dartTargetedAnalyze": "No issues found",
+  "fullFlutterLint": "NOT VERIFIED: unresolved flutter_lints include",
+  "productionModified": false,
+  "productionBuilds": "NOT RUN"
+}

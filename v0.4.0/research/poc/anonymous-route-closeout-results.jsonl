@@ -1,0 +1,4 @@
+{"route":"existing-feed-alternate-host","error":"SocketException","retry":false}
+{"route":"public-share-note-html","error":"SocketException","retry":false}
+{"route":"public-share-slides-html","error":"SocketException","retry":false}
+{"route":"legacy-public-iteminfo","error":"SocketException","retry":false}
