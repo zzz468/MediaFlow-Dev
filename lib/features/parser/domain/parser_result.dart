@@ -2,6 +2,9 @@ import 'media_content.dart';
 import 'video_info.dart';
 
 abstract final class ParserFailureCode {
+  static const sessionRequired = 'session_required';
+  static const sessionExpired = 'session_expired';
+  static const userCancelledLogin = 'user_cancelled_login';
   static const networkError = 'network_error';
   static const linkExpired = 'link_expired';
   static const unsupportedPlatform = 'unsupported_platform';

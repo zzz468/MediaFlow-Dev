@@ -1,0 +1,8 @@
+{
+  "scope": "real algorithm original/adapted comparison; synthetic offline inputs only",
+  "matches": 5,
+  "upstreamSha": "a30feaf92a40f421273b01b6ef36aa83a93f63c0",
+  "independentPlatformOracle": false,
+  "gmsslInstalled": false,
+  "platformRequests": 0
+}

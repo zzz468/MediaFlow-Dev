@@ -58,6 +58,15 @@ android {
         }
         release {
             signingConfig = if (hasReleaseSigning) signingConfigs.getByName("release") else null
+            // Opt-in coexistence for Release acceptance; normal builds keep
+            // the published applicationId and never fall back to Debug signing.
+            val testSuffix = System.getenv("MEDIAFLOW_ANDROID_TEST_APP_ID_SUFFIX")
+            if (!testSuffix.isNullOrBlank()) {
+                require(Regex("\\.[a-z][a-z0-9_]*").matches(testSuffix)) {
+                    "MEDIAFLOW_ANDROID_TEST_APP_ID_SUFFIX must be a safe package suffix."
+                }
+                applicationIdSuffix = testSuffix
+            }
         }
     }
 }

@@ -25,9 +25,11 @@ class MainActivity : FlutterActivity() {
 
     private var pendingPublish: PendingPublish? = null
     private var browserObservationHost: AndroidBrowserObservationHost? = null
+    private var douyinSessionHost: AndroidDouyinSessionHost? = null
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
+        douyinSessionHost = AndroidDouyinSessionHost(this, flutterEngine.dartExecutor.binaryMessenger)
         browserObservationHost = AndroidBrowserObservationHost(
             activity = this,
             messenger = flutterEngine.dartExecutor.binaryMessenger,
@@ -68,6 +70,8 @@ class MainActivity : FlutterActivity() {
     }
 
     override fun cleanUpFlutterEngine(flutterEngine: FlutterEngine) {
+        douyinSessionHost?.dispose()
+        douyinSessionHost = null
         browserObservationHost?.dispose()
         browserObservationHost = null
         super.cleanUpFlutterEngine(flutterEngine)

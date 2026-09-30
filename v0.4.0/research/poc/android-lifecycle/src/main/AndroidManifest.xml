@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Isolated research only: explicit public-target mode, no production integration. -->
+    <application android:label="MediaFlow lifecycle research" android:allowBackup="false" android:theme="@android:style/Theme.Material.Light.NoActionBar">
+        <activity android:name=".LifecycleActivity" android:exported="true" />
+        <activity android:name=".CoordinatorActivity" android:exported="true" android:launchMode="singleTop" />
+        <activity android:name=".OwnedFixtureCleanupActivity" android:exported="true" />
+        <service android:name=".CoordinatorService" android:exported="false" />
+        <service android:name=".OfflineWorkerService" android:exported="false" android:process=":offline_worker" />
+    </application>
+</manifest>

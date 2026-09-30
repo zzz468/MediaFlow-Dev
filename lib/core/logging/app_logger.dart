@@ -25,15 +25,20 @@ abstract final class AppLogger {
     Logger.root.level = kDebugMode ? Level.ALL : Level.INFO;
     Logger.root.onRecord.listen((record) {
       final category = _categoryFor(record.loggerName);
-      unawaited(_localStore.write(category.name, record));
+      // Exception text and stacks can contain request URLs or headers. Release
+      // diagnostics keep only category/severity and never persist those values.
+      final output = kDebugMode
+          ? record
+          : LogRecord(record.level, 'Event', record.loggerName);
+      unawaited(_localStore.write(category.name, output));
       debugPrint(
-        '[${record.level.name}] ${record.time.toIso8601String()} '
-        '${record.loggerName}: ${record.message}',
+        '[${output.level.name}] ${output.time.toIso8601String()} '
+        '${output.loggerName}: ${output.message}',
       );
-      if (record.error != null) {
+      if (kDebugMode && record.error != null) {
         debugPrint('Error: ${record.error}');
       }
-      if (record.stackTrace != null) {
+      if (kDebugMode && record.stackTrace != null) {
         debugPrintStack(stackTrace: record.stackTrace);
       }
     });

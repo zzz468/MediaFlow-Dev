@@ -34,6 +34,7 @@ class LinkParserState {
     this.videoInfo,
     this.mediaContent,
     this.errorMessage,
+    this.errorCode,
   });
 
   final String input;
@@ -44,8 +45,10 @@ class LinkParserState {
   final VideoInfo? videoInfo;
   final MediaContent? mediaContent;
   final String? errorMessage;
+  final String? errorCode;
 
   bool get hasInput => input.trim().isNotEmpty;
   bool get isReadyForParsing =>
-      parserStatus == ParserExecutionStatus.readyToParse;
+      inputStatus == LinkParsingStatus.valid &&
+      parserStatus != ParserExecutionStatus.parsing;
 }

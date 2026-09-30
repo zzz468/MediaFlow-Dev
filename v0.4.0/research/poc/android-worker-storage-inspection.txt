@@ -1,0 +1,65 @@
+files/worker_operations:
+total 6
+drwx------ 2 u0_a439 u0_a439 3452 2026-09-27 19:02 .
+drwxrwx--x 3 u0_a439 u0_a439 3452 2026-09-27 19:02 ..
+
+no_backup:
+total 24
+drwxrwx--x 8 u0_a439 u0_a439 3452 2026-09-27 19:02 .
+drwx------ 9 u0_a439 u0_a439 3452 2026-09-27 19:02 ..
+drwx------ 2 u0_a439 u0_a439 3452 2026-09-27 14:52 .webview
+drwx------ 2 u0_a439 u0_a439 3452 2026-09-27 18:57 .webview_mf040_53365fbcaa18455cbc8e3ae59301fd8d
+drwx------ 2 u0_a439 u0_a439 3452 2026-09-27 18:58 .webview_mf040_8e98ee60a9a64c87afcaca1ae95a0faf
+drwx------ 2 u0_a439 u0_a439 3452 2026-09-27 18:58 .webview_mf040_b83a40a5230b44c98d46e971766b88a1
+drwx------ 2 u0_a439 u0_a439 3452 2026-09-27 19:00 .webview_mf040_dc966827c9ad4ba2a0d8373441aa2225
+drwx------ 2 u0_a439 u0_a439 3452 2026-09-27 19:00 .webview_mf040_ddf715ea05cb442bbbbfe11b3a4b7e84
+
+no_backup/.webview:
+total 4106
+drwx------ 2 u0_a439 u0_a439    3452 2026-09-27 14:52 .
+drwxrwx--x 8 u0_a439 u0_a439    3452 2026-09-27 19:02 ..
+-rw------- 1 u0_a439 u0_a439 4194304 2026-09-27 14:52 BrowserMetrics-spare.pma
+
+no_backup/.webview_mf040_53365fbcaa18455cbc8e3ae59301fd8d:
+total 6
+drwx------ 2 u0_a439 u0_a439 3452 2026-09-27 18:57 .
+drwxrwx--x 8 u0_a439 u0_a439 3452 2026-09-27 19:02 ..
+
+no_backup/.webview_mf040_8e98ee60a9a64c87afcaca1ae95a0faf:
+total 6
+drwx------ 2 u0_a439 u0_a439 3452 2026-09-27 18:58 .
+drwxrwx--x 8 u0_a439 u0_a439 3452 2026-09-27 19:02 ..
+
+no_backup/.webview_mf040_b83a40a5230b44c98d46e971766b88a1:
+total 6
+drwx------ 2 u0_a439 u0_a439 3452 2026-09-27 18:58 .
+drwxrwx--x 8 u0_a439 u0_a439 3452 2026-09-27 19:02 ..
+
+no_backup/.webview_mf040_dc966827c9ad4ba2a0d8373441aa2225:
+total 6
+drwx------ 2 u0_a439 u0_a439 3452 2026-09-27 19:00 .
+drwxrwx--x 8 u0_a439 u0_a439 3452 2026-09-27 19:02 ..
+
+no_backup/.webview_mf040_ddf715ea05cb442bbbbfe11b3a4b7e84:
+total 6
+drwx------ 2 u0_a439 u0_a439 3452 2026-09-27 19:00 .
+drwxrwx--x 8 u0_a439 u0_a439 3452 2026-09-27 19:02 ..
+total 21
+drwxrws--x 7 u0_a439 u0_a439_cache 3452 2026-09-27 19:02 .
+drwx------ 9 u0_a439 u0_a439       3452 2026-09-27 19:02 ..
+drwx--S--- 3 u0_a439 u0_a439_cache 3452 2026-09-27 14:33 Crash Reports
+drwx--S--- 6 u0_a439 u0_a439_cache 3452 2026-09-27 14:35 WebView
+drwx--S--- 6 u0_a439 u0_a439_cache 3452 2026-09-27 18:57 webview_mf040_53365fbcaa18455cbc8e3ae59301fd8d
+drwx--S--- 6 u0_a439 u0_a439_cache 3452 2026-09-27 18:58 webview_mf040_8e98ee60a9a64c87afcaca1ae95a0faf
+drwx--S--- 6 u0_a439 u0_a439_cache 3452 2026-09-27 18:58 webview_mf040_b83a40a5230b44c98d46e971766b88a1
+total 76
+drwx------   9 u0_a439 u0_a439        3452 2026-09-27 19:02 .
+drwxrwx--x 533 system  system        57344 2026-09-27 14:33 ..
+drwxrwx--x   2 u0_a439 u0_a439        3452 2026-09-27 14:33 app_textures
+drwx------   3 u0_a439 u0_a439        3452 2026-09-27 14:52 app_webview
+drwxrws--x   7 u0_a439 u0_a439_cache  3452 2026-09-27 19:02 cache
+drwxrws--x   2 u0_a439 u0_a439_cache  3452 2026-09-27 14:33 code_cache
+drwxrwx--x   3 u0_a439 u0_a439        3452 2026-09-27 19:02 files
+drwxrwx--x   8 u0_a439 u0_a439        3452 2026-09-27 19:02 no_backup
+drwxrwx--x   2 u0_a439 u0_a439        3452 2026-09-27 19:02 shared_prefs
+package:/data/app/~~GRtV0YhKPDpnlkLBTdag7g==/com.mediaflow.mediaflow-TxZcnFQWxuecoj7izU8yhw==/base.apk

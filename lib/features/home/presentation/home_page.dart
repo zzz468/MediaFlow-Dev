@@ -8,6 +8,7 @@ import '../../downloader/application/media_content_download_action.dart';
 import '../../downloader/domain/download_task.dart';
 import '../../parser/domain/link_parser_state.dart';
 import '../../parser/domain/media_content.dart';
+import '../../parser/domain/parser_result.dart';
 import '../../parser/domain/video_info.dart';
 import '../../parser/presentation/link_parser_view_model.dart';
 
@@ -25,7 +26,9 @@ class _HomePageState extends ConsumerState<HomePage> {
   @override
   void initState() {
     super.initState();
-    _linkController = TextEditingController();
+    _linkController = TextEditingController(
+      text: ref.read(linkParserViewModelProvider).input,
+    );
   }
 
   @override
@@ -209,6 +212,18 @@ class _HomePageState extends ConsumerState<HomePage> {
                     state.inputStatus != LinkParsingStatus.invalid) ...[
                   const SizedBox(height: 16),
                   _ErrorCard(message: state.errorMessage!),
+                  if (state.errorCode == ParserFailureCode.sessionRequired ||
+                      state.errorCode == ParserFailureCode.sessionExpired)
+                    FilledButton(
+                      onPressed: () => ref
+                          .read(linkParserViewModelProvider.notifier)
+                          .loginAndContinue(),
+                      child: Text(
+                        state.errorCode == ParserFailureCode.sessionExpired
+                            ? '重新登录并继续'
+                            : '登录并继续',
+                      ),
+                    ),
                 ],
                 const SizedBox(height: 20),
                 _ParserResultCard(

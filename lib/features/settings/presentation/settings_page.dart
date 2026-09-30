@@ -9,6 +9,7 @@ import '../../../app/theme/theme_controller.dart';
 import '../../../core/cache/local_cache_service.dart';
 import '../../../core/config/app_config.dart';
 import '../application/settings_controller.dart';
+import '../../parser/presentation/link_parser_view_model.dart';
 
 class SettingsPage extends ConsumerStatefulWidget {
   const SettingsPage({super.key});
@@ -50,6 +51,43 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
                   style: Theme.of(context).textTheme.bodyLarge,
                 ),
                 const SizedBox(height: 28),
+                if (ref.watch(parserServiceProvider).clearSession != null)
+                  ListTile(
+                    title: const Text('退出抖音登录并清除平台数据'),
+                    subtitle: const Text('只清除 MediaFlow 自有抖音会话，保留下载文件和历史。'),
+                    leading: const Icon(Icons.logout),
+                    onTap: () async {
+                      final accepted = await showDialog<bool>(
+                        context: context,
+                        builder: (context) => AlertDialog(
+                          title: const Text('清除抖音会话？'),
+                          actions: [
+                            TextButton(
+                              onPressed: () => Navigator.pop(context, false),
+                              child: const Text('取消'),
+                            ),
+                            FilledButton(
+                              onPressed: () => Navigator.pop(context, true),
+                              child: const Text('清除'),
+                            ),
+                          ],
+                        ),
+                      );
+                      if (accepted != true || !mounted) return;
+                      ref.read(linkParserViewModelProvider.notifier).clear();
+                      final cleared = await ref
+                          .read(parserServiceProvider)
+                          .clearSession!();
+                      if (!context.mounted) return;
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text(
+                            cleared ? '抖音会话已清除。' : '未能确认清理成功，请稍后重试。',
+                          ),
+                        ),
+                      );
+                    },
+                  ),
                 _SectionCard(
                   title: '外观与启动',
                   children: [
@@ -206,7 +244,7 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
             autofocus: true,
             decoration: const InputDecoration(
               labelText: '目录路径',
-              hintText: r'D:\MediaFlowDownloads',
+              hintText: '选择下载目录',
               helperText: '目录不存在时会在首次下载时自动创建。',
             ),
           ),
