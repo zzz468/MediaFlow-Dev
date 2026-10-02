@@ -1,0 +1,10 @@
+{
+  "os": "windows",
+  "executable": "D:\\projects\\mediaflow-v050\\build\\windows\\x64\\runner\\Release\\MediaFlow.exe",
+  "entrypoint": "lib/main.dart",
+  "priorProcess": "integration acceptance exited successfully",
+  "observedAfterNewProcessStart": "History UI shows completed 4, total 4, both sample progressive and video-only/audio-only entries",
+  "completed": 4,
+  "coldProcessRestart": true,
+  "systemPlayback": "USER CONFIRMATION PENDING"
+}

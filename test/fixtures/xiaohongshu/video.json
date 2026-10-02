@@ -1,0 +1,31 @@
+{
+  "noteData": {
+    "data": {
+      "noteData": {
+        "noteId": "6abb69640000000014010526",
+        "user": {
+          "nickname": "Fixture author"
+        },
+        "title": "Synthetic video",
+        "type": "video",
+        "video": {
+          "media": {
+            "stream": {
+              "h264": [
+                {
+                  "masterUrl": "https://sns-video-v3.xhscdn.com/fixture/video.mp4",
+                  "size": 1680739
+                }
+              ]
+            }
+          }
+        },
+        "imageList": [
+          {
+            "urlDefault": "https://sns-webpic-qc.xhscdn.com/fixture/cover.jpg"
+          }
+        ]
+      }
+    }
+  }
+}

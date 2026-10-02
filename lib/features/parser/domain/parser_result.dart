@@ -9,6 +9,16 @@ abstract final class ParserFailureCode {
   static const linkExpired = 'link_expired';
   static const unsupportedPlatform = 'unsupported_platform';
   static const parseFailed = 'parse_failed';
+  static const unsupportedUrl = 'unsupported_url';
+  static const notFound = 'not_found';
+  static const privateOrRestricted = 'private_or_restricted';
+  static const loginRequired = 'login_required';
+  static const securityChallenge = 'security_challenge';
+  static const rateLimited = 'rate_limited';
+  static const networkFailure = 'network_failure';
+  static const parseNoMatch = 'parse_no_match';
+  static const resourceForbidden = 'resource_forbidden';
+  static const unknown = 'unknown';
 }
 
 sealed class ParserResult {

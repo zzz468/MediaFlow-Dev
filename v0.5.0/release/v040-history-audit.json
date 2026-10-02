@@ -1,0 +1,37 @@
+[
+  {
+    "path": "v0.5.0/README.md",
+    "currentPresent": true,
+    "sameBytes": false
+  },
+  {
+    "path": "v0.5.0/acceptance/android.md",
+    "currentPresent": true,
+    "sameBytes": false
+  },
+  {
+    "path": "v0.5.0/acceptance/windows.md",
+    "currentPresent": true,
+    "sameBytes": false
+  },
+  {
+    "path": "v0.5.0/architecture.md",
+    "currentPresent": true,
+    "sameBytes": false
+  },
+  {
+    "path": "v0.5.0/research/README.md",
+    "currentPresent": true,
+    "sameBytes": false
+  },
+  {
+    "path": "v0.5.0/research/xiaohongshu-options.md",
+    "currentPresent": true,
+    "sameBytes": false
+  },
+  {
+    "path": "v0.5.0/research/youtube-options.md",
+    "currentPresent": true,
+    "sameBytes": false
+  }
+]

@@ -2,6 +2,8 @@ package com.mediaflow.mediaflow
 
 import android.Manifest
 import android.content.ContentValues
+import android.content.Intent
+import android.content.ContentUris
 import android.content.pm.PackageManager
 import android.media.MediaScannerConnection
 import android.os.Build
@@ -10,6 +12,7 @@ import android.provider.MediaStore
 import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.content.FileProvider
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
@@ -38,6 +41,15 @@ class MainActivity : FlutterActivity() {
             flutterEngine.dartExecutor.binaryMessenger,
             STORAGE_CHANNEL,
         ).setMethodCallHandler { call, result ->
+            if (call.method == "openDownloadedFile") {
+                try {
+                    openDownloadedFile(call.argument<String>("path") ?: "")
+                    result.success(null)
+                } catch (_: Exception) {
+                    result.error("open_failed", "Unable to open the saved media with a system app.", null)
+                }
+                return@setMethodCallHandler
+            }
             if (call.method != "publishToDownloads") {
                 result.notImplemented()
                 return@setMethodCallHandler
@@ -225,6 +237,29 @@ class MainActivity : FlutterActivity() {
             this,
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
         ) == PackageManager.PERMISSION_GRANTED
+    }
+
+    private fun openDownloadedFile(path: String) {
+        val file = File(path).canonicalFile
+        val root = File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "MediaFlow").canonicalFile
+        require(file.path.startsWith(root.path + File.separator)) { "Not a MediaFlow download." }
+        val uri = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            val selection = "${MediaStore.MediaColumns.DISPLAY_NAME}=? AND ${MediaStore.MediaColumns.RELATIVE_PATH}=?"
+            contentResolver.query(MediaStore.Downloads.EXTERNAL_CONTENT_URI,
+                arrayOf(MediaStore.MediaColumns._ID), selection,
+                arrayOf(file.name, "${Environment.DIRECTORY_DOWNLOADS}/MediaFlow/"), null)?.use { cursor ->
+                check(cursor.moveToFirst()) { "Saved download missing." }
+                ContentUris.withAppendedId(MediaStore.Downloads.EXTERNAL_CONTENT_URI, cursor.getLong(0))
+            } ?: error("Saved download missing.")
+        } else {
+            check(file.isFile) { "Saved download missing." }
+            FileProvider.getUriForFile(this, "$packageName.downloads", file)
+        }
+        val extension = file.extension.lowercase()
+        val mime = contentResolver.getType(uri) ?: android.webkit.MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension) ?: "application/octet-stream"
+        val intent = Intent(Intent.ACTION_VIEW).setDataAndType(uri, mime)
+            .addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+        startActivity(Intent.createChooser(intent, "打开下载文件"))
     }
 
     companion object {

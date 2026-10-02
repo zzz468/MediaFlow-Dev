@@ -1,0 +1,118 @@
+{
+  "date": "2026-10-01",
+  "package": "com.mediaflow.mediaflow.xhsprodv050",
+  "route": "Production main.dart, UI, default ParserService/Downloader/History",
+  "humanConfirmation": "Direct user reply 可以 to combined video/image/open/cold restart checks",
+  "historyContainsXsecToken": false,
+  "tasks": [
+    {
+      "id": "download-op-1790834302924931-122723e851c1e0497b1ab533-1",
+      "title": "元英刚换的18屏幕碎了",
+      "platform": "xiaohongshu",
+      "contentId": "6abb69640000000014010526",
+      "resourceId": "video-001",
+      "resourceType": "video",
+      "status": "completed",
+      "bytes": 1680739,
+      "savePath": "/storage/emulated/0/Download/MediaFlow/元英刚换的18屏幕碎了.mp4",
+      "errorMessage": null
+    },
+    {
+      "id": "download-op-1790834319315821-b0163ec1a9a48b713f85bd6b-1",
+      "title": "我听不清自己的情绪 001",
+      "platform": "xiaohongshu",
+      "contentId": "687a4239000000002400bcc9",
+      "resourceId": "image-001",
+      "resourceType": "image",
+      "status": "completed",
+      "bytes": 57629,
+      "savePath": "/storage/emulated/0/Download/MediaFlow/我听不清自己的情绪 001.jpg",
+      "errorMessage": null
+    },
+    {
+      "id": "download-op-1790834319315821-b0163ec1a9a48b713f85bd6b-2",
+      "title": "我听不清自己的情绪 002",
+      "platform": "xiaohongshu",
+      "contentId": "687a4239000000002400bcc9",
+      "resourceId": "image-002",
+      "resourceType": "image",
+      "status": "completed",
+      "bytes": 59560,
+      "savePath": "/storage/emulated/0/Download/MediaFlow/我听不清自己的情绪 002.jpg",
+      "errorMessage": null
+    },
+    {
+      "id": "download-op-1790834319315821-b0163ec1a9a48b713f85bd6b-3",
+      "title": "我听不清自己的情绪 003",
+      "platform": "xiaohongshu",
+      "contentId": "687a4239000000002400bcc9",
+      "resourceId": "image-003",
+      "resourceType": "image",
+      "status": "completed",
+      "bytes": 51401,
+      "savePath": "/storage/emulated/0/Download/MediaFlow/我听不清自己的情绪 003.jpg",
+      "errorMessage": null
+    },
+    {
+      "id": "download-op-1790834319315821-b0163ec1a9a48b713f85bd6b-4",
+      "title": "我听不清自己的情绪 004",
+      "platform": "xiaohongshu",
+      "contentId": "687a4239000000002400bcc9",
+      "resourceId": "image-004",
+      "resourceType": "image",
+      "status": "completed",
+      "bytes": 48936,
+      "savePath": "/storage/emulated/0/Download/MediaFlow/我听不清自己的情绪 004.jpg",
+      "errorMessage": null
+    },
+    {
+      "id": "download-op-1790834319315821-b0163ec1a9a48b713f85bd6b-5",
+      "title": "我听不清自己的情绪 005",
+      "platform": "xiaohongshu",
+      "contentId": "687a4239000000002400bcc9",
+      "resourceId": "image-005",
+      "resourceType": "image",
+      "status": "completed",
+      "bytes": 45129,
+      "savePath": "/storage/emulated/0/Download/MediaFlow/我听不清自己的情绪 005.jpg",
+      "errorMessage": null
+    },
+    {
+      "id": "download-op-1790834319315821-b0163ec1a9a48b713f85bd6b-6",
+      "title": "我听不清自己的情绪 006",
+      "platform": "xiaohongshu",
+      "contentId": "687a4239000000002400bcc9",
+      "resourceId": "image-006",
+      "resourceType": "image",
+      "status": "completed",
+      "bytes": 79710,
+      "savePath": "/storage/emulated/0/Download/MediaFlow/我听不清自己的情绪 006.jpg",
+      "errorMessage": null
+    },
+    {
+      "id": "download-op-1790834319315821-b0163ec1a9a48b713f85bd6b-7",
+      "title": "我听不清自己的情绪 007",
+      "platform": "xiaohongshu",
+      "contentId": "687a4239000000002400bcc9",
+      "resourceId": "image-007",
+      "resourceType": "image",
+      "status": "completed",
+      "bytes": 51393,
+      "savePath": "/storage/emulated/0/Download/MediaFlow/我听不清自己的情绪 007.jpg",
+      "errorMessage": null
+    },
+    {
+      "id": "download-op-1790834319315821-b0163ec1a9a48b713f85bd6b-8",
+      "title": "我听不清自己的情绪 008",
+      "platform": "xiaohongshu",
+      "contentId": "687a4239000000002400bcc9",
+      "resourceId": "image-008",
+      "resourceType": "image",
+      "status": "completed",
+      "bytes": 40232,
+      "savePath": "/storage/emulated/0/Download/MediaFlow/我听不清自己的情绪 008.jpg",
+      "errorMessage": null
+    }
+  ],
+  "finalHumanConfirmation": "2026-10-01 USER CONFIRMED; exact replies in human-confirmations.json"
+}

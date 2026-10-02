@@ -1,0 +1,9 @@
+{
+  "status": "STOPPED",
+  "failure": "networkFailure",
+  "reason": "ConnectionReset",
+  "profileCleaned": true,
+  "sample": "xhs-gallery-8",
+  "sessionLevel": 1,
+  "scope": "ordinary own anonymous WebView2; no login; no exported cookies; one sample"
+}

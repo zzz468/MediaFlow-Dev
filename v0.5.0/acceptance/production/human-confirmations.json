@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-01",
+  "source": "Direct user replies in this task",
+  "androidInitialExactReply": "可以",
+  "finalExactReply": "可以 可以",
+  "finalReplyQuestionOrder": [
+    "Windows",
+    "Android"
+  ],
+  "windows": {
+    "productionHistoryColdProcessRestore": true,
+    "orderedGallery001To008": true,
+    "videoSystemPlaybackPictureAndSound": true,
+    "firstTwoImagesSystemOpened": true,
+    "firstTwoImagesDifferent": true,
+    "imageOrderMatchesWork": true,
+    "restoredFilesOpen": true
+  },
+  "android": {
+    "productionParseAndDownload": true,
+    "videoSystemPlaybackPictureAndSound": true,
+    "firstTwoImagesSystemOpened": true,
+    "firstTwoImagesDifferent": true,
+    "imageOrderMatchesWork": true,
+    "productionHistoryColdProcessRestore": true,
+    "restoredFilesOpen": true
+  }
+}

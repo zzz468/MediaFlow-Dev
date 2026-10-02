@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-01",
+  "cwd": "D:\\projects\\mediaflow-v050",
+  "branch": "feature/v0.5.0",
+  "head": "e48d8d591a7bee232e09042d44fb965efea96556",
+  "tests": "23 offline tests passed",
+  "staticAnalysis": "No issues found",
+  "windows": "Release x64 built; platform live validation pending",
+  "android": "Debug APK built; device absent; not installed this turn",
+  "applicationId": "com.mediaflow.research.v050.feasibility",
+  "certificateSha256": "4f6a5194614d0f53c35add86eff6475b1cbc59a2376482d8afc1e08a423299c8",
+  "files": [
+    {
+      "path": "D:\\projects\\mediaflow-v050\\v0.5.0\\research\\poc\\artifacts\\MediaFlow-v050-YouTube-Windows.zip",
+      "bytes": 13067700,
+      "sha256": "821933426e75f8f7607a761ef315ca2c33dc5078b21b4210271926b17857a0f7"
+    },
+    {
+      "path": "D:\\projects\\mediaflow-v050\\v0.5.0\\research\\poc\\artifacts\\windows\\feasibility.exe",
+      "bytes": 91136,
+      "sha256": "5573dfc95ce913b4432c42e0a122f12184e658ea6083739bb8de840e092f22a1"
+    },
+    {
+      "path": "D:\\projects\\mediaflow-v050\\v0.5.0\\research\\poc\\artifacts\\MediaFlow-v050-YouTube-Android-debug.apk",
+      "bytes": 164368564,
+      "sha256": "21608fefc62f06715388721f7d03836a576cc7c39e8ddfdbce6adba6dc406267"
+    }
+  ]
+}

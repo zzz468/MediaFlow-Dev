@@ -1,0 +1,17 @@
+{
+  "package": "Microsoft.Web.WebView2",
+  "version": "1.0.4258.31",
+  "source": "https://api.nuget.org/v3-flatcontainer/microsoft.web.webview2/1.0.4258.31/microsoft.web.webview2.1.0.4258.31.nupkg",
+  "scope": "research only; official Windows SDK; no production dependency",
+  "platforms": {
+    "Windows": "native SDK",
+    "Android": "use independent System WebView adapter",
+    "iOS": "future WKWebView adapter",
+    "macOS": "future WKWebView adapter",
+    "Linux": "future browser adapter"
+  },
+  "runtime": "existing system WebView2, no runtime installation requested",
+  "licenseFiles": [
+    "LICENSE.txt"
+  ]
+}

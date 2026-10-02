@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-01",
+  "type": "Independent Windows native Dart research CLI, not production Flutter release",
+  "artifact": "D:\\projects\\mediaflow-v050\\v0.5.0\\research\\poc\\artifacts\\xhs\\XhsClosureProbe.exe",
+  "bytes": 7431680,
+  "sha256": "7f8c692848f2ac9c41c45057713a0ff2312e11f20dc297d123bded816bd681de",
+  "source": "poc/feasibility/bin/xhs_context_cli.dart",
+  "actualExecutionEvidence": "poc/windows-xhs-mobile-gallery-oct1-context-results.json",
+  "finalRebuildChange": "Only lint braces; no repeat network run",
+  "androidBuildThisTurn": false,
+  "androidInstallThisTurn": false,
+  "newDependencies": false,
+  "productionModified": false
+}

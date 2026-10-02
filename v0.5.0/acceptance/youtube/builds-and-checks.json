@@ -1,0 +1,33 @@
+{
+  "windows": {
+    "success": true,
+    "entrypoint": "lib/main.dart",
+    "zip": "D:\\projects\\mediaflow-v050\\v0.5.0\\acceptance\\youtube\\artifacts\\MediaFlow-v050-youtube-production-20261002-Windows.zip",
+    "zipBytes": 13845832,
+    "type": "Release"
+  },
+  "android": {
+    "existingAppsRetained": true,
+    "type": "Debug isolated acceptance",
+    "initialInstall": "new isolated applicationId",
+    "apkBytes": 83650947,
+    "signatureSha256": "4f6a5194614d0f53c35add86eff6475b1cbc59a2376482d8afc1e08a423299c8",
+    "versionName": "0.5.0",
+    "uninstall": false,
+    "entrypoint": "lib/main.dart",
+    "clearData": false,
+    "success": true,
+    "package": "com.mediaflow.mediaflow.youtubeprodv050",
+    "versionCode": 5,
+    "replacement": "same applicationId and same verified signer, adb install -r; data retained"
+  },
+  "tests": {
+    "failed": 0,
+    "passed": 300,
+    "analyze": "No issues found",
+    "windowsLive": "PASS",
+    "format": "PASS",
+    "androidLive": "PASS",
+    "skipped": 7
+  }
+}

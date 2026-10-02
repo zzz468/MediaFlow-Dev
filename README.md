@@ -1,13 +1,15 @@
 # MediaFlow
 
-当前版本：`v0.3.0`（`0.3.0+3`）。[发布说明与资产校验](v0.3.0/release.md)。
+当前版本：`v0.5.0`（`0.5.0+5`）。[发布说明与资产校验](v0.5.0/release/README.md)。
 
 MediaFlow 是一个面向 Windows、Android 的免费开源媒体链接处理工具，长期保留 iOS、macOS、Linux 扩展路径。Windows 与 Android 同为当前核心发布平台，所有设置、下载历史和日志仅保存在本机。
 
 ## 当前能力
 
-- Bilibili、抖音公开媒体信息解析
-- Bilibili 公开图文多图片解析、选择、下载与聚合 History；Douyin 图文尚未接入 production
+- Bilibili、抖音、小红书、YouTube 媒体链接解析
+- Bilibili、小红书图文多图片解析、选择、下载与聚合 History
+- 延续 v0.4.0 抖音图文的 App 自有本地会话流程；由用户主动正常登录，不导入外部 Cookie
+- YouTube 优先提供有声视频，也可单独下载无声视频或音频；不自动合并轨道
 - Bilibili `b23.tv`、抖音 `v.douyin.com` 短分享链接重定向处理
 - 标题、作者、封面、时长和平台信息展示
 - 顺序多任务下载队列
@@ -60,7 +62,7 @@ Windows Release 构建：
 flutter build windows --release --no-pub
 ```
 
-Android 正式签名 Release APK 使用 [v0.3.0 构建脚本](tool/build_v030_android_release.ps1)与项目既有私有签名材料；构建脚本不会把密码或私钥加入仓库。
+Android 正式签名 Release APK 使用 [发布构建脚本](tool/release/build_android_apk.ps1)与仓库外既有私有签名材料。Windows 使用 [打包脚本](tool/release/build_windows_package.ps1)。脚本校验版本与 pubspec 一致，签名材料不进入仓库。
 
 ## 文档
 

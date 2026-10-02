@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/models/media_link.dart';
 import '../application/download_manager.dart';
 import '../domain/download_task.dart';
+import '../data/local_media_opener.dart';
 
 class DownloadTaskTile extends ConsumerWidget {
   const DownloadTaskTile({required this.task, super.key});
@@ -96,6 +97,27 @@ class DownloadTaskTile extends ConsumerWidget {
                 Wrap(
                   spacing: 4,
                   children: [
+                    if (task.status == DownloadStatus.completed &&
+                        task.savePath != null)
+                      TextButton.icon(
+                        onPressed: () async {
+                          try {
+                            await ref
+                                .read(mediaFileOpenerProvider)
+                                .open(task.savePath!);
+                          } catch (_) {
+                            if (context.mounted) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(
+                                  content: Text('无法打开文件，请检查文件是否仍存在及系统应用。'),
+                                ),
+                              );
+                            }
+                          }
+                        },
+                        icon: const Icon(Icons.open_in_new),
+                        label: const Text('打开文件'),
+                      ),
                     if (task.status == DownloadStatus.downloading ||
                         task.status == DownloadStatus.queued)
                       TextButton.icon(

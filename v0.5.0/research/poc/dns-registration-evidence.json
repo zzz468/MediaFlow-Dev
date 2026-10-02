@@ -1,0 +1,18 @@
+[
+  {
+    "ip": "69.171.235.22",
+    "source": "https://rdap.arin.net/registry/ip/69.171.235.22",
+    "endAddress": "69.171.255.255",
+    "handle": "NET-69-171-224-0-1",
+    "name": "TFBNET3",
+    "startAddress": "69.171.224.0"
+  },
+  {
+    "ip": "174.132.167.252",
+    "source": "https://rdap.arin.net/registry/ip/174.132.167.252",
+    "handle": "174.132.0.0 - 174.132.255.255",
+    "startAddress": "174.132.0.0",
+    "endAddress": "174.132.255.255",
+    "name": "UK-MICROSOFT-20080617"
+  }
+]

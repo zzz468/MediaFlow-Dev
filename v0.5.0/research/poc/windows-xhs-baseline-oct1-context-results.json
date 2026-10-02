@@ -1,0 +1,86 @@
+[
+  {
+    "sample": "xhs-video",
+    "platform": "xiaohongshu",
+    "os": "windows",
+    "atUtc": "2026-10-01T05:09:55.927923Z",
+    "events": [
+      {
+        "method": "GET",
+        "host": "xhslink.cn",
+        "path": "/o/5X01rOYZDMT",
+        "queryKeys": [],
+        "cookieSent": false,
+        "proxy": "DIRECT",
+        "publicRequestHeaders": {
+          "User-Agent": "MediaFlowResearch/0.5.0 (windows)",
+          "Accept": "not explicitly set",
+          "Accept-Language": "not explicitly set",
+          "Referer": "not explicitly set"
+        },
+        "systemDns": [
+          "106.54.99.69",
+          "118.195.253.242"
+        ],
+        "status": 302,
+        "mime": "text/html; charset=utf-8",
+        "elapsedMs": 341,
+        "setCookiePresent": false,
+        "setCookieNames": [],
+        "redirectTo": "https://www.xiaohongshu.com/discovery/item/6abb69640000000014010526"
+      },
+      {
+        "method": "GET",
+        "host": "www.xiaohongshu.com",
+        "path": "/discovery/item/6abb69640000000014010526",
+        "queryKeys": [
+          "app_platform",
+          "ignoreEngage",
+          "app_version",
+          "share_from_user_hidden",
+          "xsec_source",
+          "type",
+          "xsec_token",
+          "author_share",
+          "shareRedId",
+          "apptime",
+          "share_id",
+          "share_channel",
+          "appuid",
+          "xhsshare"
+        ],
+        "cookieSent": false,
+        "proxy": "DIRECT",
+        "publicRequestHeaders": {
+          "User-Agent": "MediaFlowResearch/0.5.0 (windows)",
+          "Accept": "not explicitly set",
+          "Accept-Language": "not explicitly set",
+          "Referer": "not explicitly set"
+        },
+        "systemDns": [
+          "81.69.116.102",
+          "81.69.116.86",
+          "81.69.116.87"
+        ],
+        "status": 302,
+        "mime": "text/html; charset=utf-8",
+        "elapsedMs": 235,
+        "setCookiePresent": true,
+        "setCookieNames": [
+          "acw_tc"
+        ],
+        "redirectTo": "https://www.xiaohongshu.com/login"
+      }
+    ],
+    "originalUrl": "https://xhslink.cn/o/5X01rOYZDMT",
+    "contextMode": "baseline-oct1",
+    "anonymousSession": false,
+    "cookiesPersisted": false,
+    "a1Sent": false,
+    "webSessionSent": false,
+    "homeInitialization": false,
+    "status": "STOPPED",
+    "failure": "loginRequired",
+    "reason": "redirectDenied"
+  }
+]

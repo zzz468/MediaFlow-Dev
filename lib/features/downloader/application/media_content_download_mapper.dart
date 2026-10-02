@@ -46,7 +46,9 @@ DownloadTask _taskFor(
       content.resources.length == 1 &&
       content.type == MediaContentType.video &&
       resource.type == MediaResourceType.video;
-  final title = isSingleVideo
+  final title = resource.trackRole != null
+      ? '${content.title} ${resource.trackRole!.name} ${resource.qualityLabel ?? ""}'
+      : isSingleVideo
       ? content.title
       : _orderedTitle(resource.suggestedFileName ?? content.title, index);
 
@@ -63,6 +65,8 @@ DownloadTask _taskFor(
     resourceType: resource.type.name,
     suggestedFileName: resource.suggestedFileName,
     mimeType: resource.mimeType,
+    totalBytes: resource.sizeBytes,
+    sourceUrl: resource.temporaryUrl ? content.sourceUrl : null,
   );
 }
 

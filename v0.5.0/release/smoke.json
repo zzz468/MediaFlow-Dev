@@ -1,0 +1,27 @@
+{
+  "version": "0.5.0+5",
+  "date": "2026-10-02",
+  "build": "production Release lib/main.dart",
+  "windows": {
+    "startup": "PASS",
+    "bilibili": "PASS",
+    "douyin": "PASS",
+    "xiaohongshu": "PASS",
+    "youtube": "PASS",
+    "download": "PASS",
+    "historyRestart": "PASS"
+  },
+  "android": {
+    "applicationId": "com.mediaflow.mediaflow",
+    "startup": "PASS",
+    "bilibili": "PASS",
+    "douyin": "PASS",
+    "xiaohongshu": "PASS",
+    "youtube": "PASS",
+    "download": "PASS",
+    "historyRestart": "PASS",
+    "installation": "Compatible formal signer; no uninstall or data clear"
+  },
+  "evidence": "User final confirmation: Windows 和 Android 均正常，下载与 History 也正常",
+  "playback": "Prior production acceptance: two progressive samples and separate video/audio, both platforms, confirmed by user"
+}

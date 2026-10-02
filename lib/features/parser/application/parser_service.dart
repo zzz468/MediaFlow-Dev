@@ -7,6 +7,9 @@ import '../data/douyin/gallery/douyin_content_parser.dart';
 import '../data/douyin/gallery/douyin_gallery_factory.dart';
 import '../data/douyin/observation/douyin_browser_observation.dart';
 import '../data/url_platform_detector.dart';
+import '../data/youtube/youtube_parser.dart';
+import '../data/xiaohongshu/xiaohongshu_parser.dart';
+import '../data/xiaohongshu/xiaohongshu_http_client.dart';
 import '../domain/parser_interface.dart';
 import '../domain/parser_result.dart';
 import '../domain/platform_detector.dart';
@@ -61,10 +64,14 @@ class ParserService {
 
 ParserService createDefaultParserService() {
   final networkClient = HttpNetworkClient();
+  final xhsClient = XiaohongshuHttpClient();
   final gallery = installedDouyinGalleryBackend();
+  final youtube = YoutubeParser();
   return ParserService(
     platformDetector: const UrlPlatformDetector(),
     parsers: [
+      youtube,
+      XiaohongshuParser(networkClient: xhsClient),
       BilibiliOpusParser(networkClient: networkClient),
       BilibiliParser(networkClient: networkClient),
       DouyinContentParser(
@@ -76,7 +83,11 @@ ParserService createDefaultParserService() {
         ),
       ),
     ],
-    onClose: networkClient.close,
+    onClose: () {
+      networkClient.close();
+      xhsClient.close();
+      youtube.close();
+    },
     establishSession: gallery == null
         ? null
         : () async =>

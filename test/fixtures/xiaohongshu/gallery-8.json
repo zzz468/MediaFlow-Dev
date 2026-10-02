@@ -1,0 +1,57 @@
+{
+  "noteData": {
+    "data": {
+      "noteData": {
+        "noteId": "687a4239000000002400bcc9",
+        "user": {
+          "nickname": "Fixture author"
+        },
+        "title": "Synthetic 8 image gallery",
+        "type": "normal",
+        "imageList": [
+          {
+            "width": 1080,
+            "height": 1080,
+            "urlDefault": "http://sns-webpic-qc.xhscdn.com/fixture/1.jpg"
+          },
+          {
+            "width": 1080,
+            "height": 1080,
+            "urlDefault": "http://sns-webpic-qc.xhscdn.com/fixture/2.jpg"
+          },
+          {
+            "width": 1080,
+            "height": 1080,
+            "urlDefault": "http://sns-webpic-qc.xhscdn.com/fixture/3.jpg"
+          },
+          {
+            "width": 1080,
+            "height": 1080,
+            "urlDefault": "http://sns-webpic-qc.xhscdn.com/fixture/4.jpg"
+          },
+          {
+            "width": 1080,
+            "height": 1080,
+            "urlDefault": "http://sns-webpic-qc.xhscdn.com/fixture/5.jpg"
+          },
+          {
+            "width": 1080,
+            "height": 1080,
+            "urlDefault": "http://sns-webpic-qc.xhscdn.com/fixture/6.jpg"
+          },
+          {
+            "width": 1080,
+            "height": 1080,
+            "urlDefault": "http://sns-webpic-qc.xhscdn.com/fixture/7.jpg"
+          },
+          {
+            "width": 1080,
+            "height": 1080,
+            "urlDefault": "http://sns-webpic-qc.xhscdn.com/fixture/8.jpg"
+          }
+        ],
+        "desc": "Synthetic public hydration; no platform tokens"
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "os": "android",
+  "atUtc": "2026-10-02T13:14:57.554507Z",
+  "route": "HomePage/ParserService/DownloadManager/History",
+  "status": "ANDROID PRODUCTION PASS",
+  "systemPlayback": "USER CONFIRMED PASS",
+  "coldProcessRestart": "PASS - main.dart stopped/started, History retained and confirmed by user",
+  "samples": [
+    {
+      "videoId": "hLY9KMIU2BA",
+      "title": "MIYEON 'RUN AWAY' M/V Teaser",
+      "downloads": [
+        {
+          "role": "progressive",
+          "resourceId": "youtube:ANDROID_SDKLESS:18",
+          "mimeType": "video/mp4",
+          "status": "completed",
+          "bytes": 1544991,
+          "expectedContentLength": 1544991,
+          "responseTotalBytes": 1544991,
+          "savePath": "/storage/emulated/0/Download/MediaFlow/MIYEON 'RUN AWAY' M_V Teaser progressive 360p (1).mp4",
+          "error": null
+        },
+        {
+          "role": "videoOnly",
+          "resourceId": "youtube:VISIONOS:160",
+          "mimeType": "video/mp4",
+          "status": "completed",
+          "bytes": 172358,
+          "expectedContentLength": 172358,
+          "responseTotalBytes": 172358,
+          "savePath": "/storage/emulated/0/Download/MediaFlow/MIYEON 'RUN AWAY' M_V Teaser videoOnly 144p.mp4",
+          "error": null
+        },
+        {
+          "role": "audioOnly",
+          "resourceId": "youtube:VISIONOS:139",
+          "mimeType": "audio/mp4",
+          "status": "completed",
+          "bytes": 113197,
+          "expectedContentLength": 113197,
+          "responseTotalBytes": 113197,
+          "savePath": "/storage/emulated/0/Download/MediaFlow/MIYEON 'RUN AWAY' M_V Teaser audioOnly 49 kbps.m4a",
+          "error": null
+        }
+      ]
+    },
+    {
+      "videoId": "jNQXAC9IVRw",
+      "title": "Me at the zoo",
+      "downloads": [
+        {
+          "role": "progressive",
+          "resourceId": "youtube:ANDROID_SDKLESS:18",
+          "mimeType": "video/mp4",
+          "status": "completed",
+          "bytes": 629172,
+          "expectedContentLength": null,
+          "responseTotalBytes": 629172,
+          "savePath": "/storage/emulated/0/Download/MediaFlow/Me at the zoo progressive 240p.mp4",
+          "error": null
+        }
+      ]
+    }
+  ],
+  "parserErrorCode": null,
+  "repositoryRestore": true
+}
