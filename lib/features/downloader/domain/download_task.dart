@@ -37,6 +37,7 @@ class DownloadTask {
     this.resourceType,
     this.suggestedFileName,
     this.mimeType,
+    this.sourceUrl,
   }) : assert(progress >= 0 && progress <= 1),
        assert(bytesReceived >= 0),
        assert(totalBytes == null || totalBytes >= 0);
@@ -64,6 +65,10 @@ class DownloadTask {
   final String? resourceType;
   final String? suggestedFileName;
   final String? mimeType;
+
+  /// When set, url is temporary and only this stable source is persisted.
+  final Uri? sourceUrl;
+  bool get needsUrlRefresh => sourceUrl != null && url == sourceUrl;
 
   DownloadTask copyWith({
     String? title,
@@ -103,6 +108,7 @@ class DownloadTask {
       resourceType: resourceType,
       suggestedFileName: suggestedFileName,
       mimeType: mimeType,
+      sourceUrl: sourceUrl,
     );
   }
 
@@ -110,7 +116,8 @@ class DownloadTask {
     return <String, Object?>{
       'id': id,
       'title': title,
-      'url': url.toString(),
+      'url': (sourceUrl ?? url).toString(),
+      if (sourceUrl != null) 'sourceUrl': sourceUrl.toString(),
       'platform': platform.name,
       'mode': mode.name,
       'requestHeaders': _safeRequestHeaders(requestHeaders),
@@ -121,7 +128,9 @@ class DownloadTask {
       'savePath': savePath,
       'createdAt': createdAt.toIso8601String(),
       'completedAt': completedAt?.toIso8601String(),
-      'errorMessage': errorMessage,
+      'errorMessage': sourceUrl == null
+          ? errorMessage
+          : errorMessage?.replaceAll(RegExp(r'https?://\S+'), '[媒体地址已省略]'),
       if (contentId != null) 'contentId': contentId,
       if (resourceId != null) 'resourceId': resourceId,
       if (resourceType != null) 'resourceType': resourceType,
@@ -172,6 +181,9 @@ class DownloadTask {
       resourceType: json['resourceType'] as String?,
       suggestedFileName: json['suggestedFileName'] as String?,
       mimeType: json['mimeType'] as String?,
+      sourceUrl: json['sourceUrl'] is String
+          ? Uri.tryParse(json['sourceUrl'] as String)
+          : null,
     );
   }
 

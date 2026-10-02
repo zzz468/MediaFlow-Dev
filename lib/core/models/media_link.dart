@@ -1,4 +1,4 @@
-enum MediaPlatform { unknown, douyin, bilibili }
+enum MediaPlatform { unknown, douyin, bilibili, xiaohongshu, youtube }
 
 enum MediaLinkType { unknown, video, playlist }
 
@@ -7,6 +7,8 @@ extension MediaPlatformDisplayName on MediaPlatform {
     return switch (this) {
       MediaPlatform.douyin => '抖音',
       MediaPlatform.bilibili => 'Bilibili',
+      MediaPlatform.xiaohongshu => '小红书',
+      MediaPlatform.youtube => 'YouTube',
       MediaPlatform.unknown => '未知',
     };
   }

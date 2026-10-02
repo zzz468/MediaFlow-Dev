@@ -1,0 +1,56 @@
+ analysis_options.yaml                              |  1 +
+ android/app/src/main/AndroidManifest.xml           |  6 +++
+ .../kotlin/com/mediaflow/mediaflow/MainActivity.kt | 35 ++++++++++++++++
+ lib/core/logging/app_logger.dart                   | 11 +++--
+ lib/core/logging/local_log_store.dart              |  3 +-
+ lib/core/models/media_link.dart                    |  4 +-
+ lib/core/storage/app_data_directory.dart           | 13 ++++++
+ .../downloader/application/download_manager.dart   | 18 +++++++-
+ .../application/media_content_download_action.dart | 39 +++++++++++-------
+ .../application/media_content_download_mapper.dart |  6 ++-
+ lib/features/downloader/domain/download_task.dart  | 16 +++++++-
+ .../presentation/download_task_tile.dart           | 22 ++++++++++
+ lib/features/home/presentation/home_page.dart      | 48 +++++++++++++++++-----
+ .../parser/application/parser_service.dart         | 13 +++++-
+ .../parser/data/url_platform_detector.dart         | 12 ++++++
+ lib/features/parser/domain/media_content.dart      | 24 +++++++++++
+ lib/features/parser/domain/parser_result.dart      | 10 +++++
+ pubspec.yaml                                       |  2 +
+ 18 files changed, 249 insertions(+), 34 deletions(-)
+ M analysis_options.yaml
+ M android/app/src/main/AndroidManifest.xml
+ M android/app/src/main/kotlin/com/mediaflow/mediaflow/MainActivity.kt
+ M lib/core/logging/app_logger.dart
+ M lib/core/logging/local_log_store.dart
+ M lib/core/models/media_link.dart
+ M lib/core/storage/app_data_directory.dart
+ M lib/features/downloader/application/download_manager.dart
+ M lib/features/downloader/application/media_content_download_action.dart
+ M lib/features/downloader/application/media_content_download_mapper.dart
+ M lib/features/downloader/domain/download_task.dart
+ M lib/features/downloader/presentation/download_task_tile.dart
+ M lib/features/home/presentation/home_page.dart
+ M lib/features/parser/application/parser_service.dart
+ M lib/features/parser/data/url_platform_detector.dart
+ M lib/features/parser/domain/media_content.dart
+ M lib/features/parser/domain/parser_result.dart
+ M pubspec.yaml
+ M windows/flutter/generated_plugin_registrant.cc
+ M windows/flutter/generated_plugin_registrant.h
+ M windows/flutter/generated_plugins.cmake
+?? android/app/src/main/res/xml/download_file_paths.xml
+?? android/app/src/main/res/xml/network_security_config.xml
+?? integration_test/v050_xhs_production_acceptance_test.dart
+?? integration_test/v050_youtube_production_acceptance_test.dart
+?? lib/core/logging/log_redactor.dart
+?? lib/features/downloader/data/local_media_opener.dart
+?? lib/features/parser/data/xiaohongshu/
+?? lib/features/parser/data/youtube/
+?? lib/features/parser/presentation/media_variant_picker.dart
+?? test/features/downloader/xiaohongshu_history_contract_test.dart
+?? test/features/parser/xiaohongshu_parser_test.dart
+?? test/features/parser/xiaohongshu_ui_test.dart
+?? test/features/parser/youtube_parser_test.dart
+?? test/fixtures/xiaohongshu/
+?? third_party/youtube_protocol/
+?? v0.5.0/

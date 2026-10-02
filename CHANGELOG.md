@@ -9,6 +9,31 @@
 - 多质量、多格式下载选项
 - 系统级下载完成通知
 
+## [0.5.0] - 2026-10-02
+
+### Added
+
+- 小红书公开视频及静态多图的本地匿名解析、选择、下载与 History。
+- YouTube metadata、多质量有声视频、无声视频与独立音频资源选择。
+- 完成任务由系统应用打开；Android 文件继续发布至 MediaStore。
+- 临时媒体 URL 不写入 YouTube History，增加日志敏感字段脱敏。
+
+### Validation
+
+- Windows / Android 正式路径的两平台下载、系统播放和 History 冷启动验收通过。
+- 发布资产、正式签名、最终回归和限制见 [发布报告](v0.5.0/release/README.md)。
+
+### Known Limitations
+
+- 不实现 SABR、FFmpeg 或音视频合并；视频无声音时界面明确标注。
+- YouTube 重启后的未完成任务须重新解析短期地址；受限内容不绕过。
+- iOS / macOS / Linux 未完成正式发布验收。
+
+## [0.4.0] - 2026-09-30
+
+- 接入抖音静态图文与 App 自有本地会话；延续匿名视频和 Bilibili 支持。
+- 历史发布说明见 [v0.4.0 notes](v0.4.0/release-notes-draft.md)。
+
 ## [0.3.0] - 2026-09-25
 
 ### Added

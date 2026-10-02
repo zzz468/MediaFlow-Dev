@@ -1,0 +1,7 @@
+.reference-cache/
+.pub-cache/
+.dart_tool/
+build/
+downloads/
+windows_scaffold/
+artifacts/

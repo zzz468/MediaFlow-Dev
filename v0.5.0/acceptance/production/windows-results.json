@@ -1,0 +1,94 @@
+{
+  "os": "windows",
+  "atUtc": "2026-10-01T05:59:52.262319Z",
+  "route": "HomePage/default ParserService/default DownloadManager/default History",
+  "status": "AUTOMATED PRODUCTION UI/DOWNLOAD/REPOSITORY RESTORE PASS",
+  "systemOpen": "USER CONFIRMED",
+  "coldProcessRestart": "USER CONFIRMED after production main.dart Release new process launch",
+  "6abb69640000000014010526": {
+    "title": "元英刚换的18屏幕碎了",
+    "count": 1,
+    "tasks": [
+      {
+        "id": "download-op-1790834396312742-7702f277040f218770fc593a-1",
+        "resourceId": "video-001",
+        "resourceType": "video",
+        "bytes": 1680739,
+        "savePath": "D:/projects/mediaflow-v050/build/xhs-production-data/downloads\\元英刚换的18屏幕碎了 (2).mp4",
+        "status": "completed"
+      }
+    ]
+  },
+  "687a4239000000002400bcc9": {
+    "title": "我听不清自己的情绪",
+    "count": 8,
+    "tasks": [
+      {
+        "id": "download-op-1790834398009968-e50917b3dedbca82b15cf874-1",
+        "resourceId": "image-001",
+        "resourceType": "image",
+        "bytes": 57629,
+        "savePath": "D:/projects/mediaflow-v050/build/xhs-production-data/downloads\\我听不清自己的情绪 001.jpg",
+        "status": "completed"
+      },
+      {
+        "id": "download-op-1790834398009968-e50917b3dedbca82b15cf874-2",
+        "resourceId": "image-002",
+        "resourceType": "image",
+        "bytes": 59560,
+        "savePath": "D:/projects/mediaflow-v050/build/xhs-production-data/downloads\\我听不清自己的情绪 002.jpg",
+        "status": "completed"
+      },
+      {
+        "id": "download-op-1790834398009968-e50917b3dedbca82b15cf874-3",
+        "resourceId": "image-003",
+        "resourceType": "image",
+        "bytes": 51401,
+        "savePath": "D:/projects/mediaflow-v050/build/xhs-production-data/downloads\\我听不清自己的情绪 003.jpg",
+        "status": "completed"
+      },
+      {
+        "id": "download-op-1790834398009968-e50917b3dedbca82b15cf874-4",
+        "resourceId": "image-004",
+        "resourceType": "image",
+        "bytes": 48936,
+        "savePath": "D:/projects/mediaflow-v050/build/xhs-production-data/downloads\\我听不清自己的情绪 004.jpg",
+        "status": "completed"
+      },
+      {
+        "id": "download-op-1790834398009968-e50917b3dedbca82b15cf874-5",
+        "resourceId": "image-005",
+        "resourceType": "image",
+        "bytes": 45129,
+        "savePath": "D:/projects/mediaflow-v050/build/xhs-production-data/downloads\\我听不清自己的情绪 005.jpg",
+        "status": "completed"
+      },
+      {
+        "id": "download-op-1790834398009968-e50917b3dedbca82b15cf874-6",
+        "resourceId": "image-006",
+        "resourceType": "image",
+        "bytes": 79710,
+        "savePath": "D:/projects/mediaflow-v050/build/xhs-production-data/downloads\\我听不清自己的情绪 006.jpg",
+        "status": "completed"
+      },
+      {
+        "id": "download-op-1790834398009968-e50917b3dedbca82b15cf874-7",
+        "resourceId": "image-007",
+        "resourceType": "image",
+        "bytes": 51393,
+        "savePath": "D:/projects/mediaflow-v050/build/xhs-production-data/downloads\\我听不清自己的情绪 007.jpg",
+        "status": "completed"
+      },
+      {
+        "id": "download-op-1790834398009968-e50917b3dedbca82b15cf874-8",
+        "resourceId": "image-008",
+        "resourceType": "image",
+        "bytes": 40232,
+        "savePath": "D:/projects/mediaflow-v050/build/xhs-production-data/downloads\\我听不清自己的情绪 008.jpg",
+        "status": "completed"
+      }
+    ]
+  },
+  "providerRecreationRestore": true,
+  "finalHumanConfirmation": "2026-10-01 USER CONFIRMED; exact replies in human-confirmations.json"
+}

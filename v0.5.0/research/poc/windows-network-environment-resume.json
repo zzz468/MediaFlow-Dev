@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-09-30T20:07:23.0935452+08:00",
+  "network": "Windows USB tether to Android",
+  "winHttpProxy": "DIRECT (netsh checked)",
+  "webView2ResearchProxy": "--no-proxy-server (source verified); does not inherit proxy",
+  "browser": "User manually confirms accessibility; agent does not open browser",
+  "browserDoH": "NOT VERIFIED",
+  "browserProxy": "Separate configuration/different network reported; specifics not supplied",
+  "activeInterface": "Remote NDIS ifIndex16",
+  "IPv4": "10.120.174.72",
+  "gateway": "10.120.174.45",
+  "dns": [
+    "10.120.174.45"
+  ],
+  "activeIPv6": false,
+  "virtualWindowsAdapterPresent": false,
+  "winInetProxyEnabled": false,
+  "winInetProxyPresent": false,
+  "pacPresent": false,
+  "proxyEnvironment": []
+}

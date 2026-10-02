@@ -30,26 +30,37 @@ List<DownloadTask> createMediaContentDownloadTasks(
       'The selection contains an unknown resource ID.',
     );
   }
-  final selection = MediaContent(
-    id: content.id,
-    platform: content.platform,
-    title: content.title,
-    sourceUrl: content.sourceUrl,
-    type: content.type,
-    author: content.author,
-    description: content.description,
-    resources: selected,
-  );
+  if (selected.any((r) => r.trackRole != null)) {
+    return downloadTasksFromMediaContent(
+      MediaContent(
+        id: content.id,
+        platform: content.platform,
+        title: content.title,
+        sourceUrl: content.sourceUrl,
+        type: content.type,
+        resources: selected,
+        author: content.author,
+        description: content.description,
+        coverUrl: content.coverUrl,
+        duration: content.duration,
+      ),
+      operationId: operationId ?? newDownloadOperationId(createdAt),
+      createdAt: createdAt,
+    );
+  }
   final mapped = downloadTasksFromMediaContent(
-    selection,
+    content,
     operationId: operationId ?? newDownloadOperationId(createdAt),
     createdAt: createdAt,
   );
   return List<DownloadTask>.unmodifiable([
     for (var index = 0; index < mapped.length; index++)
-      mapped[index].copyWith(
-        title: '${content.title} ${(index + 1).toString().padLeft(3, '0')}',
-      ),
+      if (selectedResourceIds.contains(mapped[index].resourceId))
+        mapped[index].copyWith(
+          title: content.type == MediaContentType.video && mapped.length == 1
+              ? content.title
+              : '${content.title} ${(index + 1).toString().padLeft(3, '0')}',
+        ),
   ]);
 }
 

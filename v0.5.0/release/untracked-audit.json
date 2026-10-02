@@ -1,0 +1,1127 @@
+[
+  {
+    "path": "android/app/src/main/res/xml/download_file_paths.xml",
+    "category": "production source",
+    "commit": true
+  },
+  {
+    "path": "android/app/src/main/res/xml/network_security_config.xml",
+    "category": "production source",
+    "commit": true
+  },
+  {
+    "path": "integration_test/v050_xhs_production_acceptance_test.dart",
+    "category": "test and synthetic fixture",
+    "commit": true
+  },
+  {
+    "path": "integration_test/v050_youtube_production_acceptance_test.dart",
+    "category": "test and synthetic fixture",
+    "commit": true
+  },
+  {
+    "path": "lib/core/logging/log_redactor.dart",
+    "category": "production source",
+    "commit": true
+  },
+  {
+    "path": "lib/features/downloader/data/local_media_opener.dart",
+    "category": "production source",
+    "commit": true
+  },
+  {
+    "path": "lib/features/parser/data/xiaohongshu/xiaohongshu_decoder.dart",
+    "category": "production source",
+    "commit": true
+  },
+  {
+    "path": "lib/features/parser/data/xiaohongshu/xiaohongshu_failure.dart",
+    "category": "production source",
+    "commit": true
+  },
+  {
+    "path": "lib/features/parser/data/xiaohongshu/xiaohongshu_http_client.dart",
+    "category": "production source",
+    "commit": true
+  },
+  {
+    "path": "lib/features/parser/data/xiaohongshu/xiaohongshu_parser.dart",
+    "category": "production source",
+    "commit": true
+  },
+  {
+    "path": "lib/features/parser/data/xiaohongshu/xiaohongshu_resource_mapper.dart",
+    "category": "production source",
+    "commit": true
+  },
+  {
+    "path": "lib/features/parser/data/xiaohongshu/xiaohongshu_url.dart",
+    "category": "production source",
+    "commit": true
+  },
+  {
+    "path": "lib/features/parser/data/youtube/youtube_parser.dart",
+    "category": "production source",
+    "commit": true
+  },
+  {
+    "path": "lib/features/parser/data/youtube/youtube_profiles.dart",
+    "category": "production source",
+    "commit": true
+  },
+  {
+    "path": "lib/features/parser/data/youtube/youtube_url.dart",
+    "category": "production source",
+    "commit": true
+  },
+  {
+    "path": "lib/features/parser/data/youtube/youtube_watch_observation.dart",
+    "category": "production source",
+    "commit": true
+  },
+  {
+    "path": "lib/features/parser/presentation/media_variant_picker.dart",
+    "category": "production source",
+    "commit": true
+  },
+  {
+    "path": "test/core/logging/release_redaction_test.dart",
+    "category": "test and synthetic fixture",
+    "commit": true
+  },
+  {
+    "path": "test/features/downloader/xiaohongshu_history_contract_test.dart",
+    "category": "test and synthetic fixture",
+    "commit": true
+  },
+  {
+    "path": "test/features/parser/xiaohongshu_parser_test.dart",
+    "category": "test and synthetic fixture",
+    "commit": true
+  },
+  {
+    "path": "test/features/parser/xiaohongshu_ui_test.dart",
+    "category": "test and synthetic fixture",
+    "commit": true
+  },
+  {
+    "path": "test/features/parser/youtube_parser_test.dart",
+    "category": "test and synthetic fixture",
+    "commit": true
+  },
+  {
+    "path": "test/fixtures/xiaohongshu/README.md",
+    "category": "test and synthetic fixture",
+    "commit": true
+  },
+  {
+    "path": "test/fixtures/xiaohongshu/gallery-5.json",
+    "category": "test and synthetic fixture",
+    "commit": true
+  },
+  {
+    "path": "test/fixtures/xiaohongshu/gallery-8.json",
+    "category": "test and synthetic fixture",
+    "commit": true
+  },
+  {
+    "path": "test/fixtures/xiaohongshu/video.json",
+    "category": "test and synthetic fixture",
+    "commit": true
+  },
+  {
+    "path": "third_party/youtube_protocol/LICENSE",
+    "category": "license and provenance",
+    "commit": true
+  },
+  {
+    "path": "third_party/youtube_protocol/NOTICE.md",
+    "category": "license and provenance",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/README.md",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/acceptance/android.md",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/acceptance/production/README.md",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/acceptance/production/android-cold-process.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/acceptance/production/android-install-preflight.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/acceptance/production/android-results.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/acceptance/production/builds.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/acceptance/production/file-manifest.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/acceptance/production/human-confirmations.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/acceptance/production/windows-cold-process.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/acceptance/production/windows-results.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/acceptance/windows.md",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/acceptance/youtube/README.md",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/acceptance/youtube/android-cold-process.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/acceptance/youtube/android-mediastore.txt",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/acceptance/youtube/android-production-acceptance.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/acceptance/youtube/android-user-playback.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/acceptance/youtube/builds-and-checks.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/acceptance/youtube/frozen-verification.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/acceptance/youtube/git-workspace.txt",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/acceptance/youtube/windows-cold-process.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/acceptance/youtube/windows-production-acceptance.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/acceptance/youtube/windows-user-playback.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/architecture.md",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/README.md",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/network-matrix-phase2.md",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/phase2-file-manifest.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/phase2-progress-report.md",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/.gitignore",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/README.md",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/WindowsAnonymousPage.cs",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/android-fixed-samples-resume-results.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/android-latest-results.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/android-media-url-results.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/android-mobile-schema-results.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/android-network-environment-resume.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/android-page-diagnostic.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/android-real-results.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/capture_android_evidence.py",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/dns-registration-evidence.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/.gitignore",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/.metadata",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/README.md",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/analysis_options.yaml",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/android/.gitignore",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/android/app/build.gradle.kts",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/android/app/src/debug/AndroidManifest.xml",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/android/app/src/main/AndroidManifest.xml",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/android/app/src/main/kotlin/com/mediaflow/research/v050/feasibility/MainActivity.kt",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/android/app/src/main/res/drawable-v21/launch_background.xml",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/android/app/src/main/res/drawable/launch_background.xml",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/android/app/src/main/res/mipmap-mdpi/ic_launcher.png",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/android/app/src/main/res/values-night/styles.xml",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/android/app/src/main/res/values/styles.xml",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/android/app/src/main/res/xml/research_network_security.xml",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/android/app/src/profile/AndroidManifest.xml",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/android/build.gradle.kts",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/android/gradle.properties",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/android/gradle/wrapper/gradle-wrapper.properties",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/android/settings.gradle.kts",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/bin/network_matrix.dart",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/bin/probe_cli.dart",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/bin/windows_environment_check.dart",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/bin/xhs_context_cli.dart",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/bin/youtube_client_probe.dart",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/fixtures/youtube-minimal.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/lib/main.dart",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/lib/probe.dart",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/lib/prototype_storage.dart",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/lib/source_snapshot/core/models/media_link.dart",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/lib/source_snapshot/features/downloader/application/media_content_download_mapper.dart",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/lib/source_snapshot/features/downloader/domain/download_task.dart",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/lib/source_snapshot/features/parser/domain/media_content.dart",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/lib/source_snapshot/manifest.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/lib/youtube_client_download.dart",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/lib/youtube_client_evaluation.dart",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/lib/youtube_client_main.dart",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/lib/youtube_main.dart",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/lib/youtube_manifest.dart",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/lib/youtube_player_formats.dart",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/lib/youtube_progressive_main.dart",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/lib/youtube_prototype.dart",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/lib/youtube_watch_observation.dart",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/pubspec.lock",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/pubspec.yaml",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/test/widget_test.dart",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/test/xhs_context_test.dart",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/test/youtube_client_evaluation_test.dart",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/test/youtube_manifest_test.dart",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/test/youtube_normalization_metadata_test.dart",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/test/youtube_player_formats_test.dart",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/test/youtube_prototype_test.dart",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/windows/.gitignore",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/windows/CMakeLists.txt",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/windows/flutter/CMakeLists.txt",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/windows/flutter/generated_plugin_registrant.cc",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/windows/flutter/generated_plugin_registrant.h",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/windows/flutter/generated_plugins.cmake",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/windows/runner/CMakeLists.txt",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/windows/runner/Runner.rc",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/windows/runner/flutter_window.cpp",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/windows/runner/flutter_window.h",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/windows/runner/main.cpp",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/windows/runner/resource.h",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/windows/runner/resources/app_icon.ico",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/windows/runner/runner.exe.manifest",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/windows/runner/utils.cpp",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/windows/runner/utils.h",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/windows/runner/win32_window.cpp",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/feasibility/windows/runner/win32_window.h",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/human-confirmations.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/network_diagnostic.py",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/reference_audit.py",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/reference_runtime.py",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/resume_device.py",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/source_audit.py",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/windows-anonymous-browser-results.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/windows-browser-sdk-evidence.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/windows-dart-network-matrix-resume.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/windows-fixed-samples-resume-results.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/windows-network-diagnostic.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/windows-network-environment-resume.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/windows-real-results.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/windows-shorts-normalized-results.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/windows-xhs-baseline-oct1-context-results.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/windows-xhs-mobile-gallery-oct1-context-results.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/windows-xhs-mobile-oct1-context-results.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/poc/windows_browser_probe.py",
+    "category": "isolated research prototype source",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/reference-project-comparison.md",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/reference-project-evidence.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/reference-source-index.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/user-reference-audit.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/xhs-closure-build.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/xhs-context-experiment-plan.md",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/xhs-feasibility-closure.md",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/xhs-oct1-reference-audit.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/xiaohongshu-options.md",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/xiaohongshu-phase2.md",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/youtube-android-manifest-fix-20261001-build.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/youtube-android-manifest-fix-20261001.md",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/youtube-client-evaluation-20261001-build.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/youtube-client-evaluation-20261001.md",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/youtube-client-header-20261001-build.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/youtube-client-header-20261001.md",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/youtube-client-probe-20261002.md",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/youtube-client-probe-user-android-20261002.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/youtube-client-probe-user-android-20261002.md",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/youtube-dart-package-evidence.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/youtube-feasibility-closure-20261002.md",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/youtube-format-admission-20261001-build.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/youtube-format-admission-20261001.md",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/youtube-options.md",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/youtube-phase2.md",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/youtube-player-reason-20261001-build.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/youtube-player-reason-20261001.md",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/youtube-progressive-android-before-head-cache-20261002.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/youtube-progressive-user-android-20261002.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/youtube-progressive-user-windows-20261002.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/youtube-progressive-validation-20261002.md",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/youtube-prototype-build.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/youtube-prototype-guide.md",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/youtube-prototype-update-20261001-build.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/youtube-prototype-update-20261001.md",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/youtube-sts-context-20261001-build.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/youtube-sts-context-20261001.md",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/youtube-windows-environment-20261002.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/research/yt-dlp-real-results.json",
+    "category": "planning research acceptance release documentation/evidence",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/acceptance/youtube/MediaFlow-v050-youtube-production-20261002-Android-arm64-debug.apk",
+    "category": "local binary/media/runtime/temporary state",
+    "commit": false
+  },
+  {
+    "path": "v0.5.0/acceptance/youtube/android-installed-preflight.apk",
+    "category": "local binary/media/runtime/temporary state",
+    "commit": false
+  },
+  {
+    "path": "v0.5.0/acceptance/youtube/artifacts/MediaFlow-v050-youtube-production-20261002-Windows.zip",
+    "category": "local binary/media/runtime/temporary state",
+    "commit": false
+  },
+  {
+    "path": "v0.5.0/acceptance/youtube/artifacts/MediaFlow-v050-youtube-production-20261002-Windows/MediaFlow.exe",
+    "category": "local binary/media/runtime/temporary state",
+    "commit": false
+  },
+  {
+    "path": "v0.5.0/acceptance/youtube/artifacts/MediaFlow-v050-youtube-production-20261002-Windows/MediaFlowDouyinSession.exe",
+    "category": "local binary/media/runtime/temporary state",
+    "commit": false
+  },
+  {
+    "path": "v0.5.0/acceptance/youtube/artifacts/MediaFlow-v050-youtube-production-20261002-Windows/MediaFlowNetworkObservationHelper.exe",
+    "category": "local binary/media/runtime/temporary state",
+    "commit": false
+  },
+  {
+    "path": "v0.5.0/acceptance/youtube/artifacts/MediaFlow-v050-youtube-production-20261002-Windows/Microsoft.Web.WebView2.Core.dll",
+    "category": "local binary/media/runtime/temporary state",
+    "commit": false
+  },
+  {
+    "path": "v0.5.0/acceptance/youtube/artifacts/MediaFlow-v050-youtube-production-20261002-Windows/Microsoft.Web.WebView2.WinForms.dll",
+    "category": "local binary/media/runtime/temporary state",
+    "commit": false
+  },
+  {
+    "path": "v0.5.0/acceptance/youtube/artifacts/MediaFlow-v050-youtube-production-20261002-Windows/WebView2Loader.dll",
+    "category": "local binary/media/runtime/temporary state",
+    "commit": false
+  },
+  {
+    "path": "v0.5.0/acceptance/youtube/artifacts/MediaFlow-v050-youtube-production-20261002-Windows/dartjni.dll",
+    "category": "local binary/media/runtime/temporary state",
+    "commit": false
+  },
+  {
+    "path": "v0.5.0/acceptance/youtube/artifacts/MediaFlow-v050-youtube-production-20261002-Windows/data/app.so",
+    "category": "local binary/media/runtime/temporary state",
+    "commit": false
+  },
+  {
+    "path": "v0.5.0/acceptance/youtube/artifacts/MediaFlow-v050-youtube-production-20261002-Windows/flutter_windows.dll",
+    "category": "local binary/media/runtime/temporary state",
+    "commit": false
+  },
+  {
+    "path": "v0.5.0/acceptance/youtube/frozen-before.json",
+    "category": "local binary/media/runtime/temporary state",
+    "commit": false
+  },
+  {
+    "path": "v0.5.0/acceptance/youtube/windows-data/download_history.json",
+    "category": "local binary/media/runtime/temporary state",
+    "commit": false
+  },
+  {
+    "path": "v0.5.0/acceptance/youtube/windows-data/downloads/MIYEON 'RUN AWAY' M_V Teaser audioOnly 49 kbps.webm",
+    "category": "local binary/media/runtime/temporary state",
+    "commit": false
+  },
+  {
+    "path": "v0.5.0/acceptance/youtube/windows-data/downloads/MIYEON 'RUN AWAY' M_V Teaser progressive 360p.mp4",
+    "category": "local binary/media/runtime/temporary state",
+    "commit": false
+  },
+  {
+    "path": "v0.5.0/acceptance/youtube/windows-data/downloads/MIYEON 'RUN AWAY' M_V Teaser videoOnly 144p.webm",
+    "category": "local binary/media/runtime/temporary state",
+    "commit": false
+  },
+  {
+    "path": "v0.5.0/acceptance/youtube/windows-data/downloads/Me at the zoo progressive 240p.mp4",
+    "category": "local binary/media/runtime/temporary state",
+    "commit": false
+  },
+  {
+    "path": "v0.5.0/acceptance/youtube/windows-data/settings.json",
+    "category": "local binary/media/runtime/temporary state",
+    "commit": false
+  },
+  {
+    "path": "v0.5.0/acceptance/youtube/windows-data/youtube-production-acceptance.json",
+    "category": "local binary/media/runtime/temporary state",
+    "commit": false
+  },
+  {
+    "path": "v0.5.0/release/README.md",
+    "category": "planning research acceptance release documentation",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/release/release-notes.md",
+    "category": "planning research acceptance release documentation",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/release/security-audit.json",
+    "category": "planning research acceptance release documentation",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/release/smoke.json",
+    "category": "planning research acceptance release documentation",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/release/untracked-audit.json",
+    "category": "planning research acceptance release documentation",
+    "commit": true
+  },
+  {
+    "path": "v0.5.0/release/v040-history-audit.json",
+    "category": "planning research acceptance release documentation",
+    "commit": true
+  }
+]

@@ -1,4 +1,4 @@
-# MediaFlow v0.1.0-beta User Guide
+# MediaFlow v0.5.0 User Guide
 
 ## Supported Platforms
 
@@ -6,7 +6,7 @@ The public beta has been validated on Windows 11 and an Android 16 USB-connected
 
 ## Windows Installation
 
-1. Download and verify `MediaFlow-v0.1.0-beta-windows-x64.zip`.
+1. Download and verify `MediaFlow-v0.5.0-windows-x64.zip`.
 2. Extract the complete ZIP archive.
 3. Run `MediaFlow.exe` from the extracted directory.
 4. If Windows reports missing MSVC runtime files, install Microsoft Visual C++ Redistributable 2015-2022 x64.
@@ -15,7 +15,7 @@ Completed downloads are stored in the configured download directory. The default
 
 ## Android Installation
 
-1. Install the signed `MediaFlow-v0.1.0-beta-android.apk`.
+1. Install the signed `MediaFlow-v0.5.0-android.apk` without uninstalling a compatible existing installation.
 2. Open MediaFlow and allow the installation to finish normally.
 3. Completed downloads are published to `Download/MediaFlow/` through Android MediaStore.
 4. Files are visible to the system file manager and video player.
@@ -34,13 +34,17 @@ Supported beta link types include:
 - Bilibili standard video links
 - Bilibili `b23.tv` short sharing links
 - Douyin `v.douyin.com` short sharing links
+- Xiaohongshu public video and static gallery links
+- YouTube watch, youtu.be and Shorts links
+
+For YouTube, select one quality/resource before downloading: 有声视频 includes picture and sound; 无声音 video and 仅音频 are independent files. MediaFlow does not merge tracks. Douyin galleries may require a user-authorized normal login within MediaFlow's isolated session. Other platforms do not import browser cookies.
 
 ## Pause, Resume, and History
 
 - Active downloads can be paused and continued.
 - HTTP Range and `.part` files protect resumable downloads when supported by the server.
 - Download history is stored locally.
-- If the app is stopped during a download, the task is restored as paused and can be continued after restart.
+- Existing resumable tasks retain their resume behavior. YouTube temporary media addresses are not persisted; an unfinished YouTube download after restart requires parsing the source link again. Completed local files remain in History.
 
 ## File Names
 

@@ -1,0 +1,68 @@
+{
+  "os": "windows",
+  "atUtc": "2026-10-02T13:04:39.175214Z",
+  "route": "HomePage/ParserService/DownloadManager/History",
+  "status": "WINDOWS PRODUCTION PASS",
+  "systemPlayback": "USER CONFIRMED PASS",
+  "coldProcessRestart": "PASS - 4 completed entries observed in new main.dart Release process",
+  "samples": [
+    {
+      "videoId": "hLY9KMIU2BA",
+      "title": "MIYEON 'RUN AWAY' M/V Teaser",
+      "downloads": [
+        {
+          "role": "progressive",
+          "resourceId": "youtube:ANDROID_SDKLESS:18",
+          "mimeType": "video/mp4",
+          "status": "completed",
+          "bytes": 1544991,
+          "expectedContentLength": 1544991,
+          "responseTotalBytes": 1544991,
+          "savePath": "D:/projects/mediaflow-v050/v0.5.0/acceptance/youtube/windows-data/downloads\\MIYEON 'RUN AWAY' M_V Teaser progressive 360p.mp4",
+          "error": null
+        },
+        {
+          "role": "videoOnly",
+          "resourceId": "youtube:VISIONOS:278",
+          "mimeType": "video/webm",
+          "status": "completed",
+          "bytes": 143996,
+          "expectedContentLength": 143996,
+          "responseTotalBytes": 143996,
+          "savePath": "D:/projects/mediaflow-v050/v0.5.0/acceptance/youtube/windows-data/downloads\\MIYEON 'RUN AWAY' M_V Teaser videoOnly 144p.webm",
+          "error": null
+        },
+        {
+          "role": "audioOnly",
+          "resourceId": "youtube:VISIONOS:249",
+          "mimeType": "audio/webm",
+          "status": "completed",
+          "bytes": 111538,
+          "expectedContentLength": 111538,
+          "responseTotalBytes": 111538,
+          "savePath": "D:/projects/mediaflow-v050/v0.5.0/acceptance/youtube/windows-data/downloads\\MIYEON 'RUN AWAY' M_V Teaser audioOnly 49 kbps.webm",
+          "error": null
+        }
+      ]
+    },
+    {
+      "videoId": "jNQXAC9IVRw",
+      "title": "Me at the zoo",
+      "downloads": [
+        {
+          "role": "progressive",
+          "resourceId": "youtube:ANDROID_SDKLESS:18",
+          "mimeType": "video/mp4",
+          "status": "completed",
+          "bytes": 629172,
+          "expectedContentLength": null,
+          "responseTotalBytes": 629172,
+          "savePath": "D:/projects/mediaflow-v050/v0.5.0/acceptance/youtube/windows-data/downloads\\Me at the zoo progressive 240p.mp4",
+          "error": null
+        }
+      ]
+    }
+  ],
+  "parserErrorCode": null,
+  "repositoryRestore": true
+}

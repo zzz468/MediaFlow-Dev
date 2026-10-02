@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-01",
+  "branch": "feature/v0.5.0",
+  "head": "e48d8d591a7bee232e09042d44fb965efea96556",
+  "main": "lib/main.dart",
+  "windows": "Release x64; acceptance data root in current worktree",
+  "android": "Debug production route, independent applicationId",
+  "applicationId": "com.mediaflow.mediaflow.xhsprodv050",
+  "certificateSha256": "4f6a5194614d0f53c35add86eff6475b1cbc59a2376482d8afc1e08a423299c8",
+  "artifacts": [
+    {
+      "path": "D:\\projects\\mediaflow-v050\\dist\\v050-xhs\\Windows\\MediaFlow.exe",
+      "sha256": "8f05799a9bdfb9753802d422b71da601bb47179c36736fde83d85acd39bb15f0",
+      "bytes": 90624
+    },
+    {
+      "path": "D:\\projects\\mediaflow-v050\\dist\\v050-xhs\\MediaFlow-v050-XHS-Windows.zip",
+      "sha256": "4e4eeb4d3b73fb37e7a00643ce8f83f8756dad1ebdd92436511fd4634f367ac9",
+      "bytes": 13797610
+    },
+    {
+      "path": "D:\\projects\\mediaflow-v050\\dist\\v050-xhs\\MediaFlow-v050-XHS-production-debug.apk",
+      "sha256": "6cac1210643c81beded208b93bd32c098f098174394143ba1abb2ee9de5a7943",
+      "bytes": 154477946
+    }
+  ],
+  "formalDependenciesAdded": false,
+  "lockfileChanged": false,
+  "noFormalAppReplacement": true,
+  "noUninstall": true,
+  "noDataClear": true
+}

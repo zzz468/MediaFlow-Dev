@@ -1,0 +1,36 @@
+[
+  {
+    "sample": "user-yt-2",
+    "platform": "youtube",
+    "os": "windows",
+    "atUtc": "2026-09-30T12:10:02.885990Z",
+    "events": [
+      {
+        "method": "GET",
+        "host": "www.youtube.com",
+        "path": "/watch",
+        "queryKeys": [
+          "v"
+        ],
+        "cookieSent": false,
+        "proxy": "DIRECT",
+        "systemDns": [
+          "31.13.92.37"
+        ],
+        "osError": null,
+        "networkCategory": "networkFailure.socketOrTimeout",
+        "failure": "networkFailure",
+        "errorType": "_ClientSocketException",
+        "elapsedMs": 12107
+      }
+    ],
+    "status": "STOPPED",
+    "sessionLevel": 0,
+    "cookiesPersisted": false,
+    "originalUrl": "https://youtube.com/shorts/g4kriJeJFYA?si=igdpD_IiNvysbhRX",
+    "videoId": "g4kriJeJFYA",
+    "requestedWatchUrl": "https://www.youtube.com/watch?v=g4kriJeJFYA",
+    "failure": "networkFailure",
+    "reason": "_ClientSocketException"
+  }
+]

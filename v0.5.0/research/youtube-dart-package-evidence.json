@@ -1,0 +1,4793 @@
+{
+  "name": "youtube_explode_dart",
+  "latest": {
+    "version": "3.1.0",
+    "pubspec": {
+      "name": "youtube_explode_dart",
+      "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+      "version": "3.1.0",
+      "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+      "topics": [
+        "youtube",
+        "video",
+        "streams"
+      ],
+      "environment": {
+        "sdk": ">=3.0.0 <4.0.0"
+      },
+      "dependencies": {
+        "collection": "^1.18.0",
+        "freezed_annotation": ">=2.2.0 <4.0.0",
+        "html": "^0.15.0",
+        "http": "^1.0.0",
+        "http_parser": "^4.0.0",
+        "json_annotation": "^4.9.0",
+        "meta": "^1.7.0",
+        "xml": "^6.1.0",
+        "logging": "^1.2.0",
+        "unicode": "^1.0.0",
+        "crypto": "^3.0.7",
+        "path": "^1.9.1"
+      },
+      "dev_dependencies": {
+        "build_runner": "^2.1.11",
+        "coverage": "^1.10.0",
+        "freezed": "^3.0.6",
+        "json_serializable": "^6.2.0",
+        "lints": "^5.1.1",
+        "source_gen": "^2.0.0",
+        "test": "^1.21.1"
+      },
+      "false_secrets": [
+        "lib/src/reverse_engineering/youtube_http_client.dart",
+        "lib/src/videos/video_controller.dart",
+        "lib/src/videos/youtube_api_client.dart"
+      ]
+    },
+    "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-3.1.0.tar.gz",
+    "archive_sha256": "10134a53989b2f3dc576121735aec8fc6d88784956f4a2ad1a2525b006373a76",
+    "published": "2026-05-09T16:41:00.509622Z"
+  },
+  "versions": [
+    {
+      "version": "0.0.1",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library.",
+        "version": "0.0.1",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.7.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.1",
+          "dart_console": "^0.5.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-0.0.1.tar.gz",
+      "archive_sha256": "16cf2ecf0a078a666c9c699ea3e6ba45efed772e928365d7ebcf5be50f4664a1",
+      "published": "2020-02-20T20:00:54.180084Z"
+    },
+    {
+      "version": "0.0.2",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Support serveral API functions.",
+        "version": "0.0.2",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.7.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.1",
+          "dart_console": "^0.5.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-0.0.2.tar.gz",
+      "archive_sha256": "ed08d101e05d9b841a43e61adff0d745b04f2cfa6df9ad7cfaef260413b3f5b5",
+      "published": "2020-02-20T21:16:25.893932Z"
+    },
+    {
+      "version": "0.0.3",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Support serveral API functions.",
+        "version": "0.0.3",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.7.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.1",
+          "dart_console": "^0.5.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-0.0.3.tar.gz",
+      "archive_sha256": "70af28d67c82ca3ce3e4cdcedb4bac28575fb281700d7bbf051a6c326238261c",
+      "published": "2020-02-21T20:45:35.713309Z"
+    },
+    {
+      "version": "0.0.4",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Support serveral API functions.",
+        "version": "0.0.4",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.7.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.1",
+          "dart_console": "^0.5.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-0.0.4.tar.gz",
+      "archive_sha256": "ab5d2f644dbedc733ac0cccbc1d7705e347dde54994ae269cdba2e33e73913cc",
+      "published": "2020-02-21T21:05:04.117568Z"
+    },
+    {
+      "version": "0.0.5",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Support serveral API functions.",
+        "version": "0.0.5",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.7.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.1",
+          "dart_console": "^0.5.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-0.0.5.tar.gz",
+      "archive_sha256": "24bb943f52601086e3b4b447b81d2ffd723708bc476fd01110ff24fc8e7cd309",
+      "published": "2020-02-21T22:48:15.806465Z"
+    },
+    {
+      "version": "0.0.6",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Support serveral API functions.",
+        "version": "0.0.6",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": "^3.7.0"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.1",
+          "dart_console": "^0.5.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-0.0.6.tar.gz",
+      "archive_sha256": "be69e12a209af934717b86f83031542018953faa427c0810a466c085e9940048",
+      "published": "2020-02-23T20:05:45.593922Z"
+    },
+    {
+      "version": "0.0.7",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Support serveral API functions.",
+        "version": "0.0.7",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": "^3.7.0",
+          "equatable": "^1.1.0"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.1",
+          "dart_console": "^0.5.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-0.0.7.tar.gz",
+      "archive_sha256": "961c0143703c6391fce79c28c6ca10757d0a17f76b8b4a6223373a38d334a5ac",
+      "published": "2020-02-24T13:52:10.107253Z"
+    },
+    {
+      "version": "0.0.8",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Support serveral API functions.",
+        "version": "0.0.8",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": "^3.5.0",
+          "equatable": "^1.1.0"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.1",
+          "dart_console": "^0.5.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-0.0.8.tar.gz",
+      "archive_sha256": "387f5da6c760ed1cc5a7358e5683a20de0418f458ff808ecc5babefc4dbf2cf3",
+      "published": "2020-02-28T19:34:23.898598Z"
+    },
+    {
+      "version": "0.0.9",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Support serveral API functions.",
+        "version": "0.0.9",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": "^3.5.0",
+          "equatable": "^1.1.0"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.1",
+          "dart_console": "^0.5.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-0.0.9.tar.gz",
+      "archive_sha256": "18cdf75beb12e4c4152ab8970fdb0683c48a0523ffca163048dc68a526d324cb",
+      "published": "2020-02-28T19:43:14.567208Z"
+    },
+    {
+      "version": "0.0.10",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Support serveral API functions.",
+        "version": "0.0.10",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": "^3.5.0",
+          "equatable": "^1.1.0"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.1",
+          "dart_console": "^0.5.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-0.0.10.tar.gz",
+      "archive_sha256": "661ac8ad623a7b8d98b3602ee5d88732d8581001f934c0eac2359cda6c231f35",
+      "published": "2020-02-28T21:41:33.397054Z"
+    },
+    {
+      "version": "0.0.11",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Support serveral API functions.",
+        "version": "0.0.11",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": "^3.5.0",
+          "equatable": "^1.1.0"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.1",
+          "dart_console": "^0.5.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-0.0.11.tar.gz",
+      "archive_sha256": "5d93fdbeddd6e3f5058a884609397bb43c848f08bc774e6bb72c318bb313c4e6",
+      "published": "2020-03-06T22:18:59.147165Z"
+    },
+    {
+      "version": "0.0.12",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Support serveral API functions.",
+        "version": "0.0.12",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": "^3.5.0",
+          "equatable": "^1.1.0"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.1",
+          "dart_console": "^0.5.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-0.0.12.tar.gz",
+      "archive_sha256": "981de0483da1160ea55268cb67bcdcda187cdeeec7880a4dc1f64d84268d7ea5",
+      "published": "2020-03-10T20:49:03.827781Z"
+    },
+    {
+      "version": "0.0.13",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions.",
+        "version": "0.0.13",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": "^3.5.0",
+          "equatable": "^1.1.0"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.1",
+          "dart_console": "^0.5.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-0.0.13.tar.gz",
+      "archive_sha256": "ae60b7844af421ed5530895b3780095f193d45318041ebbcadb8f9426de73f5a",
+      "published": "2020-03-10T20:58:15.735175Z"
+    },
+    {
+      "version": "0.0.14",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions.",
+        "version": "0.0.14",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": "^3.5.0",
+          "equatable": "^1.1.0"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.1",
+          "dart_console": "^0.5.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-0.0.14.tar.gz",
+      "archive_sha256": "57837ff7042cfb75b57001de1f38f539d48dde6a16cdf54be241be847f665e2d",
+      "published": "2020-03-11T11:01:28.312282Z"
+    },
+    {
+      "version": "0.0.15",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions.",
+        "version": "0.0.15",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": "^3.5.0",
+          "equatable": "^1.1.0"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.1",
+          "dart_console": "^0.5.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-0.0.15.tar.gz",
+      "archive_sha256": "69fec30e530f0387b188d71474737345ec1a6f2f02b69f0c7657f0fd702a6b0a",
+      "published": "2020-03-11T18:34:19.778675Z"
+    },
+    {
+      "version": "0.0.16",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions.",
+        "version": "0.0.16",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": "^3.5.0",
+          "equatable": "^1.1.0"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.1",
+          "dart_console": "^0.5.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-0.0.16.tar.gz",
+      "archive_sha256": "3e4bb2b0e7c6d64bb33bf6d14d10d9d7501f89484d4a0c4b430b7f9f988a037a",
+      "published": "2020-03-20T10:27:24.862633Z"
+    },
+    {
+      "version": "0.0.17",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions.",
+        "version": "0.0.17",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": "^3.5.0",
+          "equatable": "^1.1.0"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.1",
+          "dart_console": "^0.5.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-0.0.17.tar.gz",
+      "archive_sha256": "574e912a5a1e34d29c80d9439f8de6e1d2e13f6cdf75e080d31bdea8f69a678a",
+      "published": "2020-05-31T21:37:40.242805Z"
+    },
+    {
+      "version": "1.0.0-beta",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.0.0-beta",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": "^3.5.0",
+          "equatable": "^1.1.0"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.1",
+          "dart_console": "^0.5.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.0.0-beta.tar.gz",
+      "archive_sha256": "87833a4693aea5c63f189202ac7fa81672a0e75db36a5206ed0fc2200689cc33",
+      "published": "2020-06-05T18:48:09.652731Z"
+    },
+    {
+      "version": "1.0.0",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.0.0",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.1",
+          "dart_console": "^0.5.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.0.0.tar.gz",
+      "archive_sha256": "5d5362a5a59e3a4cb60e9184f06077dec7903f163867e2689f16e3318c08eb41",
+      "published": "2020-06-07T22:48:10.983435Z"
+    },
+    {
+      "version": "1.0.1-beta",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.0.1-beta",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.1",
+          "dart_console": "^0.5.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.0.1-beta.tar.gz",
+      "archive_sha256": "5749c221eb3d58a0fa3aadfec3d1508b6cc3d1725e96ddd173376cec0bbf990e",
+      "published": "2020-06-07T13:20:34.355888Z"
+    },
+    {
+      "version": "1.0.2-beta",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.0.2-beta",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.1",
+          "dart_console": "^0.5.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.0.2-beta.tar.gz",
+      "archive_sha256": "80b99145375a90416c960d8414d8893dbd616f9bcd58eb0ec31b7200fae2ce73",
+      "published": "2020-06-07T20:30:44.455270Z"
+    },
+    {
+      "version": "1.1.0",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.1.0",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.1",
+          "dart_console": "^0.5.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.1.0.tar.gz",
+      "archive_sha256": "21d39facc1436fc6ae702c7179e5be7a9309ef1565868efde357614c78baf276",
+      "published": "2020-06-14T10:20:02.138359Z"
+    },
+    {
+      "version": "1.2.0",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.2.0",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.1",
+          "dart_console": "^0.5.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.2.0.tar.gz",
+      "archive_sha256": "8901d93bcb7bf4d3245ee5d0ecf8d981bc17914a0201f861e87d0e1e0050085a",
+      "published": "2020-06-16T19:52:22.115059Z"
+    },
+    {
+      "version": "1.2.0+1",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.2.0+1",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.1",
+          "dart_console": "^0.5.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.2.0%2B1.tar.gz",
+      "archive_sha256": "c64bcb2e048c45dff1e7cd9be801be3c039a256b6b6a7e525a94db686b2cf074",
+      "published": "2020-06-16T20:20:18.819584Z"
+    },
+    {
+      "version": "1.2.1",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.2.1",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.1",
+          "dart_console": "^0.5.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.2.1.tar.gz",
+      "archive_sha256": "bc194b216b3fdcb1aaddee0bc8e7d9a0aa27f39761247a2dc2b71c0d09015cc3",
+      "published": "2020-06-16T20:30:13.439224Z"
+    },
+    {
+      "version": "1.2.2",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.2.2",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.1",
+          "dart_console": "^0.5.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.2.2.tar.gz",
+      "archive_sha256": "eb70b207e774d203b70d4414b74b3d73ad35e1faf26fcea5c3958ff75a2365da",
+      "published": "2020-06-19T17:18:54.257378Z"
+    },
+    {
+      "version": "1.2.3",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.2.3",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.1",
+          "dart_console": "^0.5.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.2.3.tar.gz",
+      "archive_sha256": "32eeec4e41d77d1cff1009e59a5adc42cac516a4f025ee89684532cef8818a28",
+      "published": "2020-06-20T10:48:52.139945Z"
+    },
+    {
+      "version": "1.3.1",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.3.1",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.1",
+          "dart_console": "^0.5.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.3.1.tar.gz",
+      "archive_sha256": "0ecb9cc054fd4f2945b9bb80daaffe3be94be89b5789ec3d3094c52049d27034",
+      "published": "2020-06-22T15:42:52.601357Z"
+    },
+    {
+      "version": "1.3.2",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.3.2",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.1",
+          "dart_console": "^0.5.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.3.2.tar.gz",
+      "archive_sha256": "33389bf5da0eaf31fe47283dc0912d6988e0032e780eea36f2fd7c1cb7c7418e",
+      "published": "2020-06-23T19:57:39.072062Z"
+    },
+    {
+      "version": "1.3.3",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.3.3",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.1",
+          "console": "^3.1.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.3.3.tar.gz",
+      "archive_sha256": "219c9247ceee6db29829f2bc2f0aa3ce7bf8a61fd6cb183931092e7550bcf4b1",
+      "published": "2020-06-27T19:41:33.036993Z"
+    },
+    {
+      "version": "1.4.0",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.4.0",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.3",
+          "console": "^3.1.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.4.0.tar.gz",
+      "archive_sha256": "a61f9d3142760fb79cbee2d62714cb89c2457a59bafa032e436e89ee07355e7b",
+      "published": "2020-06-30T13:17:56.617743Z"
+    },
+    {
+      "version": "1.4.1",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.4.1",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.3",
+          "console": "^3.1.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.4.1.tar.gz",
+      "archive_sha256": "aff6e9350e44b196e378000d9cb71d090b61b4eb8e5151681ae163ea554e6eed",
+      "published": "2020-07-12T16:23:54.172067Z"
+    },
+    {
+      "version": "1.4.1+1",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.4.1+1",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.3",
+          "console": "^3.1.0",
+          "test": "^1.12.0"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.4.1%2B1.tar.gz",
+      "archive_sha256": "6b53a0dc16de7261284417b2d5fc3815bd510fdee5dea44857dbbb132d435976",
+      "published": "2020-07-12T16:31:49.535513Z"
+    },
+    {
+      "version": "1.4.1+2",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.4.1+2",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.3",
+          "console": "^3.1.0",
+          "test": "^1.12.0",
+          "grinder": "^0.8.5",
+          "pedantic": "^1.9.2"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.4.1%2B2.tar.gz",
+      "archive_sha256": "454665fd5ce8eaf58b8242c1320282c14e61d3afac31c539fa5909b04523e3f6",
+      "published": "2020-07-21T09:46:40.941061Z"
+    },
+    {
+      "version": "1.4.1+3",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.4.1+3",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.3",
+          "console": "^3.1.0",
+          "test": "^1.12.0",
+          "grinder": "^0.8.5",
+          "pedantic": "^1.9.2"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.4.1%2B3.tar.gz",
+      "archive_sha256": "ef26f80909029abccae2630c289ee2a464a06058cdfc4fa81982b1fda577db20",
+      "published": "2020-07-21T12:01:55.628458Z"
+    },
+    {
+      "version": "1.4.2",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.4.2",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.3",
+          "console": "^3.1.0",
+          "test": "^1.12.0",
+          "grinder": "^0.8.5",
+          "pedantic": "^1.9.2"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.4.2.tar.gz",
+      "archive_sha256": "c5489454a9ecdd30ac2b5b2aac1a0d90808303d88c98b8f75ab0ebc8291071df",
+      "published": "2020-07-29T17:27:39.945432Z"
+    },
+    {
+      "version": "1.4.3",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.4.3",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.3",
+          "console": "^3.1.0",
+          "test": "^1.12.0",
+          "grinder": "^0.8.5",
+          "pedantic": "^1.9.2"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.4.3.tar.gz",
+      "archive_sha256": "a6c57767946357882f0e73113a1cf5ab1c562f9c8565a4a56242fd2e52c600a0",
+      "published": "2020-08-15T13:40:10.319006Z"
+    },
+    {
+      "version": "1.4.4",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.4.4",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.4",
+          "console": "^3.1.0",
+          "test": "^1.12.0",
+          "grinder": "^0.8.5",
+          "pedantic": "^1.9.2"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.4.4.tar.gz",
+      "archive_sha256": "f78901eb8bbc37262fcbbd87e8a4b690aaf195f51e90922a8773030d708fcde1",
+      "published": "2020-09-03T19:01:02.271246Z"
+    },
+    {
+      "version": "1.5.0",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.5.0",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.4",
+          "console": "^3.1.0",
+          "test": "^1.12.0",
+          "grinder": "^0.8.5",
+          "pedantic": "^1.9.2"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.5.0.tar.gz",
+      "archive_sha256": "50cfa1a7c7a660b75a7f7ec9782b3d920ea227f9dacc919f9f2da463db8a3582",
+      "published": "2020-09-11T11:49:57.707149Z"
+    },
+    {
+      "version": "1.5.1",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.5.1",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.4",
+          "console": "^3.1.0",
+          "test": "^1.12.0",
+          "grinder": "^0.8.5",
+          "pedantic": "^1.9.2"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.5.1.tar.gz",
+      "archive_sha256": "8ac06ca380717b55976492746303c43d0364c3fef1d81f73ed2f5892738fcca7",
+      "published": "2020-09-11T16:24:35.212436Z"
+    },
+    {
+      "version": "1.5.2",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.5.2",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.4",
+          "console": "^3.1.0",
+          "test": "^1.12.0",
+          "grinder": "^0.8.5",
+          "pedantic": "^1.9.2"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.5.2.tar.gz",
+      "archive_sha256": "b000a67755a19ad5fc9ebf9a43cc10b3911bef55fa7af05dae3da91f824fea69",
+      "published": "2020-10-01T16:11:38.794772Z"
+    },
+    {
+      "version": "1.6.0",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.6.0",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.4",
+          "console": "^3.1.0",
+          "test": "^1.12.0",
+          "grinder": "^0.8.5",
+          "pedantic": "^1.9.2"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.6.0.tar.gz",
+      "archive_sha256": "f120033899df6c0465641c1ef512f325335ec91b3b81671fbdc730fb3b65ef04",
+      "published": "2020-10-17T20:16:50.020822Z"
+    },
+    {
+      "version": "1.6.1",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.6.1",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.4",
+          "console": "^3.1.0",
+          "test": "^1.12.0",
+          "grinder": "^0.8.5",
+          "pedantic": "^1.9.2"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.6.1.tar.gz",
+      "archive_sha256": "6c8f1584e8b6e56b05920a2723cfc1d7eff52e00bf12fe102540b7c71a0fcf15",
+      "published": "2020-10-18T09:54:56.396226Z"
+    },
+    {
+      "version": "1.6.1+1",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.6.1+1",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.4",
+          "console": "^3.1.0",
+          "test": "^1.12.0",
+          "grinder": "^0.8.5",
+          "pedantic": "^1.9.2"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.6.1%2B1.tar.gz",
+      "archive_sha256": "e0a88cff1cb65c3e85b45d8dba75155b56d78d5abe0ef1fe5dae4d9cc32a0672",
+      "published": "2020-10-18T10:03:32.113868Z"
+    },
+    {
+      "version": "1.6.1+2",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.6.1+2",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.4",
+          "console": "^3.1.0",
+          "test": "^1.12.0",
+          "grinder": "^0.8.5",
+          "pedantic": "^1.9.2"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.6.1%2B2.tar.gz",
+      "archive_sha256": "e07957999adf28b49df060b20b7acb4a5b73bda832dbf28661ca709597a9ced6",
+      "published": "2020-10-24T12:54:28.638029Z"
+    },
+    {
+      "version": "1.6.2",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.6.2",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.4",
+          "console": "^3.1.0",
+          "test": "^1.12.0",
+          "grinder": "^0.8.5",
+          "pedantic": "^1.9.2"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.6.2.tar.gz",
+      "archive_sha256": "3383bf5ab81399a6ce320b424bc77ce5142988ee8d0c77a880667af6cee8ac49",
+      "published": "2020-10-27T13:44:25.204665Z"
+    },
+    {
+      "version": "1.7.0",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.7.0",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.4",
+          "console": "^3.1.0",
+          "test": "^1.12.0",
+          "grinder": "^0.8.5",
+          "pedantic": "^1.9.2"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.7.0.tar.gz",
+      "archive_sha256": "ec95147ab17f74e72e2a24ecb85ad56a4860cea90ef8ee75445514fe1fddc5df",
+      "published": "2020-11-06T21:47:11.965385Z"
+    },
+    {
+      "version": "1.7.1",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.7.1",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8",
+          "json_annotation": "^3.1.0"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.4",
+          "console": "^3.1.0",
+          "test": "^1.12.0",
+          "grinder": "^0.8.5",
+          "pedantic": "^1.9.2",
+          "json_serializable": "^3.5.0",
+          "build_runner": "^1.10.4"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.7.1.tar.gz",
+      "archive_sha256": "1927a68f21cf4e5329de8cbf0959d1717bb62875b75aa3628ef602752c65713c",
+      "published": "2020-11-13T08:22:09.583945Z"
+    },
+    {
+      "version": "1.7.2",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.7.2",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8",
+          "json_annotation": "^3.1.0"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.4",
+          "console": "^3.1.0",
+          "test": "^1.12.0",
+          "grinder": "^0.8.5",
+          "pedantic": "^1.9.2",
+          "json_serializable": "^3.5.0",
+          "build_runner": "^1.10.4"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.7.2.tar.gz",
+      "archive_sha256": "4d829e096ba2373f36526c1effceaeb455d819b8da17b4fbabbc5b18a8a52357",
+      "published": "2020-11-16T10:53:01.544165Z"
+    },
+    {
+      "version": "1.7.3",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.7.3",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8",
+          "json_annotation": "^3.1.0"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.4",
+          "console": "^3.1.0",
+          "test": "^1.12.0",
+          "grinder": "^0.8.5",
+          "pedantic": "^1.9.2",
+          "json_serializable": "^3.5.0",
+          "build_runner": "^1.10.4"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.7.3.tar.gz",
+      "archive_sha256": "3ebe03d06e0787ec970b7ae2efabb8e41bce31208358ecf169e0fe8bb052129a",
+      "published": "2020-12-02T11:05:49.549788Z"
+    },
+    {
+      "version": "1.7.4",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.7.4",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8",
+          "json_annotation": "^3.1.0"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.4",
+          "console": "^3.1.0",
+          "test": "^1.12.0",
+          "grinder": "^0.8.5",
+          "pedantic": "^1.9.2",
+          "json_serializable": "^3.5.0",
+          "build_runner": "^1.10.4"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.7.4.tar.gz",
+      "archive_sha256": "7ff2acbd5c5c8922bc9758c886a9d74a945f3778389a45e434d8e955167e12a3",
+      "published": "2020-12-25T22:28:44.006783Z"
+    },
+    {
+      "version": "1.7.5",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.7.5",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8",
+          "json_annotation": "^3.1.0"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.4",
+          "console": "^3.1.0",
+          "test": "^1.12.0",
+          "grinder": "^0.8.5",
+          "pedantic": "^1.9.2",
+          "json_serializable": "^3.5.0",
+          "build_runner": "^1.10.4"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.7.5.tar.gz",
+      "archive_sha256": "5828bd0c251a6b6b60adca908ef10ca1dcfdabae6b3b385113eeddf2ed88bbb0",
+      "published": "2020-12-30T14:00:24.399904Z"
+    },
+    {
+      "version": "1.8.0-beta.0",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.8.0-beta.0",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8",
+          "json_annotation": "^3.1.0",
+          "collection": "^1.14.13"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.4",
+          "console": "^3.1.0",
+          "test": "^1.12.0",
+          "grinder": "^0.8.5",
+          "pedantic": "^1.9.2",
+          "json_serializable": "^3.5.0",
+          "build_runner": "^1.10.4"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.8.0-beta.0.tar.gz",
+      "archive_sha256": "2e015c653c80a739491a561370bad884e88f8e9f81dcacdd93b9e29dc5f302fd",
+      "published": "2021-02-26T15:18:23.727327Z"
+    },
+    {
+      "version": "1.8.0-beta.1",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.8.0-beta.1",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8",
+          "json_annotation": "^3.1.0",
+          "collection": "^1.14.13"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.4",
+          "console": "^3.1.0",
+          "test": "^1.12.0",
+          "grinder": "^0.8.5",
+          "pedantic": "^1.9.2",
+          "json_serializable": "^3.5.0",
+          "build_runner": "^1.10.4"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.8.0-beta.1.tar.gz",
+      "archive_sha256": "20d97cf9b5775acf035eacbe75a1ea70aecad30137c4faf258f6eef23f4a11a9",
+      "published": "2021-02-26T20:41:14.772914Z"
+    },
+    {
+      "version": "1.8.0-beta.2",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.8.0-beta.2",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8",
+          "json_annotation": "^3.1.0",
+          "collection": "^1.14.13"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.4",
+          "console": "^3.1.0",
+          "test": "^1.12.0",
+          "grinder": "^0.8.5",
+          "pedantic": "^1.9.2",
+          "json_serializable": "^3.5.0",
+          "build_runner": "^1.10.4"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.8.0-beta.2.tar.gz",
+      "archive_sha256": "060ebe7c0e21c6ebb2b2207d998be7b591b91aee033bf90e2b4f318b2665779e",
+      "published": "2021-02-27T17:59:36.646103Z"
+    },
+    {
+      "version": "1.8.0-beta.3",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.8.0-beta.3",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8",
+          "json_annotation": "^3.1.0",
+          "collection": "^1.14.13"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.4",
+          "console": "^3.1.0",
+          "test": "^1.12.0",
+          "grinder": "^0.8.5",
+          "pedantic": "^1.9.2",
+          "json_serializable": "^3.5.0",
+          "build_runner": "^1.10.4"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.8.0-beta.3.tar.gz",
+      "archive_sha256": "624d059c498574b49a1576b301b4c6499a02e4221041842ecb5b7ee5e965a187",
+      "published": "2021-03-04T09:46:32.385417Z"
+    },
+    {
+      "version": "1.8.0-beta.4",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.8.0-beta.4",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8",
+          "json_annotation": "^3.1.0",
+          "collection": "^1.14.13"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.4",
+          "console": "^3.1.0",
+          "test": "^1.12.0",
+          "grinder": "^0.8.5",
+          "pedantic": "^1.9.2",
+          "json_serializable": "^3.5.0",
+          "build_runner": "^1.10.4"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.8.0-beta.4.tar.gz",
+      "archive_sha256": "261d8e39e314c16968d1efb36881c635f76e752e70eba78b89cc279d6724166b",
+      "published": "2021-03-04T09:49:45.712723Z"
+    },
+    {
+      "version": "1.8.0-beta.5",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.8.0-beta.5",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8",
+          "json_annotation": "^3.1.0",
+          "collection": "^1.14.13"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.4",
+          "console": "^3.1.0",
+          "test": "^1.12.0",
+          "grinder": "^0.8.5",
+          "pedantic": "^1.9.2",
+          "json_serializable": "^3.5.0",
+          "build_runner": "^1.10.4"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.8.0-beta.5.tar.gz",
+      "archive_sha256": "e8923bd9017298011f7f1d247f685616e61a5ef932536f8c35bef9781ae97efe",
+      "published": "2021-03-04T09:58:11.710984Z"
+    },
+    {
+      "version": "1.8.0",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.8.0",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.6.0 <3.0.0"
+        },
+        "dependencies": {
+          "html": "^0.14.0+3",
+          "http": "^0.12.0+4",
+          "http_parser": "^3.1.3",
+          "xml": ">=3.0.0 <5.0.0",
+          "equatable": "^1.1.0",
+          "meta": "^1.1.8",
+          "json_annotation": "^3.1.0",
+          "collection": "^1.14.13"
+        },
+        "dev_dependencies": {
+          "effective_dart": "^1.2.4",
+          "console": "^3.1.0",
+          "test": "^1.12.0",
+          "grinder": "^0.8.5",
+          "pedantic": "^1.9.2",
+          "json_serializable": "^3.5.0",
+          "build_runner": "^1.10.4"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.8.0.tar.gz",
+      "archive_sha256": "f294784e214c3cca62bf4223fb2ab2806c975bf88ca193a5fd0d3c153c94dd74",
+      "published": "2021-03-10T18:15:28.784792Z"
+    },
+    {
+      "version": "1.9.0-nullsafety.2",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.9.0-nullsafety.2",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.12.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "equatable": "^2.0.0",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "console": "^4.0.0",
+          "grinder": "^0.9.0-nullsafety.0",
+          "json_serializable": "^4.0.2",
+          "lint": "^1.5.3",
+          "pedantic": "^1.11.0",
+          "test": "^1.16.7"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.9.0-nullsafety.2.tar.gz",
+      "archive_sha256": "a9378d3742d86c9faef2627c94bf65e420a19e5d51ce594eae7790e4cefb3526",
+      "published": "2021-03-11T13:21:35.225757Z"
+    },
+    {
+      "version": "1.9.0-nullsafety.3",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.9.0-nullsafety.3",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.12.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "equatable": "^2.0.0",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "console": "^4.0.0",
+          "grinder": "^0.9.0-nullsafety.0",
+          "json_serializable": "^4.0.2",
+          "lint": "^1.5.3",
+          "pedantic": "^1.11.0",
+          "test": "^1.16.7"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.9.0-nullsafety.3.tar.gz",
+      "archive_sha256": "48d7ffd73a6138daf3c1a07efddde2e286ab1250d9c629ae1d361dbc0f96b934",
+      "published": "2021-03-11T22:29:00.243021Z"
+    },
+    {
+      "version": "1.9.0-nullsafety.4",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.9.0-nullsafety.4",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.12.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "equatable": "^2.0.0",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "console": "^4.0.0",
+          "grinder": "^0.9.0-nullsafety.0",
+          "json_serializable": "^4.0.2",
+          "lint": "^1.5.3",
+          "pedantic": "^1.11.0",
+          "test": "^1.16.7"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.9.0-nullsafety.4.tar.gz",
+      "archive_sha256": "8516a0f4286b84964cf168d6ff19d179bc5bb485be0293d250d3e9ff48a4389c",
+      "published": "2021-03-18T21:23:06.904003Z"
+    },
+    {
+      "version": "1.9.0-nullsafety.5",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.9.0-nullsafety.5",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.12.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "equatable": "^2.0.0",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "console": "^4.0.0",
+          "grinder": "^0.9.0-nullsafety.0",
+          "json_serializable": "^4.0.2",
+          "lint": "^1.5.3",
+          "pedantic": "^1.11.0",
+          "test": "^1.16.7"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.9.0-nullsafety.5.tar.gz",
+      "archive_sha256": "46d1461f36482bd5e2e886469e24395d0faf93376e0f93cfa5e23941b37a31da",
+      "published": "2021-03-19T10:50:33.567111Z"
+    },
+    {
+      "version": "1.9.0-nullsafety.6",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.9.0-nullsafety.6",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.12.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "equatable": "^2.0.0",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "console": "^4.0.0",
+          "grinder": "^0.9.0-nullsafety.0",
+          "json_serializable": "^4.0.2",
+          "lint": "^1.5.3",
+          "pedantic": "^1.11.0",
+          "test": "^1.16.7"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.9.0-nullsafety.6.tar.gz",
+      "archive_sha256": "ca06a09ca522267715e6d80533e511fc9815b7568f2cba7987790d0063ab9601",
+      "published": "2021-03-20T17:31:12.001588Z"
+    },
+    {
+      "version": "1.9.0-nullsafety.7",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.9.0-nullsafety.7",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.12.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "equatable": "^2.0.0",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "build_runner": "^1.12.2",
+          "console": "^4.0.0",
+          "grinder": "^0.9.0-nullsafety.0",
+          "json_serializable": "^4.1.0",
+          "lint": "^1.5.3",
+          "pedantic": "^1.11.0",
+          "test": "^1.16.8"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.9.0-nullsafety.7.tar.gz",
+      "archive_sha256": "2dfca461affdbfbd5fb03c3584260eef2e0e68dc8b485511bbf84a8f2aaaef04",
+      "published": "2021-03-24T09:40:32.285412Z"
+    },
+    {
+      "version": "1.9.0",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.9.0",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.12.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "equatable": "^2.0.0",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "build_runner": "^1.12.2",
+          "console": "^4.0.0",
+          "grinder": "^0.9.0-nullsafety.0",
+          "json_serializable": "^4.1.0",
+          "lint": "^1.5.3",
+          "pedantic": "^1.11.0",
+          "test": "^1.16.8"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.9.0.tar.gz",
+      "archive_sha256": "f5016fbfd5f64f5b2f4a019594e6f5dd8b50a87cdb4669ff1fee109d4d33486e",
+      "published": "2021-03-26T09:11:36.454690Z"
+    },
+    {
+      "version": "1.9.1",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.9.1",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.12.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "equatable": "^2.0.0",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "build_runner": "^1.12.2",
+          "console": "^4.0.0",
+          "grinder": "^0.9.0-nullsafety.0",
+          "json_serializable": "^4.1.0",
+          "lint": "^1.5.3",
+          "pedantic": "^1.11.0",
+          "test": "^1.16.8"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.9.1.tar.gz",
+      "archive_sha256": "9120db2a786762cf7f92a8956f4fce6ba6d2890b6a62f2c5bea05f3a92e538e4",
+      "published": "2021-04-02T20:56:51.605383Z"
+    },
+    {
+      "version": "1.9.2",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.9.2",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.12.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "equatable": "^2.0.0",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "build_runner": "^1.12.2",
+          "console": "^4.0.0",
+          "grinder": "^0.9.0-nullsafety.0",
+          "json_serializable": "^4.1.0",
+          "lint": "^1.5.3",
+          "pedantic": "^1.11.0",
+          "test": "^1.16.8"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.9.2.tar.gz",
+      "archive_sha256": "5948f2835d5cb57296e16468767c07772b0a7b9c22e1f526bd77f9ba9dae3ac0",
+      "published": "2021-04-26T13:37:20.648455Z"
+    },
+    {
+      "version": "1.9.2+1",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.9.2+1",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.12.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "equatable": "^2.0.0",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "build_runner": "^1.12.2",
+          "console": "^4.0.0",
+          "grinder": "^0.9.0-nullsafety.0",
+          "json_serializable": "^4.1.0",
+          "lint": "^1.5.3",
+          "pedantic": "^1.11.0",
+          "test": "^1.16.8"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.9.2%2B1.tar.gz",
+      "archive_sha256": "bc902d420abc4507a37ec4b223d2531df86d1fe9fe8b3d72698940e709a0f86c",
+      "published": "2021-04-29T13:32:52.063509Z"
+    },
+    {
+      "version": "1.9.2+2",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.9.2+2",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.12.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "equatable": "^2.0.0",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "build_runner": "^1.12.2",
+          "console": "^4.0.0",
+          "grinder": "^0.9.0-nullsafety.0",
+          "json_serializable": "^4.1.0",
+          "lint": "^1.5.3",
+          "pedantic": "^1.11.0",
+          "test": "^1.16.8"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.9.2%2B2.tar.gz",
+      "archive_sha256": "4ca647a8c51fd797f6a13ac5755c29ca9646e5d2eff3044a24b0bae48c3a63e8",
+      "published": "2021-04-29T13:47:02.681748Z"
+    },
+    {
+      "version": "1.9.3",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.9.3",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.12.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "equatable": "^2.0.0",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "build_runner": "^1.12.2",
+          "console": "^4.0.0",
+          "grinder": "^0.9.0-nullsafety.0",
+          "json_serializable": "^4.1.0",
+          "lint": "^1.5.3",
+          "pedantic": "^1.11.0",
+          "test": "^1.16.8"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.9.3.tar.gz",
+      "archive_sha256": "e505276697c4f2f65f1c696ad2c8a5e6a0ca4d447e7b45fa81adc5f64d4731d1",
+      "published": "2021-04-30T21:50:00.596457Z"
+    },
+    {
+      "version": "1.9.3+1",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.9.3+1",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.12.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "equatable": "^2.0.0",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "build_runner": "^1.12.2",
+          "console": "^4.0.0",
+          "grinder": "^0.9.0-nullsafety.0",
+          "json_serializable": "^4.1.0",
+          "lint": "^1.5.3",
+          "pedantic": "^1.11.0",
+          "test": "^1.16.8"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.9.3%2B1.tar.gz",
+      "archive_sha256": "6337573066afd1388a933f2ae5b96e59ce101f9e7f4cf49c6f106779735e0cb4",
+      "published": "2021-04-30T21:53:20.398042Z"
+    },
+    {
+      "version": "1.9.3+2",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.9.3+2",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.12.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "equatable": "^2.0.0",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "build_runner": "^1.12.2",
+          "console": "^4.0.0",
+          "grinder": "^0.9.0-nullsafety.0",
+          "json_serializable": "^4.1.0",
+          "lint": "^1.5.3",
+          "pedantic": "^1.11.0",
+          "test": "^1.16.8"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.9.3%2B2.tar.gz",
+      "archive_sha256": "c93e8ecb7cd11e1967eea0b35671a9d91e47561256818d74912d3c9a76fc139f",
+      "published": "2021-04-30T22:25:53.444195Z"
+    },
+    {
+      "version": "1.9.4",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.9.4",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.12.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "equatable": "^2.0.0",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "build_runner": "^1.12.2",
+          "console": "^4.0.0",
+          "grinder": "^0.9.0-nullsafety.0",
+          "json_serializable": "^4.1.0",
+          "lint": "^1.5.3",
+          "pedantic": "^1.11.0",
+          "test": "^1.16.8"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.9.4.tar.gz",
+      "archive_sha256": "2480977df32abe4239a63c18087e14e8bdbf6060230acc1872bb91db0f25905c",
+      "published": "2021-05-20T08:23:19.974705Z"
+    },
+    {
+      "version": "1.9.5",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.9.5",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.12.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "equatable": "^2.0.0",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "build_runner": "^1.12.2",
+          "console": "^4.0.0",
+          "grinder": "^0.9.0-nullsafety.0",
+          "json_serializable": "^4.1.0",
+          "lint": "^1.5.3",
+          "pedantic": "^1.11.0",
+          "test": "^1.16.8"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.9.5.tar.gz",
+      "archive_sha256": "ccbc7d9a2a5cdb95d7f7656f9d51b065004885d0f429b886353f6f561e40d1c3",
+      "published": "2021-06-18T15:15:38.292495Z"
+    },
+    {
+      "version": "1.9.6",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.9.6",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.12.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "equatable": "^2.0.0",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "build_runner": "^1.12.2",
+          "console": "^4.0.0",
+          "grinder": "^0.9.0-nullsafety.0",
+          "json_serializable": "^4.1.0",
+          "lint": "^1.5.3",
+          "pedantic": "^1.11.0",
+          "test": "^1.16.8"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.9.6.tar.gz",
+      "archive_sha256": "7dd27d95cc8be3ab6e6c28cc15707a888a63ca1b04f8d5e9ce117c4187b539b0",
+      "published": "2021-06-24T13:23:24.481379Z"
+    },
+    {
+      "version": "1.9.7",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.9.7",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.12.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "equatable": "^2.0.0",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "build_runner": "^1.12.2",
+          "console": "^4.0.0",
+          "grinder": "^0.9.0-nullsafety.0",
+          "json_serializable": "^4.1.0",
+          "lint": "^1.5.3",
+          "pedantic": "^1.11.0",
+          "test": "^1.16.8"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.9.7.tar.gz",
+      "archive_sha256": "fd5c79fe05efb6d91d949ee2ec10e659da105a07705e60ad56ee8109372b31fd",
+      "published": "2021-06-28T09:54:39.501627Z"
+    },
+    {
+      "version": "1.9.8",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.9.8",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.12.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "equatable": "^2.0.0",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "build_runner": "^1.12.2",
+          "console": "^4.0.0",
+          "grinder": "^0.9.0-nullsafety.0",
+          "json_serializable": "^4.1.0",
+          "lint": "^1.5.3",
+          "pedantic": "^1.11.0",
+          "test": "^1.16.8"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.9.8.tar.gz",
+      "archive_sha256": "a1c846a7902a74f96b64ec407f3f58da394c9787dcbd4fe4bd87452b307a5974",
+      "published": "2021-07-01T22:46:31.990003Z"
+    },
+    {
+      "version": "1.9.8+1",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.9.8+1",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.12.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "equatable": "^2.0.0",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "build_runner": "^1.12.2",
+          "console": "^4.0.0",
+          "grinder": "^0.9.0-nullsafety.0",
+          "json_serializable": "^4.1.0",
+          "lint": "^1.5.3",
+          "pedantic": "^1.11.0",
+          "test": "^1.16.8"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.9.8%2B1.tar.gz",
+      "archive_sha256": "1c7ae0d36d2638d814751741f8123cac7d9f44fbee9648872b6d2e42fd542912",
+      "published": "2021-07-01T22:48:48.252664Z"
+    },
+    {
+      "version": "1.9.9",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.9.9",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.12.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "equatable": "^2.0.0",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "build_runner": "^1.12.2",
+          "console": "^4.0.0",
+          "grinder": "^0.9.0-nullsafety.0",
+          "json_serializable": "^4.1.0",
+          "lint": "^1.5.3",
+          "pedantic": "^1.11.0",
+          "test": "^1.16.8"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.9.9.tar.gz",
+      "archive_sha256": "ab7f8e7699ce730a27c655c59a06c08e9ee79f8db2a27763cd8079a672f7010f",
+      "published": "2021-07-05T08:17:11.499364Z"
+    },
+    {
+      "version": "1.9.10",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.9.10",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.12.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "equatable": "^2.0.0",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "build_runner": "^1.12.2",
+          "console": "^4.0.0",
+          "grinder": "^0.9.0-nullsafety.0",
+          "json_serializable": "^4.1.0",
+          "lint": "^1.5.3",
+          "pedantic": "^1.11.0",
+          "test": "^1.16.8"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.9.10.tar.gz",
+      "archive_sha256": "4705904153d8cadd07eb5e508a5f0e6ac22cdf4da8bfa120961af45c2c253750",
+      "published": "2021-07-14T20:41:15.103999Z"
+    },
+    {
+      "version": "1.10.0",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.10.0",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.13.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "freezed_annotation": "^0.14.3",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.0.6",
+          "console": "^4.1.0",
+          "freezed": "^0.14.3",
+          "grinder": "^0.9.0",
+          "json_serializable": "^5.0.0",
+          "lint": "^1.5.3",
+          "test": "^1.17.10"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.10.0.tar.gz",
+      "archive_sha256": "3d6bdff45a209c86b6fd444f051f74e3c2a7eeef28cbca13cc09ea16ded74bbf",
+      "published": "2021-07-22T13:03:32.607774Z"
+    },
+    {
+      "version": "1.10.2",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.10.2",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.13.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "freezed_annotation": "^0.14.3",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.0.6",
+          "console": "^4.1.0",
+          "freezed": "^0.14.3",
+          "grinder": "^0.9.0",
+          "json_serializable": "^5.0.0",
+          "lint": "^1.5.3",
+          "test": "^1.17.10"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.10.2.tar.gz",
+      "archive_sha256": "6ed63465d455846803ef83ab662372b302ff404ac1ec5b8194e7e6581a8513dc",
+      "published": "2021-07-23T23:31:44.647566Z"
+    },
+    {
+      "version": "1.10.3",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.10.3",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.13.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "freezed_annotation": "^0.14.3",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.0.6",
+          "console": "^4.1.0",
+          "freezed": "^0.14.3",
+          "grinder": "^0.9.0",
+          "json_serializable": "^5.0.0",
+          "lint": "^1.5.3",
+          "test": "^1.17.10"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.10.3.tar.gz",
+      "archive_sha256": "ce5d81ab08bdab0f48a959d7d7c320b067f734350c3880fd46e6ae05f0684d1e",
+      "published": "2021-07-25T12:49:18.027126Z"
+    },
+    {
+      "version": "1.10.4",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.10.4",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.13.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "freezed_annotation": "^0.14.3",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.0.6",
+          "console": "^4.1.0",
+          "freezed": "^0.14.3",
+          "grinder": "^0.9.0",
+          "json_serializable": "^5.0.0",
+          "lint": "^1.5.3",
+          "test": "^1.17.10"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.10.4.tar.gz",
+      "archive_sha256": "8751693d82c8e0856181c82e066dc84fa8c4e3e7fd72414661e8566c4d117c2a",
+      "published": "2021-07-25T22:42:28.785730Z"
+    },
+    {
+      "version": "1.10.5",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.10.5",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.13.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "freezed_annotation": "^0.14.3",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.0.6",
+          "console": "^4.1.0",
+          "freezed": "^0.14.3",
+          "grinder": "^0.9.0",
+          "json_serializable": "^5.0.0",
+          "lint": "^1.5.3",
+          "test": "^1.17.10"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.10.5.tar.gz",
+      "archive_sha256": "8a544c5fb3136b6f2049549bef33057ef4563dbe7be56c42fa8302c1604b0513",
+      "published": "2021-08-28T09:47:30.694154Z"
+    },
+    {
+      "version": "1.10.5+1",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.10.5+1",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.13.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "freezed_annotation": "^0.14.3",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.0.6",
+          "console": "^4.1.0",
+          "freezed": "^0.14.3",
+          "grinder": "^0.9.0",
+          "json_serializable": "^5.0.0",
+          "lint": "^1.5.3",
+          "test": "^1.17.10"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.10.5%2B1.tar.gz",
+      "archive_sha256": "029fc3dcf2c7f748e19c190a097f95600bf0d8dfdaf00a1fa73702c821d4456a",
+      "published": "2021-08-28T11:06:29.641319Z"
+    },
+    {
+      "version": "1.10.6",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.10.6",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.13.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "freezed_annotation": "^0.14.3",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.0.6",
+          "console": "^4.1.0",
+          "freezed": "^0.14.3",
+          "grinder": "^0.9.0",
+          "json_serializable": "^5.0.0",
+          "lint": "^1.5.3",
+          "test": "^1.17.10"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.10.6.tar.gz",
+      "archive_sha256": "fbbef7f5687759634bc60516645097c1770522d6c11259b114bade362fd7363c",
+      "published": "2021-08-29T11:28:47.797777Z"
+    },
+    {
+      "version": "1.10.7-dev.1",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.10.7-dev.1",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.13.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "freezed_annotation": "^0.14.3",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.0.6",
+          "console": "^4.1.0",
+          "freezed": "^0.14.3",
+          "grinder": "^0.9.0",
+          "json_serializable": "^5.0.0",
+          "lint": "^1.5.3",
+          "test": "^1.17.10"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.10.7-dev.1.tar.gz",
+      "archive_sha256": "9807611acb810cf510dcdf344274f37d7d9e56bd22dce959696e51edeb5719d1",
+      "published": "2021-09-01T08:43:44.978235Z"
+    },
+    {
+      "version": "1.10.7",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.10.7",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.13.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "freezed_annotation": "^0.14.3",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.0.6",
+          "console": "^4.1.0",
+          "freezed": "^0.14.3",
+          "grinder": "^0.9.0",
+          "json_serializable": "^5.0.0",
+          "lint": "^1.5.3",
+          "test": "^1.17.10"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.10.7.tar.gz",
+      "archive_sha256": "2b04b7f1a2162d842574d99d3bb8429a40b670374974b029706ff34c263fc2ba",
+      "published": "2021-09-28T14:51:18.543200Z"
+    },
+    {
+      "version": "1.10.7+1",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.10.7+1",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.13.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "freezed_annotation": "^0.14.3",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.0.6",
+          "console": "^4.1.0",
+          "freezed": "^0.14.3",
+          "grinder": "^0.9.0",
+          "json_serializable": "^5.0.0",
+          "lint": "^1.5.3",
+          "test": "^1.17.10"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.10.7%2B1.tar.gz",
+      "archive_sha256": "956a12e88d89b140996d6b650a483451b10aded549314ef03a637a8fa2b5a67c",
+      "published": "2021-09-28T15:02:58.225640Z"
+    },
+    {
+      "version": "1.10.8",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.10.8",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.13.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "freezed_annotation": "^0.14.3",
+          "html": "^0.15.0",
+          "http": "^0.13.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.0.0",
+          "meta": "^1.3.0",
+          "xml": "^5.0.2"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.4",
+          "console": "^4.1.0",
+          "freezed": "^0.14.5",
+          "grinder": "^0.9.0",
+          "json_serializable": "^5.0.2",
+          "lint": "^1.7.2",
+          "test": "^1.18.2"
+        }
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.10.8.tar.gz",
+      "archive_sha256": "b1e934fa5201a845ae2dab82ec5e252e75c2bff7d8dc05f965fc4663de203632",
+      "published": "2021-10-05T15:29:58.677659Z"
+    },
+    {
+      "version": "1.10.9",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.10.9",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.14.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "freezed_annotation": "^1.1.0",
+          "html": "^0.15.0",
+          "http": "^0.13.4",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.4.0",
+          "meta": "^1.7.0",
+          "xml": "^5.3.1"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.5",
+          "console": "^4.1.0",
+          "freezed": "^1.1.0",
+          "grinder": "^0.9.0",
+          "json_serializable": "^6.1.1",
+          "lint": "^1.8.1",
+          "test": "^1.19.5"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/reverse_engineering/clients/embedded_player_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.10.9.tar.gz",
+      "archive_sha256": "67c81fc4caed6489aea9521a60dd512ed1ac3a43021edeca927b23636d444838",
+      "published": "2022-01-11T12:48:51.973638Z"
+    },
+    {
+      "version": "1.10.9+1",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.10.9+1",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.14.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "freezed_annotation": "^1.1.0",
+          "html": "^0.15.0",
+          "http": "^0.13.4",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.4.0",
+          "meta": "^1.7.0",
+          "xml": "^5.3.1"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.5",
+          "console": "^4.1.0",
+          "freezed": "^1.1.0",
+          "grinder": "^0.9.0",
+          "json_serializable": "^6.1.1",
+          "lint": "^1.8.1",
+          "test": "^1.19.5"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/reverse_engineering/clients/embedded_player_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.10.9%2B1.tar.gz",
+      "archive_sha256": "89000309060386f7ba042ffeaeef5e0ac480103454c6242ab976f8a3d0dc4487",
+      "published": "2022-01-11T12:55:22.937452Z"
+    },
+    {
+      "version": "1.10.10",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.10.10",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.14.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "freezed_annotation": "^1.1.0",
+          "html": "^0.15.0",
+          "http": "^0.13.4",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.4.0",
+          "meta": "^1.7.0",
+          "xml": "^5.3.1"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.5",
+          "console": "^4.1.0",
+          "freezed": "^1.1.0",
+          "json_serializable": "^6.1.1",
+          "lint": "^1.8.1",
+          "test": "^1.19.5"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/reverse_engineering/clients/embedded_player_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.10.10.tar.gz",
+      "archive_sha256": "b7bf2c566684d1dca36dd40d3f427b517302e6bd2d6e742e75560a3fbaafd4e1",
+      "published": "2022-02-28T11:46:23.627552Z"
+    },
+    {
+      "version": "1.10.10+2",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.10.10+2",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.14.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "freezed_annotation": "^1.1.0",
+          "html": "^0.15.0",
+          "http": "^0.13.4",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.4.0",
+          "meta": "^1.7.0",
+          "xml": "^5.3.1"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.5",
+          "console": "^4.1.0",
+          "freezed": "^1.1.0",
+          "json_serializable": "^6.1.1",
+          "lint": "^1.8.1",
+          "test": "^1.19.5"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/reverse_engineering/clients/embedded_player_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.10.10%2B2.tar.gz",
+      "archive_sha256": "956991bceb068f689c98490878dfe1e4767ea62d27afe2f5f6e243b3583d0c9f",
+      "published": "2022-03-03T11:10:51.381913Z"
+    },
+    {
+      "version": "1.11.0",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.11.0",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.14.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.15.0",
+          "freezed_annotation": "^1.1.0",
+          "html": "^0.15.0",
+          "http": "^0.13.4",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.4.0",
+          "meta": "^1.7.0",
+          "xml": "^5.3.1"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.5",
+          "console": "^4.1.0",
+          "freezed": "^1.1.0",
+          "json_serializable": "^6.1.1",
+          "lint": "^1.8.1",
+          "test": "^1.19.5"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/reverse_engineering/clients/embedded_player_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.11.0.tar.gz",
+      "archive_sha256": "e9141395bfcc5b501bac65f371a578e5db34189ec4c16f49a448ea55f1f4e3e3",
+      "published": "2022-04-13T21:23:59.443085Z"
+    },
+    {
+      "version": "1.12.0",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.12.0",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.14.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.16.0",
+          "freezed_annotation": "^2.0.3",
+          "html": "^0.15.0",
+          "http": "^0.13.4",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.5.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "console": "^4.1.0",
+          "freezed": "^2.0.3+1",
+          "json_serializable": "^6.2.0",
+          "lint": "^1.8.2",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/reverse_engineering/clients/embedded_player_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.12.0.tar.gz",
+      "archive_sha256": "94289f5fcf68167bee7dcbadfea898d403d57c7f0003ca825274ce7641c9c467",
+      "published": "2022-06-26T15:02:48.191521Z"
+    },
+    {
+      "version": "1.12.1",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.12.1",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.14.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.16.0",
+          "freezed_annotation": "^2.0.3",
+          "html": "^0.15.0",
+          "http": "^0.13.4",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.5.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "console": "^4.1.0",
+          "freezed": "^2.0.3+1",
+          "json_serializable": "^6.2.0",
+          "lint": "^1.10.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/reverse_engineering/clients/embedded_player_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.12.1.tar.gz",
+      "archive_sha256": "a779a398589675a1240db90679e72fa3737e4c2adf1c1a08b40fca8d0a52493e",
+      "published": "2022-09-21T22:29:50.970395Z"
+    },
+    {
+      "version": "1.12.2",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.12.2",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.14.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.16.0",
+          "freezed_annotation": "^2.0.3",
+          "html": "^0.15.0",
+          "http": "^0.13.4",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.5.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "console": "^4.1.0",
+          "freezed": "^2.0.3+1",
+          "json_serializable": "^6.2.0",
+          "lint": "^1.10.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/reverse_engineering/clients/embedded_player_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.12.2.tar.gz",
+      "archive_sha256": "5b46d525fe9d76a56304fe93043ab9ec29e0a49067af233766132dba7d77560c",
+      "published": "2022-11-06T09:50:02.250518Z"
+    },
+    {
+      "version": "1.12.3",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.12.3",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.14.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.16.0",
+          "freezed_annotation": "^2.0.3",
+          "html": "^0.15.0",
+          "http": "^0.13.4",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.5.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "console": "^4.1.0",
+          "freezed": "^2.0.3+1",
+          "json_serializable": "^6.2.0",
+          "lint": "^1.10.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/reverse_engineering/clients/embedded_player_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.12.3.tar.gz",
+      "archive_sha256": "3e2eb05dedc072a6275e8a061c675d9a53b7c6123265f0aa4ee1e6d50644dbd2",
+      "published": "2022-11-12T15:56:48.218869Z"
+    },
+    {
+      "version": "1.12.4",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "1.12.4",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "environment": {
+          "sdk": ">=2.14.0 <3.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.16.0",
+          "freezed_annotation": "^2.0.3",
+          "html": "^0.15.0",
+          "http": "^0.13.4",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.5.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "console": "^4.1.0",
+          "freezed": "^2.0.3+1",
+          "json_serializable": "^6.2.0",
+          "lint": "^1.10.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/reverse_engineering/clients/embedded_player_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-1.12.4.tar.gz",
+      "archive_sha256": "07889a6229a63e78f8d45a3b852897c2e0fa42e96c4daa38d411be211575bc38",
+      "published": "2023-03-04T11:37:28.480302Z"
+    },
+    {
+      "version": "2.0.0",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "2.0.0",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "lints",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.16.0",
+          "freezed_annotation": "^2.2.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.5.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "console": "^4.1.0",
+          "freezed": "^2.3.2",
+          "json_serializable": "^6.2.0",
+          "lint": "^2.1.2",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-2.0.0.tar.gz",
+      "archive_sha256": "9b287ffa1295b63b4219e2a044a0660188116adc450c024eb218c4dd99df3815",
+      "published": "2023-08-05T10:45:35.278790Z"
+    },
+    {
+      "version": "2.0.1",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "2.0.1",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "lints",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.16.0",
+          "freezed_annotation": "^2.2.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.5.0",
+          "meta": "^1.7.0",
+          "source_gen": "^1.4.0",
+          "xml": "^6.1.0"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "console": "^4.1.0",
+          "freezed": "^2.3.2",
+          "json_serializable": "^6.2.0",
+          "lint": "^2.1.2",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-2.0.1.tar.gz",
+      "archive_sha256": "c5c5a7ddec7d42d341cb8e49d628c4b81618f927bbf81dbfa9c550bee39ef45d",
+      "published": "2023-08-05T12:33:51.916576Z"
+    },
+    {
+      "version": "2.0.2",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "2.0.2",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "lints",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.16.0",
+          "freezed_annotation": "^2.2.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.5.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "console": "^4.1.0",
+          "freezed": "^2.3.2",
+          "json_serializable": "^6.2.0",
+          "lint": "^2.1.2",
+          "source_gen": "^1.4.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-2.0.2.tar.gz",
+      "archive_sha256": "98fd11b51adbbca76cbdb17f560168f1d7a9835cecceea965f49eb1e5eed155c",
+      "published": "2023-08-15T13:14:01.202326Z"
+    },
+    {
+      "version": "2.0.3",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "2.0.3",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "lints",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.18.0",
+          "freezed_annotation": "^2.2.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.5.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "freezed": "^2.3.2",
+          "json_serializable": "^6.2.0",
+          "lints": "^3.0.0",
+          "source_gen": "^1.4.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-2.0.3.tar.gz",
+      "archive_sha256": "d0a92f617c64da9565dad864e56b9b3eb406aa77bdeee17b233f9ac8f929d7dd",
+      "published": "2023-12-11T10:27:22.473223Z"
+    },
+    {
+      "version": "2.0.4",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "2.0.4",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "lints",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.18.0",
+          "freezed_annotation": "^2.2.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.5.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "freezed": "^2.3.2",
+          "json_serializable": "^6.2.0",
+          "lints": "^3.0.0",
+          "source_gen": "^1.4.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-2.0.4.tar.gz",
+      "archive_sha256": "89aff5ac7de139c492ecea4bfc9189d33791632fa57e7e438e598873b040b077",
+      "published": "2023-12-21T13:19:09.869761Z"
+    },
+    {
+      "version": "2.1.0",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "2.1.0",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.18.0",
+          "freezed_annotation": "^2.2.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.5.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "freezed": "^2.3.2",
+          "json_serializable": "^6.2.0",
+          "lints": "^3.0.0",
+          "source_gen": "^1.4.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-2.1.0.tar.gz",
+      "archive_sha256": "77a55747579c76b5d071bca3941cfca141207f064b3f0322994573cb4a0c2831",
+      "published": "2024-01-15T18:36:23.132504Z"
+    },
+    {
+      "version": "2.2.0",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "2.2.0",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.18.0",
+          "freezed_annotation": "^2.2.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.5.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "freezed": "^2.3.2",
+          "json_serializable": "^6.2.0",
+          "lints": "^3.0.0",
+          "source_gen": "^1.4.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-2.2.0.tar.gz",
+      "archive_sha256": "12d32dffd8c85927eb46f7cf7a9dfce690edfe82134c08a90529c51eba58a85c",
+      "published": "2024-04-02T10:33:57.557959Z"
+    },
+    {
+      "version": "2.2.1",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "2.2.1",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.18.0",
+          "freezed_annotation": "^2.2.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.5.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "freezed": "^2.3.2",
+          "json_serializable": "^6.2.0",
+          "lints": "^3.0.0",
+          "source_gen": "^1.4.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-2.2.1.tar.gz",
+      "archive_sha256": "26c9671d638f3396a1bfb2666f586988ee7b0ba3469e478b22a4c1a168bcf6ee",
+      "published": "2024-05-07T19:39:14.227481Z"
+    },
+    {
+      "version": "2.2.2",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "2.2.2",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.18.0",
+          "freezed_annotation": "^2.2.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.5.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "freezed": "^2.3.2",
+          "json_serializable": "^6.2.0",
+          "lints": "^3.0.0",
+          "source_gen": "^1.4.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-2.2.2.tar.gz",
+      "archive_sha256": "133a65907e6cf839ac7643d92dc5c56b37fcebe4f0a8f0e67716dffa500c0ef0",
+      "published": "2024-09-25T08:27:21.550799Z"
+    },
+    {
+      "version": "2.2.3",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "2.2.3",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.18.0",
+          "freezed_annotation": "^2.2.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.5.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "freezed": "^2.3.2",
+          "json_serializable": "^6.2.0",
+          "lints": "^3.0.0",
+          "source_gen": "^1.4.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-2.2.3.tar.gz",
+      "archive_sha256": "28dca07fefb4b6518beab95f0c1ef81031f921ed0fe87ebcd9c51378546edfee",
+      "published": "2024-10-08T22:30:38.633770Z"
+    },
+    {
+      "version": "2.3.0",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "2.3.0",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.18.0",
+          "freezed_annotation": "^2.2.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.5.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0",
+          "logging": "^1.2.0",
+          "unicode": "^0.3.1"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "freezed": "^2.3.2",
+          "json_serializable": "^6.2.0",
+          "lints": "^3.0.0",
+          "source_gen": "^1.4.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart",
+          "lib/src/videos/youtube_api_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-2.3.0.tar.gz",
+      "archive_sha256": "08bac196966c61abbdc13c00afb7b92f0f7aca438b53f052a5737145c2232df8",
+      "published": "2024-10-10T18:48:21.732420Z"
+    },
+    {
+      "version": "2.3.0+1",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "2.3.0+1",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.18.0",
+          "freezed_annotation": "^2.2.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.5.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0",
+          "logging": "^1.2.0",
+          "unicode": "^0.3.1"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "freezed": "^2.3.2",
+          "json_serializable": "^6.2.0",
+          "lints": "^3.0.0",
+          "source_gen": "^1.4.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart",
+          "lib/src/videos/youtube_api_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-2.3.0%2B1.tar.gz",
+      "archive_sha256": "909b1dca3a7df30c6bb6b5b795f185ec694f3303244932d0c2044a6668798c83",
+      "published": "2024-10-11T08:35:51.023823Z"
+    },
+    {
+      "version": "2.3.1",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "2.3.1",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.18.0",
+          "freezed_annotation": "^2.2.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.5.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0",
+          "logging": "^1.2.0",
+          "unicode": "^0.3.1"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "freezed": "^2.3.2",
+          "json_serializable": "^6.2.0",
+          "lints": "^3.0.0",
+          "source_gen": "^1.4.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart",
+          "lib/src/videos/youtube_api_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-2.3.1.tar.gz",
+      "archive_sha256": "523a01ef948607d3e8fdcdcdcef1ce805c7d26480f609e3b209d1c73520a6c3c",
+      "published": "2024-10-13T09:55:59.574479Z"
+    },
+    {
+      "version": "2.3.2",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "2.3.2",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.18.0",
+          "freezed_annotation": "^2.2.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.9.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0",
+          "logging": "^1.2.0",
+          "unicode": "^0.3.1"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "freezed": "^2.3.2",
+          "json_serializable": "^6.2.0",
+          "lints": "^3.0.0",
+          "source_gen": "^1.4.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart",
+          "lib/src/videos/youtube_api_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-2.3.2.tar.gz",
+      "archive_sha256": "5603884f5eb76fb7dfa400275aa293d339ce0311bab39f45bf1923294e7f7a0f",
+      "published": "2024-10-18T15:29:47.349879Z"
+    },
+    {
+      "version": "2.3.3",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "2.3.3",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.18.0",
+          "freezed_annotation": "^2.2.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.9.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0",
+          "logging": "^1.2.0",
+          "unicode": "^0.3.1"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "freezed": "^2.3.2",
+          "json_serializable": "^6.2.0",
+          "lints": "^3.0.0",
+          "source_gen": "^1.4.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart",
+          "lib/src/videos/youtube_api_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-2.3.3.tar.gz",
+      "archive_sha256": "e50a76f0da13bf20998990e15a84231c60d037833e07bcfcf22a0f0bc3d0a8ca",
+      "published": "2024-10-19T15:39:30.183478Z"
+    },
+    {
+      "version": "2.3.4",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "2.3.4",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.18.0",
+          "freezed_annotation": "^2.2.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.9.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0",
+          "logging": "^1.2.0",
+          "unicode": "^0.3.1"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "coverage": "^1.10.0",
+          "freezed": "^2.3.2",
+          "json_serializable": "^6.2.0",
+          "lints": "^3.0.0",
+          "source_gen": "^1.4.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart",
+          "lib/src/videos/youtube_api_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-2.3.4.tar.gz",
+      "archive_sha256": "ea0a3ec53f752de42fffe75b929f30f24d02faa92207a00b9497cecd3faf40a4",
+      "published": "2024-10-19T16:27:31.675521Z"
+    },
+    {
+      "version": "2.3.5",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "2.3.5",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.18.0",
+          "freezed_annotation": "^2.2.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.9.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0",
+          "logging": "^1.2.0",
+          "unicode": "^0.3.1"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "coverage": "^1.10.0",
+          "freezed": "^2.3.2",
+          "json_serializable": "^6.2.0",
+          "lints": "^3.0.0",
+          "source_gen": "^1.4.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart",
+          "lib/src/videos/youtube_api_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-2.3.5.tar.gz",
+      "archive_sha256": "6d5f9a0a55d02743e59ca495887432814bddb6b11400b08ee0eeaf69c83d0089",
+      "published": "2024-10-25T21:50:17.929178Z"
+    },
+    {
+      "version": "2.3.6",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "2.3.6",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.18.0",
+          "freezed_annotation": "^2.2.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.9.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0",
+          "logging": "^1.2.0",
+          "unicode": "^0.3.1"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "coverage": "^1.10.0",
+          "freezed": "^2.3.2",
+          "json_serializable": "^6.2.0",
+          "lints": "^3.0.0",
+          "source_gen": "^1.4.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart",
+          "lib/src/videos/youtube_api_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-2.3.6.tar.gz",
+      "archive_sha256": "51ca5b2c03bf56060143d4f87df90ec3227592d7ae8a8003532533ae019d4291",
+      "published": "2024-11-15T13:05:01.247107Z"
+    },
+    {
+      "version": "2.3.9",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "2.3.9",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.18.0",
+          "freezed_annotation": "^2.2.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.9.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0",
+          "logging": "^1.2.0",
+          "unicode": "^0.3.1"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "coverage": "^1.10.0",
+          "freezed": "^2.3.2",
+          "json_serializable": "^6.2.0",
+          "lints": "^3.0.0",
+          "source_gen": "^1.4.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart",
+          "lib/src/videos/youtube_api_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-2.3.9.tar.gz",
+      "archive_sha256": "9f044feb602659392a7c7a160e74d373671c959373a199658d687fe18ba1ab07",
+      "published": "2025-02-05T11:10:32.711842Z"
+    },
+    {
+      "version": "2.3.10",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "2.3.10",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.18.0",
+          "freezed_annotation": "^2.2.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.9.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0",
+          "logging": "^1.2.0",
+          "unicode": "^1.0.0"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "coverage": "^1.10.0",
+          "freezed": "^2.3.2",
+          "json_serializable": "^6.2.0",
+          "lints": "^5.1.1",
+          "source_gen": "^2.0.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart",
+          "lib/src/videos/youtube_api_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-2.3.10.tar.gz",
+      "archive_sha256": "f226459955b3de3e4cdd88bb4098dd7fed0261ac3f41485e2b8bbfb2f7c9ddc5",
+      "published": "2025-02-17T16:02:24.689544Z"
+    },
+    {
+      "version": "2.4.0-dev.1",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "2.4.0-dev.1",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.18.0",
+          "freezed_annotation": "^2.2.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.9.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0",
+          "logging": "^1.2.0",
+          "unicode": "^1.0.0"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "coverage": "^1.10.0",
+          "freezed": "^2.3.2",
+          "json_serializable": "^6.2.0",
+          "lints": "^5.1.1",
+          "source_gen": "^2.0.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart",
+          "lib/src/videos/youtube_api_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-2.4.0-dev.1.tar.gz",
+      "archive_sha256": "3e1f1b5aa575670afc9dbc96cece23af78f9ec2044ce0d9f70d136fff6c53b53",
+      "published": "2025-03-05T10:45:21.188516Z"
+    },
+    {
+      "version": "2.4.0",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "2.4.0",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.18.0",
+          "freezed_annotation": ">=2.2.0 <4.0.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.9.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0",
+          "logging": "^1.2.0",
+          "unicode": "^1.0.0"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "coverage": "^1.10.0",
+          "freezed": "^3.0.6",
+          "json_serializable": "^6.2.0",
+          "lints": "^5.1.1",
+          "source_gen": "^2.0.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart",
+          "lib/src/videos/youtube_api_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-2.4.0.tar.gz",
+      "archive_sha256": "7be30342df5bebc3e50cc0d142284db18ffd134104257e74e168742676e5ba15",
+      "published": "2025-04-08T10:23:57.059080Z"
+    },
+    {
+      "version": "2.4.1",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "2.4.1",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.18.0",
+          "freezed_annotation": ">=2.2.0 <4.0.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.9.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0",
+          "logging": "^1.2.0",
+          "unicode": "^1.0.0"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "coverage": "^1.10.0",
+          "freezed": "^3.0.6",
+          "json_serializable": "^6.2.0",
+          "lints": "^5.1.1",
+          "source_gen": "^2.0.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart",
+          "lib/src/videos/youtube_api_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-2.4.1.tar.gz",
+      "archive_sha256": "2121f287459f19e0e8c6c0f0b80445ad78b3751809591b632ac8fed5decc20b6",
+      "published": "2025-05-24T11:45:06.661515Z"
+    },
+    {
+      "version": "2.4.2",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "2.4.2",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.18.0",
+          "freezed_annotation": ">=2.2.0 <4.0.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.9.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0",
+          "logging": "^1.2.0",
+          "unicode": "^1.0.0"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "coverage": "^1.10.0",
+          "freezed": "^3.0.6",
+          "json_serializable": "^6.2.0",
+          "lints": "^5.1.1",
+          "source_gen": "^2.0.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart",
+          "lib/src/videos/youtube_api_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-2.4.2.tar.gz",
+      "archive_sha256": "8db47e0f947598f6aa29d2862efb98b92af0c78990d4b23c224f3475c556b47b",
+      "published": "2025-05-26T10:17:45.445284Z"
+    },
+    {
+      "version": "2.5.1",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "2.5.1",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.18.0",
+          "freezed_annotation": ">=2.2.0 <4.0.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.9.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0",
+          "logging": "^1.2.0",
+          "unicode": "^1.0.0"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "coverage": "^1.10.0",
+          "freezed": "^3.0.6",
+          "json_serializable": "^6.2.0",
+          "lints": "^5.1.1",
+          "source_gen": "^2.0.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart",
+          "lib/src/videos/youtube_api_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-2.5.1.tar.gz",
+      "archive_sha256": "9cd131624135065a6866c1e8ad4f4703e5bcfd1da322d4fddc55c972d04b6b22",
+      "published": "2025-07-02T18:59:58.374336Z"
+    },
+    {
+      "version": "2.5.2",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "2.5.2",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.18.0",
+          "freezed_annotation": ">=2.2.0 <4.0.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.9.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0",
+          "logging": "^1.2.0",
+          "unicode": "^1.0.0"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "coverage": "^1.10.0",
+          "freezed": "^3.0.6",
+          "json_serializable": "^6.2.0",
+          "lints": "^5.1.1",
+          "source_gen": "^2.0.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart",
+          "lib/src/videos/youtube_api_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-2.5.2.tar.gz",
+      "archive_sha256": "9ff345caf8351c59eb1b7560837f761e08d2beaea3b4187637942715a31a6f58",
+      "published": "2025-07-28T22:12:39.759927Z"
+    },
+    {
+      "version": "2.5.3",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "2.5.3",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.18.0",
+          "freezed_annotation": ">=2.2.0 <4.0.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.9.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0",
+          "logging": "^1.2.0",
+          "unicode": "^1.0.0"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "coverage": "^1.10.0",
+          "freezed": "^3.0.6",
+          "json_serializable": "^6.2.0",
+          "lints": "^5.1.1",
+          "source_gen": "^2.0.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart",
+          "lib/src/videos/youtube_api_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-2.5.3.tar.gz",
+      "archive_sha256": "947ba05e0c4f050743e480e7bca3575ff6427d86cc898c1a69f5e1d188cdc9e0",
+      "published": "2025-10-31T15:48:42.572928Z"
+    },
+    {
+      "version": "3.0.0",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "3.0.0",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.18.0",
+          "freezed_annotation": ">=2.2.0 <4.0.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.9.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0",
+          "logging": "^1.2.0",
+          "unicode": "^1.0.0",
+          "crypto": "^3.0.7"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "coverage": "^1.10.0",
+          "freezed": "^3.0.6",
+          "json_serializable": "^6.2.0",
+          "lints": "^5.1.1",
+          "source_gen": "^2.0.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart",
+          "lib/src/videos/youtube_api_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-3.0.0.tar.gz",
+      "archive_sha256": "add33de45d80c7f71a5e3dd464dd82fafd7fb5ab875fd303c023f30f76618325",
+      "published": "2025-11-07T23:27:02.426818Z"
+    },
+    {
+      "version": "3.0.1",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "3.0.1",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.18.0",
+          "freezed_annotation": ">=2.2.0 <4.0.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.9.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0",
+          "logging": "^1.2.0",
+          "unicode": "^1.0.0",
+          "crypto": "^3.0.7",
+          "path": "^1.9.1"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "coverage": "^1.10.0",
+          "freezed": "^3.0.6",
+          "json_serializable": "^6.2.0",
+          "lints": "^5.1.1",
+          "source_gen": "^2.0.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart",
+          "lib/src/videos/youtube_api_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-3.0.1.tar.gz",
+      "archive_sha256": "27ef143156024ad1d2db4a7050f38c0f2626716904854fe63dfb0c23878d08af",
+      "published": "2025-11-08T09:53:24.508293Z"
+    },
+    {
+      "version": "3.0.2",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "3.0.2",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.18.0",
+          "freezed_annotation": ">=2.2.0 <4.0.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.9.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0",
+          "logging": "^1.2.0",
+          "unicode": "^1.0.0",
+          "crypto": "^3.0.7",
+          "path": "^1.9.1"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "coverage": "^1.10.0",
+          "freezed": "^3.0.6",
+          "json_serializable": "^6.2.0",
+          "lints": "^5.1.1",
+          "source_gen": "^2.0.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart",
+          "lib/src/videos/youtube_api_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-3.0.2.tar.gz",
+      "archive_sha256": "fb7f8db77253b4fd645d94734206aa5d204c6cdc4558c2fab78e34dd22d8d281",
+      "published": "2025-11-08T10:09:48.189394Z"
+    },
+    {
+      "version": "3.0.3",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "3.0.3",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.18.0",
+          "freezed_annotation": ">=2.2.0 <4.0.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.9.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0",
+          "logging": "^1.2.0",
+          "unicode": "^1.0.0",
+          "crypto": "^3.0.7",
+          "path": "^1.9.1"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "coverage": "^1.10.0",
+          "freezed": "^3.0.6",
+          "json_serializable": "^6.2.0",
+          "lints": "^5.1.1",
+          "source_gen": "^2.0.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart",
+          "lib/src/videos/youtube_api_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-3.0.3.tar.gz",
+      "archive_sha256": "2ae0a1bdae41dd8435607c90d9c4574e747ebfc5c6222a3a8dc6bb3ca0fd253f",
+      "published": "2025-11-09T15:10:21.335343Z"
+    },
+    {
+      "version": "3.0.4",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "3.0.4",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.18.0",
+          "freezed_annotation": ">=2.2.0 <4.0.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.9.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0",
+          "logging": "^1.2.0",
+          "unicode": "^1.0.0",
+          "crypto": "^3.0.7",
+          "path": "^1.9.1"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "coverage": "^1.10.0",
+          "freezed": "^3.0.6",
+          "json_serializable": "^6.2.0",
+          "lints": "^5.1.1",
+          "source_gen": "^2.0.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart",
+          "lib/src/videos/youtube_api_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-3.0.4.tar.gz",
+      "archive_sha256": "581dbc0c725e13d5454dd9ca4b966a04fceb1a74adda74afc80ccba0a85e3643",
+      "published": "2025-11-11T12:15:31.982014Z"
+    },
+    {
+      "version": "3.0.5",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "3.0.5",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.18.0",
+          "freezed_annotation": ">=2.2.0 <4.0.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.9.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0",
+          "logging": "^1.2.0",
+          "unicode": "^1.0.0",
+          "crypto": "^3.0.7",
+          "path": "^1.9.1"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "coverage": "^1.10.0",
+          "freezed": "^3.0.6",
+          "json_serializable": "^6.2.0",
+          "lints": "^5.1.1",
+          "source_gen": "^2.0.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart",
+          "lib/src/videos/youtube_api_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-3.0.5.tar.gz",
+      "archive_sha256": "3d731d71df9901b1915bae806781df519cff32517e36db279f844ae619669e45",
+      "published": "2025-11-14T10:07:11.750813Z"
+    },
+    {
+      "version": "3.1.0",
+      "pubspec": {
+        "name": "youtube_explode_dart",
+        "description": "A port in dart of the youtube explode library. Supports several API functions without the need of Youtube API Key.",
+        "version": "3.1.0",
+        "homepage": "https://github.com/Hexer10/youtube_explode_dart",
+        "topics": [
+          "youtube",
+          "video",
+          "streams"
+        ],
+        "environment": {
+          "sdk": ">=3.0.0 <4.0.0"
+        },
+        "dependencies": {
+          "collection": "^1.18.0",
+          "freezed_annotation": ">=2.2.0 <4.0.0",
+          "html": "^0.15.0",
+          "http": "^1.0.0",
+          "http_parser": "^4.0.0",
+          "json_annotation": "^4.9.0",
+          "meta": "^1.7.0",
+          "xml": "^6.1.0",
+          "logging": "^1.2.0",
+          "unicode": "^1.0.0",
+          "crypto": "^3.0.7",
+          "path": "^1.9.1"
+        },
+        "dev_dependencies": {
+          "build_runner": "^2.1.11",
+          "coverage": "^1.10.0",
+          "freezed": "^3.0.6",
+          "json_serializable": "^6.2.0",
+          "lints": "^5.1.1",
+          "source_gen": "^2.0.0",
+          "test": "^1.21.1"
+        },
+        "false_secrets": [
+          "lib/src/reverse_engineering/youtube_http_client.dart",
+          "lib/src/videos/video_controller.dart",
+          "lib/src/videos/youtube_api_client.dart"
+        ]
+      },
+      "archive_url": "https://pub.dev/api/archives/youtube_explode_dart-3.1.0.tar.gz",
+      "archive_sha256": "10134a53989b2f3dc576121735aec8fc6d88784956f4a2ad1a2525b006373a76",
+      "published": "2026-05-09T16:41:00.509622Z"
+    }
+  ]
+}

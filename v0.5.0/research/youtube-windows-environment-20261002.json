@@ -1,0 +1,72 @@
+{
+  "platform": "windows",
+  "source": "existing ProbeClient; diagnostic-only; one watch request per sample; no production or Android logic changes",
+  "samples": [
+    {
+      "videoId": "hLY9KMIU2BA",
+      "requests": [
+        {
+          "method": "GET",
+          "host": "www.youtube.com",
+          "path": "/watch",
+          "queryKeys": [
+            "v"
+          ],
+          "cookieSent": false,
+          "proxy": "DIRECT",
+          "publicRequestHeaders": {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.18 Safari/537.36",
+            "Accept": "not explicitly set",
+            "Accept-Language": "not explicitly set",
+            "Referer": "not explicitly set"
+          },
+          "systemDns": [
+            "104.244.42.197",
+            "2001::1"
+          ],
+          "osError": null,
+          "networkCategory": "networkFailure.socketOrTimeout",
+          "failure": "networkFailure",
+          "errorType": "_ClientSocketException",
+          "elapsedMs": 12249
+        }
+      ],
+      "status": "BLOCKED BY ENVIRONMENT",
+      "errorCategory": "networkFailure",
+      "reason": "_ClientSocketException"
+    },
+    {
+      "videoId": "jNQXAC9IVRw",
+      "requests": [
+        {
+          "method": "GET",
+          "host": "www.youtube.com",
+          "path": "/watch",
+          "queryKeys": [
+            "v"
+          ],
+          "cookieSent": false,
+          "proxy": "DIRECT",
+          "publicRequestHeaders": {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.18 Safari/537.36",
+            "Accept": "not explicitly set",
+            "Accept-Language": "not explicitly set",
+            "Referer": "not explicitly set"
+          },
+          "systemDns": [
+            "104.244.42.197",
+            "2001::1"
+          ],
+          "osError": null,
+          "networkCategory": "networkFailure.socketOrTimeout",
+          "failure": "networkFailure",
+          "errorType": "_ClientSocketException",
+          "elapsedMs": 12004
+        }
+      ],
+      "status": "BLOCKED BY ENVIRONMENT",
+      "errorCategory": "networkFailure",
+      "reason": "_ClientSocketException"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "sample": "yt-1",
+    "host": "www.youtube.com",
+    "os": "windows",
+    "resolver": "system",
+    "proxy": "DIRECT",
+    "phase": "tcp",
+    "dns": [
+      {
+        "address": "157.240.7.20",
+        "family": "IPv4"
+      }
+    ],
+    "status": "STOPPED",
+    "failure": "networkFailure.tcp",
+    "errorType": "SocketException",
+    "osError": 10060
+  },
+  {
+    "sample": "xhs-gallery-8",
+    "host": "xhslink.cn",
+    "os": "windows",
+    "resolver": "system",
+    "proxy": "DIRECT",
+    "phase": "http",
+    "dns": [
+      {
+        "address": "106.54.99.69",
+        "family": "IPv4"
+      },
+      {
+        "address": "118.195.253.242",
+        "family": "IPv4"
+      }
+    ],
+    "tcpRemote": "118.195.253.242",
+    "certificateValidated": true,
+    "events": [
+      {
+        "method": "GET",
+        "host": "xhslink.cn",
+        "path": "/o/4wRbjSYrcBJ",
+        "queryKeys": [],
+        "cookieSent": false,
+        "proxy": "DIRECT",
+        "failure": "networkFailure",
+        "errorType": "_ClientSocketException",
+        "elapsedMs": 12034
+      }
+    ],
+    "status": "STOPPED",
+    "failure": "networkFailure",
+    "errorType": "ProbeFailure"
+  }
+]

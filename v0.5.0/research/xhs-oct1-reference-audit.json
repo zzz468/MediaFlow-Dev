@@ -1,0 +1,103 @@
+[
+  {
+    "repo": "Andy-SoulShell/xhs-downloader",
+    "commit": "cc2bb34036acb12f5a722c95af7bad53ec696d03",
+    "date": "2026-07-28T03:02:50Z",
+    "license": {
+      "key": "mit",
+      "name": "MIT License",
+      "spdx_id": "MIT",
+      "url": "https://api.github.com/licenses/mit",
+      "node_id": "MDc6TGljZW5zZTEz"
+    },
+    "issues": []
+  },
+  {
+    "repo": "JoeanAmier/XHS-Downloader",
+    "commit": "3261312721f0b37c705ba6515885bc7f34349f2f",
+    "date": "2026-09-16T12:54:06Z",
+    "license": {
+      "key": "gpl-3.0",
+      "name": "GNU General Public License v3.0",
+      "spdx_id": "GPL-3.0",
+      "url": "https://api.github.com/licenses/gpl-3.0",
+      "node_id": "MDc6TGljZW5zZTk="
+    },
+    "issues": [
+      {
+        "number": 491,
+        "title": "申请GUI版任务队列添加点击复制功能",
+        "updated": "2026-09-27T04:59:15Z",
+        "url": "https://github.com/JoeanAmier/XHS-Downloader/issues/491"
+      },
+      {
+        "number": 490,
+        "title": "macos 15，v2.7运行正常，v2.8报错，不执行任务",
+        "updated": "2026-09-27T14:17:15Z",
+        "url": "https://github.com/JoeanAmier/XHS-Downloader/issues/490"
+      },
+      {
+        "number": 488,
+        "title": "Security Advisory: Verify TLS certificates for XHS HTTP requests",
+        "updated": "2026-09-17T23:04:13Z",
+        "url": "https://github.com/JoeanAmier/XHS-Downloader/issues/488"
+      },
+      {
+        "number": 487,
+        "title": "Security Advisory: Keep HTTP API local and reject caller-supplied proxy",
+        "updated": "2026-09-17T23:04:12Z",
+        "url": "https://github.com/JoeanAmier/XHS-Downloader/issues/487"
+      },
+      {
+        "number": 486,
+        "title": "Security Advisory: Constrain and validate userscript WebSocket tasks",
+        "updated": "2026-09-17T23:04:11Z",
+        "url": "https://github.com/JoeanAmier/XHS-Downloader/issues/486"
+      }
+    ]
+  },
+  {
+    "repo": "xpzouying/xiaohongshu-mcp",
+    "commit": "a5c8f7799980ba1fdd501999843eb2d17e4c9a9f",
+    "date": "2026-09-22T18:53:47Z",
+    "license": {
+      "key": "apache-2.0",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://api.github.com/licenses/apache-2.0",
+      "node_id": "MDc6TGljZW5zZTI="
+    },
+    "issues": [
+      {
+        "number": 864,
+        "title": "fix: load 事件未触发时容错等待，避免工具调用超时",
+        "updated": "2026-10-01T04:39:44Z",
+        "url": "https://github.com/xpzouying/xiaohongshu-mcp/pull/864"
+      },
+      {
+        "number": 863,
+        "title": "兼容性请教：通过 ChatGPT / OpenAI Secure MCP Tunnel 接入时需要兼容代理",
+        "updated": "2026-09-30T10:15:20Z",
+        "url": "https://github.com/xpzouying/xiaohongshu-mcp/issues/863"
+      },
+      {
+        "number": 862,
+        "title": "fix(comment): 渲染校验剥离表情码，修复带表情必报「未确认成功」",
+        "updated": "2026-09-27T18:38:59Z",
+        "url": "https://github.com/xpzouying/xiaohongshu-mcp/pull/862"
+      },
+      {
+        "number": 861,
+        "title": "fix(comment): 回复定位不再按用户ID兜底，避免回复挂错目标评论",
+        "updated": "2026-09-27T18:38:56Z",
+        "url": "https://github.com/xpzouying/xiaohongshu-mcp/pull/861"
+      },
+      {
+        "number": 860,
+        "title": "回复评论两处误判：定位兜底会回复到同用户的其他评论；带表情码的内容必报「未确认成功」",
+        "updated": "2026-09-27T17:02:38Z",
+        "url": "https://github.com/xpzouying/xiaohongshu-mcp/issues/860"
+      }
+    ]
+  }
+]

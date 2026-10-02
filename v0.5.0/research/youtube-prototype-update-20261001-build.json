@@ -1,0 +1,59 @@
+{
+  "cwd": "D:\\projects\\mediaflow-v050",
+  "branch": "feature/v0.5.0",
+  "head": "e48d8d591a7bee232e09042d44fb965efea96556",
+  "buildIdentity": "youtube-prototype-updated-20261001-2",
+  "tests": "33 offline tests passed",
+  "analysis": "No issues found",
+  "windows": "Release build passed; new real platform validation pending",
+  "android": "Debug build passed; new real platform validation pending; not installed",
+  "applicationId": "com.mediaflow.research.v050.feasibility",
+  "certificateSha256": "4f6a5194614d0f53c35add86eff6475b1cbc59a2376482d8afc1e08a423299c8",
+  "existingResearchCertificateMatches": true,
+  "productionFrozen": true,
+  "frozenCheckedFiles": 209,
+  "frozenChangedFiles": 0,
+  "newProductionDependencies": 0,
+  "gitOperations": "No commit/push/merge/tag",
+  "status": [
+    " M analysis_options.yaml",
+    " M android/app/src/main/AndroidManifest.xml",
+    " M android/app/src/main/kotlin/com/mediaflow/mediaflow/MainActivity.kt",
+    " M lib/core/logging/app_logger.dart",
+    " M lib/core/logging/local_log_store.dart",
+    " M lib/core/models/media_link.dart",
+    " M lib/core/storage/app_data_directory.dart",
+    " M lib/features/downloader/application/media_content_download_action.dart",
+    " M lib/features/downloader/presentation/download_task_tile.dart",
+    " M lib/features/home/presentation/home_page.dart",
+    " M lib/features/parser/application/parser_service.dart",
+    " M lib/features/parser/data/url_platform_detector.dart",
+    " M lib/features/parser/domain/parser_result.dart",
+    " M windows/flutter/generated_plugin_registrant.cc",
+    " M windows/flutter/generated_plugin_registrant.h",
+    " M windows/flutter/generated_plugins.cmake",
+    "?? android/app/src/main/res/xml/download_file_paths.xml",
+    "?? android/app/src/main/res/xml/network_security_config.xml",
+    "?? integration_test/v050_xhs_production_acceptance_test.dart",
+    "?? lib/core/logging/log_redactor.dart",
+    "?? lib/features/downloader/data/local_media_opener.dart",
+    "?? lib/features/parser/data/xiaohongshu/",
+    "?? test/features/downloader/xiaohongshu_history_contract_test.dart",
+    "?? test/features/parser/xiaohongshu_parser_test.dart",
+    "?? test/features/parser/xiaohongshu_ui_test.dart",
+    "?? test/fixtures/xiaohongshu/",
+    "?? v0.5.0/"
+  ],
+  "files": [
+    {
+      "path": "D:\\projects\\mediaflow-v050\\v0.5.0\\research\\poc\\artifacts\\MediaFlow-v050-YouTube-updated-20261001-Windows.zip",
+      "bytes": 13076989,
+      "sha256": "8986575c4319a5b98131a93944d6ab4444a729eeac88c7aa480820b438e6982d"
+    },
+    {
+      "path": "D:\\projects\\mediaflow-v050\\v0.5.0\\research\\poc\\artifacts\\MediaFlow-v050-YouTube-updated-20261001-Android-debug.apk",
+      "bytes": 147998922,
+      "sha256": "5c5761bfafe51612db8654210eeb8b932302211d944f2b751ca7be387ef7ed51"
+    }
+  ]
+}

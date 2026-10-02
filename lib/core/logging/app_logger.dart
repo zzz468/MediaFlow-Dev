@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:logging/logging.dart';
 
 import 'local_log_store.dart';
+import 'log_redactor.dart';
 
 enum LogCategory { parser, downloader, network, error }
 
@@ -28,7 +29,11 @@ abstract final class AppLogger {
       // Exception text and stacks can contain request URLs or headers. Release
       // diagnostics keep only category/severity and never persist those values.
       final output = kDebugMode
-          ? record
+          ? LogRecord(
+              record.level,
+              redactLogText(record.message),
+              record.loggerName,
+            )
           : LogRecord(record.level, 'Event', record.loggerName);
       unawaited(_localStore.write(category.name, output));
       debugPrint(
@@ -36,10 +41,10 @@ abstract final class AppLogger {
         '${output.loggerName}: ${output.message}',
       );
       if (kDebugMode && record.error != null) {
-        debugPrint('Error: ${record.error}');
+        debugPrint('Error: ${redactLogText(record.error)}');
       }
       if (kDebugMode && record.stackTrace != null) {
-        debugPrintStack(stackTrace: record.stackTrace);
+        debugPrint(redactLogText(record.stackTrace));
       }
     });
   }

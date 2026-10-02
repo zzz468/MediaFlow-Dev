@@ -1,0 +1,20 @@
+{
+  "platform": "windows",
+  "atUtc": "2026-10-02T13:17:10.2144580Z",
+  "scope": "current production downloads",
+  "samples": [
+    "hLY9KMIU2BA",
+    "jNQXAC9IVRw"
+  ],
+  "progressive": {
+    "hasSound": true,
+    "systemPlayerOpened": true,
+    "hasPicture": true,
+    "avSyncNormal": true
+  },
+  "visionos": {
+    "videoOnlyOpenedAndPlays": true,
+    "audioOnlyOpenedAndPlays": true
+  },
+  "userConfirmation": "两个有声视频均正常，分离视频和音频也正常"
+}
