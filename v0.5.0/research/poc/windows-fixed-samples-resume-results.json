@@ -1,0 +1,234 @@
+[
+  {
+    "sample": "user-yt-1",
+    "platform": "youtube",
+    "os": "windows",
+    "atUtc": "2026-09-30T12:05:31.229858Z",
+    "events": [
+      {
+        "method": "GET",
+        "host": "www.youtube.com",
+        "path": "/watch",
+        "queryKeys": [
+          "v"
+        ],
+        "cookieSent": false,
+        "proxy": "DIRECT",
+        "systemDns": [
+          "185.45.5.35"
+        ],
+        "osError": null,
+        "networkCategory": "networkFailure.socketOrTimeout",
+        "failure": "networkFailure",
+        "errorType": "_ClientSocketException",
+        "elapsedMs": 12099
+      }
+    ],
+    "status": "STOPPED",
+    "sessionLevel": 0,
+    "cookiesPersisted": false,
+    "failure": "networkFailure",
+    "reason": "_ClientSocketException"
+  },
+  {
+    "sample": "user-yt-2",
+    "platform": "youtube",
+    "os": "windows",
+    "atUtc": "2026-09-30T12:05:43.374172Z",
+    "events": [],
+    "status": "STOPPED",
+    "sessionLevel": 0,
+    "cookiesPersisted": false,
+    "failure": "unknown",
+    "reason": "ArgumentError"
+  },
+  {
+    "sample": "xhs-video",
+    "platform": "xiaohongshu",
+    "os": "windows",
+    "atUtc": "2026-09-30T12:05:43.382159Z",
+    "events": [
+      {
+        "method": "GET",
+        "host": "xhslink.cn",
+        "path": "/o/5X01rOYZDMT",
+        "queryKeys": [],
+        "cookieSent": false,
+        "proxy": "DIRECT",
+        "systemDns": [
+          "106.54.99.69",
+          "118.195.253.242"
+        ],
+        "status": 302,
+        "mime": "text/html; charset=utf-8",
+        "elapsedMs": 351,
+        "setCookiePresent": false,
+        "redirectTo": "https://www.xiaohongshu.com/discovery/item/6abb69640000000014010526"
+      },
+      {
+        "method": "GET",
+        "host": "www.xiaohongshu.com",
+        "path": "/discovery/item/6abb69640000000014010526",
+        "queryKeys": [
+          "app_platform",
+          "ignoreEngage",
+          "app_version",
+          "share_from_user_hidden",
+          "xsec_source",
+          "type",
+          "xsec_token",
+          "author_share",
+          "shareRedId",
+          "apptime",
+          "share_id",
+          "share_channel",
+          "appuid",
+          "xhsshare"
+        ],
+        "cookieSent": false,
+        "proxy": "DIRECT",
+        "systemDns": [
+          "81.69.116.102",
+          "81.69.116.87",
+          "81.69.116.86"
+        ],
+        "status": 302,
+        "mime": "text/html; charset=utf-8",
+        "elapsedMs": 286,
+        "setCookiePresent": true,
+        "redirectTo": "https://www.xiaohongshu.com/login"
+      }
+    ],
+    "status": "STOPPED",
+    "sessionLevel": 0,
+    "cookiesPersisted": false,
+    "failure": "loginRequired",
+    "reason": "redirectDenied"
+  },
+  {
+    "sample": "xhs-gallery-8",
+    "platform": "xiaohongshu",
+    "os": "windows",
+    "atUtc": "2026-09-30T12:05:44.044640Z",
+    "events": [
+      {
+        "method": "GET",
+        "host": "xhslink.cn",
+        "path": "/o/4wRbjSYrcBJ",
+        "queryKeys": [],
+        "cookieSent": false,
+        "proxy": "DIRECT",
+        "systemDns": [
+          "106.54.99.69",
+          "118.195.253.242"
+        ],
+        "status": 302,
+        "mime": "text/html; charset=utf-8",
+        "elapsedMs": 192,
+        "setCookiePresent": false,
+        "redirectTo": "https://www.xiaohongshu.com/discovery/item/687a4239000000002400bcc9"
+      },
+      {
+        "method": "GET",
+        "host": "www.xiaohongshu.com",
+        "path": "/discovery/item/687a4239000000002400bcc9",
+        "queryKeys": [
+          "app_platform",
+          "ignoreEngage",
+          "app_version",
+          "share_from_user_hidden",
+          "xsec_source",
+          "type",
+          "xsec_token",
+          "author_share",
+          "shareRedId",
+          "apptime",
+          "share_id",
+          "share_channel",
+          "appuid",
+          "xhsshare"
+        ],
+        "cookieSent": false,
+        "proxy": "DIRECT",
+        "systemDns": [
+          "81.69.116.102",
+          "81.69.116.87",
+          "81.69.116.86"
+        ],
+        "status": 302,
+        "mime": "text/html; charset=utf-8",
+        "elapsedMs": 215,
+        "setCookiePresent": true,
+        "redirectTo": "https://www.xiaohongshu.com/login"
+      }
+    ],
+    "status": "STOPPED",
+    "sessionLevel": 0,
+    "cookiesPersisted": false,
+    "failure": "loginRequired",
+    "reason": "redirectDenied"
+  },
+  {
+    "sample": "xhs-gallery-5",
+    "platform": "xiaohongshu",
+    "os": "windows",
+    "atUtc": "2026-09-30T12:05:44.457764Z",
+    "events": [
+      {
+        "method": "GET",
+        "host": "xhslink.cn",
+        "path": "/o/V8A6eesUi3",
+        "queryKeys": [],
+        "cookieSent": false,
+        "proxy": "DIRECT",
+        "systemDns": [
+          "106.54.99.69",
+          "118.195.253.242"
+        ],
+        "status": 302,
+        "mime": "text/html; charset=utf-8",
+        "elapsedMs": 178,
+        "setCookiePresent": false,
+        "redirectTo": "https://www.xiaohongshu.com/discovery/item/686f739c000000002203d3a2"
+      },
+      {
+        "method": "GET",
+        "host": "www.xiaohongshu.com",
+        "path": "/discovery/item/686f739c000000002203d3a2",
+        "queryKeys": [
+          "app_platform",
+          "ignoreEngage",
+          "app_version",
+          "share_from_user_hidden",
+          "xsec_source",
+          "type",
+          "xsec_token",
+          "author_share",
+          "shareRedId",
+          "apptime",
+          "share_id",
+          "share_channel",
+          "appuid",
+          "xhsshare"
+        ],
+        "cookieSent": false,
+        "proxy": "DIRECT",
+        "systemDns": [
+          "81.69.116.102",
+          "81.69.116.87",
+          "81.69.116.86"
+        ],
+        "status": 302,
+        "mime": "text/html; charset=utf-8",
+        "elapsedMs": 239,
+        "setCookiePresent": true,
+        "redirectTo": "https://www.xiaohongshu.com/login"
+      }
+    ],
+    "status": "STOPPED",
+    "sessionLevel": 0,
+    "cookiesPersisted": false,
+    "failure": "loginRequired",
+    "reason": "redirectDenied"
+  }
+]

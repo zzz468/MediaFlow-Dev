@@ -1,0 +1,12 @@
+{
+  "activeDefaultNetwork": "210",
+  "privateDnsMode": "opportunistic",
+  "privateDnsSpecifier": "null",
+  "httpProxy": "null",
+  "ssidAndMacNotStored": true,
+  "transport": "WIFI",
+  "interface": "wlan0",
+  "dns": "/192.168.10.1,/114.114.114.114,/fe80::10%wlan0",
+  "vpnInterfacePresent": true,
+  "vpnRoutingScope": "NOT VERIFIED; interface alone does not prove research app uses it"
+}

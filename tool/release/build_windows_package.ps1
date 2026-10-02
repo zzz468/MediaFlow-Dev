@@ -1,11 +1,17 @@
 param(
     [string]$FlutterCommand = "D:\dev\flutter\bin\flutter.bat",
-    [string]$Version = "v0.2.0",
+    [string]$Version = "v0.5.0",
     [switch]$SkipBuild
 )
 
 $ErrorActionPreference = "Stop"
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
+$versionLine = (Get-Content -LiteralPath (Join-Path $repoRoot 'pubspec.yaml') | Select-String '^version: (\d+\.\d+\.\d+)\+(\d+)$').Matches
+if ($versionLine.Count -ne 1 -or $Version -ne ('v' + $versionLine[0].Groups[1].Value)) {
+    throw 'Release Version must match the version in pubspec.yaml.'
+}
+$buildName = $versionLine[0].Groups[1].Value
+$buildNumber = $versionLine[0].Groups[2].Value
 $distRoot = Join-Path $repoRoot "dist"
 $packageName = "MediaFlow-$Version-windows-x64"
 $packageDirectory = Join-Path $distRoot $packageName
@@ -16,12 +22,7 @@ $releaseDirectory = Join-Path $repoRoot "build\windows\x64\runner\Release"
 Push-Location $repoRoot
 try {
     if (-not $SkipBuild) {
-        & $FlutterCommand clean
-        if ($LASTEXITCODE -ne 0) {
-            throw "flutter clean failed."
-        }
-
-        & $FlutterCommand build windows --release --build-name 0.2.0 --build-number 2
+        & $FlutterCommand build windows --release --build-name $buildName --build-number $buildNumber --dart-define=APP_ENV=production --dart-define=APP_VERSION=$buildName --dart-define=APP_BUILD=$buildNumber
         if ($LASTEXITCODE -ne 0) {
             throw "Windows Release build failed."
         }
@@ -33,6 +34,9 @@ try {
 
     New-Item -ItemType Directory -Force -Path $distRoot | Out-Null
     if (Test-Path -LiteralPath $packageDirectory) {
+        if ([System.IO.Path]::GetFullPath($packageDirectory) -ne (Join-Path $distRoot $packageName)) {
+            throw 'Package removal path validation failed.'
+        }
         Remove-Item -LiteralPath $packageDirectory -Recurse -Force
     }
     if (Test-Path -LiteralPath $zipPath) {

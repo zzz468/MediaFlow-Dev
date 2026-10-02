@@ -2,6 +2,8 @@ import '../../../core/models/media_link.dart';
 
 enum MediaContentType { video, image, imageGallery, article, audio, mixed }
 
+enum MediaTrackRole { progressive, videoOnly, audioOnly }
+
 enum MediaResourceType { video, image, audio, cover }
 
 /// A public work. Download state and local file paths belong to DownloadTask.
@@ -15,6 +17,8 @@ final class MediaContent {
     required List<MediaResource> resources,
     this.author,
     this.description,
+    this.coverUrl,
+    this.duration,
   }) : resources = List<MediaResource>.unmodifiable(resources) {
     if (id.trim().isEmpty) {
       throw ArgumentError.value(id, 'id', 'Must not be empty.');
@@ -43,6 +47,8 @@ final class MediaContent {
   final List<MediaResource> resources;
   final String? author;
   final String? description;
+  final Uri? coverUrl;
+  final Duration? duration;
 }
 
 /// One ordered media item. Its URL may expire and must not be persisted as
@@ -55,6 +61,15 @@ final class MediaResource {
     Map<String, String> requestHeaders = const {},
     this.suggestedFileName,
     this.mimeType,
+    this.trackRole,
+    this.qualityLabel,
+    this.width,
+    this.height,
+    this.bitrate,
+    this.codec,
+    this.container,
+    this.sizeBytes,
+    this.temporaryUrl = false,
   }) : requestHeaders = Map<String, String>.unmodifiable(requestHeaders) {
     if (id.trim().isEmpty) {
       throw ArgumentError.value(id, 'id', 'Must not be empty.');
@@ -81,6 +96,15 @@ final class MediaResource {
   final Map<String, String> requestHeaders;
   final String? suggestedFileName;
   final String? mimeType;
+  final MediaTrackRole? trackRole;
+  final String? qualityLabel;
+  final int? width, height, bitrate, sizeBytes;
+  final String? codec, container;
+  final bool temporaryUrl;
+  bool? get hasVideo =>
+      trackRole == null ? null : trackRole != MediaTrackRole.audioOnly;
+  bool? get hasAudio =>
+      trackRole == null ? null : trackRole != MediaTrackRole.videoOnly;
 }
 
 void validatePublicMediaUri(Uri uri, String name) {

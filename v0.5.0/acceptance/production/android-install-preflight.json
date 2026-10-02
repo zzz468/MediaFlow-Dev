@@ -1,0 +1,14 @@
+{
+  "device": "TEST_DEVICE",
+  "formalPackage": "com.mediaflow.mediaflow",
+  "formalUser": 10,
+  "formalCertificateSha256": "16686bce55b6c8eb66bb16b77a8599fa6005483e97430c519710a4d730c6dcba",
+  "testPackage": "com.mediaflow.mediaflow.xhsprodv050",
+  "testBuild": "Debug production lib/main.dart",
+  "testCertificateSha256": "4f6a5194614d0f53c35add86eff6475b1cbc59a2376482d8afc1e08a423299c8",
+  "samePackage": false,
+  "signatureCompatibleWithFormal": false,
+  "coexistence": "Different applicationId; no replacement needed",
+  "testPackagePresent": false,
+  "installPolicy": "New install only; no -r, no uninstall, no data clear"
+}

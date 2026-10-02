@@ -1,0 +1,22 @@
+{
+  "platform": "android",
+  "atUtc": "2026-10-02T13:22:45.5726400Z",
+  "scope": "current production downloads and main.dart cold restart",
+  "package": "com.mediaflow.mediaflow.youtubeprodv050",
+  "samples": [
+    "hLY9KMIU2BA",
+    "jNQXAC9IVRw"
+  ],
+  "progressive": {
+    "hasSound": true,
+    "systemPlayerOpened": true,
+    "avSyncNormal": true,
+    "hasPicture": true
+  },
+  "visionos": {
+    "videoOnlyOpenedAndPlays": true,
+    "audioOnlyOpenedAndPlays": true
+  },
+  "historyAfterColdRestart": true,
+  "userConfirmation": "历史仍在，两个有声视频及分离视频、音频均正常"
+}

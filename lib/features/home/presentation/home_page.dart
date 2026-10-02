@@ -11,6 +11,7 @@ import '../../parser/domain/media_content.dart';
 import '../../parser/domain/parser_result.dart';
 import '../../parser/domain/video_info.dart';
 import '../../parser/presentation/link_parser_view_model.dart';
+import '../../parser/presentation/media_variant_picker.dart';
 
 class HomePage extends ConsumerStatefulWidget {
   const HomePage({super.key});
@@ -150,7 +151,7 @@ class _HomePageState extends ConsumerState<HomePage> {
                               .read(linkParserViewModelProvider.notifier)
                               .updateInput,
                           decoration: InputDecoration(
-                            hintText: '在这里粘贴 Bilibili、抖音等平台链接',
+                            hintText: '在这里粘贴 Bilibili、抖音、小红书、YouTube 链接',
                             prefixIcon: const Icon(Icons.public_rounded),
                             suffixIcon: state.hasInput
                                 ? IconButton(
@@ -327,9 +328,13 @@ class _HomePageState extends ConsumerState<HomePage> {
       manager.addTask(task);
       manager.startDownload(task.id);
     }
-    ScaffoldMessenger.of(
-      context,
-    ).showSnackBar(SnackBar(content: Text('已将 ${tasks.length} 张图片加入下载队列。')));
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(
+          '已将 ${tasks.length} ${content.resources.any((r) => r.trackRole != null) ? '项资源' : '张图片'}加入下载队列。',
+        ),
+      ),
+    );
   }
 }
 
@@ -569,6 +574,19 @@ class _MediaContentResultCardState extends State<_MediaContentResultCard> {
     final content = widget.content;
     final resources = content.resources;
     final allSelected = _selectedIds.length == resources.length;
+    final imagesOnly = resources.every(
+      (r) => r.type == MediaResourceType.image,
+    );
+    final singleVideo =
+        resources.length == 1 &&
+        resources.first.type == MediaResourceType.video;
+    if (resources.any((r) => r.trackRole != null)) {
+      return MediaVariantPicker(
+        content: content,
+        busy: widget.busy,
+        onDownload: widget.onDownload,
+      );
+    }
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -582,7 +600,7 @@ class _MediaContentResultCardState extends State<_MediaContentResultCard> {
         ],
         const SizedBox(height: 8),
         Text(
-          '内容类型：${_contentTypeLabel(content.type)} · ${resources.length} 张图片',
+          '内容类型：${_contentTypeLabel(content.type)} · ${resources.length} ${imagesOnly ? '张图片' : '项资源'}',
         ),
         const SizedBox(height: 8),
         Row(
@@ -603,8 +621,10 @@ class _MediaContentResultCardState extends State<_MediaContentResultCard> {
           CheckboxListTile(
             dense: true,
             contentPadding: EdgeInsets.zero,
-            title: Text('${(index + 1).toString().padLeft(3, '0')} · 图片'),
-            subtitle: Text(resources[index].mimeType ?? '图片类型待下载时确认'),
+            title: Text(
+              '${(index + 1).toString().padLeft(3, '0')} · ${_resourceTypeLabel(resources[index].type)}',
+            ),
+            subtitle: Text(resources[index].mimeType ?? '媒体类型待下载时确认'),
             value: _selectedIds.contains(resources[index].id),
             onChanged: widget.busy
                 ? null
@@ -624,10 +644,12 @@ class _MediaContentResultCardState extends State<_MediaContentResultCard> {
           icon: const Icon(Icons.download_rounded),
           label: Text(
             widget.busy
-                ? '正在下载图片'
+                ? '正在下载${imagesOnly ? '图片' : '资源'}'
+                : singleVideo
+                ? '下载视频'
                 : allSelected
-                ? '下载全部图片'
-                : '下载所选图片',
+                ? '下载全部${imagesOnly ? '图片' : '资源'}'
+                : '下载所选${imagesOnly ? '图片' : '资源'}',
           ),
         ),
         if (widget.progress != null) ...[
@@ -645,6 +667,12 @@ class _MediaContentResultCardState extends State<_MediaContentResultCard> {
     MediaContentType.video => '视频',
     MediaContentType.audio => '音频',
     MediaContentType.mixed => '混合媒体',
+  };
+  String _resourceTypeLabel(MediaResourceType type) => switch (type) {
+    MediaResourceType.video => '视频',
+    MediaResourceType.image => '图片',
+    MediaResourceType.audio => '音频',
+    MediaResourceType.cover => '封面',
   };
 }
 

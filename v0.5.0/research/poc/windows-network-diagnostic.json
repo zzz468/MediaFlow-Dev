@@ -1,0 +1,48 @@
+[
+  {
+    "host": "www.youtube.com",
+    "proxy": "DIRECT",
+    "resolver": "system default",
+    "dnsAddresses": [
+      "69.171.235.22"
+    ],
+    "phase": "TCP",
+    "status": "STOPPED",
+    "failure": "networkFailure",
+    "errorType": "TimeoutError",
+    "osError": null,
+    "winError": null,
+    "elapsedMs": 6070
+  },
+  {
+    "host": "xhslink.cn",
+    "proxy": "DIRECT",
+    "resolver": "system default",
+    "dnsAddresses": [
+      "118.195.253.242",
+      "106.54.99.69"
+    ],
+    "phase": "TLS",
+    "tcp": "CONNECTED",
+    "tls": "TLSv1.2",
+    "certificateValidated": true,
+    "status": "CONNECTED; no HTTP request sent",
+    "elapsedMs": 312
+  },
+  {
+    "host": "www.xiaohongshu.com",
+    "proxy": "DIRECT",
+    "resolver": "system default",
+    "dnsAddresses": [
+      "81.69.116.87",
+      "81.69.116.102",
+      "81.69.116.86"
+    ],
+    "phase": "TLS",
+    "tcp": "CONNECTED",
+    "tls": "TLSv1.3",
+    "certificateValidated": true,
+    "status": "CONNECTED; no HTTP request sent",
+    "elapsedMs": 210
+  }
+]

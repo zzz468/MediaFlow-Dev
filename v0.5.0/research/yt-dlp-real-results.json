@@ -1,0 +1,38 @@
+[
+  {
+    "repository": "yt-dlp/yt-dlp",
+    "commit": "51bab8a0116f4d8004c315706d809782607d5847",
+    "videoId": "jNQXAC9IVRw",
+    "configuration": "WEB only; anonymous; no JS solver; no proxy; retries=0",
+    "events": [
+      {
+        "host": "www.youtube.com",
+        "path": "/watch",
+        "proxy": "DIRECT",
+        "errorType": "TransportError",
+        "status": null
+      }
+    ],
+    "status": "RUN STOPPED",
+    "failure": "networkFailure",
+    "errorType": "RuntimeError"
+  },
+  {
+    "repository": "yt-dlp/yt-dlp",
+    "commit": "51bab8a0116f4d8004c315706d809782607d5847",
+    "videoId": "aqz-KE-bpKQ",
+    "configuration": "WEB only; anonymous; no JS solver; no proxy; retries=0",
+    "events": [
+      {
+        "host": "www.youtube.com",
+        "path": "/watch",
+        "proxy": "DIRECT",
+        "errorType": "TransportError",
+        "status": null
+      }
+    ],
+    "status": "RUN STOPPED",
+    "failure": "networkFailure",
+    "errorType": "RuntimeError"
+  }
+]

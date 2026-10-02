@@ -1,0 +1,12 @@
+{
+  "os": "android",
+  "package": "com.mediaflow.mediaflow.youtubeprodv050",
+  "entrypoint": "lib/main.dart",
+  "versionName": "0.5.0",
+  "stoppedAndStarted": true,
+  "completedYoutubeTasks": 5,
+  "urlsPersistedAsStableWatchLinks": true,
+  "userHistoryConfirmation": true,
+  "uninstall": false,
+  "clearData": false
+}

@@ -1,0 +1,1124 @@
+[
+  {
+    "sample": "user-yt-1",
+    "platform": "youtube",
+    "os": "android",
+    "atUtc": "2026-09-30T12:17:03.086674Z",
+    "events": [
+      {
+        "method": "GET",
+        "host": "www.youtube.com",
+        "path": "/watch",
+        "queryKeys": [
+          "v"
+        ],
+        "cookieSent": false,
+        "proxy": "DIRECT",
+        "systemDns": [
+          "174.132.167.252",
+          "2001::1"
+        ],
+        "osError": null,
+        "networkCategory": "networkFailure.socketOrTimeout",
+        "failure": "networkFailure",
+        "errorType": "_ClientSocketException",
+        "elapsedMs": 12059
+      }
+    ],
+    "status": "STOPPED",
+    "sessionLevel": 0,
+    "cookiesPersisted": false,
+    "originalUrl": "https://youtu.be/hLY9KMIU2BA?si=gb6c0DbBnq7vBihS",
+    "videoId": "hLY9KMIU2BA",
+    "requestedWatchUrl": "https://www.youtube.com/watch?v=hLY9KMIU2BA",
+    "failure": "networkFailure",
+    "reason": "_ClientSocketException"
+  },
+  {
+    "sample": "user-yt-2",
+    "platform": "youtube",
+    "os": "android",
+    "atUtc": "2026-09-30T12:17:15.167310Z",
+    "events": [
+      {
+        "method": "GET",
+        "host": "www.youtube.com",
+        "path": "/watch",
+        "queryKeys": [
+          "v"
+        ],
+        "cookieSent": false,
+        "proxy": "DIRECT",
+        "systemDns": [
+          "174.132.167.252",
+          "2001::1"
+        ],
+        "osError": null,
+        "networkCategory": "networkFailure.socketOrTimeout",
+        "failure": "networkFailure",
+        "errorType": "_ClientSocketException",
+        "elapsedMs": 12006
+      }
+    ],
+    "status": "STOPPED",
+    "sessionLevel": 0,
+    "cookiesPersisted": false,
+    "originalUrl": "https://youtube.com/shorts/g4kriJeJFYA?si=igdpD_IiNvysbhRX",
+    "videoId": "g4kriJeJFYA",
+    "requestedWatchUrl": "https://www.youtube.com/watch?v=g4kriJeJFYA",
+    "failure": "networkFailure",
+    "reason": "_ClientSocketException"
+  },
+  {
+    "sample": "xhs-video",
+    "platform": "xiaohongshu",
+    "os": "android",
+    "atUtc": "2026-09-30T12:17:27.180227Z",
+    "events": [
+      {
+        "method": "GET",
+        "host": "xhslink.cn",
+        "path": "/o/5X01rOYZDMT",
+        "queryKeys": [],
+        "cookieSent": false,
+        "proxy": "DIRECT",
+        "systemDns": [
+          "106.54.99.69",
+          "118.195.253.242"
+        ],
+        "status": 302,
+        "mime": "text/html; charset=utf-8",
+        "elapsedMs": 614,
+        "setCookiePresent": false,
+        "redirectTo": "https://www.xiaohongshu.com/discovery/item/6abb69640000000014010526"
+      },
+      {
+        "method": "GET",
+        "host": "www.xiaohongshu.com",
+        "path": "/discovery/item/6abb69640000000014010526",
+        "queryKeys": [
+          "app_platform",
+          "ignoreEngage",
+          "app_version",
+          "share_from_user_hidden",
+          "xsec_source",
+          "type",
+          "xsec_token",
+          "author_share",
+          "shareRedId",
+          "apptime",
+          "share_id",
+          "share_channel",
+          "appuid",
+          "xhsshare"
+        ],
+        "cookieSent": false,
+        "proxy": "DIRECT",
+        "systemDns": [
+          "2402:4e00:1410::9890:edfe:f13a",
+          "81.69.116.87",
+          "81.69.116.86",
+          "81.69.116.102"
+        ],
+        "status": 200,
+        "mime": "text/html; charset=utf-8",
+        "elapsedMs": 276,
+        "setCookiePresent": true,
+        "bodyBytes": 143714,
+        "bodySha256": "33239406a0cd1b29ce6204c8e00eb89421efd466fb57a90a81832b56e4345768"
+      },
+      {
+        "method": "GET",
+        "host": "sns-video-v6.xhscdn.com",
+        "path": "/stream_glo/10001/110/114/0aeabb6951083eb211037701a0ec142511_114.mp4",
+        "queryKeys": [
+          "sign",
+          "t"
+        ],
+        "cookieSent": false,
+        "proxy": "DIRECT",
+        "systemDns": [
+          "2409:8087:5071:10::1040",
+          "2409:8087:5071:10::1042",
+          "39.137.205.152",
+          "39.137.205.45",
+          "39.137.205.155",
+          "39.137.205.46",
+          "39.137.205.49",
+          "39.137.205.47",
+          "39.137.205.156",
+          "39.137.205.48"
+        ],
+        "status": 200,
+        "mime": "video/mp4",
+        "elapsedMs": 104,
+        "setCookiePresent": false
+      }
+    ],
+    "status": "DATA_AND_DOWNLOAD_OBTAINED; systemOpen pending",
+    "sessionLevel": 0,
+    "cookiesPersisted": false,
+    "originalUrl": "https://xhslink.cn/o/5X01rOYZDMT",
+    "finalUrlRedacted": "https://www.xiaohongshu.com/discovery/item/6abb69640000000014010526",
+    "finalQueryKeys": [
+      "app_platform",
+      "ignoreEngage",
+      "app_version",
+      "share_from_user_hidden",
+      "xsec_source",
+      "type",
+      "xsec_token",
+      "author_share",
+      "shareRedId",
+      "apptime",
+      "share_id",
+      "share_channel",
+      "appuid",
+      "xhsshare"
+    ],
+    "noteId": "6abb69640000000014010526",
+    "pageShape": {
+      "initialStatePresent": true,
+      "stateShape": {
+        "global": {
+          "appSettings": {
+            "fakeModalPercent": "double",
+            "fakeModalWhiteList": {
+              "length": 0,
+              "firstShape": null
+            },
+            "noteShareCardWhiteList": {
+              "length": 1,
+              "firstShape": "String"
+            },
+            "launchAppConfig": "String",
+            "noteBackProfile": "bool",
+            "cacheLimit": "int",
+            "playLaunch": "String",
+            "jsAssetsList": "null",
+            "scrollLaunchAppPercent": "null",
+            "xhsRealIp": "String",
+            "userNotPreLoad": {
+              "length": 11,
+              "firstShape": "String"
+            },
+            "enableWriteShareCode": "bool",
+            "disabledAutoLaunchXhsChannelBiz": {
+              "length": 7,
+              "firstShape": "String"
+            },
+            "enableIdleLaunch": "bool",
+            "enableVideoPlayingLaunch": "bool",
+            "enableAiRiskTip": "bool",
+            "relatedFeedLoadStrategy": "String",
+            "floatingWidget": "String",
+            "disableDeviceScoreReport": "bool",
+            "deviceScoreTierLowMax": "null",
+            "deviceScoreTierHighMin": "null",
+            "deviceScoreReportSample": "null",
+            "pcWorldCupH5Home": "String",
+            "pcWorldCupH5Fixtures": "String",
+            "pcWorldCupH5Preview": "String"
+          },
+          "visitMobileFromAndroidWxGuide": "bool",
+          "androidWxWebId": "String",
+          "shareContext": {
+            "pageSource": "String",
+            "shareChannel": "String",
+            "shareContent": "String",
+            "shareContentId": "String",
+            "shareId": "String",
+            "shareLink": "String",
+            "shareMode": "String",
+            "shareType": "String",
+            "collectTime": "String",
+            "shareReferId": "String"
+          },
+          "supportWebp": "bool",
+          "acceptLanguageFromHeader": "null",
+          "language": "String",
+          "cityPullConfig": "null"
+        },
+        "fakeModal": {
+          "fakeModalVisible": "bool",
+          "modalAppendParams": {
+            "source": "String",
+            "deeplink": "String"
+          },
+          "enableFakeModal": "bool",
+          "launchSuccessCallback": "null"
+        },
+        "noteData": {
+          "routeQuery": {
+            "app_platform": "String",
+            "ignoreEngage": "String",
+            "app_version": "String",
+            "share_from_user_hidden": "String",
+            "xsec_source": "String",
+            "type": "String",
+            "xsec_token": "[REDACTED]",
+            "author_share": "String",
+            "shareRedId": "String",
+            "apptime": "String",
+            "share_id": "String",
+            "share_channel": "String",
+            "appuid": "String",
+            "xhsshare": "String"
+          },
+          "data": {
+            "noteData": {
+              "time": "int",
+              "noteId": "String",
+              "type": "String",
+              "title": "String",
+              "video": {
+                "media": "_Map<String, dynamic>",
+                "image": "_Map<String, dynamic>",
+                "capa": "_Map<String, dynamic>",
+                "consumer": "_Map<String, dynamic>",
+                "mediaV2": "String"
+              },
+              "tagList": {
+                "length": 2,
+                "firstShape": "_Map<String, dynamic>"
+              },
+              "atUserList": {
+                "length": 0,
+                "firstShape": null
+              },
+              "lastUpdateTime": "int",
+              "shareInfo": {
+                "unShare": "bool"
+              },
+              "desc": "String",
+              "user": {
+                "avatar": "String",
+                "redOfficialVerifyType": "int",
+                "userId": "String",
+                "nickName": "String"
+              },
+              "interactInfo": {
+                "liked": "bool",
+                "likedCount": "String",
+                "collectedCount": "String",
+                "commentCount": "String",
+                "shareCount": "String",
+                "followed": "bool",
+                "sticky": "bool",
+                "relation": "String",
+                "collected": "bool",
+                "niceCount": "String"
+              },
+              "imageList": {
+                "length": 1,
+                "firstShape": "_Map<String, dynamic>"
+              },
+              "cover": {
+                "fileId": "String"
+              }
+            },
+            "widgets": {
+              "length": 0,
+              "firstShape": null
+            },
+            "commentData": {
+              "commentCount": "int",
+              "comments": {
+                "length": 5,
+                "firstShape": "_Map<String, dynamic>"
+              },
+              "hasMore": "bool",
+              "cursor": "String",
+              "time": "int",
+              "commentCountL1": "int"
+            },
+            "userOtherNotesData": {
+              "length": 4,
+              "firstShape": {
+                "collects": "String",
+                "comments": "String",
+                "cover": "_Map<String, dynamic>",
+                "id": "String",
+                "isLiked": "bool",
+                "likes": "String",
+                "objectPosition": "int",
+                "time": "int",
+                "title": "String",
+                "type": "String",
+                "user": "_Map<String, dynamic>"
+              }
+            },
+            "relatedNotes": {
+              "length": 10,
+              "firstShape": {
+                "id": "String",
+                "title": "String",
+                "comments": "String",
+                "type": "String",
+                "cover": "_Map<String, dynamic>",
+                "formatedCollects": "String",
+                "formatedLikes": "String",
+                "isLiked": "bool",
+                "objectPosition": "int",
+                "time": "int",
+                "trackId": "String",
+                "user": "_Map<String, dynamic>"
+              }
+            }
+          },
+          "config": {
+            "articleExpand": "bool"
+          },
+          "flags": "String",
+          "serverFlags": "String",
+          "initializedLaunchOpenAppTag": {
+            "length": 0,
+            "firstShape": null
+          },
+          "openTagMetaData": {},
+          "collectionData": {
+            "id": "String",
+            "name": "String",
+            "desc": "String",
+            "noteNum": "int",
+            "paid": "bool",
+            "totalEpisodes": "int",
+            "deeplink": "String",
+            "userInfo": {
+              "nickName": "String",
+              "avatarUrl": "String"
+            },
+            "type": "int",
+            "shareInfo": {
+              "shareDesc": "String",
+              "shareImage": "String",
+              "shareLink": "String",
+              "stareTitle": "String"
+            },
+            "noteList": {
+              "length": 0,
+              "firstShape": null
+            },
+            "error": {
+              "msg": "String",
+              "status": "int"
+            }
+          },
+          "realUserId": "String",
+          "hasError": "bool",
+          "expGroups": "String",
+          "hotlistData": {
+            "length": 0,
+            "firstShape": null
+          },
+          "errorNoteData": {
+            "noteData": {},
+            "userNotes": {
+              "length": 0,
+              "firstShape": null
+            },
+            "showLaunchAppModal": "bool",
+            "show": "bool",
+            "routeQuery": {
+              "code": "String"
+            },
+            "launchAppModalParams": {
+              "source": "String",
+              "deeplink": "String"
+            }
+          },
+          "normalNotePreloadData": {
+            "imagesList": {
+              "length": 1,
+              "firstShape": {
+                "url": "String",
+                "urlSizeLarge": "String",
+                "height": "int",
+                "width": "int"
+              }
+            },
+            "title": "String",
+            "desc": "String"
+          },
+          "widgetSceneMap": {}
+        },
+        "profile": {
+          "userInfo": {
+            "follows": "String",
+            "fans": "String",
+            "likeAndCollect": "String",
+            "nickname": "String",
+            "images": "String",
+            "bannerImage": "String",
+            "desc": "String",
+            "redId": "String",
+            "id": "String",
+            "tags": {
+              "length": 0,
+              "firstShape": null
+            },
+            "tabs": {
+              "length": 1,
+              "firstShape": {
+                "id": "String",
+                "name": "String",
+                "public": "bool",
+                "visible": "bool"
+              }
+            },
+            "collectionList": {
+              "length": 0,
+              "firstShape": null
+            },
+            "userAccountStatus": "null",
+            "userPageWidgetsInfo": {
+              "normalWidgetList": {
+                "length": 0,
+                "firstShape": null
+              },
+              "shopWidgetList": {
+                "length": 0,
+                "firstShape": null
+              }
+            }
+          },
+          "noteCollectionList": {
+            "length": 0,
+            "firstShape": null
+          },
+          "noteData": {
+            "length": 0,
+            "firstShape": null
+          },
+          "notePage": "int",
+          "categoryInfo": {
+            "length": 0,
+            "firstShape": null
+          },
+          "sortType": {
+            "length": 0,
+            "firstShape": null
+          },
+          "goodsCardList": {
+            "length": 0,
+            "firstShape": null
+          },
+          "tab": "String",
+          "activeTab": "String",
+          "showBottomBar": "bool",
+          "canShowExpand": "bool",
+          "jumpBackLink": "String"
+        },
+        "UseAbExpStore": {}
+      },
+      "loginContainerPresent": false,
+      "captchaPathPresent": false,
+      "noteDataMarkerPresent": true,
+      "noteDetailMapMarkerPresent": false
+    },
+    "metadata": {
+      "id": "6abb69640000000014010526",
+      "title": "元英刚换的18屏幕碎了",
+      "author": "园咲若菜",
+      "type": "video",
+      "imageCount": 1
+    },
+    "imageFieldKeys": [
+      "fileId",
+      "height",
+      "width",
+      "url",
+      "traceId",
+      "infoList",
+      "livePhoto",
+      "stream"
+    ],
+    "videoFieldKeys": [
+      "media",
+      "image",
+      "capa",
+      "consumer",
+      "mediaV2"
+    ],
+    "resources": [
+      {
+        "index": 1,
+        "width": 1080,
+        "height": 1439,
+        "urlSha256": "d6f86047d60aa28ed2dcff3945f2c5f152286074aaf8678f91c044f04d93bdea"
+      }
+    ],
+    "downloads": [
+      {
+        "file": "xhs-video-video.mp4",
+        "localPath": "/data/user/0/com.mediaflow.research.v050.feasibility/files/downloads/xhs-video-video.mp4",
+        "bytes": 1680739,
+        "mime": "video/mp4",
+        "http": 200,
+        "sha256": "cdc21d897ccf93be781fe7b69e5a683303c1f06c5d787e9d6bc450e1b6f67afe",
+        "urlHost": "sns-video-v6.xhscdn.com",
+        "urlSha256": "52e661e09cf5db6108677e0ca1d95de3a4dcb28ecc34661f605cb76f5bfbc1a6",
+        "systemOpen": "NOT TESTED",
+        "role": "video",
+        "tracks": [
+          "video/hevc",
+          "audio/mp4a-latm"
+        ],
+        "mediaStore": "content://media/external/downloads/1000030515"
+      }
+    ],
+    "videoSource": "note.video.media.stream.*.masterUrl; returned URL unchanged",
+    "candidateSource": {
+      "scheme": "http",
+      "host": "sns-video-v6.xhscdn.com"
+    }
+  },
+  {
+    "sample": "xhs-gallery-5",
+    "platform": "xiaohongshu",
+    "os": "android",
+    "atUtc": "2026-09-30T12:17:28.847417Z",
+    "events": [
+      {
+        "method": "GET",
+        "host": "xhslink.cn",
+        "path": "/o/V8A6eesUi3",
+        "queryKeys": [],
+        "cookieSent": false,
+        "proxy": "DIRECT",
+        "systemDns": [
+          "106.54.99.69",
+          "118.195.253.242"
+        ],
+        "status": 302,
+        "mime": "text/html; charset=utf-8",
+        "elapsedMs": 1352,
+        "setCookiePresent": false,
+        "redirectTo": "https://www.xiaohongshu.com/discovery/item/686f739c000000002203d3a2"
+      },
+      {
+        "method": "GET",
+        "host": "www.xiaohongshu.com",
+        "path": "/discovery/item/686f739c000000002203d3a2",
+        "queryKeys": [
+          "app_platform",
+          "ignoreEngage",
+          "app_version",
+          "share_from_user_hidden",
+          "xsec_source",
+          "type",
+          "xsec_token",
+          "author_share",
+          "shareRedId",
+          "apptime",
+          "share_id",
+          "share_channel",
+          "appuid",
+          "xhsshare"
+        ],
+        "cookieSent": false,
+        "proxy": "DIRECT",
+        "systemDns": [
+          "2402:4e00:1410::9890:edfe:f13a",
+          "81.69.116.87",
+          "81.69.116.86",
+          "81.69.116.102"
+        ],
+        "status": 200,
+        "mime": "text/html; charset=utf-8",
+        "elapsedMs": 236,
+        "setCookiePresent": true,
+        "bodyBytes": 152329,
+        "bodySha256": "ae7a0eb4722941586c88c3b97a3ed9af54838a341900aa31c7b901b8d6bd456f"
+      },
+      {
+        "method": "GET",
+        "host": "sns-webpic-qc.xhscdn.com",
+        "path": "/202609302017/a11c9998777f099c5fb4933dcd219d0b/1040g00831jogpqkfj0105ptog1oj9cjgit9a1cg!h5_1080jpg",
+        "queryKeys": [],
+        "cookieSent": false,
+        "proxy": "DIRECT",
+        "systemDns": [
+          "2409:8c20:8ab1:45c:37::18",
+          "2409:8c20:8ab1:45d:37::2",
+          "2409:8c20:8ab1:45c:37::1c",
+          "117.147.195.129",
+          "117.147.195.155",
+          "117.147.195.150"
+        ],
+        "status": 200,
+        "mime": "image/png",
+        "elapsedMs": 10340,
+        "setCookiePresent": false
+      },
+      {
+        "method": "GET",
+        "host": "sns-webpic-qc.xhscdn.com",
+        "path": "/202609302017/7b9c82e05862fb0ae83bb8d428c9296d/1040g00831jogpqkfj0005ptog1oj9cjgj9ccop8!h5_1080jpg",
+        "queryKeys": [],
+        "cookieSent": false,
+        "proxy": "DIRECT",
+        "systemDns": [
+          "2409:8c20:8ab1:45c:37::18",
+          "2409:8c20:8ab1:45d:37::2",
+          "2409:8c20:8ab1:45c:37::1c",
+          "117.147.195.129",
+          "117.147.195.155",
+          "117.147.195.150"
+        ],
+        "status": 200,
+        "mime": "image/jpeg",
+        "elapsedMs": 330,
+        "setCookiePresent": false
+      }
+    ],
+    "status": "DATA_AND_DOWNLOAD_OBTAINED; systemOpen pending",
+    "sessionLevel": 0,
+    "cookiesPersisted": false,
+    "originalUrl": "https://xhslink.cn/o/V8A6eesUi3",
+    "finalUrlRedacted": "https://www.xiaohongshu.com/discovery/item/686f739c000000002203d3a2",
+    "finalQueryKeys": [
+      "app_platform",
+      "ignoreEngage",
+      "app_version",
+      "share_from_user_hidden",
+      "xsec_source",
+      "type",
+      "xsec_token",
+      "author_share",
+      "shareRedId",
+      "apptime",
+      "share_id",
+      "share_channel",
+      "appuid",
+      "xhsshare"
+    ],
+    "noteId": "686f739c000000002203d3a2",
+    "pageShape": {
+      "initialStatePresent": true,
+      "stateShape": {
+        "global": {
+          "appSettings": {
+            "fakeModalPercent": "double",
+            "fakeModalWhiteList": {
+              "length": 0,
+              "firstShape": null
+            },
+            "noteShareCardWhiteList": {
+              "length": 1,
+              "firstShape": "String"
+            },
+            "launchAppConfig": "String",
+            "noteBackProfile": "bool",
+            "cacheLimit": "int",
+            "playLaunch": "String",
+            "jsAssetsList": "null",
+            "scrollLaunchAppPercent": "null",
+            "xhsRealIp": "String",
+            "userNotPreLoad": {
+              "length": 11,
+              "firstShape": "String"
+            },
+            "enableWriteShareCode": "bool",
+            "disabledAutoLaunchXhsChannelBiz": {
+              "length": 7,
+              "firstShape": "String"
+            },
+            "enableIdleLaunch": "bool",
+            "enableVideoPlayingLaunch": "bool",
+            "enableAiRiskTip": "bool",
+            "relatedFeedLoadStrategy": "String",
+            "floatingWidget": "String",
+            "disableDeviceScoreReport": "bool",
+            "deviceScoreTierLowMax": "null",
+            "deviceScoreTierHighMin": "null",
+            "deviceScoreReportSample": "null",
+            "pcWorldCupH5Home": "String",
+            "pcWorldCupH5Fixtures": "String",
+            "pcWorldCupH5Preview": "String"
+          },
+          "visitMobileFromAndroidWxGuide": "bool",
+          "androidWxWebId": "String",
+          "shareContext": {
+            "pageSource": "String",
+            "shareChannel": "String",
+            "shareContent": "String",
+            "shareContentId": "String",
+            "shareExtraInfo": "String",
+            "shareId": "String",
+            "shareLink": "String",
+            "shareMode": "String",
+            "shareType": "String",
+            "collectTime": "String",
+            "shareReferId": "String"
+          },
+          "supportWebp": "bool",
+          "acceptLanguageFromHeader": "null",
+          "language": "String",
+          "cityPullConfig": "null"
+        },
+        "fakeModal": {
+          "fakeModalVisible": "bool",
+          "modalAppendParams": {
+            "source": "String",
+            "deeplink": "String"
+          },
+          "enableFakeModal": "bool",
+          "launchSuccessCallback": "null"
+        },
+        "noteData": {
+          "routeQuery": {
+            "app_platform": "String",
+            "ignoreEngage": "String",
+            "app_version": "String",
+            "share_from_user_hidden": "String",
+            "xsec_source": "String",
+            "type": "String",
+            "xsec_token": "[REDACTED]",
+            "author_share": "String",
+            "shareRedId": "String",
+            "apptime": "String",
+            "share_id": "String",
+            "share_channel": "String",
+            "appuid": "String",
+            "xhsshare": "String"
+          },
+          "data": {
+            "noteData": {
+              "interactInfo": {
+                "commentCount": "String",
+                "followed": "bool",
+                "relation": "String",
+                "niceCount": "String",
+                "likedCount": "String",
+                "collected": "bool",
+                "collectedCount": "String",
+                "shareCount": "String",
+                "sticky": "bool",
+                "liked": "bool"
+              },
+              "lastUpdateTime": "int",
+              "type": "String",
+              "desc": "String",
+              "user": {
+                "avatar": "String",
+                "redOfficialVerifyType": "int",
+                "userId": "String",
+                "nickName": "String"
+              },
+              "imageList": {
+                "length": 5,
+                "firstShape": "_Map<String, dynamic>"
+              },
+              "tagList": {
+                "length": 4,
+                "firstShape": "_Map<String, dynamic>"
+              },
+              "atUserList": {
+                "length": 0,
+                "firstShape": null
+              },
+              "time": "int",
+              "shareInfo": {
+                "unShare": "bool"
+              },
+              "noteId": "String",
+              "title": "String",
+              "cover": {
+                "fileId": "String"
+              }
+            },
+            "widgets": {
+              "length": 0,
+              "firstShape": null
+            },
+            "commentData": {
+              "commentCount": "int",
+              "comments": {
+                "length": 5,
+                "firstShape": "_Map<String, dynamic>"
+              },
+              "hasMore": "bool",
+              "cursor": "String",
+              "time": "int",
+              "commentCountL1": "int"
+            },
+            "relatedNotes": {
+              "length": 10,
+              "firstShape": {
+                "id": "String",
+                "title": "String",
+                "comments": "String",
+                "type": "String",
+                "cover": "_Map<String, dynamic>",
+                "formatedCollects": "String",
+                "formatedLikes": "String",
+                "isLiked": "bool",
+                "objectPosition": "int",
+                "time": "int",
+                "trackId": "String",
+                "user": "_Map<String, dynamic>"
+              }
+            },
+            "userOtherNotesData": {
+              "length": 4,
+              "firstShape": {
+                "collects": "String",
+                "comments": "String",
+                "cover": "_Map<String, dynamic>",
+                "id": "String",
+                "isLiked": "bool",
+                "likes": "String",
+                "objectPosition": "int",
+                "time": "int",
+                "title": "String",
+                "type": "String",
+                "user": "_Map<String, dynamic>"
+              }
+            }
+          },
+          "config": {
+            "articleExpand": "bool"
+          },
+          "flags": "String",
+          "serverFlags": "String",
+          "initializedLaunchOpenAppTag": {
+            "length": 0,
+            "firstShape": null
+          },
+          "openTagMetaData": {},
+          "collectionData": {
+            "id": "String",
+            "name": "String",
+            "desc": "String",
+            "noteNum": "int",
+            "paid": "bool",
+            "totalEpisodes": "int",
+            "deeplink": "String",
+            "userInfo": {
+              "nickName": "String",
+              "avatarUrl": "String"
+            },
+            "type": "int",
+            "shareInfo": {
+              "shareDesc": "String",
+              "shareImage": "String",
+              "shareLink": "String",
+              "stareTitle": "String"
+            },
+            "noteList": {
+              "length": 0,
+              "firstShape": null
+            },
+            "error": {
+              "msg": "String",
+              "status": "int"
+            }
+          },
+          "realUserId": "String",
+          "hasError": "bool",
+          "expGroups": "String",
+          "hotlistData": {
+            "length": 0,
+            "firstShape": null
+          },
+          "errorNoteData": {
+            "noteData": {},
+            "userNotes": {
+              "length": 0,
+              "firstShape": null
+            },
+            "showLaunchAppModal": "bool",
+            "show": "bool",
+            "routeQuery": {
+              "code": "String"
+            },
+            "launchAppModalParams": {
+              "source": "String",
+              "deeplink": "String"
+            }
+          },
+          "normalNotePreloadData": {
+            "desc": "String",
+            "imagesList": {
+              "length": 1,
+              "firstShape": {
+                "url": "String",
+                "urlSizeLarge": "String",
+                "height": "int",
+                "width": "int"
+              }
+            },
+            "title": "String"
+          },
+          "widgetSceneMap": {}
+        },
+        "profile": {
+          "userInfo": {
+            "follows": "String",
+            "fans": "String",
+            "likeAndCollect": "String",
+            "nickname": "String",
+            "images": "String",
+            "bannerImage": "String",
+            "desc": "String",
+            "redId": "String",
+            "id": "String",
+            "tags": {
+              "length": 0,
+              "firstShape": null
+            },
+            "tabs": {
+              "length": 1,
+              "firstShape": {
+                "id": "String",
+                "name": "String",
+                "public": "bool",
+                "visible": "bool"
+              }
+            },
+            "collectionList": {
+              "length": 0,
+              "firstShape": null
+            },
+            "userAccountStatus": "null",
+            "userPageWidgetsInfo": {
+              "normalWidgetList": {
+                "length": 0,
+                "firstShape": null
+              },
+              "shopWidgetList": {
+                "length": 0,
+                "firstShape": null
+              }
+            }
+          },
+          "noteCollectionList": {
+            "length": 0,
+            "firstShape": null
+          },
+          "noteData": {
+            "length": 0,
+            "firstShape": null
+          },
+          "notePage": "int",
+          "categoryInfo": {
+            "length": 0,
+            "firstShape": null
+          },
+          "sortType": {
+            "length": 0,
+            "firstShape": null
+          },
+          "goodsCardList": {
+            "length": 0,
+            "firstShape": null
+          },
+          "tab": "String",
+          "activeTab": "String",
+          "showBottomBar": "bool",
+          "canShowExpand": "bool",
+          "jumpBackLink": "String"
+        },
+        "UseAbExpStore": {}
+      },
+      "loginContainerPresent": false,
+      "captchaPathPresent": false,
+      "noteDataMarkerPresent": true,
+      "noteDetailMapMarkerPresent": false
+    },
+    "metadata": {
+      "id": "686f739c000000002203d3a2",
+      "title": "我不是电量很充足的人",
+      "author": "迟迟",
+      "type": "normal",
+      "imageCount": 5
+    },
+    "imageFieldKeys": [
+      "fileId",
+      "height",
+      "width",
+      "url",
+      "traceId",
+      "infoList",
+      "livePhoto",
+      "stream"
+    ],
+    "videoFieldKeys": [],
+    "resources": [
+      {
+        "index": 1,
+        "width": 1080,
+        "height": 1080,
+        "urlSha256": "cfd3f8b657f9628a1cc2a72a04add844357284b2c1170b704f594383812417ec"
+      },
+      {
+        "index": 2,
+        "width": 1080,
+        "height": 1080,
+        "urlSha256": "ea8b9f4c745a2ba6671ae5723b6a7df5bee6e852e173d08a1237648f87711983"
+      },
+      {
+        "index": 3,
+        "width": 1080,
+        "height": 1080,
+        "urlSha256": "7384bb23eb68aa07a9bcc7106eb533fc620f8df10c62a6fdfbcd286749d26e0f"
+      },
+      {
+        "index": 4,
+        "width": 1080,
+        "height": 1080,
+        "urlSha256": "4c9e8f9c8ecb5c8e7e05cb04b151fe172c98fd5262da97a55383f6ac1a75d763"
+      },
+      {
+        "index": 5,
+        "width": 1080,
+        "height": 1080,
+        "urlSha256": "48d5bd9e02b5c33920f47f0e3806d0a29f0976a986a57345732514df34f913fa"
+      }
+    ],
+    "downloads": [
+      {
+        "file": "xhs-gallery-5-1.png",
+        "localPath": "/data/user/0/com.mediaflow.research.v050.feasibility/files/downloads/xhs-gallery-5-1.png",
+        "bytes": 918516,
+        "mime": "image/png",
+        "http": 200,
+        "sha256": "4a4c0e120f2e1c9a3129c49de0dcf78ebdac7122e468588decfa4be224c09c74",
+        "urlHost": "sns-webpic-qc.xhscdn.com",
+        "urlSha256": "cfd3f8b657f9628a1cc2a72a04add844357284b2c1170b704f594383812417ec",
+        "systemOpen": "NOT TESTED",
+        "index": 1,
+        "role": "image",
+        "tracks": {
+          "width": 1080,
+          "height": 1080
+        },
+        "mediaStore": "content://media/external/downloads/1000030516"
+      },
+      {
+        "file": "xhs-gallery-5-2.jpg",
+        "localPath": "/data/user/0/com.mediaflow.research.v050.feasibility/files/downloads/xhs-gallery-5-2.jpg",
+        "bytes": 46990,
+        "mime": "image/jpeg",
+        "http": 200,
+        "sha256": "cf1e06adb5654e9c97e9435b3db6979970014c82254ebc4103d835446bc89d1d",
+        "urlHost": "sns-webpic-qc.xhscdn.com",
+        "urlSha256": "ea8b9f4c745a2ba6671ae5723b6a7df5bee6e852e173d08a1237648f87711983",
+        "systemOpen": "NOT TESTED",
+        "index": 2,
+        "role": "image",
+        "tracks": {
+          "width": 1080,
+          "height": 1080
+        },
+        "mediaStore": "content://media/external/downloads/1000030517"
+      }
+    ],
+    "candidateSource": {
+      "scheme": "http",
+      "host": "sns-webpic-qc.xhscdn.com"
+    },
+    "twoFilesDistinct": true
+  }
+]

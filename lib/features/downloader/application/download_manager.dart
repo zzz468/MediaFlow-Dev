@@ -139,6 +139,17 @@ class DownloadManager extends Notifier<List<DownloadTask>> {
       return;
     }
 
+    if (task.needsUrlRefresh) {
+      _replaceTask(
+        taskId,
+        (current) => current.copyWith(
+          status: DownloadStatus.failed,
+          errorMessage: '媒体地址已过期，请重新解析来源链接后选择资源下载。',
+        ),
+      );
+      _schedulePersistence(immediate: true);
+      return;
+    }
     _replaceTask(
       taskId,
       (currentTask) => currentTask.copyWith(
@@ -478,7 +489,12 @@ class DownloadManager extends Notifier<List<DownloadTask>> {
         .restoreTasksOnStartup;
     final restoredTasks = <DownloadTask>[
       for (final task in restored)
-        if (task.status == DownloadStatus.downloading ||
+        if (task.needsUrlRefresh && task.status != DownloadStatus.completed)
+          task.copyWith(
+            status: DownloadStatus.failed,
+            errorMessage: '媒体地址已过期，请重新解析来源链接后选择资源下载。',
+          )
+        else if (task.status == DownloadStatus.downloading ||
             task.status == DownloadStatus.queued)
           task.copyWith(
             progress: restoreInterruptedTasks ? task.progress : 0,

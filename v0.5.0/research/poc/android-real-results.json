@@ -1,0 +1,273 @@
+[
+  {
+    "sample": "yt-1",
+    "platform": "youtube",
+    "os": "android",
+    "atUtc": "2026-09-30T10:44:13.017490Z",
+    "events": [
+      {
+        "method": "GET",
+        "host": "www.youtube.com",
+        "path": "/watch",
+        "queryKeys": [
+          "v"
+        ],
+        "cookieSent": false,
+        "proxy": "DIRECT",
+        "failure": "networkFailure",
+        "errorType": "_ClientSocketException",
+        "elapsedMs": 12027
+      }
+    ],
+    "status": "STOPPED",
+    "sessionLevel": 0,
+    "cookiesPersisted": false,
+    "failure": "networkFailure",
+    "reason": "_ClientSocketException"
+  },
+  {
+    "sample": "yt-2",
+    "platform": "youtube",
+    "os": "android",
+    "atUtc": "2026-09-30T10:44:25.073588Z",
+    "events": [
+      {
+        "method": "GET",
+        "host": "www.youtube.com",
+        "path": "/watch",
+        "queryKeys": [
+          "v"
+        ],
+        "cookieSent": false,
+        "proxy": "DIRECT",
+        "failure": "networkFailure",
+        "errorType": "_ClientSocketException",
+        "elapsedMs": 12003
+      }
+    ],
+    "status": "STOPPED",
+    "sessionLevel": 0,
+    "cookiesPersisted": false,
+    "failure": "networkFailure",
+    "reason": "_ClientSocketException"
+  },
+  {
+    "sample": "xhs-video",
+    "platform": "xiaohongshu",
+    "os": "android",
+    "atUtc": "2026-09-30T10:44:37.083248Z",
+    "events": [
+      {
+        "method": "GET",
+        "host": "xhslink.cn",
+        "path": "/o/5X01rOYZDMT",
+        "queryKeys": [],
+        "cookieSent": false,
+        "proxy": "DIRECT",
+        "status": 302,
+        "mime": "text/html; charset=utf-8",
+        "elapsedMs": 362,
+        "setCookiePresent": false,
+        "redirectTo": "https://www.xiaohongshu.com/discovery/item/6abb69640000000014010526"
+      },
+      {
+        "method": "GET",
+        "host": "www.xiaohongshu.com",
+        "path": "/discovery/item/6abb69640000000014010526",
+        "queryKeys": [
+          "app_platform",
+          "ignoreEngage",
+          "app_version",
+          "share_from_user_hidden",
+          "xsec_source",
+          "type",
+          "xsec_token",
+          "author_share",
+          "shareRedId",
+          "apptime",
+          "share_id",
+          "share_channel",
+          "appuid",
+          "xhsshare"
+        ],
+        "cookieSent": false,
+        "proxy": "DIRECT",
+        "status": 200,
+        "mime": "text/html; charset=utf-8",
+        "elapsedMs": 273,
+        "setCookiePresent": true,
+        "bodyBytes": 143848,
+        "bodySha256": "0e591357eafd461c8e73a6b8592fc872335559069cd7e8e4bef881459fe65c12"
+      }
+    ],
+    "status": "STOPPED",
+    "sessionLevel": 0,
+    "cookiesPersisted": false,
+    "finalUrlRedacted": "https://www.xiaohongshu.com/discovery/item/6abb69640000000014010526",
+    "finalQueryKeys": [
+      "app_platform",
+      "ignoreEngage",
+      "app_version",
+      "share_from_user_hidden",
+      "xsec_source",
+      "type",
+      "xsec_token",
+      "author_share",
+      "shareRedId",
+      "apptime",
+      "share_id",
+      "share_channel",
+      "appuid",
+      "xhsshare"
+    ],
+    "noteId": "6abb69640000000014010526",
+    "failure": "parseNoMatch",
+    "reason": "targetNoteMissing"
+  },
+  {
+    "sample": "xhs-gallery-8",
+    "platform": "xiaohongshu",
+    "os": "android",
+    "atUtc": "2026-09-30T10:44:38.106042Z",
+    "events": [
+      {
+        "method": "GET",
+        "host": "xhslink.cn",
+        "path": "/o/4wRbjSYrcBJ",
+        "queryKeys": [],
+        "cookieSent": false,
+        "proxy": "DIRECT",
+        "status": 302,
+        "mime": "text/html; charset=utf-8",
+        "elapsedMs": 211,
+        "setCookiePresent": false,
+        "redirectTo": "https://www.xiaohongshu.com/discovery/item/687a4239000000002400bcc9"
+      },
+      {
+        "method": "GET",
+        "host": "www.xiaohongshu.com",
+        "path": "/discovery/item/687a4239000000002400bcc9",
+        "queryKeys": [
+          "app_platform",
+          "ignoreEngage",
+          "app_version",
+          "share_from_user_hidden",
+          "xsec_source",
+          "type",
+          "xsec_token",
+          "author_share",
+          "shareRedId",
+          "apptime",
+          "share_id",
+          "share_channel",
+          "appuid",
+          "xhsshare"
+        ],
+        "cookieSent": false,
+        "proxy": "DIRECT",
+        "status": 200,
+        "mime": "text/html; charset=utf-8",
+        "elapsedMs": 214,
+        "setCookiePresent": true,
+        "bodyBytes": 177924,
+        "bodySha256": "6ac2401e3385f0918d1ce9b2bc4402f284423487619531cb39eca2d76b8acaf1"
+      }
+    ],
+    "status": "STOPPED",
+    "sessionLevel": 0,
+    "cookiesPersisted": false,
+    "finalUrlRedacted": "https://www.xiaohongshu.com/discovery/item/687a4239000000002400bcc9",
+    "finalQueryKeys": [
+      "app_platform",
+      "ignoreEngage",
+      "app_version",
+      "share_from_user_hidden",
+      "xsec_source",
+      "type",
+      "xsec_token",
+      "author_share",
+      "shareRedId",
+      "apptime",
+      "share_id",
+      "share_channel",
+      "appuid",
+      "xhsshare"
+    ],
+    "noteId": "687a4239000000002400bcc9",
+    "failure": "parseNoMatch",
+    "reason": "targetNoteMissing"
+  },
+  {
+    "sample": "xhs-gallery-5",
+    "platform": "xiaohongshu",
+    "os": "android",
+    "atUtc": "2026-09-30T10:44:38.960351Z",
+    "events": [
+      {
+        "method": "GET",
+        "host": "xhslink.cn",
+        "path": "/o/V8A6eesUi3",
+        "queryKeys": [],
+        "cookieSent": false,
+        "proxy": "DIRECT",
+        "status": 302,
+        "mime": "text/html; charset=utf-8",
+        "elapsedMs": 213,
+        "setCookiePresent": false,
+        "redirectTo": "https://www.xiaohongshu.com/discovery/item/686f739c000000002203d3a2"
+      },
+      {
+        "method": "GET",
+        "host": "www.xiaohongshu.com",
+        "path": "/discovery/item/686f739c000000002203d3a2",
+        "queryKeys": [
+          "app_platform",
+          "ignoreEngage",
+          "app_version",
+          "share_from_user_hidden",
+          "xsec_source",
+          "type",
+          "xsec_token",
+          "author_share",
+          "shareRedId",
+          "apptime",
+          "share_id",
+          "share_channel",
+          "appuid",
+          "xhsshare"
+        ],
+        "cookieSent": false,
+        "proxy": "DIRECT",
+        "status": 200,
+        "mime": "text/html; charset=utf-8",
+        "elapsedMs": 200,
+        "setCookiePresent": true,
+        "bodyBytes": 152426,
+        "bodySha256": "94939567c24e92b3e1caaea641ba11173df1ffea50469e75828d0338bb2c36ef"
+      }
+    ],
+    "status": "STOPPED",
+    "sessionLevel": 0,
+    "cookiesPersisted": false,
+    "finalUrlRedacted": "https://www.xiaohongshu.com/discovery/item/686f739c000000002203d3a2",
+    "finalQueryKeys": [
+      "app_platform",
+      "ignoreEngage",
+      "app_version",
+      "share_from_user_hidden",
+      "xsec_source",
+      "type",
+      "xsec_token",
+      "author_share",
+      "shareRedId",
+      "apptime",
+      "share_id",
+      "share_channel",
+      "appuid",
+      "xhsshare"
+    ],
+    "noteId": "686f739c000000002203d3a2",
+    "failure": "parseNoMatch",
+    "reason": "targetNoteMissing"
+  }
+]

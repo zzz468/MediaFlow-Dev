@@ -1,0 +1,8 @@
+{
+  "processId": 35844,
+  "exe": "D:\\projects\\mediaflow-v050\\dist\\v050-xhs\\Windows\\MediaFlow.exe",
+  "dataRoot": "D:/projects/mediaflow-v050/build/xhs-production-data",
+  "source": "Production lib/main.dart Release; independent acceptance storage",
+  "operation": "New process launch after GUI test process ended",
+  "finalHumanConfirmation": "2026-10-01 USER CONFIRMED; exact replies in human-confirmations.json"
+}

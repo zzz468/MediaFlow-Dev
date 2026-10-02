@@ -2,11 +2,21 @@ param(
     [string]$FlutterCommand = "D:\dev\flutter\bin\flutter.bat",
     [string]$AndroidSdk = "D:\Android\Sdk",
     [string]$KeyPropertiesPath = $env:MEDIAFLOW_ANDROID_KEY_PROPERTIES,
-    [string]$Version = "v0.2.0"
+    [string]$Version = "v0.5.0",
+    [string]$ExpectedSignerSha256 = "16686bce55b6c8eb66bb16b77a8599fa6005483e97430c519710a4d730c6dcba"
 )
 
 $ErrorActionPreference = "Stop"
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
+$versionLine = (Get-Content -LiteralPath (Join-Path $repoRoot 'pubspec.yaml') | Select-String '^version: (\d+\.\d+\.\d+)\+(\d+)$').Matches
+if ($versionLine.Count -ne 1 -or $Version -ne ('v' + $versionLine[0].Groups[1].Value)) {
+    throw 'Release Version must match the version in pubspec.yaml.'
+}
+$buildName = $versionLine[0].Groups[1].Value
+$buildNumber = $versionLine[0].Groups[2].Value
+if ($env:MEDIAFLOW_ANDROID_TEST_APP_ID_SUFFIX -or $env:MEDIAFLOW_V030_PROBE_APP_ID_SUFFIX) {
+    throw 'Acceptance applicationId overrides must be unset for production Release.'
+}
 $distRoot = Join-Path $repoRoot "dist"
 $apkOutput = Join-Path $repoRoot "build\app\outputs\flutter-apk\app-release.apk"
 $releaseApk = Join-Path $distRoot "MediaFlow-$Version-android.apk"
@@ -39,7 +49,7 @@ try {
         throw "Failed to prepare Android Release configuration."
     }
 
-    & $FlutterCommand build apk --release --no-pub --build-name 0.2.0 --build-number 2
+    & $FlutterCommand build apk --release --no-pub --build-name $buildName --build-number $buildNumber --dart-define=APP_ENV=production --dart-define=APP_VERSION=$buildName --dart-define=APP_BUILD=$buildNumber
     if ($LASTEXITCODE -ne 0) {
         throw "Android Release APK build failed."
     }
@@ -54,6 +64,9 @@ try {
     }
     if ($signatureDetails -match "CN=Android Debug") {
         throw "Android Release APK is signed with the debug certificate."
+    }
+    if (-not ($signatureDetails -match "certificate SHA-256 digest: $ExpectedSignerSha256")) {
+        throw 'Android signer does not match the published MediaFlow certificate.'
     }
 
     New-Item -ItemType Directory -Force -Path $distRoot | Out-Null

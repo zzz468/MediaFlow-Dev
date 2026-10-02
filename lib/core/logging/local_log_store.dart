@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:logging/logging.dart';
 
 import '../storage/app_data_directory.dart';
+import 'log_redactor.dart';
 
 class LocalLogStore {
   factory LocalLogStore({
@@ -104,6 +105,6 @@ class LocalLogStore {
         ..write(record.stackTrace.toString().replaceAll('\n', r'\n'));
     }
     buffer.writeln();
-    return buffer.toString();
+    return redactLogText(buffer);
   }
 }

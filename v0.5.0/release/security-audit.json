@@ -1,0 +1,15 @@
+{
+  "credentialFieldsSanitized": [
+    "v0.5.0/research/poc/android-fixed-samples-resume-results.json",
+    "v0.5.0/research/poc/android-latest-results.json",
+    "v0.5.0/research/poc/android-media-url-results.json",
+    "v0.5.0/research/poc/android-mobile-schema-results.json",
+    "v0.5.0/research/poc/android-page-diagnostic.json",
+    "v0.5.0/research/poc/windows-xhs-mobile-gallery-oct1-context-results.json",
+    "v0.5.0/research/poc/windows-xhs-mobile-oct1-context-results.json"
+  ],
+  "testLiterals": "Reviewed: offline synthetic values, no live credentials",
+  "privateMaterial": "External signing properties/keystore never staged",
+  "localState": "APK ZIP executables downloaded media and local History ignored",
+  "originals": "Preserved locally under ignored release/local/original-evidence"
+}

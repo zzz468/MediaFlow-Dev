@@ -53,3 +53,13 @@ app.*.map.json
 *.p12
 *.pfx
 key.properties
+
+# Local acceptance binaries, media and private runtime state (keep reports).
+*.apk
+*.aab
+*.zip
+/v0.5.0/acceptance/youtube/artifacts/
+/v0.5.0/acceptance/youtube/windows-data/
+/v0.5.0/acceptance/youtube/android-cold-history.json
+/v0.5.0/acceptance/youtube/frozen-before.json
+/v0.5.0/release/local/

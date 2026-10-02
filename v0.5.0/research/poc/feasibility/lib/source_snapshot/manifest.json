@@ -1,0 +1,26 @@
+[
+  {
+    "source": "lib/core/models/media_link.dart",
+    "snapshot": "lib/source_snapshot/core/models/media_link.dart",
+    "sha256": "6739b86797f9b854c0848858959b1e8944986bd3f8767aa3cb9a9d67e8bb8bb0",
+    "purpose": "Verbatim MediaFlow-owned read-only domain/mapper snapshot; no production modification"
+  },
+  {
+    "source": "lib/features/parser/domain/media_content.dart",
+    "snapshot": "lib/source_snapshot/features/parser/domain/media_content.dart",
+    "sha256": "ce7c59406253ff13c6e9aa90a7e6b8cdc300d0be5d1a6af0f2fc3ebb00b22b6b",
+    "purpose": "Verbatim MediaFlow-owned read-only domain/mapper snapshot; no production modification"
+  },
+  {
+    "source": "lib/features/downloader/domain/download_task.dart",
+    "snapshot": "lib/source_snapshot/features/downloader/domain/download_task.dart",
+    "sha256": "e213afe37e3a4c7da2ce8dbeed7780d238260814f4b11a635c212b538719e328",
+    "purpose": "Verbatim MediaFlow-owned read-only domain/mapper snapshot; no production modification"
+  },
+  {
+    "source": "lib/features/downloader/application/media_content_download_mapper.dart",
+    "snapshot": "lib/source_snapshot/features/downloader/application/media_content_download_mapper.dart",
+    "sha256": "efb363ebc3435ce2e495b3d32980873cf1443269bc5659853a2a2f0d381217e7",
+    "purpose": "Verbatim MediaFlow-owned read-only domain/mapper snapshot; no production modification"
+  }
+]

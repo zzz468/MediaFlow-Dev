@@ -1,0 +1,149 @@
+{
+  "fixtureOnly": true,
+  "videoId": "FIXTURE0001",
+  "player": {
+    "videoDetails": {
+      "videoId": "FIXTURE0001",
+      "title": "离线 fixture / test: 视频",
+      "author": "Synthetic fixture",
+      "lengthSeconds": "61",
+      "thumbnail": {
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/FIXTURE0001/hqdefault.jpg"
+          }
+        ]
+      }
+    }
+  },
+  "streams": [
+    {
+      "key": "muxed-360",
+      "itag": 18,
+      "hasAudio": true,
+      "hasVideo": true,
+      "quality": "360p",
+      "width": 640,
+      "height": 360,
+      "container": "mp4",
+      "videoCodec": "avc1.42001E",
+      "audioCodec": "mp4a.40.2",
+      "transport": "single-file",
+      "url": "https://fixture.googlevideo.com/media?expire=1&sig=FIXTURE",
+      "bitrate": 1800000,
+      "expectedBytes": 4
+    },
+    {
+      "key": "muxed-720",
+      "itag": 22,
+      "hasAudio": true,
+      "hasVideo": true,
+      "quality": "720p",
+      "width": 1280,
+      "height": 720,
+      "container": "mp4",
+      "videoCodec": "avc1.64001F",
+      "audioCodec": "mp4a.40.2",
+      "transport": "single-file",
+      "url": "https://fixture.googlevideo.com/media?itag=22",
+      "bitrate": 1800000,
+      "expectedBytes": 4
+    },
+    {
+      "key": "video-1080",
+      "itag": 137,
+      "hasAudio": false,
+      "hasVideo": true,
+      "quality": "1080p",
+      "width": 1920,
+      "height": 1080,
+      "container": "mp4",
+      "videoCodec": "avc1.640028",
+      "audioCodec": null,
+      "transport": "single-file",
+      "url": "https://fixture.googlevideo.com/media?itag=137",
+      "bitrate": 1800000,
+      "expectedBytes": 4
+    },
+    {
+      "key": "audio-128",
+      "itag": 140,
+      "hasAudio": true,
+      "hasVideo": false,
+      "quality": "128 kbps",
+      "width": null,
+      "height": null,
+      "container": "mp4",
+      "videoCodec": null,
+      "audioCodec": "mp4a.40.2",
+      "transport": "single-file",
+      "url": "https://fixture.googlevideo.com/media?itag=140",
+      "bitrate": 128000,
+      "expectedBytes": 4
+    },
+    {
+      "key": "audio-webm",
+      "itag": 251,
+      "hasAudio": true,
+      "hasVideo": false,
+      "quality": "160 kbps",
+      "width": null,
+      "height": null,
+      "container": "webm",
+      "videoCodec": null,
+      "audioCodec": "opus",
+      "transport": "single-file",
+      "url": "https://fixture.googlevideo.com/media?itag=251",
+      "bitrate": 128000,
+      "expectedBytes": 4
+    },
+    {
+      "key": "hls",
+      "itag": 91,
+      "hasAudio": true,
+      "hasVideo": true,
+      "quality": "144p",
+      "width": 256,
+      "height": 144,
+      "container": "mp4",
+      "videoCodec": "avc1",
+      "audioCodec": "aac",
+      "transport": "hls",
+      "url": "https://fixture.googlevideo.com/list.m3u8",
+      "bitrate": 1800000,
+      "expectedBytes": 4
+    },
+    {
+      "key": "bad-origin",
+      "itag": 999,
+      "hasAudio": false,
+      "hasVideo": true,
+      "quality": null,
+      "width": 1920,
+      "height": 1080,
+      "container": "mp4",
+      "videoCodec": null,
+      "audioCodec": null,
+      "transport": "single-file",
+      "url": "https://example.invalid/media",
+      "bitrate": 1800000,
+      "expectedBytes": 4
+    },
+    {
+      "key": "unknown",
+      "itag": 998,
+      "hasAudio": false,
+      "hasVideo": false,
+      "quality": null,
+      "width": null,
+      "height": null,
+      "container": "mp4",
+      "videoCodec": null,
+      "audioCodec": null,
+      "transport": "single-file",
+      "url": "https://fixture.googlevideo.com/media",
+      "bitrate": 1800000,
+      "expectedBytes": 4
+    }
+  ]
+}

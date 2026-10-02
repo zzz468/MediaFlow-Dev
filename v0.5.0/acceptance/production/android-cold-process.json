@@ -1,0 +1,8 @@
+{
+  "beforePid": "9144",
+  "afterPid": "11713",
+  "package": "com.mediaflow.mediaflow.xhsprodv050",
+  "operation": "Force-stop test package process and relaunch only; no data clear",
+  "historyUiConfirmation": "USER CONFIRMED",
+  "finalHumanConfirmation": "2026-10-01 USER CONFIRMED; exact replies in human-confirmations.json"
+}
