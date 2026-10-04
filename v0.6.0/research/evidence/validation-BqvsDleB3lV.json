@@ -1,0 +1,60 @@
+{
+  "os": "windows",
+  "timestamp": "2026-10-03T07:29:13.748789Z",
+  "normalizedUrl": "https://www.instagram.com/p/BqvsDleB3lV/",
+  "platform": "Instagram",
+  "postId": "BqvsDleB3lV",
+  "metadataSucceeded": true,
+  "mediaCount": 1,
+  "networkTimeout": false,
+  "403": false,
+  "429": false,
+  "loginRedirect": false,
+  "route": "initialized anonymous context + doc-id",
+  "initialization": {
+    "finalHost": "www.instagram.com",
+    "httpStatus": 200,
+    "403": false,
+    "429": false,
+    "loginRedirect": false,
+    "mime": "text/html",
+    "contentLength": null,
+    "fileBytes": 418764,
+    "anonymousCsrfAvailable": true
+  },
+  "finalHost": "www.instagram.com",
+  "httpStatus": 200,
+  "mime": "application/json",
+  "contentLength": 3129,
+  "fileBytes": 14222,
+  "author": "instagram",
+  "title": "Photo by @j9ryl\nThis box fits squarely in the middle of a Hong Kong high-rise. 🏢 #WHPsquares.",
+  "coverHost": "scontent-iad6-1.cdninstagram.com",
+  "mediaType": "image",
+  "errorCategory": null,
+  "orderedResources": [
+    {
+      "sequenceIndex": 0,
+      "resourceId": "1922949326347663701_25025320-0",
+      "type": "image",
+      "urlHost": "scontent-iad6-1.cdninstagram.com",
+      "directUrlExists": true,
+      "mime": null,
+      "container": null,
+      "systemOpened": "USER VALIDATION PENDING",
+      "contentOrder": "USER VALIDATION PENDING",
+      "download": {
+        "finalHost": "scontent-iad6-1.cdninstagram.com",
+        "httpStatus": 200,
+        "403": false,
+        "429": false,
+        "loginRedirect": false,
+        "mime": "image/jpeg",
+        "contentLength": 383468,
+        "fileBytes": 383468,
+        "savePath": "D:\\projects\\mediaflow-v060\\v0.6.0\\research\\poc\\social\\../../evidence/downloads/BqvsDleB3lV-1.jpg",
+        "completeDownload": true
+      }
+    }
+  ]
+}

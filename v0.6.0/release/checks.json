@@ -1,0 +1,54 @@
+{
+  "version": "0.6.0+6",
+  "auditStarted": "2026-10-03",
+  "releasePrepared": "2026-10-04",
+  "format": {
+    "files": 167,
+    "status": "PASS",
+    "changed": 0
+  },
+  "analyze": "PASS - No issues found",
+  "tests": {
+    "failed": 0,
+    "skipped": 7,
+    "passed": 376
+  },
+  "diffCheck": "PASS",
+  "windows": {
+    "acceptanceRootOverride": false,
+    "build": "PASS - x64 Release lib/main.dart",
+    "version": "0.6.0+6"
+  },
+  "android": {
+    "versionName": "0.6.0",
+    "signerSHA256": "16686bce55b6c8eb66bb16b77a8599fa6005483e97430c519710a4d730c6dcba",
+    "versionCode": 6,
+    "signer": "CN=MediaFlowRelease, OU=Release, O=MediaFlow, C=US",
+    "researchPackage": false,
+    "package": "com.mediaflow.mediaflow",
+    "integrationTestPlugin": false,
+    "debugSigner": false,
+    "v3": false,
+    "build": "PASS - formal signed Release lib/main.dart",
+    "v2": true
+  },
+  "priorProductionAcceptance": "Instagram and X Windows/Android passed, retained as evidence per user",
+  "minimumSmoke": {
+    "windows": "PASS - user confirmed 能够正常使用 after formal release minimum smoke instructions",
+    "android": "PASS - user confirmed Android 最小 smoke 通过"
+  },
+  "assets": [
+    {
+      "name": "MediaFlow-v0.6.0-windows-x64.zip",
+      "bytes": 13880567,
+      "sha256": "a36427af50919808ff4ec21e26660c42243da2ef04c0655e6c48939137b45b6e"
+    },
+    {
+      "name": "MediaFlow-v0.6.0-android.apk",
+      "bytes": 55863403,
+      "sha256": "002a300b8ad5b95340952eabd4a7176c150600bdf4440c73596a94efd9d6ff7b"
+    }
+  ],
+  "noNewDependencies": true,
+  "signingTemporaryConfigurationDeleted": true
+}

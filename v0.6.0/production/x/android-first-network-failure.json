@@ -1,0 +1,11 @@
+{
+  "os": "android",
+  "atUtc": "2026-10-03T11:16:53.662754Z",
+  "route": "HomePage/default ParserService/default DownloadManager/default History",
+  "status": "FAILED",
+  "systemOpen": "USER VALIDATION PENDING",
+  "coldProcessRestart": "USER VALIDATION PENDING",
+  "parserFailureCode": "network_failure",
+  "failedSample": "2102857143263085031",
+  "errorType": "TestFailure"
+}

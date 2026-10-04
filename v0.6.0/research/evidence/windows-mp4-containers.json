@@ -1,0 +1,55 @@
+[
+  {
+    "file": "1577924293023133696-2.mp4",
+    "bytes": 146756,
+    "topLevelBoxes": [
+      "ftyp",
+      "moov",
+      "mdat",
+      "free"
+    ],
+    "trackHandlers": [
+      "vide"
+    ],
+    "hasVideoTrack": true,
+    "hasAudioTrack": false,
+    "containerStructure": "PASS",
+    "systemPlayback": "USER VALIDATION PENDING"
+  },
+  {
+    "file": "2102857143263085031-1.mp4",
+    "bytes": 499123,
+    "topLevelBoxes": [
+      "ftyp",
+      "moov",
+      "mdat",
+      "free"
+    ],
+    "trackHandlers": [
+      "vide",
+      "soun"
+    ],
+    "hasVideoTrack": true,
+    "hasAudioTrack": true,
+    "containerStructure": "PASS",
+    "systemPlayback": "USER VALIDATION PENDING"
+  },
+  {
+    "file": "Dd_OJNzCVSU-1.mp4",
+    "bytes": 15637515,
+    "topLevelBoxes": [
+      "ftyp",
+      "moov",
+      "free",
+      "mdat"
+    ],
+    "trackHandlers": [
+      "vide",
+      "soun"
+    ],
+    "hasVideoTrack": true,
+    "hasAudioTrack": true,
+    "containerStructure": "PASS",
+    "systemPlayback": "USER VALIDATION PENDING"
+  }
+]

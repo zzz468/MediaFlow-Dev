@@ -1,0 +1,31 @@
+{
+  "tool": "yt-dlp",
+  "url": "https://www.instagram.com/reel/Chunk8-jurw/",
+  "events": [
+    {
+      "host": "www.instagram.com",
+      "status": 200
+    },
+    {
+      "host": "www.instagram.com",
+      "status": 200
+    },
+    {
+      "host": "www.instagram.com",
+      "status": 200
+    },
+    {
+      "host": "www.instagram.com",
+      "status": 200
+    },
+    {
+      "host": "www.instagram.com",
+      "status": 200
+    }
+  ],
+  "noExternalCookies": true,
+  "noAutomaticRetry": true,
+  "version": "2026.08.19",
+  "result": "CONTROLLED STOP",
+  "reason": "Reference request budget reached"
+}

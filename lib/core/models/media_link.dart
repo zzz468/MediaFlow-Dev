@@ -1,4 +1,12 @@
-enum MediaPlatform { unknown, douyin, bilibili, xiaohongshu, youtube }
+enum MediaPlatform {
+  unknown,
+  douyin,
+  bilibili,
+  xiaohongshu,
+  youtube,
+  instagram,
+  x,
+}
 
 enum MediaLinkType { unknown, video, playlist }
 
@@ -9,6 +17,8 @@ extension MediaPlatformDisplayName on MediaPlatform {
       MediaPlatform.bilibili => 'Bilibili',
       MediaPlatform.xiaohongshu => '小红书',
       MediaPlatform.youtube => 'YouTube',
+      MediaPlatform.instagram => 'Instagram',
+      MediaPlatform.x => 'X / Twitter',
       MediaPlatform.unknown => '未知',
     };
   }

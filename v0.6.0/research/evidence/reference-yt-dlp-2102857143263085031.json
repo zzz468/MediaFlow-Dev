@@ -1,0 +1,29 @@
+{
+  "tool": "yt-dlp",
+  "url": "https://x.com/JakeStateFarm/status/2102857143263085031",
+  "events": [
+    {
+      "host": "cdn.syndication.twimg.com",
+      "status": 200
+    },
+    {
+      "host": "cdn.syndication.twimg.com",
+      "status": 200
+    },
+    {
+      "host": "video.twimg.com",
+      "status": 200
+    },
+    {
+      "host": "video.twimg.com",
+      "status": 200
+    }
+  ],
+  "noExternalCookies": true,
+  "noAutomaticRetry": true,
+  "version": "2026.08.19",
+  "metadataSucceeded": true,
+  "entryCount": 1,
+  "formatCount": 5,
+  "result": "REFERENCE RUN COMPLETED"
+}

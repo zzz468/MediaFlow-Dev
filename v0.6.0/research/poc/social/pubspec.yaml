@@ -1,0 +1,14 @@
+name: social_research
+description: Isolated Instagram and X feasibility research
+publish_to: none
+version: 0.6.0+3
+environment:
+  sdk: ^3.12.2
+dependencies:
+  flutter:
+    sdk: flutter
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+flutter:
+  uses-material-design: true

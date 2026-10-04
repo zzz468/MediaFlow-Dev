@@ -1,0 +1,8 @@
+{
+  "architecture": "x64",
+  "fileVersion": "0.6.0+6",
+  "productVersion": "0.6.0+6",
+  "isDebug": false,
+  "entrypoint": "lib/main.dart",
+  "acceptanceDataRootOverride": false
+}

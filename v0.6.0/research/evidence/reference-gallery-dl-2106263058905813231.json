@@ -1,0 +1,23 @@
+{
+  "tool": "gallery-dl",
+  "url": "https://x.com/DrYlurvhn/status/2106263058905813231",
+  "events": [
+    {
+      "host": "api.x.com",
+      "status": 200
+    },
+    {
+      "host": "x.com",
+      "status": 200
+    }
+  ],
+  "noExternalCookies": true,
+  "noAutomaticRetry": true,
+  "version": "1.32.14",
+  "resourceCount": 2,
+  "resourceHosts": [
+    "pbs.twimg.com",
+    "pbs.twimg.com"
+  ],
+  "result": "REFERENCE RUN COMPLETED"
+}

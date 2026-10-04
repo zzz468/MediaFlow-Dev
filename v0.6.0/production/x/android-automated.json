@@ -1,0 +1,109 @@
+{
+  "os": "android",
+  "atUtc": "2026-10-03T11:17:59.463491Z",
+  "route": "HomePage/default ParserService/default DownloadManager/default History",
+  "status": "AUTOMATED PRODUCTION UI/DOWNLOAD/REPOSITORY RESTORE PASS",
+  "systemOpen": "USER VALIDATION PENDING",
+  "coldProcessRestart": "USER VALIDATION PENDING",
+  "2102857143263085031": {
+    "title": "Make sure you count your little wins 🤝🏽 https://t.co/guXFebFSXA",
+    "author": "JakeStateFarm",
+    "typeOrder": [
+      "video"
+    ],
+    "type": "video",
+    "count": 1,
+    "tasks": [
+      {
+        "id": "download-op-1791026285174159-4c51d54de556a2eb6d6d93a4-1",
+        "resourceId": "2102857143263085031-1",
+        "resourceType": "video",
+        "mimeType": "video/mp4",
+        "bytes": 499123,
+        "savePath": "/storage/emulated/0/Download/MediaFlow/Make sure you count your little wins 🤝🏽 https___t.co_guXFebFSXA.mp4",
+        "status": "completed"
+      }
+    ]
+  },
+  "2106263058905813231": {
+    "title": "这是我翻外网以来用过最好用的VPN",
+    "author": "DrYlurvhn",
+    "typeOrder": [
+      "image",
+      "image"
+    ],
+    "type": "imageGallery",
+    "count": 2,
+    "tasks": [
+      {
+        "id": "download-op-1791026290859656-35cc463652ac4c4d46bc0d56-1",
+        "resourceId": "2106263058905813231-1",
+        "resourceType": "image",
+        "mimeType": "image/jpeg",
+        "bytes": 86462,
+        "savePath": "/storage/emulated/0/Download/MediaFlow/这是我翻外网以来用过最好用的VPN 001.jpg",
+        "status": "completed"
+      },
+      {
+        "id": "download-op-1791026290859656-35cc463652ac4c4d46bc0d56-2",
+        "resourceId": "2106263058905813231-2",
+        "resourceType": "image",
+        "mimeType": "image/jpeg",
+        "bytes": 67902,
+        "savePath": "/storage/emulated/0/Download/MediaFlow/这是我翻外网以来用过最好用的VPN 002.jpg",
+        "status": "completed"
+      }
+    ]
+  },
+  "2106209623682453836": {
+    "title": "不懂就问",
+    "author": "fly3nn",
+    "typeOrder": [
+      "image"
+    ],
+    "type": "image",
+    "count": 1,
+    "tasks": [
+      {
+        "id": "download-op-1791026294157202-43275bd02dd4a464c516ec61-1",
+        "resourceId": "2106209623682453836-1",
+        "resourceType": "image",
+        "mimeType": "image/png",
+        "bytes": 16134,
+        "savePath": "/storage/emulated/0/Download/MediaFlow/不懂就问 001.png",
+        "status": "completed"
+      }
+    ]
+  },
+  "1577924293023133696": {
+    "title": "asa and yoru https://t.co/E56Aq1ENLG",
+    "author": "carrotsprout_",
+    "typeOrder": [
+      "image",
+      "video"
+    ],
+    "type": "mixed",
+    "count": 2,
+    "tasks": [
+      {
+        "id": "download-op-1791026296451073-9aec65c623e539b6598f2bea-1",
+        "resourceId": "1577924293023133696-1",
+        "resourceType": "image",
+        "mimeType": "image/jpeg",
+        "bytes": 264770,
+        "savePath": "/storage/emulated/0/Download/MediaFlow/asa and yoru https___t.co_E56Aq1ENLG 001.jpg",
+        "status": "completed"
+      },
+      {
+        "id": "download-op-1791026296451073-9aec65c623e539b6598f2bea-2",
+        "resourceId": "1577924293023133696-2",
+        "resourceType": "video",
+        "mimeType": "video/mp4",
+        "bytes": 146756,
+        "savePath": "/storage/emulated/0/Download/MediaFlow/asa and yoru https___t.co_E56Aq1ENLG 002.mp4",
+        "status": "completed"
+      }
+    ]
+  },
+  "providerRecreationRestore": true
+}

@@ -1,0 +1,10 @@
+{
+  "package": "com.mediaflow.mediaflow.instagramprodv060",
+  "version": 6013,
+  "apkBytes": 83678143,
+  "certificate": "Signer #1 certificate SHA-256 digest: 4f6a5194614d0f53c35add86eff6475b1cbc59a2376482d8afc1e08a423299c8",
+  "install": "adb install -r Success",
+  "uninstall": false,
+  "clearData": false,
+  "type": "Debug arm64 APP_ENV=production lib/main.dart"
+}

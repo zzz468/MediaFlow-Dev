@@ -1,0 +1,7 @@
+package:com.mediaflow.mediaflow.galleryv040
+package:com.mediaflow.mediaflow.instagramprodv060
+package:com.mediaflow.mediaflow.youtubeprodv050
+package:com.mediaflow.mediaflow
+package:com.mediaflow.research.v060.social
+package:com.mediaflow.research.v050.feasibility
+package:com.mediaflow.research.v040.lifecycle

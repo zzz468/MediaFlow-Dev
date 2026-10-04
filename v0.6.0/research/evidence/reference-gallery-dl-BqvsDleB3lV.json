@@ -1,0 +1,10 @@
+{
+  "tool": "gallery-dl",
+  "url": "https://www.instagram.com/p/BqvsDleB3lV/",
+  "events": [],
+  "noExternalCookies": true,
+  "noAutomaticRetry": true,
+  "version": "1.32.14",
+  "result": "REFERENCE RUN FAILED",
+  "exceptionType": "HttpError"
+}

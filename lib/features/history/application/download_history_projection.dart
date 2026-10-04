@@ -55,12 +55,12 @@ final class HistoryEntry {
   }
 }
 
-/// A view-only projection. Legacy and video tasks remain independent entries.
+/// A view-only projection. Legacy video tasks remain independent entries.
 List<HistoryEntry> projectDownloadHistory(List<DownloadTask> tasks) {
   final groups = <String, List<DownloadTask>>{};
   final entries = <HistoryEntry>[];
   for (final task in tasks) {
-    final operationId = _imageOperationId(task);
+    final operationId = _workOperationId(task);
     if (operationId == null) {
       entries.add(HistoryEntry(tasks: [task]));
       continue;
@@ -75,19 +75,19 @@ List<HistoryEntry> projectDownloadHistory(List<DownloadTask> tasks) {
           _resourceIndex(left.id).compareTo(_resourceIndex(right.id)),
     );
     entries.add(
-      HistoryEntry(tasks: group, operationId: _imageOperationId(group.first)),
+      HistoryEntry(tasks: group, operationId: _workOperationId(group.first)),
     );
   }
   entries.sort((left, right) => right.createdAt.compareTo(left.createdAt));
   return List<HistoryEntry>.unmodifiable(entries);
 }
 
-String? _imageOperationId(DownloadTask task) {
+String? _workOperationId(DownloadTask task) {
   if (task.contentId == null ||
       task.contentId!.isEmpty ||
       task.resourceId == null ||
       task.resourceId!.isEmpty ||
-      task.resourceType != 'image') {
+      (task.resourceType != 'image' && !task.groupResources)) {
     return null;
   }
   final match = RegExp(

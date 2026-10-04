@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-03",
+  "source": "User confirmation in this conversation",
+  "verbatim": "Windows 和 Android 全部通过",
+  "windows": "USER CONFIRMED PASS",
+  "android": "USER CONFIRMED PASS",
+  "entrypoint": "Normal MediaFlow lib/main.dart, build 6003",
+  "scope": "Previously requested production History system opening, image viewing, Reel playback with sound, silent mixed-item video playback and original mixed resource order; automated metadata/download/MediaStore/cold-process restore evidence is recorded separately",
+  "evidenceType": "Aggregate manual acceptance; no new per-file diagnostic export supplied",
+  "mixedSample": "Dd6CpzwAYL0: image, silent video, thirteen images",
+  "stage": "V0.6.0 INSTAGRAM PRODUCTION INTEGRATION COMPLETE",
+  "limits": [
+    "Limited to current validated public samples, not universal anonymous Instagram access",
+    "No X production integration",
+    "No commit, push, merge, tag or release publishing authorization"
+  ]
+}

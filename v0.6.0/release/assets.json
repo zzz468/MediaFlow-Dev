@@ -1,0 +1,12 @@
+[
+  {
+    "name": "MediaFlow-v0.6.0-windows-x64.zip",
+    "bytes": 13880567,
+    "sha256": "a36427af50919808ff4ec21e26660c42243da2ef04c0655e6c48939137b45b6e"
+  },
+  {
+    "name": "MediaFlow-v0.6.0-android.apk",
+    "bytes": 55863403,
+    "sha256": "002a300b8ad5b95340952eabd4a7176c150600bdf4440c73596a94efd9d6ff7b"
+  }
+]
