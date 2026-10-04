@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-03",
+  "device": "[DEVICE]",
+  "model": "PJZ110",
+  "api": 37,
+  "package": "com.mediaflow.mediaflow.instagramprodv060",
+  "type": "Debug, production application chain; final entrypoint lib/main.dart",
+  "initialTargetPackageAbsent": true,
+  "certificateSha256": "4f6a5194614d0f53c35add86eff6475b1cbc59a2376482d8afc1e08a423299c8",
+  "installedApkCertificateVerified": true,
+  "newApkCertificatesVerified": true,
+  "installs": [
+    {"versionCode": 6001, "purpose": "Production UI live acceptance", "result": "Success", "replacement": false},
+    {"versionCode": 6002, "purpose": "New process restore acceptance", "result": "Success", "replacement": "same test package, same signer; data retained"},
+    {"versionCode": 6003, "purpose": "Normal lib/main.dart manual acceptance", "result": "Success", "replacement": "same test package, same signer; 21 completed history tasks retained"}
+  ],
+  "installationMethod": "adb install -r only; Flutter installer not used",
+  "uninstall": false,
+  "clearData": false,
+  "productionPackageOverwritten": false,
+  "signatureConflictObserved": false,
+  "existingPackagesStillListed": [
+    "com.mediaflow.mediaflow",
+    "com.mediaflow.mediaflow.galleryv040",
+    "com.mediaflow.mediaflow.youtubeprodv050",
+    "com.mediaflow.research.v040.lifecycle",
+    "com.mediaflow.research.v050.feasibility",
+    "com.mediaflow.research.v060.social"
+  ],
+  "otherPackagesSignatureCompatibility": "Not applicable: distinct applicationIds, never targeted for replacement; their certificates were not read",
+  "coldProcessIds": [8925, 11272, 13858],
+  "systemPlayback": "USER VALIDATION PENDING"
+}

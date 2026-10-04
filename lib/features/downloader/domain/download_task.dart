@@ -38,6 +38,7 @@ class DownloadTask {
     this.suggestedFileName,
     this.mimeType,
     this.sourceUrl,
+    this.groupResources = false,
   }) : assert(progress >= 0 && progress <= 1),
        assert(bytesReceived >= 0),
        assert(totalBytes == null || totalBytes >= 0);
@@ -68,6 +69,9 @@ class DownloadTask {
 
   /// When set, url is temporary and only this stable source is persisted.
   final Uri? sourceUrl;
+
+  /// Explicit ordered-work grouping; older tasks retain their projection.
+  final bool groupResources;
   bool get needsUrlRefresh => sourceUrl != null && url == sourceUrl;
 
   DownloadTask copyWith({
@@ -109,6 +113,7 @@ class DownloadTask {
       suggestedFileName: suggestedFileName,
       mimeType: mimeType,
       sourceUrl: sourceUrl,
+      groupResources: groupResources,
     );
   }
 
@@ -136,6 +141,7 @@ class DownloadTask {
       if (resourceType != null) 'resourceType': resourceType,
       if (suggestedFileName != null) 'suggestedFileName': suggestedFileName,
       if (mimeType != null) 'mimeType': mimeType,
+      if (groupResources) 'groupResources': true,
     };
   }
 
@@ -184,6 +190,7 @@ class DownloadTask {
       sourceUrl: json['sourceUrl'] is String
           ? Uri.tryParse(json['sourceUrl'] as String)
           : null,
+      groupResources: json['groupResources'] == true,
     );
   }
 

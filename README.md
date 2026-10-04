@@ -1,12 +1,14 @@
 # MediaFlow
 
-当前版本：`v0.5.0`（`0.5.0+5`）。[发布说明与资产校验](v0.5.0/release/README.md)。
+当前版本：`v0.6.0`（`0.6.0+6`）。[发布说明与资产校验](v0.6.0/release/README.md)。
 
 MediaFlow 是一个面向 Windows、Android 的免费开源媒体链接处理工具，长期保留 iOS、macOS、Linux 扩展路径。Windows 与 Android 同为当前核心发布平台，所有设置、下载历史和日志仅保存在本机。
 
 ## 当前能力
 
-- Bilibili、抖音、小红书、YouTube 媒体链接解析
+- Bilibili、抖音、小红书、YouTube、Instagram、X / Twitter 媒体链接解析
+- Instagram Reel、单图、多图及图+视频 Carousel；X 单视频、单图、多图及混合帖子
+- 多媒体按原始顺序选择、下载和恢复 History；仅当前已验证公开样本范围，不保证全部作品匿名可用
 - Bilibili、小红书图文多图片解析、选择、下载与聚合 History
 - 延续 v0.4.0 抖音图文的 App 自有本地会话流程；由用户主动正常登录，不导入外部 Cookie
 - YouTube 优先提供有声视频，也可单独下载无声视频或音频；不自动合并轨道

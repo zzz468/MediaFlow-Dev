@@ -1,0 +1,205 @@
+{
+  "os": "windows",
+  "atUtc": "2026-10-03T08:29:51.304846Z",
+  "route": "HomePage/default ParserService/default DownloadManager/default History",
+  "status": "AUTOMATED PRODUCTION UI/DOWNLOAD/REPOSITORY RESTORE PASS",
+  "systemOpen": "USER VALIDATION PENDING",
+  "coldProcessRestart": "USER VALIDATION PENDING",
+  "Dd_OJNzCVSU": {
+    "title": "久違登上 Kitto 的 YENA 💗",
+    "type": "video",
+    "count": 1,
+    "tasks": [
+      {
+        "id": "download-op-1791016198525339-e757f9598245dda9d2c47769-1",
+        "resourceId": "3998977200069629076_65137327778-0",
+        "resourceType": "video",
+        "bytes": 15637515,
+        "savePath": "D:/projects/mediaflow-v060/v0.6.0/production/windows-data/downloads\\久違登上 Kitto 的 YENA 💗.mp4",
+        "status": "completed"
+      }
+    ]
+  },
+  "DdoJxTMFFgi": {
+    "title": "0:00 ─♥ ─── 10:02",
+    "type": "imageGallery",
+    "count": 4,
+    "tasks": [
+      {
+        "id": "download-op-1791016211138392-b155050a7fc436bcf47b7b30-1",
+        "resourceId": "3992378778471134681_75292362590-0",
+        "resourceType": "image",
+        "bytes": 470290,
+        "savePath": "D:/projects/mediaflow-v060/v0.6.0/production/windows-data/downloads\\0_00 ─♥ ─── 10_02 001.jpg",
+        "status": "completed"
+      },
+      {
+        "id": "download-op-1791016211138392-b155050a7fc436bcf47b7b30-2",
+        "resourceId": "3992378778404041380_75292362590-1",
+        "resourceType": "image",
+        "bytes": 405791,
+        "savePath": "D:/projects/mediaflow-v060/v0.6.0/production/windows-data/downloads\\0_00 ─♥ ─── 10_02 002.jpg",
+        "status": "completed"
+      },
+      {
+        "id": "download-op-1791016211138392-b155050a7fc436bcf47b7b30-3",
+        "resourceId": "3992378778471122673_75292362590-2",
+        "resourceType": "image",
+        "bytes": 404187,
+        "savePath": "D:/projects/mediaflow-v060/v0.6.0/production/windows-data/downloads\\0_00 ─♥ ─── 10_02 003.jpg",
+        "status": "completed"
+      },
+      {
+        "id": "download-op-1791016211138392-b155050a7fc436bcf47b7b30-4",
+        "resourceId": "3992378778479519186_75292362590-3",
+        "resourceType": "image",
+        "bytes": 486155,
+        "savePath": "D:/projects/mediaflow-v060/v0.6.0/production/windows-data/downloads\\0_00 ─♥ ─── 10_02 004.jpg",
+        "status": "completed"
+      }
+    ]
+  },
+  "BqvsDleB3lV": {
+    "title": "Photo by @j9ryl",
+    "type": "image",
+    "count": 1,
+    "tasks": [
+      {
+        "id": "download-op-1791016246365423-f0320c6ad8ffd39437505033-1",
+        "resourceId": "1922949326347663701_25025320-0",
+        "resourceType": "image",
+        "bytes": 383468,
+        "savePath": "D:/projects/mediaflow-v060/v0.6.0/production/windows-data/downloads\\Photo by @j9ryl 001.jpg",
+        "status": "completed"
+      }
+    ]
+  },
+  "Dd6CpzwAYL0": {
+    "title": "birthday month",
+    "type": "mixed",
+    "count": 15,
+    "tasks": [
+      {
+        "id": "download-op-1791016252201718-5b38938e41b7d9508c6f19b9-1",
+        "resourceId": "3997519175903193905_6777351116-0",
+        "resourceType": "image",
+        "bytes": 123261,
+        "savePath": "D:/projects/mediaflow-v060/v0.6.0/production/windows-data/downloads\\birthday month 001.jpg",
+        "status": "completed"
+      },
+      {
+        "id": "download-op-1791016252201718-5b38938e41b7d9508c6f19b9-2",
+        "resourceId": "3997519198946422190_6777351116-1",
+        "resourceType": "video",
+        "bytes": 1185426,
+        "savePath": "D:/projects/mediaflow-v060/v0.6.0/production/windows-data/downloads\\birthday month 002.mp4",
+        "status": "completed"
+      },
+      {
+        "id": "download-op-1791016252201718-5b38938e41b7d9508c6f19b9-3",
+        "resourceId": "3997519184241462424_6777351116-2",
+        "resourceType": "image",
+        "bytes": 396322,
+        "savePath": "D:/projects/mediaflow-v060/v0.6.0/production/windows-data/downloads\\birthday month 003.jpg",
+        "status": "completed"
+      },
+      {
+        "id": "download-op-1791016252201718-5b38938e41b7d9508c6f19b9-4",
+        "resourceId": "3997519195742310051_6777351116-3",
+        "resourceType": "image",
+        "bytes": 253583,
+        "savePath": "D:/projects/mediaflow-v060/v0.6.0/production/windows-data/downloads\\birthday month 004.jpg",
+        "status": "completed"
+      },
+      {
+        "id": "download-op-1791016252201718-5b38938e41b7d9508c6f19b9-5",
+        "resourceId": "3997519203065501722_6777351116-4",
+        "resourceType": "image",
+        "bytes": 709229,
+        "savePath": "D:/projects/mediaflow-v060/v0.6.0/production/windows-data/downloads\\birthday month 005.jpg",
+        "status": "completed"
+      },
+      {
+        "id": "download-op-1791016252201718-5b38938e41b7d9508c6f19b9-6",
+        "resourceId": "3997519211177194913_6777351116-5",
+        "resourceType": "image",
+        "bytes": 801368,
+        "savePath": "D:/projects/mediaflow-v060/v0.6.0/production/windows-data/downloads\\birthday month 006.jpg",
+        "status": "completed"
+      },
+      {
+        "id": "download-op-1791016252201718-5b38938e41b7d9508c6f19b9-7",
+        "resourceId": "3997519209826766130_6777351116-6",
+        "resourceType": "image",
+        "bytes": 445085,
+        "savePath": "D:/projects/mediaflow-v060/v0.6.0/production/windows-data/downloads\\birthday month 007.jpg",
+        "status": "completed"
+      },
+      {
+        "id": "download-op-1791016252201718-5b38938e41b7d9508c6f19b9-8",
+        "resourceId": "3997519213349850230_6777351116-7",
+        "resourceType": "image",
+        "bytes": 301285,
+        "savePath": "D:/projects/mediaflow-v060/v0.6.0/production/windows-data/downloads\\birthday month 008.jpg",
+        "status": "completed"
+      },
+      {
+        "id": "download-op-1791016252201718-5b38938e41b7d9508c6f19b9-9",
+        "resourceId": "3997519218496621995_6777351116-8",
+        "resourceType": "image",
+        "bytes": 255239,
+        "savePath": "D:/projects/mediaflow-v060/v0.6.0/production/windows-data/downloads\\birthday month 009.jpg",
+        "status": "completed"
+      },
+      {
+        "id": "download-op-1791016252201718-5b38938e41b7d9508c6f19b9-10",
+        "resourceId": "3997519221998515831_6777351116-9",
+        "resourceType": "image",
+        "bytes": 843159,
+        "savePath": "D:/projects/mediaflow-v060/v0.6.0/production/windows-data/downloads\\birthday month 010.jpg",
+        "status": "completed"
+      },
+      {
+        "id": "download-op-1791016252201718-5b38938e41b7d9508c6f19b9-11",
+        "resourceId": "3997519226860148773_6777351116-10",
+        "resourceType": "image",
+        "bytes": 410814,
+        "savePath": "D:/projects/mediaflow-v060/v0.6.0/production/windows-data/downloads\\birthday month 011.jpg",
+        "status": "completed"
+      },
+      {
+        "id": "download-op-1791016252201718-5b38938e41b7d9508c6f19b9-12",
+        "resourceId": "3997519232106771335_6777351116-11",
+        "resourceType": "image",
+        "bytes": 273536,
+        "savePath": "D:/projects/mediaflow-v060/v0.6.0/production/windows-data/downloads\\birthday month 012.jpg",
+        "status": "completed"
+      },
+      {
+        "id": "download-op-1791016252201718-5b38938e41b7d9508c6f19b9-13",
+        "resourceId": "3997519235328070708_6777351116-12",
+        "resourceType": "image",
+        "bytes": 409153,
+        "savePath": "D:/projects/mediaflow-v060/v0.6.0/production/windows-data/downloads\\birthday month 013.jpg",
+        "status": "completed"
+      },
+      {
+        "id": "download-op-1791016252201718-5b38938e41b7d9508c6f19b9-14",
+        "resourceId": "3997519240676200310_6777351116-13",
+        "resourceType": "image",
+        "bytes": 234576,
+        "savePath": "D:/projects/mediaflow-v060/v0.6.0/production/windows-data/downloads\\birthday month 014.jpg",
+        "status": "completed"
+      },
+      {
+        "id": "download-op-1791016252201718-5b38938e41b7d9508c6f19b9-15",
+        "resourceId": "3997519241997186761_6777351116-14",
+        "resourceType": "image",
+        "bytes": 115179,
+        "savePath": "D:/projects/mediaflow-v060/v0.6.0/production/windows-data/downloads\\birthday month 015.jpg",
+        "status": "completed"
+      }
+    ]
+  },
+  "providerRecreationRestore": true
+}

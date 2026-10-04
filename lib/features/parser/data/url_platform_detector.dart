@@ -1,6 +1,8 @@
 import '../../../core/models/media_link.dart';
 import '../domain/platform_detector.dart';
 import 'youtube/youtube_url.dart';
+import 'instagram/instagram_url.dart';
+import 'x/x_url.dart';
 
 class UrlPlatformDetector implements PlatformDetector {
   const UrlPlatformDetector();
@@ -29,6 +31,8 @@ class UrlPlatformDetector implements PlatformDetector {
       return MediaPlatform.xiaohongshu;
     }
     if (YoutubeUrl.id(uri) != null) return MediaPlatform.youtube;
+    if (InstagramUrl.normalize(uri) != null) return MediaPlatform.instagram;
+    if (XUrl.normalize(uri) != null) return MediaPlatform.x;
     return MediaPlatform.unknown;
   }
 

@@ -1,0 +1,20 @@
+{
+  "platform": "Instagram",
+  "route": "instaloader-doc-id",
+  "samples": [
+    {
+      "id": "DdoJxTMFFgi",
+      "httpStatus": 403,
+      "metadataSucceeded": false,
+      "errorCategory": "PLATFORM ACCESS DENIED",
+      "reason": "403 reason unproven; stopped, no retry"
+    },
+    {
+      "id": "Dd_OJNzCVSU",
+      "httpStatus": 403,
+      "metadataSucceeded": false,
+      "errorCategory": "PLATFORM ACCESS DENIED",
+      "reason": "403 reason unproven; stopped, no retry"
+    }
+  ]
+}

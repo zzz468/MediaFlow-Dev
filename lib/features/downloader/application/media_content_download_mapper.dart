@@ -67,6 +67,7 @@ DownloadTask _taskFor(
     mimeType: resource.mimeType,
     totalBytes: resource.sizeBytes,
     sourceUrl: resource.temporaryUrl ? content.sourceUrl : null,
+    groupResources: content.type == MediaContentType.mixed,
   );
 }
 

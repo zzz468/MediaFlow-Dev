@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-04",
+  "candidateFiles": 182,
+  "initialUntracked": 182,
+  "initialFilesClassified": true,
+  "binarySecretBuildCandidates": 0,
+  "privateCredentialPatterns": 0,
+  "rawUpstreamSnapshots": "ignored locally; licenses, source links and hashes retained",
+  "originalEvidence": "ignored local/original-evidence",
+  "syntheticFixtureSecrets": "explicitly synthetic test inputs",
+  "androidReleaseSigner": "published formal certificate matched",
+  "signingTemporaryConfigurationDeleted": true,
+  "productionEntrypoint": "lib/main.dart",
+  "researchImports": 0,
+  "newDependencies": 0
+}

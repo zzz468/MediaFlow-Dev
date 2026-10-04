@@ -1,0 +1,8 @@
+ lib/core/models/media_link.dart                    | 10 +++++++++-
+ .../application/media_content_download_mapper.dart |  1 +
+ lib/features/downloader/domain/download_task.dart  |  7 +++++++
+ .../application/download_history_projection.dart   | 10 +++++-----
+ lib/features/home/presentation/home_page.dart      | 22 +++++++++++++++++++---
+ .../parser/application/parser_service.dart         |  2 ++
+ .../parser/data/url_platform_detector.dart         |  2 ++
+ 7 files changed, 45 insertions(+), 9 deletions(-)

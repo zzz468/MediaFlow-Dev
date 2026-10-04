@@ -9,6 +9,25 @@
 - 多质量、多格式下载选项
 - 系统级下载完成通知
 
+## [0.6.0] - 2026-10-04
+
+### Added
+
+- Instagram support：公开 Reel/视频、单图、多图与图+视频 Carousel 的本地匿名解析、下载和 History。
+- X / Twitter support：公开单视频、单图、多图与图+视频混合帖的本地匿名解析。
+- Ordered mixed media：复用统一资源模型，保持原始媒体顺序，支持单项/多项/全部选择与混合 History 恢复。
+
+### Continued Support
+
+- Bilibili、Douyin、小红书、YouTube，以及既有下载队列、Range、暂停/继续和本地存储。
+
+### Validation and Limits
+
+- Windows / Android production 接入的真实样本、下载、系统打开/播放和冷启动 History 已验收；最终正式构建与 smoke 见 [发布报告](v0.6.0/release/README.md)。
+- 仅当前公开样本范围；非官方接口和临时媒体 URL 可能变化，未完成且 URL 失效的任务需重新解析。
+- 无第三方解析服务器、外部 Cookie 导入、FFmpeg 或 Python/Node/JVM 新运行时；不绕过访问限制。
+- iOS / macOS / Linux 本版未正式构建或验收。
+
 ## [0.5.0] - 2026-10-02
 
 ### Added

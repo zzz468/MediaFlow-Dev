@@ -1,0 +1,987 @@
+[
+  {
+    "path": "integration_test/v060_instagram_production_acceptance_test.dart",
+    "category": "test source",
+    "disposition": "submit"
+  },
+  {
+    "path": "integration_test/v060_x_production_acceptance_test.dart",
+    "category": "test source",
+    "disposition": "submit"
+  },
+  {
+    "path": "lib/features/parser/data/instagram/instagram_failure.dart",
+    "category": "production source/license",
+    "disposition": "submit"
+  },
+  {
+    "path": "lib/features/parser/data/instagram/instagram_http_session.dart",
+    "category": "production source/license",
+    "disposition": "submit"
+  },
+  {
+    "path": "lib/features/parser/data/instagram/instagram_parser.dart",
+    "category": "production source/license",
+    "disposition": "submit"
+  },
+  {
+    "path": "lib/features/parser/data/instagram/instagram_resource_mapper.dart",
+    "category": "production source/license",
+    "disposition": "submit"
+  },
+  {
+    "path": "lib/features/parser/data/instagram/instagram_url.dart",
+    "category": "production source/license",
+    "disposition": "submit"
+  },
+  {
+    "path": "lib/features/parser/data/x/x_failure.dart",
+    "category": "production source/license",
+    "disposition": "submit"
+  },
+  {
+    "path": "lib/features/parser/data/x/x_parser.dart",
+    "category": "production source/license",
+    "disposition": "submit"
+  },
+  {
+    "path": "lib/features/parser/data/x/x_resource_mapper.dart",
+    "category": "production source/license",
+    "disposition": "submit"
+  },
+  {
+    "path": "lib/features/parser/data/x/x_syndication_token.dart",
+    "category": "production source/license",
+    "disposition": "submit"
+  },
+  {
+    "path": "lib/features/parser/data/x/x_url.dart",
+    "category": "production source/license",
+    "disposition": "submit"
+  },
+  {
+    "path": "test/features/parser/instagram_parser_test.dart",
+    "category": "test source",
+    "disposition": "submit"
+  },
+  {
+    "path": "test/features/parser/instagram_ui_test.dart",
+    "category": "test source",
+    "disposition": "submit"
+  },
+  {
+    "path": "test/features/parser/x_parser_test.dart",
+    "category": "test source",
+    "disposition": "submit"
+  },
+  {
+    "path": "test/features/parser/x_ui_test.dart",
+    "category": "test source",
+    "disposition": "submit"
+  },
+  {
+    "path": "test_driver/v060_instagram_driver.dart",
+    "category": "test source",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/README.md",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/acceptance/android.md",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/acceptance/windows.md",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/architecture.md",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/.gitignore",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/README.md",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/android-automated.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/android-cold-process-restore.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/android-install-safety.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/android-main-restore.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/android-mediastore.txt",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/checks.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/git-diff-stat.txt",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/git-status.txt",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/research-conclusions-hashes.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/user-validation-2026-10-03.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/windows-automated.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/windows-cold-process-restore.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/windows-image-decode.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/windows-mp4-containers.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/x/.gitignore",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/x/README.md",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/x/THIRD-PARTY.md",
+    "category": "license/source attribution",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/x/android-automated.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/x/android-cold-process-restore.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/x/android-first-network-failure.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/x/android-history-preservation.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/x/android-install-safety.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/x/android-installed-certificate.txt",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/x/android-main-install.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/x/android-main-restore.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/x/android-mediastore.txt",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/x/android-packages-after.txt",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/x/android-packages-before.txt",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/x/artifact-checks.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/x/checks.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/x/git-diff-stat.txt",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/x/git-status.txt",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/x/release-untracked-initial.txt",
+    "category": "temporary release inventory",
+    "disposition": "moved to ignored release/local"
+  },
+  {
+    "path": "v0.6.0/production/x/research-freeze-check.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/x/source-hashes.json",
+    "category": "license/source attribution",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/x/user-validation-2026-10-03.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/x/windows-automated.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/x/windows-cold-process-restore.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/x/windows-image-decode.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/x/windows-main-launch.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/production/x/yt-dlp-Unlicense.txt",
+    "category": "license/source attribution",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/.gitignore",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/README.md",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/THIRD-PARTY.md",
+    "category": "license/source attribution",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/evidence/android-batch.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/evidence/android-install-safety.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/evidence/build3-artifacts.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/evidence/download-hashes.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/evidence/fixed-samples.txt",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/evidence/git-state.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/evidence/reference-gallery-dl-2106263058905813231.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/evidence/reference-gallery-dl-BqvsDleB3lV.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/evidence/reference-hashes.json",
+    "category": "license/source attribution",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/evidence/reference-instaloader-BoHk1haB5tM.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/evidence/reference-yt-dlp-2102857143263085031.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/evidence/reference-yt-dlp-Chunk8-jurw.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/evidence/research-file-list.txt",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/evidence/user-validation-2026-10-03.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/evidence/validation-1577924293023133696.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/evidence/validation-2102857143263085031.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/evidence/validation-2106209623682453836.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/evidence/validation-2106263058905813231.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/evidence/validation-BqvsDleB3lV.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/evidence/validation-Dd_OJNzCVSU.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/evidence/validation-DdoJxTMFFgi.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/evidence/windows-2102857143263085031.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/evidence/windows-2106209623682453836.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/evidence/windows-2106263058905813231.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/evidence/windows-Dd_OJNzCVSU.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/evidence/windows-DdoJxTMFFgi.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/evidence/windows-image-decode.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/evidence/windows-instagram-graphql.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/evidence/windows-mp4-containers.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/instagram-context-matrix.md",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/instagram-options.md",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/mixed-media-model.md",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/.gitignore",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/analysis_options.yaml",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/android/.gitignore",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/android/app/build.gradle.kts",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/android/app/src/debug/AndroidManifest.xml",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/android/app/src/main/AndroidManifest.xml",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/android/app/src/main/kotlin/com/mediaflow/research/v050/feasibility/MainActivity.kt",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/android/app/src/main/res/drawable-v21/launch_background.xml",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/android/app/src/main/res/drawable/launch_background.xml",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/android/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/android/app/src/main/res/mipmap-mdpi/ic_launcher.png",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/android/app/src/main/res/values-night/styles.xml",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/android/app/src/main/res/values/styles.xml",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/android/app/src/main/res/xml/research_network_security.xml",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/android/app/src/profile/AndroidManifest.xml",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/android/build.gradle.kts",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/android/gradle.properties",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/android/gradle/wrapper/gradle-wrapper.properties",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/android/settings.gradle.kts",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/lib/main.dart",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/lib/research_files.dart",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/lib/social_probe.dart",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/lib/source_snapshot/core/models/media_link.dart",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/lib/source_snapshot/features/parser/domain/media_content.dart",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/pubspec.lock",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/pubspec.yaml",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/test/social_probe_test.dart",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/tool/inspect_instagram.dart",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/tool/inspect_mp4.py",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/tool/probe.dart",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/tool/reference_compare.py",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/tool/validate.dart",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/windows/.gitignore",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/windows/CMakeLists.txt",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/windows/flutter/CMakeLists.txt",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/windows/flutter/generated_plugin_registrant.cc",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/windows/flutter/generated_plugin_registrant.h",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/windows/flutter/generated_plugins.cmake",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/windows/runner/CMakeLists.txt",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/windows/runner/Runner.rc",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/windows/runner/flutter_window.cpp",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/windows/runner/flutter_window.h",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/windows/runner/main.cpp",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/windows/runner/resource.h",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/windows/runner/resources/app_icon.ico",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/windows/runner/runner.exe.manifest",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/windows/runner/utils.cpp",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/windows/runner/utils.h",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/windows/runner/win32_window.cpp",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/poc/social/windows/runner/win32_window.h",
+    "category": "isolated research source/assets",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/reference/WhiteBr1ck-koishi-plugin-twitter-fetcher-commits.json",
+    "category": "upstream raw source/API audit input",
+    "disposition": "keep ignored local only"
+  },
+  {
+    "path": "v0.6.0/research/reference/WhiteBr1ck-koishi-plugin-twitter-fetcher-contents.json",
+    "category": "upstream raw source/API audit input",
+    "disposition": "keep ignored local only"
+  },
+  {
+    "path": "v0.6.0/research/reference/WhiteBr1ck-koishi-plugin-twitter-fetcher-repo.json",
+    "category": "upstream raw source/API audit input",
+    "disposition": "keep ignored local only"
+  },
+  {
+    "path": "v0.6.0/research/reference/Zhalslar-astrbot_plugin_parser-commits.json",
+    "category": "upstream raw source/API audit input",
+    "disposition": "keep ignored local only"
+  },
+  {
+    "path": "v0.6.0/research/reference/Zhalslar-astrbot_plugin_parser-contents.json",
+    "category": "upstream raw source/API audit input",
+    "disposition": "keep ignored local only"
+  },
+  {
+    "path": "v0.6.0/research/reference/Zhalslar-astrbot_plugin_parser-repo.json",
+    "category": "upstream raw source/API audit input",
+    "disposition": "keep ignored local only"
+  },
+  {
+    "path": "v0.6.0/research/reference/astrbot-LICENSE",
+    "category": "license/source attribution",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/reference/astrbot-instagram.py",
+    "category": "upstream raw source/API audit input",
+    "disposition": "keep ignored local only"
+  },
+  {
+    "path": "v0.6.0/research/reference/astrbot-tree.json",
+    "category": "upstream raw source/API audit input",
+    "disposition": "keep ignored local only"
+  },
+  {
+    "path": "v0.6.0/research/reference/astrbot-twitter.py",
+    "category": "upstream raw source/API audit input",
+    "disposition": "keep ignored local only"
+  },
+  {
+    "path": "v0.6.0/research/reference/gallery-LICENSE",
+    "category": "license/source attribution",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/reference/gallery-instagram-samples.py",
+    "category": "upstream raw source/API audit input",
+    "disposition": "keep ignored local only"
+  },
+  {
+    "path": "v0.6.0/research/reference/gallery-instagram.py",
+    "category": "upstream raw source/API audit input",
+    "disposition": "keep ignored local only"
+  },
+  {
+    "path": "v0.6.0/research/reference/gallery-twitter-samples.py",
+    "category": "upstream raw source/API audit input",
+    "disposition": "keep ignored local only"
+  },
+  {
+    "path": "v0.6.0/research/reference/gallery-twitter.py",
+    "category": "upstream raw source/API audit input",
+    "disposition": "keep ignored local only"
+  },
+  {
+    "path": "v0.6.0/research/reference/instaloader-LICENSE",
+    "category": "license/source attribution",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/reference/instaloader-instaloader-commits.json",
+    "category": "upstream raw source/API audit input",
+    "disposition": "keep ignored local only"
+  },
+  {
+    "path": "v0.6.0/research/reference/instaloader-instaloader-issues.json",
+    "category": "upstream raw source/API audit input",
+    "disposition": "keep ignored local only"
+  },
+  {
+    "path": "v0.6.0/research/reference/instaloader-structures.py",
+    "category": "upstream raw source/API audit input",
+    "disposition": "keep ignored local only"
+  },
+  {
+    "path": "v0.6.0/research/reference/koishi-index.ts",
+    "category": "upstream raw source/API audit input",
+    "disposition": "keep ignored local only"
+  },
+  {
+    "path": "v0.6.0/research/reference/koishi-package.json",
+    "category": "upstream raw source/API audit input",
+    "disposition": "keep ignored local only"
+  },
+  {
+    "path": "v0.6.0/research/reference/mikf-gallery-dl-commits.json",
+    "category": "upstream raw source/API audit input",
+    "disposition": "keep ignored local only"
+  },
+  {
+    "path": "v0.6.0/research/reference/mikf-gallery-dl-issues.json",
+    "category": "upstream raw source/API audit input",
+    "disposition": "keep ignored local only"
+  },
+  {
+    "path": "v0.6.0/research/reference/yt-LICENSE",
+    "category": "license/source attribution",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/reference/yt-dlp-yt-dlp-issues.json",
+    "category": "upstream raw source/API audit input",
+    "disposition": "keep ignored local only"
+  },
+  {
+    "path": "v0.6.0/research/reference/yt-instagram.py",
+    "category": "upstream raw source/API audit input",
+    "disposition": "keep ignored local only"
+  },
+  {
+    "path": "v0.6.0/research/reference/yt-jsinterp.py",
+    "category": "upstream raw source/API audit input",
+    "disposition": "keep ignored local only"
+  },
+  {
+    "path": "v0.6.0/research/reference/yt-twitter.py",
+    "category": "upstream raw source/API audit input",
+    "disposition": "keep ignored local only"
+  },
+  {
+    "path": "v0.6.0/research/social-validation.md",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/research/x-options.md",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "third_party/x_syndication/LICENSE",
+    "category": "production source/license",
+    "disposition": "submit"
+  },
+  {
+    "path": "third_party/x_syndication/NOTICE.md",
+    "category": "production source/license",
+    "disposition": "submit"
+  },
+  {
+    "path": "tool/release/publish_github_release.ps1",
+    "category": "release tooling",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/release/.gitignore",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/release/README.md",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/release/android-package-audit.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/release/android-package.txt",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/release/android-signature.txt",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/release/assets.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/release/untracked-audit.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/release/windows-package-audit.json",
+    "category": "research/acceptance/production/release document or sanitized evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/release/android-install-safety.json",
+    "category": "release documentation/evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/release/checks.json",
+    "category": "release documentation/evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/release/release-notes.md",
+    "category": "release documentation/evidence",
+    "disposition": "submit"
+  },
+  {
+    "path": "v0.6.0/release/security-audit.json",
+    "category": "release documentation/evidence",
+    "disposition": "submit"
+  }
+]

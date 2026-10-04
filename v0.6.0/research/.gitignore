@@ -1,0 +1,8 @@
+.reference-runtime/
+evidence/downloads/
+artifacts/
+# Full upstream source/API snapshots are local audit inputs, not MediaFlow
+# distributable source. Keep their LICENSEs, source URLs and audited hashes.
+reference/*.py
+reference/*.ts
+reference/*.json
