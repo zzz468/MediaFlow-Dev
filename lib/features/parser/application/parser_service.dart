@@ -8,6 +8,8 @@ import '../data/douyin/gallery/douyin_gallery_factory.dart';
 import '../data/douyin/observation/douyin_browser_observation.dart';
 import '../data/url_platform_detector.dart';
 import '../data/youtube/youtube_parser.dart';
+import '../data/instagram/instagram_parser.dart';
+import '../data/x/x_parser.dart';
 import '../data/xiaohongshu/xiaohongshu_parser.dart';
 import '../data/xiaohongshu/xiaohongshu_http_client.dart';
 import '../domain/parser_interface.dart';
@@ -70,6 +72,8 @@ ParserService createDefaultParserService() {
   return ParserService(
     platformDetector: const UrlPlatformDetector(),
     parsers: [
+      XParser(),
+      InstagramParser(),
       youtube,
       XiaohongshuParser(networkClient: xhsClient),
       BilibiliOpusParser(networkClient: networkClient),

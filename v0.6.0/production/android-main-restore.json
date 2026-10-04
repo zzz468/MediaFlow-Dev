@@ -1,0 +1,10 @@
+{
+  "package": "com.mediaflow.mediaflow.instagramprodv060",
+  "versionCode": 6003,
+  "entrypoint": "lib/main.dart",
+  "processId": 13858,
+  "retainedCompleted": 21,
+  "allCompleted": true,
+  "noCdnUrlPersisted": true,
+  "originalTaskIdsRetained": true
+}

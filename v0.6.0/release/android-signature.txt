@@ -1,0 +1,17 @@
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): false
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: CN=MediaFlowRelease, OU=Release, O=MediaFlow, C=US
+Signer #1 certificate SHA-256 digest: 16686bce55b6c8eb66bb16b77a8599fa6005483e97430c519710a4d730c6dcba
+Signer #1 certificate SHA-1 digest: 176934c4f5c7ee61ae22b218596e247b0797e626
+Signer #1 certificate MD5 digest: 5c34d6a9b71fa7d6b9f3e764c5e4de38
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 4096
+Signer #1 public key SHA-256 digest: 2828726add2c2cae30ab75e915e92a63cccb882f0e4b096517ae68659c89d9d6
+Signer #1 public key SHA-1 digest: f6922e28ea65d093a861db3a40608e913d8d4018
+Signer #1 public key MD5 digest: ba1b4701e5a0fbd7ad6a3796758b5bf1

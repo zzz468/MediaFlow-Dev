@@ -1,0 +1,14 @@
+{
+  "researchEntries": 0,
+  "externalRuntimeEntries": 0,
+  "xLicenseAssets": [
+    "assets/flutter_assets/third_party/x_syndication/LICENSE",
+    "assets/flutter_assets/third_party/x_syndication/NOTICE.md"
+  ],
+  "formalPackage": "com.mediaflow.mediaflow",
+  "version": "0.6.0+6",
+  "signer": "CN=MediaFlowRelease, OU=Release, O=MediaFlow, C=US",
+  "signerSha256": "16686bce55b6c8eb66bb16b77a8599fa6005483e97430c519710a4d730c6dcba",
+  "v2": true,
+  "v3": false
+}

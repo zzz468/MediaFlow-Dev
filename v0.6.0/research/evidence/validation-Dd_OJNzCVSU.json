@@ -1,0 +1,60 @@
+{
+  "os": "windows",
+  "timestamp": "2026-10-03T07:28:57.822072Z",
+  "normalizedUrl": "https://www.instagram.com/p/Dd_OJNzCVSU/",
+  "platform": "Instagram",
+  "postId": "Dd_OJNzCVSU",
+  "metadataSucceeded": true,
+  "mediaCount": 1,
+  "networkTimeout": false,
+  "403": false,
+  "429": false,
+  "loginRedirect": false,
+  "route": "initialized anonymous context + doc-id",
+  "initialization": {
+    "finalHost": "www.instagram.com",
+    "httpStatus": 200,
+    "403": false,
+    "429": false,
+    "loginRedirect": false,
+    "mime": "text/html",
+    "contentLength": null,
+    "fileBytes": 418911,
+    "anonymousCsrfAvailable": true
+  },
+  "finalHost": "www.instagram.com",
+  "httpStatus": 200,
+  "mime": "application/json",
+  "contentLength": 7075,
+  "fileBytes": 29092,
+  "author": "kitto.tw",
+  "title": "久違登上 Kitto 的 YENA 💗\n這次又要帶給我們什麼驚喜呢？👀\n\nYENA 這次帶著 Digital Single <Dime Girl (Feat. NOWIMYOUNG)> 回歸\n重新詮釋 Block B 經典歌曲 <Unordinary Girl (보기 드문 여자)>，加入屬於 YENA 的活潑風格✨\n\n自信滿滿的「Dime Girl」YENA，搭配主動出擊的 NOWIMYOUNG\n兩人充滿火花的互動也讓這首歌比原曲多了一份俏皮又有趣的魅力🤣💗\n\nYENA 全新的「Dime Girl」，現在就一起來看看吧！\n\n🐣 @yena.jigumina @_yenacore \n🎥 Kitto \n👩🏻‍💻 Lotta & Karin \n\n#KittoOriginal #KittoInterview #KittoID #최예나 #예나 #YENA #보기드문여자 #Dime_Girl #보드옌",
+  "coverHost": "scontent-iad6-1.cdninstagram.com",
+  "mediaType": "video",
+  "errorCategory": null,
+  "orderedResources": [
+    {
+      "sequenceIndex": 0,
+      "resourceId": "3998977200069629076_65137327778-0",
+      "type": "video",
+      "urlHost": "scontent-iad3-1.cdninstagram.com",
+      "directUrlExists": true,
+      "mime": "video/mp4",
+      "container": "mp4",
+      "systemOpened": "USER VALIDATION PENDING",
+      "contentOrder": "USER VALIDATION PENDING",
+      "download": {
+        "finalHost": "scontent-iad3-1.cdninstagram.com",
+        "httpStatus": 200,
+        "403": false,
+        "429": false,
+        "loginRedirect": false,
+        "mime": "video/mp4",
+        "contentLength": 15637515,
+        "fileBytes": 15637515,
+        "savePath": "D:\\projects\\mediaflow-v060\\v0.6.0\\research\\poc\\social\\../../evidence/downloads/Dd_OJNzCVSU-1.mp4",
+        "completeDownload": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "device": "[DEVICE] / PJZ110",
+  "api": 37,
+  "applicationId": "com.mediaflow.research.v060.social",
+  "packageType": "Release research, debug-key signed",
+  "versionCode": 3,
+  "installed": true,
+  "coexists": true,
+  "overwroteExisting": false,
+  "uninstalled": false,
+  "clearedData": false,
+  "signatureConflict": "No same-package prior installation; no conflict observed",
+  "initialFailure": "Failure[-99], stopped; user said accidental Back and authorized reinstall",
+  "certificateSHA256": "4f6a5194614d0f53c35add86eff6475b1cbc59a2376482d8afc1e08a423299c8",
+  "systemOpened": "USER VALIDATION PENDING"
+}

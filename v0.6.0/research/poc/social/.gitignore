@@ -1,0 +1,9 @@
+.dart_tool/
+build/
+android/.gradle/
+android/local.properties
+android/gradlew
+android/gradlew.bat
+android/gradle/wrapper/gradle-wrapper.jar
+windows/flutter/ephemeral/
+research-data/

@@ -151,7 +151,8 @@ class _HomePageState extends ConsumerState<HomePage> {
                               .read(linkParserViewModelProvider.notifier)
                               .updateInput,
                           decoration: InputDecoration(
-                            hintText: '在这里粘贴 Bilibili、抖音、小红书、YouTube 链接',
+                            hintText:
+                                '在这里粘贴 Bilibili、抖音、小红书、YouTube、Instagram、X / Twitter 链接',
                             prefixIcon: const Icon(Icons.public_rounded),
                             suffixIcon: state.hasInput
                                 ? IconButton(
@@ -331,7 +332,7 @@ class _HomePageState extends ConsumerState<HomePage> {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(
-          '已将 ${tasks.length} ${content.resources.any((r) => r.trackRole != null) ? '项资源' : '张图片'}加入下载队列。',
+          '已将 ${tasks.length} ${content.resources.every((r) => r.type == MediaResourceType.image) ? '张图片' : '项资源'}加入下载队列。',
         ),
       ),
     );
@@ -593,6 +594,15 @@ class _MediaContentResultCardState extends State<_MediaContentResultCard> {
         Text(content.title, style: Theme.of(context).textTheme.titleLarge),
         const SizedBox(height: 10),
         Text('平台：${content.platform.displayName}'),
+        if (content.coverUrl != null) ...[
+          const SizedBox(height: 8),
+          Image.network(
+            content.coverUrl.toString(),
+            height: 140,
+            fit: BoxFit.contain,
+            errorBuilder: (_, _, _) => const Icon(Icons.image_outlined),
+          ),
+        ],
         if (content.author != null) Text('作者：${content.author}'),
         if (content.description != null) ...[
           const SizedBox(height: 8),
@@ -624,7 +634,13 @@ class _MediaContentResultCardState extends State<_MediaContentResultCard> {
             title: Text(
               '${(index + 1).toString().padLeft(3, '0')} · ${_resourceTypeLabel(resources[index].type)}',
             ),
-            subtitle: Text(resources[index].mimeType ?? '媒体类型待下载时确认'),
+            subtitle: Text(
+              [
+                resources[index].mimeType ?? '媒体类型待下载时确认',
+                if (resources[index].qualityLabel != null)
+                  resources[index].qualityLabel!,
+              ].join(' · '),
+            ),
             value: _selectedIds.contains(resources[index].id),
             onChanged: widget.busy
                 ? null

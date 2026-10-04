@@ -1,0 +1,36 @@
+{
+  "os": "android",
+  "status": "COLD PROCESS RESTORE PASS",
+  "checks": {
+    "2102857143263085031": {
+      "count": 1,
+      "typeOrder": [
+        "video"
+      ],
+      "completed": true
+    },
+    "2106263058905813231": {
+      "count": 2,
+      "typeOrder": [
+        "image",
+        "image"
+      ],
+      "completed": true
+    },
+    "2106209623682453836": {
+      "count": 1,
+      "typeOrder": [
+        "image"
+      ],
+      "completed": true
+    },
+    "1577924293023133696": {
+      "count": 2,
+      "typeOrder": [
+        "image",
+        "video"
+      ],
+      "completed": true
+    }
+  }
+}

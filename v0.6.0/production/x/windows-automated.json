@@ -1,0 +1,109 @@
+{
+  "os": "windows",
+  "atUtc": "2026-10-03T10:51:36.106222Z",
+  "route": "HomePage/default ParserService/default DownloadManager/default History",
+  "status": "AUTOMATED PRODUCTION UI/DOWNLOAD/REPOSITORY RESTORE PASS",
+  "systemOpen": "USER VALIDATION PENDING",
+  "coldProcessRestart": "USER VALIDATION PENDING",
+  "2102857143263085031": {
+    "title": "Make sure you count your little wins 🤝🏽 https://t.co/guXFebFSXA",
+    "author": "JakeStateFarm",
+    "typeOrder": [
+      "video"
+    ],
+    "type": "video",
+    "count": 1,
+    "tasks": [
+      {
+        "id": "download-op-1791024701791509-dfb6524ab4e922c5fda7e70a-1",
+        "resourceId": "2102857143263085031-1",
+        "resourceType": "video",
+        "mimeType": "video/mp4",
+        "bytes": 499123,
+        "savePath": "D:/projects/mediaflow-v060/v0.6.0/production/x/windows-data/downloads\\Make sure you count your little wins 🤝🏽 https___t.co_guXFebFSXA.mp4",
+        "status": "completed"
+      }
+    ]
+  },
+  "2106263058905813231": {
+    "title": "这是我翻外网以来用过最好用的VPN",
+    "author": "DrYlurvhn",
+    "typeOrder": [
+      "image",
+      "image"
+    ],
+    "type": "imageGallery",
+    "count": 2,
+    "tasks": [
+      {
+        "id": "download-op-1791024708671125-1854363a67b92966894b6185-1",
+        "resourceId": "2106263058905813231-1",
+        "resourceType": "image",
+        "mimeType": "image/jpeg",
+        "bytes": 86462,
+        "savePath": "D:/projects/mediaflow-v060/v0.6.0/production/x/windows-data/downloads\\这是我翻外网以来用过最好用的VPN 001.jpg",
+        "status": "completed"
+      },
+      {
+        "id": "download-op-1791024708671125-1854363a67b92966894b6185-2",
+        "resourceId": "2106263058905813231-2",
+        "resourceType": "image",
+        "mimeType": "image/jpeg",
+        "bytes": 67902,
+        "savePath": "D:/projects/mediaflow-v060/v0.6.0/production/x/windows-data/downloads\\这是我翻外网以来用过最好用的VPN 002.jpg",
+        "status": "completed"
+      }
+    ]
+  },
+  "2106209623682453836": {
+    "title": "不懂就问",
+    "author": "fly3nn",
+    "typeOrder": [
+      "image"
+    ],
+    "type": "image",
+    "count": 1,
+    "tasks": [
+      {
+        "id": "download-op-1791024715819874-b07ff0ef3e642261c762abc8-1",
+        "resourceId": "2106209623682453836-1",
+        "resourceType": "image",
+        "mimeType": "image/png",
+        "bytes": 16134,
+        "savePath": "D:/projects/mediaflow-v060/v0.6.0/production/x/windows-data/downloads\\不懂就问 001.png",
+        "status": "completed"
+      }
+    ]
+  },
+  "1577924293023133696": {
+    "title": "asa and yoru https://t.co/E56Aq1ENLG",
+    "author": "carrotsprout_",
+    "typeOrder": [
+      "image",
+      "video"
+    ],
+    "type": "mixed",
+    "count": 2,
+    "tasks": [
+      {
+        "id": "download-op-1791024719357202-23a754f03e04f1de7d2c3058-1",
+        "resourceId": "1577924293023133696-1",
+        "resourceType": "image",
+        "mimeType": "image/jpeg",
+        "bytes": 264770,
+        "savePath": "D:/projects/mediaflow-v060/v0.6.0/production/x/windows-data/downloads\\asa and yoru https___t.co_E56Aq1ENLG 001.jpg",
+        "status": "completed"
+      },
+      {
+        "id": "download-op-1791024719357202-23a754f03e04f1de7d2c3058-2",
+        "resourceId": "1577924293023133696-2",
+        "resourceType": "video",
+        "mimeType": "video/mp4",
+        "bytes": 146756,
+        "savePath": "D:/projects/mediaflow-v060/v0.6.0/production/x/windows-data/downloads\\asa and yoru https___t.co_E56Aq1ENLG 002.mp4",
+        "status": "completed"
+      }
+    ]
+  },
+  "providerRecreationRestore": true
+}

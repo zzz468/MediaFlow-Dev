@@ -1,0 +1,21 @@
+{
+  "os": "windows",
+  "timestamp": "2026-10-03T07:00:25.177598Z",
+  "normalizedUrl": "https://www.instagram.com/p/DdoJxTMFFgi/",
+  "platform": "Instagram",
+  "postId": "DdoJxTMFFgi",
+  "metadataSucceeded": false,
+  "mediaCount": 0,
+  "networkTimeout": false,
+  "403": false,
+  "429": false,
+  "loginRedirect": false,
+  "route": "HTML hydration",
+  "finalHost": "www.instagram.com",
+  "httpStatus": 200,
+  "mime": "text/html",
+  "contentLength": null,
+  "fileBytes": 703994,
+  "errorCategory": "TECHNICAL ROUTE FAILED",
+  "summary": "Missing child resource; partial carousel rejected"
+}

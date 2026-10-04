@@ -1,0 +1,17 @@
+ M lib/core/models/media_link.dart
+ M lib/features/downloader/application/media_content_download_mapper.dart
+ M lib/features/downloader/domain/download_task.dart
+ M lib/features/history/application/download_history_projection.dart
+ M lib/features/home/presentation/home_page.dart
+ M lib/features/parser/application/parser_service.dart
+ M lib/features/parser/data/url_platform_detector.dart
+?? integration_test/v060_instagram_production_acceptance_test.dart
+?? integration_test/v060_x_production_acceptance_test.dart
+?? lib/features/parser/data/instagram/
+?? lib/features/parser/data/x/
+?? test/features/parser/instagram_parser_test.dart
+?? test/features/parser/instagram_ui_test.dart
+?? test/features/parser/x_parser_test.dart
+?? test/features/parser/x_ui_test.dart
+?? test_driver/
+?? v0.6.0/

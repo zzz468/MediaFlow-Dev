@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-04",
+  "package": "com.mediaflow.mediaflow",
+  "type": "formal signed Release",
+  "versionName": "0.6.0",
+  "versionCode": 6,
+  "currentUser": 0,
+  "previousVersion": "0.5.0+5",
+  "previousUsers": {
+    "user0Installed": false,
+    "user10Installed": true
+  },
+  "afterUsers": {
+    "user0Installed": true,
+    "user10Installed": true
+  },
+  "signatureCompatible": true,
+  "signerSHA256": "16686bce55b6c8eb66bb16b77a8599fa6005483e97430c519710a4d730c6dcba",
+  "command": "adb install --user 0 -r",
+  "result": "Success",
+  "uninstalled": false,
+  "dataCleared": false,
+  "independentTestPackagesRetained": true,
+  "launch": "PASS - normal MainActivity",
+  "functionalSmoke": "PASS - user confirmed"
+}

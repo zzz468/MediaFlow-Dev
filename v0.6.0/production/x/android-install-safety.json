@@ -1,0 +1,33 @@
+{
+  "count": 21,
+  "instagramCount": 21,
+  "taskIds": [
+    "download-op-1791016739185952-1a5e8bfe5d6e7ef2837e698c-1",
+    "download-op-1791016751958593-0b4c5b5a136a956828794de7-1",
+    "download-op-1791016751958593-0b4c5b5a136a956828794de7-2",
+    "download-op-1791016751958593-0b4c5b5a136a956828794de7-3",
+    "download-op-1791016751958593-0b4c5b5a136a956828794de7-4",
+    "download-op-1791016785998210-f2d88a3328deecce5fa10934-1",
+    "download-op-1791016791965043-b29987f97977cbf24652aad7-1",
+    "download-op-1791016791965043-b29987f97977cbf24652aad7-2",
+    "download-op-1791016791965043-b29987f97977cbf24652aad7-3",
+    "download-op-1791016791965043-b29987f97977cbf24652aad7-4",
+    "download-op-1791016791965043-b29987f97977cbf24652aad7-5",
+    "download-op-1791016791965043-b29987f97977cbf24652aad7-6",
+    "download-op-1791016791965043-b29987f97977cbf24652aad7-7",
+    "download-op-1791016791965043-b29987f97977cbf24652aad7-8",
+    "download-op-1791016791965043-b29987f97977cbf24652aad7-9",
+    "download-op-1791016791965043-b29987f97977cbf24652aad7-10",
+    "download-op-1791016791965043-b29987f97977cbf24652aad7-11",
+    "download-op-1791016791965043-b29987f97977cbf24652aad7-12",
+    "download-op-1791016791965043-b29987f97977cbf24652aad7-13",
+    "download-op-1791016791965043-b29987f97977cbf24652aad7-14",
+    "download-op-1791016791965043-b29987f97977cbf24652aad7-15"
+  ],
+  "package": "com.mediaflow.mediaflow.instagramprodv060",
+  "certificate": "Signer #1 certificate SHA-256 digest: 4f6a5194614d0f53c35add86eff6475b1cbc59a2376482d8afc1e08a423299c8",
+  "uninstall": false,
+  "clearData": false,
+  "oldVersion": 6003,
+  "incomingVersion": 6011
+}

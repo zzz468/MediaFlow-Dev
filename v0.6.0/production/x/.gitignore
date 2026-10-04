@@ -1,0 +1,6 @@
+/artifacts/
+/windows-data/
+/installed-*.apk
+/android-private-history.json
+/android-current-history.json
+*.log

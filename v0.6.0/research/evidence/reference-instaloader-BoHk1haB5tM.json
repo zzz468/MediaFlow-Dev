@@ -1,0 +1,21 @@
+{
+  "tool": "instaloader",
+  "url": "https://www.instagram.com/p/BoHk1haB5tM/",
+  "events": [
+    {
+      "host": "www.instagram.com",
+      "status": 200
+    },
+    {
+      "host": "www.instagram.com",
+      "status": 200
+    }
+  ],
+  "noExternalCookies": true,
+  "noAutomaticRetry": true,
+  "version": "4.15.3",
+  "metadataSucceeded": true,
+  "typename": "GraphSidecar",
+  "resourceCount": 5,
+  "result": "REFERENCE RUN COMPLETED"
+}

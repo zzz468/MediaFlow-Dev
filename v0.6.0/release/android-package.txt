@@ -1,0 +1,3 @@
+package: name='com.mediaflow.mediaflow' versionCode='6' versionName='0.6.0' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'
+sdkVersion:'24'
+targetSdkVersion:'36'
