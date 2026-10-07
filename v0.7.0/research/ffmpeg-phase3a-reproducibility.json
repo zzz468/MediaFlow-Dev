@@ -1,0 +1,50 @@
+[
+  {
+    "name": "avcodec-62.dll",
+    "first": "b554d5e7d560e9b5710483006ff7d6a1407ba67a2495187b3aa9f8175982fa40",
+    "repeat": "b554d5e7d560e9b5710483006ff7d6a1407ba67a2495187b3aa9f8175982fa40",
+    "identical": true
+  },
+  {
+    "name": "avfilter-11.dll",
+    "first": "803b1bbee651e32088b3965cf1a07d5d18a0c57f5d36941e285e36497e8820ac",
+    "repeat": "803b1bbee651e32088b3965cf1a07d5d18a0c57f5d36941e285e36497e8820ac",
+    "identical": true
+  },
+  {
+    "name": "avformat-62.dll",
+    "first": "8bd73a64b6b57526d6ac68fef2756be8ed21bcf28130b67e9c6dc35961fad258",
+    "repeat": "8bd73a64b6b57526d6ac68fef2756be8ed21bcf28130b67e9c6dc35961fad258",
+    "identical": true
+  },
+  {
+    "name": "avutil-60.dll",
+    "first": "c342ea55ee779908195368a0014f4cd40444527b23f0362fe0f86a5eded098d3",
+    "repeat": "c342ea55ee779908195368a0014f4cd40444527b23f0362fe0f86a5eded098d3",
+    "identical": true
+  },
+  {
+    "name": "ffmpeg.exe",
+    "first": "2aaa3b4ff367087470e875c05e27fe8af2693725708339fd35c99320a5b59f3a",
+    "repeat": "2aaa3b4ff367087470e875c05e27fe8af2693725708339fd35c99320a5b59f3a",
+    "identical": true
+  },
+  {
+    "name": "ffprobe.exe",
+    "first": "c0bad9ace86fd241d7f2eef4e9bd8734761d3311c2daa9a4e7e3b9310337e41c",
+    "repeat": "c0bad9ace86fd241d7f2eef4e9bd8734761d3311c2daa9a4e7e3b9310337e41c",
+    "identical": true
+  },
+  {
+    "name": "swresample-6.dll",
+    "first": "ad6b8bade3451bc1be2dc285722da2c2c94d402ed4023c2551512935c0742222",
+    "repeat": "ad6b8bade3451bc1be2dc285722da2c2c94d402ed4023c2551512935c0742222",
+    "identical": true
+  },
+  {
+    "name": "swscale-9.dll",
+    "first": "a83ee80d63bcf609b5b2f728c8c8068eab3cc9ccd9851831c8e5aee34bc81fb3",
+    "repeat": "a83ee80d63bcf609b5b2f728c8c8068eab3cc9ccd9851831c8e5aee34bc81fb3",
+    "identical": true
+  }
+]

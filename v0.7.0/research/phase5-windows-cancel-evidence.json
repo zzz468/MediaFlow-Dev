@@ -1,0 +1,108 @@
+{
+  "os": "windows",
+  "atUtc": "2026-10-05T13:00:35.631754Z",
+  "status": "PASS",
+  "results": [],
+  "progress": [
+    {
+      "id": "op-1791205245217864-0ca417eccd60eb1e4a35ccfe",
+      "processedUs": 129213359,
+      "totalUs": 1202112000,
+      "fraction": 0.10748861919688016
+    },
+    {
+      "id": "op-1791205245217864-0ca417eccd60eb1e4a35ccfe",
+      "processedUs": 129213359,
+      "totalUs": 1202112000,
+      "fraction": 0.10748861919688016
+    },
+    {
+      "id": "op-1791205245217864-0ca417eccd60eb1e4a35ccfe",
+      "processedUs": 129213359,
+      "totalUs": 1202112000,
+      "fraction": 0.10748861919688016
+    },
+    {
+      "id": "op-1791205246317622-5cde0919a5059e415835b58e",
+      "processedUs": 360309458,
+      "totalUs": 1202112578,
+      "fraction": 0.29973021212327755
+    },
+    {
+      "id": "op-1791205246317622-5cde0919a5059e415835b58e",
+      "processedUs": 360309458,
+      "totalUs": 1202112578,
+      "fraction": 0.29973021212327755
+    },
+    {
+      "id": "op-1791205246317622-5cde0919a5059e415835b58e",
+      "processedUs": 360309458,
+      "totalUs": 1202112578,
+      "fraction": 0.29973021212327755
+    }
+  ],
+  "lifecycle": [
+    {
+      "state": "inactive",
+      "atUtc": "2026-10-05T13:00:37.304226Z",
+      "activeOperationIds": []
+    },
+    {
+      "state": "resumed",
+      "atUtc": "2026-10-05T13:00:44.121141Z",
+      "activeOperationIds": []
+    }
+  ],
+  "requests": [
+    {
+      "id": "op-1791205245217864-0ca417eccd60eb1e4a35ccfe",
+      "type": "trim",
+      "startUs": 0,
+      "endUs": 1202112000
+    },
+    {
+      "id": "op-1791205246317622-5cde0919a5059e415835b58e",
+      "type": "extractAudio",
+      "startUs": 0,
+      "endUs": null
+    },
+    {
+      "id": "op-1791205247250535-b98c6363698bd950d6ba7e75",
+      "type": "extractFrame",
+      "startUs": 0,
+      "endUs": null
+    }
+  ],
+  "lastUiPhase": "cancelled",
+  "inputSelected": true,
+  "input": {
+    "name": "输入 中文.mp4",
+    "durationUs": 1202112578,
+    "codecs": [
+      "h264",
+      "aac"
+    ],
+    "bytes": 90814896,
+    "saf": false
+  },
+  "historyRestored": [],
+  "cancellations": [
+    {
+      "type": "trim",
+      "phase": "cancelled",
+      "nativePtsAtCancelUs": 129213359
+    },
+    {
+      "type": "extractAudio",
+      "phase": "cancelled",
+      "nativePtsAtCancelUs": 360309458
+    },
+    {
+      "type": "extractFrame",
+      "phase": "cancelled",
+      "nativePtsAtCancelUs": null
+    }
+  ],
+  "coldRestart": "PENDING normal main.dart",
+  "systemPlayback": "PENDING user observation"
+}

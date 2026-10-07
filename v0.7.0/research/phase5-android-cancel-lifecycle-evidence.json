@@ -1,0 +1,1192 @@
+{
+  "os": "android",
+  "atUtc": "2026-10-05T13:04:16.833115Z",
+  "status": "PASS",
+  "results": [
+    {
+      "type": "extractAudio",
+      "output": "/storage/emulated/0/Download/MediaFlow/前后台音频 中文 (2).m4a",
+      "metadata": {
+        "durationUs": 1202123200,
+        "bytes": 14666692,
+        "tracks": [
+          {
+            "mime": "audio/mp4a-latm"
+          }
+        ]
+      }
+    }
+  ],
+  "progress": [
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 0,
+      "totalUs": 1202113000,
+      "fraction": 0.0
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 0,
+      "totalUs": 1202113000,
+      "fraction": 0.0
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 10602666,
+      "totalUs": 1202113000,
+      "fraction": 0.0088200244070233
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 20448000,
+      "totalUs": 1202113000,
+      "fraction": 0.01701004814023307
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 30037333,
+      "totalUs": 1202113000,
+      "fraction": 0.0249871126924008
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 36874666,
+      "totalUs": 1202113000,
+      "fraction": 0.030674874990953428
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 46666666,
+      "totalUs": 1202113000,
+      "fraction": 0.03882053184683969
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 56234666,
+      "totalUs": 1202113000,
+      "fraction": 0.04677985014719914
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 65888000,
+      "totalUs": 1202113000,
+      "fraction": 0.05481015511852879
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 76501333,
+      "totalUs": 1202113000,
+      "fraction": 0.0636390530673905
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 86261333,
+      "totalUs": 1202113000,
+      "fraction": 0.07175809012963008
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 96682666,
+      "totalUs": 1202113000,
+      "fraction": 0.08042726931661166
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 106560000,
+      "totalUs": 1202113000,
+      "fraction": 0.08864391284346812
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 116810708,
+      "totalUs": 1202113000,
+      "fraction": 0.09717115445885703
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 125696041,
+      "totalUs": 1202113000,
+      "fraction": 0.10456258355079763
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 135072041,
+      "totalUs": 1202113000,
+      "fraction": 0.11236218308927697
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 144789375,
+      "totalUs": 1202113000,
+      "fraction": 0.12044572764789999
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 152426708,
+      "totalUs": 1202113000,
+      "fraction": 0.1267989847876198
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 162592041,
+      "totalUs": 1202113000,
+      "fraction": 0.1352552056254279
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 170240041,
+      "totalUs": 1202113000,
+      "fraction": 0.1416173363069861
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 176256041,
+      "totalUs": 1202113000,
+      "fraction": 0.1466218575125633
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 182517375,
+      "totalUs": 1202113000,
+      "fraction": 0.1518304643573441
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 191285375,
+      "totalUs": 1202113000,
+      "fraction": 0.15912428781653637
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 196757416,
+      "totalUs": 1202113000,
+      "fraction": 0.1636763066367305
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 204917416,
+      "totalUs": 1202113000,
+      "fraction": 0.1704643540166357
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 215882750,
+      "totalUs": 1202113000,
+      "fraction": 0.17958607052747952
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 226816083,
+      "totalUs": 1202113000,
+      "fraction": 0.1886811664128081
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 239114750,
+      "totalUs": 1202113000,
+      "fraction": 0.19891204071497437
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 250048083,
+      "totalUs": 1202113000,
+      "fraction": 0.20800713660030296
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 259616083,
+      "totalUs": 1202113000,
+      "fraction": 0.2159664549006624
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 269589416,
+      "totalUs": 1202113000,
+      "fraction": 0.22426295697659038
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 280117458,
+      "totalUs": 1202113000,
+      "fraction": 0.2330209040248296
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 291050791,
+      "totalUs": 1202113000,
+      "fraction": 0.2421159999101582
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 302858791,
+      "totalUs": 1202113000,
+      "fraction": 0.25193870376578575
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 312917458,
+      "totalUs": 1202113000,
+      "fraction": 0.26030619251268394
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 322965458,
+      "totalUs": 1202113000,
+      "fraction": 0.26866480771774365
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 332042791,
+      "totalUs": 1202113000,
+      "fraction": 0.2762159555715644
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 340245458,
+      "totalUs": 1202113000,
+      "fraction": 0.28303949628695474
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 350389458,
+      "totalUs": 1202113000,
+      "fraction": 0.2914779708729545
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 355274791,
+      "totalUs": 1202113000,
+      "fraction": 0.29554192575905924
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 364842833,
+      "totalUs": 1202113000,
+      "fraction": 0.30350127899789786
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 371754833,
+      "totalUs": 1202113000,
+      "fraction": 0.30925115442558226
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 377141500,
+      "totalUs": 1202113000,
+      "fraction": 0.31373215330006415
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 385344166,
+      "totalUs": 1202113000,
+      "fraction": 0.3205556931835859
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 393536166,
+      "totalUs": 1202113000,
+      "fraction": 0.3273703603571378
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 403104166,
+      "totalUs": 1202113000,
+      "fraction": 0.33532967865749724
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 415616166,
+      "totalUs": 1202113000,
+      "fraction": 0.3457380179733519
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 428917500,
+      "totalUs": 1202113000,
+      "fraction": 0.3568029794204039
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 438592166,
+      "totalUs": 1202113000,
+      "fraction": 0.3648510298116733
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 445472208,
+      "totalUs": 1202113000,
+      "fraction": 0.3705743203841902
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 451338875,
+      "totalUs": 1202113000,
+      "fraction": 0.37545461616337233
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 456586875,
+      "totalUs": 1202113000,
+      "fraction": 0.379820262321429
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 461866875,
+      "totalUs": 1202113000,
+      "fraction": 0.3842125282731324
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 468693541,
+      "totalUs": 1202113000,
+      "fraction": 0.3898914170298466
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 476490875,
+      "totalUs": 1202113000,
+      "fraction": 0.3963777739696684
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 483733541,
+      "totalUs": 1202113000,
+      "fraction": 0.4024027200437896
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 496693541,
+      "totalUs": 1202113000,
+      "fraction": 0.41318373647069784
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 502944208,
+      "totalUs": 1202113000,
+      "fraction": 0.41838346977364027
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 509696208,
+      "totalUs": 1202113000,
+      "fraction": 0.42400024623309124
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 516224208,
+      "totalUs": 1202113000,
+      "fraction": 0.4294306841370154
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 523082875,
+      "totalUs": 1202113000,
+      "fraction": 0.4351361935192449
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 530197583,
+      "totalUs": 1202113000,
+      "fraction": 0.44105469535725844
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 543861583,
+      "totalUs": 1202113000,
+      "fraction": 0.4524213472443938
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 558826916,
+      "totalUs": 1202113000,
+      "fraction": 0.464870537129205
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 571488250,
+      "totalUs": 1202113000,
+      "fraction": 0.47540310270332325
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 587584250,
+      "totalUs": 1202113000,
+      "fraction": 0.4887928589076069
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 596810916,
+      "totalUs": 1202113000,
+      "fraction": 0.4964682321878226
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 602624250,
+      "totalUs": 1202113000,
+      "fraction": 0.5013041619215498
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 610816250,
+      "totalUs": 1202113000,
+      "fraction": 0.5081188290951018
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 619018958,
+      "totalUs": 1202113000,
+      "fraction": 0.5149424039171027
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 625856291,
+      "totalUs": 1202113000,
+      "fraction": 0.5206301662156553
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 631338958,
+      "totalUs": 1202113000,
+      "fraction": 0.5251910244710771
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 640885625,
+      "totalUs": 1202113000,
+      "fraction": 0.5331325965196283
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 651712291,
+      "totalUs": 1202113000,
+      "fraction": 0.5421389594821785
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 660010958,
+      "totalUs": 1202113000,
+      "fraction": 0.5490423595785089
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 671882958,
+      "totalUs": 1202113000,
+      "fraction": 0.5589183030214298
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 683242958,
+      "totalUs": 1202113000,
+      "fraction": 0.5683683297660037
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 693280291,
+      "totalUs": 1202113000,
+      "fraction": 0.576718071429225
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 704405666,
+      "totalUs": 1202113000,
+      "fraction": 0.5859729210149129
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 710581666,
+      "totalUs": 1202113000,
+      "fraction": 0.5911105411887235
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 719947000,
+      "totalUs": 1202113000,
+      "fraction": 0.598901268017233
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 727445666,
+      "totalUs": 1202113000,
+      "fraction": 0.6051391724405276
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 735179000,
+      "totalUs": 1202113000,
+      "fraction": 0.6115722897930561
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 749739000,
+      "totalUs": 1202113000,
+      "fraction": 0.6236842959022987
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 760608333,
+      "totalUs": 1202113000,
+      "fraction": 0.6327261522003339
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 770709666,
+      "totalUs": 1202113000,
+      "fraction": 0.6411291334508487
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 778475000,
+      "totalUs": 1202113000,
+      "fraction": 0.6475888705970237
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 785739041,
+      "totalUs": 1202113000,
+      "fraction": 0.6536315978614323
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 791200375,
+      "totalUs": 1202113000,
+      "fraction": 0.658174709865046
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 796672375,
+      "totalUs": 1202113000,
+      "fraction": 0.6627266945786294
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 807605708,
+      "totalUs": 1202113000,
+      "fraction": 0.6718217904639581
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 813067041,
+      "totalUs": 1202113000,
+      "fraction": 0.6763649016357032
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 821013708,
+      "totalUs": 1202113000,
+      "fraction": 0.68297548400192
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 826731041,
+      "totalUs": 1202113000,
+      "fraction": 0.6877315535228385
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 832480375,
+      "totalUs": 1202113000,
+      "fraction": 0.6925142436692724
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 839029708,
+      "totalUs": 1202113000,
+      "fraction": 0.6979624278250048
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 848597708,
+      "totalUs": 1202113000,
+      "fraction": 0.7059217461253643
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 855499041,
+      "totalUs": 1202113000,
+      "fraction": 0.7116627480112102
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 861749708,
+      "totalUs": 1202113000,
+      "fraction": 0.7168624813141526
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 870357750,
+      "totalUs": 1202113000,
+      "fraction": 0.7240232407435907
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 878667083,
+      "totalUs": 1202113000,
+      "fraction": 0.730935513549891
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 885429750,
+      "totalUs": 1202113000,
+      "fraction": 0.7365611635511803
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 895851083,
+      "totalUs": 1202113000,
+      "fraction": 0.7452303427381619
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 908021750,
+      "totalUs": 1202113000,
+      "fraction": 0.7553547378657414
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 916928416,
+      "totalUs": 1202113000,
+      "fraction": 0.7627639132094903
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 925120416,
+      "totalUs": 1202113000,
+      "fraction": 0.7695785803830422
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 930656416,
+      "totalUs": 1202113000,
+      "fraction": 0.7741838046839191
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 938795083,
+      "totalUs": 1202113000,
+      "fraction": 0.780954105812016
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 945984416,
+      "totalUs": 1202113000,
+      "fraction": 0.7869346858406822
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 952459125,
+      "totalUs": 1202113000,
+      "fraction": 0.7923207926376306
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 960651125,
+      "totalUs": 1202113000,
+      "fraction": 0.7991354598111825
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 966379125,
+      "totalUs": 1202113000,
+      "fraction": 0.8039004028739395
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 971584458,
+      "totalUs": 1202113000,
+      "fraction": 0.808230555696511
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 978421791,
+      "totalUs": 1202113000,
+      "fraction": 0.8139183179950636
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 985248458,
+      "totalUs": 1202113000,
+      "fraction": 0.8195972075836465
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 997099125,
+      "totalUs": 1202113000,
+      "fraction": 0.8294554047747591
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 1006027125,
+      "totalUs": 1202113000,
+      "fraction": 0.8368823272021848
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 1016533791,
+      "totalUs": 1202113000,
+      "fraction": 0.845622492228268
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 1023520458,
+      "totalUs": 1202113000,
+      "fraction": 0.8514344807850842
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 1028981791,
+      "totalUs": 1202113000,
+      "fraction": 0.8559775919568293
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 1036843166,
+      "totalUs": 1202113000,
+      "fraction": 0.8625172225905551
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 1044011166,
+      "totalUs": 1202113000,
+      "fraction": 0.8684800563674131
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 1052213833,
+      "totalUs": 1202113000,
+      "fraction": 0.8753035970828034
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 1059051166,
+      "totalUs": 1202113000,
+      "fraction": 0.880991359381356
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 1065877833,
+      "totalUs": 1202113000,
+      "fraction": 0.8866702489699387
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 1071264500,
+      "totalUs": 1202113000,
+      "fraction": 0.8911512478444206
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 1075445833,
+      "totalUs": 1202113000,
+      "fraction": 0.8946295672702982
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 1080907166,
+      "totalUs": 1202113000,
+      "fraction": 0.8991726784420433
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 1087744500,
+      "totalUs": 1202113000,
+      "fraction": 0.9048604415724645
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 1091840500,
+      "totalUs": 1202113000,
+      "fraction": 0.9082677751592404
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 1097739166,
+      "totalUs": 1202113000,
+      "fraction": 0.9131746899002007
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 1104139166,
+      "totalUs": 1202113000,
+      "fraction": 0.9184986486295381
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 1110549833,
+      "totalUs": 1202113000,
+      "fraction": 0.923831480900714
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 1118368541,
+      "totalUs": 1202113000,
+      "fraction": 0.9303356181989547
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 1130112541,
+      "totalUs": 1202113000,
+      "fraction": 0.9401050824672889
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 1138304541,
+      "totalUs": 1202113000,
+      "fraction": 0.9469197496408408
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 1144245875,
+      "totalUs": 1202113000,
+      "fraction": 0.9518621585491547
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 1149237875,
+      "totalUs": 1202113000,
+      "fraction": 0.9560148463580379
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 1156075208,
+      "totalUs": 1202113000,
+      "fraction": 0.9617026086565905
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 1163264541,
+      "totalUs": 1202113000,
+      "fraction": 0.9676831886852567
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 1172469875,
+      "totalUs": 1202113000,
+      "fraction": 0.9753408165455327
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 1178837875,
+      "totalUs": 1202113000,
+      "fraction": 0.9806381554812235
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 1185643208,
+      "totalUs": 1202113000,
+      "fraction": 0.9862992979861295
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 1192971208,
+      "totalUs": 1202113000,
+      "fraction": 0.99
+    },
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "processedUs": 1202101875,
+      "totalUs": 1202113000,
+      "fraction": 0.99
+    },
+    {
+      "id": "op-1791205471056306-e44cbf7dbe596d7565738209",
+      "processedUs": 0,
+      "totalUs": 1202113000,
+      "fraction": 0.0
+    },
+    {
+      "id": "op-1791205471056306-e44cbf7dbe596d7565738209",
+      "processedUs": 0,
+      "totalUs": 1202113000,
+      "fraction": 0.0
+    },
+    {
+      "id": "op-1791205471056306-e44cbf7dbe596d7565738209",
+      "processedUs": 3370666,
+      "totalUs": 1202113000,
+      "fraction": 0.0028039510428720096
+    },
+    {
+      "id": "op-1791205471056306-e44cbf7dbe596d7565738209",
+      "processedUs": 3370666,
+      "totalUs": 1202113000,
+      "fraction": 0.0028039510428720096
+    },
+    {
+      "id": "op-1791205471056306-e44cbf7dbe596d7565738209",
+      "processedUs": 3370666,
+      "totalUs": 1202113000,
+      "fraction": 0.0028039510428720096
+    },
+    {
+      "id": "op-1791205472450780-f2b7fa77387d43dbfdd7e575",
+      "processedUs": 0,
+      "totalUs": 1202113000,
+      "fraction": 0.0
+    },
+    {
+      "id": "op-1791205472450780-f2b7fa77387d43dbfdd7e575",
+      "processedUs": 0,
+      "totalUs": 1202113000,
+      "fraction": 0.0
+    },
+    {
+      "id": "op-1791205472450780-f2b7fa77387d43dbfdd7e575",
+      "processedUs": 10346666,
+      "totalUs": 1202113000,
+      "fraction": 0.008607066057849803
+    },
+    {
+      "id": "op-1791205472450780-f2b7fa77387d43dbfdd7e575",
+      "processedUs": 10346666,
+      "totalUs": 1202113000,
+      "fraction": 0.008607066057849803
+    },
+    {
+      "id": "op-1791205472450780-f2b7fa77387d43dbfdd7e575",
+      "processedUs": 10346666,
+      "totalUs": 1202113000,
+      "fraction": 0.008607066057849803
+    }
+  ],
+  "lifecycle": [
+    {
+      "state": "inactive",
+      "atUtc": "2026-10-05T13:04:16.96344Z",
+      "activeOperationIds": []
+    },
+    {
+      "state": "resumed",
+      "atUtc": "2026-10-05T13:04:21.540184Z",
+      "activeOperationIds": []
+    },
+    {
+      "state": "inactive",
+      "atUtc": "2026-10-05T13:04:22.867386Z",
+      "activeOperationIds": [
+        "op-1791205462515932-4f0251456cb049b75935f780"
+      ]
+    },
+    {
+      "state": "hidden",
+      "atUtc": "2026-10-05T13:04:23.532622Z",
+      "activeOperationIds": [
+        "op-1791205462515932-4f0251456cb049b75935f780"
+      ]
+    },
+    {
+      "state": "paused",
+      "atUtc": "2026-10-05T13:04:23.532644Z",
+      "activeOperationIds": [
+        "op-1791205462515932-4f0251456cb049b75935f780"
+      ]
+    },
+    {
+      "state": "hidden",
+      "atUtc": "2026-10-05T13:04:23.87599Z",
+      "activeOperationIds": [
+        "op-1791205462515932-4f0251456cb049b75935f780"
+      ]
+    },
+    {
+      "state": "inactive",
+      "atUtc": "2026-10-05T13:04:23.876017Z",
+      "activeOperationIds": [
+        "op-1791205462515932-4f0251456cb049b75935f780"
+      ]
+    },
+    {
+      "state": "resumed",
+      "atUtc": "2026-10-05T13:04:23.918776Z",
+      "activeOperationIds": [
+        "op-1791205462515932-4f0251456cb049b75935f780"
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "type": "extractAudio",
+      "startUs": 0,
+      "endUs": null
+    },
+    {
+      "id": "op-1791205471056306-e44cbf7dbe596d7565738209",
+      "type": "trim",
+      "startUs": 0,
+      "endUs": 1202113000
+    },
+    {
+      "id": "op-1791205472450780-f2b7fa77387d43dbfdd7e575",
+      "type": "extractAudio",
+      "startUs": 0,
+      "endUs": null
+    },
+    {
+      "id": "op-1791205473856037-a4e10631c5e371f9ab28b095",
+      "type": "extractFrame",
+      "startUs": 0,
+      "endUs": null
+    }
+  ],
+  "lastUiPhase": "cancelled",
+  "inputSelected": true,
+  "input": {
+    "name": "输入 中文.mp4",
+    "durationUs": 1202113000,
+    "codecs": [
+      "video/avc",
+      "audio/mp4a-latm"
+    ],
+    "bytes": 90814896,
+    "saf": true
+  },
+  "backgroundActiveOperation": "PASS",
+  "historyRestored": [
+    {
+      "source": "processing",
+      "id": "op-1791202024911616-0803d0f9005ea637ba8c4c61",
+      "operation": "trim",
+      "inputName": "输入 中文.mp4",
+      "output": "/storage/emulated/0/Download/MediaFlow/输入 中文 裁剪.mp4",
+      "mediaType": "video",
+      "completedAt": "2026-10-05T20:07:19.784686"
+    },
+    {
+      "source": "processing",
+      "id": "op-1791202040065386-8ab87ca68995b103277a158b",
+      "operation": "trim",
+      "inputName": "输入 中文.mp4",
+      "output": "/storage/emulated/0/Download/MediaFlow/输入 中文 裁剪 (1).mp4",
+      "mediaType": "video",
+      "completedAt": "2026-10-05T20:07:36.765029"
+    },
+    {
+      "source": "processing",
+      "id": "op-1791202227003921-a7eb6287bc575e7410ff81ad",
+      "operation": "trim",
+      "inputName": "输入 中文 裁剪 (1).mp4",
+      "output": "/storage/emulated/0/Download/MediaFlow/输入 中文 裁剪 (1) 裁剪.mp4",
+      "mediaType": "video",
+      "completedAt": "2026-10-05T20:10:36.501975"
+    },
+    {
+      "source": "processing",
+      "id": "op-1791202236812425-e16b426a285e4484f208a71f",
+      "operation": "trim",
+      "inputName": "输入 中文 裁剪 (1).mp4",
+      "output": "/storage/emulated/0/Download/MediaFlow/输入 中文 裁剪 (1) 裁剪 (1).mp4",
+      "mediaType": "video",
+      "completedAt": "2026-10-05T20:10:44.985896"
+    },
+    {
+      "source": "processing",
+      "id": "op-1791202256371266-63dba66719048a6748a84d3d",
+      "operation": "extractAudio",
+      "inputName": "输入 中文 裁剪 (1).mp4",
+      "output": "/storage/emulated/0/Download/MediaFlow/输入 中文 裁剪 (1) 音频.m4a",
+      "mediaType": "audio",
+      "completedAt": "2026-10-05T20:11:02.75965"
+    },
+    {
+      "source": "processing",
+      "id": "op-1791202263706157-894d8cdae7617a599d7d7709",
+      "operation": "extractFrame",
+      "inputName": "输入 中文 裁剪 (1).mp4",
+      "output": "/storage/emulated/0/Download/MediaFlow/输入 中文 裁剪 (1) 帧.jpg",
+      "mediaType": "image",
+      "completedAt": "2026-10-05T20:11:03.932266"
+    },
+    {
+      "source": "processing",
+      "id": "op-1791202267655905-db7d6004819b455214b7dd43",
+      "operation": "extractFrame",
+      "inputName": "输入 中文 裁剪 (1).mp4",
+      "output": "/storage/emulated/0/Download/MediaFlow/输入 中文 裁剪 (1) 帧 (1).jpg",
+      "mediaType": "image",
+      "completedAt": "2026-10-05T20:11:07.892509"
+    },
+    {
+      "source": "processing",
+      "id": "op-1791202598802984-ed175becc97b1899ce08d2fc",
+      "operation": "trim",
+      "inputName": "输入 中文 裁剪 (1) 裁剪 (1).mp4",
+      "output": "/storage/emulated/0/Download/MediaFlow/本地裁剪 中文.mp4",
+      "mediaType": "video",
+      "completedAt": "2026-10-05T20:16:39.098173"
+    },
+    {
+      "source": "processing",
+      "id": "op-1791202599471627-05bda37a1f07565e0817e7d0",
+      "operation": "trim",
+      "inputName": "输入 中文 裁剪 (1) 裁剪 (1).mp4",
+      "output": "/storage/emulated/0/Download/MediaFlow/本地裁剪 中文 (1).mp4",
+      "mediaType": "video",
+      "completedAt": "2026-10-05T20:16:39.669783"
+    },
+    {
+      "source": "processing",
+      "id": "op-1791202600835252-f53b6bdf040102bb85a6c2ef",
+      "operation": "extractAudio",
+      "inputName": "输入 中文 裁剪 (1) 裁剪 (1).mp4",
+      "output": "/storage/emulated/0/Download/MediaFlow/本地音频 中文.m4a",
+      "mediaType": "audio",
+      "completedAt": "2026-10-05T20:16:44.611525"
+    },
+    {
+      "source": "processing",
+      "id": "op-1791202605600435-4ff235249c5e7d4d72e8bbf2",
+      "operation": "extractFrame",
+      "inputName": "输入 中文 裁剪 (1) 裁剪 (1).mp4",
+      "output": "/storage/emulated/0/Download/MediaFlow/本地图片 中文.jpg",
+      "mediaType": "image",
+      "completedAt": "2026-10-05T20:16:45.848604"
+    },
+    {
+      "source": "processing",
+      "id": "op-1791205316826326-69152616d49c366eda291593",
+      "operation": "extractAudio",
+      "inputName": "本地裁剪 中文.mp4",
+      "output": "/storage/emulated/0/Download/MediaFlow/前后台音频 中文.m4a",
+      "mediaType": "audio",
+      "completedAt": "2026-10-05T21:01:56.9157"
+    },
+    {
+      "source": "processing",
+      "id": "op-1791205409289664-ec5f5c0a9dec07a6e2cc380d",
+      "operation": "extractAudio",
+      "inputName": "输入 中文.mp4",
+      "output": "/storage/emulated/0/Download/MediaFlow/前后台音频 中文 (1).m4a",
+      "mediaType": "audio",
+      "completedAt": "2026-10-05T21:03:37.793088"
+    },
+    {
+      "source": "processing",
+      "id": "op-1791205462515932-4f0251456cb049b75935f780",
+      "operation": "extractAudio",
+      "inputName": "输入 中文.mp4",
+      "output": "/storage/emulated/0/Download/MediaFlow/前后台音频 中文 (2).m4a",
+      "mediaType": "audio",
+      "completedAt": "2026-10-05T21:04:30.137716"
+    }
+  ],
+  "cancellations": [
+    {
+      "type": "trim",
+      "phase": "cancelled",
+      "nativePtsAtCancelUs": 3370666
+    },
+    {
+      "type": "extractAudio",
+      "phase": "cancelled",
+      "nativePtsAtCancelUs": 10346666
+    },
+    {
+      "type": "extractFrame",
+      "phase": "cancelled",
+      "nativePtsAtCancelUs": null
+    }
+  ],
+  "coldRestart": "PENDING normal main.dart",
+  "systemPlayback": "PENDING user observation"
+}

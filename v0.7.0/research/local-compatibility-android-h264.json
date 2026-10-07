@@ -1,0 +1,85 @@
+{
+  "os": "android",
+  "atUtc": "2026-10-06T05:16:05.954230Z",
+  "status": "PASS",
+  "inputRoute": "actual SAF, no input override",
+  "results": [
+    {
+      "type": "trim",
+      "status": "PASS",
+      "output": "/storage/emulated/0/Download/MediaFlow/LC_H264_trim.mp4",
+      "metadata": {
+        "durationUs": 4016000,
+        "bytes": 314303,
+        "tracks": [
+          {
+            "mime": "video/avc"
+          },
+          {
+            "mime": "audio/mp4a-latm"
+          }
+        ]
+      },
+      "historyMatchesFinal": true
+    },
+    {
+      "type": "extractAudio",
+      "status": "PASS",
+      "output": "/storage/emulated/0/Download/MediaFlow/LC_H264_extractAudio.m4a",
+      "metadata": {
+        "durationUs": 1202123200,
+        "bytes": 14666692,
+        "tracks": [
+          {
+            "mime": "audio/mp4a-latm"
+          }
+        ]
+      },
+      "historyMatchesFinal": true
+    },
+    {
+      "type": "extractFrame",
+      "status": "PASS",
+      "output": "/storage/emulated/0/Download/MediaFlow/LC_H264_extractFrame.jpg",
+      "metadata": {
+        "bytes": 11414,
+        "width": 320,
+        "height": 180
+      },
+      "historyMatchesFinal": true
+    }
+  ],
+  "awaitingSaf": false,
+  "input": {
+    "name": "MF_RC_LocalCompatibility_H264.mp4",
+    "bytes": 90814896,
+    "durationUs": 1202113000,
+    "codecs": [
+      "video/avc",
+      "audio/mp4a-latm"
+    ],
+    "videoCodec": "video/avc",
+    "audioCodec": "audio/mp4a-latm",
+    "container": null,
+    "document": true,
+    "frameDecodeSupported": true,
+    "videoCopySupported": true
+  },
+  "capabilities": {
+    "trim": {
+      "available": true,
+      "reason": null,
+      "message": null
+    },
+    "extractAudio": {
+      "available": true,
+      "reason": null,
+      "message": null
+    },
+    "extractFrame": {
+      "available": true,
+      "reason": null,
+      "message": null
+    }
+  }
+}

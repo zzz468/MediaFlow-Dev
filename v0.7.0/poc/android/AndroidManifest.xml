@@ -1,0 +1,9 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.mediaflow.research.v070.processing" android:versionCode="1" android:versionName="poc-1">
+  <uses-sdk android:minSdkVersion="24" android:targetSdkVersion="36" />
+  <application android:label="MediaFlow Processing PoC" android:debuggable="true" android:allowBackup="false" android:theme="@android:style/Theme.Material.Light.NoActionBar">
+    <activity android:name=".PocActivity" android:exported="true">
+      <intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter>
+    </activity>
+    <provider android:name=".OutputProvider" android:authorities="com.mediaflow.research.v070.processing.outputs" android:exported="false" android:grantUriPermissions="true" />
+  </application>
+</manifest>

@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.22.1)
+project(mediaflow_processing_storage LANGUAGES C)
+add_library(mediaflow_processing_storage SHARED processing_storage.c)
+target_compile_options(mediaflow_processing_storage PRIVATE -Wall -Wextra -Werror)
+target_link_options(mediaflow_processing_storage PRIVATE "-Wl,-z,max-page-size=16384")

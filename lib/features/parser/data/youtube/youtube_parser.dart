@@ -217,6 +217,21 @@ final class YoutubeParser implements ParserInterface {
           sourceUrl: YoutubeUrl.watch(id),
           type: MediaContentType.video,
           resources: selectable,
+          assemblyGroups: [
+            if (selectable.any((r) => r.trackRole == MediaTrackRole.audioOnly))
+              for (final video in selectable.where(
+                (r) => r.trackRole == MediaTrackRole.videoOnly,
+              ))
+                MediaAssemblyGroup(
+                  videoResourceId: video.id,
+                  audioResourceIds: [
+                    for (final audio in selectable.where(
+                      (r) => r.trackRole == MediaTrackRole.audioOnly,
+                    ))
+                      audio.id,
+                  ],
+                ),
+          ],
           author: details['author'] as String?,
           description: details['shortDescription'] as String?,
           coverUrl: cover,
@@ -322,6 +337,7 @@ List<MediaResource> mapYoutubeResources(
           qualityLabel: quality,
           width: f['width'] is num ? (f['width'] as num).toInt() : null,
           height: f['height'] is num ? (f['height'] as num).toInt() : null,
+          fps: f['fps'] is num ? (f['fps'] as num).toInt() : null,
           bitrate: bitrate,
           codec: RegExp(r'codecs="([^"]+)"').firstMatch(fullMime)?.group(1),
           container: container,
@@ -354,7 +370,7 @@ List<MediaResource> deduplicateYoutubeResources(List<MediaResource> resources) {
         (r) =>
             ids.add(r.id) &&
             seen.add(
-              '${r.trackRole}:${r.qualityLabel}:${r.width}:${r.height}:${r.container}',
+              '${r.trackRole}:${r.qualityLabel}:${r.width}:${r.height}:${r.fps}:${r.codec}:${r.container}',
             ),
       )
       .toList();
@@ -363,6 +379,8 @@ List<MediaResource> deduplicateYoutubeResources(List<MediaResource> resources) {
     if (role != 0) return role;
     final resolution = (b.height ?? 0).compareTo(a.height ?? 0);
     if (resolution != 0) return resolution;
+    final fps = (b.fps ?? 0).compareTo(a.fps ?? 0);
+    if (fps != 0) return fps;
     final container = (a.container == 'mp4' ? 0 : 1).compareTo(
       b.container == 'mp4' ? 0 : 1,
     );

@@ -1,6 +1,6 @@
 # MediaFlow
 
-当前版本：`v0.6.0`（`0.6.0+6`）。[发布说明与资产校验](v0.6.0/release/README.md)。
+当前版本：`v0.7.0`（`0.7.0+7`）。[发布说明与许可材料](v0.7.0/release/README.md)、[Release Candidate 验收记录](v0.7.0/release-candidate.md)。
 
 MediaFlow 是一个面向 Windows、Android 的免费开源媒体链接处理工具，长期保留 iOS、macOS、Linux 扩展路径。Windows 与 Android 同为当前核心发布平台，所有设置、下载历史和日志仅保存在本机。
 
@@ -11,7 +11,8 @@ MediaFlow 是一个面向 Windows、Android 的免费开源媒体链接处理工
 - 多媒体按原始顺序选择、下载和恢复 History；仅当前已验证公开样本范围，不保证全部作品匿名可用
 - Bilibili、小红书图文多图片解析、选择、下载与聚合 History
 - 延续 v0.4.0 抖音图文的 App 自有本地会话流程；由用户主动正常登录，不导入外部 Cookie
-- YouTube 优先提供有声视频，也可单独下载无声视频或音频；不自动合并轨道
+- YouTube 兼容 H.264 + AAC 双流下载后自动合并，默认选择完整生产链可用的最高真实清晰度，并保留手动选择及仅音频下载
+- 本地视频快速裁剪、AAC → M4A 音频直接提取、指定时间 JPEG 抽帧及独立 Processing History
 - Bilibili `b23.tv`、抖音 `v.douyin.com` 短分享链接重定向处理
 - 标题、作者、封面、时长和平台信息展示
 - 顺序多任务下载队列
@@ -22,6 +23,12 @@ MediaFlow 是一个面向 Windows、Android 的免费开源媒体链接处理工
 - 本地下载完成提示和缓存清理
 - parser、downloader、network、error 分类日志
 - Android 完成文件发布到 `Download/MediaFlow/` 并加入系统 MediaStore
+
+媒体处理正式支持平台为 Windows 和 Android；iOS/macOS/Linux 只保留架构扩展路径，本版未正式支持或验收 Processing。裁剪采用 stream-copy，起始位置可能受关键帧影响，不是帧级精准裁剪；音频提取不转换任意 codec，抽帧取决于平台/设备 decoder。
+
+HEVC 文件按具体操作判断：已验证 Windows 可裁剪和提取 AAC，随附组件不支持 HEVC 抽帧；已验证 Android 设备三项均可用，其他设备以实际能力检测为准。部分 HDR/Dolby Vision 快速原码裁剪可能不能完整保留高级动态元数据，不承诺完整 Dolby Vision 无损保留。
+
+部分 YouTube 高分辨率只提供 VP9/AV1，当前版本不会自动转码，可用最终画质可能低于平台最高分辨率；不承诺所有 4K 最终 MP4。Windows 包包含固定 LGPL FFmpeg shared runtime，其许可证和替换说明在 `licenses/ffmpeg/`；对应源码及合规材料作为独立配套资产提供，不放入普通 App ZIP。
 
 ## 历史 v0.1.0-beta 验收状态
 

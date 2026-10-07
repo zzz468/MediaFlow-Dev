@@ -2,7 +2,7 @@ param(
     [string]$FlutterCommand = "D:\dev\flutter\bin\flutter.bat",
     [string]$AndroidSdk = "D:\Android\Sdk",
     [string]$KeyPropertiesPath = $env:MEDIAFLOW_ANDROID_KEY_PROPERTIES,
-    [string]$Version = "v0.6.0",
+    [string]$Version = "v0.7.0",
     [string]$ExpectedSignerSha256 = "16686bce55b6c8eb66bb16b77a8599fa6005483e97430c519710a4d730c6dcba"
 )
 

@@ -1,0 +1,89 @@
+{
+  "os": "android",
+  "atUtc": "2026-10-06T05:08:45.200701Z",
+  "status": "PASS",
+  "inputRoute": "actual SAF, no input override",
+  "results": [
+    {
+      "type": "trim",
+      "status": "PASS",
+      "output": "/storage/emulated/0/Download/MediaFlow/LC_HEVC_trim.mp4",
+      "metadata": {
+        "durationUs": 4015100,
+        "bytes": 20322256,
+        "tracks": [
+          {
+            "mime": "video/dolby-vision"
+          },
+          {
+            "mime": "video/hevc"
+          },
+          {
+            "mime": "audio/mp4a-latm"
+          }
+        ]
+      },
+      "historyMatchesFinal": true
+    },
+    {
+      "type": "extractAudio",
+      "status": "PASS",
+      "output": "/storage/emulated/0/Download/MediaFlow/LC_HEVC_extractAudio.m4a",
+      "metadata": {
+        "durationUs": 239041300,
+        "bytes": 7710050,
+        "tracks": [
+          {
+            "mime": "audio/mp4a-latm"
+          }
+        ]
+      },
+      "historyMatchesFinal": true
+    },
+    {
+      "type": "extractFrame",
+      "status": "PASS",
+      "output": "/storage/emulated/0/Download/MediaFlow/LC_HEVC_extractFrame.jpg",
+      "metadata": {
+        "bytes": 198344,
+        "width": 1920,
+        "height": 1080
+      },
+      "historyMatchesFinal": true
+    }
+  ],
+  "awaitingSaf": false,
+  "input": {
+    "name": "VID20260628175932.mp4",
+    "bytes": 1215801457,
+    "durationUs": 239051900,
+    "codecs": [
+      "video/dolby-vision",
+      "video/hevc",
+      "audio/mp4a-latm"
+    ],
+    "videoCodec": "video/dolby-vision",
+    "audioCodec": "audio/mp4a-latm",
+    "container": null,
+    "document": true,
+    "frameDecodeSupported": true,
+    "videoCopySupported": true
+  },
+  "capabilities": {
+    "trim": {
+      "available": true,
+      "reason": null,
+      "message": null
+    },
+    "extractAudio": {
+      "available": true,
+      "reason": null,
+      "message": null
+    },
+    "extractFrame": {
+      "available": true,
+      "reason": null,
+      "message": null
+    }
+  }
+}

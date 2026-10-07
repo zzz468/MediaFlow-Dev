@@ -1,0 +1,17 @@
+[
+  {
+    "name": "baseline.zip",
+    "bytes": 13870165,
+    "sha256": "7e4ffa15c28a9b9ab3e5c4cfa21f39cbe9c27280c83e70a37859d01f76fb0793"
+  },
+  {
+    "name": "candidate.zip",
+    "bytes": 17054494,
+    "sha256": "62f2806ae966980e4484892e9ec8803054e8d9c07cee0b17afa8b82d6eb43f02"
+  },
+  {
+    "name": "corresponding-source.zip",
+    "bytes": 27417653,
+    "sha256": "7106a4d22e0c98643e698c89102c4b7a1c12d04431c3df5b8405ba6f7ca7ebc3"
+  }
+]

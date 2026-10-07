@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-05",
+  "windows": {
+    "build": "normal main.dart windows-cold-build-01, acceptance data root windows-run-04",
+    "historyColdRestore": "PASS",
+    "systemTrimPlayback": "PASS",
+    "systemM4AAudibleTestTone": "PASS",
+    "systemJPEGDisplay": "PASS",
+    "source": "Direct user reply: Windows Phase 5 历史和播放正常"
+  },
+  "android": {
+    "build": "normal main.dart android-cold-01.apk, Release, com.mediaflow.mediaflow.processingv070p5",
+    "restart": "force-stop isolated package then normal MainActivity cold launch",
+    "historyColdRestore": "PASS",
+    "systemTrimPlayback": "PASS",
+    "systemM4AAudibleTestTone": "PASS",
+    "systemJPEGDisplay": "PASS",
+    "cancelledTasksNotSuccessfulHistory": "PASS",
+    "source": "Direct user reply: Android Phase 5 历史和播放正常"
+  }
+}

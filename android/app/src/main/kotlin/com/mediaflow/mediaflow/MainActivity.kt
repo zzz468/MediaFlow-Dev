@@ -17,6 +17,8 @@ import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
 import java.io.File
+import com.mediaflow.mediaflow.processing.ProcessingPlugin
+import com.mediaflow.mediaflow.processing.LocalMediaToolsPlugin
 
 class MainActivity : FlutterActivity() {
     private data class PendingPublish(
@@ -32,6 +34,12 @@ class MainActivity : FlutterActivity() {
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
+        if (!flutterEngine.plugins.has(ProcessingPlugin::class.java)) {
+            flutterEngine.plugins.add(ProcessingPlugin())
+        }
+        if (!flutterEngine.plugins.has(LocalMediaToolsPlugin::class.java)) {
+            flutterEngine.plugins.add(LocalMediaToolsPlugin())
+        }
         douyinSessionHost = AndroidDouyinSessionHost(this, flutterEngine.dartExecutor.binaryMessenger)
         browserObservationHost = AndroidBrowserObservationHost(
             activity = this,

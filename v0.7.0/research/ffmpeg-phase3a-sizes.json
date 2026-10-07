@@ -1,0 +1,11 @@
+{
+  "baselineUnpacked": 33292272.0,
+  "candidateUnpacked": 40978916.0,
+  "runtimeBytes": 7604736.0,
+  "noticesBytes": 81908.0,
+  "baselineZip": 13870165,
+  "candidateZip": 17054494,
+  "sourceCompanionZip": 27417653,
+  "unpackedDelta": 7686644.0,
+  "zipDelta": 3184329
+}

@@ -104,6 +104,13 @@ class AboutPage extends ConsumerWidget {
                           '保留版权和许可声明的前提下使用、修改和分发本项目。',
                         ),
                         const SizedBox(height: 10),
+                        const Text(
+                          'Windows 版本包含 FFmpeg 8.1.3（LGPL-2.1-or-later）'
+                          '独立共享运行组件。版权、许可证、来源与替换说明见随包 '
+                          'licenses/ffmpeg/；对应源码与合规 ZIP 由发布页面单独配套提供。'
+                          'Android 使用系统媒体 API，不包含 FFmpeg。',
+                        ),
+                        const SizedBox(height: 10),
                         Text(
                           '本软件不提供任何平台内容授权。用户应遵守媒体平台条款、'
                           '版权规则和所在地法律。',

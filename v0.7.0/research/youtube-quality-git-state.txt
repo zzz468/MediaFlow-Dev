@@ -1,0 +1,76 @@
+Repository: D:\projects\mediaflow-v070
+Branch:
+feature/v0.7.0
+HEAD:
+3ba068ae5d42ecabfaa3880afbdee1258a6df26b
+Status:
+ M .gitignore
+ M android/app/build.gradle.kts
+ M android/app/src/main/kotlin/com/mediaflow/mediaflow/MainActivity.kt
+ M android/app/src/main/res/xml/download_file_paths.xml
+ M lib/app/mediaflow_app.dart
+ M lib/app/router/app_router.dart
+ M lib/app/shell/app_shell.dart
+ M lib/features/downloader/application/download_manager.dart
+ M lib/features/downloader/data/local_download_file_store.dart
+ M lib/features/downloader/data/local_media_opener.dart
+ M lib/features/downloader/domain/download_task.dart
+ M lib/features/history/application/download_history_projection.dart
+ M lib/features/history/presentation/download_history_page.dart
+ M lib/features/home/presentation/home_page.dart
+ M lib/features/parser/data/youtube/youtube_parser.dart
+ M lib/features/parser/domain/media_content.dart
+ M lib/features/parser/presentation/media_variant_picker.dart
+ M windows/CMakeLists.txt
+ M windows/flutter/generated_plugin_registrant.cc
+ M windows/flutter/generated_plugin_registrant.h
+ M windows/flutter/generated_plugins.cmake
+ M windows/runner/CMakeLists.txt
+ M windows/runner/flutter_window.cpp
+ M windows/runner/flutter_window.h
+?? android/app/processing-proguard-rules.pro
+?? android/app/src/main/cpp/
+?? android/app/src/main/java/com/mediaflow/mediaflow/processing/
+?? integration_test/v070_media_tools_acceptance_test.dart
+?? integration_test/v070_youtube_pipeline_acceptance_test.dart
+?? integration_test/v070_youtube_quality_acceptance_test.dart
+?? lib/features/downloader/application/media_assembly_controller.dart
+?? lib/features/downloader/application/media_assembly_manager.dart
+?? lib/features/downloader/data/media_assembly_repository.dart
+?? lib/features/downloader/data/media_assembly_storage.dart
+?? lib/features/downloader/domain/media_assembly.dart
+?? lib/features/downloader/presentation/media_assembly_tile.dart
+?? lib/features/parser/application/media_variant_selection.dart
+?? lib/features/processing/
+?? test/features/downloader/media_assembly_test.dart
+?? test/features/parser/media_variant_selection_test.dart
+?? test/features/processing/
+?? third_party/ffmpeg/
+?? tools/processing/
+?? v0.7.0/
+?? windows/processing_runtime.cmake
+?? windows/runner/media_tools.cpp
+?? windows/runner/media_tools.h
+Diff stat:
+ .gitignore                                         |   3 +
+ android/app/build.gradle.kts                       |   7 +
+ .../kotlin/com/mediaflow/mediaflow/MainActivity.kt |   8 +
+ .../app/src/main/res/xml/download_file_paths.xml   |   1 +
+ lib/app/mediaflow_app.dart                         |  38 +-
+ lib/app/router/app_router.dart                     |   6 +
+ lib/app/shell/app_shell.dart                       |   6 +
+ .../downloader/application/download_manager.dart   |   6 +-
+ .../downloader/data/local_download_file_store.dart |  32 +-
+ .../downloader/data/local_media_opener.dart        |   3 +-
+ lib/features/downloader/domain/download_task.dart  |   7 +
+ .../application/download_history_projection.dart   |   1 +
+ .../presentation/download_history_page.dart        |  63 +-
+ lib/features/home/presentation/home_page.dart      |  66 +-
+ .../parser/data/youtube/youtube_parser.dart        | 766 +++++++++++----------
+ lib/features/parser/domain/media_content.dart      |  34 +-
+ .../parser/presentation/media_variant_picker.dart  |  43 +-
+ windows/CMakeLists.txt                             |   4 +-
+ windows/runner/CMakeLists.txt                      |   2 +
+ windows/runner/flutter_window.cpp                  |   3 +
+ windows/runner/flutter_window.h                    |   2 +
+ 21 files changed, 680 insertions(+), 421 deletions(-)

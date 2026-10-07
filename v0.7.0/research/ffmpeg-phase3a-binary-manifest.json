@@ -1,0 +1,169 @@
+[
+  {
+    "name": "avcodec-62.dll",
+    "bytes": 3609088,
+    "sha256": "b554d5e7d560e9b5710483006ff7d6a1407ba67a2495187b3aa9f8175982fa40",
+    "imports": [
+      "swresample-6.dll",
+      "avutil-60.dll",
+      "api-ms-win-crt-runtime-l1-1-0.dll",
+      "api-ms-win-crt-math-l1-1-0.dll",
+      "api-ms-win-crt-utility-l1-1-0.dll",
+      "api-ms-win-crt-private-l1-1-0.dll",
+      "api-ms-win-crt-string-l1-1-0.dll",
+      "KERNEL32.dll",
+      "api-ms-win-crt-stdio-l1-1-0.dll",
+      "api-ms-win-crt-locale-l1-1-0.dll",
+      "api-ms-win-crt-convert-l1-1-0.dll",
+      "api-ms-win-crt-heap-l1-1-0.dll"
+    ]
+  },
+  {
+    "name": "avfilter-11.dll",
+    "bytes": 241152,
+    "sha256": "803b1bbee651e32088b3965cf1a07d5d18a0c57f5d36941e285e36497e8820ac",
+    "imports": [
+      "swscale-9.dll",
+      "swresample-6.dll",
+      "avutil-60.dll",
+      "api-ms-win-crt-runtime-l1-1-0.dll",
+      "api-ms-win-crt-private-l1-1-0.dll",
+      "api-ms-win-crt-string-l1-1-0.dll",
+      "api-ms-win-crt-convert-l1-1-0.dll",
+      "api-ms-win-crt-math-l1-1-0.dll",
+      "KERNEL32.dll",
+      "api-ms-win-crt-stdio-l1-1-0.dll",
+      "api-ms-win-crt-locale-l1-1-0.dll",
+      "api-ms-win-crt-heap-l1-1-0.dll"
+    ]
+  },
+  {
+    "name": "avformat-62.dll",
+    "bytes": 831488,
+    "sha256": "8bd73a64b6b57526d6ac68fef2756be8ed21bcf28130b67e9c6dc35961fad258",
+    "imports": [
+      "avcodec-62.dll",
+      "avutil-60.dll",
+      "api-ms-win-crt-filesystem-l1-1-0.dll",
+      "api-ms-win-crt-runtime-l1-1-0.dll",
+      "api-ms-win-crt-time-l1-1-0.dll",
+      "api-ms-win-crt-stdio-l1-1-0.dll",
+      "api-ms-win-crt-math-l1-1-0.dll",
+      "api-ms-win-crt-convert-l1-1-0.dll",
+      "api-ms-win-crt-utility-l1-1-0.dll",
+      "api-ms-win-crt-private-l1-1-0.dll",
+      "api-ms-win-crt-string-l1-1-0.dll",
+      "KERNEL32.dll",
+      "api-ms-win-crt-locale-l1-1-0.dll",
+      "api-ms-win-crt-heap-l1-1-0.dll"
+    ]
+  },
+  {
+    "name": "avutil-60.dll",
+    "bytes": 719872,
+    "sha256": "c342ea55ee779908195368a0014f4cd40444527b23f0362fe0f86a5eded098d3",
+    "imports": [
+      "bcrypt.dll",
+      "api-ms-win-crt-stdio-l1-1-0.dll",
+      "api-ms-win-crt-heap-l1-1-0.dll",
+      "api-ms-win-crt-runtime-l1-1-0.dll",
+      "api-ms-win-crt-time-l1-1-0.dll",
+      "api-ms-win-crt-math-l1-1-0.dll",
+      "api-ms-win-crt-utility-l1-1-0.dll",
+      "api-ms-win-crt-environment-l1-1-0.dll",
+      "api-ms-win-crt-private-l1-1-0.dll",
+      "api-ms-win-crt-string-l1-1-0.dll",
+      "api-ms-win-crt-convert-l1-1-0.dll",
+      "KERNEL32.dll",
+      "api-ms-win-crt-filesystem-l1-1-0.dll",
+      "api-ms-win-crt-locale-l1-1-0.dll"
+    ]
+  },
+  {
+    "name": "ffmpeg.exe",
+    "bytes": 429056,
+    "sha256": "2aaa3b4ff367087470e875c05e27fe8af2693725708339fd35c99320a5b59f3a",
+    "imports": [
+      "avfilter-11.dll",
+      "avformat-62.dll",
+      "avcodec-62.dll",
+      "swresample-6.dll",
+      "swscale-9.dll",
+      "avutil-60.dll",
+      "SHELL32.dll",
+      "api-ms-win-crt-stdio-l1-1-0.dll",
+      "api-ms-win-crt-runtime-l1-1-0.dll",
+      "api-ms-win-crt-environment-l1-1-0.dll",
+      "api-ms-win-crt-string-l1-1-0.dll",
+      "api-ms-win-crt-locale-l1-1-0.dll",
+      "api-ms-win-crt-time-l1-1-0.dll",
+      "api-ms-win-crt-convert-l1-1-0.dll",
+      "api-ms-win-crt-math-l1-1-0.dll",
+      "api-ms-win-crt-heap-l1-1-0.dll",
+      "api-ms-win-crt-private-l1-1-0.dll",
+      "api-ms-win-crt-utility-l1-1-0.dll",
+      "KERNEL32.dll",
+      "api-ms-win-crt-filesystem-l1-1-0.dll",
+      "api-ms-win-crt-conio-l1-1-0.dll"
+    ]
+  },
+  {
+    "name": "ffprobe.exe",
+    "bytes": 195584,
+    "sha256": "c0bad9ace86fd241d7f2eef4e9bd8734761d3311c2daa9a4e7e3b9310337e41c",
+    "imports": [
+      "avfilter-11.dll",
+      "avformat-62.dll",
+      "avcodec-62.dll",
+      "swresample-6.dll",
+      "swscale-9.dll",
+      "avutil-60.dll",
+      "SHELL32.dll",
+      "api-ms-win-crt-stdio-l1-1-0.dll",
+      "api-ms-win-crt-runtime-l1-1-0.dll",
+      "api-ms-win-crt-environment-l1-1-0.dll",
+      "api-ms-win-crt-string-l1-1-0.dll",
+      "api-ms-win-crt-locale-l1-1-0.dll",
+      "api-ms-win-crt-time-l1-1-0.dll",
+      "api-ms-win-crt-math-l1-1-0.dll",
+      "api-ms-win-crt-heap-l1-1-0.dll",
+      "api-ms-win-crt-private-l1-1-0.dll",
+      "api-ms-win-crt-utility-l1-1-0.dll",
+      "api-ms-win-crt-convert-l1-1-0.dll",
+      "KERNEL32.dll",
+      "api-ms-win-crt-filesystem-l1-1-0.dll"
+    ]
+  },
+  {
+    "name": "swresample-6.dll",
+    "bytes": 114688,
+    "sha256": "ad6b8bade3451bc1be2dc285722da2c2c94d402ed4023c2551512935c0742222",
+    "imports": [
+      "avutil-60.dll",
+      "api-ms-win-crt-runtime-l1-1-0.dll",
+      "api-ms-win-crt-math-l1-1-0.dll",
+      "api-ms-win-crt-private-l1-1-0.dll",
+      "api-ms-win-crt-string-l1-1-0.dll",
+      "KERNEL32.dll",
+      "api-ms-win-crt-stdio-l1-1-0.dll"
+    ]
+  },
+  {
+    "name": "swscale-9.dll",
+    "bytes": 1463808,
+    "sha256": "a83ee80d63bcf609b5b2f728c8c8068eab3cc9ccd9851831c8e5aee34bc81fb3",
+    "imports": [
+      "avutil-60.dll",
+      "api-ms-win-crt-runtime-l1-1-0.dll",
+      "api-ms-win-crt-math-l1-1-0.dll",
+      "api-ms-win-crt-private-l1-1-0.dll",
+      "api-ms-win-crt-string-l1-1-0.dll",
+      "api-ms-win-crt-utility-l1-1-0.dll",
+      "KERNEL32.dll",
+      "api-ms-win-crt-stdio-l1-1-0.dll",
+      "api-ms-win-crt-locale-l1-1-0.dll",
+      "api-ms-win-crt-convert-l1-1-0.dll",
+      "api-ms-win-crt-heap-l1-1-0.dll"
+    ]
+  }
+]

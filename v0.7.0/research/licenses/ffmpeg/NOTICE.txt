@@ -1,0 +1,19 @@
+MediaFlow Windows FFmpeg research release foundation, 2026-10-04.
+This package uses FFmpeg 8.1.3, Copyright (c) 2000-2026 the FFmpeg developers,
+under LGPL version 2.1 or later. See COPYING.LGPLv2.1 and FFmpeg-LICENSE.md.
+Official source: https://ffmpeg.org/releases/ffmpeg-8.1.3.tar.xz
+Corresponding source and own build recipe accompany the binary model separately.
+No FFmpeg source modifications were made by MediaFlow.
+
+This software is based in part on the work of the Independent JPEG Group.
+No MediaFlow modifications to jfdctfst.c, jfdctint_template.c, or jrevdct.c.
+See IJG-NOTICES.txt for the unchanged source notices and warranty disclaimers.
+
+MinGW-w64 runtime copyright and license notices: mingw-w64-runtime-NOTICE.txt
+and mingw-w64-COPYING.txt. Source commit 57b595039040eaa15bece85b7cc71d952281b269.
+LLVM compiler-rt: Apache License 2.0 with LLVM Exceptions;
+see compiler-rt-LICENSE.txt. LLVM commit 85ac560262434c9ccfc0c183ec22d4138ed647fb.
+LLVM-MinGW build recipe/wrappers ISC: llvm-mingw-LICENSE.txt (build-only).
+
+FFmpeg is a trademark of Fabrice Bellard. Attribution does not imply endorsement.
+See SOURCE.txt, configuration and binary manifest for reproducible provenance.

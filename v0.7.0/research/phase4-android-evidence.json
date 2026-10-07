@@ -1,0 +1,397 @@
+{
+  "atUtc": "2026-10-05T06:02:40.26171Z",
+  "os": "android",
+  "route": "HomePage -> production YoutubeParser -> DownloadManager -> MediaAssemblyController -> Processing -> History",
+  "status": "PASS",
+  "samples": [
+    {
+      "id": "hLY9KMIU2BA",
+      "title": "MIYEON 'RUN AWAY' M/V Teaser",
+      "video": {
+        "id": "youtube:VISIONOS:160",
+        "codec": "avc1.4d400c",
+        "container": "mp4"
+      },
+      "audio": {
+        "id": "youtube:VISIONOS:140",
+        "codec": "mp4a.40.2",
+        "container": "mp4"
+      },
+      "alternativeCodecs": [
+        {
+          "role": "videoOnly",
+          "codec": "av01.0.12M.08",
+          "container": "mp4"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "vp9",
+          "container": "webm"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "av01.0.12M.08",
+          "container": "mp4"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "vp9",
+          "container": "webm"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "avc1.640028",
+          "container": "mp4"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "vp9",
+          "container": "webm"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "avc1.4d401f",
+          "container": "mp4"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "vp9",
+          "container": "webm"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "av01.0.04M.08",
+          "container": "mp4"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "vp9",
+          "container": "webm"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "avc1.4d401e",
+          "container": "mp4"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "vp9",
+          "container": "webm"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "avc1.4d4015",
+          "container": "mp4"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "vp9",
+          "container": "webm"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "avc1.4d400d",
+          "container": "mp4"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "vp9",
+          "container": "webm"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "avc1.4d400c",
+          "container": "mp4"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "vp9",
+          "container": "webm"
+        },
+        {
+          "role": "audioOnly",
+          "codec": "mp4a.40.2",
+          "container": "mp4"
+        },
+        {
+          "role": "audioOnly",
+          "codec": "mp4a.40.5",
+          "container": "mp4"
+        },
+        {
+          "role": "audioOnly",
+          "codec": "opus",
+          "container": "webm"
+        },
+        {
+          "role": "audioOnly",
+          "codec": "opus",
+          "container": "webm"
+        },
+        {
+          "role": "audioOnly",
+          "codec": "opus",
+          "container": "webm"
+        }
+      ],
+      "task": {
+        "id": "op-1791180167861123-59d01811c768e98f19944d7e",
+        "contentId": "hLY9KMIU2BA",
+        "title": "MIYEON 'RUN AWAY' M/V Teaser",
+        "platform": "youtube",
+        "sourceUrl": "https://www.youtube.com/watch?v=hLY9KMIU2BA",
+        "videoTaskId": "download-op-1791180167861123-59d01811c768e98f19944d7e-video",
+        "audioTaskId": "download-op-1791180167861123-59d01811c768e98f19944d7e-audio",
+        "createdAt": "2026-10-05T14:02:47.861162",
+        "workingDirectory": "/data/user/0/com.mediaflow.mediaflow.youtubev070p4/files/processing/assemblies/op-1791180167861123-59d01811c768e98f19944d7e",
+        "processingOutput": "/data/user/0/com.mediaflow.mediaflow.youtubev070p4/files/processing/assemblies/op-1791180167861123-59d01811c768e98f19944d7e/MIYEON 'RUN AWAY' M_V Teaser.mp4",
+        "stage": "completed",
+        "progress": 1.0,
+        "finalPath": "/storage/emulated/0/Download/MediaFlow/MIYEON 'RUN AWAY' M_V Teaser.mp4",
+        "completedAt": "2026-10-05T14:03:08.234908",
+        "errorCode": null,
+        "errorMessage": null,
+        "cleanupIssue": null,
+        "attempt": 1,
+        "expectedDurationUs": 18000000
+      },
+      "inputDownloads": [
+        {
+          "role": "video",
+          "bytes": 172358,
+          "status": "completed",
+          "cleaned": true
+        },
+        {
+          "role": "audio",
+          "bytes": 297179,
+          "status": "completed",
+          "cleaned": true
+        }
+      ],
+      "historyFinalOnly": "PASS"
+    },
+    {
+      "id": "jNQXAC9IVRw",
+      "title": "Me at the zoo",
+      "video": {
+        "id": "youtube:VISIONOS:160",
+        "codec": "avc1.4d400b",
+        "container": "mp4"
+      },
+      "audio": {
+        "id": "youtube:VISIONOS:140",
+        "codec": "mp4a.40.2",
+        "container": "mp4"
+      },
+      "alternativeCodecs": [
+        {
+          "role": "videoOnly",
+          "codec": "avc1.4d400c",
+          "container": "mp4"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "vp9",
+          "container": "webm"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "avc1.4d400b",
+          "container": "mp4"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "vp9",
+          "container": "webm"
+        },
+        {
+          "role": "audioOnly",
+          "codec": "mp4a.40.2",
+          "container": "mp4"
+        },
+        {
+          "role": "audioOnly",
+          "codec": "mp4a.40.5",
+          "container": "mp4"
+        },
+        {
+          "role": "audioOnly",
+          "codec": "opus",
+          "container": "webm"
+        },
+        {
+          "role": "audioOnly",
+          "codec": "opus",
+          "container": "webm"
+        },
+        {
+          "role": "audioOnly",
+          "codec": "opus",
+          "container": "webm"
+        }
+      ],
+      "task": {
+        "id": "op-1791180246559250-692c67ebf1f639c8318d35a6",
+        "contentId": "jNQXAC9IVRw",
+        "title": "Me at the zoo",
+        "platform": "youtube",
+        "sourceUrl": "https://www.youtube.com/watch?v=jNQXAC9IVRw",
+        "videoTaskId": "download-op-1791180246559250-692c67ebf1f639c8318d35a6-video",
+        "audioTaskId": "download-op-1791180246559250-692c67ebf1f639c8318d35a6-audio",
+        "createdAt": "2026-10-05T14:04:06.559286",
+        "workingDirectory": "/data/user/0/com.mediaflow.mediaflow.youtubev070p4/files/processing/assemblies/op-1791180246559250-692c67ebf1f639c8318d35a6",
+        "processingOutput": "/data/user/0/com.mediaflow.mediaflow.youtubev070p4/files/processing/assemblies/op-1791180246559250-692c67ebf1f639c8318d35a6/Me at the zoo.mp4",
+        "stage": "completed",
+        "progress": 1.0,
+        "finalPath": "/storage/emulated/0/Download/MediaFlow/Me at the zoo.mp4",
+        "completedAt": "2026-10-05T14:04:28.298764",
+        "errorCode": null,
+        "errorMessage": null,
+        "cleanupIssue": null,
+        "attempt": 1,
+        "expectedDurationUs": 19000000
+      },
+      "inputDownloads": [
+        {
+          "role": "video",
+          "bytes": 195278,
+          "status": "completed",
+          "cleaned": true
+        },
+        {
+          "role": "audio",
+          "bytes": 309288,
+          "status": "completed",
+          "cleaned": true
+        }
+      ],
+      "historyFinalOnly": "PASS"
+    }
+  ],
+  "lifecycle": [
+    {
+      "state": "inactive",
+      "atUtc": "2026-10-05T06:03:31.032321Z"
+    },
+    {
+      "state": "resumed",
+      "atUtc": "2026-10-05T06:03:31.906275Z"
+    },
+    {
+      "state": "inactive",
+      "atUtc": "2026-10-05T06:03:31.909023Z"
+    },
+    {
+      "state": "hidden",
+      "atUtc": "2026-10-05T06:03:57.189018Z"
+    },
+    {
+      "state": "paused",
+      "atUtc": "2026-10-05T06:03:57.189129Z"
+    },
+    {
+      "state": "hidden",
+      "atUtc": "2026-10-05T06:03:58.734168Z"
+    },
+    {
+      "state": "inactive",
+      "atUtc": "2026-10-05T06:03:58.734182Z"
+    },
+    {
+      "state": "resumed",
+      "atUtc": "2026-10-05T06:03:58.803017Z"
+    },
+    {
+      "state": "inactive",
+      "atUtc": "2026-10-05T06:04:31.179492Z"
+    },
+    {
+      "state": "resumed",
+      "atUtc": "2026-10-05T06:04:35.42775Z"
+    },
+    {
+      "state": "inactive",
+      "atUtc": "2026-10-05T06:05:04.37687Z"
+    }
+  ],
+  "parserErrorCode": null,
+  "lifecycleSwitchRequested": true,
+  "muxCancel": {
+    "id": "op-1791180270730389-9898f6c844b1fae355d69b0d",
+    "contentId": "jNQXAC9IVRw",
+    "title": "Me at the zoo",
+    "platform": "youtube",
+    "sourceUrl": "https://www.youtube.com/watch?v=jNQXAC9IVRw",
+    "videoTaskId": "download-op-1791180270730389-9898f6c844b1fae355d69b0d-video",
+    "audioTaskId": "download-op-1791180270730389-9898f6c844b1fae355d69b0d-audio",
+    "createdAt": "2026-10-05T14:04:30.730429",
+    "workingDirectory": "/data/user/0/com.mediaflow.mediaflow.youtubev070p4/files/processing/assemblies/op-1791180270730389-9898f6c844b1fae355d69b0d",
+    "processingOutput": "/data/user/0/com.mediaflow.mediaflow.youtubev070p4/files/processing/assemblies/op-1791180270730389-9898f6c844b1fae355d69b0d/Me at the zoo.mp4",
+    "stage": "cancelled",
+    "progress": null,
+    "finalPath": null,
+    "completedAt": null,
+    "errorCode": "cancelled",
+    "errorMessage": "已取消；有效输入保留，可重试。",
+    "cleanupIssue": null,
+    "attempt": 1,
+    "expectedDurationUs": 19000000
+  },
+  "outputConflict": {
+    "id": "op-1791180290917257-cc55139c1c1419add30a5238",
+    "contentId": "jNQXAC9IVRw",
+    "title": "Me at the zoo",
+    "platform": "youtube",
+    "sourceUrl": "https://www.youtube.com/watch?v=jNQXAC9IVRw",
+    "videoTaskId": "download-op-1791180290917257-cc55139c1c1419add30a5238-video",
+    "audioTaskId": "download-op-1791180290917257-cc55139c1c1419add30a5238-audio",
+    "createdAt": "2026-10-05T14:04:50.917293",
+    "workingDirectory": "/data/user/0/com.mediaflow.mediaflow.youtubev070p4/files/processing/assemblies/op-1791180290917257-cc55139c1c1419add30a5238",
+    "processingOutput": "/data/user/0/com.mediaflow.mediaflow.youtubev070p4/files/processing/assemblies/op-1791180290917257-cc55139c1c1419add30a5238/Me at the zoo.mp4",
+    "stage": "failed",
+    "progress": null,
+    "finalPath": null,
+    "completedAt": null,
+    "errorCode": "outputConflict",
+    "errorMessage": "Native processing failed.",
+    "cleanupIssue": null,
+    "attempt": 1,
+    "expectedDurationUs": 19000000
+  },
+  "processingAdmissions": {
+    "op-1791180167861123-59d01811c768e98f19944d7e_mux_1": 1,
+    "op-1791180246559250-692c67ebf1f639c8318d35a6_mux_1": 1,
+    "op-1791180270730389-9898f6c844b1fae355d69b0d_mux_1": 1,
+    "op-1791180290917257-cc55139c1c1419add30a5238_mux_1": 1
+  },
+  "repositoryRestore": "PASS",
+  "coldProcessRestart": {
+    "status": "PASS",
+    "entryPoint": "lib/main.dart",
+    "procedure": "same signed isolated package update, force-stop and am start; no data clear",
+    "userConfirmation": "Android 历史和播放全部正常",
+    "date": "2026-10-05"
+  },
+  "systemPlayback": "USER CONFIRMED PASS 2026-10-05, current Phase 4 outputs",
+  "installation": {
+    "applicationId": "com.mediaflow.mediaflow.youtubev070p4",
+    "type": "Release complete Flutter app",
+    "formalApplicationId": "com.mediaflow.mediaflow",
+    "coexists": true,
+    "formalOverwritten": false,
+    "uninstalled": false,
+    "dataCleared": false,
+    "signatureConflict": false,
+    "certificateSha256": "16686bce55b6c8eb66bb16b77a8599fa6005483e97430c519710a4d730c6dcba",
+    "formalApkUnchangedSha256": "002A300B8AD5B95340952EABD4A7176C150600BDF4440C73596A94EFD9D6FF7B",
+    "formalLastUpdateTime": "2026-10-04 13:27:45"
+  },
+  "initialAttempt": {
+    "status": "FAIL",
+    "parserErrorCode": "network_failure",
+    "subsequentFullOnlineRun": "PASS",
+    "rootCause": "not established; user confirmed phone could access YouTube"
+  },
+  "independentDecode": "Both video and audio fully decoded with owned FFmpeg; exit 0"
+}

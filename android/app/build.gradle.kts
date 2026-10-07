@@ -21,6 +21,12 @@ android {
     namespace = "com.mediaflow.mediaflow"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
+    externalNativeBuild {
+        cmake {
+            path = file("src/main/cpp/CMakeLists.txt")
+            version = "3.22.1"
+        }
+    }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
@@ -57,6 +63,7 @@ android {
             }
         }
         release {
+            proguardFiles("processing-proguard-rules.pro")
             signingConfig = if (hasReleaseSigning) signingConfigs.getByName("release") else null
             // Opt-in coexistence for Release acceptance; normal builds keep
             // the published applicationId and never fall back to Debug signing.

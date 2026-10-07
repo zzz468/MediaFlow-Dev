@@ -1,0 +1,44 @@
+{
+  "privacy": "Only task-required metadata retained; GPS/location and unrelated recording tags excluded",
+  "audio": {
+    "profile": "LC",
+    "codec": "aac",
+    "channels": 2,
+    "bitrateBps": 256001,
+    "sampleRate": "48000"
+  },
+  "durationSeconds": 239.051937,
+  "video": {
+    "dolbyVision": [
+      {
+        "side_data_type": "DOVI configuration record",
+        "dv_version_major": 1,
+        "dv_version_minor": 0,
+        "dv_profile": 8,
+        "dv_level": 7,
+        "rpu_present_flag": 1,
+        "el_present_flag": 0,
+        "bl_present_flag": 1,
+        "dv_bl_signal_compatibility_id": 4,
+        "dv_md_compression": "none"
+      }
+    ],
+    "colorTransfer": "arib-std-b67",
+    "width": 1920,
+    "fpsAverage": "517068000/4302269",
+    "fpsNominal": "120/1",
+    "colorPrimaries": "bt2020",
+    "profile": "Main 10",
+    "height": 1080,
+    "rotation": "No rotation tag or display matrix in ffprobe output",
+    "codec": "hevc",
+    "pixelFormat": "yuv420p10le",
+    "bitrateBps": 40396283,
+    "colorSpace": "bt2020nc"
+  },
+  "sha256": "951801D9E3960CF2CA8A4F592AB403F8538C2C489340ADD9EF9FA46D31B814E0",
+  "fileName": "VID20260628175932.mp4",
+  "bytes": 1215801457,
+  "majorBrand": "mp42",
+  "container": "MP4"
+}
