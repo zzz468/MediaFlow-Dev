@@ -1,0 +1,680 @@
+{
+  "androidUpgrade": {
+    "package": "com.mediaflow.mediaflow",
+    "user": 0,
+    "from": "0.6.0+6",
+    "to": "0.7.0+7",
+    "installation": "same-signature adb install -r --user 0",
+    "uninstall": false,
+    "dataClear": false,
+    "baselineHistoryCount": 1,
+    "darkModePreserved": true,
+    "historyPreserved": true,
+    "storageSettingPreserved": true,
+    "oldFilePlayback": true,
+    "observations": "User confirmed all four upgrade checks. User clarified blurry playback was the preserved old 360p file, not a new v0.7.0 download."
+  },
+  "windowsHevc": {
+    "os": "windows",
+    "atUtc": "2026-10-07T04:57:39.097716Z",
+    "status": "PASS",
+    "inputRoute": "real production inspectWindows, fixture path supplied",
+    "results": [
+      {
+        "type": "trim",
+        "status": "PASS",
+        "output": "[workspace]/v0.7.0/poc/local/phase6/windows-hevc-data/outputs/Processed/RC_HEVC_trim.mp4",
+        "metadata": {
+          "durationUs": 4020000,
+          "tracks": [
+            {
+              "type": "video",
+              "codec": "hevc",
+              "width": 1920,
+              "height": 1080
+            },
+            {
+              "type": "audio",
+              "codec": "aac",
+              "width": null,
+              "height": null
+            }
+          ]
+        },
+        "processingElapsedMs": 388,
+        "historyMatchesFinal": true
+      },
+      {
+        "type": "extractAudio",
+        "status": "PASS",
+        "output": "[workspace]/v0.7.0/poc/local/phase6/windows-hevc-data/outputs/Audio/RC_HEVC_extractAudio.m4a",
+        "metadata": {
+          "durationUs": 239041333,
+          "tracks": [
+            {
+              "type": "audio",
+              "codec": "aac",
+              "width": null,
+              "height": null
+            }
+          ]
+        },
+        "processingElapsedMs": 386,
+        "historyMatchesFinal": true
+      },
+      {
+        "type": "extractFrame",
+        "status": "FUNCTION_DISABLED",
+        "reason": "decodeUnavailable"
+      }
+    ],
+    "awaitingSaf": false,
+    "input": {
+      "name": "VID20260628175932.mp4",
+      "bytes": 1215801457,
+      "durationUs": 239051937,
+      "codecs": [
+        "hevc",
+        "aac"
+      ],
+      "videoCodec": "hevc",
+      "audioCodec": "aac",
+      "container": "mp4",
+      "document": false,
+      "frameDecodeSupported": false,
+      "videoCopySupported": null
+    },
+    "capabilities": {
+      "trim": {
+        "available": true,
+        "reason": null,
+        "message": null
+      },
+      "extractAudio": {
+        "available": true,
+        "reason": null,
+        "message": null
+      },
+      "extractFrame": {
+        "available": false,
+        "reason": "decodeUnavailable",
+        "message": "该视频使用 hevc，当前设备或随附组件无法解码抽帧；不影响可用的裁剪和音频提取。"
+      }
+    }
+  },
+  "windowsH264": {
+    "os": "windows",
+    "atUtc": "2026-10-07T04:59:41.330677Z",
+    "status": "PASS",
+    "inputRoute": "real production inspectWindows, fixture path supplied",
+    "results": [
+      {
+        "type": "trim",
+        "status": "PASS",
+        "output": "[workspace]/v0.7.0/poc/local/phase6/windows-h264-data/outputs/Processed/RC_H264_trim.mp4",
+        "metadata": {
+          "durationUs": 4032000,
+          "tracks": [
+            {
+              "type": "video",
+              "codec": "h264",
+              "width": 320,
+              "height": 180
+            },
+            {
+              "type": "audio",
+              "codec": "aac",
+              "width": null,
+              "height": null
+            }
+          ]
+        },
+        "processingElapsedMs": 378,
+        "historyMatchesFinal": true
+      },
+      {
+        "type": "extractAudio",
+        "status": "PASS",
+        "output": "[workspace]/v0.7.0/poc/local/phase6/windows-h264-data/outputs/Audio/RC_H264_extractAudio.m4a",
+        "metadata": {
+          "durationUs": 1202112000,
+          "tracks": [
+            {
+              "type": "audio",
+              "codec": "aac",
+              "width": null,
+              "height": null
+            }
+          ]
+        },
+        "processingElapsedMs": 500,
+        "historyMatchesFinal": true
+      },
+      {
+        "type": "extractFrame",
+        "status": "PASS",
+        "output": "[workspace]/v0.7.0/poc/local/phase6/windows-h264-data/outputs/Frames/RC_H264_extractFrame.jpg",
+        "metadata": {
+          "durationUs": 40000,
+          "tracks": [
+            {
+              "type": "video",
+              "codec": "mjpeg",
+              "width": 320,
+              "height": 180
+            }
+          ]
+        },
+        "processingElapsedMs": 302,
+        "historyMatchesFinal": true
+      }
+    ],
+    "awaitingSaf": false,
+    "input": {
+      "name": "输入 中文.mp4",
+      "bytes": 90814896,
+      "durationUs": 1202112578,
+      "codecs": [
+        "h264",
+        "aac"
+      ],
+      "videoCodec": "h264",
+      "audioCodec": "aac",
+      "container": "mp4",
+      "document": false,
+      "frameDecodeSupported": true,
+      "videoCopySupported": null
+    },
+    "capabilities": {
+      "trim": {
+        "available": true,
+        "reason": null,
+        "message": null
+      },
+      "extractAudio": {
+        "available": true,
+        "reason": null,
+        "message": null
+      },
+      "extractFrame": {
+        "available": true,
+        "reason": null,
+        "message": null
+      }
+    },
+    "cancel": {
+      "status": "PASS",
+      "type": "trim",
+      "nativePtsAtCancelUs": 167917344,
+      "finalAbsent": true,
+      "historyUnchanged": true,
+      "ownedPartialsAbsent": true
+    }
+  },
+  "windowsYoutube": {
+    "atUtc": "2026-10-07T04:48:31.072313Z",
+    "os": "windows",
+    "route": "HomePage -> production YoutubeParser -> DownloadManager -> MediaAssemblyController -> Processing -> History",
+    "status": "PASS",
+    "samples": [
+      {
+        "id": "hLY9KMIU2BA",
+        "title": "MIYEON 'RUN AWAY' M/V Teaser",
+        "defaultResourceId": "youtube:VISIONOS:137",
+        "explicitMuxPairForControl": false,
+        "video": {
+          "id": "youtube:VISIONOS:137",
+          "codec": "avc1.640028",
+          "container": "mp4",
+          "width": 1620,
+          "height": 1080,
+          "fps": 24,
+          "bitrate": 3626311
+        },
+        "audio": {
+          "id": "youtube:VISIONOS:140",
+          "codec": "mp4a.40.2",
+          "container": "mp4"
+        },
+        "alternativeCodecs": [
+          {
+            "role": "videoOnly",
+            "codec": "av01.0.12M.08",
+            "container": "mp4"
+          },
+          {
+            "role": "videoOnly",
+            "codec": "vp9",
+            "container": "webm"
+          },
+          {
+            "role": "videoOnly",
+            "codec": "av01.0.12M.08",
+            "container": "mp4"
+          },
+          {
+            "role": "videoOnly",
+            "codec": "vp9",
+            "container": "webm"
+          },
+          {
+            "role": "videoOnly",
+            "codec": "avc1.640028",
+            "container": "mp4"
+          },
+          {
+            "role": "videoOnly",
+            "codec": "av01.0.08M.08",
+            "container": "mp4"
+          },
+          {
+            "role": "videoOnly",
+            "codec": "vp9",
+            "container": "webm"
+          },
+          {
+            "role": "videoOnly",
+            "codec": "avc1.4D401F",
+            "container": "mp4"
+          },
+          {
+            "role": "videoOnly",
+            "codec": "av01.0.05M.08",
+            "container": "mp4"
+          },
+          {
+            "role": "videoOnly",
+            "codec": "vp9",
+            "container": "webm"
+          },
+          {
+            "role": "videoOnly",
+            "codec": "av01.0.04M.08",
+            "container": "mp4"
+          },
+          {
+            "role": "videoOnly",
+            "codec": "vp9",
+            "container": "webm"
+          },
+          {
+            "role": "videoOnly",
+            "codec": "avc1.4D401E",
+            "container": "mp4"
+          },
+          {
+            "role": "videoOnly",
+            "codec": "vp9",
+            "container": "webm"
+          },
+          {
+            "role": "videoOnly",
+            "codec": "avc1.4D4015",
+            "container": "mp4"
+          },
+          {
+            "role": "videoOnly",
+            "codec": "av01.0.01M.08",
+            "container": "mp4"
+          },
+          {
+            "role": "videoOnly",
+            "codec": "vp9",
+            "container": "webm"
+          },
+          {
+            "role": "videoOnly",
+            "codec": "avc1.4D400D",
+            "container": "mp4"
+          },
+          {
+            "role": "videoOnly",
+            "codec": "av01.0.00M.08",
+            "container": "mp4"
+          },
+          {
+            "role": "videoOnly",
+            "codec": "vp9",
+            "container": "webm"
+          },
+          {
+            "role": "videoOnly",
+            "codec": "avc1.4D400C",
+            "container": "mp4"
+          },
+          {
+            "role": "videoOnly",
+            "codec": "vp9",
+            "container": "webm"
+          },
+          {
+            "role": "audioOnly",
+            "codec": "mp4a.40.2",
+            "container": "mp4"
+          },
+          {
+            "role": "audioOnly",
+            "codec": "mp4a.40.5",
+            "container": "mp4"
+          },
+          {
+            "role": "audioOnly",
+            "codec": "opus",
+            "container": "webm"
+          },
+          {
+            "role": "audioOnly",
+            "codec": "opus",
+            "container": "webm"
+          },
+          {
+            "role": "audioOnly",
+            "codec": "opus",
+            "container": "webm"
+          }
+        ],
+        "task": {
+          "id": "op-1791348517514721-4340f786a81b273498d9169d",
+          "contentId": "hLY9KMIU2BA",
+          "title": "MIYEON 'RUN AWAY' M/V Teaser",
+          "platform": "youtube",
+          "sourceUrl": "https://www.youtube.com/watch?v=hLY9KMIU2BA",
+          "videoTaskId": "download-op-1791348517514721-4340f786a81b273498d9169d-video",
+          "audioTaskId": "download-op-1791348517514721-4340f786a81b273498d9169d-audio",
+          "createdAt": "2026-10-07T12:48:37.514721",
+          "workingDirectory": "[workspace]/v0.7.0/poc/local/phase6/windows-upgrade-data/downloads/.mediaflow-working/op-1791348517514721-4340f786a81b273498d9169d",
+          "processingOutput": "[workspace]/v0.7.0/poc/local/phase6/windows-upgrade-data/downloads/MIYEON 'RUN AWAY' M_V Teaser.mp4",
+          "stage": "completed",
+          "progress": 1.0,
+          "finalPath": "[workspace]/v0.7.0/poc/local/phase6/windows-upgrade-data/downloads/MIYEON 'RUN AWAY' M_V Teaser.mp4",
+          "completedAt": "2026-10-07T12:48:59.237348",
+          "errorCode": null,
+          "errorMessage": null,
+          "cleanupIssue": null,
+          "attempt": 1,
+          "expectedDurationUs": 18000000,
+          "finalMediaType": "video",
+          "finalContainer": "mp4"
+        },
+        "inputDownloads": [
+          {
+            "role": "video",
+            "bytes": 5874531,
+            "status": "completed",
+            "cleaned": true
+          },
+          {
+            "role": "audio",
+            "bytes": 297179,
+            "status": "completed",
+            "cleaned": true
+          }
+        ],
+        "historyFinalOnly": "PASS"
+      }
+    ],
+    "lifecycle": [],
+    "v060Upgrade": {
+      "settingsPreserved": true,
+      "legacyHistoryPreserved": true,
+      "legacyDownloadPresent": true,
+      "baseline": "simulated v0.6.0 persisted schema, isolated data root"
+    },
+    "parserErrorCode": null,
+    "coldProcessRestart": "USER CONFIRMED normal main.dart Release History restored",
+    "systemPlayback": "USER CONFIRMED normal picture/sound/quality"
+  },
+  "windowsCleanZip": {
+    "path": "[workspace]\\v0.7.0\\poc\\local\\phase6\\windows-zip-clean\\MediaFlow-v0.7.0-windows-x64\\MediaFlow.exe",
+    "pid": 49292,
+    "running": true,
+    "pathRestrictedToWindows": true,
+    "runtime": "packaged approved FFmpeg",
+    "atUtc": "2026-10-07T04:56:21.6610574Z"
+  },
+  "androidYoutubeThisRound": "USER WAIVED; previous quality audit remains valid",
+  "nativeContracts": {
+    "wireRegistry": 15,
+    "boundedRetrieval": 12,
+    "status": "PASS"
+  },
+  "androidHevc": {
+    "os": "android",
+    "atUtc": "2026-10-07T05:01:43.852765Z",
+    "status": "PASS",
+    "inputRoute": "actual SAF, no input override",
+    "results": [
+      {
+        "type": "trim",
+        "status": "PASS",
+        "output": "/storage/emulated/0/Download/MediaFlow/RC_HEVC_trim.mp4",
+        "metadata": {
+          "durationUs": 4015100,
+          "bytes": 20322256,
+          "tracks": [
+            {
+              "mime": "video/dolby-vision"
+            },
+            {
+              "mime": "video/hevc"
+            },
+            {
+              "mime": "audio/mp4a-latm"
+            }
+          ]
+        },
+        "processingElapsedMs": 170,
+        "historyMatchesFinal": true
+      },
+      {
+        "type": "extractAudio",
+        "status": "PASS",
+        "output": "/storage/emulated/0/Download/MediaFlow/RC_HEVC_extractAudio.m4a",
+        "metadata": {
+          "durationUs": 239041300,
+          "bytes": 7710050,
+          "tracks": [
+            {
+              "mime": "audio/mp4a-latm"
+            }
+          ]
+        },
+        "processingElapsedMs": 1348,
+        "historyMatchesFinal": true
+      },
+      {
+        "type": "extractFrame",
+        "status": "PASS",
+        "output": "/storage/emulated/0/Download/MediaFlow/RC_HEVC_extractFrame.jpg",
+        "metadata": {
+          "bytes": 198344,
+          "width": 1920,
+          "height": 1080
+        },
+        "processingElapsedMs": 161,
+        "historyMatchesFinal": true
+      }
+    ],
+    "awaitingSaf": false,
+    "input": {
+      "name": "VID20260628175932.mp4",
+      "bytes": 1215801457,
+      "durationUs": 239051900,
+      "codecs": [
+        "video/dolby-vision",
+        "video/hevc",
+        "audio/mp4a-latm"
+      ],
+      "videoCodec": "video/dolby-vision",
+      "audioCodec": "audio/mp4a-latm",
+      "container": null,
+      "document": true,
+      "frameDecodeSupported": true,
+      "videoCopySupported": true
+    },
+    "capabilities": {
+      "trim": {
+        "available": true,
+        "reason": null,
+        "message": null
+      },
+      "extractAudio": {
+        "available": true,
+        "reason": null,
+        "message": null
+      },
+      "extractFrame": {
+        "available": true,
+        "reason": null,
+        "message": null
+      }
+    }
+  },
+  "androidH264": {
+    "os": "android",
+    "atUtc": "2026-10-07T05:07:30.768194Z",
+    "status": "PASS",
+    "inputRoute": "actual SAF, no input override",
+    "results": [
+      {
+        "type": "trim",
+        "status": "PASS",
+        "output": "/storage/emulated/0/Download/MediaFlow/RC_H264_trim.mp4",
+        "metadata": {
+          "durationUs": 4016000,
+          "bytes": 314303,
+          "tracks": [
+            {
+              "mime": "video/avc"
+            },
+            {
+              "mime": "audio/mp4a-latm"
+            }
+          ]
+        },
+        "processingElapsedMs": 153,
+        "historyMatchesFinal": true
+      },
+      {
+        "type": "extractAudio",
+        "status": "PASS",
+        "output": "/storage/emulated/0/Download/MediaFlow/RC_H264_extractAudio.m4a",
+        "metadata": {
+          "durationUs": 1202123200,
+          "bytes": 14666692,
+          "tracks": [
+            {
+              "mime": "audio/mp4a-latm"
+            }
+          ]
+        },
+        "processingElapsedMs": 8267,
+        "historyMatchesFinal": true
+      },
+      {
+        "type": "extractFrame",
+        "status": "PASS",
+        "output": "/storage/emulated/0/Download/MediaFlow/RC_H264_extractFrame.jpg",
+        "metadata": {
+          "bytes": 11414,
+          "width": 320,
+          "height": 180
+        },
+        "processingElapsedMs": 95,
+        "historyMatchesFinal": true
+      }
+    ],
+    "awaitingSaf": false,
+    "input": {
+      "name": "MF_RC_LocalCompatibility_H264.mp4",
+      "bytes": 90814896,
+      "durationUs": 1202113000,
+      "codecs": [
+        "video/avc",
+        "audio/mp4a-latm"
+      ],
+      "videoCodec": "video/avc",
+      "audioCodec": "audio/mp4a-latm",
+      "container": null,
+      "document": true,
+      "frameDecodeSupported": true,
+      "videoCopySupported": true
+    },
+    "capabilities": {
+      "trim": {
+        "available": true,
+        "reason": null,
+        "message": null
+      },
+      "extractAudio": {
+        "available": true,
+        "reason": null,
+        "message": null
+      },
+      "extractFrame": {
+        "available": true,
+        "reason": null,
+        "message": null
+      }
+    },
+    "cancel": {
+      "status": "PASS",
+      "type": "trim",
+      "nativePtsAtCancelUs": 6680000,
+      "finalAbsent": true,
+      "historyUnchanged": true,
+      "ownedPartialsAbsent": true
+    }
+  },
+  "windowsUserObservation": {
+    "answer": "正常",
+    "confirmedQuestion": "normal Release cold History restored, new 1080p video picture/sound/quality, H264 trim manual playback"
+  },
+  "windowsActualPortableUpgrade": {
+    "status": "PASS",
+    "route": "official v0.6.0 portable ZIP then v0.7.0 production ZIP, same actual AppData directory",
+    "beforeHistoryCount": 33,
+    "afterHistoryCount": 33,
+    "historyBytesIdentical": true,
+    "settingsPreserved": true,
+    "settingsBaseline": "no saved settings file; nondefault settings separately checked with isolated v060-schema fixture",
+    "oldVersion": "0.6.0+6",
+    "newVersion": "0.7.0+7",
+    "v060ZipHashVerified": true,
+    "dataClear": false,
+    "originalApprovalRejection": "resolved by explicit user authorization",
+    "filePlayback": "USER CONFIRMED: old file playback normal",
+    "oldFilesPresent": 33,
+    "manualHistoryObservation": "USER CONFIRMED: 33 old records display normally"
+  },
+  "androidColdStart": {
+    "route": "same-signature isolated normal main.dart Release install-r then fresh start",
+    "manualObservation": "USER CONFIRMED: six successful records restored, no cancel success, H264 and HEVC trim picture/sound normal"
+  },
+  "lintRepair": {
+    "productionChanges": false,
+    "changes": [
+      "remove redundant dart:async import",
+      "remove ineffective nonnull assertion from promoted cancel callback"
+    ]
+  },
+  "checks": {
+    "analyzeExit": 0,
+    "analyzeLog": "analyze-final-02.log",
+    "testExit": 0,
+    "testLog": "tests-final.log",
+    "passed": 458,
+    "skipped": 7,
+    "failed": 0,
+    "formatFiles": 208,
+    "formatChanges": 0,
+    "firstAnalyze": "two acceptance-only lint findings fixed; original log retained"
+  },
+  "releaseConclusion": "V0.7.0 RELEASE CANDIDATE READY; not released",
+  "blockers": {
+    "P0": 0,
+    "P1": 0,
+    "unresolvedP2Defects": 0,
+    "knownLimitations": "explicitly documented in release-candidate.md; not claimed fixed"
+  }
+}

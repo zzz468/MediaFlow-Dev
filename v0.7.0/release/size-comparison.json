@@ -1,0 +1,18 @@
+{
+  "windows": {
+    "zipBytes": 17215232,
+    "unpackedBytes": 41334938,
+    "phase5ZipBytes": 17197061,
+    "zipDeltaBytes": 18171,
+    "phase5UnpackedBytes": 41297324,
+    "unpackedDeltaBytes": 37614,
+    "comparisonNote": "RC archive includes release docs; no runtime binary hash changes"
+  },
+  "android": {
+    "apkBytes": 56525728,
+    "phase5ApkBytes": 56509344,
+    "deltaBytes": 16384,
+    "ffmpegBytes": 0
+  },
+  "integrationAcceptanceApksExcluded": true
+}

@@ -1,0 +1,61 @@
+branch: feature/v0.7.0 HEAD: 3ba068ae5d42ecabfaa3880afbdee1258a6df26b  git status --short:
+ M .gitignore
+ M android/app/build.gradle.kts
+ M android/app/src/main/kotlin/com/mediaflow/mediaflow/MainActivity.kt
+ M android/app/src/main/res/xml/download_file_paths.xml
+ M windows/CMakeLists.txt
+?? android/app/processing-proguard-rules.pro
+?? android/app/src/main/cpp/
+?? android/app/src/main/java/com/mediaflow/mediaflow/processing/
+?? lib/features/processing/
+?? test/features/processing/
+?? third_party/ffmpeg/
+?? tools/processing/
+?? v0.7.0/
+?? windows/processing_runtime.cmake
+
+git diff --stat:
+ .gitignore                                                         | 3 +++
+ android/app/build.gradle.kts                                       | 7 +++++++
+ .../app/src/main/kotlin/com/mediaflow/mediaflow/MainActivity.kt    | 4 ++++
+ android/app/src/main/res/xml/download_file_paths.xml               | 1 +
+ windows/CMakeLists.txt                                             | 4 +++-
+ 5 files changed, 18 insertions(+), 1 deletion(-)
+
+New production/test/asset files:
+android/app/processing-proguard-rules.pro
+android/app/src/main/cpp/CMakeLists.txt
+android/app/src/main/cpp/processing_storage.c
+android/app/src/main/java/com/mediaflow/mediaflow/processing/AtomicOutputStore.java
+android/app/src/main/java/com/mediaflow/mediaflow/processing/BoundedRetrieval.java
+android/app/src/main/java/com/mediaflow/mediaflow/processing/NativeMediaProcessor.java
+android/app/src/main/java/com/mediaflow/mediaflow/processing/OperationRegistry.java
+android/app/src/main/java/com/mediaflow/mediaflow/processing/ProcessingPlugin.java
+android/app/src/main/java/com/mediaflow/mediaflow/processing/ProcessingRequest.java
+lib/features/processing/application/processing_operation_manager.dart
+lib/features/processing/application/processing_providers.dart
+lib/features/processing/domain/processing.dart
+lib/features/processing/infrastructure/android/android_processing_engine.dart
+lib/features/processing/infrastructure/local_output.dart
+lib/features/processing/infrastructure/processing_engine_factory.dart
+lib/features/processing/infrastructure/windows/ffmpeg_process.dart
+lib/features/processing/infrastructure/windows/windows_output_storage.dart
+lib/features/processing/infrastructure/windows/windows_processing_engine.dart
+test/features/processing/processing_test.dart
+third_party/ffmpeg/COPYING.LGPLv2.1
+third_party/ffmpeg/FFmpeg-LICENSE.md
+third_party/ffmpeg/IJG-NOTICES.txt
+third_party/ffmpeg/NOTICE.txt
+third_party/ffmpeg/README.md
+third_party/ffmpeg/SOURCE.txt
+third_party/ffmpeg/build-configuration.txt
+third_party/ffmpeg/compiler-rt-LICENSE.txt
+third_party/ffmpeg/llvm-mingw-LICENSE.txt
+third_party/ffmpeg/mingw-w64-COPYING.txt
+third_party/ffmpeg/mingw-w64-runtime-NOTICE.txt
+third_party/ffmpeg/runtime-manifest.json
+tools/processing/acceptance_main.dart
+tools/processing/native_tests/BoundedRetrievalTest.java
+tools/processing/native_tests/ProcessingContractTest.java
+tools/processing/prepare_windows_ffmpeg.ps1
+windows/processing_runtime.cmake

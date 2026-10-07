@@ -1,0 +1,101 @@
+{
+  "at": "2026-10-05T06:10:53.876692Z",
+  "route": "current YoutubeParser, no new acquisition route",
+  "results": [
+    {
+      "id": "hLY9KMIU2BA",
+      "status": "BLOCKED",
+      "code": "network_failure",
+      "message": "YouTube 网络请求超时，请检查网络。"
+    },
+    {
+      "id": "jNQXAC9IVRw",
+      "status": "ACQUIRED",
+      "title": "Me at the zoo",
+      "resources": [
+        {
+          "id": "youtube:ANDROID_SDKLESS:18",
+          "role": "progressive",
+          "codec": "avc1.42001E, mp4a.40.2",
+          "container": "mp4",
+          "bytes": null
+        },
+        {
+          "id": "youtube:VISIONOS:133",
+          "role": "videoOnly",
+          "codec": "avc1.4d400c",
+          "container": "mp4",
+          "bytes": 433081
+        },
+        {
+          "id": "youtube:VISIONOS:242",
+          "role": "videoOnly",
+          "codec": "vp9",
+          "container": "webm",
+          "bytes": 293080
+        },
+        {
+          "id": "youtube:VISIONOS:160",
+          "role": "videoOnly",
+          "codec": "avc1.4d400b",
+          "container": "mp4",
+          "bytes": 195278
+        },
+        {
+          "id": "youtube:VISIONOS:278",
+          "role": "videoOnly",
+          "codec": "vp9",
+          "container": "webm",
+          "bytes": 185292
+        },
+        {
+          "id": "youtube:VISIONOS:140",
+          "role": "audioOnly",
+          "codec": "mp4a.40.2",
+          "container": "mp4",
+          "bytes": 309288
+        },
+        {
+          "id": "youtube:VISIONOS:139",
+          "role": "audioOnly",
+          "codec": "mp4a.40.5",
+          "container": "mp4",
+          "bytes": 117526
+        },
+        {
+          "id": "youtube:VISIONOS:251",
+          "role": "audioOnly",
+          "codec": "opus",
+          "container": "webm",
+          "bytes": 255427
+        },
+        {
+          "id": "youtube:VISIONOS:250",
+          "role": "audioOnly",
+          "codec": "opus",
+          "container": "webm",
+          "bytes": 151586
+        },
+        {
+          "id": "youtube:VISIONOS:249",
+          "role": "audioOnly",
+          "codec": "opus",
+          "container": "webm",
+          "bytes": 118912
+        }
+      ],
+      "assemblyGroups": 4,
+      "alternativeDecision": {
+        "status": "AVAILABLE BUT UNSUPPORTED",
+        "videoId": "youtube:VISIONOS:242",
+        "audioId": "youtube:VISIONOS:251",
+        "videoCodec": "vp9",
+        "audioCodec": "opus",
+        "videoContainer": "webm",
+        "audioContainer": "webm",
+        "planError": "unsupportedFormat",
+        "downloadOrMuxAttempted": false
+      }
+    }
+  ]
+}

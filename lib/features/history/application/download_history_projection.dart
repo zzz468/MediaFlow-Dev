@@ -60,6 +60,7 @@ List<HistoryEntry> projectDownloadHistory(List<DownloadTask> tasks) {
   final groups = <String, List<DownloadTask>>{};
   final entries = <HistoryEntry>[];
   for (final task in tasks) {
+    if (task.assemblyId != null) continue;
     final operationId = _workOperationId(task);
     if (operationId == null) {
       entries.add(HistoryEntry(tasks: [task]));

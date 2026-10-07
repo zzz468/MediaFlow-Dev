@@ -1,0 +1,784 @@
+{
+  "runId": "windows02",
+  "chain": "Flutter -> production manager -> production factory -> platform adapter",
+  "operations": [
+    {
+      "type": "trim",
+      "label": "trim",
+      "id": "windows02_trim",
+      "status": "completed",
+      "outputs": [
+        "D:\\projects\\mediaflow-v070\\v0.7.0\\poc\\local\\phase3b\\windows-run-02/trim 输出.mp4"
+      ],
+      "elapsedMs": 650,
+      "error": null,
+      "diagnostic": null,
+      "metadata": {
+        "durationUs": 4032000,
+        "tracks": [
+          {
+            "type": "video",
+            "codec": "h264",
+            "width": 320,
+            "height": 180
+          },
+          {
+            "type": "audio",
+            "codec": "aac",
+            "width": null,
+            "height": null
+          }
+        ]
+      },
+      "progress": [
+        {
+          "state": "running",
+          "processedUs": null,
+          "totalUs": 4000000,
+          "fraction": null,
+          "uiTicks": 16
+        },
+        {
+          "state": "running",
+          "processedUs": 4040000,
+          "totalUs": 4000000,
+          "fraction": 0.99,
+          "uiTicks": 21
+        },
+        {
+          "state": "validating",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": null,
+          "uiTicks": 22
+        },
+        {
+          "state": "publishing",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": null,
+          "uiTicks": 26
+        },
+        {
+          "state": "succeeded",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": 1.0,
+          "uiTicks": 26
+        }
+      ],
+      "uiTicksDuring": 24,
+      "cancelSent": false,
+      "lateCancel": false
+    },
+    {
+      "type": "extractAudio",
+      "label": "extractAudio",
+      "id": "windows02_extractAudio",
+      "status": "completed",
+      "outputs": [
+        "D:\\projects\\mediaflow-v070\\v0.7.0\\poc\\local\\phase3b\\windows-run-02/extractAudio 输出.m4a"
+      ],
+      "elapsedMs": 227,
+      "error": null,
+      "diagnostic": null,
+      "metadata": {
+        "durationUs": 12000000,
+        "tracks": [
+          {
+            "type": "audio",
+            "codec": "aac",
+            "width": null,
+            "height": null
+          }
+        ]
+      },
+      "progress": [
+        {
+          "state": "running",
+          "processedUs": null,
+          "totalUs": 12000000,
+          "fraction": null,
+          "uiTicks": 32
+        },
+        {
+          "state": "running",
+          "processedUs": 12000000,
+          "totalUs": 12000000,
+          "fraction": 0.99,
+          "uiTicks": 37
+        },
+        {
+          "state": "validating",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": null,
+          "uiTicks": 37
+        },
+        {
+          "state": "publishing",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": null,
+          "uiTicks": 41
+        },
+        {
+          "state": "succeeded",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": 1.0,
+          "uiTicks": 41
+        }
+      ],
+      "uiTicksDuring": 13,
+      "cancelSent": false,
+      "lateCancel": false
+    },
+    {
+      "type": "mux",
+      "label": "mux",
+      "id": "windows02_mux",
+      "status": "completed",
+      "outputs": [
+        "D:\\projects\\mediaflow-v070\\v0.7.0\\poc\\local\\phase3b\\windows-run-02/mux 输出.mp4"
+      ],
+      "elapsedMs": 352,
+      "error": null,
+      "diagnostic": null,
+      "metadata": {
+        "durationUs": 12000000,
+        "tracks": [
+          {
+            "type": "video",
+            "codec": "h264",
+            "width": 320,
+            "height": 180
+          },
+          {
+            "type": "audio",
+            "codec": "aac",
+            "width": null,
+            "height": null
+          }
+        ]
+      },
+      "progress": [
+        {
+          "state": "running",
+          "processedUs": null,
+          "totalUs": 12000000,
+          "fraction": null,
+          "uiTicks": 52
+        },
+        {
+          "state": "running",
+          "processedUs": 12000000,
+          "totalUs": 12000000,
+          "fraction": 0.99,
+          "uiTicks": 57
+        },
+        {
+          "state": "validating",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": null,
+          "uiTicks": 58
+        },
+        {
+          "state": "publishing",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": null,
+          "uiTicks": 64
+        },
+        {
+          "state": "succeeded",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": 1.0,
+          "uiTicks": 64
+        }
+      ],
+      "uiTicksDuring": 21,
+      "cancelSent": false,
+      "lateCancel": false
+    },
+    {
+      "type": "remux",
+      "label": "remux",
+      "id": "windows02_remux",
+      "status": "completed",
+      "outputs": [
+        "D:\\projects\\mediaflow-v070\\v0.7.0\\poc\\local\\phase3b\\windows-run-02/remux 输出.mp4"
+      ],
+      "elapsedMs": 262,
+      "error": null,
+      "diagnostic": null,
+      "metadata": {
+        "durationUs": 12000000,
+        "tracks": [
+          {
+            "type": "video",
+            "codec": "h264",
+            "width": 320,
+            "height": 180
+          },
+          {
+            "type": "audio",
+            "codec": "aac",
+            "width": null,
+            "height": null
+          }
+        ]
+      },
+      "progress": [
+        {
+          "state": "running",
+          "processedUs": null,
+          "totalUs": 12000000,
+          "fraction": null,
+          "uiTicks": 72
+        },
+        {
+          "state": "running",
+          "processedUs": 12000000,
+          "totalUs": 12000000,
+          "fraction": 0.99,
+          "uiTicks": 77
+        },
+        {
+          "state": "validating",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": null,
+          "uiTicks": 77
+        },
+        {
+          "state": "publishing",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": null,
+          "uiTicks": 82
+        },
+        {
+          "state": "succeeded",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": 1.0,
+          "uiTicks": 82
+        }
+      ],
+      "uiTicksDuring": 16,
+      "cancelSent": false,
+      "lateCancel": false
+    },
+    {
+      "type": "extractFrame",
+      "label": "extractFrame",
+      "id": "windows02_extractFrame",
+      "status": "completed",
+      "outputs": [
+        "D:\\projects\\mediaflow-v070\\v0.7.0\\poc\\local\\phase3b\\windows-run-02/extractFrame 输出.jpg"
+      ],
+      "elapsedMs": 255,
+      "error": null,
+      "diagnostic": null,
+      "metadata": {
+        "durationUs": 40000,
+        "tracks": [
+          {
+            "type": "video",
+            "codec": "mjpeg",
+            "width": 320,
+            "height": 180
+          }
+        ]
+      },
+      "progress": [
+        {
+          "state": "running",
+          "processedUs": null,
+          "totalUs": 12000000,
+          "fraction": null,
+          "uiTicks": 89
+        },
+        {
+          "state": "running",
+          "processedUs": 40000,
+          "totalUs": 12000000,
+          "fraction": null,
+          "uiTicks": 95
+        },
+        {
+          "state": "validating",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": null,
+          "uiTicks": 95
+        },
+        {
+          "state": "publishing",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": null,
+          "uiTicks": 98
+        },
+        {
+          "state": "succeeded",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": 1.0,
+          "uiTicks": 99
+        }
+      ],
+      "uiTicksDuring": 15,
+      "cancelSent": false,
+      "lateCancel": false
+    },
+    {
+      "type": "remux",
+      "label": "cancel",
+      "id": "windows02_cancel",
+      "status": "cancelled",
+      "outputs": [],
+      "elapsedMs": 300,
+      "error": "cancelled",
+      "diagnostic": null,
+      "metadata": {},
+      "progress": [
+        {
+          "state": "running",
+          "processedUs": null,
+          "totalUs": 4207447344,
+          "fraction": null,
+          "uiTicks": 107
+        },
+        {
+          "state": "running",
+          "processedUs": 113333375,
+          "totalUs": 4207447344,
+          "fraction": 0.026936373942176184,
+          "uiTicks": 117
+        },
+        {
+          "state": "running",
+          "processedUs": 113333375,
+          "totalUs": 4207447344,
+          "fraction": 0.026936373942176184,
+          "uiTicks": 117
+        },
+        {
+          "state": "cancelled",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": null,
+          "uiTicks": 118
+        }
+      ],
+      "uiTicksDuring": 18,
+      "cancelSent": true,
+      "lateCancel": false
+    },
+    {
+      "type": "remux",
+      "label": "lifecycle",
+      "id": "windows02_lifecycle",
+      "status": "completed",
+      "outputs": [
+        "D:\\projects\\mediaflow-v070\\v0.7.0\\poc\\local\\phase3b\\windows-run-02/lifecycle 输出.mp4"
+      ],
+      "elapsedMs": 3214,
+      "error": null,
+      "diagnostic": null,
+      "metadata": {
+        "durationUs": 4207447344,
+        "tracks": [
+          {
+            "type": "video",
+            "codec": "h264",
+            "width": 320,
+            "height": 180
+          },
+          {
+            "type": "audio",
+            "codec": "aac",
+            "width": null,
+            "height": null
+          }
+        ]
+      },
+      "progress": [
+        {
+          "state": "running",
+          "processedUs": null,
+          "totalUs": 4207447344,
+          "fraction": null,
+          "uiTicks": 254
+        },
+        {
+          "state": "running",
+          "processedUs": 146096016,
+          "totalUs": 4207447344,
+          "fraction": 0.03472319533798544,
+          "uiTicks": 264
+        },
+        {
+          "state": "running",
+          "processedUs": 305653458,
+          "totalUs": 4207447344,
+          "fraction": 0.072645818951454,
+          "uiTicks": 267
+        },
+        {
+          "state": "running",
+          "processedUs": 464938875,
+          "totalUs": 4207447344,
+          "fraction": 0.11050378934938372,
+          "uiTicks": 271
+        },
+        {
+          "state": "running",
+          "processedUs": 611946953,
+          "totalUs": 4207447344,
+          "fraction": 0.14544375792905942,
+          "uiTicks": 275
+        },
+        {
+          "state": "running",
+          "processedUs": 738720333,
+          "totalUs": 4207447344,
+          "fraction": 0.17557446893624154,
+          "uiTicks": 278
+        },
+        {
+          "state": "running",
+          "processedUs": 872936406,
+          "totalUs": 4207447344,
+          "fraction": 0.2074741130735349,
+          "uiTicks": 282
+        },
+        {
+          "state": "running",
+          "processedUs": 996480458,
+          "totalUs": 4207447344,
+          "fraction": 0.23683729742239645,
+          "uiTicks": 286
+        },
+        {
+          "state": "running",
+          "processedUs": 1108032500,
+          "totalUs": 4207447344,
+          "fraction": 0.2633502951807827,
+          "uiTicks": 290
+        },
+        {
+          "state": "running",
+          "processedUs": 1220955234,
+          "totalUs": 4207447344,
+          "fraction": 0.29018907051591136,
+          "uiTicks": 293
+        },
+        {
+          "state": "running",
+          "processedUs": 1333867292,
+          "totalUs": 4207447344,
+          "fraction": 0.3170253084455476,
+          "uiTicks": 297
+        },
+        {
+          "state": "running",
+          "processedUs": 1440059297,
+          "totalUs": 4207447344,
+          "fraction": 0.34226436584015396,
+          "uiTicks": 301
+        },
+        {
+          "state": "running",
+          "processedUs": 1545472750,
+          "totalUs": 4207447344,
+          "fraction": 0.36731838182215404,
+          "uiTicks": 305
+        },
+        {
+          "state": "running",
+          "processedUs": 1646870125,
+          "totalUs": 4207447344,
+          "fraction": 0.3914178812834122,
+          "uiTicks": 309
+        },
+        {
+          "state": "running",
+          "processedUs": 1744950167,
+          "totalUs": 4207447344,
+          "fraction": 0.41472893760355045,
+          "uiTicks": 313
+        },
+        {
+          "state": "running",
+          "processedUs": 1840264844,
+          "totalUs": 4207447344,
+          "fraction": 0.4373827391147976,
+          "uiTicks": 316
+        },
+        {
+          "state": "running",
+          "processedUs": 1902336917,
+          "totalUs": 4207447344,
+          "fraction": 0.4521356446000005,
+          "uiTicks": 320
+        },
+        {
+          "state": "running",
+          "processedUs": 1967958281,
+          "totalUs": 4207447344,
+          "fraction": 0.46773212356570376,
+          "uiTicks": 323
+        },
+        {
+          "state": "running",
+          "processedUs": 2035606328,
+          "totalUs": 4207447344,
+          "fraction": 0.4838102919821116,
+          "uiTicks": 327
+        },
+        {
+          "state": "running",
+          "processedUs": 2129537031,
+          "totalUs": 4207447344,
+          "fraction": 0.5061351591332001,
+          "uiTicks": 331
+        },
+        {
+          "state": "running",
+          "processedUs": 2227947734,
+          "totalUs": 4207447344,
+          "fraction": 0.5295248049098342,
+          "uiTicks": 335
+        },
+        {
+          "state": "running",
+          "processedUs": 2326454458,
+          "totalUs": 4207447344,
+          "fraction": 0.5529372723624513,
+          "uiTicks": 339
+        },
+        {
+          "state": "running",
+          "processedUs": 2426550500,
+          "totalUs": 4207447344,
+          "fraction": 0.576727479064085,
+          "uiTicks": 343
+        },
+        {
+          "state": "running",
+          "processedUs": 2516459844,
+          "totalUs": 4207447344,
+          "fraction": 0.5980965745390918,
+          "uiTicks": 346
+        },
+        {
+          "state": "running",
+          "processedUs": 2604886583,
+          "totalUs": 4207447344,
+          "fraction": 0.6191132936493382,
+          "uiTicks": 350
+        },
+        {
+          "state": "running",
+          "processedUs": 2689483958,
+          "totalUs": 4207447344,
+          "fraction": 0.6392198732648001,
+          "uiTicks": 354
+        },
+        {
+          "state": "running",
+          "processedUs": 2776427969,
+          "totalUs": 4207447344,
+          "fraction": 0.6598841867764085,
+          "uiTicks": 358
+        },
+        {
+          "state": "running",
+          "processedUs": 2854476042,
+          "totalUs": 4207447344,
+          "fraction": 0.6784341688959233,
+          "uiTicks": 361
+        },
+        {
+          "state": "running",
+          "processedUs": 2936886719,
+          "totalUs": 4207447344,
+          "fraction": 0.6980210276875185,
+          "uiTicks": 365
+        },
+        {
+          "state": "running",
+          "processedUs": 3017476094,
+          "totalUs": 4207447344,
+          "fraction": 0.7171750107111976,
+          "uiTicks": 369
+        },
+        {
+          "state": "running",
+          "processedUs": 3083062813,
+          "totalUs": 4207447344,
+          "fraction": 0.732763255468088,
+          "uiTicks": 373
+        },
+        {
+          "state": "running",
+          "processedUs": 3158700208,
+          "totalUs": 4207447344,
+          "fraction": 0.7507402825859346,
+          "uiTicks": 377
+        },
+        {
+          "state": "running",
+          "processedUs": 3214220208,
+          "totalUs": 4207447344,
+          "fraction": 0.7639359319810896,
+          "uiTicks": 380
+        },
+        {
+          "state": "running",
+          "processedUs": 3276844219,
+          "totalUs": 4207447344,
+          "fraction": 0.7788200186683073,
+          "uiTicks": 384
+        },
+        {
+          "state": "running",
+          "processedUs": 3344372266,
+          "totalUs": 4207447344,
+          "fraction": 0.7948696662286738,
+          "uiTicks": 388
+        },
+        {
+          "state": "running",
+          "processedUs": 3430081641,
+          "totalUs": 4207447344,
+          "fraction": 0.8152405391101194,
+          "uiTicks": 391
+        },
+        {
+          "state": "running",
+          "processedUs": 3498489688,
+          "totalUs": 4207447344,
+          "fraction": 0.8314993396147895,
+          "uiTicks": 395
+        },
+        {
+          "state": "running",
+          "processedUs": 3574135083,
+          "totalUs": 4207447344,
+          "fraction": 0.849478268123039,
+          "uiTicks": 399
+        },
+        {
+          "state": "running",
+          "processedUs": 3646825781,
+          "totalUs": 4207447344,
+          "fraction": 0.8667549425664304,
+          "uiTicks": 403
+        },
+        {
+          "state": "running",
+          "processedUs": 3717113828,
+          "totalUs": 4207447344,
+          "fraction": 0.883460569815749,
+          "uiTicks": 406
+        },
+        {
+          "state": "running",
+          "processedUs": 3790761797,
+          "totalUs": 4207447344,
+          "fraction": 0.9009647624956706,
+          "uiTicks": 410
+        },
+        {
+          "state": "running",
+          "processedUs": 3862849844,
+          "totalUs": 4207447344,
+          "fraction": 0.9180982025856103,
+          "uiTicks": 414
+        },
+        {
+          "state": "running",
+          "processedUs": 3934497917,
+          "totalUs": 4207447344,
+          "fraction": 0.935127072382917,
+          "uiTicks": 418
+        },
+        {
+          "state": "running",
+          "processedUs": 4001367292,
+          "totalUs": 4207447344,
+          "fraction": 0.9510201708658627,
+          "uiTicks": 421
+        },
+        {
+          "state": "running",
+          "processedUs": 4081753984,
+          "totalUs": 4207447344,
+          "fraction": 0.9701259814506665,
+          "uiTicks": 425
+        },
+        {
+          "state": "running",
+          "processedUs": 4160783359,
+          "totalUs": 4207447344,
+          "fraction": 0.9889091933458074,
+          "uiTicks": 429
+        },
+        {
+          "state": "running",
+          "processedUs": 4207447344,
+          "totalUs": 4207447344,
+          "fraction": 0.99,
+          "uiTicks": 433
+        },
+        {
+          "state": "validating",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": null,
+          "uiTicks": 433
+        },
+        {
+          "state": "publishing",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": null,
+          "uiTicks": 439
+        },
+        {
+          "state": "succeeded",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": 1.0,
+          "uiTicks": 439
+        }
+      ],
+      "uiTicksDuring": 191,
+      "cancelSent": false,
+      "lateCancel": false
+    }
+  ],
+  "lifecycle": [],
+  "os": "windows",
+  "root": "D:/projects/mediaflow-v070/v0.7.0/poc/local/phase3b/windows-run-02",
+  "fixtures": "D:/projects/mediaflow-v070/v0.7.0/poc/local/phase3b/fixtures",
+  "phase": "complete",
+  "uiTicks": 441,
+  "invalidInput": "invalidInput",
+  "duplicateId": "outputConflict",
+  "existingOutput": "outputConflict",
+  "partialsAbsent": true,
+  "systemOpen": "USER CONFIRMED windows02 2026-10-05",
+  "status": "PASS",
+  "userSystemPlayback": {
+    "result": "Windows 全部正常",
+    "run": "windows02",
+    "date": "2026-10-05"
+  }
+}

@@ -1,0 +1,250 @@
+{
+  "os": "windows",
+  "atUtc": "2026-10-05T12:13:35.543872Z",
+  "status": "PASS",
+  "results": [
+    {
+      "type": "trim",
+      "output": "D:/projects/mediaflow-v070/v0.7.0/poc/local/phase5/windows-run-04/中文 输出/Processed/本地裁剪 中文.mp4",
+      "metadata": {
+        "durationUs": 4032000,
+        "tracks": [
+          {
+            "type": "video",
+            "codec": "h264",
+            "width": 320,
+            "height": 180
+          },
+          {
+            "type": "audio",
+            "codec": "aac",
+            "width": null,
+            "height": null
+          }
+        ]
+      }
+    },
+    {
+      "type": "trim",
+      "output": "D:/projects/mediaflow-v070/v0.7.0/poc/local/phase5/windows-run-04/中文 输出/Processed/本地裁剪 中文 (1).mp4",
+      "metadata": {
+        "durationUs": 4032000,
+        "tracks": [
+          {
+            "type": "video",
+            "codec": "h264",
+            "width": 320,
+            "height": 180
+          },
+          {
+            "type": "audio",
+            "codec": "aac",
+            "width": null,
+            "height": null
+          }
+        ]
+      }
+    },
+    {
+      "type": "extractAudio",
+      "output": "D:/projects/mediaflow-v070/v0.7.0/poc/local/phase5/windows-run-04/中文 输出/Audio/本地音频 中文.m4a",
+      "metadata": {
+        "durationUs": 1202112000,
+        "tracks": [
+          {
+            "type": "audio",
+            "codec": "aac",
+            "width": null,
+            "height": null
+          }
+        ]
+      }
+    },
+    {
+      "type": "extractFrame",
+      "output": "D:/projects/mediaflow-v070/v0.7.0/poc/local/phase5/windows-run-04/中文 输出/Frames/本地图片 中文.jpg",
+      "metadata": {
+        "durationUs": 40000,
+        "tracks": [
+          {
+            "type": "video",
+            "codec": "mjpeg",
+            "width": 320,
+            "height": 180
+          }
+        ]
+      }
+    }
+  ],
+  "progress": [
+    {
+      "id": "op-1791202437366335-0e12e14747cd5eec500a9853",
+      "processedUs": 4037333,
+      "totalUs": 4000000,
+      "fraction": 0.99
+    },
+    {
+      "id": "op-1791202438248102-b2ca4a07d219512c73a3ed2d",
+      "processedUs": 4040000,
+      "totalUs": 4000000,
+      "fraction": 0.99
+    },
+    {
+      "id": "op-1791202439295940-2b60a090f74727d163a8732b",
+      "processedUs": 231925417,
+      "totalUs": 1202112578,
+      "fraction": 0.1929315284146374
+    },
+    {
+      "id": "op-1791202439295940-2b60a090f74727d163a8732b",
+      "processedUs": 510122875,
+      "totalUs": 1202112578,
+      "fraction": 0.42435532606164944
+    },
+    {
+      "id": "op-1791202439295940-2b60a090f74727d163a8732b",
+      "processedUs": 786016375,
+      "totalUs": 1202112578,
+      "fraction": 0.6538625328317628
+    },
+    {
+      "id": "op-1791202439295940-2b60a090f74727d163a8732b",
+      "processedUs": 1037739167,
+      "totalUs": 1202112578,
+      "fraction": 0.8632628806916951
+    },
+    {
+      "id": "op-1791202439295940-2b60a090f74727d163a8732b",
+      "processedUs": 1202112542,
+      "totalUs": 1202112578,
+      "fraction": 0.99
+    },
+    {
+      "id": "op-1791202440665339-4e9c797d2de66d160bbd0ef9",
+      "processedUs": 40000,
+      "totalUs": 1202112578,
+      "fraction": null
+    }
+  ],
+  "lifecycle": [
+    {
+      "state": "inactive",
+      "atUtc": "2026-10-05T12:13:37.392384Z"
+    },
+    {
+      "state": "resumed",
+      "atUtc": "2026-10-05T12:13:56.589029Z"
+    }
+  ],
+  "requests": [
+    {
+      "id": "op-1791202437366335-0e12e14747cd5eec500a9853",
+      "type": "trim",
+      "startUs": 2000000,
+      "endUs": 6000000
+    },
+    {
+      "id": "op-1791202438248102-b2ca4a07d219512c73a3ed2d",
+      "type": "trim",
+      "startUs": 2000000,
+      "endUs": 6000000
+    },
+    {
+      "id": "op-1791202439295940-2b60a090f74727d163a8732b",
+      "type": "extractAudio",
+      "startUs": 0,
+      "endUs": null
+    },
+    {
+      "id": "op-1791202440665339-4e9c797d2de66d160bbd0ef9",
+      "type": "extractFrame",
+      "startUs": 3000000,
+      "endUs": null
+    },
+    {
+      "id": "op-1791202441946555-490835cdda97a972a46d34e6",
+      "type": "trim",
+      "startUs": 0,
+      "endUs": 1202112000
+    },
+    {
+      "id": "op-1791202442916016-bea67bfc09de2a609a1f56fe",
+      "type": "extractAudio",
+      "startUs": 0,
+      "endUs": null
+    },
+    {
+      "id": "op-1791202443816901-b985021c334a6639efb512ea",
+      "type": "extractFrame",
+      "startUs": 0,
+      "endUs": null
+    }
+  ],
+  "lastUiPhase": "cancelled",
+  "inputSelected": true,
+  "input": {
+    "name": "输入 中文.mp4",
+    "durationUs": 1202112578,
+    "codecs": [
+      "h264",
+      "aac"
+    ],
+    "bytes": 90814896,
+    "saf": false
+  },
+  "conflict": "PASS",
+  "historyRestored": [
+    {
+      "source": "processing",
+      "id": "op-1791202437366335-0e12e14747cd5eec500a9853",
+      "operation": "trim",
+      "inputName": "输入 中文.mp4",
+      "output": "D:/projects/mediaflow-v070/v0.7.0/poc/local/phase5/windows-run-04/中文 输出/Processed/本地裁剪 中文.mp4",
+      "mediaType": "video",
+      "completedAt": "2026-10-05T20:13:57.942962"
+    },
+    {
+      "source": "processing",
+      "id": "op-1791202438248102-b2ca4a07d219512c73a3ed2d",
+      "operation": "trim",
+      "inputName": "输入 中文.mp4",
+      "output": "D:/projects/mediaflow-v070/v0.7.0/poc/local/phase5/windows-run-04/中文 输出/Processed/本地裁剪 中文 (1).mp4",
+      "mediaType": "video",
+      "completedAt": "2026-10-05T20:13:58.586518"
+    },
+    {
+      "source": "processing",
+      "id": "op-1791202439295940-2b60a090f74727d163a8732b",
+      "operation": "extractAudio",
+      "inputName": "输入 中文.mp4",
+      "output": "D:/projects/mediaflow-v070/v0.7.0/poc/local/phase5/windows-run-04/中文 输出/Audio/本地音频 中文.m4a",
+      "mediaType": "audio",
+      "completedAt": "2026-10-05T20:13:59.917219"
+    },
+    {
+      "source": "processing",
+      "id": "op-1791202440665339-4e9c797d2de66d160bbd0ef9",
+      "operation": "extractFrame",
+      "inputName": "输入 中文.mp4",
+      "output": "D:/projects/mediaflow-v070/v0.7.0/poc/local/phase5/windows-run-04/中文 输出/Frames/本地图片 中文.jpg",
+      "mediaType": "image",
+      "completedAt": "2026-10-05T20:14:01.041274"
+    }
+  ],
+  "cancellations": [
+    {
+      "type": "trim",
+      "phase": "cancelled"
+    },
+    {
+      "type": "extractAudio",
+      "phase": "cancelled"
+    },
+    {
+      "type": "extractFrame",
+      "phase": "cancelled"
+    }
+  ],
+  "coldRestart": "PENDING normal main.dart",
+  "systemPlayback": "PENDING user observation"
+}

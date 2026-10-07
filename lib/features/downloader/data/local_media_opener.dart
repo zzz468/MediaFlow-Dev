@@ -21,7 +21,8 @@ final class LocalMediaOpener implements MediaFileOpener {
       ).invokeMethod<void>('openDownloadedFile', {'path': path});
     } else if (Platform.isWindows) {
       final file = File(path);
-      if (!file.isAbsolute || !await file.exists()) {
+      if (!file.isAbsolute ||
+          (!await file.exists() && !await Directory(path).exists())) {
         throw const FileSystemException('File missing');
       }
       await Process.start('explorer.exe', [file.path]);

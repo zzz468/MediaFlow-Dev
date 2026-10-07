@@ -5,6 +5,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/models/media_link.dart';
 import '../../downloader/application/download_manager.dart';
 import '../../downloader/application/media_content_download_action.dart';
+import '../../downloader/application/media_assembly_manager.dart';
+import '../../downloader/domain/media_assembly.dart';
+import '../../processing/domain/processing.dart';
+import '../../downloader/presentation/media_assembly_tile.dart';
 import '../../downloader/domain/download_task.dart';
 import '../../parser/domain/link_parser_state.dart';
 import '../../parser/domain/media_content.dart';
@@ -42,14 +46,19 @@ class _HomePageState extends ConsumerState<HomePage> {
   Widget build(BuildContext context) {
     final state = ref.watch(linkParserViewModelProvider);
     final downloads = ref.watch(downloadManagerProvider);
+    final assemblies = ref.watch(mediaAssemblyManagerProvider);
     final galleryTasks = downloads
         .where((task) => _activeGalleryTaskIds.contains(task.id))
         .toList();
-    final galleryBusy = galleryTasks.any(
-      (task) =>
-          task.status != DownloadStatus.completed &&
-          task.status != DownloadStatus.failed,
-    );
+    final galleryBusy =
+        assemblies.any(
+          (t) => t.contentId == state.mediaContent?.id && !t.terminal,
+        ) ||
+        galleryTasks.any(
+          (task) =>
+              task.status != DownloadStatus.completed &&
+              task.status != DownloadStatus.failed,
+        );
     final colorScheme = Theme.of(context).colorScheme;
 
     return ListView(
@@ -237,6 +246,10 @@ class _HomePageState extends ConsumerState<HomePage> {
                       ? null
                       : '${galleryTasks.where((task) => task.status == DownloadStatus.completed).length} / ${galleryTasks.length} 已完成',
                 ),
+                for (final task in assemblies.where(
+                  (t) => t.contentId == state.mediaContent?.id,
+                ))
+                  MediaAssemblyTile(task: task),
               ],
             ),
           ),
@@ -306,9 +319,52 @@ class _HomePageState extends ConsumerState<HomePage> {
     ).showSnackBar(const SnackBar(content: Text('下载任务已加入队列。')));
   }
 
-  void _startGalleryDownload(Set<String> selectedResourceIds) {
+  void _startGalleryDownload(Set<String> selectedResourceIds) async {
     final content = ref.read(linkParserViewModelProvider).mediaContent;
     if (content == null) return;
+    final groups = content.assemblyGroups.where(
+      (g) => selectedResourceIds.contains(g.videoResourceId),
+    );
+    if (groups.isNotEmpty) {
+      final group = groups.single;
+      final video = content.resources.firstWhere(
+        (r) => r.id == group.videoResourceId,
+      );
+      final audios = content.resources.where(
+        (r) =>
+            selectedResourceIds.contains(r.id) &&
+            group.audioResourceIds.contains(r.id),
+      );
+      try {
+        final audio = audios.single;
+        final plan = MediaMuxPlan(content: content, video: video, audio: audio);
+        await ref
+            .read(mediaAssemblyManagerProvider.notifier)
+            .enqueue(
+              plan,
+              id: newDownloadOperationId(DateTime.now()),
+              createdAt: DateTime.now(),
+            );
+        if (mounted) {
+          ScaffoldMessenger.of(
+            context,
+          ).showSnackBar(const SnackBar(content: Text('作品任务已加入队列，下载后自动合并。')));
+        }
+      } catch (error) {
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text(
+                error is ProcessingError
+                    ? error.message
+                    : '无法创建合并任务，请检查资源和本地存储。',
+              ),
+            ),
+          );
+        }
+      }
+      return;
+    }
     final downloads = ref.read(downloadManagerProvider);
     if (downloads.any(
       (task) =>

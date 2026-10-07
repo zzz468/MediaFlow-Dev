@@ -1,0 +1,333 @@
+{
+  "atUtc": "2026-10-05T05:58:54.066691Z",
+  "os": "windows",
+  "route": "HomePage -> production YoutubeParser -> DownloadManager -> MediaAssemblyController -> Processing -> History",
+  "status": "PASS",
+  "samples": [
+    {
+      "id": "hLY9KMIU2BA",
+      "title": "MIYEON 'RUN AWAY' M/V Teaser",
+      "video": {
+        "id": "youtube:VISIONOS:160",
+        "codec": "avc1.4d400c",
+        "container": "mp4"
+      },
+      "audio": {
+        "id": "youtube:VISIONOS:140",
+        "codec": "mp4a.40.2",
+        "container": "mp4"
+      },
+      "alternativeCodecs": [
+        {
+          "role": "videoOnly",
+          "codec": "av01.0.12M.08",
+          "container": "mp4"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "vp9",
+          "container": "webm"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "av01.0.12M.08",
+          "container": "mp4"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "vp9",
+          "container": "webm"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "avc1.640028",
+          "container": "mp4"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "vp9",
+          "container": "webm"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "avc1.4d401f",
+          "container": "mp4"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "vp9",
+          "container": "webm"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "av01.0.04M.08",
+          "container": "mp4"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "vp9",
+          "container": "webm"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "avc1.4d401e",
+          "container": "mp4"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "vp9",
+          "container": "webm"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "avc1.4d4015",
+          "container": "mp4"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "vp9",
+          "container": "webm"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "avc1.4d400d",
+          "container": "mp4"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "vp9",
+          "container": "webm"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "avc1.4d400c",
+          "container": "mp4"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "vp9",
+          "container": "webm"
+        },
+        {
+          "role": "audioOnly",
+          "codec": "mp4a.40.2",
+          "container": "mp4"
+        },
+        {
+          "role": "audioOnly",
+          "codec": "mp4a.40.5",
+          "container": "mp4"
+        },
+        {
+          "role": "audioOnly",
+          "codec": "opus",
+          "container": "webm"
+        },
+        {
+          "role": "audioOnly",
+          "codec": "opus",
+          "container": "webm"
+        },
+        {
+          "role": "audioOnly",
+          "codec": "opus",
+          "container": "webm"
+        }
+      ],
+      "task": {
+        "id": "op-1791179940673869-d49fb1fc1025cdac2f7f8b0a",
+        "contentId": "hLY9KMIU2BA",
+        "title": "MIYEON 'RUN AWAY' M/V Teaser",
+        "platform": "youtube",
+        "sourceUrl": "https://www.youtube.com/watch?v=hLY9KMIU2BA",
+        "videoTaskId": "download-op-1791179940673869-d49fb1fc1025cdac2f7f8b0a-video",
+        "audioTaskId": "download-op-1791179940673869-d49fb1fc1025cdac2f7f8b0a-audio",
+        "createdAt": "2026-10-05T13:59:00.673869",
+        "workingDirectory": "D:/projects/mediaflow-v070/v0.7.0/poc/local/phase4/windows-run-02/downloads/.mediaflow-working/op-1791179940673869-d49fb1fc1025cdac2f7f8b0a",
+        "processingOutput": "D:/projects/mediaflow-v070/v0.7.0/poc/local/phase4/windows-run-02/downloads/MIYEON 'RUN AWAY' M_V Teaser.mp4",
+        "stage": "completed",
+        "progress": 1.0,
+        "finalPath": "D:/projects/mediaflow-v070/v0.7.0/poc/local/phase4/windows-run-02/downloads/MIYEON 'RUN AWAY' M_V Teaser.mp4",
+        "completedAt": "2026-10-05T13:59:21.822652",
+        "errorCode": null,
+        "errorMessage": null,
+        "cleanupIssue": null,
+        "attempt": 1,
+        "expectedDurationUs": 18000000
+      },
+      "inputDownloads": [
+        {
+          "role": "video",
+          "bytes": 172358,
+          "status": "completed",
+          "cleaned": true
+        },
+        {
+          "role": "audio",
+          "bytes": 297179,
+          "status": "completed",
+          "cleaned": true
+        }
+      ],
+      "historyFinalOnly": "PASS"
+    },
+    {
+      "id": "jNQXAC9IVRw",
+      "title": "Me at the zoo",
+      "video": {
+        "id": "youtube:VISIONOS:160",
+        "codec": "avc1.4d400b",
+        "container": "mp4"
+      },
+      "audio": {
+        "id": "youtube:VISIONOS:140",
+        "codec": "mp4a.40.2",
+        "container": "mp4"
+      },
+      "alternativeCodecs": [
+        {
+          "role": "videoOnly",
+          "codec": "avc1.4d400c",
+          "container": "mp4"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "vp9",
+          "container": "webm"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "avc1.4d400b",
+          "container": "mp4"
+        },
+        {
+          "role": "videoOnly",
+          "codec": "vp9",
+          "container": "webm"
+        },
+        {
+          "role": "audioOnly",
+          "codec": "mp4a.40.2",
+          "container": "mp4"
+        },
+        {
+          "role": "audioOnly",
+          "codec": "mp4a.40.5",
+          "container": "mp4"
+        },
+        {
+          "role": "audioOnly",
+          "codec": "opus",
+          "container": "webm"
+        },
+        {
+          "role": "audioOnly",
+          "codec": "opus",
+          "container": "webm"
+        },
+        {
+          "role": "audioOnly",
+          "codec": "opus",
+          "container": "webm"
+        }
+      ],
+      "task": {
+        "id": "op-1791179968788966-dbb4468c394ff2dff7c68ff5",
+        "contentId": "jNQXAC9IVRw",
+        "title": "Me at the zoo",
+        "platform": "youtube",
+        "sourceUrl": "https://www.youtube.com/watch?v=jNQXAC9IVRw",
+        "videoTaskId": "download-op-1791179968788966-dbb4468c394ff2dff7c68ff5-video",
+        "audioTaskId": "download-op-1791179968788966-dbb4468c394ff2dff7c68ff5-audio",
+        "createdAt": "2026-10-05T13:59:28.788966",
+        "workingDirectory": "D:/projects/mediaflow-v070/v0.7.0/poc/local/phase4/windows-run-02/downloads/.mediaflow-working/op-1791179968788966-dbb4468c394ff2dff7c68ff5",
+        "processingOutput": "D:/projects/mediaflow-v070/v0.7.0/poc/local/phase4/windows-run-02/downloads/Me at the zoo.mp4",
+        "stage": "completed",
+        "progress": 1.0,
+        "finalPath": "D:/projects/mediaflow-v070/v0.7.0/poc/local/phase4/windows-run-02/downloads/Me at the zoo.mp4",
+        "completedAt": "2026-10-05T13:59:49.989944",
+        "errorCode": null,
+        "errorMessage": null,
+        "cleanupIssue": null,
+        "attempt": 1,
+        "expectedDurationUs": 19000000
+      },
+      "inputDownloads": [
+        {
+          "role": "video",
+          "bytes": 195278,
+          "status": "completed",
+          "cleaned": true
+        },
+        {
+          "role": "audio",
+          "bytes": 309288,
+          "status": "completed",
+          "cleaned": true
+        }
+      ],
+      "historyFinalOnly": "PASS"
+    }
+  ],
+  "lifecycle": [],
+  "parserErrorCode": null,
+  "muxCancel": {
+    "id": "op-1791179991973522-0ed469eacc4b098cb430c234",
+    "contentId": "jNQXAC9IVRw",
+    "title": "Me at the zoo",
+    "platform": "youtube",
+    "sourceUrl": "https://www.youtube.com/watch?v=jNQXAC9IVRw",
+    "videoTaskId": "download-op-1791179991973522-0ed469eacc4b098cb430c234-video",
+    "audioTaskId": "download-op-1791179991973522-0ed469eacc4b098cb430c234-audio",
+    "createdAt": "2026-10-05T13:59:51.973522",
+    "workingDirectory": "D:/projects/mediaflow-v070/v0.7.0/poc/local/phase4/windows-run-02/downloads/.mediaflow-working/op-1791179991973522-0ed469eacc4b098cb430c234",
+    "processingOutput": "D:/projects/mediaflow-v070/v0.7.0/poc/local/phase4/windows-run-02/downloads/Me at the zoo (1).mp4",
+    "stage": "cancelled",
+    "progress": null,
+    "finalPath": null,
+    "completedAt": null,
+    "errorCode": "cancelled",
+    "errorMessage": "已取消；有效输入保留，可重试。",
+    "cleanupIssue": null,
+    "attempt": 1,
+    "expectedDurationUs": 19000000
+  },
+  "outputConflict": {
+    "id": "op-1791180012558108-0c0a25cc6a89d68111184a3c",
+    "contentId": "jNQXAC9IVRw",
+    "title": "Me at the zoo",
+    "platform": "youtube",
+    "sourceUrl": "https://www.youtube.com/watch?v=jNQXAC9IVRw",
+    "videoTaskId": "download-op-1791180012558108-0c0a25cc6a89d68111184a3c-video",
+    "audioTaskId": "download-op-1791180012558108-0c0a25cc6a89d68111184a3c-audio",
+    "createdAt": "2026-10-05T14:00:12.558108",
+    "workingDirectory": "D:/projects/mediaflow-v070/v0.7.0/poc/local/phase4/windows-run-02/downloads/.mediaflow-working/op-1791180012558108-0c0a25cc6a89d68111184a3c",
+    "processingOutput": "D:/projects/mediaflow-v070/v0.7.0/poc/local/phase4/windows-run-02/downloads/Me at the zoo (1).mp4",
+    "stage": "failed",
+    "progress": null,
+    "finalPath": null,
+    "completedAt": null,
+    "errorCode": "outputConflict",
+    "errorMessage": "Output already exists.",
+    "cleanupIssue": null,
+    "attempt": 1,
+    "expectedDurationUs": 19000000
+  },
+  "processingAdmissions": {
+    "op-1791179940673869-d49fb1fc1025cdac2f7f8b0a_mux_1": 1,
+    "op-1791179968788966-dbb4468c394ff2dff7c68ff5_mux_1": 1,
+    "op-1791179991973522-0ed469eacc4b098cb430c234_mux_1": 1,
+    "op-1791180012558108-0c0a25cc6a89d68111184a3c_mux_1": 1
+  },
+  "repositoryRestore": "PASS",
+  "coldProcessRestart": {
+    "status": "PASS",
+    "entryPoint": "lib/main.dart",
+    "oldProcessExited": true,
+    "newProcessId": 43468,
+    "userConfirmation": "Windows 历史和播放全部正常",
+    "date": "2026-10-05"
+  },
+  "systemPlayback": "USER CONFIRMED PASS 2026-10-05, current Phase 4 outputs",
+  "independentDecode": "Both video and audio fully decoded with owned FFmpeg; exit 0"
+}

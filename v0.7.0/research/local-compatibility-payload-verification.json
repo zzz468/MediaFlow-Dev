@@ -1,0 +1,16 @@
+{
+  "android": {
+    "videoPackets": 482,
+    "videoPayloadMatchesContiguousSource": true,
+    "audioPackets": 11205,
+    "audioPayloadMatchesContiguousSource": true,
+    "sourceAudioPackets": 11205
+  },
+  "windows": {
+    "videoPackets": 482,
+    "videoPayloadMatchesContiguousSource": true,
+    "audioPackets": 11205,
+    "audioPayloadMatchesContiguousSource": true,
+    "sourceAudioPackets": 11205
+  }
+}

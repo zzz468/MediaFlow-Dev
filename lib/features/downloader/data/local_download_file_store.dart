@@ -6,6 +6,8 @@ import '../domain/download_task.dart';
 import 'download_file_store.dart';
 
 typedef DownloadDirectoryResolver = Future<Directory> Function();
+typedef WorkingDirectoryResolver =
+    Future<Directory> Function(String assemblyId);
 typedef CompletedFilePublisher =
     Future<String> Function({
       required File sourceFile,
@@ -17,20 +19,24 @@ class LocalDownloadFileStore implements DownloadFileStore {
   factory LocalDownloadFileStore({
     DownloadDirectoryResolver? downloadDirectoryResolver,
     CompletedFilePublisher? completedFilePublisher,
+    WorkingDirectoryResolver? workingDirectoryResolver,
   }) {
     return LocalDownloadFileStore._(
       downloadDirectoryResolver ?? resolveDefaultDownloadDirectory,
       completedFilePublisher,
+      workingDirectoryResolver,
     );
   }
 
   LocalDownloadFileStore._(
     this._downloadDirectoryResolver,
     this._completedFilePublisher,
+    this._workingDirectoryResolver,
   );
 
   final DownloadDirectoryResolver _downloadDirectoryResolver;
   final CompletedFilePublisher? _completedFilePublisher;
+  final WorkingDirectoryResolver? _workingDirectoryResolver;
 
   static const _knownExtensions = <String>{
     '.mp4',
@@ -81,16 +87,19 @@ class LocalDownloadFileStore implements DownloadFileStore {
     required bool append,
     String? contentType,
   }) async {
-    final downloadDirectory = await _downloadDirectoryResolver();
+    final working = task.assemblyId != null;
+    if (working && _workingDirectoryResolver == null) {
+      throw const FileSystemException('Private input storage is unavailable');
+    }
+    final downloadDirectory = working
+        ? await _workingDirectoryResolver!(task.assemblyId!)
+        : await _downloadDirectoryResolver();
     await downloadDirectory.create(recursive: true);
 
     var targetFile = task.savePath == null ? null : File(task.savePath!);
     if (targetFile == null || await targetFile.exists()) {
       final extension = _resolveExtension(sourceUri, contentType);
-      final baseName = _sanitizeFileName(
-        task.title,
-        fallback: 'Untitled Video',
-      );
+      final baseName = sanitizeFileName(task.title, fallback: 'Untitled Video');
       targetFile = await _uniqueTargetFile(
         downloadDirectory,
         '$baseName$extension',
@@ -108,7 +117,7 @@ class LocalDownloadFileStore implements DownloadFileStore {
       partialFile: partialFile,
       targetFile: targetFile,
       contentType: _resolveContentType(contentType, targetFile.path),
-      completedFilePublisher: _completedFilePublisher,
+      completedFilePublisher: working ? null : _completedFilePublisher,
     );
   }
 
@@ -175,7 +184,7 @@ class LocalDownloadFileStore implements DownloadFileStore {
     };
   }
 
-  String _sanitizeFileName(String value, {required String fallback}) {
+  static String sanitizeFileName(String value, {required String fallback}) {
     var sanitized = value
         .replaceAll(RegExp(r'[<>:"/\\|?*\x00-\x1F]'), '_')
         .replaceAll(RegExp(r'\s+'), ' ')
@@ -185,15 +194,20 @@ class LocalDownloadFileStore implements DownloadFileStore {
         .replaceAll(RegExp(r'[_\-. ]'), '')
         .isNotEmpty;
     final isReservedWindowsName = RegExp(
-      r'^(con|prn|aux|nul|com[1-9]|lpt[1-9])$',
+      r'^(con|prn|aux|nul|com[1-9]|lpt[1-9])(?:\..*)?$',
       caseSensitive: false,
     ).hasMatch(sanitized);
     if (!hasMeaningfulCharacters || isReservedWindowsName) {
       sanitized = fallback;
     }
     if (sanitized.length > 80) {
+      var end = 80;
+      if (sanitized.codeUnitAt(end - 1) >= 0xd800 &&
+          sanitized.codeUnitAt(end - 1) <= 0xdbff) {
+        end--;
+      }
       sanitized = sanitized
-          .substring(0, 80)
+          .substring(0, end)
           .trimRight()
           .replaceAll(RegExp(r'[. ]+$'), '');
     }

@@ -1,0 +1,5707 @@
+{
+  "runId": "android05",
+  "chain": "Flutter -> production manager -> production factory -> platform adapter",
+  "operations": [
+    {
+      "type": "trim",
+      "label": "trim",
+      "id": "android05_trim",
+      "status": "completed",
+      "outputs": [
+        "/data/user/0/com.mediaflow.mediaflow.processingv070b01/files/processing/android05/trim 输出.mp4"
+      ],
+      "elapsedMs": 346,
+      "error": null,
+      "diagnostic": null,
+      "metadata": {
+        "durationUs": 4016000,
+        "bytes": 314303,
+        "tracks": [
+          {
+            "mime": "video/avc"
+          },
+          {
+            "mime": "audio/mp4a-latm"
+          }
+        ]
+      },
+      "progress": [
+        {
+          "state": "running",
+          "processedUs": 0,
+          "totalUs": 4000000,
+          "fraction": 0.0,
+          "uiTicks": 14
+        },
+        {
+          "state": "running",
+          "processedUs": 0,
+          "totalUs": 4000000,
+          "fraction": 0.0,
+          "uiTicks": 14
+        },
+        {
+          "state": "running",
+          "processedUs": 1200000,
+          "totalUs": 4000000,
+          "fraction": 0.3,
+          "uiTicks": 20
+        },
+        {
+          "state": "running",
+          "processedUs": 2608000,
+          "totalUs": 4000000,
+          "fraction": 0.652,
+          "uiTicks": 26
+        },
+        {
+          "state": "running",
+          "processedUs": 3200000,
+          "totalUs": 4000000,
+          "fraction": 0.8,
+          "uiTicks": 34
+        },
+        {
+          "state": "running",
+          "processedUs": 3994666,
+          "totalUs": 4000000,
+          "fraction": 0.99,
+          "uiTicks": 36
+        },
+        {
+          "state": "validating",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": null,
+          "uiTicks": 36
+        },
+        {
+          "state": "publishing",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": null,
+          "uiTicks": 36
+        },
+        {
+          "state": "succeeded",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": 1.0,
+          "uiTicks": 36
+        }
+      ],
+      "uiTicksDuring": 33,
+      "cancelSent": false,
+      "lateCancel": false
+    },
+    {
+      "type": "extractAudio",
+      "label": "extractAudio",
+      "id": "android05_extractAudio",
+      "status": "completed",
+      "outputs": [
+        "/data/user/0/com.mediaflow.mediaflow.processingv070b01/files/processing/android05/extractAudio 输出.m4a"
+      ],
+      "elapsedMs": 180,
+      "error": null,
+      "diagnostic": null,
+      "metadata": {
+        "durationUs": 12010700,
+        "bytes": 147592,
+        "tracks": [
+          {
+            "mime": "audio/mp4a-latm"
+          }
+        ]
+      },
+      "progress": [
+        {
+          "state": "running",
+          "processedUs": 0,
+          "totalUs": 12000000,
+          "fraction": 0.0,
+          "uiTicks": 42
+        },
+        {
+          "state": "running",
+          "processedUs": 0,
+          "totalUs": 12000000,
+          "fraction": 0.0,
+          "uiTicks": 42
+        },
+        {
+          "state": "running",
+          "processedUs": 4074666,
+          "totalUs": 12000000,
+          "fraction": 0.3395555,
+          "uiTicks": 47
+        },
+        {
+          "state": "running",
+          "processedUs": 10709333,
+          "totalUs": 12000000,
+          "fraction": 0.8924444166666666,
+          "uiTicks": 51
+        },
+        {
+          "state": "running",
+          "processedUs": 11989333,
+          "totalUs": 12000000,
+          "fraction": 0.99,
+          "uiTicks": 52
+        },
+        {
+          "state": "validating",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": null,
+          "uiTicks": 52
+        },
+        {
+          "state": "publishing",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": null,
+          "uiTicks": 52
+        },
+        {
+          "state": "succeeded",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": 1.0,
+          "uiTicks": 52
+        }
+      ],
+      "uiTicksDuring": 16,
+      "cancelSent": false,
+      "lateCancel": false
+    },
+    {
+      "type": "mux",
+      "label": "mux",
+      "id": "android05_mux",
+      "status": "completed",
+      "outputs": [
+        "/data/user/0/com.mediaflow.mediaflow.processingv070b01/files/processing/android05/mux 输出.mp4"
+      ],
+      "elapsedMs": 320,
+      "error": null,
+      "diagnostic": null,
+      "metadata": {
+        "durationUs": 12010700,
+        "bytes": 909473,
+        "tracks": [
+          {
+            "mime": "video/avc"
+          },
+          {
+            "mime": "audio/mp4a-latm"
+          }
+        ]
+      },
+      "progress": [
+        {
+          "state": "running",
+          "processedUs": 0,
+          "totalUs": 12000000,
+          "fraction": 0.0,
+          "uiTicks": 55
+        },
+        {
+          "state": "running",
+          "processedUs": 0,
+          "totalUs": 12000000,
+          "fraction": 0.0,
+          "uiTicks": 55
+        },
+        {
+          "state": "running",
+          "processedUs": 4040000,
+          "totalUs": 12000000,
+          "fraction": 0.33666666666666667,
+          "uiTicks": 60
+        },
+        {
+          "state": "running",
+          "processedUs": 5400000,
+          "totalUs": 12000000,
+          "fraction": 0.45,
+          "uiTicks": 65
+        },
+        {
+          "state": "running",
+          "processedUs": 7040000,
+          "totalUs": 12000000,
+          "fraction": 0.5866666666666667,
+          "uiTicks": 69
+        },
+        {
+          "state": "running",
+          "processedUs": 8170666,
+          "totalUs": 12000000,
+          "fraction": 0.6808888333333334,
+          "uiTicks": 74
+        },
+        {
+          "state": "running",
+          "processedUs": 10325333,
+          "totalUs": 12000000,
+          "fraction": 0.8604444166666667,
+          "uiTicks": 78
+        },
+        {
+          "state": "running",
+          "processedUs": 11989333,
+          "totalUs": 12000000,
+          "fraction": 0.99,
+          "uiTicks": 81
+        },
+        {
+          "state": "validating",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": null,
+          "uiTicks": 81
+        },
+        {
+          "state": "publishing",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": null,
+          "uiTicks": 81
+        },
+        {
+          "state": "succeeded",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": 1.0,
+          "uiTicks": 81
+        }
+      ],
+      "uiTicksDuring": 29,
+      "cancelSent": false,
+      "lateCancel": false
+    },
+    {
+      "type": "remux",
+      "label": "remux",
+      "id": "android05_remux",
+      "status": "completed",
+      "outputs": [
+        "/data/user/0/com.mediaflow.mediaflow.processingv070b01/files/processing/android05/remux 输出.mp4"
+      ],
+      "elapsedMs": 161,
+      "error": null,
+      "diagnostic": null,
+      "metadata": {
+        "durationUs": 12010700,
+        "bytes": 909473,
+        "tracks": [
+          {
+            "mime": "video/avc"
+          },
+          {
+            "mime": "audio/mp4a-latm"
+          }
+        ]
+      },
+      "progress": [
+        {
+          "state": "running",
+          "processedUs": 0,
+          "totalUs": 12000000,
+          "fraction": 0.0,
+          "uiTicks": 85
+        },
+        {
+          "state": "running",
+          "processedUs": 0,
+          "totalUs": 12000000,
+          "fraction": 0.0,
+          "uiTicks": 85
+        },
+        {
+          "state": "running",
+          "processedUs": 3776000,
+          "totalUs": 12000000,
+          "fraction": 0.31466666666666665,
+          "uiTicks": 90
+        },
+        {
+          "state": "running",
+          "processedUs": 7360000,
+          "totalUs": 12000000,
+          "fraction": 0.6133333333333333,
+          "uiTicks": 94
+        },
+        {
+          "state": "running",
+          "processedUs": 11989333,
+          "totalUs": 12000000,
+          "fraction": 0.99,
+          "uiTicks": 97
+        },
+        {
+          "state": "validating",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": null,
+          "uiTicks": 97
+        },
+        {
+          "state": "publishing",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": null,
+          "uiTicks": 97
+        },
+        {
+          "state": "succeeded",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": 1.0,
+          "uiTicks": 97
+        }
+      ],
+      "uiTicksDuring": 15,
+      "cancelSent": false,
+      "lateCancel": false
+    },
+    {
+      "type": "extractFrame",
+      "label": "extractFrame",
+      "id": "android05_extractFrame",
+      "status": "completed",
+      "outputs": [
+        "/data/user/0/com.mediaflow.mediaflow.processingv070b01/files/processing/android05/extractFrame 输出.jpg"
+      ],
+      "elapsedMs": 101,
+      "error": null,
+      "diagnostic": null,
+      "metadata": {
+        "bytes": 11414,
+        "width": 320,
+        "height": 180
+      },
+      "progress": [
+        {
+          "state": "running",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": null,
+          "uiTicks": 98
+        },
+        {
+          "state": "validating",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": null,
+          "uiTicks": 107
+        },
+        {
+          "state": "publishing",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": null,
+          "uiTicks": 107
+        },
+        {
+          "state": "succeeded",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": 1.0,
+          "uiTicks": 108
+        }
+      ],
+      "uiTicksDuring": 10,
+      "cancelSent": false,
+      "lateCancel": false
+    },
+    {
+      "type": "remux",
+      "label": "cancel",
+      "id": "android05_cancel",
+      "status": "cancelled",
+      "outputs": [],
+      "elapsedMs": 139,
+      "error": "cancelled",
+      "diagnostic": "n: Processing cancelled.",
+      "metadata": {},
+      "progress": [
+        {
+          "state": "running",
+          "processedUs": 0,
+          "totalUs": 4207448000,
+          "fraction": 0.0,
+          "uiTicks": 120
+        },
+        {
+          "state": "running",
+          "processedUs": 0,
+          "totalUs": 4207448000,
+          "fraction": 0.0,
+          "uiTicks": 120
+        },
+        {
+          "state": "running",
+          "processedUs": 0,
+          "totalUs": 4207448000,
+          "fraction": 0.0,
+          "uiTicks": 121
+        },
+        {
+          "state": "cancelled",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": null,
+          "uiTicks": 121
+        }
+      ],
+      "uiTicksDuring": 13,
+      "cancelSent": true,
+      "lateCancel": false
+    },
+    {
+      "type": "remux",
+      "label": "lifecycle",
+      "id": "android05_lifecycle",
+      "status": "completed",
+      "outputs": [
+        "/data/user/0/com.mediaflow.mediaflow.processingv070b01/files/processing/android05/lifecycle 输出.mp4"
+      ],
+      "elapsedMs": 37350,
+      "error": null,
+      "diagnostic": null,
+      "metadata": {
+        "durationUs": 4207458000,
+        "bytes": 316771260,
+        "tracks": [
+          {
+            "mime": "video/avc"
+          },
+          {
+            "mime": "audio/mp4a-latm"
+          }
+        ]
+      },
+      "progress": [
+        {
+          "state": "running",
+          "processedUs": 0,
+          "totalUs": 4207448000,
+          "fraction": 0.0,
+          "uiTicks": 304
+        },
+        {
+          "state": "running",
+          "processedUs": 0,
+          "totalUs": 4207448000,
+          "fraction": 0.0,
+          "uiTicks": 304
+        },
+        {
+          "state": "running",
+          "processedUs": 5440000,
+          "totalUs": 4207448000,
+          "fraction": 0.0012929452722885702,
+          "uiTicks": 306
+        },
+        {
+          "state": "running",
+          "processedUs": 12277333,
+          "totalUs": 4207448000,
+          "fraction": 0.0029179999372541264,
+          "uiTicks": 309
+        },
+        {
+          "state": "running",
+          "processedUs": 18541328,
+          "totalUs": 4207448000,
+          "fraction": 0.004406787202123472,
+          "uiTicks": 311
+        },
+        {
+          "state": "running",
+          "processedUs": 25941333,
+          "totalUs": 4207448000,
+          "fraction": 0.006165574238826006,
+          "uiTicks": 314
+        },
+        {
+          "state": "running",
+          "processedUs": 32002656,
+          "totalUs": 4207448000,
+          "fraction": 0.007606191686742177,
+          "uiTicks": 318
+        },
+        {
+          "state": "running",
+          "processedUs": 34133333,
+          "totalUs": 4207448000,
+          "fraction": 0.008112597707684088,
+          "uiTicks": 320
+        },
+        {
+          "state": "running",
+          "processedUs": 38383984,
+          "totalUs": 4207448000,
+          "fraction": 0.009122865927279435,
+          "uiTicks": 325
+        },
+        {
+          "state": "running",
+          "processedUs": 43583984,
+          "totalUs": 4207448000,
+          "fraction": 0.010358769496378803,
+          "uiTicks": 330
+        },
+        {
+          "state": "running",
+          "processedUs": 49173333,
+          "totalUs": 4207448000,
+          "fraction": 0.011687211107540722,
+          "uiTicks": 335
+        },
+        {
+          "state": "running",
+          "processedUs": 55085312,
+          "totalUs": 4207448000,
+          "fraction": 0.013092333404952361,
+          "uiTicks": 340
+        },
+        {
+          "state": "running",
+          "processedUs": 60866640,
+          "totalUs": 4207448000,
+          "fraction": 0.014466403387516613,
+          "uiTicks": 345
+        },
+        {
+          "state": "running",
+          "processedUs": 66826666,
+          "totalUs": 4207448000,
+          "fraction": 0.015882945196232966,
+          "uiTicks": 350
+        },
+        {
+          "state": "running",
+          "processedUs": 71226640,
+          "totalUs": 4207448000,
+          "fraction": 0.016928703575183817,
+          "uiTicks": 355
+        },
+        {
+          "state": "running",
+          "processedUs": 77207968,
+          "totalUs": 4207448000,
+          "fraction": 0.01835030831040574,
+          "uiTicks": 360
+        },
+        {
+          "state": "running",
+          "processedUs": 83328000,
+          "totalUs": 4207448000,
+          "fraction": 0.019804879347290805,
+          "uiTicks": 366
+        },
+        {
+          "state": "running",
+          "processedUs": 89389296,
+          "totalUs": 4207448000,
+          "fraction": 0.021245490378015368,
+          "uiTicks": 371
+        },
+        {
+          "state": "running",
+          "processedUs": 95626666,
+          "totalUs": 4207448000,
+          "fraction": 0.02272794957893716,
+          "uiTicks": 376
+        },
+        {
+          "state": "running",
+          "processedUs": 101050703,
+          "totalUs": 4207448000,
+          "fraction": 0.02401710086494236,
+          "uiTicks": 380
+        },
+        {
+          "state": "running",
+          "processedUs": 106560000,
+          "totalUs": 4207448000,
+          "fraction": 0.025326516216005523,
+          "uiTicks": 380
+        },
+        {
+          "state": "running",
+          "processedUs": 113845375,
+          "totalUs": 4207448000,
+          "fraction": 0.027058058709222312,
+          "uiTicks": 380
+        },
+        {
+          "state": "running",
+          "processedUs": 120234708,
+          "totalUs": 4207448000,
+          "fraction": 0.02857663552823469,
+          "uiTicks": 380
+        },
+        {
+          "state": "running",
+          "processedUs": 126573359,
+          "totalUs": 4207448000,
+          "fraction": 0.030083166565576094,
+          "uiTicks": 380
+        },
+        {
+          "state": "running",
+          "processedUs": 131693359,
+          "totalUs": 4207448000,
+          "fraction": 0.03130005623361239,
+          "uiTicks": 380
+        },
+        {
+          "state": "running",
+          "processedUs": 135264041,
+          "totalUs": 4207448000,
+          "fraction": 0.032148713662058334,
+          "uiTicks": 380
+        },
+        {
+          "state": "running",
+          "processedUs": 139360041,
+          "totalUs": 4207448000,
+          "fraction": 0.03312222539648737,
+          "uiTicks": 380
+        },
+        {
+          "state": "running",
+          "processedUs": 144202708,
+          "totalUs": 4207448000,
+          "fraction": 0.03427320028672963,
+          "uiTicks": 381
+        },
+        {
+          "state": "running",
+          "processedUs": 150037375,
+          "totalUs": 4207448000,
+          "fraction": 0.03565994755015392,
+          "uiTicks": 386
+        },
+        {
+          "state": "running",
+          "processedUs": 157037343,
+          "totalUs": 4207448000,
+          "fraction": 0.037323656287611875,
+          "uiTicks": 391
+        },
+        {
+          "state": "running",
+          "processedUs": 163061375,
+          "totalUs": 4207448000,
+          "fraction": 0.03875541064322126,
+          "uiTicks": 396
+        },
+        {
+          "state": "running",
+          "processedUs": 170178671,
+          "totalUs": 4207448000,
+          "fraction": 0.040447005167978306,
+          "uiTicks": 401
+        },
+        {
+          "state": "running",
+          "processedUs": 176578671,
+          "totalUs": 4207448000,
+          "fraction": 0.041968117253023685,
+          "uiTicks": 406
+        },
+        {
+          "state": "running",
+          "processedUs": 181080078,
+          "totalUs": 4207448000,
+          "fraction": 0.043037983594806165,
+          "uiTicks": 410
+        },
+        {
+          "state": "running",
+          "processedUs": 188120078,
+          "totalUs": 4207448000,
+          "fraction": 0.04471120688835608,
+          "uiTicks": 414
+        },
+        {
+          "state": "running",
+          "processedUs": 195061406,
+          "totalUs": 4207448000,
+          "fraction": 0.046360978436334806,
+          "uiTicks": 416
+        },
+        {
+          "state": "running",
+          "processedUs": 200853416,
+          "totalUs": 4207448000,
+          "fraction": 0.0477375872500385,
+          "uiTicks": 420
+        },
+        {
+          "state": "running",
+          "processedUs": 207690750,
+          "totalUs": 4207448000,
+          "fraction": 0.04936264215267782,
+          "uiTicks": 423
+        },
+        {
+          "state": "running",
+          "processedUs": 214517416,
+          "totalUs": 4207448000,
+          "fraction": 0.05098516155161038,
+          "uiTicks": 427
+        },
+        {
+          "state": "running",
+          "processedUs": 221464062,
+          "totalUs": 4207448000,
+          "fraction": 0.05263619704866228,
+          "uiTicks": 431
+        },
+        {
+          "state": "running",
+          "processedUs": 227864062,
+          "totalUs": 4207448000,
+          "fraction": 0.05415730913370766,
+          "uiTicks": 434
+        },
+        {
+          "state": "running",
+          "processedUs": 233653416,
+          "totalUs": 4207448000,
+          "fraction": 0.055533286685896056,
+          "uiTicks": 438
+        },
+        {
+          "state": "running",
+          "processedUs": 239114750,
+          "totalUs": 4207448000,
+          "fraction": 0.056831302490250625,
+          "uiTicks": 441
+        },
+        {
+          "state": "running",
+          "processedUs": 246698750,
+          "totalUs": 4207448000,
+          "fraction": 0.05863382031102939,
+          "uiTicks": 446
+        },
+        {
+          "state": "running",
+          "processedUs": 253208046,
+          "totalUs": 4207448000,
+          "fraction": 0.06018090918770713,
+          "uiTicks": 449
+        },
+        {
+          "state": "running",
+          "processedUs": 261088046,
+          "totalUs": 4207448000,
+          "fraction": 0.06205377844241925,
+          "uiTicks": 454
+        },
+        {
+          "state": "running",
+          "processedUs": 269184083,
+          "totalUs": 4207448000,
+          "fraction": 0.0639779940239309,
+          "uiTicks": 459
+        },
+        {
+          "state": "running",
+          "processedUs": 276010750,
+          "totalUs": 4207448000,
+          "fraction": 0.06560051366053722,
+          "uiTicks": 462
+        },
+        {
+          "state": "running",
+          "processedUs": 283330781,
+          "totalUs": 4207448000,
+          "fraction": 0.06734029297569454,
+          "uiTicks": 466
+        },
+        {
+          "state": "running",
+          "processedUs": 290392109,
+          "totalUs": 4207448000,
+          "fraction": 0.06901858537526785,
+          "uiTicks": 470
+        },
+        {
+          "state": "running",
+          "processedUs": 296792109,
+          "totalUs": 4207448000,
+          "fraction": 0.07053969746031323,
+          "uiTicks": 473
+        },
+        {
+          "state": "running",
+          "processedUs": 301984125,
+          "totalUs": 4207448000,
+          "fraction": 0.07177370344208651,
+          "uiTicks": 477
+        },
+        {
+          "state": "running",
+          "processedUs": 309088125,
+          "totalUs": 4207448000,
+          "fraction": 0.07346213785648688,
+          "uiTicks": 480
+        },
+        {
+          "state": "running",
+          "processedUs": 317013458,
+          "totalUs": 4207448000,
+          "fraction": 0.07534578157591015,
+          "uiTicks": 485
+        },
+        {
+          "state": "running",
+          "processedUs": 325016093,
+          "totalUs": 4207448000,
+          "fraction": 0.07724779795258313,
+          "uiTicks": 489
+        },
+        {
+          "state": "running",
+          "processedUs": 333016093,
+          "totalUs": 4207448000,
+          "fraction": 0.07914918805888986,
+          "uiTicks": 493
+        },
+        {
+          "state": "running",
+          "processedUs": 340522791,
+          "totalUs": 4207448000,
+          "fraction": 0.08093333322241891,
+          "uiTicks": 497
+        },
+        {
+          "state": "running",
+          "processedUs": 348032125,
+          "totalUs": 4207448000,
+          "fraction": 0.082718104893988,
+          "uiTicks": 501
+        },
+        {
+          "state": "running",
+          "processedUs": 353909458,
+          "totalUs": 4207448000,
+          "fraction": 0.08411499274619674,
+          "uiTicks": 505
+        },
+        {
+          "state": "running",
+          "processedUs": 359738828,
+          "totalUs": 4207448000,
+          "fraction": 0.0855004810516969,
+          "uiTicks": 509
+        },
+        {
+          "state": "running",
+          "processedUs": 366208166,
+          "totalUs": 4207448000,
+          "fraction": 0.08703807296014116,
+          "uiTicks": 512
+        },
+        {
+          "state": "running",
+          "processedUs": 373045500,
+          "totalUs": 4207448000,
+          "fraction": 0.08866312786278048,
+          "uiTicks": 516
+        },
+        {
+          "state": "running",
+          "processedUs": 379424166,
+          "totalUs": 4207448000,
+          "fraction": 0.09017916941575986,
+          "uiTicks": 519
+        },
+        {
+          "state": "running",
+          "processedUs": 385621500,
+          "totalUs": 4207448000,
+          "fraction": 0.09165211310989464,
+          "uiTicks": 523
+        },
+        {
+          "state": "running",
+          "processedUs": 390805500,
+          "totalUs": 4207448000,
+          "fraction": 0.0928842138987814,
+          "uiTicks": 526
+        },
+        {
+          "state": "running",
+          "processedUs": 398424140,
+          "totalUs": 4207448000,
+          "fraction": 0.09469496473872048,
+          "uiTicks": 531
+        },
+        {
+          "state": "running",
+          "processedUs": 404469500,
+          "totalUs": 4207448000,
+          "fraction": 0.09613178820035327,
+          "uiTicks": 534
+        },
+        {
+          "state": "running",
+          "processedUs": 411840166,
+          "totalUs": 4207448000,
+          "fraction": 0.0978836021265147,
+          "uiTicks": 538
+        },
+        {
+          "state": "running",
+          "processedUs": 418133500,
+          "totalUs": 4207448000,
+          "fraction": 0.09937936250192515,
+          "uiTicks": 542
+        },
+        {
+          "state": "running",
+          "processedUs": 425026796,
+          "totalUs": 4207448000,
+          "fraction": 0.10101771810370562,
+          "uiTicks": 545
+        },
+        {
+          "state": "running",
+          "processedUs": 432066796,
+          "totalUs": 4207448000,
+          "fraction": 0.10269094139725553,
+          "uiTicks": 549
+        },
+        {
+          "state": "running",
+          "processedUs": 438168203,
+          "totalUs": 4207448000,
+          "fraction": 0.10414108576029936,
+          "uiTicks": 552
+        },
+        {
+          "state": "running",
+          "processedUs": 444917541,
+          "totalUs": 4207448000,
+          "fraction": 0.10574522632246436,
+          "uiTicks": 556
+        },
+        {
+          "state": "running",
+          "processedUs": 452269531,
+          "totalUs": 4207448000,
+          "fraction": 0.1074926014534226,
+          "uiTicks": 559
+        },
+        {
+          "state": "running",
+          "processedUs": 457770875,
+          "totalUs": 4207448000,
+          "fraction": 0.10880012658504633,
+          "uiTicks": 563
+        },
+        {
+          "state": "running",
+          "processedUs": 463232208,
+          "totalUs": 4207448000,
+          "fraction": 0.11009814215172713,
+          "uiTicks": 566
+        },
+        {
+          "state": "running",
+          "processedUs": 469592187,
+          "totalUs": 4207448000,
+          "fraction": 0.11160974229509193,
+          "uiTicks": 570
+        },
+        {
+          "state": "running",
+          "processedUs": 476632187,
+          "totalUs": 4207448000,
+          "fraction": 0.11328296558864186,
+          "uiTicks": 574
+        },
+        {
+          "state": "running",
+          "processedUs": 483213515,
+          "totalUs": 4207448000,
+          "fraction": 0.11484717458183678,
+          "uiTicks": 577
+        },
+        {
+          "state": "running",
+          "processedUs": 490133541,
+          "totalUs": 4207448000,
+          "fraction": 0.11649188320330994,
+          "uiTicks": 581
+        },
+        {
+          "state": "running",
+          "processedUs": 497397541,
+          "totalUs": 4207448000,
+          "fraction": 0.11821834541983645,
+          "uiTicks": 585
+        },
+        {
+          "state": "running",
+          "processedUs": 504194843,
+          "totalUs": 4207448000,
+          "fraction": 0.1198338857663838,
+          "uiTicks": 589
+        },
+        {
+          "state": "running",
+          "processedUs": 510293541,
+          "totalUs": 4207448000,
+          "fraction": 0.12128338627120287,
+          "uiTicks": 592
+        },
+        {
+          "state": "running",
+          "processedUs": 517357578,
+          "totalUs": 4207448000,
+          "fraction": 0.12296232252900095,
+          "uiTicks": 596
+        },
+        {
+          "state": "running",
+          "processedUs": 523360208,
+          "totalUs": 4207448000,
+          "fraction": 0.12438899019072844,
+          "uiTicks": 600
+        },
+        {
+          "state": "running",
+          "processedUs": 529218906,
+          "totalUs": 4207448000,
+          "fraction": 0.12578144899235832,
+          "uiTicks": 602
+        },
+        {
+          "state": "running",
+          "processedUs": 535658916,
+          "totalUs": 4207448000,
+          "fraction": 0.12731207040467285,
+          "uiTicks": 605
+        },
+        {
+          "state": "running",
+          "processedUs": 543600234,
+          "totalUs": 4207448000,
+          "fraction": 0.1291995133392023,
+          "uiTicks": 608
+        },
+        {
+          "state": "running",
+          "processedUs": 550986916,
+          "totalUs": 4207448000,
+          "fraction": 0.13095513384835653,
+          "uiTicks": 611
+        },
+        {
+          "state": "running",
+          "processedUs": 558381562,
+          "totalUs": 4207448000,
+          "fraction": 0.1327126471913616,
+          "uiTicks": 614
+        },
+        {
+          "state": "running",
+          "processedUs": 564352250,
+          "totalUs": 4207448000,
+          "fraction": 0.13413172307774213,
+          "uiTicks": 617
+        },
+        {
+          "state": "running",
+          "processedUs": 571189583,
+          "totalUs": 4207448000,
+          "fraction": 0.1357567777427077,
+          "uiTicks": 620
+        },
+        {
+          "state": "running",
+          "processedUs": 578133583,
+          "totalUs": 4207448000,
+          "fraction": 0.13740718435498192,
+          "uiTicks": 623
+        },
+        {
+          "state": "running",
+          "processedUs": 585944218,
+          "totalUs": 4207448000,
+          "fraction": 0.13926356736910356,
+          "uiTicks": 626
+        },
+        {
+          "state": "running",
+          "processedUs": 593184250,
+          "totalUs": 4207448000,
+          "fraction": 0.14098433302087157,
+          "uiTicks": 629
+        },
+        {
+          "state": "running",
+          "processedUs": 599882916,
+          "totalUs": 4207448000,
+          "fraction": 0.1425764301781032,
+          "uiTicks": 633
+        },
+        {
+          "state": "running",
+          "processedUs": 606805583,
+          "totalUs": 4207448000,
+          "fraction": 0.14422176649598523,
+          "uiTicks": 636
+        },
+        {
+          "state": "running",
+          "processedUs": 614128281,
+          "totalUs": 4207448000,
+          "fraction": 0.1459621796870692,
+          "uiTicks": 639
+        },
+        {
+          "state": "running",
+          "processedUs": 620888281,
+          "totalUs": 4207448000,
+          "fraction": 0.1475688543268984,
+          "uiTicks": 642
+        },
+        {
+          "state": "running",
+          "processedUs": 628202958,
+          "totalUs": 4207448000,
+          "fraction": 0.14930736113672707,
+          "uiTicks": 645
+        },
+        {
+          "state": "running",
+          "processedUs": 634048291,
+          "totalUs": 4207448000,
+          "fraction": 0.15069664342851058,
+          "uiTicks": 647
+        },
+        {
+          "state": "running",
+          "processedUs": 641141625,
+          "totalUs": 4207448000,
+          "fraction": 0.1523825428145517,
+          "uiTicks": 650
+        },
+        {
+          "state": "running",
+          "processedUs": 647712291,
+          "totalUs": 4207448000,
+          "fraction": 0.15394421773008246,
+          "uiTicks": 653
+        },
+        {
+          "state": "running",
+          "processedUs": 654549625,
+          "totalUs": 4207448000,
+          "fraction": 0.15556927263272177,
+          "uiTicks": 656
+        },
+        {
+          "state": "running",
+          "processedUs": 661933593,
+          "totalUs": 4207448000,
+          "fraction": 0.15732424809528245,
+          "uiTicks": 659
+        },
+        {
+          "state": "running",
+          "processedUs": 669453593,
+          "totalUs": 4207448000,
+          "fraction": 0.15911155479521077,
+          "uiTicks": 662
+        },
+        {
+          "state": "running",
+          "processedUs": 675714921,
+          "totalUs": 4207448000,
+          "fraction": 0.16059970818415342,
+          "uiTicks": 665
+        },
+        {
+          "state": "running",
+          "processedUs": 683394921,
+          "totalUs": 4207448000,
+          "fraction": 0.1624250426862079,
+          "uiTicks": 668
+        },
+        {
+          "state": "running",
+          "processedUs": 689176328,
+          "totalUs": 4207448000,
+          "fraction": 0.16379913144499944,
+          "uiTicks": 671
+        },
+        {
+          "state": "running",
+          "processedUs": 692856328,
+          "totalUs": 4207448000,
+          "fraction": 0.16467377089390053,
+          "uiTicks": 673
+        },
+        {
+          "state": "running",
+          "processedUs": 696906958,
+          "totalUs": 4207448000,
+          "fraction": 0.1656364993696892,
+          "uiTicks": 675
+        },
+        {
+          "state": "running",
+          "processedUs": 703744333,
+          "totalUs": 4207448000,
+          "fraction": 0.1672615640169528,
+          "uiTicks": 678
+        },
+        {
+          "state": "running",
+          "processedUs": 709365666,
+          "totalUs": 4207448000,
+          "fraction": 0.16859760738575974,
+          "uiTicks": 681
+        },
+        {
+          "state": "running",
+          "processedUs": 717378984,
+          "totalUs": 4207448000,
+          "fraction": 0.17050216283124592,
+          "uiTicks": 684
+        },
+        {
+          "state": "running",
+          "processedUs": 722880333,
+          "totalUs": 4207448000,
+          "fraction": 0.17180968915123848,
+          "uiTicks": 687
+        },
+        {
+          "state": "running",
+          "processedUs": 729707000,
+          "totalUs": 4207448000,
+          "fraction": 0.1734322087878448,
+          "uiTicks": 690
+        },
+        {
+          "state": "running",
+          "processedUs": 735179000,
+          "totalUs": 4207448000,
+          "fraction": 0.1747327596205586,
+          "uiTicks": 692
+        },
+        {
+          "state": "running",
+          "processedUs": 741101640,
+          "totalUs": 4207448000,
+          "fraction": 0.17614041575796063,
+          "uiTicks": 694
+        },
+        {
+          "state": "running",
+          "processedUs": 747477666,
+          "totalUs": 4207448000,
+          "fraction": 0.17765582985220496,
+          "uiTicks": 697
+        },
+        {
+          "state": "running",
+          "processedUs": 754795000,
+          "totalUs": 4207448000,
+          "fraction": 0.17939496816122266,
+          "uiTicks": 700
+        },
+        {
+          "state": "running",
+          "processedUs": 761141666,
+          "totalUs": 4207448000,
+          "fraction": 0.18090340415377681,
+          "uiTicks": 704
+        },
+        {
+          "state": "running",
+          "processedUs": 766155000,
+          "totalUs": 4207448000,
+          "fraction": 0.18209494211217822,
+          "uiTicks": 706
+        },
+        {
+          "state": "running",
+          "processedUs": 772075000,
+          "totalUs": 4207448000,
+          "fraction": 0.18350197079084518,
+          "uiTicks": 709
+        },
+        {
+          "state": "running",
+          "processedUs": 778901666,
+          "totalUs": 4207448000,
+          "fraction": 0.18512449018977775,
+          "uiTicks": 712
+        },
+        {
+          "state": "running",
+          "processedUs": 784373708,
+          "totalUs": 4207448000,
+          "fraction": 0.1864250510047896,
+          "uiTicks": 714
+        },
+        {
+          "state": "running",
+          "processedUs": 791427031,
+          "totalUs": 4207448000,
+          "fraction": 0.1881014408258878,
+          "uiTicks": 717
+        },
+        {
+          "state": "running",
+          "processedUs": 798037708,
+          "totalUs": 4207448000,
+          "fraction": 0.18967262530636148,
+          "uiTicks": 720
+        },
+        {
+          "state": "running",
+          "processedUs": 802027041,
+          "totalUs": 4207448000,
+          "fraction": 0.19062078509348185,
+          "uiTicks": 722
+        },
+        {
+          "state": "running",
+          "processedUs": 805549687,
+          "totalUs": 4207448000,
+          "fraction": 0.19145802562503447,
+          "uiTicks": 724
+        },
+        {
+          "state": "running",
+          "processedUs": 810336375,
+          "totalUs": 4207448000,
+          "fraction": 0.1925956957756816,
+          "uiTicks": 726
+        },
+        {
+          "state": "running",
+          "processedUs": 816429687,
+          "totalUs": 4207448000,
+          "fraction": 0.1940439161696116,
+          "uiTicks": 728
+        },
+        {
+          "state": "running",
+          "processedUs": 822291015,
+          "totalUs": 4207448000,
+          "fraction": 0.1954370000532389,
+          "uiTicks": 730
+        },
+        {
+          "state": "running",
+          "processedUs": 829035041,
+          "totalUs": 4207448000,
+          "fraction": 0.19703987809237333,
+          "uiTicks": 733
+        },
+        {
+          "state": "running",
+          "processedUs": 836299041,
+          "totalUs": 4207448000,
+          "fraction": 0.19876634030889984,
+          "uiTicks": 736
+        },
+        {
+          "state": "running",
+          "processedUs": 843053671,
+          "totalUs": 4207448000,
+          "fraction": 0.20037173864062016,
+          "uiTicks": 739
+        },
+        {
+          "state": "running",
+          "processedUs": 848811041,
+          "totalUs": 4207448000,
+          "fraction": 0.20174011443516354,
+          "uiTicks": 742
+        },
+        {
+          "state": "running",
+          "processedUs": 854075078,
+          "totalUs": 4207448000,
+          "fraction": 0.2029912379190426,
+          "uiTicks": 745
+        },
+        {
+          "state": "running",
+          "processedUs": 859211041,
+          "totalUs": 4207448000,
+          "fraction": 0.2042119215733623,
+          "uiTicks": 747
+        },
+        {
+          "state": "running",
+          "processedUs": 862275078,
+          "totalUs": 4207448000,
+          "fraction": 0.204940162778007,
+          "uiTicks": 749
+        },
+        {
+          "state": "running",
+          "processedUs": 868056406,
+          "totalUs": 4207448000,
+          "fraction": 0.20631423276057126,
+          "uiTicks": 752
+        },
+        {
+          "state": "running",
+          "processedUs": 874416406,
+          "totalUs": 4207448000,
+          "fraction": 0.2078258378950851,
+          "uiTicks": 755
+        },
+        {
+          "state": "running",
+          "processedUs": 877016406,
+          "totalUs": 4207448000,
+          "fraction": 0.20844378967963478,
+          "uiTicks": 758
+        },
+        {
+          "state": "running",
+          "processedUs": 877643083,
+          "totalUs": 4207448000,
+          "fraction": 0.20859273436059103,
+          "uiTicks": 761
+        },
+        {
+          "state": "running",
+          "processedUs": 878283083,
+          "totalUs": 4207448000,
+          "fraction": 0.20874484556909556,
+          "uiTicks": 764
+        },
+        {
+          "state": "running",
+          "processedUs": 882763083,
+          "totalUs": 4207448000,
+          "fraction": 0.20980962402862732,
+          "uiTicks": 767
+        },
+        {
+          "state": "running",
+          "processedUs": 890965750,
+          "totalUs": 4207448000,
+          "fraction": 0.2117591827635184,
+          "uiTicks": 770
+        },
+        {
+          "state": "running",
+          "processedUs": 899157750,
+          "totalUs": 4207448000,
+          "fraction": 0.2137062062323765,
+          "uiTicks": 773
+        },
+        {
+          "state": "running",
+          "processedUs": 906805750,
+          "totalUs": 4207448000,
+          "fraction": 0.21552393517400573,
+          "uiTicks": 776
+        },
+        {
+          "state": "running",
+          "processedUs": 914197750,
+          "totalUs": 4207448000,
+          "fraction": 0.2172808196322331,
+          "uiTicks": 780
+        },
+        {
+          "state": "running",
+          "processedUs": 919661718,
+          "totalUs": 4207448000,
+          "fraction": 0.2185794614692802,
+          "uiTicks": 783
+        },
+        {
+          "state": "running",
+          "processedUs": 927363046,
+          "totalUs": 4207448000,
+          "fraction": 0.22040986507735805,
+          "uiTicks": 786
+        },
+        {
+          "state": "running",
+          "processedUs": 934688416,
+          "totalUs": 4207448000,
+          "fraction": 0.22215091333273757,
+          "uiTicks": 789
+        },
+        {
+          "state": "running",
+          "processedUs": 941144453,
+          "totalUs": 4207448000,
+          "fraction": 0.22368534394245632,
+          "uiTicks": 792
+        },
+        {
+          "state": "running",
+          "processedUs": 947544453,
+          "totalUs": 4207448000,
+          "fraction": 0.2252064560275017,
+          "uiTicks": 795
+        },
+        {
+          "state": "running",
+          "processedUs": 956128458,
+          "totalUs": 4207448000,
+          "fraction": 0.22724664879993764,
+          "uiTicks": 798
+        },
+        {
+          "state": "running",
+          "processedUs": 963392458,
+          "totalUs": 4207448000,
+          "fraction": 0.22897311101646414,
+          "uiTicks": 801
+        },
+        {
+          "state": "running",
+          "processedUs": 968853791,
+          "totalUs": 4207448000,
+          "fraction": 0.23027112658314494,
+          "uiTicks": 804
+        },
+        {
+          "state": "running",
+          "processedUs": 975712458,
+          "totalUs": 4207448000,
+          "fraction": 0.23190125178017648,
+          "uiTicks": 807
+        },
+        {
+          "state": "running",
+          "processedUs": 983128437,
+          "totalUs": 4207448000,
+          "fraction": 0.2336638354175738,
+          "uiTicks": 810
+        },
+        {
+          "state": "running",
+          "processedUs": 988909765,
+          "totalUs": 4207448000,
+          "fraction": 0.23503790540013805,
+          "uiTicks": 813
+        },
+        {
+          "state": "running",
+          "processedUs": 996189765,
+          "totalUs": 4207448000,
+          "fraction": 0.23676817039687717,
+          "uiTicks": 816
+        },
+        {
+          "state": "running",
+          "processedUs": 1003019125,
+          "totalUs": 4207448000,
+          "fraction": 0.23839133008892802,
+          "uiTicks": 819
+        },
+        {
+          "state": "running",
+          "processedUs": 1009731093,
+          "totalUs": 4207448000,
+          "fraction": 0.23998658878255894,
+          "uiTicks": 822
+        },
+        {
+          "state": "running",
+          "processedUs": 1016152421,
+          "totalUs": 4207448000,
+          "fraction": 0.24151276997362772,
+          "uiTicks": 825
+        },
+        {
+          "state": "running",
+          "processedUs": 1023520458,
+          "totalUs": 4207448000,
+          "fraction": 0.24326395905546544,
+          "uiTicks": 828
+        },
+        {
+          "state": "running",
+          "processedUs": 1030347125,
+          "totalUs": 4207448000,
+          "fraction": 0.24488647869207178,
+          "uiTicks": 831
+        },
+        {
+          "state": "running",
+          "processedUs": 1036011166,
+          "totalUs": 4207448000,
+          "fraction": 0.24623267263196122,
+          "uiTicks": 833
+        },
+        {
+          "state": "running",
+          "processedUs": 1041280500,
+          "totalUs": 4207448000,
+          "fraction": 0.24748505507376442,
+          "uiTicks": 837
+        },
+        {
+          "state": "running",
+          "processedUs": 1046411166,
+          "totalUs": 4207448000,
+          "fraction": 0.24870447977015997,
+          "uiTicks": 839
+        },
+        {
+          "state": "running",
+          "processedUs": 1053336484,
+          "totalUs": 4207448000,
+          "fraction": 0.25035044616118846,
+          "uiTicks": 842
+        },
+        {
+          "state": "running",
+          "processedUs": 1058797812,
+          "totalUs": 4207448000,
+          "fraction": 0.2516484605395004,
+          "uiTicks": 844
+        },
+        {
+          "state": "running",
+          "processedUs": 1065877833,
+          "totalUs": 4207448000,
+          "fraction": 0.2533311957747309,
+          "uiTicks": 847
+        },
+        {
+          "state": "running",
+          "processedUs": 1072672500,
+          "totalUs": 4207448000,
+          "fraction": 0.254946109850912,
+          "uiTicks": 850
+        },
+        {
+          "state": "running",
+          "processedUs": 1080579140,
+          "totalUs": 4207448000,
+          "fraction": 0.2568253107346781,
+          "uiTicks": 853
+        },
+        {
+          "state": "running",
+          "processedUs": 1087189833,
+          "totalUs": 4207448000,
+          "fraction": 0.258396499017932,
+          "uiTicks": 856
+        },
+        {
+          "state": "running",
+          "processedUs": 1095605833,
+          "totalUs": 4207448000,
+          "fraction": 0.2603967614097667,
+          "uiTicks": 859
+        },
+        {
+          "state": "running",
+          "processedUs": 1102773833,
+          "totalUs": 4207448000,
+          "fraction": 0.2621004069450175,
+          "uiTicks": 862
+        },
+        {
+          "state": "running",
+          "processedUs": 1110485833,
+          "totalUs": 4207448000,
+          "fraction": 0.26393334700749715,
+          "uiTicks": 865
+        },
+        {
+          "state": "running",
+          "processedUs": 1119179208,
+          "totalUs": 4207448000,
+          "fraction": 0.26599953415942396,
+          "uiTicks": 868
+        },
+        {
+          "state": "running",
+          "processedUs": 1126048541,
+          "totalUs": 4207448000,
+          "fraction": 0.2676321943848147,
+          "uiTicks": 871
+        },
+        {
+          "state": "running",
+          "processedUs": 1133485859,
+          "totalUs": 4207448000,
+          "fraction": 0.26939984974264686,
+          "uiTicks": 874
+        },
+        {
+          "state": "running",
+          "processedUs": 1139645859,
+          "totalUs": 4207448000,
+          "fraction": 0.270863920124503,
+          "uiTicks": 877
+        },
+        {
+          "state": "running",
+          "processedUs": 1145141875,
+          "totalUs": 4207448000,
+          "fraction": 0.272170178930316,
+          "uiTicks": 880
+        },
+        {
+          "state": "running",
+          "processedUs": 1150603208,
+          "totalUs": 4207448000,
+          "fraction": 0.2734681944969968,
+          "uiTicks": 882
+        },
+        {
+          "state": "running",
+          "processedUs": 1158208541,
+          "totalUs": 4207448000,
+          "fraction": 0.27527578261216773,
+          "uiTicks": 885
+        },
+        {
+          "state": "running",
+          "processedUs": 1164888515,
+          "totalUs": 4207448000,
+          "fraction": 0.27686343717141604,
+          "uiTicks": 888
+        },
+        {
+          "state": "running",
+          "processedUs": 1171109843,
+          "totalUs": 4207448000,
+          "fraction": 0.27834208360982715,
+          "uiTicks": 891
+        },
+        {
+          "state": "running",
+          "processedUs": 1177709843,
+          "totalUs": 4207448000,
+          "fraction": 0.2799107304475302,
+          "uiTicks": 894
+        },
+        {
+          "state": "running",
+          "processedUs": 1184131171,
+          "totalUs": 4207448000,
+          "fraction": 0.28143691163859896,
+          "uiTicks": 897
+        },
+        {
+          "state": "running",
+          "processedUs": 1191192578,
+          "totalUs": 4207448000,
+          "fraction": 0.2831152228143996,
+          "uiTicks": 900
+        },
+        {
+          "state": "running",
+          "processedUs": 1196232578,
+          "totalUs": 4207448000,
+          "fraction": 0.2843130985813728,
+          "uiTicks": 903
+        },
+        {
+          "state": "running",
+          "processedUs": 1200472578,
+          "totalUs": 4207448000,
+          "fraction": 0.2853208353377154,
+          "uiTicks": 905
+        },
+        {
+          "state": "running",
+          "processedUs": 1206013906,
+          "totalUs": 4207448000,
+          "fraction": 0.2866378636170905,
+          "uiTicks": 908
+        },
+        {
+          "state": "running",
+          "processedUs": 1213333906,
+          "totalUs": 4207448000,
+          "fraction": 0.2883776355643611,
+          "uiTicks": 911
+        },
+        {
+          "state": "running",
+          "processedUs": 1219936583,
+          "totalUs": 4207448000,
+          "fraction": 0.2899469186547285,
+          "uiTicks": 914
+        },
+        {
+          "state": "running",
+          "processedUs": 1225760583,
+          "totalUs": 4207448000,
+          "fraction": 0.29133113065211974,
+          "uiTicks": 917
+        },
+        {
+          "state": "running",
+          "processedUs": 1232536562,
+          "totalUs": 4207448000,
+          "fraction": 0.2929416030810125,
+          "uiTicks": 919
+        },
+        {
+          "state": "running",
+          "processedUs": 1238957890,
+          "totalUs": 4207448000,
+          "fraction": 0.2944677842720813,
+          "uiTicks": 923
+        },
+        {
+          "state": "running",
+          "processedUs": 1245963250,
+          "totalUs": 4207448000,
+          "fraction": 0.2961327745464709,
+          "uiTicks": 925
+        },
+        {
+          "state": "running",
+          "processedUs": 1252299218,
+          "totalUs": 4207448000,
+          "fraction": 0.2976386679051054,
+          "uiTicks": 929
+        },
+        {
+          "state": "running",
+          "processedUs": 1257859218,
+          "totalUs": 4207448000,
+          "fraction": 0.2989601340289886,
+          "uiTicks": 932
+        },
+        {
+          "state": "running",
+          "processedUs": 1264032583,
+          "totalUs": 4207448000,
+          "fraction": 0.3004273809206911,
+          "uiTicks": 935
+        },
+        {
+          "state": "running",
+          "processedUs": 1268533916,
+          "totalUs": 4207448000,
+          "fraction": 0.3014972296746151,
+          "uiTicks": 937
+        },
+        {
+          "state": "running",
+          "processedUs": 1272600546,
+          "totalUs": 4207448000,
+          "fraction": 0.3024637609306164,
+          "uiTicks": 939
+        },
+        {
+          "state": "running",
+          "processedUs": 1279061916,
+          "totalUs": 4207448000,
+          "fraction": 0.30399945905451475,
+          "uiTicks": 942
+        },
+        {
+          "state": "running",
+          "processedUs": 1285741953,
+          "totalUs": 4207448000,
+          "fraction": 0.3055871285872101,
+          "uiTicks": 945
+        },
+        {
+          "state": "running",
+          "processedUs": 1291381958,
+          "totalUs": 4207448000,
+          "fraction": 0.30692760980052514,
+          "uiTicks": 948
+        },
+        {
+          "state": "running",
+          "processedUs": 1296821958,
+          "totalUs": 4207448000,
+          "fraction": 0.3082205550728137,
+          "uiTicks": 951
+        },
+        {
+          "state": "running",
+          "processedUs": 1303659291,
+          "totalUs": 4207448000,
+          "fraction": 0.3098456097377793,
+          "uiTicks": 954
+        },
+        {
+          "state": "running",
+          "processedUs": 1307624609,
+          "totalUs": 4207448000,
+          "fraction": 0.31078806178947427,
+          "uiTicks": 956
+        },
+        {
+          "state": "running",
+          "processedUs": 1310560625,
+          "totalUs": 4207448000,
+          "fraction": 0.31148587576126907,
+          "uiTicks": 958
+        },
+        {
+          "state": "running",
+          "processedUs": 1315565937,
+          "totalUs": 4207448000,
+          "fraction": 0.3126755071007414,
+          "uiTicks": 960
+        },
+        {
+          "state": "running",
+          "processedUs": 1321645937,
+          "totalUs": 4207448000,
+          "fraction": 0.31412056358153445,
+          "uiTicks": 963
+        },
+        {
+          "state": "running",
+          "processedUs": 1325525958,
+          "totalUs": 4207448000,
+          "fraction": 0.31504274277424227,
+          "uiTicks": 965
+        },
+        {
+          "state": "running",
+          "processedUs": 1329867265,
+          "totalUs": 4207448000,
+          "fraction": 0.31607455754652225,
+          "uiTicks": 967
+        },
+        {
+          "state": "running",
+          "processedUs": 1335568593,
+          "totalUs": 4207448000,
+          "fraction": 0.31742961362802347,
+          "uiTicks": 969
+        },
+        {
+          "state": "running",
+          "processedUs": 1340853958,
+          "totalUs": 4207448000,
+          "fraction": 0.3186858062179259,
+          "uiTicks": 971
+        },
+        {
+          "state": "running",
+          "processedUs": 1346989921,
+          "totalUs": 4207448000,
+          "fraction": 0.32014416363553394,
+          "uiTicks": 974
+        },
+        {
+          "state": "running",
+          "processedUs": 1352109921,
+          "totalUs": 4207448000,
+          "fraction": 0.32136105330357023,
+          "uiTicks": 976
+        },
+        {
+          "state": "running",
+          "processedUs": 1358315291,
+          "totalUs": 4207448000,
+          "fraction": 0.32283590694406683,
+          "uiTicks": 979
+        },
+        {
+          "state": "running",
+          "processedUs": 1365091328,
+          "totalUs": 4207448000,
+          "fraction": 0.32444639315803786,
+          "uiTicks": 982
+        },
+        {
+          "state": "running",
+          "processedUs": 1371032656,
+          "totalUs": 4207448000,
+          "fraction": 0.32585849094272823,
+          "uiTicks": 985
+        },
+        {
+          "state": "running",
+          "processedUs": 1377451333,
+          "totalUs": 4207448000,
+          "fraction": 0.3273840420606505,
+          "uiTicks": 988
+        },
+        {
+          "state": "running",
+          "processedUs": 1384493984,
+          "totalUs": 4207448000,
+          "fraction": 0.3290578954273469,
+          "uiTicks": 991
+        },
+        {
+          "state": "running",
+          "processedUs": 1390573984,
+          "totalUs": 4207448000,
+          "fraction": 0.33050295190814005,
+          "uiTicks": 994
+        },
+        {
+          "state": "running",
+          "processedUs": 1397952666,
+          "totalUs": 4207448000,
+          "fraction": 0.332256671027188,
+          "uiTicks": 997
+        },
+        {
+          "state": "running",
+          "processedUs": 1404779333,
+          "totalUs": 4207448000,
+          "fraction": 0.3338791906637943,
+          "uiTicks": 1001
+        },
+        {
+          "state": "running",
+          "processedUs": 1412726000,
+          "totalUs": 4207448000,
+          "fraction": 0.3357679049152836,
+          "uiTicks": 1004
+        },
+        {
+          "state": "running",
+          "processedUs": 1418443333,
+          "totalUs": 4207448000,
+          "fraction": 0.3371267649653662,
+          "uiTicks": 1007
+        },
+        {
+          "state": "running",
+          "processedUs": 1421997968,
+          "totalUs": 4207448000,
+          "fraction": 0.3379716084429326,
+          "uiTicks": 1009
+        },
+        {
+          "state": "running",
+          "processedUs": 1429037968,
+          "totalUs": 4207448000,
+          "fraction": 0.3396448317364825,
+          "uiTicks": 1012
+        },
+        {
+          "state": "running",
+          "processedUs": 1436419296,
+          "totalUs": 4207448000,
+          "fraction": 0.34139917974030815,
+          "uiTicks": 1015
+        },
+        {
+          "state": "running",
+          "processedUs": 1443414000,
+          "totalUs": 4207448000,
+          "fraction": 0.34306163736307616,
+          "uiTicks": 1018
+        },
+        {
+          "state": "running",
+          "processedUs": 1449878000,
+          "totalUs": 4207448000,
+          "fraction": 0.34459796056897196,
+          "uiTicks": 1021
+        },
+        {
+          "state": "running",
+          "processedUs": 1456742031,
+          "totalUs": 4207448000,
+          "fraction": 0.3462293606480698,
+          "uiTicks": 1024
+        },
+        {
+          "state": "running",
+          "processedUs": 1463542041,
+          "totalUs": 4207448000,
+          "fraction": 0.34784554461516815,
+          "uiTicks": 1028
+        },
+        {
+          "state": "running",
+          "processedUs": 1469014041,
+          "totalUs": 4207448000,
+          "fraction": 0.34914609544788194,
+          "uiTicks": 1030
+        },
+        {
+          "state": "running",
+          "processedUs": 1475523359,
+          "totalUs": 4207448000,
+          "fraction": 0.35069318955338247,
+          "uiTicks": 1033
+        },
+        {
+          "state": "running",
+          "processedUs": 1482984687,
+          "totalUs": 4207448000,
+          "fraction": 0.35246655145827116,
+          "uiTicks": 1036
+        },
+        {
+          "state": "running",
+          "processedUs": 1489944687,
+          "totalUs": 4207448000,
+          "fraction": 0.354120760850758,
+          "uiTicks": 1039
+        },
+        {
+          "state": "running",
+          "processedUs": 1496171375,
+          "totalUs": 4207448000,
+          "fraction": 0.35560068122054034,
+          "uiTicks": 1042
+        },
+        {
+          "state": "running",
+          "processedUs": 1501806015,
+          "totalUs": 4207448000,
+          "fraction": 0.35693988731411536,
+          "uiTicks": 1045
+        },
+        {
+          "state": "running",
+          "processedUs": 1507275375,
+          "totalUs": 4207448000,
+          "fraction": 0.3582398106880941,
+          "uiTicks": 1048
+        },
+        {
+          "state": "running",
+          "processedUs": 1514102041,
+          "totalUs": 4207448000,
+          "fraction": 0.3598623300870266,
+          "uiTicks": 1051
+        },
+        {
+          "state": "running",
+          "processedUs": 1520939375,
+          "totalUs": 4207448000,
+          "fraction": 0.3614873849896659,
+          "uiTicks": 1054
+        },
+        {
+          "state": "running",
+          "processedUs": 1527790078,
+          "totalUs": 4207448000,
+          "fraction": 0.36311561735284664,
+          "uiTicks": 1057
+        },
+        {
+          "state": "running",
+          "processedUs": 1534510078,
+          "totalUs": 4207448000,
+          "fraction": 0.3647127850421443,
+          "uiTicks": 1060
+        },
+        {
+          "state": "running",
+          "processedUs": 1541411406,
+          "totalUs": 4207448000,
+          "fraction": 0.36635304963959153,
+          "uiTicks": 1063
+        },
+        {
+          "state": "running",
+          "processedUs": 1546902083,
+          "totalUs": 4207448000,
+          "fraction": 0.3676580395051822,
+          "uiTicks": 1066
+        },
+        {
+          "state": "running",
+          "processedUs": 1553739416,
+          "totalUs": 4207448000,
+          "fraction": 0.3692830941701478,
+          "uiTicks": 1070
+        },
+        {
+          "state": "running",
+          "processedUs": 1559478083,
+          "totalUs": 4207448000,
+          "fraction": 0.3706470247522964,
+          "uiTicks": 1073
+        },
+        {
+          "state": "running",
+          "processedUs": 1565398083,
+          "totalUs": 4207448000,
+          "fraction": 0.37205405343096337,
+          "uiTicks": 1075
+        },
+        {
+          "state": "running",
+          "processedUs": 1572331416,
+          "totalUs": 4207448000,
+          "fraction": 0.3737019247772046,
+          "uiTicks": 1078
+        },
+        {
+          "state": "running",
+          "processedUs": 1579104750,
+          "totalUs": 4207448000,
+          "fraction": 0.37531176855899345,
+          "uiTicks": 1081
+        },
+        {
+          "state": "running",
+          "processedUs": 1583875390,
+          "totalUs": 4207448000,
+          "fraction": 0.3764456245210874,
+          "uiTicks": 1083
+        },
+        {
+          "state": "running",
+          "processedUs": 1589270083,
+          "totalUs": 4207448000,
+          "fraction": 0.37772780150818264,
+          "uiTicks": 1085
+        },
+        {
+          "state": "running",
+          "processedUs": 1594731416,
+          "totalUs": 4207448000,
+          "fraction": 0.37902581707486344,
+          "uiTicks": 1087
+        },
+        {
+          "state": "running",
+          "processedUs": 1601198046,
+          "totalUs": 4207448000,
+          "fraction": 0.38056276536275674,
+          "uiTicks": 1090
+        },
+        {
+          "state": "running",
+          "processedUs": 1607030083,
+          "totalUs": 4207448000,
+          "fraction": 0.38194888754418355,
+          "uiTicks": 1093
+        },
+        {
+          "state": "running",
+          "processedUs": 1613379453,
+          "totalUs": 4207448000,
+          "fraction": 0.3834579662065936,
+          "uiTicks": 1095
+        },
+        {
+          "state": "running",
+          "processedUs": 1619307416,
+          "totalUs": 4207448000,
+          "fraction": 0.38486688748143766,
+          "uiTicks": 1098
+        },
+        {
+          "state": "running",
+          "processedUs": 1624800791,
+          "totalUs": 4207448000,
+          "fraction": 0.3861725185908418,
+          "uiTicks": 1100
+        },
+        {
+          "state": "running",
+          "processedUs": 1630360781,
+          "totalUs": 4207448000,
+          "fraction": 0.3874939823379873,
+          "uiTicks": 1102
+        },
+        {
+          "state": "running",
+          "processedUs": 1636142109,
+          "totalUs": 4207448000,
+          "fraction": 0.38886805232055155,
+          "uiTicks": 1105
+        },
+        {
+          "state": "running",
+          "processedUs": 1643862125,
+          "totalUs": 4207448000,
+          "fraction": 0.39070289757591775,
+          "uiTicks": 1108
+        },
+        {
+          "state": "running",
+          "processedUs": 1649923437,
+          "totalUs": 4207448000,
+          "fraction": 0.3921435124094225,
+          "uiTicks": 1111
+        },
+        {
+          "state": "running",
+          "processedUs": 1654582125,
+          "totalUs": 4207448000,
+          "fraction": 0.39325076031836875,
+          "uiTicks": 1113
+        },
+        {
+          "state": "running",
+          "processedUs": 1659544765,
+          "totalUs": 4207448000,
+          "fraction": 0.394430249643014,
+          "uiTicks": 1115
+        },
+        {
+          "state": "running",
+          "processedUs": 1666344765,
+          "totalUs": 4207448000,
+          "fraction": 0.39604643123337474,
+          "uiTicks": 1118
+        },
+        {
+          "state": "running",
+          "processedUs": 1672366093,
+          "totalUs": 4207448000,
+          "fraction": 0.3974775429191282,
+          "uiTicks": 1121
+        },
+        {
+          "state": "running",
+          "processedUs": 1679051458,
+          "totalUs": 4207448000,
+          "fraction": 0.39906647877763435,
+          "uiTicks": 1124
+        },
+        {
+          "state": "running",
+          "processedUs": 1684779458,
+          "totalUs": 4207448000,
+          "fraction": 0.4004278740937499,
+          "uiTicks": 1127
+        },
+        {
+          "state": "running",
+          "processedUs": 1689507421,
+          "totalUs": 4207448000,
+          "fraction": 0.40155158685264797,
+          "uiTicks": 1129
+        },
+        {
+          "state": "running",
+          "processedUs": 1695768828,
+          "totalUs": 4207448000,
+          "fraction": 0.4030397590178179,
+          "uiTicks": 1132
+        },
+        {
+          "state": "running",
+          "processedUs": 1701848828,
+          "totalUs": 4207448000,
+          "fraction": 0.40448481549861104,
+          "uiTicks": 1135
+        },
+        {
+          "state": "running",
+          "processedUs": 1708910156,
+          "totalUs": 4207448000,
+          "fraction": 0.4061631078981844,
+          "uiTicks": 1138
+        },
+        {
+          "state": "running",
+          "processedUs": 1715310156,
+          "totalUs": 4207448000,
+          "fraction": 0.40768421998322973,
+          "uiTicks": 1141
+        },
+        {
+          "state": "running",
+          "processedUs": 1722371484,
+          "totalUs": 4207448000,
+          "fraction": 0.4093625123828031,
+          "uiTicks": 1144
+        },
+        {
+          "state": "running",
+          "processedUs": 1729035500,
+          "totalUs": 4207448000,
+          "fraction": 0.41094637414413676,
+          "uiTicks": 1147
+        },
+        {
+          "state": "running",
+          "processedUs": 1736152812,
+          "totalUs": 4207448000,
+          "fraction": 0.41263797247167405,
+          "uiTicks": 1150
+        },
+        {
+          "state": "running",
+          "processedUs": 1741272812,
+          "totalUs": 4207448000,
+          "fraction": 0.41385486213971034,
+          "uiTicks": 1154
+        },
+        {
+          "state": "running",
+          "processedUs": 1746094140,
+          "totalUs": 4207448000,
+          "fraction": 0.4150007653095178,
+          "uiTicks": 1157
+        },
+        {
+          "state": "running",
+          "processedUs": 1751008833,
+          "totalUs": 4207448000,
+          "fraction": 0.41616885889023464,
+          "uiTicks": 1159
+        },
+        {
+          "state": "running",
+          "processedUs": 1757440833,
+          "totalUs": 4207448000,
+          "fraction": 0.4176975765357053,
+          "uiTicks": 1162
+        },
+        {
+          "state": "running",
+          "processedUs": 1764182166,
+          "totalUs": 4207448000,
+          "fraction": 0.41929981451939513,
+          "uiTicks": 1164
+        },
+        {
+          "state": "running",
+          "processedUs": 1770136796,
+          "totalUs": 4207448000,
+          "fraction": 0.4207150738404848,
+          "uiTicks": 1166
+        },
+        {
+          "state": "running",
+          "processedUs": 1777931500,
+          "totalUs": 4207448000,
+          "fraction": 0.42256767047388344,
+          "uiTicks": 1169
+        },
+        {
+          "state": "running",
+          "processedUs": 1785518203,
+          "totalUs": 4207448000,
+          "fraction": 0.4243708307268444,
+          "uiTicks": 1172
+        },
+        {
+          "state": "running",
+          "processedUs": 1790144833,
+          "totalUs": 4207448000,
+          "fraction": 0.42547045929028715,
+          "uiTicks": 1174
+        },
+        {
+          "state": "running",
+          "processedUs": 1796099531,
+          "totalUs": 4207448000,
+          "fraction": 0.4268857347731927,
+          "uiTicks": 1177
+        },
+        {
+          "state": "running",
+          "processedUs": 1803480859,
+          "totalUs": 4207448000,
+          "fraction": 0.42864008277701826,
+          "uiTicks": 1180
+        },
+        {
+          "state": "running",
+          "processedUs": 1807920859,
+          "totalUs": 4207448000,
+          "fraction": 0.4296953542860185,
+          "uiTicks": 1182
+        },
+        {
+          "state": "running",
+          "processedUs": 1814080859,
+          "totalUs": 4207448000,
+          "fraction": 0.43115942466787466,
+          "uiTicks": 1185
+        },
+        {
+          "state": "running",
+          "processedUs": 1817902187,
+          "totalUs": 4207448000,
+          "fraction": 0.4320676540743938,
+          "uiTicks": 1187
+        },
+        {
+          "state": "running",
+          "processedUs": 1823022187,
+          "totalUs": 4207448000,
+          "fraction": 0.4332845437424301,
+          "uiTicks": 1189
+        },
+        {
+          "state": "running",
+          "processedUs": 1827104875,
+          "totalUs": 4207448000,
+          "fraction": 0.4342548915637222,
+          "uiTicks": 1191
+        },
+        {
+          "state": "running",
+          "processedUs": 1831638208,
+          "totalUs": 4207448000,
+          "fraction": 0.43533234587807146,
+          "uiTicks": 1193
+        },
+        {
+          "state": "running",
+          "processedUs": 1836608875,
+          "totalUs": 4207448000,
+          "fraction": 0.4365137430100146,
+          "uiTicks": 1195
+        },
+        {
+          "state": "running",
+          "processedUs": 1842080875,
+          "totalUs": 4207448000,
+          "fraction": 0.4378142938427284,
+          "uiTicks": 1198
+        },
+        {
+          "state": "running",
+          "processedUs": 1847542208,
+          "totalUs": 4207448000,
+          "fraction": 0.4391123094094092,
+          "uiTicks": 1200
+        },
+        {
+          "state": "running",
+          "processedUs": 1853014208,
+          "totalUs": 4207448000,
+          "fraction": 0.440412860242123,
+          "uiTicks": 1202
+        },
+        {
+          "state": "running",
+          "processedUs": 1859072875,
+          "totalUs": 4207448000,
+          "fraction": 0.4418528464285239,
+          "uiTicks": 1205
+        },
+        {
+          "state": "running",
+          "processedUs": 1865667578,
+          "totalUs": 4207448000,
+          "fraction": 0.4434202343083028,
+          "uiTicks": 1208
+        },
+        {
+          "state": "running",
+          "processedUs": 1869627578,
+          "totalUs": 4207448000,
+          "fraction": 0.44436142241092463,
+          "uiTicks": 1210
+        },
+        {
+          "state": "running",
+          "processedUs": 1873907578,
+          "totalUs": 4207448000,
+          "fraction": 0.44537866611779875,
+          "uiTicks": 1212
+        },
+        {
+          "state": "running",
+          "processedUs": 1878168906,
+          "totalUs": 4207448000,
+          "fraction": 0.4463914719801647,
+          "uiTicks": 1214
+        },
+        {
+          "state": "running",
+          "processedUs": 1884438250,
+          "totalUs": 4207448000,
+          "fraction": 0.44788153056199387,
+          "uiTicks": 1217
+        },
+        {
+          "state": "running",
+          "processedUs": 1888544916,
+          "totalUs": 4207448000,
+          "fraction": 0.44885757732478215,
+          "uiTicks": 1219
+        },
+        {
+          "state": "running",
+          "processedUs": 1893870234,
+          "totalUs": 4207448000,
+          "fraction": 0.4501232656945493,
+          "uiTicks": 1221
+        },
+        {
+          "state": "running",
+          "processedUs": 1899571562,
+          "totalUs": 4207448000,
+          "fraction": 0.45147832177605046,
+          "uiTicks": 1223
+        },
+        {
+          "state": "running",
+          "processedUs": 1906304916,
+          "totalUs": 4207448000,
+          "fraction": 0.45307866336078306,
+          "uiTicks": 1226
+        },
+        {
+          "state": "running",
+          "processedUs": 1912630250,
+          "totalUs": 4207448000,
+          "fraction": 0.4545820292966188,
+          "uiTicks": 1229
+        },
+        {
+          "state": "running",
+          "processedUs": 1916747583,
+          "totalUs": 4207448000,
+          "fraction": 0.45556061132544,
+          "uiTicks": 1231
+        },
+        {
+          "state": "running",
+          "processedUs": 1922712890,
+          "totalUs": 4207448000,
+          "fraction": 0.4569784082893003,
+          "uiTicks": 1234
+        },
+        {
+          "state": "running",
+          "processedUs": 1929152916,
+          "totalUs": 4207448000,
+          "fraction": 0.45850903350439504,
+          "uiTicks": 1235
+        },
+        {
+          "state": "running",
+          "processedUs": 1933632916,
+          "totalUs": 4207448000,
+          "fraction": 0.4595738119639268,
+          "uiTicks": 1239
+        },
+        {
+          "state": "running",
+          "processedUs": 1938272916,
+          "totalUs": 4207448000,
+          "fraction": 0.4606766182255847,
+          "uiTicks": 1241
+        },
+        {
+          "state": "running",
+          "processedUs": 1944835546,
+          "totalUs": 4207448000,
+          "fraction": 0.4622363831947537,
+          "uiTicks": 1244
+        },
+        {
+          "state": "running",
+          "processedUs": 1950216953,
+          "totalUs": 4207448000,
+          "fraction": 0.4635154024482299,
+          "uiTicks": 1246
+        },
+        {
+          "state": "running",
+          "processedUs": 1955456953,
+          "totalUs": 4207448000,
+          "fraction": 0.4647608129678608,
+          "uiTicks": 1248
+        },
+        {
+          "state": "running",
+          "processedUs": 1960971625,
+          "totalUs": 4207448000,
+          "fraction": 0.46607150581540163,
+          "uiTicks": 1251
+        },
+        {
+          "state": "running",
+          "processedUs": 1967798291,
+          "totalUs": 4207448000,
+          "fraction": 0.4676940252143342,
+          "uiTicks": 1254
+        },
+        {
+          "state": "running",
+          "processedUs": 1972099609,
+          "totalUs": 4207448000,
+          "fraction": 0.4687163356504941,
+          "uiTicks": 1256
+        },
+        {
+          "state": "running",
+          "processedUs": 1977539609,
+          "totalUs": 4207448000,
+          "fraction": 0.47000928092278266,
+          "uiTicks": 1258
+        },
+        {
+          "state": "running",
+          "processedUs": 1984203625,
+          "totalUs": 4207448000,
+          "fraction": 0.47159314268411634,
+          "uiTicks": 1261
+        },
+        {
+          "state": "running",
+          "processedUs": 1990027625,
+          "totalUs": 4207448000,
+          "fraction": 0.47297735468150764,
+          "uiTicks": 1263
+        },
+        {
+          "state": "running",
+          "processedUs": 1996139625,
+          "totalUs": 4207448000,
+          "fraction": 0.474430016722726,
+          "uiTicks": 1266
+        },
+        {
+          "state": "running",
+          "processedUs": 2002222265,
+          "totalUs": 4207448000,
+          "fraction": 0.47587570066225415,
+          "uiTicks": 1269
+        },
+        {
+          "state": "running",
+          "processedUs": 2008963593,
+          "totalUs": 4207448000,
+          "fraction": 0.4774779374575752,
+          "uiTicks": 1272
+        },
+        {
+          "state": "running",
+          "processedUs": 2015392958,
+          "totalUs": 4207448000,
+          "fraction": 0.47900602883267956,
+          "uiTicks": 1275
+        },
+        {
+          "state": "running",
+          "processedUs": 2021099625,
+          "totalUs": 4207448000,
+          "fraction": 0.48036235385440296,
+          "uiTicks": 1278
+        },
+        {
+          "state": "running",
+          "processedUs": 2026560958,
+          "totalUs": 4207448000,
+          "fraction": 0.48166036942108376,
+          "uiTicks": 1280
+        },
+        {
+          "state": "running",
+          "processedUs": 2033611625,
+          "totalUs": 4207448000,
+          "fraction": 0.48333612798066666,
+          "uiTicks": 1283
+        },
+        {
+          "state": "running",
+          "processedUs": 2040046328,
+          "totalUs": 4207448000,
+          "fraction": 0.4848654880583194,
+          "uiTicks": 1286
+        },
+        {
+          "state": "running",
+          "processedUs": 2044225000,
+          "totalUs": 4207448000,
+          "fraction": 0.485858648758107,
+          "uiTicks": 1288
+        },
+        {
+          "state": "running",
+          "processedUs": 2049793000,
+          "totalUs": 4207448000,
+          "fraction": 0.4871820162720965,
+          "uiTicks": 1290
+        },
+        {
+          "state": "running",
+          "processedUs": 2056630333,
+          "totalUs": 4207448000,
+          "fraction": 0.4888070709370621,
+          "uiTicks": 1293
+        },
+        {
+          "state": "running",
+          "processedUs": 2062091666,
+          "totalUs": 4207448000,
+          "fraction": 0.4901050865037429,
+          "uiTicks": 1295
+        },
+        {
+          "state": "running",
+          "processedUs": 2068929000,
+          "totalUs": 4207448000,
+          "fraction": 0.4917301414063822,
+          "uiTicks": 1299
+        },
+        {
+          "state": "running",
+          "processedUs": 2076070312,
+          "totalUs": 4207448000,
+          "fraction": 0.49342744390423837,
+          "uiTicks": 1302
+        },
+        {
+          "state": "running",
+          "processedUs": 2083011640,
+          "totalUs": 4207448000,
+          "fraction": 0.4950772154522171,
+          "uiTicks": 1305
+        },
+        {
+          "state": "running",
+          "processedUs": 2089419666,
+          "totalUs": 4207448000,
+          "fraction": 0.49660023510688667,
+          "uiTicks": 1308
+        },
+        {
+          "state": "running",
+          "processedUs": 2095275666,
+          "totalUs": 4207448000,
+          "fraction": 0.49799205266470314,
+          "uiTicks": 1311
+        },
+        {
+          "state": "running",
+          "processedUs": 2101718333,
+          "totalUs": 4207448000,
+          "fraction": 0.4995233055762068,
+          "uiTicks": 1314
+        },
+        {
+          "state": "running",
+          "processedUs": 2107425000,
+          "totalUs": 4207448000,
+          "fraction": 0.5008796305979302,
+          "uiTicks": 1316
+        },
+        {
+          "state": "running",
+          "processedUs": 2113774296,
+          "totalUs": 4207448000,
+          "fraction": 0.5023886916724818,
+          "uiTicks": 1319
+        },
+        {
+          "state": "running",
+          "processedUs": 2120035703,
+          "totalUs": 4207448000,
+          "fraction": 0.5038768638376517,
+          "uiTicks": 1322
+        },
+        {
+          "state": "running",
+          "processedUs": 2124950333,
+          "totalUs": 4207448000,
+          "fraction": 0.5050449424449215,
+          "uiTicks": 1324
+        },
+        {
+          "state": "running",
+          "processedUs": 2130422375,
+          "totalUs": 4207448000,
+          "fraction": 0.5063455032599333,
+          "uiTicks": 1326
+        },
+        {
+          "state": "running",
+          "processedUs": 2138137031,
+          "totalUs": 4207448000,
+          "fraction": 0.5081790745839283,
+          "uiTicks": 1329
+        },
+        {
+          "state": "running",
+          "processedUs": 2145067708,
+          "totalUs": 4207448000,
+          "fraction": 0.5098263146686542,
+          "uiTicks": 1332
+        },
+        {
+          "state": "running",
+          "processedUs": 2151278359,
+          "totalUs": 4207448000,
+          "fraction": 0.5113024234642948,
+          "uiTicks": 1335
+        },
+        {
+          "state": "running",
+          "processedUs": 2156385041,
+          "totalUs": 4207448000,
+          "fraction": 0.5125161477931516,
+          "uiTicks": 1337
+        },
+        {
+          "state": "running",
+          "processedUs": 2161846375,
+          "totalUs": 4207448000,
+          "fraction": 0.5138141635975061,
+          "uiTicks": 1339
+        },
+        {
+          "state": "running",
+          "processedUs": 2167318375,
+          "totalUs": 4207448000,
+          "fraction": 0.5151147144302199,
+          "uiTicks": 1342
+        },
+        {
+          "state": "running",
+          "processedUs": 2172459708,
+          "totalUs": 4207448000,
+          "fraction": 0.5163366743926485,
+          "uiTicks": 1344
+        },
+        {
+          "state": "running",
+          "processedUs": 2177582343,
+          "totalUs": 4207448000,
+          "fraction": 0.517554190331051,
+          "uiTicks": 1346
+        },
+        {
+          "state": "running",
+          "processedUs": 2182347708,
+          "totalUs": 4207448000,
+          "fraction": 0.5186867925640436,
+          "uiTicks": 1348
+        },
+        {
+          "state": "running",
+          "processedUs": 2188483671,
+          "totalUs": 4207448000,
+          "fraction": 0.5201451499816516,
+          "uiTicks": 1351
+        },
+        {
+          "state": "running",
+          "processedUs": 2192875708,
+          "totalUs": 4207448000,
+          "fraction": 0.5211890219439432,
+          "uiTicks": 1353
+        },
+        {
+          "state": "running",
+          "processedUs": 2197206375,
+          "totalUs": 4207448000,
+          "fraction": 0.5222183078673819,
+          "uiTicks": 1355
+        },
+        {
+          "state": "running",
+          "processedUs": 2203339708,
+          "totalUs": 4207448000,
+          "fraction": 0.5236760402029924,
+          "uiTicks": 1358
+        },
+        {
+          "state": "running",
+          "processedUs": 2208310375,
+          "totalUs": 4207448000,
+          "fraction": 0.5248574373349356,
+          "uiTicks": 1360
+        },
+        {
+          "state": "running",
+          "processedUs": 2213486406,
+          "totalUs": 4207448000,
+          "fraction": 0.5260876441016027,
+          "uiTicks": 1362
+        },
+        {
+          "state": "running",
+          "processedUs": 2219246406,
+          "totalUs": 4207448000,
+          "fraction": 0.5274566449781435,
+          "uiTicks": 1366
+        },
+        {
+          "state": "running",
+          "processedUs": 2226627734,
+          "totalUs": 4207448000,
+          "fraction": 0.5292109929819692,
+          "uiTicks": 1369
+        },
+        {
+          "state": "running",
+          "processedUs": 2232067734,
+          "totalUs": 4207448000,
+          "fraction": 0.5305039382542577,
+          "uiTicks": 1372
+        },
+        {
+          "state": "running",
+          "processedUs": 2235707734,
+          "totalUs": 4207448000,
+          "fraction": 0.5313690707526273,
+          "uiTicks": 1374
+        },
+        {
+          "state": "running",
+          "processedUs": 2241689062,
+          "totalUs": 4207448000,
+          "fraction": 0.5327906754878492,
+          "uiTicks": 1377
+        },
+        {
+          "state": "running",
+          "processedUs": 2247446416,
+          "totalUs": 4207448000,
+          "fraction": 0.5341590474796123,
+          "uiTicks": 1379
+        },
+        {
+          "state": "running",
+          "processedUs": 2252043750,
+          "totalUs": 4207448000,
+          "fraction": 0.5352517131524858,
+          "uiTicks": 1381
+        },
+        {
+          "state": "running",
+          "processedUs": 2257078416,
+          "totalUs": 4207448000,
+          "fraction": 0.5364483211676057,
+          "uiTicks": 1383
+        },
+        {
+          "state": "running",
+          "processedUs": 2262273083,
+          "totalUs": 4207448000,
+          "fraction": 0.5376829572225253,
+          "uiTicks": 1385
+        },
+        {
+          "state": "running",
+          "processedUs": 2267651718,
+          "totalUs": 4207448000,
+          "fraction": 0.5389613176443298,
+          "uiTicks": 1387
+        },
+        {
+          "state": "running",
+          "processedUs": 2272950416,
+          "totalUs": 4207448000,
+          "fraction": 0.5402206791385181,
+          "uiTicks": 1389
+        },
+        {
+          "state": "running",
+          "processedUs": 2276875750,
+          "totalUs": 4207448000,
+          "fraction": 0.5411536280424618,
+          "uiTicks": 1391
+        },
+        {
+          "state": "running",
+          "processedUs": 2282113046,
+          "totalUs": 4207448000,
+          "fraction": 0.5423983958922368,
+          "uiTicks": 1393
+        },
+        {
+          "state": "running",
+          "processedUs": 2287915750,
+          "totalUs": 4207448000,
+          "fraction": 0.5437775463891651,
+          "uiTicks": 1396
+        },
+        {
+          "state": "running",
+          "processedUs": 2291670416,
+          "totalUs": 4207448000,
+          "fraction": 0.5446699319872759,
+          "uiTicks": 1398
+        },
+        {
+          "state": "running",
+          "processedUs": 2297155781,
+          "totalUs": 4207448000,
+          "fraction": 0.545973659329836,
+          "uiTicks": 1400
+        },
+        {
+          "state": "running",
+          "processedUs": 2303875781,
+          "totalUs": 4207448000,
+          "fraction": 0.5475708270191337,
+          "uiTicks": 1403
+        },
+        {
+          "state": "running",
+          "processedUs": 2310297109,
+          "totalUs": 4207448000,
+          "fraction": 0.5490970082102025,
+          "uiTicks": 1406
+        },
+        {
+          "state": "running",
+          "processedUs": 2314347791,
+          "totalUs": 4207448000,
+          "fraction": 0.5500597490450269,
+          "uiTicks": 1408
+        },
+        {
+          "state": "running",
+          "processedUs": 2319257109,
+          "totalUs": 4207448000,
+          "fraction": 0.551226565129266,
+          "uiTicks": 1410
+        },
+        {
+          "state": "running",
+          "processedUs": 2325835791,
+          "totalUs": 4207448000,
+          "fraction": 0.5527901452376832,
+          "uiTicks": 1413
+        },
+        {
+          "state": "running",
+          "processedUs": 2332481125,
+          "totalUs": 4207448000,
+          "fraction": 0.5543695667777713,
+          "uiTicks": 1416
+        },
+        {
+          "state": "running",
+          "processedUs": 2338326458,
+          "totalUs": 4207448000,
+          "fraction": 0.5557588490695548,
+          "uiTicks": 1419
+        },
+        {
+          "state": "running",
+          "processedUs": 2344281093,
+          "totalUs": 4207448000,
+          "fraction": 0.5571741095790133,
+          "uiTicks": 1422
+        },
+        {
+          "state": "running",
+          "processedUs": 2350601093,
+          "totalUs": 4207448000,
+          "fraction": 0.5586762077629955,
+          "uiTicks": 1425
+        },
+        {
+          "state": "running",
+          "processedUs": 2356782421,
+          "totalUs": 4207448000,
+          "fraction": 0.5601453472508752,
+          "uiTicks": 1428
+        },
+        {
+          "state": "running",
+          "processedUs": 2362542421,
+          "totalUs": 4207448000,
+          "fraction": 0.561514348127416,
+          "uiTicks": 1431
+        },
+        {
+          "state": "running",
+          "processedUs": 2367467791,
+          "totalUs": 4207448000,
+          "fraction": 0.5626849793509034,
+          "uiTicks": 1433
+        },
+        {
+          "state": "running",
+          "processedUs": 2372803828,
+          "totalUs": 4207448000,
+          "fraction": 0.5639532153457393,
+          "uiTicks": 1436
+        },
+        {
+          "state": "running",
+          "processedUs": 2377761125,
+          "totalUs": 4207448000,
+          "fraction": 0.5651314347794673,
+          "uiTicks": 1438
+        },
+        {
+          "state": "running",
+          "processedUs": 2383233166,
+          "totalUs": 4207448000,
+          "fraction": 0.5664319953568053,
+          "uiTicks": 1442
+        },
+        {
+          "state": "running",
+          "processedUs": 2387865156,
+          "totalUs": 4207448000,
+          "fraction": 0.5675328978516193,
+          "uiTicks": 1444
+        },
+        {
+          "state": "running",
+          "processedUs": 2393142500,
+          "totalUs": 4207448000,
+          "fraction": 0.5687871840602665,
+          "uiTicks": 1447
+        },
+        {
+          "state": "running",
+          "processedUs": 2398766484,
+          "totalUs": 4207448000,
+          "fraction": 0.5701238575022198,
+          "uiTicks": 1450
+        },
+        {
+          "state": "running",
+          "processedUs": 2405547833,
+          "totalUs": 4207448000,
+          "fraction": 0.5717356062392215,
+          "uiTicks": 1453
+        },
+        {
+          "state": "running",
+          "processedUs": 2413291833,
+          "totalUs": 4207448000,
+          "fraction": 0.5735761518621264,
+          "uiTicks": 1456
+        },
+        {
+          "state": "running",
+          "processedUs": 2420249140,
+          "totalUs": 4207448000,
+          "fraction": 0.5752297211991687,
+          "uiTicks": 1459
+        },
+        {
+          "state": "running",
+          "processedUs": 2426955833,
+          "totalUs": 4207448000,
+          "fraction": 0.5768237261636983,
+          "uiTicks": 1462
+        },
+        {
+          "state": "running",
+          "processedUs": 2432427833,
+          "totalUs": 4207448000,
+          "fraction": 0.5781242769964121,
+          "uiTicks": 1465
+        },
+        {
+          "state": "running",
+          "processedUs": 2438190468,
+          "totalUs": 4207448000,
+          "fraction": 0.5794939041433191,
+          "uiTicks": 1468
+        },
+        {
+          "state": "running",
+          "processedUs": 2444726500,
+          "totalUs": 4207448000,
+          "fraction": 0.5810473474657322,
+          "uiTicks": 1471
+        },
+        {
+          "state": "running",
+          "processedUs": 2448822500,
+          "totalUs": 4207448000,
+          "fraction": 0.5820208592001612,
+          "uiTicks": 1473
+        },
+        {
+          "state": "running",
+          "processedUs": 2454294500,
+          "totalUs": 4207448000,
+          "fraction": 0.5833214100328751,
+          "uiTicks": 1475
+        },
+        {
+          "state": "running",
+          "processedUs": 2460566500,
+          "totalUs": 4207448000,
+          "fraction": 0.5848120998762195,
+          "uiTicks": 1477
+        },
+        {
+          "state": "running",
+          "processedUs": 2467054531,
+          "totalUs": 4207448000,
+          "fraction": 0.5863541346203209,
+          "uiTicks": 1480
+        },
+        {
+          "state": "running",
+          "processedUs": 2471649208,
+          "totalUs": 4207448000,
+          "fraction": 0.5874461687940054,
+          "uiTicks": 1483
+        },
+        {
+          "state": "running",
+          "processedUs": 2476150541,
+          "totalUs": 4207448000,
+          "fraction": 0.5885160175479293,
+          "uiTicks": 1486
+        },
+        {
+          "state": "running",
+          "processedUs": 2482347875,
+          "totalUs": 4207448000,
+          "fraction": 0.5899889612420641,
+          "uiTicks": 1489
+        },
+        {
+          "state": "running",
+          "processedUs": 2489177187,
+          "totalUs": 4207448000,
+          "fraction": 0.5916121095257743,
+          "uiTicks": 1492
+        },
+        {
+          "state": "running",
+          "processedUs": 2495286541,
+          "totalUs": 4207448000,
+          "fraction": 0.593064142682215,
+          "uiTicks": 1495
+        },
+        {
+          "state": "running",
+          "processedUs": 2502614541,
+          "totalUs": 4207448000,
+          "fraction": 0.5948058160195919,
+          "uiTicks": 1498
+        },
+        {
+          "state": "running",
+          "processedUs": 2507585208,
+          "totalUs": 4207448000,
+          "fraction": 0.5959872131515351,
+          "uiTicks": 1501
+        },
+        {
+          "state": "running",
+          "processedUs": 2512899843,
+          "totalUs": 4207448000,
+          "fraction": 0.597250362452489,
+          "uiTicks": 1503
+        },
+        {
+          "state": "running",
+          "processedUs": 2518091875,
+          "totalUs": 4207448000,
+          "fraction": 0.5984843722370425,
+          "uiTicks": 1505
+        },
+        {
+          "state": "running",
+          "processedUs": 2524673208,
+          "totalUs": 4207448000,
+          "fraction": 0.6000485824186063,
+          "uiTicks": 1508
+        },
+        {
+          "state": "running",
+          "processedUs": 2530817208,
+          "totalUs": 4207448000,
+          "fraction": 0.6015088500202498,
+          "uiTicks": 1511
+        },
+        {
+          "state": "running",
+          "processedUs": 2537206541,
+          "totalUs": 4207448000,
+          "fraction": 0.6030274268392621,
+          "uiTicks": 1514
+        },
+        {
+          "state": "running",
+          "processedUs": 2543094541,
+          "totalUs": 4207448000,
+          "fraction": 0.604426849957504,
+          "uiTicks": 1517
+        },
+        {
+          "state": "running",
+          "processedUs": 2549846583,
+          "totalUs": 4207448000,
+          "fraction": 0.6060316331895249,
+          "uiTicks": 1520
+        },
+        {
+          "state": "running",
+          "processedUs": 2555201250,
+          "totalUs": 4207448000,
+          "fraction": 0.6073042970465707,
+          "uiTicks": 1523
+        },
+        {
+          "state": "running",
+          "processedUs": 2560886583,
+          "totalUs": 4207448000,
+          "fraction": 0.6086555515362282,
+          "uiTicks": 1526
+        },
+        {
+          "state": "running",
+          "processedUs": 2567065234,
+          "totalUs": 4207448000,
+          "fraction": 0.6101240547714434,
+          "uiTicks": 1528
+        },
+        {
+          "state": "running",
+          "processedUs": 2573185250,
+          "totalUs": 4207448000,
+          "fraction": 0.6115786220055482,
+          "uiTicks": 1531
+        },
+        {
+          "state": "running",
+          "processedUs": 2580545250,
+          "totalUs": 4207448000,
+          "fraction": 0.6133279009033504,
+          "uiTicks": 1534
+        },
+        {
+          "state": "running",
+          "processedUs": 2587267890,
+          "totalUs": 4207448000,
+          "fraction": 0.6149256960513831,
+          "uiTicks": 1537
+        },
+        {
+          "state": "running",
+          "processedUs": 2593675916,
+          "totalUs": 4207448000,
+          "fraction": 0.6164487157060526,
+          "uiTicks": 1540
+        },
+        {
+          "state": "running",
+          "processedUs": 2600513250,
+          "totalUs": 4207448000,
+          "fraction": 0.6180737706086921,
+          "uiTicks": 1544
+        },
+        {
+          "state": "running",
+          "processedUs": 2606169218,
+          "totalUs": 4207448000,
+          "fraction": 0.6194180458082904,
+          "uiTicks": 1547
+        },
+        {
+          "state": "running",
+          "processedUs": 2611630546,
+          "totalUs": 4207448000,
+          "fraction": 0.6207160601866024,
+          "uiTicks": 1549
+        },
+        {
+          "state": "running",
+          "processedUs": 2618070546,
+          "totalUs": 4207448000,
+          "fraction": 0.6222466792221794,
+          "uiTicks": 1552
+        },
+        {
+          "state": "running",
+          "processedUs": 2624371953,
+          "totalUs": 4207448000,
+          "fraction": 0.6237443583378808,
+          "uiTicks": 1555
+        },
+        {
+          "state": "running",
+          "processedUs": 2629331953,
+          "totalUs": 4207448000,
+          "fraction": 0.624923220203791,
+          "uiTicks": 1557
+        },
+        {
+          "state": "running",
+          "processedUs": 2634678625,
+          "totalUs": 4207448000,
+          "fraction": 0.6261939838590994,
+          "uiTicks": 1559
+        },
+        {
+          "state": "running",
+          "processedUs": 2641505291,
+          "totalUs": 4207448000,
+          "fraction": 0.627816503258032,
+          "uiTicks": 1562
+        },
+        {
+          "state": "running",
+          "processedUs": 2645611958,
+          "totalUs": 4207448000,
+          "fraction": 0.628792550258494,
+          "uiTicks": 1564
+        },
+        {
+          "state": "running",
+          "processedUs": 2649707958,
+          "totalUs": 4207448000,
+          "fraction": 0.6297660619929231,
+          "uiTicks": 1566
+        },
+        {
+          "state": "running",
+          "processedUs": 2656054609,
+          "totalUs": 4207448000,
+          "fraction": 0.6312744944203708,
+          "uiTicks": 1569
+        },
+        {
+          "state": "running",
+          "processedUs": 2661707958,
+          "totalUs": 4207448000,
+          "fraction": 0.6326181471523831,
+          "uiTicks": 1572
+        },
+        {
+          "state": "running",
+          "processedUs": 2667425291,
+          "totalUs": 4207448000,
+          "fraction": 0.6339770072024657,
+          "uiTicks": 1575
+        },
+        {
+          "state": "running",
+          "processedUs": 2671577265,
+          "totalUs": 4207448000,
+          "fraction": 0.6349638224881211,
+          "uiTicks": 1577
+        },
+        {
+          "state": "running",
+          "processedUs": 2676697265,
+          "totalUs": 4207448000,
+          "fraction": 0.6361807121561573,
+          "uiTicks": 1579
+        },
+        {
+          "state": "running",
+          "processedUs": 2682478593,
+          "totalUs": 4207448000,
+          "fraction": 0.6375547821387216,
+          "uiTicks": 1581
+        },
+        {
+          "state": "running",
+          "processedUs": 2686603958,
+          "totalUs": 4207448000,
+          "fraction": 0.6385352731632096,
+          "uiTicks": 1583
+        },
+        {
+          "state": "running",
+          "processedUs": 2690798593,
+          "totalUs": 4207448000,
+          "fraction": 0.6395322278492807,
+          "uiTicks": 1585
+        },
+        {
+          "state": "running",
+          "processedUs": 2695939921,
+          "totalUs": 4207448000,
+          "fraction": 0.6407541866233403,
+          "uiTicks": 1587
+        },
+        {
+          "state": "running",
+          "processedUs": 2700099921,
+          "totalUs": 4207448000,
+          "fraction": 0.6417429094786198,
+          "uiTicks": 1589
+        },
+        {
+          "state": "running",
+          "processedUs": 2704363958,
+          "totalUs": 4207448000,
+          "fraction": 0.6427563591992106,
+          "uiTicks": 1591
+        },
+        {
+          "state": "running",
+          "processedUs": 2710454625,
+          "totalUs": 4207448000,
+          "fraction": 0.6442039509460367,
+          "uiTicks": 1594
+        },
+        {
+          "state": "running",
+          "processedUs": 2716662625,
+          "totalUs": 4207448000,
+          "fraction": 0.6456794296685306,
+          "uiTicks": 1597
+        },
+        {
+          "state": "running",
+          "processedUs": 2721902656,
+          "totalUs": 4207448000,
+          "fraction": 0.6469248475560482,
+          "uiTicks": 1599
+        },
+        {
+          "state": "running",
+          "processedUs": 2726230666,
+          "totalUs": 4207448000,
+          "fraction": 0.6479535019802978,
+          "uiTicks": 1601
+        },
+        {
+          "state": "running",
+          "processedUs": 2733068000,
+          "totalUs": 4207448000,
+          "fraction": 0.6495785568829371,
+          "uiTicks": 1605
+        },
+        {
+          "state": "running",
+          "processedUs": 2739894666,
+          "totalUs": 4207448000,
+          "fraction": 0.6512010762818696,
+          "uiTicks": 1608
+        },
+        {
+          "state": "running",
+          "processedUs": 2745004000,
+          "totalUs": 4207448000,
+          "fraction": 0.6524154309215467,
+          "uiTicks": 1610
+        },
+        {
+          "state": "running",
+          "processedUs": 2750828000,
+          "totalUs": 4207448000,
+          "fraction": 0.653799642918938,
+          "uiTicks": 1613
+        },
+        {
+          "state": "running",
+          "processedUs": 2756300000,
+          "totalUs": 4207448000,
+          "fraction": 0.6551001937516518,
+          "uiTicks": 1615
+        },
+        {
+          "state": "running",
+          "processedUs": 2761761333,
+          "totalUs": 4207448000,
+          "fraction": 0.6563982093183326,
+          "uiTicks": 1618
+        },
+        {
+          "state": "running",
+          "processedUs": 2766806666,
+          "totalUs": 4207448000,
+          "fraction": 0.6575973525994855,
+          "uiTicks": 1620
+        },
+        {
+          "state": "running",
+          "processedUs": 2773484000,
+          "totalUs": 4207448000,
+          "fraction": 0.6591843796999987,
+          "uiTicks": 1623
+        },
+        {
+          "state": "running",
+          "processedUs": 2779532000,
+          "totalUs": 4207448000,
+          "fraction": 0.6606218306203665,
+          "uiTicks": 1625
+        },
+        {
+          "state": "running",
+          "processedUs": 2785929296,
+          "totalUs": 4207448000,
+          "fraction": 0.662142300035556,
+          "uiTicks": 1628
+        },
+        {
+          "state": "running",
+          "processedUs": 2789430703,
+          "totalUs": 4207448000,
+          "fraction": 0.6629744926140502,
+          "uiTicks": 1630
+        },
+        {
+          "state": "running",
+          "processedUs": 2793409333,
+          "totalUs": 4207448000,
+          "fraction": 0.6639201085788821,
+          "uiTicks": 1632
+        },
+        {
+          "state": "running",
+          "processedUs": 2798657333,
+          "totalUs": 4207448000,
+          "fraction": 0.6651674204886192,
+          "uiTicks": 1634
+        },
+        {
+          "state": "running",
+          "processedUs": 2805238708,
+          "totalUs": 4207448000,
+          "fraction": 0.666731640652481,
+          "uiTicks": 1637
+        },
+        {
+          "state": "running",
+          "processedUs": 2812092031,
+          "totalUs": 4207448000,
+          "fraction": 0.6683604957209216,
+          "uiTicks": 1640
+        },
+        {
+          "state": "running",
+          "processedUs": 2817793375,
+          "totalUs": 4207448000,
+          "fraction": 0.669715555605203,
+          "uiTicks": 1643
+        },
+        {
+          "state": "running",
+          "processedUs": 2822473359,
+          "totalUs": 4207448000,
+          "fraction": 0.6708278650146122,
+          "uiTicks": 1645
+        },
+        {
+          "state": "running",
+          "processedUs": 2827361375,
+          "totalUs": 4207448000,
+          "fraction": 0.6719896181723458,
+          "uiTicks": 1648
+        },
+        {
+          "state": "running",
+          "processedUs": 2831393375,
+          "totalUs": 4207448000,
+          "fraction": 0.6729479187859244,
+          "uiTicks": 1650
+        },
+        {
+          "state": "running",
+          "processedUs": 2835054687,
+          "totalUs": 4207448000,
+          "fraction": 0.6738181165875371,
+          "uiTicks": 1652
+        },
+        {
+          "state": "running",
+          "processedUs": 2840596015,
+          "totalUs": 4207448000,
+          "fraction": 0.6751351448669122,
+          "uiTicks": 1655
+        },
+        {
+          "state": "running",
+          "processedUs": 2845636015,
+          "totalUs": 4207448000,
+          "fraction": 0.6763330206338855,
+          "uiTicks": 1657
+        },
+        {
+          "state": "running",
+          "processedUs": 2850593375,
+          "totalUs": 4207448000,
+          "fraction": 0.6775112550410605,
+          "uiTicks": 1660
+        },
+        {
+          "state": "running",
+          "processedUs": 2856537343,
+          "totalUs": 4207448000,
+          "fraction": 0.678923980284486,
+          "uiTicks": 1663
+        },
+        {
+          "state": "running",
+          "processedUs": 2863745375,
+          "totalUs": 4207448000,
+          "fraction": 0.6806371403758288,
+          "uiTicks": 1666
+        },
+        {
+          "state": "running",
+          "processedUs": 2869998671,
+          "totalUs": 4207448000,
+          "fraction": 0.6821233847691047,
+          "uiTicks": 1669
+        },
+        {
+          "state": "running",
+          "processedUs": 2876961375,
+          "totalUs": 4207448000,
+          "fraction": 0.6837782368314475,
+          "uiTicks": 1672
+        },
+        {
+          "state": "running",
+          "processedUs": 2881206708,
+          "totalUs": 4207448000,
+          "fraction": 0.6847872411019696,
+          "uiTicks": 1674
+        },
+        {
+          "state": "running",
+          "processedUs": 2886124083,
+          "totalUs": 4207448000,
+          "fraction": 0.6859559721237196,
+          "uiTicks": 1676
+        },
+        {
+          "state": "running",
+          "processedUs": 2890841406,
+          "totalUs": 4207448000,
+          "fraction": 0.6870771560337763,
+          "uiTicks": 1678
+        },
+        {
+          "state": "running",
+          "processedUs": 2896300083,
+          "totalUs": 4207448000,
+          "fraction": 0.6883745403389419,
+          "uiTicks": 1681
+        },
+        {
+          "state": "running",
+          "processedUs": 2901422734,
+          "totalUs": 4207448000,
+          "fraction": 0.6895920600801245,
+          "uiTicks": 1684
+        },
+        {
+          "state": "running",
+          "processedUs": 2907852083,
+          "totalUs": 4207448000,
+          "fraction": 0.6911201476524487,
+          "uiTicks": 1687
+        },
+        {
+          "state": "running",
+          "processedUs": 2912086750,
+          "totalUs": 4207448000,
+          "fraction": 0.6921266168946116,
+          "uiTicks": 1689
+        },
+        {
+          "state": "running",
+          "processedUs": 2918324062,
+          "totalUs": 4207448000,
+          "fraction": 0.6936090623104552,
+          "uiTicks": 1692
+        },
+        {
+          "state": "running",
+          "processedUs": 2924505390,
+          "totalUs": 4207448000,
+          "fraction": 0.6950782017983348,
+          "uiTicks": 1695
+        },
+        {
+          "state": "running",
+          "processedUs": 2930785416,
+          "totalUs": 4207448000,
+          "fraction": 0.6965707992113034,
+          "uiTicks": 1698
+        },
+        {
+          "state": "running",
+          "processedUs": 2936366718,
+          "totalUs": 4207448000,
+          "fraction": 0.6978973282616922,
+          "uiTicks": 1701
+        },
+        {
+          "state": "running",
+          "processedUs": 2941782750,
+          "totalUs": 4207448000,
+          "fraction": 0.6991845769692222,
+          "uiTicks": 1704
+        },
+        {
+          "state": "running",
+          "processedUs": 2947588046,
+          "totalUs": 4207448000,
+          "fraction": 0.700564343516545,
+          "uiTicks": 1707
+        },
+        {
+          "state": "running",
+          "processedUs": 2952460083,
+          "totalUs": 4207448000,
+          "fraction": 0.701722298885215,
+          "uiTicks": 1709
+        },
+        {
+          "state": "running",
+          "processedUs": 2955988046,
+          "totalUs": 4207448000,
+          "fraction": 0.702560803128167,
+          "uiTicks": 1711
+        },
+        {
+          "state": "running",
+          "processedUs": 2961281416,
+          "totalUs": 4207448000,
+          "fraction": 0.7038188982965446,
+          "uiTicks": 1713
+        },
+        {
+          "state": "running",
+          "processedUs": 2966742750,
+          "totalUs": 4207448000,
+          "fraction": 0.7051169141008992,
+          "uiTicks": 1716
+        },
+        {
+          "state": "running",
+          "processedUs": 2972108125,
+          "totalUs": 4207448000,
+          "fraction": 0.7063921229686023,
+          "uiTicks": 1718
+        },
+        {
+          "state": "running",
+          "processedUs": 2976310791,
+          "totalUs": 4207448000,
+          "fraction": 0.7073909864126663,
+          "uiTicks": 1720
+        },
+        {
+          "state": "running",
+          "processedUs": 2980990781,
+          "totalUs": 4207448000,
+          "fraction": 0.7085032972481181,
+          "uiTicks": 1722
+        },
+        {
+          "state": "running",
+          "processedUs": 2986052109,
+          "totalUs": 4207448000,
+          "fraction": 0.7097062421211148,
+          "uiTicks": 1724
+        },
+        {
+          "state": "running",
+          "processedUs": 2992132109,
+          "totalUs": 4207448000,
+          "fraction": 0.7111512986019078,
+          "uiTicks": 1727
+        },
+        {
+          "state": "running",
+          "processedUs": 2997673437,
+          "totalUs": 4207448000,
+          "fraction": 0.7124683268812829,
+          "uiTicks": 1730
+        },
+        {
+          "state": "running",
+          "processedUs": 3003353437,
+          "totalUs": 4207448000,
+          "fraction": 0.7138183138567606,
+          "uiTicks": 1734
+        },
+        {
+          "state": "running",
+          "processedUs": 3009774765,
+          "totalUs": 4207448000,
+          "fraction": 0.7153444950478295,
+          "uiTicks": 1737
+        },
+        {
+          "state": "running",
+          "processedUs": 3015937458,
+          "totalUs": 4207448000,
+          "fraction": 0.7168092054851302,
+          "uiTicks": 1740
+        },
+        {
+          "state": "running",
+          "processedUs": 3022774791,
+          "totalUs": 4207448000,
+          "fraction": 0.7184342601500957,
+          "uiTicks": 1743
+        },
+        {
+          "state": "running",
+          "processedUs": 3027062791,
+          "totalUs": 4207448000,
+          "fraction": 0.7194534052470761,
+          "uiTicks": 1745
+        },
+        {
+          "state": "running",
+          "processedUs": 3032342791,
+          "totalUs": 4207448000,
+          "fraction": 0.7207083227172386,
+          "uiTicks": 1747
+        },
+        {
+          "state": "running",
+          "processedUs": 3037017421,
+          "totalUs": 4207448000,
+          "fraction": 0.7218193596213192,
+          "uiTicks": 1749
+        },
+        {
+          "state": "running",
+          "processedUs": 3040857421,
+          "totalUs": 4207448000,
+          "fraction": 0.7227320268723464,
+          "uiTicks": 1751
+        },
+        {
+          "state": "running",
+          "processedUs": 3045038828,
+          "totalUs": 4207448000,
+          "fraction": 0.7237258376098766,
+          "uiTicks": 1753
+        },
+        {
+          "state": "running",
+          "processedUs": 3050977458,
+          "totalUs": 4207448000,
+          "fraction": 0.7251372941507536,
+          "uiTicks": 1755
+        },
+        {
+          "state": "running",
+          "processedUs": 3056940166,
+          "totalUs": 4207448000,
+          "fraction": 0.726554473400503,
+          "uiTicks": 1758
+        },
+        {
+          "state": "running",
+          "processedUs": 3063724166,
+          "totalUs": 4207448000,
+          "fraction": 0.7281668522106512,
+          "uiTicks": 1761
+        },
+        {
+          "state": "running",
+          "processedUs": 3067161484,
+          "totalUs": 4207448000,
+          "fraction": 0.72898381251533,
+          "uiTicks": 1763
+        },
+        {
+          "state": "running",
+          "processedUs": 3071926833,
+          "totalUs": 4207448000,
+          "fraction": 0.7301164109455422,
+          "uiTicks": 1765
+        },
+        {
+          "state": "running",
+          "processedUs": 3076065500,
+          "totalUs": 4207448000,
+          "fraction": 0.7311000635064295,
+          "uiTicks": 1767
+        },
+        {
+          "state": "running",
+          "processedUs": 3082902833,
+          "totalUs": 4207448000,
+          "fraction": 0.7327251181713951,
+          "uiTicks": 1770
+        },
+        {
+          "state": "running",
+          "processedUs": 3087937500,
+          "totalUs": 4207448000,
+          "fraction": 0.7339217264241887,
+          "uiTicks": 1772
+        },
+        {
+          "state": "running",
+          "processedUs": 3092470833,
+          "totalUs": 4207448000,
+          "fraction": 0.734999180738538,
+          "uiTicks": 1774
+        },
+        {
+          "state": "running",
+          "processedUs": 3097932166,
+          "totalUs": 4207448000,
+          "fraction": 0.7362971963052187,
+          "uiTicks": 1776
+        },
+        {
+          "state": "running",
+          "processedUs": 3103705468,
+          "totalUs": 4207448000,
+          "fraction": 0.7376693587181589,
+          "uiTicks": 1778
+        },
+        {
+          "state": "running",
+          "processedUs": 3109145468,
+          "totalUs": 4207448000,
+          "fraction": 0.7389623039904474,
+          "uiTicks": 1781
+        },
+        {
+          "state": "running",
+          "processedUs": 3113966796,
+          "totalUs": 4207448000,
+          "fraction": 0.7401082071602548,
+          "uiTicks": 1783
+        },
+        {
+          "state": "running",
+          "processedUs": 3120046796,
+          "totalUs": 4207448000,
+          "fraction": 0.741553263641048,
+          "uiTicks": 1786
+        },
+        {
+          "state": "running",
+          "processedUs": 3125260166,
+          "totalUs": 4207448000,
+          "fraction": 0.7427923449083625,
+          "uiTicks": 1789
+        },
+        {
+          "state": "running",
+          "processedUs": 3129665500,
+          "totalUs": 4207448000,
+          "fraction": 0.7438393772186845,
+          "uiTicks": 1791
+        },
+        {
+          "state": "running",
+          "processedUs": 3134828166,
+          "totalUs": 4207448000,
+          "fraction": 0.7450664074755053,
+          "uiTicks": 1794
+        },
+        {
+          "state": "running",
+          "processedUs": 3139609531,
+          "totalUs": 4207448000,
+          "fraction": 0.7462028124887105,
+          "uiTicks": 1796
+        },
+        {
+          "state": "running",
+          "processedUs": 3143030875,
+          "totalUs": 4207448000,
+          "fraction": 0.7470159761926944,
+          "uiTicks": 1798
+        },
+        {
+          "state": "running",
+          "processedUs": 3147126875,
+          "totalUs": 4207448000,
+          "fraction": 0.7479894879271235,
+          "uiTicks": 1800
+        },
+        {
+          "state": "running",
+          "processedUs": 3152750859,
+          "totalUs": 4207448000,
+          "fraction": 0.7493261613690769,
+          "uiTicks": 1803
+        },
+        {
+          "state": "running",
+          "processedUs": 3159425541,
+          "totalUs": 4207448000,
+          "fraction": 0.7509125581587699,
+          "uiTicks": 1806
+        },
+        {
+          "state": "running",
+          "processedUs": 3165892187,
+          "totalUs": 4207448000,
+          "fraction": 0.7524495102494434,
+          "uiTicks": 1809
+        },
+        {
+          "state": "running",
+          "processedUs": 3171041541,
+          "totalUs": 4207448000,
+          "fraction": 0.7536733765931273,
+          "uiTicks": 1811
+        },
+        {
+          "state": "running",
+          "processedUs": 3178073515,
+          "totalUs": 4207448000,
+          "fraction": 0.755344692317053,
+          "uiTicks": 1814
+        },
+        {
+          "state": "running",
+          "processedUs": 3183833515,
+          "totalUs": 4207448000,
+          "fraction": 0.7567136931935938,
+          "uiTicks": 1817
+        },
+        {
+          "state": "running",
+          "processedUs": 3189934843,
+          "totalUs": 4207448000,
+          "fraction": 0.7581638187804104,
+          "uiTicks": 1820
+        },
+        {
+          "state": "running",
+          "processedUs": 3196321541,
+          "totalUs": 4207448000,
+          "fraction": 0.7596817693290565,
+          "uiTicks": 1823
+        },
+        {
+          "state": "running",
+          "processedUs": 3202966875,
+          "totalUs": 4207448000,
+          "fraction": 0.7612611908691445,
+          "uiTicks": 1826
+        },
+        {
+          "state": "running",
+          "processedUs": 3209156171,
+          "totalUs": 4207448000,
+          "fraction": 0.7627322241415699,
+          "uiTicks": 1829
+        },
+        {
+          "state": "running",
+          "processedUs": 3215897578,
+          "totalUs": 4207448000,
+          "fraction": 0.7643344797131183,
+          "uiTicks": 1832
+        },
+        {
+          "state": "running",
+          "processedUs": 3220918875,
+          "totalUs": 4207448000,
+          "fraction": 0.7655279102676967,
+          "uiTicks": 1834
+        },
+        {
+          "state": "running",
+          "processedUs": 3227756250,
+          "totalUs": 4207448000,
+          "fraction": 0.7671529749149604,
+          "uiTicks": 1837
+        },
+        {
+          "state": "running",
+          "processedUs": 3235140234,
+          "totalUs": 4207448000,
+          "fraction": 0.7689079541803012,
+          "uiTicks": 1840
+        },
+        {
+          "state": "running",
+          "processedUs": 3240900234,
+          "totalUs": 4207448000,
+          "fraction": 0.770276955056842,
+          "uiTicks": 1843
+        },
+        {
+          "state": "running",
+          "processedUs": 3246681562,
+          "totalUs": 4207448000,
+          "fraction": 0.7716510250394063,
+          "uiTicks": 1846
+        },
+        {
+          "state": "running",
+          "processedUs": 3250721562,
+          "totalUs": 4207448000,
+          "fraction": 0.7726112270430912,
+          "uiTicks": 1848
+        },
+        {
+          "state": "running",
+          "processedUs": 3255961562,
+          "totalUs": 4207448000,
+          "fraction": 0.7738566375627222,
+          "uiTicks": 1850
+        },
+        {
+          "state": "running",
+          "processedUs": 3262062890,
+          "totalUs": 4207448000,
+          "fraction": 0.7753067631495386,
+          "uiTicks": 1853
+        },
+        {
+          "state": "running",
+          "processedUs": 3267532250,
+          "totalUs": 4207448000,
+          "fraction": 0.7766066865235174,
+          "uiTicks": 1856
+        },
+        {
+          "state": "running",
+          "processedUs": 3272324218,
+          "totalUs": 4207448000,
+          "fraction": 0.7777456115916347,
+          "uiTicks": 1859
+        },
+        {
+          "state": "running",
+          "processedUs": 3276950916,
+          "totalUs": 4207448000,
+          "fraction": 0.7788452563168933,
+          "uiTicks": 1861
+        },
+        {
+          "state": "running",
+          "processedUs": 3282585546,
+          "totalUs": 4207448000,
+          "fraction": 0.7801844600337307,
+          "uiTicks": 1864
+        },
+        {
+          "state": "running",
+          "processedUs": 3289249583,
+          "totalUs": 4207448000,
+          "fraction": 0.7817683267862134,
+          "uiTicks": 1867
+        },
+        {
+          "state": "running",
+          "processedUs": 3296236250,
+          "totalUs": 4207448000,
+          "fraction": 0.7834288742249459,
+          "uiTicks": 1870
+        },
+        {
+          "state": "running",
+          "processedUs": 3300846953,
+          "totalUs": 4207448000,
+          "fraction": 0.7845247173583607,
+          "uiTicks": 1873
+        },
+        {
+          "state": "running",
+          "processedUs": 3305644250,
+          "totalUs": 4207448000,
+          "fraction": 0.7856649089899626,
+          "uiTicks": 1876
+        },
+        {
+          "state": "running",
+          "processedUs": 3311116291,
+          "totalUs": 4207448000,
+          "fraction": 0.7869654695673006,
+          "uiTicks": 1879
+        },
+        {
+          "state": "running",
+          "processedUs": 3317828281,
+          "totalUs": 4207448000,
+          "fraction": 0.7885607334897543,
+          "uiTicks": 1882
+        },
+        {
+          "state": "running",
+          "processedUs": 3323670958,
+          "totalUs": 4207448000,
+          "fraction": 0.7899493845200226,
+          "uiTicks": 1885
+        },
+        {
+          "state": "running",
+          "processedUs": 3329689609,
+          "totalUs": 4207448000,
+          "fraction": 0.7913798599531118,
+          "uiTicks": 1888
+        },
+        {
+          "state": "running",
+          "processedUs": 3334510937,
+          "totalUs": 4207448000,
+          "fraction": 0.7925257631229191,
+          "uiTicks": 1891
+        },
+        {
+          "state": "running",
+          "processedUs": 3340590937,
+          "totalUs": 4207448000,
+          "fraction": 0.7939708196037123,
+          "uiTicks": 1894
+        },
+        {
+          "state": "running",
+          "processedUs": 3346372265,
+          "totalUs": 4207448000,
+          "fraction": 0.7953448895862766,
+          "uiTicks": 1897
+        },
+        {
+          "state": "running",
+          "processedUs": 3352044291,
+          "totalUs": 4207448000,
+          "fraction": 0.7966929813511658,
+          "uiTicks": 1900
+        },
+        {
+          "state": "running",
+          "processedUs": 3357580291,
+          "totalUs": 4207448000,
+          "fraction": 0.79800874330473,
+          "uiTicks": 1903
+        },
+        {
+          "state": "running",
+          "processedUs": 3363681625,
+          "totalUs": 4207448000,
+          "fraction": 0.7994588703175892,
+          "uiTicks": 1906
+        },
+        {
+          "state": "running",
+          "processedUs": 3371054921,
+          "totalUs": 4207448000,
+          "fraction": 0.801211309325748,
+          "uiTicks": 1909
+        },
+        {
+          "state": "running",
+          "processedUs": 3378436328,
+          "totalUs": 4207448000,
+          "fraction": 0.8029656761058009,
+          "uiTicks": 1912
+        },
+        {
+          "state": "running",
+          "processedUs": 3386116328,
+          "totalUs": 4207448000,
+          "fraction": 0.8047910106078554,
+          "uiTicks": 1915
+        },
+        {
+          "state": "running",
+          "processedUs": 3390380333,
+          "totalUs": 4207448000,
+          "fraction": 0.8058044527228857,
+          "uiTicks": 1918
+        },
+        {
+          "state": "running",
+          "processedUs": 3394457656,
+          "totalUs": 4207448000,
+          "fraction": 0.8067735254244378,
+          "uiTicks": 1920
+        },
+        {
+          "state": "running",
+          "processedUs": 3398617656,
+          "totalUs": 4207448000,
+          "fraction": 0.8077622482797173,
+          "uiTicks": 1922
+        },
+        {
+          "state": "running",
+          "processedUs": 3401497656,
+          "totalUs": 4207448000,
+          "fraction": 0.8084467487179877,
+          "uiTicks": 1923
+        },
+        {
+          "state": "running",
+          "processedUs": 3406638984,
+          "totalUs": 4207448000,
+          "fraction": 0.8096687074920474,
+          "uiTicks": 1925
+        },
+        {
+          "state": "running",
+          "processedUs": 3409718984,
+          "totalUs": 4207448000,
+          "fraction": 0.8104007426829756,
+          "uiTicks": 1927
+        },
+        {
+          "state": "running",
+          "processedUs": 3416385666,
+          "totalUs": 4207448000,
+          "fraction": 0.8119852380825622,
+          "uiTicks": 1930
+        },
+        {
+          "state": "running",
+          "processedUs": 3423639000,
+          "totalUs": 4207448000,
+          "fraction": 0.8137091652707295,
+          "uiTicks": 1933
+        },
+        {
+          "state": "running",
+          "processedUs": 3430041640,
+          "totalUs": 4207448000,
+          "fraction": 0.8152309048145099,
+          "uiTicks": 1936
+        },
+        {
+          "state": "running",
+          "processedUs": 3436001666,
+          "totalUs": 4207448000,
+          "fraction": 0.8166474466232262,
+          "uiTicks": 1938
+        },
+        {
+          "state": "running",
+          "processedUs": 3440940333,
+          "totalUs": 4207448000,
+          "fraction": 0.8178212381947442,
+          "uiTicks": 1940
+        },
+        {
+          "state": "running",
+          "processedUs": 3446062968,
+          "totalUs": 4207448000,
+          "fraction": 0.8190387541331468,
+          "uiTicks": 1942
+        },
+        {
+          "state": "running",
+          "processedUs": 3451873666,
+          "totalUs": 4207448000,
+          "fraction": 0.8204198045941388,
+          "uiTicks": 1945
+        },
+        {
+          "state": "running",
+          "processedUs": 3459684296,
+          "totalUs": 4207448000,
+          "fraction": 0.8222761864198915,
+          "uiTicks": 1948
+        },
+        {
+          "state": "running",
+          "processedUs": 3467799000,
+          "totalUs": 4207448000,
+          "fraction": 0.8242048386575426,
+          "uiTicks": 1951
+        },
+        {
+          "state": "running",
+          "processedUs": 3474807031,
+          "totalUs": 4207448000,
+          "fraction": 0.8258704637585539,
+          "uiTicks": 1954
+        },
+        {
+          "state": "running",
+          "processedUs": 3481647031,
+          "totalUs": 4207448000,
+          "fraction": 0.8274961522994462,
+          "uiTicks": 1957
+        },
+        {
+          "state": "running",
+          "processedUs": 3487668359,
+          "totalUs": 4207448000,
+          "fraction": 0.8289272639851996,
+          "uiTicks": 1959
+        },
+        {
+          "state": "running",
+          "processedUs": 3494017708,
+          "totalUs": 4207448000,
+          "fraction": 0.8304363376564606,
+          "uiTicks": 1962
+        },
+        {
+          "state": "running",
+          "processedUs": 3499929687,
+          "totalUs": 4207448000,
+          "fraction": 0.8318414599538723,
+          "uiTicks": 1965
+        },
+        {
+          "state": "running",
+          "processedUs": 3504161708,
+          "totalUs": 4207448000,
+          "fraction": 0.8328473003112575,
+          "uiTicks": 1967
+        },
+        {
+          "state": "running",
+          "processedUs": 3510380375,
+          "totalUs": 4207448000,
+          "fraction": 0.8343253142997846,
+          "uiTicks": 1969
+        },
+        {
+          "state": "running",
+          "processedUs": 3517231015,
+          "totalUs": 4207448000,
+          "fraction": 0.8359535316895182,
+          "uiTicks": 1972
+        },
+        {
+          "state": "running",
+          "processedUs": 3522935041,
+          "totalUs": 4207448000,
+          "fraction": 0.8373092290148327,
+          "uiTicks": 1975
+        },
+        {
+          "state": "running",
+          "processedUs": 3528396375,
+          "totalUs": 4207448000,
+          "fraction": 0.8386072448191874,
+          "uiTicks": 1977
+        },
+        {
+          "state": "running",
+          "processedUs": 3534764375,
+          "totalUs": 4207448000,
+          "fraction": 0.8401207513438075,
+          "uiTicks": 1980
+        },
+        {
+          "state": "running",
+          "processedUs": 3541932375,
+          "totalUs": 4207448000,
+          "fraction": 0.8418243968790583,
+          "uiTicks": 1983
+        },
+        {
+          "state": "running",
+          "processedUs": 3547495078,
+          "totalUs": 4207448000,
+          "fraction": 0.8431465054351236,
+          "uiTicks": 1985
+        },
+        {
+          "state": "running",
+          "processedUs": 3551607041,
+          "totalUs": 4207448000,
+          "fraction": 0.844123811155836,
+          "uiTicks": 1987
+        },
+        {
+          "state": "running",
+          "processedUs": 3558177708,
+          "totalUs": 4207448000,
+          "fraction": 0.8456854863090405,
+          "uiTicks": 1990
+        },
+        {
+          "state": "running",
+          "processedUs": 3564996406,
+          "totalUs": 4207448000,
+          "fraction": 0.8473061119234272,
+          "uiTicks": 1993
+        },
+        {
+          "state": "running",
+          "processedUs": 3572129750,
+          "totalUs": 4207448000,
+          "fraction": 0.8490015206367375,
+          "uiTicks": 1996
+        },
+        {
+          "state": "running",
+          "processedUs": 3581337734,
+          "totalUs": 4207448000,
+          "fraction": 0.8511900168463163,
+          "uiTicks": 1999
+        },
+        {
+          "state": "running",
+          "processedUs": 3588719062,
+          "totalUs": 4207448000,
+          "fraction": 0.8529443648501419,
+          "uiTicks": 2002
+        },
+        {
+          "state": "running",
+          "processedUs": 3595860390,
+          "totalUs": 4207448000,
+          "fraction": 0.8546416711507784,
+          "uiTicks": 2005
+        },
+        {
+          "state": "running",
+          "processedUs": 3601847083,
+          "totalUs": 4207448000,
+          "fraction": 0.8560645510057403,
+          "uiTicks": 2008
+        },
+        {
+          "state": "running",
+          "processedUs": 3606892416,
+          "totalUs": 4207448000,
+          "fraction": 0.8572636942868932,
+          "uiTicks": 2010
+        },
+        {
+          "state": "running",
+          "processedUs": 3611756416,
+          "totalUs": 4207448000,
+          "fraction": 0.8584197394715276,
+          "uiTicks": 2013
+        },
+        {
+          "state": "running",
+          "processedUs": 3615105750,
+          "totalUs": 4207448000,
+          "fraction": 0.8592157882878172,
+          "uiTicks": 2015
+        },
+        {
+          "state": "running",
+          "processedUs": 3618543046,
+          "totalUs": 4207448000,
+          "fraction": 0.8600327433636732,
+          "uiTicks": 2017
+        },
+        {
+          "state": "running",
+          "processedUs": 3621324416,
+          "totalUs": 4207448000,
+          "fraction": 0.8606938020386705,
+          "uiTicks": 2019
+        },
+        {
+          "state": "running",
+          "processedUs": 3624303046,
+          "totalUs": 4207448000,
+          "fraction": 0.861401744240214,
+          "uiTicks": 2021
+        },
+        {
+          "state": "running",
+          "processedUs": 3628151083,
+          "totalUs": 4207448000,
+          "fraction": 0.8623163216752768,
+          "uiTicks": 2023
+        },
+        {
+          "state": "running",
+          "processedUs": 3633303083,
+          "totalUs": 4207448000,
+          "fraction": 0.8635408169037383,
+          "uiTicks": 2026
+        },
+        {
+          "state": "running",
+          "processedUs": 3637249750,
+          "totalUs": 4207448000,
+          "fraction": 0.8644788361020742,
+          "uiTicks": 2028
+        },
+        {
+          "state": "running",
+          "processedUs": 3641175083,
+          "totalUs": 4207448000,
+          "fraction": 0.8654117847683441,
+          "uiTicks": 2030
+        },
+        {
+          "state": "running",
+          "processedUs": 3645388458,
+          "totalUs": 4207448000,
+          "fraction": 0.8664131934607392,
+          "uiTicks": 2032
+        },
+        {
+          "state": "running",
+          "processedUs": 3648652458,
+          "totalUs": 4207448000,
+          "fraction": 0.8671889606241123,
+          "uiTicks": 2034
+        },
+        {
+          "state": "running",
+          "processedUs": 3654113791,
+          "totalUs": 4207448000,
+          "fraction": 0.8684869761907931,
+          "uiTicks": 2036
+        },
+        {
+          "state": "running",
+          "processedUs": 3659887109,
+          "totalUs": 4207448000,
+          "fraction": 0.8698591424065134,
+          "uiTicks": 2039
+        },
+        {
+          "state": "running",
+          "processedUs": 3664727109,
+          "totalUs": 4207448000,
+          "fraction": 0.871009483420829,
+          "uiTicks": 2041
+        },
+        {
+          "state": "running",
+          "processedUs": 3670188437,
+          "totalUs": 4207448000,
+          "fraction": 0.872307497799141,
+          "uiTicks": 2043
+        },
+        {
+          "state": "running",
+          "processedUs": 3675980458,
+          "totalUs": 4207448000,
+          "fraction": 0.873684109227256,
+          "uiTicks": 2047
+        },
+        {
+          "state": "running",
+          "processedUs": 3681452458,
+          "totalUs": 4207448000,
+          "fraction": 0.8749846600599699,
+          "uiTicks": 2050
+        },
+        {
+          "state": "running",
+          "processedUs": 3685849765,
+          "totalUs": 4207448000,
+          "fraction": 0.876029784562994,
+          "uiTicks": 2052
+        },
+        {
+          "state": "running",
+          "processedUs": 3690329765,
+          "totalUs": 4207448000,
+          "fraction": 0.8770945630225258,
+          "uiTicks": 2054
+        },
+        {
+          "state": "running",
+          "processedUs": 3694476458,
+          "totalUs": 4207448000,
+          "fraction": 0.8780801231530372,
+          "uiTicks": 2056
+        },
+        {
+          "state": "running",
+          "processedUs": 3697847125,
+          "totalUs": 4207448000,
+          "fraction": 0.878881242263719,
+          "uiTicks": 2058
+        },
+        {
+          "state": "running",
+          "processedUs": 3701943125,
+          "totalUs": 4207448000,
+          "fraction": 0.879854753998148,
+          "uiTicks": 2060
+        },
+        {
+          "state": "running",
+          "processedUs": 3705431125,
+          "totalUs": 4207448000,
+          "fraction": 0.8806837600844978,
+          "uiTicks": 2062
+        },
+        {
+          "state": "running",
+          "processedUs": 3708929791,
+          "totalUs": 4207448000,
+          "fraction": 0.8815153011992067,
+          "uiTicks": 2064
+        },
+        {
+          "state": "running",
+          "processedUs": 3712876458,
+          "totalUs": 4207448000,
+          "fraction": 0.8824533203975427,
+          "uiTicks": 2066
+        },
+        {
+          "state": "running",
+          "processedUs": 3716993828,
+          "totalUs": 4207448000,
+          "fraction": 0.8834319112202932,
+          "uiTicks": 2068
+        },
+        {
+          "state": "running",
+          "processedUs": 3721433828,
+          "totalUs": 4207448000,
+          "fraction": 0.8844871827292934,
+          "uiTicks": 2070
+        },
+        {
+          "state": "running",
+          "processedUs": 3726153828,
+          "totalUs": 4207448000,
+          "fraction": 0.8856090028920144,
+          "uiTicks": 2072
+        },
+        {
+          "state": "running",
+          "processedUs": 3730647166,
+          "totalUs": 4207448000,
+          "fraction": 0.8866769514442009,
+          "uiTicks": 2074
+        },
+        {
+          "state": "running",
+          "processedUs": 3736108500,
+          "totalUs": 4207448000,
+          "fraction": 0.8879749672485554,
+          "uiTicks": 2076
+        },
+        {
+          "state": "running",
+          "processedUs": 3742276484,
+          "totalUs": 4207448000,
+          "fraction": 0.8894409352177377,
+          "uiTicks": 2079
+        },
+        {
+          "state": "running",
+          "processedUs": 3746295166,
+          "totalUs": 4207448000,
+          "fraction": 0.8903960704921368,
+          "uiTicks": 2081
+        },
+        {
+          "state": "running",
+          "processedUs": 3749772500,
+          "totalUs": 4207448000,
+          "fraction": 0.8912225415501273,
+          "uiTicks": 2083
+        },
+        {
+          "state": "running",
+          "processedUs": 3753337812,
+          "totalUs": 4207448000,
+          "fraction": 0.8920699226704644,
+          "uiTicks": 2085
+        },
+        {
+          "state": "running",
+          "processedUs": 3757975166,
+          "totalUs": 4207448000,
+          "fraction": 0.8931721000473446,
+          "uiTicks": 2088
+        },
+        {
+          "state": "running",
+          "processedUs": 3762071166,
+          "totalUs": 4207448000,
+          "fraction": 0.8941456117817737,
+          "uiTicks": 2090
+        },
+        {
+          "state": "running",
+          "processedUs": 3766177833,
+          "totalUs": 4207448000,
+          "fraction": 0.8951216587822357,
+          "uiTicks": 2092
+        },
+        {
+          "state": "running",
+          "processedUs": 3770479140,
+          "totalUs": 4207448000,
+          "fraction": 0.8961439666039842,
+          "uiTicks": 2094
+        },
+        {
+          "state": "running",
+          "processedUs": 3775300468,
+          "totalUs": 4207448000,
+          "fraction": 0.8972898697737917,
+          "uiTicks": 2096
+        },
+        {
+          "state": "running",
+          "processedUs": 3778900468,
+          "totalUs": 4207448000,
+          "fraction": 0.8981454953216297,
+          "uiTicks": 2098
+        },
+        {
+          "state": "running",
+          "processedUs": 3782679166,
+          "totalUs": 4207448000,
+          "fraction": 0.8990435926956197,
+          "uiTicks": 2100
+        },
+        {
+          "state": "running",
+          "processedUs": 3787801796,
+          "totalUs": 4207448000,
+          "fraction": 0.9002611074456535,
+          "uiTicks": 2102
+        },
+        {
+          "state": "running",
+          "processedUs": 3794521796,
+          "totalUs": 4207448000,
+          "fraction": 0.9018582751349512,
+          "uiTicks": 2105
+        },
+        {
+          "state": "running",
+          "processedUs": 3800343166,
+          "totalUs": 4207448000,
+          "fraction": 0.903241862050345,
+          "uiTicks": 2108
+        },
+        {
+          "state": "running",
+          "processedUs": 3806551166,
+          "totalUs": 4207448000,
+          "fraction": 0.904717340772839,
+          "uiTicks": 2111
+        },
+        {
+          "state": "running",
+          "processedUs": 3812641875,
+          "totalUs": 4207448000,
+          "fraction": 0.9061649425019632,
+          "uiTicks": 2114
+        },
+        {
+          "state": "running",
+          "processedUs": 3819468541,
+          "totalUs": 4207448000,
+          "fraction": 0.9077874619008958,
+          "uiTicks": 2118
+        },
+        {
+          "state": "running",
+          "processedUs": 3825625859,
+          "totalUs": 4207448000,
+          "fraction": 0.9092508948417187,
+          "uiTicks": 2121
+        },
+        {
+          "state": "running",
+          "processedUs": 3832825859,
+          "totalUs": 4207448000,
+          "fraction": 0.9109621459373949,
+          "uiTicks": 2124
+        },
+        {
+          "state": "running",
+          "processedUs": 3839087187,
+          "totalUs": 4207448000,
+          "fraction": 0.9124502993263375,
+          "uiTicks": 2127
+        },
+        {
+          "state": "running",
+          "processedUs": 3843767187,
+          "totalUs": 4207448000,
+          "fraction": 0.9135626125385269,
+          "uiTicks": 2129
+        },
+        {
+          "state": "running",
+          "processedUs": 3848708515,
+          "totalUs": 4207448000,
+          "fraction": 0.914737036559929,
+          "uiTicks": 2131
+        },
+        {
+          "state": "running",
+          "processedUs": 3853633875,
+          "totalUs": 4207448000,
+          "fraction": 0.9159076654066788,
+          "uiTicks": 2133
+        },
+        {
+          "state": "running",
+          "processedUs": 3859929843,
+          "totalUs": 4207448000,
+          "fraction": 0.9174040518147818,
+          "uiTicks": 2135
+        },
+        {
+          "state": "running",
+          "processedUs": 3865932541,
+          "totalUs": 4207448000,
+          "fraction": 0.9188307356383252,
+          "uiTicks": 2138
+        },
+        {
+          "state": "running",
+          "processedUs": 3871791171,
+          "totalUs": 4207448000,
+          "fraction": 0.9202231782781392,
+          "uiTicks": 2141
+        },
+        {
+          "state": "running",
+          "processedUs": 3876865875,
+          "totalUs": 4207448000,
+          "fraction": 0.9214293022753935,
+          "uiTicks": 2143
+        },
+        {
+          "state": "running",
+          "processedUs": 3882049875,
+          "totalUs": 4207448000,
+          "fraction": 0.9226614030642803,
+          "uiTicks": 2145
+        },
+        {
+          "state": "running",
+          "processedUs": 3887812578,
+          "totalUs": 4207448000,
+          "fraction": 0.9240310463730033,
+          "uiTicks": 2148
+        },
+        {
+          "state": "running",
+          "processedUs": 3893892578,
+          "totalUs": 4207448000,
+          "fraction": 0.9254761028537964,
+          "uiTicks": 2151
+        },
+        {
+          "state": "running",
+          "processedUs": 3899820583,
+          "totalUs": 4207448000,
+          "fraction": 0.9268850341109385,
+          "uiTicks": 2154
+        },
+        {
+          "state": "running",
+          "processedUs": 3904193916,
+          "totalUs": 4207448000,
+          "fraction": 0.9279244606231616,
+          "uiTicks": 2157
+        },
+        {
+          "state": "running",
+          "processedUs": 3908335234,
+          "totalUs": 4207448000,
+          "fraction": 0.9289087432571953,
+          "uiTicks": 2158
+        },
+        {
+          "state": "running",
+          "processedUs": 3913135234,
+          "totalUs": 4207448000,
+          "fraction": 0.9300495773209794,
+          "uiTicks": 2160
+        },
+        {
+          "state": "running",
+          "processedUs": 3917857916,
+          "totalUs": 4207448000,
+          "fraction": 0.9311720349247334,
+          "uiTicks": 2163
+        },
+        {
+          "state": "running",
+          "processedUs": 3923948583,
+          "totalUs": 4207448000,
+          "fraction": 0.9326196266715596,
+          "uiTicks": 2165
+        },
+        {
+          "state": "running",
+          "processedUs": 3930156583,
+          "totalUs": 4207448000,
+          "fraction": 0.9340951053940536,
+          "uiTicks": 2168
+        },
+        {
+          "state": "running",
+          "processedUs": 3935257890,
+          "totalUs": 4207448000,
+          "fraction": 0.9353075522264327,
+          "uiTicks": 2170
+        },
+        {
+          "state": "running",
+          "processedUs": 3939169916,
+          "totalUs": 4207448000,
+          "fraction": 0.9362373381679345,
+          "uiTicks": 2172
+        },
+        {
+          "state": "running",
+          "processedUs": 3943239218,
+          "totalUs": 4207448000,
+          "fraction": 0.9372045044882313,
+          "uiTicks": 2174
+        },
+        {
+          "state": "running",
+          "processedUs": 3947119218,
+          "totalUs": 4207448000,
+          "fraction": 0.93812667868979,
+          "uiTicks": 2176
+        },
+        {
+          "state": "running",
+          "processedUs": 3950892583,
+          "totalUs": 4207448000,
+          "fraction": 0.9390235085496006,
+          "uiTicks": 2178
+        },
+        {
+          "state": "running",
+          "processedUs": 3956129916,
+          "totalUs": 4207448000,
+          "fraction": 0.9402682851933049,
+          "uiTicks": 2180
+        },
+        {
+          "state": "running",
+          "processedUs": 3961540546,
+          "totalUs": 4207448000,
+          "fraction": 0.9415542499871656,
+          "uiTicks": 2183
+        },
+        {
+          "state": "running",
+          "processedUs": 3965060546,
+          "totalUs": 4207448000,
+          "fraction": 0.9423908616339406,
+          "uiTicks": 2185
+        },
+        {
+          "state": "running",
+          "processedUs": 3969881953,
+          "totalUs": 4207448000,
+          "fraction": 0.9435367835799753,
+          "uiTicks": 2187
+        },
+        {
+          "state": "running",
+          "processedUs": 3975255250,
+          "totalUs": 4207448000,
+          "fraction": 0.9448138752992312,
+          "uiTicks": 2191
+        },
+        {
+          "state": "running",
+          "processedUs": 3978201953,
+          "totalUs": 4207448000,
+          "fraction": 0.9455142292905343,
+          "uiTicks": 2193
+        },
+        {
+          "state": "running",
+          "processedUs": 3982623281,
+          "totalUs": 4207448000,
+          "fraction": 0.9465650629550264,
+          "uiTicks": 2195
+        },
+        {
+          "state": "running",
+          "processedUs": 3987553958,
+          "totalUs": 4207448000,
+          "fraction": 0.9477369555131757,
+          "uiTicks": 2198
+        },
+        {
+          "state": "running",
+          "processedUs": 3993964625,
+          "totalUs": 4207448000,
+          "fraction": 0.9492606028642541,
+          "uiTicks": 2201
+        },
+        {
+          "state": "running",
+          "processedUs": 3999852625,
+          "totalUs": 4207448000,
+          "fraction": 0.9506600259824958,
+          "uiTicks": 2204
+        },
+        {
+          "state": "running",
+          "processedUs": 4006689958,
+          "totalUs": 4207448000,
+          "fraction": 0.9522850806474613,
+          "uiTicks": 2207
+        },
+        {
+          "state": "running",
+          "processedUs": 4012151291,
+          "totalUs": 4207448000,
+          "fraction": 0.9535830962141422,
+          "uiTicks": 2209
+        },
+        {
+          "state": "running",
+          "processedUs": 4017007265,
+          "totalUs": 4207448000,
+          "fraction": 0.9547372338291525,
+          "uiTicks": 2211
+        },
+        {
+          "state": "running",
+          "processedUs": 4021167265,
+          "totalUs": 4207448000,
+          "fraction": 0.9557259566844319,
+          "uiTicks": 2213
+        },
+        {
+          "state": "running",
+          "processedUs": 4025281958,
+          "totalUs": 4207448000,
+          "fraction": 0.9567039112545181,
+          "uiTicks": 2215
+        },
+        {
+          "state": "running",
+          "processedUs": 4029132625,
+          "totalUs": 4207448000,
+          "fraction": 0.9576191137715784,
+          "uiTicks": 2217
+        },
+        {
+          "state": "running",
+          "processedUs": 4035383291,
+          "totalUs": 4207448000,
+          "fraction": 0.9591047330828569,
+          "uiTicks": 2220
+        },
+        {
+          "state": "running",
+          "processedUs": 4040855291,
+          "totalUs": 4207448000,
+          "fraction": 0.9604052839155707,
+          "uiTicks": 2223
+        },
+        {
+          "state": "running",
+          "processedUs": 4046769921,
+          "totalUs": 4207448000,
+          "fraction": 0.9618110362861287,
+          "uiTicks": 2226
+        },
+        {
+          "state": "running",
+          "processedUs": 4050412625,
+          "totalUs": 4207448000,
+          "fraction": 0.9626768114543542,
+          "uiTicks": 2228
+        },
+        {
+          "state": "running",
+          "processedUs": 4055031291,
+          "totalUs": 4207448000,
+          "fraction": 0.9637745471839462,
+          "uiTicks": 2230
+        },
+        {
+          "state": "running",
+          "processedUs": 4059980625,
+          "totalUs": 4207448000,
+          "fraction": 0.9649508740214972,
+          "uiTicks": 2234
+        },
+        {
+          "state": "running",
+          "processedUs": 4065452666,
+          "totalUs": 4207448000,
+          "fraction": 0.9662514345988352,
+          "uiTicks": 2237
+        },
+        {
+          "state": "running",
+          "processedUs": 4071596666,
+          "totalUs": 4207448000,
+          "fraction": 0.9677117022004788,
+          "uiTicks": 2240
+        },
+        {
+          "state": "running",
+          "processedUs": 4076386000,
+          "totalUs": 4207448000,
+          "fraction": 0.9688500012359036,
+          "uiTicks": 2243
+        },
+        {
+          "state": "running",
+          "processedUs": 4080823333,
+          "totalUs": 4207448000,
+          "fraction": 0.9699046388689772,
+          "uiTicks": 2245
+        },
+        {
+          "state": "running",
+          "processedUs": 4084578000,
+          "totalUs": 4207448000,
+          "fraction": 0.9707970247047617,
+          "uiTicks": 2247
+        },
+        {
+          "state": "running",
+          "processedUs": 4088684666,
+          "totalUs": 4207448000,
+          "fraction": 0.9717730714675499,
+          "uiTicks": 2249
+        },
+        {
+          "state": "running",
+          "processedUs": 4094146000,
+          "totalUs": 4207448000,
+          "fraction": 0.9730710872719045,
+          "uiTicks": 2251
+        },
+        {
+          "state": "running",
+          "processedUs": 4100983333,
+          "totalUs": 4207448000,
+          "fraction": 0.97469614193687,
+          "uiTicks": 2254
+        },
+        {
+          "state": "running",
+          "processedUs": 4105399333,
+          "totalUs": 4207448000,
+          "fraction": 0.9757457092755514,
+          "uiTicks": 2257
+        },
+        {
+          "state": "running",
+          "processedUs": 4109175333,
+          "totalUs": 4207448000,
+          "fraction": 0.9766431654057282,
+          "uiTicks": 2259
+        },
+        {
+          "state": "running",
+          "processedUs": 4114647333,
+          "totalUs": 4207448000,
+          "fraction": 0.9779437162384419,
+          "uiTicks": 2262
+        },
+        {
+          "state": "running",
+          "processedUs": 4120137968,
+          "totalUs": 4207448000,
+          "fraction": 0.9792486961217346,
+          "uiTicks": 2265
+        },
+        {
+          "state": "running",
+          "processedUs": 4125359296,
+          "totalUs": 4207448000,
+          "fraction": 0.9804896687968574,
+          "uiTicks": 2267
+        },
+        {
+          "state": "running",
+          "processedUs": 4131119296,
+          "totalUs": 4207448000,
+          "fraction": 0.9818586696733982,
+          "uiTicks": 2270
+        },
+        {
+          "state": "running",
+          "processedUs": 4135620703,
+          "totalUs": 4207448000,
+          "fraction": 0.9829285360151807,
+          "uiTicks": 2272
+        },
+        {
+          "state": "running",
+          "processedUs": 4140610000,
+          "totalUs": 4207448000,
+          "fraction": 0.9841143610093339,
+          "uiTicks": 2274
+        },
+        {
+          "state": "running",
+          "processedUs": 4147447375,
+          "totalUs": 4207448000,
+          "fraction": 0.9857394256565976,
+          "uiTicks": 2277
+        },
+        {
+          "state": "running",
+          "processedUs": 4152908708,
+          "totalUs": 4207448000,
+          "fraction": 0.9870374412232783,
+          "uiTicks": 2280
+        },
+        {
+          "state": "running",
+          "processedUs": 4157082031,
+          "totalUs": 4207448000,
+          "fraction": 0.9880293306061061,
+          "uiTicks": 2282
+        },
+        {
+          "state": "running",
+          "processedUs": 4165103359,
+          "totalUs": 4207448000,
+          "fraction": 0.9899357898184362,
+          "uiTicks": 2285
+        },
+        {
+          "state": "running",
+          "processedUs": 4172044708,
+          "totalUs": 4207448000,
+          "fraction": 0.99,
+          "uiTicks": 2288
+        },
+        {
+          "state": "running",
+          "processedUs": 4177564687,
+          "totalUs": 4207448000,
+          "fraction": 0.99,
+          "uiTicks": 2291
+        },
+        {
+          "state": "running",
+          "processedUs": 4182967375,
+          "totalUs": 4207448000,
+          "fraction": 0.99,
+          "uiTicks": 2293
+        },
+        {
+          "state": "running",
+          "processedUs": 4187586041,
+          "totalUs": 4207448000,
+          "fraction": 0.99,
+          "uiTicks": 2295
+        },
+        {
+          "state": "running",
+          "processedUs": 4192535375,
+          "totalUs": 4207448000,
+          "fraction": 0.99,
+          "uiTicks": 2298
+        },
+        {
+          "state": "running",
+          "processedUs": 4196642041,
+          "totalUs": 4207448000,
+          "fraction": 0.99,
+          "uiTicks": 2300
+        },
+        {
+          "state": "running",
+          "processedUs": 4200367343,
+          "totalUs": 4207448000,
+          "fraction": 0.99,
+          "uiTicks": 2302
+        },
+        {
+          "state": "running",
+          "processedUs": 4204207343,
+          "totalUs": 4207448000,
+          "fraction": 0.99,
+          "uiTicks": 2304
+        },
+        {
+          "state": "running",
+          "processedUs": 4207436708,
+          "totalUs": 4207448000,
+          "fraction": 0.99,
+          "uiTicks": 2313
+        },
+        {
+          "state": "validating",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": null,
+          "uiTicks": 2314
+        },
+        {
+          "state": "publishing",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": null,
+          "uiTicks": 2315
+        },
+        {
+          "state": "succeeded",
+          "processedUs": null,
+          "totalUs": null,
+          "fraction": 1.0,
+          "uiTicks": 2315
+        }
+      ],
+      "uiTicksDuring": 2023,
+      "cancelSent": false,
+      "lateCancel": false
+    }
+  ],
+  "lifecycle": [
+    {
+      "state": "inactive",
+      "phase": "lifecycleRunning",
+      "busy": true,
+      "at": "2026-10-05T05:04:46.433394Z"
+    },
+    {
+      "state": "hidden",
+      "phase": "lifecycleRunning",
+      "busy": true,
+      "at": "2026-10-05T05:04:47.060575Z"
+    },
+    {
+      "state": "paused",
+      "phase": "lifecycleRunning",
+      "busy": true,
+      "at": "2026-10-05T05:04:47.060877Z"
+    },
+    {
+      "state": "hidden",
+      "phase": "lifecycleRunning",
+      "busy": true,
+      "at": "2026-10-05T05:04:47.470305Z"
+    },
+    {
+      "state": "inactive",
+      "phase": "lifecycleRunning",
+      "busy": true,
+      "at": "2026-10-05T05:04:47.470619Z"
+    },
+    {
+      "state": "resumed",
+      "phase": "lifecycleRunning",
+      "busy": true,
+      "at": "2026-10-05T05:04:47.535883Z"
+    }
+  ],
+  "os": "android",
+  "root": "/data/user/0/com.mediaflow.mediaflow.processingv070b01/files/processing/android05",
+  "fixtures": "/storage/emulated/0/Android/data/com.mediaflow.mediaflow.processingv070b01/files/processing-fixtures",
+  "phase": "complete",
+  "uiTicks": 2373,
+  "invalidInput": "invalidInput",
+  "duplicateId": "outputConflict",
+  "existingOutput": "outputConflict",
+  "partialsAbsent": true,
+  "systemOpen": "USER CONFIRMED android05 2026-10-05",
+  "status": "PASS",
+  "userSystemPlayback": {
+    "run": "android05",
+    "result": "Android 全部正常",
+    "date": "2026-10-05"
+  }
+}

@@ -6,6 +6,16 @@ enum MediaTrackRole { progressive, videoOnly, audioOnly }
 
 enum MediaResourceType { video, image, audio, cover }
 
+/// A declared resource relationship, never an instruction to run local tools.
+final class MediaAssemblyGroup {
+  MediaAssemblyGroup({
+    required this.videoResourceId,
+    required List<String> audioResourceIds,
+  }) : audioResourceIds = List.unmodifiable(audioResourceIds);
+  final String videoResourceId;
+  final List<String> audioResourceIds;
+}
+
 /// A public work. Download state and local file paths belong to DownloadTask.
 final class MediaContent {
   MediaContent({
@@ -19,7 +29,9 @@ final class MediaContent {
     this.description,
     this.coverUrl,
     this.duration,
-  }) : resources = List<MediaResource>.unmodifiable(resources) {
+    List<MediaAssemblyGroup> assemblyGroups = const [],
+  }) : resources = List<MediaResource>.unmodifiable(resources),
+       assemblyGroups = List.unmodifiable(assemblyGroups) {
     if (id.trim().isEmpty) {
       throw ArgumentError.value(id, 'id', 'Must not be empty.');
     }
@@ -37,6 +49,23 @@ final class MediaContent {
         );
       }
     }
+    for (final group in this.assemblyGroups) {
+      if (!this.resources.any(
+            (r) =>
+                r.id == group.videoResourceId &&
+                r.trackRole == MediaTrackRole.videoOnly,
+          ) ||
+          group.audioResourceIds.isEmpty ||
+          group.audioResourceIds.toSet().length !=
+              group.audioResourceIds.length ||
+          group.audioResourceIds.any(
+            (id) => !this.resources.any(
+              (r) => r.id == id && r.trackRole == MediaTrackRole.audioOnly,
+            ),
+          )) {
+        throw ArgumentError('Invalid assembly resource relationship.');
+      }
+    }
   }
 
   final String id;
@@ -49,6 +78,7 @@ final class MediaContent {
   final String? description;
   final Uri? coverUrl;
   final Duration? duration;
+  final List<MediaAssemblyGroup> assemblyGroups;
 }
 
 /// One ordered media item. Its URL may expire and must not be persisted as
@@ -65,6 +95,7 @@ final class MediaResource {
     this.qualityLabel,
     this.width,
     this.height,
+    this.fps,
     this.bitrate,
     this.codec,
     this.container,
@@ -99,6 +130,7 @@ final class MediaResource {
   final MediaTrackRole? trackRole;
   final String? qualityLabel;
   final int? width, height, bitrate, sizeBytes;
+  final int? fps;
   final String? codec, container;
   final bool temporaryUrl;
   bool? get hasVideo =>

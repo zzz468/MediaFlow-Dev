@@ -1,0 +1,192 @@
+{
+  "baseline/windows": {
+    "files": 27,
+    "zipBytes": 13869728,
+    "bytes": 33291539.0
+  },
+  "windows-release-final": {
+    "files": 48,
+    "zipBytes": 17055219,
+    "bytes": 40979884.0
+  },
+  "baseline/app-release.apk": {
+    "nativeLibraries": [
+      {
+        "bytes": 7078800,
+        "name": "lib/arm64-v8a/libapp.so",
+        "compressedBytes": 7078800
+      },
+      {
+        "bytes": 124744,
+        "name": "lib/arm64-v8a/libdartjni.so",
+        "compressedBytes": 124744
+      },
+      {
+        "bytes": 11581856,
+        "name": "lib/arm64-v8a/libflutter.so",
+        "compressedBytes": 11581856
+      },
+      {
+        "bytes": 7766604,
+        "name": "lib/armeabi-v7a/libapp.so",
+        "compressedBytes": 7766604
+      },
+      {
+        "bytes": 76816,
+        "name": "lib/armeabi-v7a/libdartjni.so",
+        "compressedBytes": 76816
+      },
+      {
+        "bytes": 8453804,
+        "name": "lib/armeabi-v7a/libflutter.so",
+        "compressedBytes": 8453804
+      },
+      {
+        "bytes": 7275408,
+        "name": "lib/x86_64/libapp.so",
+        "compressedBytes": 7275408
+      },
+      {
+        "bytes": 108616,
+        "name": "lib/x86_64/libdartjni.so",
+        "compressedBytes": 108616
+      },
+      {
+        "bytes": 12859464,
+        "name": "lib/x86_64/libflutter.so",
+        "compressedBytes": 12859464
+      }
+    ],
+    "bytes": 55863419
+  },
+  "app-release-final.apk": {
+    "nativeLibraries": [
+      {
+        "bytes": 7078800,
+        "name": "lib/arm64-v8a/libapp.so",
+        "compressedBytes": 7078800
+      },
+      {
+        "bytes": 124744,
+        "name": "lib/arm64-v8a/libdartjni.so",
+        "compressedBytes": 124744
+      },
+      {
+        "bytes": 11581856,
+        "name": "lib/arm64-v8a/libflutter.so",
+        "compressedBytes": 11581856
+      },
+      {
+        "bytes": 4528,
+        "name": "lib/arm64-v8a/libmediaflow_processing_storage.so",
+        "compressedBytes": 4528
+      },
+      {
+        "bytes": 7766604,
+        "name": "lib/armeabi-v7a/libapp.so",
+        "compressedBytes": 7766604
+      },
+      {
+        "bytes": 76816,
+        "name": "lib/armeabi-v7a/libdartjni.so",
+        "compressedBytes": 76816
+      },
+      {
+        "bytes": 8453804,
+        "name": "lib/armeabi-v7a/libflutter.so",
+        "compressedBytes": 8453804
+      },
+      {
+        "bytes": 3172,
+        "name": "lib/armeabi-v7a/libmediaflow_processing_storage.so",
+        "compressedBytes": 3172
+      },
+      {
+        "bytes": 7275408,
+        "name": "lib/x86_64/libapp.so",
+        "compressedBytes": 7275408
+      },
+      {
+        "bytes": 108616,
+        "name": "lib/x86_64/libdartjni.so",
+        "compressedBytes": 108616
+      },
+      {
+        "bytes": 12859464,
+        "name": "lib/x86_64/libflutter.so",
+        "compressedBytes": 12859464
+      },
+      {
+        "bytes": 4464,
+        "name": "lib/x86_64/libmediaflow_processing_storage.so",
+        "compressedBytes": 4464
+      }
+    ],
+    "bytes": 55902968
+  },
+  "app-release-bounded.apk": {
+    "bytes": 55902968,
+    "nativeLibraries": [
+      {
+        "name": "lib/arm64-v8a/libapp.so",
+        "compressedBytes": 7078800,
+        "bytes": 7078800
+      },
+      {
+        "name": "lib/arm64-v8a/libdartjni.so",
+        "compressedBytes": 124744,
+        "bytes": 124744
+      },
+      {
+        "name": "lib/arm64-v8a/libflutter.so",
+        "compressedBytes": 11581856,
+        "bytes": 11581856
+      },
+      {
+        "name": "lib/arm64-v8a/libmediaflow_processing_storage.so",
+        "compressedBytes": 4528,
+        "bytes": 4528
+      },
+      {
+        "name": "lib/armeabi-v7a/libapp.so",
+        "compressedBytes": 7766604,
+        "bytes": 7766604
+      },
+      {
+        "name": "lib/armeabi-v7a/libdartjni.so",
+        "compressedBytes": 76816,
+        "bytes": 76816
+      },
+      {
+        "name": "lib/armeabi-v7a/libflutter.so",
+        "compressedBytes": 8453804,
+        "bytes": 8453804
+      },
+      {
+        "name": "lib/armeabi-v7a/libmediaflow_processing_storage.so",
+        "compressedBytes": 3172,
+        "bytes": 3172
+      },
+      {
+        "name": "lib/x86_64/libapp.so",
+        "compressedBytes": 7275408,
+        "bytes": 7275408
+      },
+      {
+        "name": "lib/x86_64/libdartjni.so",
+        "compressedBytes": 108616,
+        "bytes": 108616
+      },
+      {
+        "name": "lib/x86_64/libflutter.so",
+        "compressedBytes": 12859464,
+        "bytes": 12859464
+      },
+      {
+        "name": "lib/x86_64/libmediaflow_processing_storage.so",
+        "compressedBytes": 4464,
+        "bytes": 4464
+      }
+    ]
+  }
+}

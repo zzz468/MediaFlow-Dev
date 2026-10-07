@@ -1,0 +1,201 @@
+ M .gitignore
+ M CHANGELOG.md
+ M README.md
+ M android/app/build.gradle.kts
+ M android/app/src/main/kotlin/com/mediaflow/mediaflow/MainActivity.kt
+ M android/app/src/main/res/xml/download_file_paths.xml
+ M docs/USER_GUIDE.md
+ M docs/使用说明.md
+ M lib/app/mediaflow_app.dart
+ M lib/app/router/app_router.dart
+ M lib/app/shell/app_shell.dart
+ M lib/core/config/app_config.dart
+ M lib/features/about/presentation/about_page.dart
+ M lib/features/downloader/application/download_manager.dart
+ M lib/features/downloader/data/local_download_file_store.dart
+ M lib/features/downloader/data/local_media_opener.dart
+ M lib/features/downloader/domain/download_task.dart
+ M lib/features/history/application/download_history_projection.dart
+ M lib/features/history/presentation/download_history_page.dart
+ M lib/features/home/presentation/home_page.dart
+ M lib/features/parser/data/youtube/youtube_parser.dart
+ M lib/features/parser/domain/media_content.dart
+ M lib/features/parser/presentation/media_variant_picker.dart
+ M pubspec.yaml
+ M tool/release/build_android_apk.ps1
+ M tool/release/build_windows_package.ps1
+ M windows/CMakeLists.txt
+ M windows/flutter/generated_plugin_registrant.cc
+ M windows/flutter/generated_plugin_registrant.h
+ M windows/flutter/generated_plugins.cmake
+ M windows/runner/CMakeLists.txt
+ M windows/runner/flutter_window.cpp
+ M windows/runner/flutter_window.h
+?? android/app/processing-proguard-rules.pro
+?? android/app/src/main/cpp/CMakeLists.txt
+?? android/app/src/main/cpp/processing_storage.c
+?? android/app/src/main/java/com/mediaflow/mediaflow/processing/AtomicOutputStore.java
+?? android/app/src/main/java/com/mediaflow/mediaflow/processing/BoundedRetrieval.java
+?? android/app/src/main/java/com/mediaflow/mediaflow/processing/LocalMediaToolsPlugin.java
+?? android/app/src/main/java/com/mediaflow/mediaflow/processing/NativeMediaProcessor.java
+?? android/app/src/main/java/com/mediaflow/mediaflow/processing/OperationRegistry.java
+?? android/app/src/main/java/com/mediaflow/mediaflow/processing/ProcessingPlugin.java
+?? android/app/src/main/java/com/mediaflow/mediaflow/processing/ProcessingRequest.java
+?? integration_test/v070_local_compatibility_acceptance_test.dart
+?? integration_test/v070_media_tools_acceptance_test.dart
+?? integration_test/v070_youtube_pipeline_acceptance_test.dart
+?? integration_test/v070_youtube_quality_acceptance_test.dart
+?? lib/features/downloader/application/media_assembly_controller.dart
+?? lib/features/downloader/application/media_assembly_manager.dart
+?? lib/features/downloader/data/media_assembly_repository.dart
+?? lib/features/downloader/data/media_assembly_storage.dart
+?? lib/features/downloader/domain/media_assembly.dart
+?? lib/features/downloader/presentation/media_assembly_tile.dart
+?? lib/features/parser/application/media_variant_selection.dart
+?? lib/features/processing/application/processing_operation_manager.dart
+?? lib/features/processing/application/processing_providers.dart
+?? lib/features/processing/application/user_processing_controller.dart
+?? lib/features/processing/application/user_processing_providers.dart
+?? lib/features/processing/domain/local_media.dart
+?? lib/features/processing/domain/media_processing_capabilities.dart
+?? lib/features/processing/domain/processing.dart
+?? lib/features/processing/infrastructure/android/android_processing_engine.dart
+?? lib/features/processing/infrastructure/local_media_input.dart
+?? lib/features/processing/infrastructure/local_output.dart
+?? lib/features/processing/infrastructure/processing_engine_factory.dart
+?? lib/features/processing/infrastructure/processing_history_repository.dart
+?? lib/features/processing/infrastructure/user_processing_storage.dart
+?? lib/features/processing/infrastructure/windows/ffmpeg_process.dart
+?? lib/features/processing/infrastructure/windows/windows_output_storage.dart
+?? lib/features/processing/infrastructure/windows/windows_processing_engine.dart
+?? lib/features/processing/presentation/media_tools_page.dart
+?? lib/features/processing/presentation/processing_history_tile.dart
+?? test/features/downloader/media_assembly_test.dart
+?? test/features/parser/media_variant_selection_test.dart
+?? test/features/processing/media_processing_capabilities_test.dart
+?? test/features/processing/media_tools_ui_test.dart
+?? test/features/processing/processing_test.dart
+?? test/features/processing/user_processing_test.dart
+?? test/features/processing/v060_upgrade_compatibility_test.dart
+?? third_party/ffmpeg/COPYING.LGPLv2.1
+?? third_party/ffmpeg/FFmpeg-LICENSE.md
+?? third_party/ffmpeg/IJG-NOTICES.txt
+?? third_party/ffmpeg/NOTICE.txt
+?? third_party/ffmpeg/README.md
+?? third_party/ffmpeg/SOURCE.txt
+?? third_party/ffmpeg/build-configuration.txt
+?? third_party/ffmpeg/compiler-rt-LICENSE.txt
+?? third_party/ffmpeg/llvm-mingw-LICENSE.txt
+?? third_party/ffmpeg/mingw-w64-COPYING.txt
+?? third_party/ffmpeg/mingw-w64-runtime-NOTICE.txt
+?? third_party/ffmpeg/runtime-manifest.json
+?? tool/release/audit_v070_assets.py
+?? tool/release/audit_workspace.py
+?? tools/processing/acceptance_main.dart
+?? tools/processing/native_tests/BoundedRetrievalTest.java
+?? tools/processing/native_tests/ProcessingContractTest.java
+?? tools/processing/phase4_acquisition_probe.dart
+?? tools/processing/phase4_collect_sizes.ps1
+?? tools/processing/phase5_collect_sizes.ps1
+?? tools/processing/phase5_verify_outputs.ps1
+?? tools/processing/prepare_windows_ffmpeg.ps1
+?? tools/processing/youtube_quality_probe.dart
+?? v0.7.0/.gitignore
+?? v0.7.0/README.md
+?? v0.7.0/acceptance/android.md
+?? v0.7.0/acceptance/windows.md
+?? v0.7.0/architecture.md
+?? v0.7.0/poc/README.md
+?? v0.7.0/poc/android/AndroidManifest.xml
+?? v0.7.0/poc/android/build.ps1
+?? v0.7.0/poc/android/measure-apk.ps1
+?? v0.7.0/poc/android/measure-production-packaging.ps1
+?? v0.7.0/poc/android/src/com/mediaflow/research/v070/processing/NativeEngine.java
+?? v0.7.0/poc/android/src/com/mediaflow/research/v070/processing/OutputProvider.java
+?? v0.7.0/poc/android/src/com/mediaflow/research/v070/processing/PocActivity.java
+?? v0.7.0/poc/mf_probe.cpp
+?? v0.7.0/poc/probe_native.dart
+?? v0.7.0/poc/processing_engine.dart
+?? v0.7.0/poc/run_windows.dart
+?? v0.7.0/poc/windows-ffmpeg/bootstrap.ps1
+?? v0.7.0/poc/windows-ffmpeg/build-minimal.sh
+?? v0.7.0/poc/windows-ffmpeg/package.ps1
+?? v0.7.0/poc/windows-ffmpeg/prepare-tools.sh
+?? v0.7.0/poc/windows-ffmpeg/verify.dart
+?? v0.7.0/release-candidate.md
+?? v0.7.0/release/git-diff-stat.txt
+?? v0.7.0/release/git-status.txt
+?? v0.7.0/release/package-audit.json
+?? v0.7.0/release/rc-evidence.json
+?? v0.7.0/release/size-comparison.json
+?? v0.7.0/release/workspace-audit.json
+?? v0.7.0/research/README.md
+?? v0.7.0/research/ffmpeg-binary-hashes.json
+?? v0.7.0/research/ffmpeg-build-recipe.md
+?? v0.7.0/research/ffmpeg-buildconf.txt
+?? v0.7.0/research/ffmpeg-options.md
+?? v0.7.0/research/ffmpeg-phase3a-binary-manifest.json
+?? v0.7.0/research/ffmpeg-phase3a-configuration.txt
+?? v0.7.0/research/ffmpeg-phase3a-enabled-components.txt
+?? v0.7.0/research/ffmpeg-phase3a-license-output.txt
+?? v0.7.0/research/ffmpeg-phase3a-package-manifest.json
+?? v0.7.0/research/ffmpeg-phase3a-reproducibility.json
+?? v0.7.0/research/ffmpeg-phase3a-sizes.json
+?? v0.7.0/research/ffmpeg-release-compliance.md
+?? v0.7.0/research/licenses/ffmpeg/COPYING.LGPLv2.1
+?? v0.7.0/research/licenses/ffmpeg/FFmpeg-LICENSE.md
+?? v0.7.0/research/licenses/ffmpeg/IJG-NOTICES.txt
+?? v0.7.0/research/licenses/ffmpeg/NOTICE.txt
+?? v0.7.0/research/licenses/ffmpeg/SOURCE.txt
+?? v0.7.0/research/licenses/ffmpeg/compiler-rt-LICENSE.txt
+?? v0.7.0/research/licenses/ffmpeg/llvm-mingw-LICENSE.txt
+?? v0.7.0/research/licenses/ffmpeg/mingw-w64-COPYING.txt
+?? v0.7.0/research/licenses/ffmpeg/mingw-w64-runtime-NOTICE.txt
+?? v0.7.0/research/local-compatibility-android-h264.json
+?? v0.7.0/research/local-compatibility-android-hevc.json
+?? v0.7.0/research/local-compatibility-payload-verification.json
+?? v0.7.0/research/local-compatibility-report.md
+?? v0.7.0/research/local-compatibility-source.json
+?? v0.7.0/research/local-compatibility-system-playback.json
+?? v0.7.0/research/local-compatibility-windows-h264.json
+?? v0.7.0/research/local-compatibility-windows-hevc.json
+?? v0.7.0/research/media-processing-options.md
+?? v0.7.0/research/phase2-evidence.json
+?? v0.7.0/research/phase2-report.md
+?? v0.7.0/research/phase3a-deployment-evidence.json
+?? v0.7.0/research/phase3a-evidence.json
+?? v0.7.0/research/phase3a-report.md
+?? v0.7.0/research/phase3a-webm-evidence.json
+?? v0.7.0/research/phase3b-android-decoding.json
+?? v0.7.0/research/phase3b-android-evidence.json
+?? v0.7.0/research/phase3b-git-state.txt
+?? v0.7.0/research/phase3b-installation.json
+?? v0.7.0/research/phase3b-report.md
+?? v0.7.0/research/phase3b-sizes.json
+?? v0.7.0/research/phase3b-windows-evidence.json
+?? v0.7.0/research/phase4-acquisition-evidence.json
+?? v0.7.0/research/phase4-android-evidence.json
+?? v0.7.0/research/phase4-report.md
+?? v0.7.0/research/phase4-sizes.json
+?? v0.7.0/research/phase4-windows-evidence.json
+?? v0.7.0/research/phase5-android-cancel-lifecycle-evidence.json
+?? v0.7.0/research/phase5-android-evidence.json
+?? v0.7.0/research/phase5-git-state.txt
+?? v0.7.0/research/phase5-output-validation.json
+?? v0.7.0/research/phase5-report.md
+?? v0.7.0/research/phase5-sizes.json
+?? v0.7.0/research/phase5-user-observation.json
+?? v0.7.0/research/phase5-windows-cancel-evidence.json
+?? v0.7.0/research/phase5-windows-evidence.json
+?? v0.7.0/research/youtube-quality-android-installation.json
+?? v0.7.0/research/youtube-quality-android-validation.json
+?? v0.7.0/research/youtube-quality-candidates.json
+?? v0.7.0/research/youtube-quality-dual-platform.json
+?? v0.7.0/research/youtube-quality-git-state.txt
+?? v0.7.0/research/youtube-quality-matrix.md
+?? v0.7.0/research/youtube-quality-report.md
+?? v0.7.0/research/youtube-quality-windows-control.json
+?? v0.7.0/research/youtube-quality-windows-validation.json
+?? windows/processing_runtime.cmake
+?? windows/runner/media_tools.cpp
+?? windows/runner/media_tools.h
