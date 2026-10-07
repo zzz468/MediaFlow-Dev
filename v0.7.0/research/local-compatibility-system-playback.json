@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-06",
+  "platform": "Android",
+  "package": "com.mediaflow.mediaflow.localcompatv070",
+  "verification": "User explicitly confirmed actual system-app playback/display",
+  "LC-A6": {"file": "LC_HEVC_trim.mp4", "videoPlays": true, "audioAudible": true},
+  "LC-A7": {"file": "LC_HEVC_extractAudio.m4a", "audioAudible": true},
+  "LC-A8": {"file": "LC_HEVC_extractFrame.jpg", "imageDisplays": true},
+  "userReply": "视频能播放且有声音、M4A 能听见声音、JPEG 正常显示"
+}

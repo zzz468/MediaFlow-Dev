@@ -1,0 +1,1 @@
+-keep class com.mediaflow.mediaflow.processing.AtomicOutputStore { *; }

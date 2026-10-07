@@ -26,6 +26,12 @@ class AppShell extends ConsumerWidget {
       Icons.settings,
     ),
     _AppDestination(
+      '媒体处理',
+      AppRoutes.processing,
+      Icons.movie_creation_outlined,
+      Icons.movie_creation,
+    ),
+    _AppDestination(
       '关于',
       AppRoutes.about,
       Icons.info_outline_rounded,

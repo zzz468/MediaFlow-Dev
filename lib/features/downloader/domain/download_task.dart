@@ -39,6 +39,7 @@ class DownloadTask {
     this.mimeType,
     this.sourceUrl,
     this.groupResources = false,
+    this.assemblyId,
   }) : assert(progress >= 0 && progress <= 1),
        assert(bytesReceived >= 0),
        assert(totalBytes == null || totalBytes >= 0);
@@ -72,6 +73,9 @@ class DownloadTask {
 
   /// Explicit ordered-work grouping; older tasks retain their projection.
   final bool groupResources;
+
+  /// Private working input, hidden from user completion/history projection.
+  final String? assemblyId;
   bool get needsUrlRefresh => sourceUrl != null && url == sourceUrl;
 
   DownloadTask copyWith({
@@ -114,6 +118,7 @@ class DownloadTask {
       mimeType: mimeType,
       sourceUrl: sourceUrl,
       groupResources: groupResources,
+      assemblyId: assemblyId,
     );
   }
 
@@ -142,6 +147,7 @@ class DownloadTask {
       if (suggestedFileName != null) 'suggestedFileName': suggestedFileName,
       if (mimeType != null) 'mimeType': mimeType,
       if (groupResources) 'groupResources': true,
+      if (assemblyId != null) 'assemblyId': assemblyId,
     };
   }
 
@@ -191,6 +197,7 @@ class DownloadTask {
           ? Uri.tryParse(json['sourceUrl'] as String)
           : null,
       groupResources: json['groupResources'] == true,
+      assemblyId: json['assemblyId'] as String?,
     );
   }
 

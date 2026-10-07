@@ -1,0 +1,32 @@
+[
+  {
+    "bytes": 147592,
+    "sha256": "b342d6d1de8e12460bedaed1acb9192cf56b42b26496695ecf7558ca373e6798",
+    "file": "extractAudio.m4a",
+    "independentFullDecode": "PASS"
+  },
+  {
+    "bytes": 11414,
+    "sha256": "d5cd14d667c1a44f2216a9ffcfd042894627b6818bf398599f0b6f4b85a013cd",
+    "file": "extractFrame.jpg",
+    "independentFullDecode": "PASS"
+  },
+  {
+    "bytes": 909473,
+    "sha256": "09d1ad7171d73c4947a75bcb12f426aa933f8c9b1a5dc1568e95df0a950b5a39",
+    "file": "mux.mp4",
+    "independentFullDecode": "PASS"
+  },
+  {
+    "bytes": 909473,
+    "sha256": "09d1ad7171d73c4947a75bcb12f426aa933f8c9b1a5dc1568e95df0a950b5a39",
+    "file": "remux.mp4",
+    "independentFullDecode": "PASS"
+  },
+  {
+    "bytes": 314303,
+    "sha256": "3dbca33eddaa3f0b5d0ec803c76c00cfc2b864e9e81a192880f004899fc0023f",
+    "file": "trim.mp4",
+    "independentFullDecode": "PASS"
+  }
+]

@@ -1,0 +1,21 @@
+FFmpeg version 8.1.3, tag n8.1.3
+Commit 1041abdc962f4cc4f394aa8de9dc5236c0c3b9e7 (upstream tag dereference)
+Source archive https://ffmpeg.org/releases/ffmpeg-8.1.3.tar.xz
+SHA-256 7138d28c96d9d3e3af4ee3d8cad72741f8ffb40da90c1112235dea3ecd3178a3
+Signature https://ffmpeg.org/releases/ffmpeg-8.1.3.tar.xz.asc
+Signing key fingerprint FCF986EA15E6E293A5644F10B4322F04D67658D8
+Source changes: none.
+
+Local corresponding-source.zip accompanies candidate.zip in the deployment model.
+It contains the actual FFmpeg source archive, signature/key, exact configuration,
+MediaFlow build recipe, MinGW-w64 full source archive and copyright/license records.
+Restore the recipe into v0.7.0/poc/windows-ffmpeg in a checkout before building.
+Build inputs and versions: ffmpeg-build-recipe.md in the source companion.
+LLVM compiler-rt source:
+https://github.com/llvm/llvm-project/tree/85ac560262434c9ccfc0c183ec22d4138ed647fb/compiler-rt
+MinGW-w64 source:
+https://github.com/mingw-w64/mingw-w64/tree/57b595039040eaa15bece85b7cc71d952281b269
+
+Future public binary distribution MUST provide this matched source companion,
+not merely refer to an upstream moving branch. This is a local research package;
+no public distribution has been performed or authorized.

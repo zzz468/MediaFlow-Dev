@@ -5,26 +5,37 @@ import '../../../core/models/media_link.dart';
 import '../../downloader/application/download_manager.dart';
 import '../../downloader/domain/download_task.dart';
 import '../../downloader/presentation/download_task_tile.dart';
+import '../../downloader/application/media_assembly_manager.dart';
+import '../../downloader/presentation/media_assembly_tile.dart';
+import '../../downloader/domain/media_assembly.dart';
 import '../application/download_history_projection.dart';
+import '../../processing/application/user_processing_providers.dart';
+import '../../processing/presentation/processing_history_tile.dart';
 
 class DownloadHistoryPage extends ConsumerWidget {
   const DownloadHistoryPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final tasks = [...ref.watch(downloadManagerProvider)]
-      ..sort((left, right) => right.createdAt.compareTo(left.createdAt));
-    final activeCount = tasks
-        .where(
-          (task) =>
-              task.status == DownloadStatus.downloading ||
-              task.status == DownloadStatus.queued,
-        )
-        .length;
-    final completedCount = tasks
-        .where((task) => task.status == DownloadStatus.completed)
-        .length;
+    final tasks = [
+      ...ref.watch(downloadManagerProvider).where((t) => t.assemblyId == null),
+    ]..sort((left, right) => right.createdAt.compareTo(left.createdAt));
+    final assemblies = [...ref.watch(mediaAssemblyManagerProvider)]
+      ..sort((a, b) => b.createdAt.compareTo(a.createdAt));
+    final activeCount =
+        assemblies.where((t) => !t.terminal).length +
+        tasks
+            .where(
+              (task) =>
+                  task.status == DownloadStatus.downloading ||
+                  task.status == DownloadStatus.queued,
+            )
+            .length;
+    final completedCount =
+        assemblies.where((t) => t.stage == AssemblyStage.completed).length +
+        tasks.where((task) => task.status == DownloadStatus.completed).length;
     final entries = projectDownloadHistory(tasks);
+    final processed = ref.watch(processingHistoryProvider).asData?.value ?? [];
 
     return Padding(
       padding: const EdgeInsets.all(32),
@@ -40,7 +51,9 @@ class DownloadHistoryPage extends ConsumerWidget {
             '任务会自动保存，重新打开 MediaFlow 后仍可查看和继续。',
             style: Theme.of(context).textTheme.bodyLarge,
           ),
-          if (tasks.isNotEmpty) ...[
+          if (tasks.isNotEmpty ||
+              assemblies.isNotEmpty ||
+              processed.isNotEmpty) ...[
             const SizedBox(height: 16),
             Wrap(
               spacing: 8,
@@ -52,22 +65,36 @@ class DownloadHistoryPage extends ConsumerWidget {
                 ),
                 Chip(
                   avatar: const Icon(Icons.done_rounded, size: 18),
-                  label: Text('已完成 $completedCount'),
+                  label: Text('已完成 ${completedCount + processed.length}'),
                 ),
-                Chip(label: Text('全部 ${tasks.length}')),
+                Chip(
+                  label: Text(
+                    '全部 ${tasks.length + assemblies.length + processed.length}',
+                  ),
+                ),
               ],
             ),
           ],
           const SizedBox(height: 24),
           Expanded(
-            child: entries.isEmpty
+            child: entries.isEmpty && assemblies.isEmpty && processed.isEmpty
                 ? const _EmptyHistoryState()
                 : ListView.separated(
-                    itemCount: entries.length,
+                    itemCount:
+                        entries.length + assemblies.length + processed.length,
                     separatorBuilder: (context, index) =>
                         const SizedBox(height: 12),
                     itemBuilder: (context, index) {
-                      final entry = entries[index];
+                      if (index < processed.length) {
+                        return ProcessingHistoryTile(
+                          item: processed[processed.length - 1 - index],
+                        );
+                      }
+                      index -= processed.length;
+                      if (index < assemblies.length) {
+                        return MediaAssemblyTile(task: assemblies[index]);
+                      }
+                      final entry = entries[index - assemblies.length];
                       return entry.isWork
                           ? _WorkHistoryCard(entry: entry)
                           : DownloadTaskTile(task: entry.first);

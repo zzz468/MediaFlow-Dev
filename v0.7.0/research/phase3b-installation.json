@@ -1,0 +1,19 @@
+{
+  "package": "com.mediaflow.mediaflow.processingv070b01",
+  "sourcePreflight": "poc/local/phase3b/android-install-preflight.json",
+  "uninstalled": false,
+  "formalLastUpdateTime": "2026-10-04 13:27:45",
+  "date": "2026-10-05",
+  "testApkSha256": "31e3d03b80d2328f6e591df85a369f3244e13eea1a79397cd0b23492ad07fedf",
+  "dataCleared": false,
+  "formalVersion": "0.6.0",
+  "processEndedByTestApkUpdate": true,
+  "testPackageUpdated": true,
+  "formalReplaced": false,
+  "signerSha256": "16686bce55b6c8eb66bb16b77a8599fa6005483e97430c519710a4d730c6dcba",
+  "signatureConflict": false,
+  "formalPackage": "com.mediaflow.mediaflow",
+  "finalRun": "android05",
+  "serial": "40fcb99f",
+  "type": "Release isolated Flutter harness"
+}

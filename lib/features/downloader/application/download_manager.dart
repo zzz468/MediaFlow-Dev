@@ -11,6 +11,7 @@ import '../data/http_download_client.dart';
 import '../data/http_download_service.dart';
 import '../data/json_download_task_repository.dart';
 import '../data/local_download_file_store.dart';
+import '../data/media_assembly_storage.dart';
 import '../data/simulated_download_plan.dart';
 import '../domain/download_event.dart';
 import '../domain/download_exception.dart';
@@ -31,6 +32,8 @@ final downloadServiceProvider = Provider<DownloadService>((ref) {
   final service = HttpDownloadService(
     downloadClient: HttpDownloadClient(),
     fileStore: LocalDownloadFileStore(
+      workingDirectoryResolver: (id) =>
+          ref.read(mediaAssemblyStorageProvider).workingDirectory(id),
       downloadDirectoryResolver: () async {
         final configuredDirectory = ref
             .read(appSettingsProvider)
@@ -408,7 +411,8 @@ class DownloadManager extends Notifier<List<DownloadTask>> {
             errorMessage: null,
           ),
         );
-        if (ref.read(appSettingsProvider).downloadNotificationsEnabled) {
+        if (_taskById(taskId)?.assemblyId == null &&
+            ref.read(appSettingsProvider).downloadNotificationsEnabled) {
           final completedTask = _taskById(taskId);
           AppLogger.info(
             'Download completed: ${completedTask?.title ?? taskId}',

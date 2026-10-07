@@ -63,3 +63,6 @@ key.properties
 /v0.5.0/acceptance/youtube/android-cold-history.json
 /v0.5.0/acceptance/youtube/frozen-before.json
 /v0.5.0/release/local/
+
+# Generated pinned Windows processing runtime; build inputs and notices are versioned.
+/windows/third_party/ffmpeg/bin/

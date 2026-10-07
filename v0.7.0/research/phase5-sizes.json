@@ -1,0 +1,170 @@
+{
+  "atUtc": "2026-10-05T13:13:42.2199081Z",
+  "windows": {
+    "normalMainRelease": true,
+    "files": 48,
+    "bytes": 41297324.0,
+    "phase4Bytes": 41143724,
+    "deltaBytes": 153600.0,
+    "zipOptimalBytes": 17197061,
+    "phase4ZipBytes": 17131783,
+    "zipDeltaBytes": 65278,
+    "processingRuntime": [
+      {
+        "name": "avcodec-62.dll",
+        "bytes": 3609088,
+        "sha256": "B554D5E7D560E9B5710483006FF7D6A1407BA67A2495187B3AA9F8175982FA40",
+        "identicalToPhase3B": true
+      },
+      {
+        "name": "avfilter-11.dll",
+        "bytes": 241152,
+        "sha256": "803B1BBEE651E32088B3965CF1A07D5D18A0C57F5D36941E285E36497E8820AC",
+        "identicalToPhase3B": true
+      },
+      {
+        "name": "avformat-62.dll",
+        "bytes": 831488,
+        "sha256": "8BD73A64B6B57526D6AC68FEF2756BE8ED21BCF28130B67E9C6DC35961FAD258",
+        "identicalToPhase3B": true
+      },
+      {
+        "name": "avutil-60.dll",
+        "bytes": 719872,
+        "sha256": "C342EA55EE779908195368A0014F4CD40444527B23F0362FE0F86A5EDED098D3",
+        "identicalToPhase3B": true
+      },
+      {
+        "name": "ffmpeg.exe",
+        "bytes": 429056,
+        "sha256": "2AAA3B4FF367087470E875C05E27FE8AF2693725708339FD35C99320A5B59F3A",
+        "identicalToPhase3B": true
+      },
+      {
+        "name": "ffprobe.exe",
+        "bytes": 195584,
+        "sha256": "C0BAD9ACE86FD241D7F2EEF4E9BD8734761D3311C2DAA9A4E7E3B9310337E41C",
+        "identicalToPhase3B": true
+      },
+      {
+        "name": "swresample-6.dll",
+        "bytes": 114688,
+        "sha256": "AD6B8BADE3451BC1BE2DC285722DA2C2C94D402ED4023C2551512935C0742222",
+        "identicalToPhase3B": true
+      },
+      {
+        "name": "swscale-9.dll",
+        "bytes": 1463808,
+        "sha256": "A83EE80D63BCF609B5B2F728C8C8068EAB3CC9CCD9851831C8E5AEE34BC81FB3",
+        "identicalToPhase3B": true
+      }
+    ]
+  },
+  "android": {
+    "normalMainRelease": true,
+    "applicationId": "com.mediaflow.mediaflow",
+    "installed": false,
+    "bytes": 56509344,
+    "phase4Bytes": 56148728,
+    "deltaBytes": 360616,
+    "sha256": "4714305020E81CE8AE179C13F9065D634C9D54CB5B40B935A3CDFF3B02A38E5B",
+    "nativeLibraries": [
+      {
+        "name": "lib/arm64-v8a/libapp.so",
+        "bytes": 7275408,
+        "compressedBytes": 7275408,
+        "sha256": "9CC5006327CF874957D473A692943356BF6E6010A70E3E8C5DC240D462B43B35",
+        "phase4Bytes": 7144336,
+        "processingStorageUnchanged": null
+      },
+      {
+        "name": "lib/arm64-v8a/libdartjni.so",
+        "bytes": 124744,
+        "compressedBytes": 124744,
+        "sha256": "A3D71603D55B338C00BC66EC520A3DFA69C6A62494B88ABE5C43DF2B4D54B8E0",
+        "phase4Bytes": 124744,
+        "processingStorageUnchanged": null
+      },
+      {
+        "name": "lib/arm64-v8a/libflutter.so",
+        "bytes": 11581856,
+        "compressedBytes": 11581856,
+        "sha256": "30D867063C01C31E6BA07BB23FECCD92F5F9F836D3DB6F389DDE0D9071C704F2",
+        "phase4Bytes": 11581856,
+        "processingStorageUnchanged": null
+      },
+      {
+        "name": "lib/arm64-v8a/libmediaflow_processing_storage.so",
+        "bytes": 4528,
+        "compressedBytes": 4528,
+        "sha256": "0CF5EBB9E4DFE0B9A2BC56BFD8F765AF111A77B99D71A20BA33B44A48E62067A",
+        "phase4Bytes": 4528,
+        "processingStorageUnchanged": true
+      },
+      {
+        "name": "lib/armeabi-v7a/libapp.so",
+        "bytes": 7979596,
+        "compressedBytes": 7979596,
+        "sha256": "1D76B22DA0379D10AAFA8BA4C3F4B1C96AF33297E79F585409890B18BAEE4EE5",
+        "phase4Bytes": 7881292,
+        "processingStorageUnchanged": null
+      },
+      {
+        "name": "lib/armeabi-v7a/libdartjni.so",
+        "bytes": 76816,
+        "compressedBytes": 76816,
+        "sha256": "6C6D31C1A6C262F8C4CCFC8914462F00917E59F112B63A707B48FC589415C3FC",
+        "phase4Bytes": 76816,
+        "processingStorageUnchanged": null
+      },
+      {
+        "name": "lib/armeabi-v7a/libflutter.so",
+        "bytes": 8453804,
+        "compressedBytes": 8453804,
+        "sha256": "40B97679DFBD7614B833F6DEDAC6A5F9945D5953E809E3E619A6D8D1B289F089",
+        "phase4Bytes": 8453804,
+        "processingStorageUnchanged": null
+      },
+      {
+        "name": "lib/armeabi-v7a/libmediaflow_processing_storage.so",
+        "bytes": 3172,
+        "compressedBytes": 3172,
+        "sha256": "20F81817ACF4E1FCA1621E7F71DB57DCBD70BBCC9C43A85A96BB8D1F431540C9",
+        "phase4Bytes": 3172,
+        "processingStorageUnchanged": true
+      },
+      {
+        "name": "lib/x86_64/libapp.so",
+        "bytes": 7472016,
+        "compressedBytes": 7472016,
+        "sha256": "188049192A6595F6F0B648FA42B125DE9D6787E13707AD7A33052179A90E1CC8",
+        "phase4Bytes": 7340944,
+        "processingStorageUnchanged": null
+      },
+      {
+        "name": "lib/x86_64/libdartjni.so",
+        "bytes": 108616,
+        "compressedBytes": 108616,
+        "sha256": "55AEC2AF2CC1B33075A99C944F88404398DEECF4756114F1AA9CA4F4AED2CC1E",
+        "phase4Bytes": 108616,
+        "processingStorageUnchanged": null
+      },
+      {
+        "name": "lib/x86_64/libflutter.so",
+        "bytes": 12859464,
+        "compressedBytes": 12859464,
+        "sha256": "6751D61BE66C019EE116EF92460083D312E8650C9C3530E1D50BCF0A81E62DE2",
+        "phase4Bytes": 12859464,
+        "processingStorageUnchanged": null
+      },
+      {
+        "name": "lib/x86_64/libmediaflow_processing_storage.so",
+        "bytes": 4464,
+        "compressedBytes": 4464,
+        "sha256": "11D57483B3704138E2274900BE4D4D71194B326E78CC723E1E91A6FECBF5F337",
+        "phase4Bytes": 4464,
+        "processingStorageUnchanged": true
+      }
+    ]
+  }
+}

@@ -9,6 +9,32 @@
 - 多质量、多格式下载选项
 - 系统级下载完成通知
 
+## [0.7.0] - 2026-10-07
+
+### Added
+
+- Windows/Android 本地 Media Processing：快速视频裁剪、AAC/M4A 音频提取、指定时间 JPEG 抽帧及 Processing History。
+- YouTube 兼容 H.264 + AAC 双流下载后的本地自动合并，完成后 History 只展示最终文件。
+
+### Improved
+
+- YouTube 默认选择完整生产链可处理的最高真实分辨率，同分辨率依次比较 fps、bitrate，保留手动选择。
+- 本地媒体按操作和平台/设备能力检测兼容性，允许已验证 HEVC 手机视频的裁剪、AAC 提取及可用设备的抽帧。
+- 独立处理状态、真实进度、取消、输出校验、无覆盖发布与最终文件打开。
+
+### Fixed
+
+- YouTube 默认优先取低清 progressive stream，未选中可用的高清兼容流。
+- 非 H.264 文件被媒体处理页面整体拒绝，阻止本来可用的音频提取或裁剪。
+
+### Known Limitations
+
+- 快速裁剪受关键帧边界影响；不承诺帧级精准裁剪。
+- AAC 直接提取为 M4A，不提供任意音频 codec 转换；抽帧取决于 decoder，Windows 随附组件没有 HEVC decoder。
+- VP9/AV1 高分辨率 YouTube 流不自动转码；最终兼容清晰度可能低于平台最高画质。
+- 部分 HDR/Dolby Vision 裁剪可能不完整保留高级动态元数据。
+- iOS/macOS/Linux Processing 未正式支持或验收。最终资产与许可材料见 [发布记录](v0.7.0/release/README.md)，真实验收范围见 [RC 报告](v0.7.0/release-candidate.md)。
+
 ## [0.6.0] - 2026-10-04
 
 ### Added

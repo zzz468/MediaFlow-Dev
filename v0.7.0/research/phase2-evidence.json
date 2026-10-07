@@ -1,0 +1,234 @@
+{
+  "Date": "2026-10-04",
+  "Head": "3ba068ae5d42ecabfaa3880afbdee1258a6df26b",
+  "Windows": [
+    {
+      "Operation": "trim",
+      "State": "completed",
+      "Ms": 192,
+      "Bytes": 315015,
+      "Codecs": [
+        "h264",
+        "aac"
+      ],
+      "Duration": "4.032000",
+      "ProgressEvents": 1
+    },
+    {
+      "Operation": "extractAudio",
+      "State": "completed",
+      "Ms": 196,
+      "Bytes": 147717,
+      "Codecs": [
+        "aac"
+      ],
+      "Duration": "12.000000",
+      "ProgressEvents": 1
+    },
+    {
+      "Operation": "mux",
+      "State": "completed",
+      "Ms": 222,
+      "Bytes": 909819,
+      "Codecs": [
+        "h264",
+        "aac"
+      ],
+      "Duration": "12.000000",
+      "ProgressEvents": 1
+    },
+    {
+      "Operation": "remux",
+      "State": "completed",
+      "Ms": 199,
+      "Bytes": 908968,
+      "Codecs": [
+        "h264",
+        "aac"
+      ],
+      "Duration": "12.021000",
+      "ProgressEvents": 1
+    },
+    {
+      "Operation": "extractFrame",
+      "State": "completed",
+      "Ms": 203,
+      "Bytes": 8946,
+      "Codecs": [
+        "mjpeg"
+      ],
+      "Duration": "0.040000",
+      "ProgressEvents": 1
+    }
+  ],
+  "WindowsCancel": {
+    "State": "cancelled",
+    "ExitCode": -1,
+    "Ms": 105,
+    "FinalExists": false,
+    "PartialCount": 0
+  },
+  "Android": [
+    {
+      "Operation": "trim",
+      "Round": 0,
+      "State": "completed",
+      "Ms": 514,
+      "Bytes": 314303,
+      "Sha256": "0fa139568ed9352aee6ea44f82c77208b26384f6a98cde455c007329c91be0a6",
+      "ProgressEvents": 29
+    },
+    {
+      "Operation": "extractAudio",
+      "Round": 0,
+      "State": "completed",
+      "Ms": 309,
+      "Bytes": 147592,
+      "Sha256": "4ce60ce0e7da12dd00768eac6da256ebd39813c6e39610d63db202947cdd230e",
+      "ProgressEvents": 57
+    },
+    {
+      "Operation": "mux",
+      "Round": 0,
+      "State": "completed",
+      "Ms": 83,
+      "Bytes": 909473,
+      "Sha256": "889e06ddde136ac6b32c94b299f6b8d9084c616eaf5c4f18ee73ea88c26271c2",
+      "ProgressEvents": 87
+    },
+    {
+      "Operation": "remux",
+      "Round": 0,
+      "State": "completed",
+      "Ms": 118,
+      "Bytes": 909473,
+      "Sha256": "bc4c77e7671f1a6220aaebb6dca2757726d32346f29adb53a7b890c38a7e4814",
+      "ProgressEvents": 87
+    },
+    {
+      "Operation": "extractFrame",
+      "Round": 0,
+      "State": "completed",
+      "Ms": 107,
+      "Bytes": 11414,
+      "Sha256": "d5cd14d667c1a44f2216a9ffcfd042894627b6818bf398599f0b6f4b85a013cd",
+      "ProgressEvents": 1
+    },
+    {
+      "Operation": "trim",
+      "Round": 1,
+      "State": "completed",
+      "Ms": 66,
+      "Bytes": 314303,
+      "Sha256": "c26bba04b325fe3fe53660afba4dc2a8eef8396cd64e911530316081fb2a8b58",
+      "ProgressEvents": 29
+    },
+    {
+      "Operation": "extractAudio",
+      "Round": 1,
+      "State": "completed",
+      "Ms": 80,
+      "Bytes": 147592,
+      "Sha256": "4ce60ce0e7da12dd00768eac6da256ebd39813c6e39610d63db202947cdd230e",
+      "ProgressEvents": 57
+    },
+    {
+      "Operation": "mux",
+      "Round": 1,
+      "State": "completed",
+      "Ms": 83,
+      "Bytes": 909473,
+      "Sha256": "bc4c77e7671f1a6220aaebb6dca2757726d32346f29adb53a7b890c38a7e4814",
+      "ProgressEvents": 87
+    },
+    {
+      "Operation": "remux",
+      "Round": 1,
+      "State": "completed",
+      "Ms": 113,
+      "Bytes": 909473,
+      "Sha256": "bc4c77e7671f1a6220aaebb6dca2757726d32346f29adb53a7b890c38a7e4814",
+      "ProgressEvents": 87
+    },
+    {
+      "Operation": "extractFrame",
+      "Round": 1,
+      "State": "completed",
+      "Ms": 73,
+      "Bytes": 11414,
+      "Sha256": "d5cd14d667c1a44f2216a9ffcfd042894627b6818bf398599f0b6f4b85a013cd",
+      "ProgressEvents": 1
+    }
+  ],
+  "AndroidCancel": {
+    "operation": "remux",
+    "state": "cancelled",
+    "bytes": 0,
+    "elapsedMs": 32,
+    "events": 1,
+    "finalExists": false,
+    "partialExists": false
+  },
+  "AndroidRestart": {
+    "staleExisted": true,
+    "cleaned": true,
+    "completedOutputPreserved": true
+  },
+  "SystemOpen": "User confirmed all Windows and Android outputs normal, 2026-10-04",
+  "Samples": [
+    {
+      "name": "sample.mp4",
+      "bytes": 909819,
+      "sha256": "6f57b836a08c9dfbb1b862b1f85ce25a7b61935497ca0c9e9505b04c680d5c2d"
+    },
+    {
+      "name": "video-only.mp4",
+      "bytes": 759044,
+      "sha256": "6f4879e00a4e313a72a4c61d5006922accf21b0a255114af1cf7ea777edd11b3"
+    },
+    {
+      "name": "audio-only.m4a",
+      "bytes": 147717,
+      "sha256": "029b400712683aeacbffe9eeed53420002a5164edd38b3b9a0b3bbe963b1ec75"
+    }
+  ],
+  "AndroidApk": {
+    "BaselineIsolatedApk": 1835538,
+    "CandidateIsolatedApk": 1839634,
+    "EngineDelta": 4096,
+    "NativeLibraryBytes": 0,
+    "ProductionApk": 55863403,
+    "ProductionIntegratedDelta": "NOT MEASURED: production is unchanged"
+  },
+  "WindowsPackage": {
+    "Base": 33292272.0,
+    "Candidate": 207571952.0,
+    "Delta": 174279680.0,
+    "Measurement": "Uncompressed packaging specimen; no production integration"
+  },
+  "NativeFfi": "openInput=0, findStreamInfo=0",
+  "MediaFoundation": {
+    "hresult": "0x00000000",
+    "decodedVideoFrames": 300,
+    "lastTimestamp100ns": 119600000
+  },
+  "FlutterAnalyze": "PASS",
+  "FlutterTests": "376 passed, 7 skipped",
+  "ProductionBuilds": "NOT RUN: no production dependency or source change",
+  "ProductionChanged": false,
+  "AndroidProductionPackaging": {
+    "OriginalReleaseApk": 55863403,
+    "BaselineReSigned": 55868188,
+    "CandidateReSigned": 55876438,
+    "EnginePackagingDelta": 8250,
+    "OriginalToCandidateDelta": 13035,
+    "NativeLibrariesAdded": 0,
+    "IntegratedFlutterAdapter": "NOT BUILT",
+    "Installed": false
+  },
+  "WindowsZips": {
+    "BaselineBytes": 13870605,
+    "CandidateBytes": 88732417,
+    "DeltaBytes": 74861812
+  }
+}

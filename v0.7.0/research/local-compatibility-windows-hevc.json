@@ -1,0 +1,85 @@
+{
+  "os": "windows",
+  "atUtc": "2026-10-06T05:00:25.624100Z",
+  "status": "PASS",
+  "inputRoute": "real production inspectWindows, fixture path supplied",
+  "results": [
+    {
+      "type": "trim",
+      "status": "PASS",
+      "output": "D:/projects/mediaflow-v070/v0.7.0/poc/local/local-compatibility/windows-hevc-01/outputs/Processed/LC_HEVC_trim.mp4",
+      "metadata": {
+        "durationUs": 4020000,
+        "tracks": [
+          {
+            "type": "video",
+            "codec": "hevc",
+            "width": 1920,
+            "height": 1080
+          },
+          {
+            "type": "audio",
+            "codec": "aac",
+            "width": null,
+            "height": null
+          }
+        ]
+      },
+      "historyMatchesFinal": true
+    },
+    {
+      "type": "extractAudio",
+      "status": "PASS",
+      "output": "D:/projects/mediaflow-v070/v0.7.0/poc/local/local-compatibility/windows-hevc-01/outputs/Audio/LC_HEVC_extractAudio.m4a",
+      "metadata": {
+        "durationUs": 239041333,
+        "tracks": [
+          {
+            "type": "audio",
+            "codec": "aac",
+            "width": null,
+            "height": null
+          }
+        ]
+      },
+      "historyMatchesFinal": true
+    },
+    {
+      "type": "extractFrame",
+      "status": "FUNCTION_DISABLED",
+      "reason": "decodeUnavailable"
+    }
+  ],
+  "awaitingSaf": false,
+  "input": {
+    "name": "VID20260628175932.mp4",
+    "bytes": 1215801457,
+    "durationUs": 239051937,
+    "codecs": [
+      "hevc",
+      "aac"
+    ],
+    "videoCodec": "hevc",
+    "audioCodec": "aac",
+    "container": "mp4",
+    "document": false,
+    "frameDecodeSupported": false
+  },
+  "capabilities": {
+    "trim": {
+      "available": true,
+      "reason": null,
+      "message": null
+    },
+    "extractAudio": {
+      "available": true,
+      "reason": null,
+      "message": null
+    },
+    "extractFrame": {
+      "available": false,
+      "reason": "decodeUnavailable",
+      "message": "该视频使用 hevc，当前设备或随附组件无法解码抽帧；不影响可用的裁剪和音频提取。"
+    }
+  }
+}

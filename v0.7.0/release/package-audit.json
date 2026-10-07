@@ -1,0 +1,213 @@
+{
+  "windows": {
+    "files": 51,
+    "unpackedBytes": 41334938,
+    "entries": [
+      "MediaFlow-v0.7.0-windows-x64/licenses/",
+      "MediaFlow-v0.7.0-windows-x64/processing/",
+      "MediaFlow-v0.7.0-windows-x64/dartjni.dll",
+      "MediaFlow-v0.7.0-windows-x64/flutter_windows.dll",
+      "MediaFlow-v0.7.0-windows-x64/LICENSE",
+      "MediaFlow-v0.7.0-windows-x64/LICENSE.txt",
+      "MediaFlow-v0.7.0-windows-x64/MediaFlow.exe",
+      "MediaFlow-v0.7.0-windows-x64/MediaFlowDouyinSession.exe",
+      "MediaFlow-v0.7.0-windows-x64/MediaFlowNetworkObservationHelper.exe",
+      "MediaFlow-v0.7.0-windows-x64/Microsoft.Web.WebView2.Core.dll",
+      "MediaFlow-v0.7.0-windows-x64/Microsoft.Web.WebView2.WinForms.dll",
+      "MediaFlow-v0.7.0-windows-x64/README.md",
+      "MediaFlow-v0.7.0-windows-x64/RELEASE_INFO.txt",
+      "MediaFlow-v0.7.0-windows-x64/USER_GUIDE.md",
+      "MediaFlow-v0.7.0-windows-x64/WebView2Loader.dll",
+      "MediaFlow-v0.7.0-windows-x64/data/app.so",
+      "MediaFlow-v0.7.0-windows-x64/data/icudtl.dat",
+      "MediaFlow-v0.7.0-windows-x64/data/flutter_assets/packages/",
+      "MediaFlow-v0.7.0-windows-x64/data/flutter_assets/third_party/",
+      "MediaFlow-v0.7.0-windows-x64/data/flutter_assets/AssetManifest.bin",
+      "MediaFlow-v0.7.0-windows-x64/data/flutter_assets/FontManifest.json",
+      "MediaFlow-v0.7.0-windows-x64/data/flutter_assets/NativeAssetsManifest.json",
+      "MediaFlow-v0.7.0-windows-x64/data/flutter_assets/NOTICES.Z",
+      "MediaFlow-v0.7.0-windows-x64/data/flutter_assets/fonts/MaterialIcons-Regular.otf",
+      "MediaFlow-v0.7.0-windows-x64/data/flutter_assets/packages/cupertino_icons/",
+      "MediaFlow-v0.7.0-windows-x64/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf",
+      "MediaFlow-v0.7.0-windows-x64/data/flutter_assets/shaders/ink_sparkle.frag",
+      "MediaFlow-v0.7.0-windows-x64/data/flutter_assets/shaders/stretch_effect.frag",
+      "MediaFlow-v0.7.0-windows-x64/data/flutter_assets/third_party/f2/LICENSE",
+      "MediaFlow-v0.7.0-windows-x64/data/flutter_assets/third_party/f2/NOTICE.md",
+      "MediaFlow-v0.7.0-windows-x64/data/flutter_assets/third_party/x_syndication/LICENSE",
+      "MediaFlow-v0.7.0-windows-x64/data/flutter_assets/third_party/x_syndication/NOTICE.md",
+      "MediaFlow-v0.7.0-windows-x64/data/flutter_assets/third_party/youtube_protocol/LICENSE",
+      "MediaFlow-v0.7.0-windows-x64/data/flutter_assets/third_party/youtube_protocol/NOTICE.md",
+      "MediaFlow-v0.7.0-windows-x64/licenses/f2/LICENSE",
+      "MediaFlow-v0.7.0-windows-x64/licenses/f2/NOTICE.md",
+      "MediaFlow-v0.7.0-windows-x64/licenses/ffmpeg/build-configuration.txt",
+      "MediaFlow-v0.7.0-windows-x64/licenses/ffmpeg/compiler-rt-LICENSE.txt",
+      "MediaFlow-v0.7.0-windows-x64/licenses/ffmpeg/COPYING.LGPLv2.1",
+      "MediaFlow-v0.7.0-windows-x64/licenses/ffmpeg/FFmpeg-LICENSE.md",
+      "MediaFlow-v0.7.0-windows-x64/licenses/ffmpeg/IJG-NOTICES.txt",
+      "MediaFlow-v0.7.0-windows-x64/licenses/ffmpeg/llvm-mingw-LICENSE.txt",
+      "MediaFlow-v0.7.0-windows-x64/licenses/ffmpeg/mingw-w64-COPYING.txt",
+      "MediaFlow-v0.7.0-windows-x64/licenses/ffmpeg/mingw-w64-runtime-NOTICE.txt",
+      "MediaFlow-v0.7.0-windows-x64/licenses/ffmpeg/NOTICE.txt",
+      "MediaFlow-v0.7.0-windows-x64/licenses/ffmpeg/README.md",
+      "MediaFlow-v0.7.0-windows-x64/licenses/ffmpeg/runtime-manifest.json",
+      "MediaFlow-v0.7.0-windows-x64/licenses/ffmpeg/SOURCE.txt",
+      "MediaFlow-v0.7.0-windows-x64/processing/ffmpeg/avcodec-62.dll",
+      "MediaFlow-v0.7.0-windows-x64/processing/ffmpeg/avfilter-11.dll",
+      "MediaFlow-v0.7.0-windows-x64/processing/ffmpeg/avformat-62.dll",
+      "MediaFlow-v0.7.0-windows-x64/processing/ffmpeg/avutil-60.dll",
+      "MediaFlow-v0.7.0-windows-x64/processing/ffmpeg/ffmpeg.exe",
+      "MediaFlow-v0.7.0-windows-x64/processing/ffmpeg/ffprobe.exe",
+      "MediaFlow-v0.7.0-windows-x64/processing/ffmpeg/swresample-6.dll",
+      "MediaFlow-v0.7.0-windows-x64/processing/ffmpeg/swscale-9.dll"
+    ],
+    "runtime": [
+      {
+        "name": "avcodec-62.dll",
+        "bytes": 3609088,
+        "sha256": "b554d5e7d560e9b5710483006ff7d6a1407ba67a2495187b3aa9f8175982fa40",
+        "approved": true
+      },
+      {
+        "name": "avfilter-11.dll",
+        "bytes": 241152,
+        "sha256": "803b1bbee651e32088b3965cf1a07d5d18a0c57f5d36941e285e36497e8820ac",
+        "approved": true
+      },
+      {
+        "name": "avformat-62.dll",
+        "bytes": 831488,
+        "sha256": "8bd73a64b6b57526d6ac68fef2756be8ed21bcf28130b67e9c6dc35961fad258",
+        "approved": true
+      },
+      {
+        "name": "avutil-60.dll",
+        "bytes": 719872,
+        "sha256": "c342ea55ee779908195368a0014f4cd40444527b23f0362fe0f86a5eded098d3",
+        "approved": true
+      },
+      {
+        "name": "ffmpeg.exe",
+        "bytes": 429056,
+        "sha256": "2aaa3b4ff367087470e875c05e27fe8af2693725708339fd35c99320a5b59f3a",
+        "approved": true
+      },
+      {
+        "name": "ffprobe.exe",
+        "bytes": 195584,
+        "sha256": "c0bad9ace86fd241d7f2eef4e9bd8734761d3311c2daa9a4e7e3b9310337e41c",
+        "approved": true
+      },
+      {
+        "name": "swresample-6.dll",
+        "bytes": 114688,
+        "sha256": "ad6b8bade3451bc1be2dc285722da2c2c94d402ed4023c2551512935c0742222",
+        "approved": true
+      },
+      {
+        "name": "swscale-9.dll",
+        "bytes": 1463808,
+        "sha256": "a83ee80d63bcf609b5b2f728c8c8068eab3cc9ccd9851831c8e5aee34bc81fb3",
+        "approved": true
+      }
+    ],
+    "prohibited": [],
+    "noticePresent": true,
+    "licensePresent": true
+  },
+  "android": {
+    "nativeLibraries": [
+      {
+        "name": "lib/arm64-v8a/libapp.so",
+        "bytes": 7275408,
+        "compressedBytes": 7275408,
+        "sha256": "ca2cc511208902732c56c25301d052e99c6cdc288c58391461b4b09c3c4b1a8b"
+      },
+      {
+        "name": "lib/arm64-v8a/libdartjni.so",
+        "bytes": 124744,
+        "compressedBytes": 124744,
+        "sha256": "a3d71603d55b338c00bc66ec520a3dfa69c6a62494b88abe5c43df2b4d54b8e0"
+      },
+      {
+        "name": "lib/arm64-v8a/libflutter.so",
+        "bytes": 11581856,
+        "compressedBytes": 11581856,
+        "sha256": "30d867063c01c31e6ba07bb23feccd92f5f9f836d3db6f389dde0d9071c704f2"
+      },
+      {
+        "name": "lib/arm64-v8a/libmediaflow_processing_storage.so",
+        "bytes": 4528,
+        "compressedBytes": 4528,
+        "sha256": "0cf5ebb9e4dfe0b9a2bc56bfd8f765af111a77b99d71a20ba33b44a48e62067a"
+      },
+      {
+        "name": "lib/armeabi-v7a/libapp.so",
+        "bytes": 7995980,
+        "compressedBytes": 7995980,
+        "sha256": "fbc689b571ff48593d8aad98c2b8ad49b9d5a07a20d61c1109764ff796e40ccd"
+      },
+      {
+        "name": "lib/armeabi-v7a/libdartjni.so",
+        "bytes": 76816,
+        "compressedBytes": 76816,
+        "sha256": "6c6d31c1a6c262f8c4ccfc8914462f00917e59f112b63a707b48fc589415c3fc"
+      },
+      {
+        "name": "lib/armeabi-v7a/libflutter.so",
+        "bytes": 8453804,
+        "compressedBytes": 8453804,
+        "sha256": "40b97679dfbd7614b833f6dedac6a5f9945d5953e809e3e619a6d8d1b289f089"
+      },
+      {
+        "name": "lib/armeabi-v7a/libmediaflow_processing_storage.so",
+        "bytes": 3172,
+        "compressedBytes": 3172,
+        "sha256": "20f81817acf4e1fca1621e7f71db57dcbd70bbcc9c43a85a96bb8d1f431540c9"
+      },
+      {
+        "name": "lib/x86_64/libapp.so",
+        "bytes": 7472016,
+        "compressedBytes": 7472016,
+        "sha256": "7a2a474405e602100d77a37a2982055f28425cc3152a8e5d02e0f91266afc677"
+      },
+      {
+        "name": "lib/x86_64/libdartjni.so",
+        "bytes": 108616,
+        "compressedBytes": 108616,
+        "sha256": "55aec2af2cc1b33075a99c944f88404398deecf4756114f1aa9ca4f4aed2cc1e"
+      },
+      {
+        "name": "lib/x86_64/libflutter.so",
+        "bytes": 12859464,
+        "compressedBytes": 12859464,
+        "sha256": "6751d61be66c019ee116ef92460083d312e8650c9c3530e1d50bcf0a81e62de2"
+      },
+      {
+        "name": "lib/x86_64/libmediaflow_processing_storage.so",
+        "bytes": 4464,
+        "compressedBytes": 4464,
+        "sha256": "11d57483b3704138e2274900be4d4d71194b326e78cc723e1e91a6fecbf5f337"
+      }
+    ],
+    "ffmpegCount": 0,
+    "forbidden": [],
+    "entries": 83
+  },
+  "assets": [
+    {
+      "filename": "MediaFlow-v0.7.0-android.apk",
+      "bytes": 56525728,
+      "sha256": "fb4be3b691c979251f119ee7a2d836fee1b238b5a52deee4855756a755004856"
+    },
+    {
+      "filename": "MediaFlow-v0.7.0-ffmpeg-source-compliance.zip",
+      "bytes": 27419481,
+      "sha256": "db501b067de44803acd6b281903bb2e74a34cbcb85fbe6f8d6465a913c033444"
+    },
+    {
+      "filename": "MediaFlow-v0.7.0-windows-x64.zip",
+      "bytes": 17215232,
+      "sha256": "7551aac3bb934b765527e4ae3450d073f660558b2d9a3a7281a9e310b06a10fa"
+    }
+  ]
+}

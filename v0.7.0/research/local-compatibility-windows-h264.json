@@ -1,0 +1,97 @@
+{
+  "os": "windows",
+  "atUtc": "2026-10-06T05:03:59.557395Z",
+  "status": "PASS",
+  "inputRoute": "real production inspectWindows, fixture path supplied",
+  "results": [
+    {
+      "type": "trim",
+      "status": "PASS",
+      "output": "D:/projects/mediaflow-v070/v0.7.0/poc/local/local-compatibility/windows-h264-02/outputs/Processed/LC_H264_trim.mp4",
+      "metadata": {
+        "durationUs": 4032000,
+        "tracks": [
+          {
+            "type": "video",
+            "codec": "h264",
+            "width": 320,
+            "height": 180
+          },
+          {
+            "type": "audio",
+            "codec": "aac",
+            "width": null,
+            "height": null
+          }
+        ]
+      },
+      "historyMatchesFinal": true
+    },
+    {
+      "type": "extractAudio",
+      "status": "PASS",
+      "output": "D:/projects/mediaflow-v070/v0.7.0/poc/local/local-compatibility/windows-h264-02/outputs/Audio/LC_H264_extractAudio.m4a",
+      "metadata": {
+        "durationUs": 1202112000,
+        "tracks": [
+          {
+            "type": "audio",
+            "codec": "aac",
+            "width": null,
+            "height": null
+          }
+        ]
+      },
+      "historyMatchesFinal": true
+    },
+    {
+      "type": "extractFrame",
+      "status": "PASS",
+      "output": "D:/projects/mediaflow-v070/v0.7.0/poc/local/local-compatibility/windows-h264-02/outputs/Frames/LC_H264_extractFrame.jpg",
+      "metadata": {
+        "durationUs": 40000,
+        "tracks": [
+          {
+            "type": "video",
+            "codec": "mjpeg",
+            "width": 320,
+            "height": 180
+          }
+        ]
+      },
+      "historyMatchesFinal": true
+    }
+  ],
+  "awaitingSaf": false,
+  "input": {
+    "name": "输入 中文.mp4",
+    "bytes": 90814896,
+    "durationUs": 1202112578,
+    "codecs": [
+      "h264",
+      "aac"
+    ],
+    "videoCodec": "h264",
+    "audioCodec": "aac",
+    "container": "mp4",
+    "document": false,
+    "frameDecodeSupported": true
+  },
+  "capabilities": {
+    "trim": {
+      "available": true,
+      "reason": null,
+      "message": null
+    },
+    "extractAudio": {
+      "available": true,
+      "reason": null,
+      "message": null
+    },
+    "extractFrame": {
+      "available": true,
+      "reason": null,
+      "message": null
+    }
+  }
+}

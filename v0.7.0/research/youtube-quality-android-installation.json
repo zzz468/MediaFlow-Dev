@@ -1,0 +1,24 @@
+{
+  "formalPackageOverwritten": false,
+  "formalCertificateSha256": "16686bce55b6c8eb66bb16b77a8599fa6005483e97430c519710a4d730c6dcba",
+  "testApplicationId": "com.mediaflow.mediaflow.youtubequalityv070",
+  "secondRunOption": "--no-uninstall",
+  "formalApplicationId": "com.mediaflow.mediaflow",
+  "preExistingPackagesDataCleared": false,
+  "formalApkUnchanged": true,
+  "formalUser": 10,
+  "formalAfterSha256": "002A300B8AD5B95340952EABD4A7176C150600BDF4440C73596A94EFD9D6FF7B",
+  "preExistingPackagesUninstalled": false,
+  "sameIdSignatureCompatibility": "different certificates; deliberately separate applicationId, no formal upgrade attempted",
+  "device": "40fcb99f",
+  "newAuditPackageFirstRunTeardownUninstalled": true,
+  "testStillInstalled": true,
+  "formalLastUpdateTime": [
+    "lastUpdateTime=2026-10-04 13:27:45"
+  ],
+  "testType": "Debug integration",
+  "testCertificateSha256": "4f6a5194614d0f53c35add86eff6475b1cbc59a2376482d8afc1e08a423299c8",
+  "testUser": 0,
+  "coexistence": true,
+  "formalBeforeSha256": "002A300B8AD5B95340952EABD4A7176C150600BDF4440C73596A94EFD9D6FF7B"
+}
